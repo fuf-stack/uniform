@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["@types/node"],
+    "noEmit": true,
+    "allowJs": true
+  },
+  "include": [
+    "./**/*.ts",
+    "./**/*.tsx",
+    ".eslintrc.js",
+    "prettier.config.js",
+    "vitest.config.ts",
+    "vitest.workspace.ts"
+  ],
+  "references": []
+}

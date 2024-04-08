@@ -1,0 +1,36 @@
+{
+  dependencyDashboardLabels: ['effort | ongoing', 'scope | dependencies'],
+  dependencyDashboardOSVVulnerabilitySummary: 'all',
+  extends: [
+    'config:base',
+    'default:automergeDigest',
+    'default:automergeMinor',
+    'default:combinePatchMinorReleases',
+    'default:dependencyDashboard',
+    'default:docker',
+    'default:enableVulnerabilityAlerts',
+    'default:maintainLockFilesWeekly',
+    'default:prHourlyLimit4',
+  ],
+  ignorePaths: ['/node_modules/'],
+  // only rebase merge requests when they become conflicted
+  // see: https://docs.renovatebot.com/configuration-options/#rebasewhen
+  rebaseWhen: 'conflicted',
+  // schedule: [
+  //   'after 10pm every weekday',
+  //   'before 8am every weekday',
+  //   // 'every weekend',
+  // ],
+  // stop updating pull requests with this label
+  // https://docs.renovatebot.com/configuration-options/#stopupdatinglabel
+  stopUpdatingLabel: 'renovate | stop update',
+  packageRules: [
+    // @fuf-stack/uniform
+    {
+      extends: [':semanticCommitScope(uniform)'],
+      matchFileNames: ['packages/uniform/package.json'],
+      // prevent multiple 'Lock file maintenance' being created
+      matchUpdateTypes: ['major', 'minor', 'patch'],
+    },
+  ],
+}

@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "pnpm --filter=\"@fuf-stack/*\" build",
+    "commit": "lint-staged && git-cz",
+    "dev": "lerna run --parallel dev",
+    "fix": "eslint --debug --fix --ext .js --ignore-path .gitignore packages || true && prettier --write \"packages/**/*\"",
+    "lint": "eslint --debug --ignore-path .gitignore ./packages",
+    "test": "NODE_OPTIONS=\"--max-old-space-size=4096\" FORCE_COLOR=1 vitest --coverage $VITEST_EXTRA_OPTS"
+  },
+  "devDependencies": {
+    "@types/node": "20.12.5",
+    "@fuf-stack/eslint-config-fuf": "0.8.0",
+    "@fuf-stack/project-cli-tools": "0.4.1",
+    "@fuf-stack/vitest-config": "0.1.0",
+    "ts-node": "10.9.2",
+    "typescript": "5.4.4"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional",
+      "@commitlint/config-pnpm-scopes"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
