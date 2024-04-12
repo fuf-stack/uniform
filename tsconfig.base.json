@@ -6,7 +6,7 @@
     "esModuleInterop": true,
     "jsx": "react-jsx",
     "module": "esnext",
-    "moduleResolution": "nodenext",
+    "moduleResolution": "Bundler",
     "noErrorTruncation": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
