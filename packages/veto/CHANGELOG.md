@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/fuf-stack/uniform/compare/veto-v0.1.0...veto-v0.1.1) (2024-04-12)
+
+
+### Bug Fixes
+
+* **veto:** add keywords ([1f5672c](https://github.com/fuf-stack/uniform/commit/1f5672ca642341e23a1556782433434e1503b386))
+
 ## [0.1.0](https://github.com/fuf-stack/uniform/compare/veto-v0.0.1...veto-v0.1.0) (2024-04-12)
 
 
