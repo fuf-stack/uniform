@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/fuf-stack/uniform/compare/veto-v0.1.1...veto-v0.1.2) (2024-04-12)
+
+
+### Bug Fixes
+
+* **veto:** make package public ([47ad3d0](https://github.com/fuf-stack/uniform/commit/47ad3d02f5cbcbb112599a75e4cdbe3c47921490))
+
 ## [0.1.1](https://github.com/fuf-stack/uniform/compare/veto-v0.1.0...veto-v0.1.1) (2024-04-12)
 
 
