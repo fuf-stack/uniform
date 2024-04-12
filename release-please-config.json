@@ -4,7 +4,7 @@
   "include-component-in-tag": true,
   "packages": {
     "packages/pixels": {},
-    "packages/veto": { "release-as": "0.0.1" }
+    "packages/veto": {}
   },
   "separate-pull-requests": true
 }
