@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.5](https://github.com/fuf-stack/uniform/compare/pixels-v0.0.4...pixels-v0.0.5) (2024-04-12)
+
+
+### Bug Fixes
+
+* **pixels:** move components into components folder ([9da42b1](https://github.com/fuf-stack/uniform/commit/9da42b10afe5a65351c93850139531659d1f6780))
+
 ## [0.0.4](https://github.com/fuf-stack/uniform/compare/pixels-v0.0.3...pixels-v0.0.4) (2024-04-12)
 
 
