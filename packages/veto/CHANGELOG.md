@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.4](https://github.com/fuf-stack/uniform/compare/veto-v0.1.3...veto-v0.1.4) (2024-04-12)
+
+
+### Bug Fixes
+
+* **veto:** expose VNumber ([8138052](https://github.com/fuf-stack/uniform/commit/8138052a97c559aaf68d0f11bd998ac97a02f884))
+
 ## [0.1.3](https://github.com/fuf-stack/uniform/compare/veto-v0.1.2...veto-v0.1.3) (2024-04-12)
 
 
