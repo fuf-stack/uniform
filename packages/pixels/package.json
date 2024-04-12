@@ -4,13 +4,6 @@
   "author": "Hannes Tiede",
   "version": "0.0.2",
   "type": "module",
-  "exports": {
-    "./*": {
-      "import": "./dist/*.js",
-      "require": "./dist/*.cjs",
-      "types": "./dist/*.d.ts"
-    }
-  },
   "files": [
     "./dist"
   ],
