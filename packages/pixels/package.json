@@ -15,6 +15,9 @@
       ]
     }
   },
+  "files": [
+    "./dist"
+  ],
   "homepage": "https://github.com/fuf-stack/uniforms#readme",
   "license": "MIT",
   "publishConfig": {
