@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.4](https://github.com/fuf-stack/uniform/compare/pixels-v0.0.3...pixels-v0.0.4) (2024-04-12)
+
+
+### Bug Fixes
+
+* **pixels:** fix exports definition ([ab58ff9](https://github.com/fuf-stack/uniform/commit/ab58ff9464fe41327fce7fd03b083e57b9fbfaaf))
+
 ## [0.0.3](https://github.com/fuf-stack/uniform/compare/pixels-v0.0.2...pixels-v0.0.3) (2024-04-12)
 
 
