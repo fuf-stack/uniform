@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.7](https://github.com/fuf-stack/uniform/compare/pixels-v0.0.6...pixels-v0.0.7) (2024-04-12)
+
+
+### Bug Fixes
+
+* **pixels:** remove components folder again ([5eb5281](https://github.com/fuf-stack/uniform/commit/5eb5281eedf695436e13077f367244ec6bea0f8d))
+
 ## [0.0.6](https://github.com/fuf-stack/uniform/compare/pixels-v0.0.5...pixels-v0.0.6) (2024-04-12)
 
 
