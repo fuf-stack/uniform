@@ -1,12 +1,29 @@
 {
   "name": "@fuf-stack/pixels",
   "description": "fuf react component library",
+  "author": "Hannes Tiede",
   "version": "0.0.1",
-  "private": true,
   "type": "module",
   "files": [
     "./dist"
   ],
+  "homepage": "https://github.com/fuf-stack/uniforms#readme",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "components",
+    "react"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuf-stack/uniforms.git",
+    "directory": "packages/pixels"
+  },
+  "bugs": {
+    "url": "https://github.com/fuf-stack/uniforms/issues"
+  },
   "scripts": {
     "build": "rm -rf ./dist && tsup",
     "prepack": "pnpm build",
