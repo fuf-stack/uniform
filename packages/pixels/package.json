@@ -17,7 +17,7 @@
   "files": [
     "./dist"
   ],
-  "homepage": "https://github.com/fuf-stack/uniforms#readme",
+  "homepage": "https://github.com/fuf-stack/uniform/tree/main/packages/pixels",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
