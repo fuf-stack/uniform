@@ -4,6 +4,7 @@ import type {
   RefinementCtx as VRefinementCtx,
 } from 'zod';
 import type { VJson, VJsonObject } from './types/json/json';
+import type { VNumber } from './types/number/number';
 import type { VObject } from './types/object/object';
 import type { VString } from './types/string/string';
 import type {
@@ -48,6 +49,7 @@ export type {
   vInfer,
   VJson,
   VJsonObject,
+  VNumber,
   VObject,
   VRefinementCtx,
   VString,
