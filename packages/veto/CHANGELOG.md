@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.3](https://github.com/fuf-stack/uniform/compare/veto-v0.1.2...veto-v0.1.3) (2024-04-12)
+
+
+### Bug Fixes
+
+* **veto:** expose VetoEffects ([fb6cb82](https://github.com/fuf-stack/uniform/commit/fb6cb82e67ad537de407727a713b6aab34c3711d))
+
 ## [0.1.2](https://github.com/fuf-stack/uniform/compare/veto-v0.1.1...veto-v0.1.2) (2024-04-12)
 
 
