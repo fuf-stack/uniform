@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.6](https://github.com/fuf-stack/uniform/compare/pixels-v0.0.5...pixels-v0.0.6) (2024-04-12)
+
+
+### Bug Fixes
+
+* **pixels:** add hooks ([4ab0414](https://github.com/fuf-stack/uniform/commit/4ab0414df62ad9b14aed61ab8c04a60df0a64aff))
+
 ## [0.0.5](https://github.com/fuf-stack/uniform/compare/pixels-v0.0.4...pixels-v0.0.5) (2024-04-12)
 
 
