@@ -1,7 +1,8 @@
 {
   "references": [
     { "path": "packages/config/storybook-config" },
-    { "path": "packages/pixels" }
+    { "path": "packages/pixels" },
+    { "path": "packages/veto" }
   ],
   "files": []
 }

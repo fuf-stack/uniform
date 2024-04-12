@@ -1,0 +1,40 @@
+{
+  "name": "@fuf-stack/veto",
+  "description": "fuf schema validation library",
+  "version": "0.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/fuf-stack/uniform/tree/main/packages/veto",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "validation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuf-stack/uniforms.git",
+    "directory": "packages/veto"
+  },
+  "bugs": {
+    "url": "https://github.com/fuf-stack/uniforms/issues"
+  },
+  "scripts": {
+    "build": "rm -rf ./dist && tsup",
+    "test": "vitest ./src"
+  },
+  "dependencies": {
+    "debug": "4.3.4",
+    "validator": "13.11.0",
+    "zod": "3.22.4"
+  },
+  "devDependencies": {
+    "@types/validator": "13.11.9"
+  }
+}

@@ -3,7 +3,8 @@
   "release-type": "node",
   "include-component-in-tag": true,
   "packages": {
-    "packages/pixels": {}
+    "packages/pixels": {},
+    "packages/veto": { "release-as": "0.0.1" }
   },
   "separate-pull-requests": true
 }
