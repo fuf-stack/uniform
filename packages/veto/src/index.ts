@@ -52,4 +52,7 @@ export type {
   VString,
 };
 
+// also export z
+export { z } from 'zod';
+
 export default veto;
