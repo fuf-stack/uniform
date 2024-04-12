@@ -5,15 +5,15 @@
   "version": "0.0.2",
   "type": "module",
   "exports": {
-    "./*": {
-      "import": "./dist/*.js",
-      "require": "./dist/*.cjs",
-      "types": "./dist/*.d.ts"
+    "./": "./dist/"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*"
+      ]
     }
   },
-  "files": [
-    "./dist"
-  ],
   "homepage": "https://github.com/fuf-stack/uniforms#readme",
   "license": "MIT",
   "publishConfig": {
