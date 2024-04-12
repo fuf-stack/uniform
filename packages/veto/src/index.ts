@@ -1,5 +1,8 @@
 // import types
-import type { RefinementCtx as ZodRefinementCtx } from 'zod';
+import type {
+  ZodEffects as VetoEffects,
+  RefinementCtx as VRefinementCtx,
+} from 'zod';
 import type { VJson, VJsonObject } from './types/json/json';
 import type { VObject } from './types/object/object';
 import type { VString } from './types/string/string';
@@ -32,11 +35,9 @@ export { default as record } from './types/record/record';
 export { default as string } from './types/string/string';
 export { default as vEnum } from './types/vEnum/vEnum';
 
-// additional zod types
-type VRefinementCtx = ZodRefinementCtx;
-
 // export ts types
 export type {
+  VetoEffects,
   VetoError,
   VetoInput,
   VetoInstance,
