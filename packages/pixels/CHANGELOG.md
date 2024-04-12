@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.8](https://github.com/fuf-stack/uniform/compare/pixels-v0.0.7...pixels-v0.0.8) (2024-04-12)
+
+
+### Bug Fixes
+
+* **pixels:** update homepage ([8e9ef13](https://github.com/fuf-stack/uniform/commit/8e9ef13d9ae2014b2795d38e7f0d2e8e9d7e7d4f))
+
 ## [0.0.7](https://github.com/fuf-stack/uniform/compare/pixels-v0.0.6...pixels-v0.0.7) (2024-04-12)
 
 
