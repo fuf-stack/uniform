@@ -14,3 +14,7 @@ install:
 	pnpm install --ignore-scripts;
 	pnpm husky install;
 	pnpm build;
+
+storybook:
+	@$(MAKE) install;
+	pnpm --filter storybook-config storybook;

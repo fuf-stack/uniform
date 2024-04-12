@@ -1,0 +1,94 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Story Snapshots > CustomSlotStyles 1`] = `
+<div>
+  <div
+    class="flex flex-col relative overflow-hidden height-auto box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-none rounded-small w-full transition-transform-background motion-reduce:transition-none border border-slate-300 text-blue-400"
+    tabindex="-1"
+  >
+    <div
+      class="flex p-3 z-10 w-full justify-start items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-small text-base font-semibold"
+    >
+      Header
+    </div>
+    <hr
+      class="shrink-0 border-none w-full h-divider my-0 bg-yellow-400"
+      role="separator"
+    />
+    <div
+      class="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased text-green-400"
+    >
+      <p
+        class="w-96"
+      >
+        Lorem commodo nulla adipisicing cillum Lorem sunt laboris exercitatio
+      </p>
+    </div>
+    <hr
+      class="shrink-0 border-none w-full h-divider my-0 bg-yellow-400"
+      role="separator"
+    />
+    <div
+      class="p-3 h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-small"
+    >
+      Footer
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Story Snapshots > Default 1`] = `
+<div>
+  <div
+    class="flex flex-col relative overflow-hidden height-auto text-foreground box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-none rounded-small w-full transition-transform-background motion-reduce:transition-none border border-slate-300"
+    tabindex="-1"
+  >
+    <div
+      class="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased"
+    >
+      <p
+        class="w-96"
+      >
+        Lorem commodo nulla adipisicing cillum Lorem sunt laboris exercitation esse. Exercitation ut cillum cupidatat deserunt occaecat pariatur laborum ut reprehenderit veniam. Culpa fugiat aliqua consectetur sit esse.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Story Snapshots > FooterAndHeader 1`] = `
+<div>
+  <div
+    class="flex flex-col relative overflow-hidden height-auto text-foreground box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-none rounded-small w-full transition-transform-background motion-reduce:transition-none border border-slate-300"
+    tabindex="-1"
+  >
+    <div
+      class="flex p-3 z-10 w-full justify-start items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-small text-base font-semibold"
+    >
+      Header
+    </div>
+    <hr
+      class="shrink-0 border-none w-full h-divider my-0 bg-slate-300"
+      role="separator"
+    />
+    <div
+      class="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased"
+    >
+      <p
+        class="w-96"
+      >
+        Lorem commodo nulla adipisicing cillum Lorem sunt laboris exercitation esse. Exercitation ut cillum cupidatat deserunt occaecat pariatur laborum ut reprehenderit veniam. Culpa fugiat aliqua consectetur sit esse.
+      </p>
+    </div>
+    <hr
+      class="shrink-0 border-none w-full h-divider my-0 bg-slate-300"
+      role="separator"
+    />
+    <div
+      class="p-3 h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-small"
+    >
+      Footer
+    </div>
+  </div>
+</div>
+`;

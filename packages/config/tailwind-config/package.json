@@ -1,0 +1,12 @@
+{
+  "name": "tailwind-config",
+  "description": "uniforms shared tailwind config",
+  "version": "0.0.1",
+  "private": true,
+  "main": "index.js",
+  "devDependencies": {
+    "@nextui-org/theme": "2.1.18",
+    "autoprefixer": "10.4.19",
+    "tailwindcss": "3.4.3"
+  }
+}

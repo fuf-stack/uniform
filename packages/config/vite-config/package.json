@@ -1,0 +1,11 @@
+{
+  "name": "vite-config",
+  "description": "uniforms shared vite config",
+  "version": "0.0.1",
+  "private": true,
+  "main": "index.js",
+  "devDependencies": {
+    "@vitejs/plugin-react": "4.2.1",
+    "vite": "5.2.8"
+  }
+}

@@ -1,18 +1,20 @@
 {
   "private": true,
   "scripts": {
-    "build": "pnpm --filter=\"@fuf-stack/*\" build",
+    "build": "pnpm turbo build",
     "commit": "lint-staged && git-cz",
     "dev": "lerna run --parallel dev",
     "fix": "eslint --debug --fix --ext .js --ignore-path .gitignore packages || true && prettier --write \"packages/**/*\"",
     "lint": "eslint --debug --ignore-path .gitignore ./packages",
-    "test": "NODE_OPTIONS=\"--max-old-space-size=4096\" FORCE_COLOR=1 vitest --coverage $VITEST_EXTRA_OPTS"
+    "test": "NODE_OPTIONS=\"--max-old-space-size=4096\" FORCE_COLOR=1 vitest --coverage $VITEST_EXTRA_OPTS",
+    "test:storybook": "pnpm exec playwright install chromium && test-storybook --coverage --config-dir packages/config/storybook-config/.storybook --maxWorkers=4 && nyc report --reporter=lcov -t coverage/storybook --report-dir coverage/storybook",
+    "turbo": "FORCE_COLOR=1 turbo --cache-dir ./.turbo-cache --color  --no-daemon"
   },
   "devDependencies": {
     "@types/node": "20.12.5",
-    "@fuf-stack/eslint-config-fuf": "0.8.0",
+    "@fuf-stack/eslint-config-fuf": "0.8.3",
     "@fuf-stack/project-cli-tools": "0.4.1",
-    "@fuf-stack/vitest-config": "0.1.0",
+    "@fuf-stack/vitest-config": "0.1.1",
     "ts-node": "10.9.2",
     "typescript": "5.4.4"
   },

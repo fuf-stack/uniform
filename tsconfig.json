@@ -1,4 +1,7 @@
 {
-  "references": [{ "path": "packages/uniform" }],
+  "references": [
+    { "path": "packages/config/storybook-config" },
+    { "path": "packages/pixels" }
+  ],
   "files": []
 }

@@ -2,21 +2,23 @@
 
 {
   "compilerOptions": {
-    "target": "esnext",
-    "moduleResolution": "node",
-    "module": "esnext",
     "declarationMap": true,
-    "sourceMap": true,
-    "composite": true,
-    "strict": true,
     "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "moduleResolution": "node",
     "noErrorTruncation": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true
+    "sourceMap": true,
+    "strict": true,
+    "target": "esnext",
+    // see: https://github.com/colinhacks/zod/issues/121
+    "strictNullChecks": true
   },
   "exclude": [
     "dist",
