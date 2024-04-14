@@ -13,6 +13,8 @@ import {
 import cn from 'classnames';
 import createDebug from 'debug';
 
+import Button from '../Button';
+
 const debug = createDebug('component:Menu');
 
 /**
@@ -107,8 +109,14 @@ const Menu = ({
   return (
     <NextDropdown isDisabled={isDisabled}>
       <NextDropdownTrigger className={cn(className)} data-testid={testId}>
-        {/* eslint-disable-next-line react/button-has-type */}
-        <button>{children || <FaEllipsisVertical className="px-2" />}</button>
+        {children ? (
+          // eslint-disable-next-line react/button-has-type
+          <button>{children}</button>
+        ) : (
+          <Button size="sm" variant="bordered" className="min-w-0">
+            <FaEllipsisVertical />
+          </Button>
+        )}
       </NextDropdownTrigger>
       <NextDropdownMenu
         // aria-label="Dynamic Actions"

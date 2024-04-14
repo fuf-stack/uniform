@@ -49,6 +49,7 @@ const Button = ({
   testId = undefined,
   type = undefined,
   variant = 'solid',
+  ...passthrouhProps
 }: ButtonProps) => {
   return (
     <NextButton
@@ -64,6 +65,7 @@ const Button = ({
       spinner={<LoadingSpinner />}
       type={type}
       variant={variant}
+      {...passthrouhProps}
     >
       {icon}
       {children}
