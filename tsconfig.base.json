@@ -2,6 +2,7 @@
 
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "declarationMap": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
