@@ -3,7 +3,7 @@
 exports[`Story Snapshots > AsJsonString 1`] = `
 <div>
   <div
-    class="_wrapper_581875"
+    class=""
   >
     <div
       class="react-json-view"
@@ -782,7 +782,7 @@ exports[`Story Snapshots > AsJsonString 1`] = `
 exports[`Story Snapshots > AsObject 1`] = `
 <div>
   <div
-    class="_wrapper_581875"
+    class=""
   >
     <div
       class="react-json-view"
@@ -1561,7 +1561,7 @@ exports[`Story Snapshots > AsObject 1`] = `
 exports[`Story Snapshots > DefaultCollapsed 1`] = `
 <div>
   <div
-    class="_wrapper_581875"
+    class=""
   >
     <div
       class="react-json-view"
@@ -1671,7 +1671,7 @@ exports[`Story Snapshots > DefaultCollapsed 1`] = `
 exports[`Story Snapshots > InvalidJson 1`] = `
 <div>
   <div
-    class="_wrapper_581875"
+    class=""
   >
     <div
       class="mb-4 flex flex-col items-center rounded-lg border border-danger bg-danger-50 p-4 text-sm text-danger"

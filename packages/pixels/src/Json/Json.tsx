@@ -8,8 +8,6 @@ import cn from 'classnames';
 
 import Button from '../Button';
 
-import styles from './Json.module.css';
-
 /**
  * returns the value (JSON string or object) as object
  */
@@ -107,9 +105,7 @@ const Json = ({ className = null, collapsed = false, value }: JsonProps) => {
       </div>
     );
   }
-  return (
-    <div className={cn(styles.wrapper, className)}>{error || content}</div>
-  );
+  return <div className={cn(className)}>{error || content}</div>;
 };
 
 export default Json;
