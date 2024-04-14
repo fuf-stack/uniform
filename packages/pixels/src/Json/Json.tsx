@@ -2,8 +2,10 @@ import type { ReactNode } from 'react';
 
 import { useState } from 'react';
 import { FaChevronDown, FaChevronUp, FaTimesCircle } from 'react-icons/fa';
-import ReactJson from 'react-json-view';
 
+import JsonView from '@uiw/react-json-view';
+import { lightTheme } from '@uiw/react-json-view/light';
+import { vscodeTheme } from '@uiw/react-json-view/vscode';
 import cn from 'classnames';
 
 import Button from '../Button';
@@ -43,15 +45,10 @@ const Json = ({ className = null, collapsed = false, value }: JsonProps) => {
 
   try {
     content = (
-      <ReactJson
-        theme={isDarkMode ? 'tomorrow' : 'rjv-default'}
-        style={{
-          fontSize: '12px',
-          backgroundColor: 'unset',
-        }}
-        name={false}
+      <JsonView
+        style={isDarkMode ? vscodeTheme : lightTheme}
         displayDataTypes={false}
-        src={getValue(value)}
+        value={getValue(value)}
         collapsed={collapsed}
       />
     );
