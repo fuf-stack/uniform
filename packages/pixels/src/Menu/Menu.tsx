@@ -3,6 +3,7 @@ import type { Key, MouseEventHandler, ReactNode } from 'react';
 
 import { FaEllipsisVertical } from 'react-icons/fa6';
 
+import { Button } from '@nextui-org/button';
 import {
   Dropdown as NextDropdown,
   DropdownItem as NextDropdownItem,
@@ -12,8 +13,6 @@ import {
 } from '@nextui-org/dropdown';
 import cn from 'classnames';
 import createDebug from 'debug';
-
-import Button from '../Button';
 
 const debug = createDebug('component:Menu');
 
@@ -113,7 +112,8 @@ const Menu = ({
           // eslint-disable-next-line react/button-has-type
           <button>{children}</button>
         ) : (
-          <Button size="sm" variant="bordered" className="min-w-0">
+          // INFO: we use next button here so that ref passing works
+          <Button size="sm" variant="flat" className="min-w-0">
             <FaEllipsisVertical />
           </Button>
         )}
