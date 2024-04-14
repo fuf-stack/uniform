@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.4](https://github.com/fuf-stack/uniform/compare/pixels-v0.2.3...pixels-v0.2.4) (2024-04-14)
+
+
+### Bug Fixes
+
+* **pixels:** refactor Json component ([e98be37](https://github.com/fuf-stack/uniform/commit/e98be374740e65ba6524d244165e0861ac9a9a22))
+* **pixels:** update snapshots ([99bbe4a](https://github.com/fuf-stack/uniform/commit/99bbe4acf33d11046f554cee46cc7c87264bb20f))
+
 ## [0.2.3](https://github.com/fuf-stack/uniform/compare/pixels-v0.2.2...pixels-v0.2.3) (2024-04-14)
 
 
