@@ -2,7 +2,7 @@
   "name": "@fuf-stack/pixels",
   "description": "fuf react component library",
   "author": "Hannes Tiede",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "type": "module",
   "exports": {
     "./": "./dist/"
