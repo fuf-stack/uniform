@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.2](https://github.com/fuf-stack/uniform/compare/pixels-v0.1.1...pixels-v0.1.2) (2024-04-14)
+
+
+### Bug Fixes
+
+* **pixels:** fix Menu snapshots ([62c29b3](https://github.com/fuf-stack/uniform/commit/62c29b39eb673aa8ad66ad2e0df891f606a8656f))
+* **pixels:** fix passing refs to Menu ([2a5add8](https://github.com/fuf-stack/uniform/commit/2a5add8aca28b0f60475b929cb012f25d2dbf3a8))
+
 ## [0.1.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.1.0...pixels-v0.1.1) (2024-04-14)
 
 
