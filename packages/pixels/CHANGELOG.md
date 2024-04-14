@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.2.0...pixels-v0.2.1) (2024-04-14)
+
+
+### Bug Fixes
+
+* **pixels:** remove Json styles ([ed92af4](https://github.com/fuf-stack/uniform/commit/ed92af44771a6b27893ec89375906e6b8009aaec))
+* **pixels:** try to fix build ([61b9e0d](https://github.com/fuf-stack/uniform/commit/61b9e0d6218e1b09bd7ff5b4653a9738ac446c09))
+
 ## [0.2.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.1.2...pixels-v0.2.0) (2024-04-14)
 
 
