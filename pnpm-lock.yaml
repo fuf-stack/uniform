@@ -150,8 +150,8 @@ importers:
         specifier: 2.0.30
         version: 2.0.30(@nextui-org/system@2.0.15)(@nextui-org/theme@2.1.18)(framer-motion@11.0.25)(react-dom@18.2.0)(react@18.2.0)(tailwind-variants@0.1.20)
       '@uiw/react-json-view':
-        specifier: 1.12.2
-        version: 1.12.2(@babel/runtime@7.24.4)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 2.0.0-alpha.23
+        version: 2.0.0-alpha.23(@babel/runtime@7.24.4)(react-dom@18.2.0)(react@18.2.0)
       classnames:
         specifier: 2.5.1
         version: 2.5.1
@@ -5753,8 +5753,8 @@ packages:
       eslint-visitor-keys: 3.4.3
     dev: true
 
-  /@uiw/react-json-view@1.12.2(@babel/runtime@7.24.4)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-IrL7tqPMgPMgdpjsgfArUepVE37DHlgcmkNgUQ92uNcRbO2+iUHXWysNc9nNsJB6ctb+wIinI5JNRqsqwHER5g==}
+  /@uiw/react-json-view@2.0.0-alpha.23(@babel/runtime@7.24.4)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-GT0fy/K7+xSsfhvV4PVx2qPRomr/RjzFnerCjglfTYX0oEjFe9S2UwnhqOBaSHrfaCL6ccALZ2c+qV73eqop9Q==}
     peerDependencies:
       '@babel/runtime': '>=7.10.0'
       react: '>=18.0.0'

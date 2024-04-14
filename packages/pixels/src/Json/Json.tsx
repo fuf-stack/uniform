@@ -46,10 +46,13 @@ const Json = ({ className = null, collapsed = false, value }: JsonProps) => {
   try {
     content = (
       <JsonView
-        style={isDarkMode ? vscodeTheme : lightTheme}
-        displayDataTypes={false}
-        value={getValue(value)}
         collapsed={collapsed}
+        displayDataTypes={false}
+        style={{
+          ...(isDarkMode ? vscodeTheme : lightTheme),
+          backgroundColor: 'unset',
+        }}
+        value={getValue(value)}
       />
     );
   } catch (err) {

@@ -15,7 +15,7 @@ exports[`Story Snapshots > AsJsonString 1`] = `
         <svg
           class="w-rjv-arrow"
           fill="var(--w-rjv-arrow-color, currentColor)"
-          style="cursor: pointer; height: 1em; width: 1em; transform: rotate(-90deg); transition: all 0.3s;"
+          style="cursor: pointer; height: 1em; width: 1em; transform: rotate(0deg); transition: all 0.3s;"
           viewBox="0 0 24 24"
         >
           <path
@@ -28,22 +28,320 @@ exports[`Story Snapshots > AsJsonString 1`] = `
           {
         </span>
         <span
-          class="w-rjv-ellipsis "
-          style="cursor: pointer;"
-        >
-          ...
-        </span>
-        <span
-          class="w-rjv-curlybraces-end "
-        >
-          }
-        </span>
-        <span
           class="w-rjv-object-size"
           style="padding-left: 4px; font-style: italic;"
         >
           2
            items
+        </span>
+      </div>
+      <div
+        class="w-rjv-content"
+        style="margin-left: 6px;"
+      >
+        <div
+          class="w-rjv-wrap"
+        >
+          <div
+            class="undefined w-rjv-inner"
+            style="padding-left: 15px;"
+          >
+            <div
+              style="display: inline-flex; align-items: center;"
+            >
+              <svg
+                class="w-rjv-arrow"
+                fill="var(--w-rjv-arrow-color, currentColor)"
+                style="cursor: pointer; height: 1em; width: 1em; transform: rotate(0deg); transition: all 0.3s;"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+              <span
+                class="w-rjv-object-key"
+                data-keys=":r0::r1:aList"
+              >
+                "aList"
+              </span>
+              <span
+                class="w-rjv-colon"
+                style="padding-right: 3px;"
+              >
+                :
+              </span>
+              <span
+                class="w-rjv-brackets-start "
+              >
+                [
+              </span>
+              <span
+                class="w-rjv-object-size"
+                style="padding-left: 4px; font-style: italic;"
+              >
+                3
+                 items
+              </span>
+            </div>
+            <div
+              class="w-rjv-content"
+              style="margin-left: 6px;"
+            >
+              <div
+                class="w-rjv-line"
+                style="padding-left: 15px;"
+              >
+                <span>
+                  <span
+                    class="w-rjv-object-key"
+                    data-keys=":r0::r1:aList"
+                  >
+                    0
+                  </span>
+                  <span
+                    class="w-rjv-colon"
+                    style="padding-right: 3px;"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="w-rjv-value"
+                  >
+                    1
+                  </span>
+                </span>
+              </div>
+              <div
+                class="w-rjv-line"
+                style="padding-left: 15px;"
+              >
+                <span>
+                  <span
+                    class="w-rjv-object-key"
+                    data-keys=":r0::r1:aList"
+                  >
+                    1
+                  </span>
+                  <span
+                    class="w-rjv-colon"
+                    style="padding-right: 3px;"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="w-rjv-value"
+                  >
+                    2
+                  </span>
+                </span>
+              </div>
+              <div
+                class="w-rjv-line"
+                style="padding-left: 15px;"
+              >
+                <span>
+                  <span
+                    class="w-rjv-object-key"
+                    data-keys=":r0::r1:aList"
+                  >
+                    2
+                  </span>
+                  <span
+                    class="w-rjv-colon"
+                    style="padding-right: 3px;"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="w-rjv-value"
+                  >
+                    3
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div
+              style="padding-left: 2px;"
+            >
+              <span
+                class="w-rjv-brackets-end "
+                style="padding-left: 2px; display: inline-block;"
+              >
+                ]
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-rjv-wrap"
+        >
+          <div
+            class="undefined w-rjv-inner"
+            style="padding-left: 15px;"
+          >
+            <div
+              style="display: inline-flex; align-items: center;"
+            >
+              <svg
+                class="w-rjv-arrow"
+                fill="var(--w-rjv-arrow-color, currentColor)"
+                style="cursor: pointer; height: 1em; width: 1em; transform: rotate(0deg); transition: all 0.3s;"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+              <span
+                class="w-rjv-object-key"
+                data-keys=":r0::r1:anObject"
+              >
+                "anObject"
+              </span>
+              <span
+                class="w-rjv-colon"
+                style="padding-right: 3px;"
+              >
+                :
+              </span>
+              <span
+                class="w-rjv-curlybraces-start "
+              >
+                {
+              </span>
+              <span
+                class="w-rjv-object-size"
+                style="padding-left: 4px; font-style: italic;"
+              >
+                4
+                 items
+              </span>
+            </div>
+            <div
+              class="w-rjv-content"
+              style="margin-left: 6px;"
+            >
+              <div
+                class="w-rjv-line"
+                style="padding-left: 15px;"
+              >
+                <span>
+                  <span
+                    class="w-rjv-object-key"
+                    data-keys=":r0::r1:anObject"
+                  >
+                    "bool"
+                  </span>
+                  <span
+                    class="w-rjv-colon"
+                    style="padding-right: 3px;"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="w-rjv-value"
+                  >
+                    true
+                  </span>
+                </span>
+              </div>
+              <div
+                class="w-rjv-line"
+                style="padding-left: 15px;"
+              >
+                <span>
+                  <span
+                    class="w-rjv-object-key"
+                    data-keys=":r0::r1:anObject"
+                  >
+                    "number"
+                  </span>
+                  <span
+                    class="w-rjv-colon"
+                    style="padding-right: 3px;"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="w-rjv-value"
+                  >
+                    123
+                  </span>
+                </span>
+              </div>
+              <div
+                class="w-rjv-line"
+                style="padding-left: 15px;"
+              >
+                <span>
+                  <span
+                    class="w-rjv-object-key"
+                    data-keys=":r0::r1:anObject"
+                  >
+                    "null"
+                  </span>
+                  <span
+                    class="w-rjv-colon"
+                    style="padding-right: 3px;"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="w-rjv-value"
+                    style="font-weight: bold;"
+                  >
+                    NULL
+                  </span>
+                </span>
+              </div>
+              <div
+                class="w-rjv-line"
+                style="padding-left: 15px;"
+              >
+                <span>
+                  <span
+                    class="w-rjv-object-key"
+                    data-keys=":r0::r1:anObject"
+                  >
+                    "string"
+                  </span>
+                  <span
+                    class="w-rjv-colon"
+                    style="padding-right: 3px;"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="w-rjv-value"
+                    style="cursor: pointer;"
+                  >
+                    "a string"
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div
+              style="padding-left: 2px;"
+            >
+              <span
+                class="w-rjv-curlybraces-end "
+                style="padding-left: 2px; display: inline-block;"
+              >
+                }
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style="padding-left: 2px;"
+      >
+        <span
+          class="w-rjv-curlybraces-end "
+          style="padding-left: 2px; display: inline-block;"
+        >
+          }
         </span>
       </div>
     </div>
@@ -52,57 +350,6 @@ exports[`Story Snapshots > AsJsonString 1`] = `
 `;
 
 exports[`Story Snapshots > AsObject 1`] = `
-<div>
-  <div
-    class=""
-  >
-    <div
-      class="w-json-view-container w-rjv  w-rjv-inner"
-      style="line-height: 1.4; font-family: var(--w-rjv-font-family, Menlo, monospace); font-size: 13px; --w-rjv-font-family: monospace; --w-rjv-color: #002b36; --w-rjv-background-color: #ffffff; --w-rjv-line-color: #ebebeb; --w-rjv-arrow-color: var(--w-rjv-color); --w-rjv-edit-color: var(--w-rjv-color); --w-rjv-info-color: #0000004d; --w-rjv-update-color: #ebcb8b; --w-rjv-copied-color: #002b36; --w-rjv-copied-success-color: #28a745; --w-rjv-curlybraces-color: #236a7c; --w-rjv-colon-color: #002b36; --w-rjv-brackets-color: #236a7c; --w-rjv-type-string-color: #cb4b16; --w-rjv-type-int-color: #268bd2; --w-rjv-type-float-color: #859900; --w-rjv-type-bigint-color: #268bd2; --w-rjv-type-boolean-color: #2aa198; --w-rjv-type-date-color: #586e75; --w-rjv-type-url-color: #0969da; --w-rjv-type-null-color: #d33682; --w-rjv-type-nan-color: #859900; --w-rjv-type-undefined-color: #586e75;"
-    >
-      <div
-        style="display: inline-flex; align-items: center;"
-      >
-        <svg
-          class="w-rjv-arrow"
-          fill="var(--w-rjv-arrow-color, currentColor)"
-          style="cursor: pointer; height: 1em; width: 1em; transform: rotate(-90deg); transition: all 0.3s;"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
-          />
-        </svg>
-        <span
-          class="w-rjv-curlybraces-start "
-        >
-          {
-        </span>
-        <span
-          class="w-rjv-ellipsis "
-          style="cursor: pointer;"
-        >
-          ...
-        </span>
-        <span
-          class="w-rjv-curlybraces-end "
-        >
-          }
-        </span>
-        <span
-          class="w-rjv-object-size"
-          style="padding-left: 4px; font-style: italic;"
-        >
-          2
-           items
-        </span>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Story Snapshots > DefaultCollapsed 1`] = `
 <div>
   <div
     class=""
@@ -405,6 +652,355 @@ exports[`Story Snapshots > DefaultCollapsed 1`] = `
                   <span
                     class="w-rjv-object-key"
                     data-keys=":r4::r5:anObject"
+                  >
+                    "string"
+                  </span>
+                  <span
+                    class="w-rjv-colon"
+                    style="padding-right: 3px;"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="w-rjv-value"
+                    style="cursor: pointer;"
+                  >
+                    "a string"
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div
+              style="padding-left: 2px;"
+            >
+              <span
+                class="w-rjv-curlybraces-end "
+                style="padding-left: 2px; display: inline-block;"
+              >
+                }
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style="padding-left: 2px;"
+      >
+        <span
+          class="w-rjv-curlybraces-end "
+          style="padding-left: 2px; display: inline-block;"
+        >
+          }
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Story Snapshots > DefaultCollapsed 1`] = `
+<div>
+  <div
+    class=""
+  >
+    <div
+      class="w-json-view-container w-rjv  w-rjv-inner"
+      style="line-height: 1.4; font-family: var(--w-rjv-font-family, Menlo, monospace); font-size: 13px; --w-rjv-font-family: monospace; --w-rjv-color: #002b36; --w-rjv-background-color: #ffffff; --w-rjv-line-color: #ebebeb; --w-rjv-arrow-color: var(--w-rjv-color); --w-rjv-edit-color: var(--w-rjv-color); --w-rjv-info-color: #0000004d; --w-rjv-update-color: #ebcb8b; --w-rjv-copied-color: #002b36; --w-rjv-copied-success-color: #28a745; --w-rjv-curlybraces-color: #236a7c; --w-rjv-colon-color: #002b36; --w-rjv-brackets-color: #236a7c; --w-rjv-type-string-color: #cb4b16; --w-rjv-type-int-color: #268bd2; --w-rjv-type-float-color: #859900; --w-rjv-type-bigint-color: #268bd2; --w-rjv-type-boolean-color: #2aa198; --w-rjv-type-date-color: #586e75; --w-rjv-type-url-color: #0969da; --w-rjv-type-null-color: #d33682; --w-rjv-type-nan-color: #859900; --w-rjv-type-undefined-color: #586e75;"
+    >
+      <div
+        style="display: inline-flex; align-items: center;"
+      >
+        <svg
+          class="w-rjv-arrow"
+          fill="var(--w-rjv-arrow-color, currentColor)"
+          style="cursor: pointer; height: 1em; width: 1em; transform: rotate(0deg); transition: all 0.3s;"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+          />
+        </svg>
+        <span
+          class="w-rjv-curlybraces-start "
+        >
+          {
+        </span>
+        <span
+          class="w-rjv-object-size"
+          style="padding-left: 4px; font-style: italic;"
+        >
+          2
+           items
+        </span>
+      </div>
+      <div
+        class="w-rjv-content"
+        style="margin-left: 6px;"
+      >
+        <div
+          class="w-rjv-wrap"
+        >
+          <div
+            class="undefined w-rjv-inner"
+            style="padding-left: 15px;"
+          >
+            <div
+              style="display: inline-flex; align-items: center;"
+            >
+              <svg
+                class="w-rjv-arrow"
+                fill="var(--w-rjv-arrow-color, currentColor)"
+                style="cursor: pointer; height: 1em; width: 1em; transform: rotate(0deg); transition: all 0.3s;"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+              <span
+                class="w-rjv-object-key"
+                data-keys=":r8::r9:aList"
+              >
+                "aList"
+              </span>
+              <span
+                class="w-rjv-colon"
+                style="padding-right: 3px;"
+              >
+                :
+              </span>
+              <span
+                class="w-rjv-brackets-start "
+              >
+                [
+              </span>
+              <span
+                class="w-rjv-object-size"
+                style="padding-left: 4px; font-style: italic;"
+              >
+                3
+                 items
+              </span>
+            </div>
+            <div
+              class="w-rjv-content"
+              style="margin-left: 6px;"
+            >
+              <div
+                class="w-rjv-line"
+                style="padding-left: 15px;"
+              >
+                <span>
+                  <span
+                    class="w-rjv-object-key"
+                    data-keys=":r8::r9:aList"
+                  >
+                    0
+                  </span>
+                  <span
+                    class="w-rjv-colon"
+                    style="padding-right: 3px;"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="w-rjv-value"
+                  >
+                    1
+                  </span>
+                </span>
+              </div>
+              <div
+                class="w-rjv-line"
+                style="padding-left: 15px;"
+              >
+                <span>
+                  <span
+                    class="w-rjv-object-key"
+                    data-keys=":r8::r9:aList"
+                  >
+                    1
+                  </span>
+                  <span
+                    class="w-rjv-colon"
+                    style="padding-right: 3px;"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="w-rjv-value"
+                  >
+                    2
+                  </span>
+                </span>
+              </div>
+              <div
+                class="w-rjv-line"
+                style="padding-left: 15px;"
+              >
+                <span>
+                  <span
+                    class="w-rjv-object-key"
+                    data-keys=":r8::r9:aList"
+                  >
+                    2
+                  </span>
+                  <span
+                    class="w-rjv-colon"
+                    style="padding-right: 3px;"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="w-rjv-value"
+                  >
+                    3
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div
+              style="padding-left: 2px;"
+            >
+              <span
+                class="w-rjv-brackets-end "
+                style="padding-left: 2px; display: inline-block;"
+              >
+                ]
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-rjv-wrap"
+        >
+          <div
+            class="undefined w-rjv-inner"
+            style="padding-left: 15px;"
+          >
+            <div
+              style="display: inline-flex; align-items: center;"
+            >
+              <svg
+                class="w-rjv-arrow"
+                fill="var(--w-rjv-arrow-color, currentColor)"
+                style="cursor: pointer; height: 1em; width: 1em; transform: rotate(0deg); transition: all 0.3s;"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+              <span
+                class="w-rjv-object-key"
+                data-keys=":r8::r9:anObject"
+              >
+                "anObject"
+              </span>
+              <span
+                class="w-rjv-colon"
+                style="padding-right: 3px;"
+              >
+                :
+              </span>
+              <span
+                class="w-rjv-curlybraces-start "
+              >
+                {
+              </span>
+              <span
+                class="w-rjv-object-size"
+                style="padding-left: 4px; font-style: italic;"
+              >
+                4
+                 items
+              </span>
+            </div>
+            <div
+              class="w-rjv-content"
+              style="margin-left: 6px;"
+            >
+              <div
+                class="w-rjv-line"
+                style="padding-left: 15px;"
+              >
+                <span>
+                  <span
+                    class="w-rjv-object-key"
+                    data-keys=":r8::r9:anObject"
+                  >
+                    "bool"
+                  </span>
+                  <span
+                    class="w-rjv-colon"
+                    style="padding-right: 3px;"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="w-rjv-value"
+                  >
+                    true
+                  </span>
+                </span>
+              </div>
+              <div
+                class="w-rjv-line"
+                style="padding-left: 15px;"
+              >
+                <span>
+                  <span
+                    class="w-rjv-object-key"
+                    data-keys=":r8::r9:anObject"
+                  >
+                    "number"
+                  </span>
+                  <span
+                    class="w-rjv-colon"
+                    style="padding-right: 3px;"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="w-rjv-value"
+                  >
+                    123
+                  </span>
+                </span>
+              </div>
+              <div
+                class="w-rjv-line"
+                style="padding-left: 15px;"
+              >
+                <span>
+                  <span
+                    class="w-rjv-object-key"
+                    data-keys=":r8::r9:anObject"
+                  >
+                    "null"
+                  </span>
+                  <span
+                    class="w-rjv-colon"
+                    style="padding-right: 3px;"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="w-rjv-value"
+                    style="font-weight: bold;"
+                  >
+                    NULL
+                  </span>
+                </span>
+              </div>
+              <div
+                class="w-rjv-line"
+                style="padding-left: 15px;"
+              >
+                <span>
+                  <span
+                    class="w-rjv-object-key"
+                    data-keys=":r8::r9:anObject"
                   >
                     "string"
                   </span>
