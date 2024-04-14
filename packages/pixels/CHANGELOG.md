@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.3](https://github.com/fuf-stack/uniform/compare/pixels-v0.2.2...pixels-v0.2.3) (2024-04-14)
+
+
+### Bug Fixes
+
+* **pixels:** try to use @uiw/react-json-view in Json ([8d9773f](https://github.com/fuf-stack/uniform/commit/8d9773f75236fa1485ee9cef653fa9c76e594777))
+
 ## [0.2.2](https://github.com/fuf-stack/uniform/compare/pixels-v0.2.1...pixels-v0.2.2) (2024-04-14)
 
 
