@@ -2,19 +2,15 @@
 
 exports[`Story Snapshots > Default 1`] = `
 <div>
-  <div
-    class="sb-redline"
+  <button
+    aria-expanded="false"
+    aria-haspopup="true"
+    class="z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased"
+    data-slot="trigger"
+    id="react-aria-:r0:"
+    type="button"
   >
-    <button
-      aria-expanded="false"
-      aria-haspopup="true"
-      class="z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased"
-      data-slot="trigger"
-      id="react-aria-:r0:"
-      type="button"
-    >
-      trigger
-    </button>
-  </div>
+    trigger
+  </button>
 </div>
 `;
