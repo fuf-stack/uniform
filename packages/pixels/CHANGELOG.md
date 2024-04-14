@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.0.8...pixels-v0.1.0) (2024-04-14)
+
+
+### Features
+
+* **pixels:** add more components ([90eb0e7](https://github.com/fuf-stack/uniform/commit/90eb0e7750724f0a658725af8d29dbe07f39d682))
+
 ## [0.0.8](https://github.com/fuf-stack/uniform/compare/pixels-v0.0.7...pixels-v0.0.8) (2024-04-12)
 
 
