@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.1.0...pixels-v0.1.1) (2024-04-14)
+
+
+### Bug Fixes
+
+* **pixels:** some refactorings in Menu component ([40b779a](https://github.com/fuf-stack/uniform/commit/40b779a7f5b59e1f769520167e026007343ecc68))
+
 ## [0.1.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.0.8...pixels-v0.1.0) (2024-04-14)
 
 
