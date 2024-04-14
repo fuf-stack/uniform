@@ -12,5 +12,10 @@ export default defineConfig({
     '!src/**/*.test.*',
   ],
   format: ['cjs', 'esm'],
+  loader: {
+    // for css modules
+    // see: https://github.com/egoist/tsup/issues/536
+    '.css': 'local-css',
+  },
   sourcemap: true,
 });
