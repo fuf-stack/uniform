@@ -1,0 +1,141 @@
+import type { DropdownSectionProps } from '@nextui-org/dropdown';
+import type { Key, MouseEventHandler, ReactNode } from 'react';
+
+import { FaEllipsisVertical } from 'react-icons/fa6';
+
+import {
+  Dropdown as NextDropdown,
+  DropdownItem as NextDropdownItem,
+  DropdownMenu as NextDropdownMenu,
+  DropdownSection as NextDropdownSection,
+  DropdownTrigger as NextDropdownTrigger,
+} from '@nextui-org/dropdown';
+import cn from 'classnames';
+import createDebug from 'debug';
+
+const debug = createDebug('component:Menu');
+
+/**
+ * Menu item type
+ */
+export interface MenuItem {
+  /** unique identifier */
+  key: string;
+  /** CSS class name */
+  className?: string;
+  /** additional description shown under the label */
+  description?: string;
+  /** disables the menu item */
+  disabled?: boolean;
+  /** menu item icon  */
+  icon?: ReactNode;
+  /** menu item name */
+  label: ReactNode;
+  /** click event handler */
+  onClick?: MouseEventHandler<HTMLLIElement>;
+  /** e2e test identifier */
+  testId?: string;
+}
+
+/**
+ * Menu section type
+ */
+export interface MenuSection {
+  /** unique identifier */
+  key: string;
+  /** section label */
+  label: ReactNode;
+  /** section items (array of MenuItem) */
+  items: MenuItem[];
+}
+
+export interface MenuProps {
+  /** child components */
+  children?: ReactNode;
+  /** CSS class name */
+  className?: string | string[];
+  /** HTML data-testid attribute used in e2e tests */
+  testId?: string;
+  /** menu item structure */
+  items: (MenuSection | MenuItem)[];
+  /** disable menu trigger */
+  isDisabled?: boolean;
+  /** called if item is selected */
+  onAction?: (key: Key) => void;
+}
+
+/** returns String[] of disabled items/keys */
+const getDisabledKeys = (items: (MenuSection | MenuItem)[]) => {
+  return (
+    items
+      // @ts-expect-error typing issue with MenuSection | MenuItem
+      .map((item) => (typeof item?.items === 'undefined' ? item : item.items))
+      .flat<MenuItem[]>()
+      .filter((item) => {
+        return Object.hasOwn(item, 'disabled') && item.disabled === true;
+      })
+      .map((item) => item.key)
+  );
+};
+
+const renderMenuItem = (item: MenuItem) => (
+  <NextDropdownItem
+    className={item.className}
+    data-testid={item.testId || item.key}
+    description={item.description}
+    key={item.key}
+    onClick={item.onClick}
+    startContent={item.icon}
+  >
+    {item.label}
+  </NextDropdownItem>
+);
+
+/**
+ * Dropdown menu component based on [NextUI Dropdown](https://nextui.org/docs/components/dropdown)
+ */
+const Menu = ({
+  children = null,
+  className = undefined,
+  onAction = undefined,
+  testId = undefined,
+  isDisabled = false,
+  items,
+}: MenuProps) => {
+  debug('Menu', { items });
+
+  return (
+    <NextDropdown isDisabled={isDisabled}>
+      <NextDropdownTrigger className={cn(className)} data-testid={testId}>
+        {/* eslint-disable-next-line react/button-has-type */}
+        <button>{children || <FaEllipsisVertical className="px-2" />}</button>
+      </NextDropdownTrigger>
+      <NextDropdownMenu
+        // aria-label="Dynamic Actions"
+        items={items}
+        disabledKeys={getDisabledKeys(items)}
+        onAction={onAction}
+      >
+        {(item) => {
+          if ('items' in item) {
+            return (
+              <NextDropdownSection
+                items={item.items as MenuSection['items']}
+                title={item.label as DropdownSectionProps['title']}
+                key={item.key}
+              >
+                {/* @ts-expect-error ts problem here with render fn */}
+                {(sectionItem) => {
+                  return renderMenuItem(sectionItem);
+                }}
+              </NextDropdownSection>
+            );
+          }
+          return renderMenuItem(item);
+        }}
+      </NextDropdownMenu>
+    </NextDropdown>
+  );
+};
+
+export default Menu;

@@ -7,6 +7,7 @@ export default defineConfig({
   entry: [
     'src',
     '!src/**/__snapshots__/**',
+    '!src/**/*.module.css',
     '!src/**/*.stories.*',
     '!src/**/*.test.*',
   ],

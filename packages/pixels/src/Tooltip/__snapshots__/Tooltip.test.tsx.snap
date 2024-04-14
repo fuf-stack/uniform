@@ -1,0 +1,97 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Story Snapshots > Default 1`] = `
+<div>
+  <span
+    class="cursor-pointer"
+  >
+    hover me
+  </span>
+</div>
+`;
+
+exports[`Story Snapshots > allPositions 1`] = `
+<div>
+  <div
+    class="mb-12"
+  >
+    <span
+      class="cursor-pointer"
+    >
+      top
+    </span>
+  </div>
+  <div
+    class="mb-12"
+  >
+    <span
+      class="cursor-pointer"
+    >
+      bottom
+    </span>
+  </div>
+  <div
+    class="mb-12"
+  >
+    <span
+      class="cursor-pointer"
+    >
+      left
+    </span>
+  </div>
+  <div
+    class="mb-12"
+  >
+    <span
+      class="cursor-pointer"
+    >
+      right
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Story Snapshots > somePositions 1`] = `
+<div>
+  <div
+    class="mb-12"
+  >
+    <span
+      aria-describedby=":r2:"
+      class="cursor-pointer"
+    >
+      top
+    </span>
+  </div>
+  <div
+    class="mb-12"
+  >
+    <span
+      aria-describedby=":r5:"
+      class="cursor-pointer"
+    >
+      left
+    </span>
+  </div>
+  <div
+    class="mb-12"
+  >
+    <span
+      aria-describedby=":r8:"
+      class="cursor-pointer"
+    >
+      right
+    </span>
+  </div>
+  <div
+    class="mb-12"
+  >
+    <span
+      aria-describedby=":rb:"
+      class="cursor-pointer"
+    >
+      bottom
+    </span>
+  </div>
+</div>
+`;
