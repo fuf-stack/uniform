@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.1.2...pixels-v0.2.0) (2024-04-14)
+
+
+### Features
+
+* **pixels:** add Json component ([9635444](https://github.com/fuf-stack/uniform/commit/96354443067d20d68bfa5749199612de0f0a0adc))
+
 ## [0.1.2](https://github.com/fuf-stack/uniform/compare/pixels-v0.1.1...pixels-v0.1.2) (2024-04-14)
 
 
