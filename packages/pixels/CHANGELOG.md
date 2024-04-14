@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/fuf-stack/uniform/compare/pixels-v0.2.1...pixels-v0.2.2) (2024-04-14)
+
+
+### Bug Fixes
+
+* **pixels:** export JsonProps ([195489f](https://github.com/fuf-stack/uniform/commit/195489f6c64faa0da91c44a62907f16680b02027))
+
 ## [0.2.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.2.0...pixels-v0.2.1) (2024-04-14)
 
 
