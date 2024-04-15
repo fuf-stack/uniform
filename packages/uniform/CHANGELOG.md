@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.3](https://github.com/fuf-stack/uniform/compare/uniform-v0.0.2...uniform-v0.0.3) (2024-04-15)
+
+
+### Bug Fixes
+
+* **uniform:** add logic to add exports with tsup ([589c05c](https://github.com/fuf-stack/uniform/commit/589c05c910c1cc15334becfc8c18321d0bf36016))
+* **uniform:** fix slugify import ([2fe7d2a](https://github.com/fuf-stack/uniform/commit/2fe7d2a4eb0698c7f9ea784188f985e51d1d7620))
+
 ## [0.0.2](https://github.com/fuf-stack/uniform/compare/uniform-v0.0.1...uniform-v0.0.2) (2024-04-15)
 
 
