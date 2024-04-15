@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import { useFormContext as useHookFormContext } from 'react-hook-form';
 
 import { ValidationSchemaContext } from '../../Form/subcomponents/FormContext';
-import slugify from '../../helpers/slugify';
+import { slugify } from '../../helpers';
 
 // FIX: This fixes the problem that the innerType is not checked for optionals...
 const recursiveSearchInnerType = (schema: VetoSchema): boolean => {

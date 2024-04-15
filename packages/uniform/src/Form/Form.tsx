@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form';
 
 import cn from 'classnames';
 
-import slugify from '../helpers/slugify';
+import {slugify} from '../helpers';
 import FormProvider from './subcomponents/FormContext';
 import FormDebugViewer from './subcomponents/FormDebugViewer';
 

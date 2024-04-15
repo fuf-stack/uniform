@@ -1,6 +1,6 @@
 import type { FieldError } from 'react-hook-form';
 
-import slugify from '../../helpers/slugify';
+import { slugify } from '../../helpers';
 
 interface FieldValidationErrorProps {
   error: FieldError[] | Record<string, FieldError[]>;

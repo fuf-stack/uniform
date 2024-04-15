@@ -5,7 +5,7 @@ import cn from 'classnames';
 
 import Button from '@fuf-stack/pixels/Button';
 
-import slugify from '../helpers/slugify';
+import { slugify } from '../helpers';
 import { useFormContext } from '../hooks';
 
 interface SubmitButtonProps {

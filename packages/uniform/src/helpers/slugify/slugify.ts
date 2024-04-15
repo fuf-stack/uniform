@@ -1,8 +1,10 @@
+/* eslint-disable import/prefer-default-export */
+
 import type { Options as SlugOptions } from 'slug';
 
 import slug from 'slug';
 
-export default (string: string, options?: SlugOptions) => {
+export const slugify = (string: string, options?: SlugOptions) => {
   const replacement = options?.replacement || '_';
   return slug(string, {
     ...slug.defaults.modes.rfc3986,
