@@ -1,0 +1,37 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Story Snapshots > MultipleErrors 1`] = `
+<div>
+  <ul
+    aria-label="Error: first error
+second error"
+    data-testid="first_errorsecond_error"
+  >
+    <li>
+      <div>
+        first error
+      </div>
+    </li>
+    <li>
+      <div>
+        second error
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Story Snapshots > SingleError 1`] = `
+<div>
+  <ul
+    aria-label="Error: single error message"
+    data-testid="single_error_message"
+  >
+    <li>
+      <div>
+        single error message
+      </div>
+    </li>
+  </ul>
+</div>
+`;

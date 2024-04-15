@@ -35,8 +35,7 @@
     "url": "https://github.com/fuf-stack/uniforms/issues"
   },
   "scripts": {
-    "build": "rm -rf ./dist && tsup",
-    "prepack": "pnpm build",
+    "prepack": "rm -rf ./dist && tsup",
     "test": "vitest ./src"
   },
   "dependencies": {

@@ -4,9 +4,11 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "cache": false
+      "outputs": ["dist/**"],
+      "outputMode": "new-only"
     },
     "dev": {
+      "dependsOn": ["build"],
       "cache": false,
       "persistent": true
     }

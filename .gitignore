@@ -26,9 +26,10 @@ pids
 *.seed
 
 # Folders
+.turbo-cache
 build
-dist
 coverage
+dist
 node_modules
 
 # Extentions

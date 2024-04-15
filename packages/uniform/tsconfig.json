@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "allowJs": false,
+    "baseUrl": ".",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "ESNext",
+    "paths": {
+      "@fuf-stack/pixels/*": ["../pixels/src/*"],
+      "@fuf-stack/veto/*": ["../veto/src/*"],
+      "src/": ["./src/"]
+    },
+    "rootDir": "src",
+    "strict": true,
+    "target": "ESNext",
+    "useDefineForClassFields": true
+  },
+  "include": ["src", "globals.d.ts"],
+  "references": [{ "path": "../pixels" }, { "path": "../veto" }]
+}
