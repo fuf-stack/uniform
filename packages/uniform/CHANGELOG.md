@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.1](https://github.com/fuf-stack/uniform/compare/uniform-v0.0.1...uniform-v0.0.1) (2024-04-15)
+
+
+### Bug Fixes
+
+* **uniform:** fix ts errors ([76b2ba7](https://github.com/fuf-stack/uniform/commit/76b2ba796c991eb0eaf6730428676e45fa6aef5d))
+
 ## 0.0.1 (2024-04-15)
 
 
