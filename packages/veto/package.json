@@ -27,6 +27,7 @@
   },
   "scripts": {
     "build": "rm -rf ./dist && tsup",
+    "dev": "tsup --watch",
     "test": "vitest ./src"
   },
   "dependencies": {

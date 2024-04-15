@@ -1,5 +1,5 @@
 {
-  "name": "vite-config",
+  "name": "@repo/vite-config",
   "description": "uniforms shared vite config",
   "version": "0.0.1",
   "private": true,

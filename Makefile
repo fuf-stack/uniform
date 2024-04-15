@@ -13,8 +13,8 @@ install:
 	pnpm env use --global `cat .nvmrc`;
 	pnpm install --ignore-scripts;
 	pnpm husky install;
-	pnpm build;
 
 storybook:
 	@$(MAKE) install;
+	pnpm --filter veto build;
 	pnpm --filter storybook-config storybook;

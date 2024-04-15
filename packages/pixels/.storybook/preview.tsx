@@ -1,4 +1,4 @@
-import sharedPreview, { Preview } from 'storybook-config/preview';
+import sharedPreview, { Preview } from '@repo/storybook-config/preview';
 
 const preview: Preview = {
   ...sharedPreview,

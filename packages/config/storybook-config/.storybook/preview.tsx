@@ -1,7 +1,7 @@
 import sharedPreview, { Preview } from '../preview';
 
 // load tailwind css
-import 'tailwind-config/tailwind.css';
+import '@repo/tailwind-config/tailwind.css';
 
 const preview: Preview = {
   ...sharedPreview,

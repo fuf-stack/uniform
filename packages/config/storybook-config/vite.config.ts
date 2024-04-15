@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
-import viteConfig from 'vite-config/vite.config';
+import viteConfig from '@repo/vite-config/vite.config';
 
 export default viteConfig;

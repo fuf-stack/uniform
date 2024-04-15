@@ -1,5 +1,5 @@
 {
-  "name": "tailwind-config",
+  "name": "@repo/tailwind-config",
   "description": "uniforms shared tailwind config",
   "version": "0.0.1",
   "private": true,

@@ -1,5 +1,5 @@
 {
-  "name": "storybook-config",
+  "name": "@repo/storybook-config",
   "description": "uniforms shared storybook config",
   "version": "0.0.1",
   "private": true,
@@ -10,6 +10,8 @@
     "test": "test-storybook"
   },
   "devDependencies": {
+    "@repo/tailwind-config": "workspace:*",
+    "@repo/vite-config": "workspace:*",
     "@storybook/addon-a11y": "8.0.6",
     "@storybook/addon-actions": "8.0.6",
     "@storybook/addon-coverage": "1.0.1",
@@ -27,8 +29,6 @@
     "react-dom": "18.2.0",
     "storybook": "8.0.6",
     "storybook-dark-mode": "4.0.1",
-    "tailwind-config": "workspace:*",
-    "vite-config": "workspace:*",
     "jsdom": "24.0.0",
     "@testing-library/react": "14.3.0"
   }

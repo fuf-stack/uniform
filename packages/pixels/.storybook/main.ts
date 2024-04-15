@@ -1,4 +1,4 @@
-import sharedConfig, { StorybookConfig } from 'storybook-config/main';
+import sharedConfig, { StorybookConfig } from '@repo/storybook-config/main';
 
 const config: StorybookConfig = {
   ...sharedConfig,
