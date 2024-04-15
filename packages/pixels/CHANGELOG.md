@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.5](https://github.com/fuf-stack/uniform/compare/pixels-v0.2.4...pixels-v0.2.5) (2024-04-15)
+
+
+### Bug Fixes
+
+* **pixels:** udate all component index exports ([17a6044](https://github.com/fuf-stack/uniform/commit/17a6044d0920de008c735fb0f40dfcc37b325f01))
+
 ## [0.2.4](https://github.com/fuf-stack/uniform/compare/pixels-v0.2.3...pixels-v0.2.4) (2024-04-14)
 
 
