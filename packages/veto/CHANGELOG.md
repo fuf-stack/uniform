@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/fuf-stack/uniform/compare/veto-v0.1.4...veto-v0.2.0) (2024-04-15)
+
+
+### Features
+
+* **uniform:** add initial package ([c189b28](https://github.com/fuf-stack/uniform/commit/c189b287a83d43f41db715de8a9d5ebe0a558a1d))
+
 ## [0.1.4](https://github.com/fuf-stack/uniform/compare/veto-v0.1.3...veto-v0.1.4) (2024-04-12)
 
 
