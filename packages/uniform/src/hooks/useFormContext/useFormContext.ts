@@ -1,3 +1,4 @@
+import type { VetoSchema } from '@fuf-stack/veto';
 import type { FieldError } from 'react-hook-form';
 
 import { useContext } from 'react';
@@ -7,7 +8,7 @@ import { ValidationSchemaContext } from '../../Form/subcomponents/FormContext';
 import slugify from '../../helpers/slugify';
 
 // FIX: This fixes the problem that the innerType is not checked for optionals...
-const recursiveSearchInnerType = (schema: unknown): boolean => {
+const recursiveSearchInnerType = (schema: VetoSchema): boolean => {
   if (schema?._def?.innerType) {
     if (schema?._def?.innerType?._def?.typeName === 'ZodOptional') {
       return schema?._def?.innerType?._def?.typeName !== 'ZodOptional';
@@ -19,7 +20,7 @@ const recursiveSearchInnerType = (schema: unknown): boolean => {
 
 // TODO: Fix problem ".optional().nullable()" is required, ".nullable().optional()" is not required...
 export const recursiveFieldKeySearch = (
-  schema: unknown, // TODO:
+  schema: VetoSchema,
   path: string[],
 ): boolean | null => {
   const [current, ...rest] = path;
@@ -28,6 +29,7 @@ export const recursiveFieldKeySearch = (
   let currentSchema = schema;
 
   if (schema?._def?.typeName === 'ZodOptional') {
+    // @ts-expect-error not sure here
     currentSchema = schema.unwrap();
   } else if (schema?._def?.typeName === 'ZodEffects') {
     // in case of an effect, unwrap the effect and call with schema (clould be optional) and complete path.
@@ -47,6 +49,7 @@ export const recursiveFieldKeySearch = (
   }
 
   // get shape of an object or objects of an array
+  // @ts-expect-error not sure here
   const shape = currentSchema?.shape ?? currentSchema?.element?.shape; // ??
 
   if (shape && shape[current]) {
@@ -80,7 +83,8 @@ export const useFormContext = () => {
     const fieldPath =
       typeof name === 'string' ? name.replace(/\[\d+\]/g, '').split('.') : name;
     const required =
-      recursiveFieldKeySearch(validation?.schema, fieldPath) || false;
+      (validation && recursiveFieldKeySearch(validation.schema, fieldPath)) ||
+      false;
     const { error, ...rest } = getFieldStateOrig(name, formState);
     return {
       ...rest,

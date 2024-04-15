@@ -68,11 +68,10 @@ const Form = ({
     validation
       ? {
           defaultValues: initialValues,
-          resolver: async (values, ...args) => {
+          resolver: async (values) => {
             const { data, errors, ...rest } = await validation.validateAsync(
               removeNullishFields(values),
-              ...args,
-            );
+          );
             // https://github.com/react-hook-form/resolvers/blob/master/zod/src/zod.ts
             return { values: data || {}, errors: errors || {}, ...rest };
           },
