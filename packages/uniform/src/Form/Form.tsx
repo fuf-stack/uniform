@@ -61,9 +61,6 @@ const Form = ({
   validation = undefined,
   validationTrigger = 'all',
 }: FormProps) => {
-  const trigger =
-    validationTrigger === 'all-instant' ? 'all' : validationTrigger;
-
   const methods = useForm(
     validation
       ? {
@@ -75,7 +72,9 @@ const Form = ({
             // https://github.com/react-hook-form/resolvers/blob/master/zod/src/zod.ts
             return { values: data || {}, errors: errors || {}, ...rest };
           },
-          mode: trigger, // Validate form (default: all)
+          // set rhf mode
+          // see: https://react-hook-form.com/docs/useform#mode
+          mode: validationTrigger === 'all-instant' ? 'all' : validationTrigger,
         }
       : {
           defaultValues: initialValues,

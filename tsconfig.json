@@ -2,6 +2,7 @@
   "references": [
     { "path": "packages/config/storybook-config" },
     { "path": "packages/pixels" },
+    { "path": "packages/uniform" },
     { "path": "packages/veto" }
   ],
   "files": []
