@@ -1,6 +1,6 @@
 import { expect, it } from 'vitest';
 
-import slugify from './slugify';
+import { slugify } from './slugify';
 
 it('enforces lowercase', () => {
   expect(slugify('UPPERCasE')).toEqual('uppercase');
