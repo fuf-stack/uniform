@@ -4,14 +4,55 @@
   "author": "Hannes Tiede",
   "version": "0.2.5",
   "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
   "exports": {
-    "./": "./dist/"
-  },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*"
-      ]
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./Button": {
+      "import": "./dist/Button/index.js",
+      "require": "./dist/Button/index.cjs",
+      "types": "./dist/Button/index.d.ts"
+    },
+    "./Card": {
+      "import": "./dist/Card/index.js",
+      "require": "./dist/Card/index.cjs",
+      "types": "./dist/Card/index.d.ts"
+    },
+    "./Json": {
+      "import": "./dist/Json/index.js",
+      "require": "./dist/Json/index.cjs",
+      "types": "./dist/Json/index.d.ts"
+    },
+    "./Label": {
+      "import": "./dist/Label/index.js",
+      "require": "./dist/Label/index.cjs",
+      "types": "./dist/Label/index.d.ts"
+    },
+    "./Menu": {
+      "import": "./dist/Menu/index.js",
+      "require": "./dist/Menu/index.cjs",
+      "types": "./dist/Menu/index.d.ts"
+    },
+    "./Modal": {
+      "import": "./dist/Modal/index.js",
+      "require": "./dist/Modal/index.cjs",
+      "types": "./dist/Modal/index.d.ts"
+    },
+    "./Popover": {
+      "import": "./dist/Popover/index.js",
+      "require": "./dist/Popover/index.cjs",
+      "types": "./dist/Popover/index.d.ts"
+    },
+    "./Tooltip": {
+      "import": "./dist/Tooltip/index.js",
+      "require": "./dist/Tooltip/index.cjs",
+      "types": "./dist/Tooltip/index.d.ts"
     }
   },
   "files": [
@@ -35,7 +76,8 @@
     "url": "https://github.com/fuf-stack/uniforms/issues"
   },
   "scripts": {
-    "prepack": "rm -rf ./dist && tsup",
+    "build": "tsup --config node_modules/@repo/tsup-config/config.ts",
+    "prepack": "rm -rf ./dist && pnpm build",
     "test": "vitest ./src"
   },
   "dependencies": {
@@ -60,6 +102,7 @@
   "devDependencies": {
     "@repo/storybook-config": "workspace:*",
     "@repo/tailwind-config": "workspace:*",
+    "@repo/tsup-config": "workspace:*",
     "@repo/vite-config": "workspace:*",
     "@types/debug": "4.1.12",
     "@types/react": "18.2.69",

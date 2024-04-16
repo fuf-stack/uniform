@@ -58,7 +58,12 @@ const Json = ({ className = null, collapsed = false, value }: JsonProps) => {
       >
         {/* FIX: overwrite Copied component to fix flickering copy button */}
         <JsonView.Copied
-          render={({ 'data-copied': copied, style, ...elmProps }) => {
+          render={({
+            // @ts-expect-error this should be fine
+            'data-copied': copied,
+            style,
+            ...elmProps
+          }) => {
             const elmClasses = cn(
               elmProps.className,
               'absolute -right-4 -top-[2px] h-4 w-4 !fill-transparent pl-1',

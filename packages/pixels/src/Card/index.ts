@@ -1,6 +1,7 @@
-import type { CardProps } from './Card';
-
 import Card from './Card';
 
-export type { CardProps };
+export type { CardProps } from './Card';
+
+export { Card };
+
 export default Card;

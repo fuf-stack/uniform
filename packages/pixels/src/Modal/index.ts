@@ -1,6 +1,7 @@
-import type { ModalProps } from './Modal';
-
 import Modal from './Modal';
 
-export type { ModalProps };
+export type { ModalProps } from './Modal';
+
+export { Modal };
+
 export default Modal;

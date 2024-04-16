@@ -1,9 +1,9 @@
-import type { ButtonProps } from '@fuf-stack/pixels/Button';
+import type { ButtonProps } from '@fuf-stack/pixels';
 import type { ReactNode } from 'react';
 
 import cn from 'classnames';
 
-import Button from '@fuf-stack/pixels/Button';
+import { Button } from '@fuf-stack/pixels';
 
 import { slugify } from '../helpers';
 import { useFormContext } from '../hooks';
