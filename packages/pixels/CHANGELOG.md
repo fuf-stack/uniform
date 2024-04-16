@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.2.5...pixels-v0.3.0) (2024-04-16)
+
+
+### Features
+
+* **uniform:** add initial package ([c189b28](https://github.com/fuf-stack/uniform/commit/c189b287a83d43f41db715de8a9d5ebe0a558a1d))
+
+
+### Bug Fixes
+
+* **pixels,uniform:** improve build logic ([adc013d](https://github.com/fuf-stack/uniform/commit/adc013df9f12403acb6beeff0891b0f698a78701))
+* **pixels:** fixed jumping copy icon in Json component ([135dd00](https://github.com/fuf-stack/uniform/commit/135dd00eb9838d021f68aa9f9e790706012adb77))
+
 ## [0.2.5](https://github.com/fuf-stack/uniform/compare/pixels-v0.2.4...pixels-v0.2.5) (2024-04-15)
 
 
