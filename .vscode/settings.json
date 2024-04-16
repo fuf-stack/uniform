@@ -33,5 +33,12 @@
   "yaml.customTags": [
     // see: https://docs.gitlab.com/ee/ci/yaml/yaml_optimization.html#configure-your-ide-to-support-reference-tags
     "!reference sequence"
+  ],
+
+  // configure tailwind extension to work with tailwind-variants (tv) and cn (short for classNames)
+  // SEE: https://www.tailwind-variants.org/docs/getting-started#intellisense-setup-optional
+  "tailwindCSS.experimental.classRegex": [
+    ["cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["tv\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
   ]
 }

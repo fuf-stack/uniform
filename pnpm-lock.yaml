@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@fuf-stack/eslint-config-fuf':
-        specifier: 0.9.0
-        version: 0.9.0(@babel/core@7.24.4)(typescript@5.4.4)(vitest@1.4.0)
+        specifier: 0.9.1
+        version: 0.9.1(@babel/core@7.24.4)(typescript@5.4.4)(vitest@1.4.0)
       '@fuf-stack/project-cli-tools':
         specifier: 0.4.1
         version: 0.4.1(@types/node@20.12.5)(typescript@5.4.4)
@@ -2491,8 +2491,8 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@fuf-stack/eslint-config-fuf@0.9.0(@babel/core@7.24.4)(typescript@5.4.4)(vitest@1.4.0):
-    resolution: {integrity: sha512-dFruOzfE0vk+qhYjgnlk8LQRI2+cRn600hO+PuafeYN9BflBN4UuCmCooWRUcJdApvyaa4qEgGbcgdnIgDcAxA==}
+  /@fuf-stack/eslint-config-fuf@0.9.1(@babel/core@7.24.4)(typescript@5.4.4)(vitest@1.4.0):
+    resolution: {integrity: sha512-wSAw+gkxZhCGJawXYdMGAc5x2oenXxWGUN7KfHfDsQD0lg2nJPqcY8uPPjKxPGbWi4E/eEhJXtqhASb2826bkQ==}
     dependencies:
       '@babel/eslint-parser': 7.24.1(@babel/core@7.24.4)(eslint@8.57.0)
       '@ianvs/prettier-plugin-sort-imports': 4.2.1(prettier@3.2.5)
