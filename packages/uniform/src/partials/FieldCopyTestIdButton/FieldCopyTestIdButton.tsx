@@ -4,14 +4,17 @@ import cn from 'classnames';
 
 import { Button, useLocalStorage } from '@fuf-stack/pixels';
 
-interface FormDebugProps {
+export interface FieldCopyTestIdButtonProps {
   className?: string;
   testId: string;
 }
 
 const LOCALSTORAGE_DEBUG_KEY = 'uniform:form-debug-enabled';
 
-const TestIdDebug = ({ className = undefined, testId }: FormDebugProps) => {
+const FieldCopyTestIdButton = ({
+  className = undefined,
+  testId,
+}: FieldCopyTestIdButtonProps) => {
   const [debug] = useLocalStorage(LOCALSTORAGE_DEBUG_KEY, false);
 
   const copyToClipboard = () => {
@@ -34,4 +37,4 @@ const TestIdDebug = ({ className = undefined, testId }: FormDebugProps) => {
     />
   );
 };
-export default TestIdDebug;
+export default FieldCopyTestIdButton;
