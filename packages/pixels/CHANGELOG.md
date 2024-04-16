@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.3.0...pixels-v0.3.1) (2024-04-16)
+
+
+### Bug Fixes
+
+* **pixels:** export all types in Menu ([e9d1304](https://github.com/fuf-stack/uniform/commit/e9d1304f1b2e0f5677d66537d839436e55fe6974))
+
 ## [0.3.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.2.5...pixels-v0.3.0) (2024-04-16)
 
 
