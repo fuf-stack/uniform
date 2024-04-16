@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 
 import { useState } from 'react';
 import { FaChevronDown, FaChevronUp, FaTimesCircle } from 'react-icons/fa';
+import { HiOutlineClipboard, HiOutlineClipboardCheck } from 'react-icons/hi';
 
 import JsonView from '@uiw/react-json-view';
 import { lightTheme } from '@uiw/react-json-view/light';
@@ -46,6 +47,7 @@ const Json = ({ className = null, collapsed = false, value }: JsonProps) => {
   try {
     content = (
       <JsonView
+        className="pr-5"
         collapsed={collapsed}
         displayDataTypes={false}
         style={{
@@ -53,7 +55,32 @@ const Json = ({ className = null, collapsed = false, value }: JsonProps) => {
           backgroundColor: 'unset',
         }}
         value={getValue(value)}
-      />
+      >
+        {/* FIX: overwrite Copied component to fix flickering copy button */}
+        <JsonView.Copied
+          render={({ 'data-copied': copied, style, ...elmProps }) => {
+            const elmClasses = cn(
+              elmProps.className,
+              'absolute -right-4 -top-[2px] h-4 w-4 !fill-transparent pl-1',
+              { 'text-success': copied },
+            );
+            return (
+              <span className="relative !ml-0 !h-[1em] !w-0" style={style}>
+                {copied ? (
+                  <HiOutlineClipboardCheck
+                    // eslint-disable-next-line react/jsx-props-no-spreading
+                    {...elmProps}
+                    className={elmClasses}
+                  />
+                ) : (
+                  // eslint-disable-next-line react/jsx-props-no-spreading
+                  <HiOutlineClipboard {...elmProps} className={elmClasses} />
+                )}
+              </span>
+            );
+          }}
+        />
+      </JsonView>
     );
   } catch (err) {
     error = (
