@@ -1,7 +1,7 @@
-import Tooltip from './Tooltip';
+import Tooltip, { tooltipPlacementOptions } from './Tooltip';
 
 export type { TooltipProps } from './Tooltip';
 
-export { Tooltip };
+export { Tooltip, tooltipPlacementOptions };
 
 export default Tooltip;

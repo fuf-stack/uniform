@@ -3,8 +3,13 @@ import type { ReactNode } from 'react';
 import { Tooltip as NextTooltip } from '@nextui-org/tooltip';
 import cn from 'classnames';
 
-export const PlacementOptions = ['top', 'bottom', 'left', 'right'] as const;
-export type Placement = (typeof PlacementOptions)[number];
+export const tooltipPlacementOptions = [
+  'top',
+  'bottom',
+  'left',
+  'right',
+] as const;
+export type TooltipPlacement = (typeof tooltipPlacementOptions)[number];
 
 export interface TooltipProps {
   /** trigger child components */
@@ -20,7 +25,7 @@ export interface TooltipProps {
   /** handler that is called when the overlay's open state changes */
   onOpenChange?: (isOpen: boolean) => void;
   /** placement if the tooltip */
-  placement?: Placement;
+  placement?: TooltipPlacement;
 }
 
 /**
