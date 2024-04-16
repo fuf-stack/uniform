@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.5](https://github.com/fuf-stack/uniform/compare/uniform-v0.0.4...uniform-v0.0.5) (2024-04-16)
+
+
+### Bug Fixes
+
+* **pixels,uniform:** improve build logic ([adc013d](https://github.com/fuf-stack/uniform/commit/adc013df9f12403acb6beeff0891b0f698a78701))
+
 ## [0.0.4](https://github.com/fuf-stack/uniform/compare/uniform-v0.0.3...uniform-v0.0.4) (2024-04-16)
 
 
