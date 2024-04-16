@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.4](https://github.com/fuf-stack/uniform/compare/uniform-v0.0.3...uniform-v0.0.4) (2024-04-16)
+
+
+### Bug Fixes
+
+* **uniform:** add legacy index ([0a79684](https://github.com/fuf-stack/uniform/commit/0a79684f2aa8ba14071c2c2d1858b8939a3389b6))
+
 ## [0.0.3](https://github.com/fuf-stack/uniform/compare/uniform-v0.0.2...uniform-v0.0.3) (2024-04-15)
 
 
