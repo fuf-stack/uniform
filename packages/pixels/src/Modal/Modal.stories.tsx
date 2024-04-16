@@ -3,7 +3,7 @@ import type { ModalProps } from './Modal';
 
 import { Fragment, useState } from 'react';
 
-import Modal, { ModalSizeOptions } from './Modal';
+import Modal, { modalSizeOptions } from './Modal';
 
 const meta: Meta<typeof Modal> = {
   title: 'pixels/Modal',
@@ -48,7 +48,7 @@ export const AllSizesTemplate: Story = {
   },
   render: (args) => (
     <>
-      {ModalSizeOptions.map((size) => {
+      {modalSizeOptions.map((size) => {
         const [open, setOpen] = useState(false);
         const toggleOpen = () => {
           setOpen(!open);

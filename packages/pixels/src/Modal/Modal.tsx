@@ -12,8 +12,8 @@ import createDebug from 'debug';
 
 const debug = createDebug('component:Modal');
 
-export const ModalSizeOptions = ['sm', 'md', 'lg'] as const;
-type ModalSize = (typeof ModalSizeOptions)[number];
+export const modalSizeOptions = ['sm', 'md', 'lg'] as const;
+type ModalSize = (typeof modalSizeOptions)[number];
 
 export interface ModalProps {
   /** child components */
