@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Tooltip, { PlacementOptions } from './Tooltip';
+import Tooltip, { tooltipPlacementOptions } from './Tooltip';
 
 const meta: Meta<typeof Tooltip> = {
   title: 'pixels/Tooltip',
@@ -17,27 +17,10 @@ export const Default: StoryObj<typeof Tooltip> = {
   },
 };
 
-export const somePositions: Story = {
+export const AllPlacements: Story = {
   render: (args) => (
     <>
-      {['top', 'left', 'right', 'bottom'].map((position) => (
-        <div key={position} className="mb-12">
-          <Tooltip placement={position} defaultOpen {...args}>
-            {position}
-          </Tooltip>
-        </div>
-      ))}
-    </>
-  ),
-  args: {
-    content: 'tooltip content',
-  },
-};
-
-export const allPositions: Story = {
-  render: (args) => (
-    <>
-      {PlacementOptions.map((placement) => (
+      {tooltipPlacementOptions.map((placement) => (
         <div key={placement} className="mb-12">
           <Tooltip placement={placement} {...args}>
             {placement}
