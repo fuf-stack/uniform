@@ -6,10 +6,7 @@ import { FaBug } from 'react-icons/fa6';
 
 import cn from 'classnames';
 
-import Button from '@fuf-stack/pixels/Button';
-import Card from '@fuf-stack/pixels/Card';
-import useLocalStorage from '@fuf-stack/pixels/hooks/useLocalStorage';
-import Json from '@fuf-stack/pixels/Json';
+import { Button, Card, Json, useLocalStorage } from '@fuf-stack/pixels';
 
 import { useFormContext } from '../../hooks';
 
@@ -36,15 +33,19 @@ const FormDebugViewer = ({ className = undefined }: FormDebugViewerProps) => {
 
   const formValues = watch();
 
-  useEffect(() => {
-    const updateValidationErrors = async () => {
-      if (validation) {
-        const validateResult = await validation?.validateAsync(formValues);
-        setValidationErrors(validateResult?.errors);
-      }
-    };
-    updateValidationErrors();
-  }, [JSON.stringify(formValues)]);
+  useEffect(
+    () => {
+      const updateValidationErrors = async () => {
+        if (validation) {
+          const validateResult = await validation?.validateAsync(formValues);
+          setValidationErrors(validateResult?.errors);
+        }
+      };
+      updateValidationErrors();
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [JSON.stringify(formValues)],
+  );
 
   if (!debug) {
     return (

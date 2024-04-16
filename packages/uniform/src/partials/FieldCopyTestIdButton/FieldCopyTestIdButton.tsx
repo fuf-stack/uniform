@@ -2,8 +2,7 @@ import { FaBullseye } from 'react-icons/fa6';
 
 import cn from 'classnames';
 
-import Button from '@fuf-stack/pixels/Button';
-import useLocalStorage from '@fuf-stack/pixels/hooks/useLocalStorage';
+import { Button, useLocalStorage } from '@fuf-stack/pixels';
 
 interface FormDebugProps {
   className?: string;

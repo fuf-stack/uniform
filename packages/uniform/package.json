@@ -9,6 +9,7 @@
   "main": "./dist/index.js",
   "module": "./dist/index.cjs",
   "types": "./dist/index.d.ts",
+  "sideEffects": false,
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -66,7 +67,8 @@
     "url": "https://github.com/fuf-stack/uniform/issues"
   },
   "scripts": {
-    "prepack": "rm -rf ./dist && tsup",
+    "build": "tsup --config node_modules/@repo/tsup-config/config.ts",
+    "prepack": "rm -rf ./dist && pnpm build",
     "test": "vitest ./src"
   },
   "dependencies": {
@@ -97,6 +99,7 @@
   "devDependencies": {
     "@repo/storybook-config": "workspace:*",
     "@repo/tailwind-config": "workspace:*",
+    "@repo/tsup-config": "workspace:*",
     "@repo/vite-config": "workspace:*",
     "@types/debug": "4.1.12",
     "@types/react": "18.2.69",

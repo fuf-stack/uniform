@@ -1,6 +1,7 @@
-import type { JsonProps } from './Json';
-
 import Json from './Json';
 
-export type { JsonProps };
+export type { JsonProps } from './Json';
+
+export { Json };
+
 export default Json;
