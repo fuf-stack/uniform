@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form';
 
 import cn from 'classnames';
 
-import {slugify} from '../helpers';
+import { slugify } from '../helpers';
 import FormProvider from './subcomponents/FormContext';
 import FormDebugViewer from './subcomponents/FormDebugViewer';
 
@@ -23,7 +23,7 @@ export const removeNullishFields = (obj: Record<string, unknown>) => {
   );
 };
 
-interface FormProps {
+export interface FormProps {
   /** form children */
   children: ReactNode | ReactNode[];
   /** CSS class name */
@@ -81,13 +81,18 @@ const Form = ({
         },
   );
 
-  useEffect(() => {
-    if (validationTrigger === 'all-instant') {
-      methods.trigger();
-    }
-  }, []);
+  useEffect(
+    () => {
+      if (validationTrigger === 'all-instant') {
+        methods.trigger();
+      }
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [validationTrigger],
+  );
 
   return (
+    // eslint-disable-next-line react/jsx-props-no-spreading
     <FormProvider {...methods} validation={validation}>
       <div className="flex w-full flex-row justify-between gap-6">
         <form

@@ -29,9 +29,18 @@ export default defineConfig({
   onSuccess: async () => {
     const packageJsonPath = './package.json';
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
-    const distIndexFiles = getAllFilePaths('./dist').filter((file) =>
-      file.endsWith('index.js'),
-    );
+    const distIndexFiles = getAllFilePaths('./dist')
+      .filter((file) => file.endsWith('index.js'))
+      .sort((a, b) => {
+        // move index export to top
+        if (a === './dist/index.js') {
+          return -1;
+        }
+        if (b === './dist/index.js') {
+          return 1;
+        }
+        return a.localeCompare(b);
+      });
 
     packageJson.exports = distIndexFiles.reduce<
       Record<string, { import: string; require: string; types: string }>

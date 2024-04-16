@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 
 import cn from 'classnames';
 
-interface GridProps {
+export interface GridProps {
   /** child components */
   children?: ReactNode;
   /** CSS class name */

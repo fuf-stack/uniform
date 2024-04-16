@@ -6,7 +6,15 @@
   "homepage": "https://github.com/fuf-stack/uniform#readme",
   "license": "MIT",
   "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
   "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
     "./Form": {
       "import": "./dist/Form/index.js",
       "require": "./dist/Form/index.cjs",
@@ -16,11 +24,6 @@
       "import": "./dist/Grid/index.js",
       "require": "./dist/Grid/index.cjs",
       "types": "./dist/Grid/index.d.ts"
-    },
-    "./SubmitButton": {
-      "import": "./dist/SubmitButton/index.js",
-      "require": "./dist/SubmitButton/index.cjs",
-      "types": "./dist/SubmitButton/index.d.ts"
     },
     "./helpers": {
       "import": "./dist/helpers/index.js",
@@ -41,6 +44,11 @@
       "import": "./dist/partials/FieldValidationError/index.js",
       "require": "./dist/partials/FieldValidationError/index.cjs",
       "types": "./dist/partials/FieldValidationError/index.d.ts"
+    },
+    "./SubmitButton": {
+      "import": "./dist/SubmitButton/index.js",
+      "require": "./dist/SubmitButton/index.cjs",
+      "types": "./dist/SubmitButton/index.d.ts"
     }
   },
   "files": [

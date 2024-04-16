@@ -8,7 +8,7 @@ import Button from '@fuf-stack/pixels/Button';
 import { slugify } from '../helpers';
 import { useFormContext } from '../hooks';
 
-interface SubmitButtonProps {
+export interface SubmitButtonProps {
   /** child components */
   children?: ReactNode;
   /** CSS class name */
