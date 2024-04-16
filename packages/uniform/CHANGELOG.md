@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.6](https://github.com/fuf-stack/uniform/compare/uniform-v0.0.5...uniform-v0.0.6) (2024-04-16)
+
+
+### Bug Fixes
+
+* **uniform:** export all components in index ([67a7986](https://github.com/fuf-stack/uniform/commit/67a798650dd7a1bf26c029bb79a90007f4f05d8f))
+
 ## [0.0.5](https://github.com/fuf-stack/uniform/compare/uniform-v0.0.4...uniform-v0.0.5) (2024-04-16)
 
 
