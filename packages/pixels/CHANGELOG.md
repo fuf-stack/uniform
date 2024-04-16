@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.2](https://github.com/fuf-stack/uniform/compare/pixels-v0.3.1...pixels-v0.3.2) (2024-04-16)
+
+
+### Bug Fixes
+
+* **pixels:** export modalSizeOptions in Modal ([85112e5](https://github.com/fuf-stack/uniform/commit/85112e526e39761a230dad3c15a5052bc2256cb9))
+* **pixels:** export tooltipPlacementOptions in Popover ([5589aef](https://github.com/fuf-stack/uniform/commit/5589aef5f540ace137bbeed865f6b189a8990981))
+* **pixels:** fix indes of Tooltip ([725ff9f](https://github.com/fuf-stack/uniform/commit/725ff9f5d16db921839cbcca98fc0d41b75cc859))
+
 ## [0.3.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.3.0...pixels-v0.3.1) (2024-04-16)
 
 
