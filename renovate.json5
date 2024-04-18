@@ -48,9 +48,8 @@
     },
     // @nextui monorepo
     {
-      extends: [':semanticCommitScope(pixels,uniform)'],
       matchPackagePatterns: '^@nextui-org',
-      groupName: '@nextui monorepo',
+      groupName: 'nextui monorepo',
     },
   ],
 }
