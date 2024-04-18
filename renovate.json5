@@ -1,13 +1,12 @@
 {
-  // dependencyDashboardLabels: ['effort | ongoing', 'scope | dependencies'],
-  // dependencyDashboardOSVVulnerabilitySummary: 'all',
+  dependencyDashboardLabels: ['effort | ongoing', 'scope | dependencies'],
+  dependencyDashboardOSVVulnerabilitySummary: 'all',
   extends: [
-    'mergeConfidence:all-badges',
     'config:recommended',
     'default:automergeDigest',
     'default:automergeMinor',
     'default:combinePatchMinorReleases',
-    // 'default:dependencyDashboard',
+    'default:dependencyDashboard',
     'default:docker',
     'default:enableVulnerabilityAlerts',
     'default:maintainLockFilesWeekly',
