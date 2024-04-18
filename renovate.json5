@@ -46,5 +46,11 @@
       // prevent multiple 'Lock file maintenance' being created
       matchUpdateTypes: ['major', 'minor', 'patch'],
     },
+    // @nextui monorepo
+    {
+      extends: [':semanticCommitScope(pixels,uniform)'],
+      matchPackagePatterns: '^@nextui-org',
+      groupName: '@nextui monorepo',
+    },
   ],
 }
