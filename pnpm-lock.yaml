@@ -153,8 +153,8 @@ importers:
         specifier: 2.0.30
         version: 2.0.30(@nextui-org/system@2.0.15(@nextui-org/theme@2.1.18(tailwindcss@3.4.3(ts-node@10.9.2(@swc/core@1.4.12(@swc/helpers@0.5.8))(@types/node@20.12.7)(typescript@5.4.5))))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tailwind-variants@0.1.20(tailwindcss@3.4.3(ts-node@10.9.2(@swc/core@1.4.12(@swc/helpers@0.5.8))(@types/node@20.12.7)(typescript@5.4.5)))))(@nextui-org/theme@2.1.18(tailwindcss@3.4.3(ts-node@10.9.2(@swc/core@1.4.12(@swc/helpers@0.5.8))(@types/node@20.12.7)(typescript@5.4.5))))(framer-motion@11.0.25(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tailwind-variants@0.1.20(tailwindcss@3.4.3(ts-node@10.9.2(@swc/core@1.4.12(@swc/helpers@0.5.8))(@types/node@20.12.7)(typescript@5.4.5))))
       '@uiw/react-json-view':
-        specifier: 2.0.0-alpha.23
-        version: 2.0.0-alpha.23(@babel/runtime@7.24.4)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: 2.0.0-alpha.24
+        version: 2.0.0-alpha.24(@babel/runtime@7.24.4)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       classnames:
         specifier: 2.5.1
         version: 2.5.1
@@ -3103,8 +3103,8 @@ packages:
     resolution: {integrity: sha512-mcuHM/QircmA6O7fy6nn2w/3ditQkj+SgtOc8DW3uQ10Yfj42amm2i+6F2K4YAOPNNTmE6iM1ynM6lrSwdendA==}
     engines: {node: ^18.18.0 || >=20.0.0}
 
-  '@uiw/react-json-view@2.0.0-alpha.23':
-    resolution: {integrity: sha512-GT0fy/K7+xSsfhvV4PVx2qPRomr/RjzFnerCjglfTYX0oEjFe9S2UwnhqOBaSHrfaCL6ccALZ2c+qV73eqop9Q==}
+  '@uiw/react-json-view@2.0.0-alpha.24':
+    resolution: {integrity: sha512-wB/yHwu3C4G4BbqB+0Y8UTq6Wckjk7zGfJpTuQhhrljkfs14H+2GEqlEsuINUSOB41YFXYmTJp8XxyTFLF2B3g==}
     peerDependencies:
       '@babel/runtime': '>=7.10.0'
       react: '>=18.0.0'
@@ -12284,7 +12284,7 @@ snapshots:
       '@typescript-eslint/types': 7.5.0
       eslint-visitor-keys: 3.4.3
 
-  '@uiw/react-json-view@2.0.0-alpha.23(@babel/runtime@7.24.4)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@uiw/react-json-view@2.0.0-alpha.24(@babel/runtime@7.24.4)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@babel/runtime': 7.24.4
       react: 18.2.0
