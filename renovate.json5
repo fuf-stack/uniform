@@ -25,27 +25,6 @@
   // https://docs.renovatebot.com/configuration-options/#stopupdatinglabel
   stopUpdatingLabel: 'renovate | stop update',
   packageRules: [
-    // @fuf-stack/pixels
-    {
-      extends: [':semanticCommitScope(pixels)'],
-      matchFileNames: ['packages/pixels/package.json'],
-      // prevent multiple 'Lock file maintenance' being created
-      matchUpdateTypes: ['major', 'minor', 'patch'],
-    },
-    // @fuf-stack/uniform
-    {
-      extends: [':semanticCommitScope(uniform)'],
-      matchFileNames: ['packages/uniform/package.json'],
-      // prevent multiple 'Lock file maintenance' being created
-      matchUpdateTypes: ['major', 'minor', 'patch'],
-    },
-    // @fuf-stack/veto
-    {
-      extends: [':semanticCommitScope(veto)'],
-      matchFileNames: ['packages/veto/package.json'],
-      // prevent multiple 'Lock file maintenance' being created
-      matchUpdateTypes: ['major', 'minor', 'patch'],
-    },
     // @nextui monorepo
     {
       matchPackagePatterns: '^@nextui-org',
