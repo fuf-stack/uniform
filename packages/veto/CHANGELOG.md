@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.1](https://github.com/fuf-stack/uniform/compare/veto-v0.2.0...veto-v0.2.1) (2024-04-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency zod to v3.22.5 ([970e103](https://github.com/fuf-stack/uniform/commit/970e103dd572dc2547b3dcf281acf16a8fd1160a))
+* **deps:** update dependency zod to v3.23.0 ([412eb0b](https://github.com/fuf-stack/uniform/commit/412eb0b984c16413daef11d7f77cbee628d4bf88))
+
 ## [0.2.0](https://github.com/fuf-stack/uniform/compare/veto-v0.1.4...veto-v0.2.0) (2024-04-15)
 
 
