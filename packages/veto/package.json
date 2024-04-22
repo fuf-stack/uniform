@@ -33,7 +33,7 @@
   "dependencies": {
     "debug": "4.3.4",
     "validator": "13.11.0",
-    "zod": "3.22.5"
+    "zod": "3.23.0"
   },
   "devDependencies": {
     "@types/validator": "13.11.9"
