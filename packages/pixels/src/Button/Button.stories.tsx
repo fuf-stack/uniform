@@ -32,6 +32,13 @@ export const Loading: StoryObj<typeof Button> = {
   },
 };
 
+export const DisabledAnimation: StoryObj<typeof Button> = {
+  args: {
+    children: 'Button',
+    disableAnimation: true,
+  },
+};
+
 export const AllColors: StoryObj<typeof Button> = {
   render: () => (
     <>

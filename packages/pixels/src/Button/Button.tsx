@@ -17,6 +17,8 @@ export interface ButtonProps {
   color?: NextButtonProps['color'];
   /** disables function of the button. */
   disabled?: boolean;
+  /** disables all button animations */
+  disableAnimation?: boolean;
   /** If set loading animation is shown */
   loading?: boolean;
   /** optional icon */
@@ -42,6 +44,7 @@ const Button = ({
   className = undefined,
   color = 'default',
   disabled = false,
+  disableAnimation = false,
   icon = undefined,
   loading = false,
   onClick = undefined,
@@ -49,7 +52,6 @@ const Button = ({
   testId = undefined,
   type = undefined,
   variant = 'solid',
-  ...passthrouhProps
 }: ButtonProps) => {
   return (
     <NextButton
@@ -57,6 +59,8 @@ const Button = ({
       className={cn(className)}
       color={color}
       data-testid={testId}
+      disableAnimation={disableAnimation}
+      disableRipple={disableAnimation}
       isDisabled={disabled}
       isIconOnly={!!(icon && !children)}
       isLoading={loading}
@@ -65,7 +69,6 @@ const Button = ({
       spinner={<LoadingSpinner />}
       type={type}
       variant={variant}
-      {...passthrouhProps}
     >
       {icon}
       {children}
