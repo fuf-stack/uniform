@@ -72,8 +72,8 @@ importers:
         specifier: 0.17.0
         version: 0.17.0(@swc/helpers@0.5.10)(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(encoding@0.1.13)(ts-node@10.9.2(@swc/core@1.4.16(@swc/helpers@0.5.10))(@types/node@20.12.7)(typescript@5.4.5))
       '@testing-library/react':
-        specifier: 15.0.2
-        version: 15.0.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: 15.0.4
+        version: 15.0.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       axe-playwright:
         specifier: 2.0.1
         version: 2.0.1(playwright@1.43.1)
@@ -2804,8 +2804,8 @@ packages:
       vitest:
         optional: true
 
-  '@testing-library/react@15.0.2':
-    resolution: {integrity: sha512-5mzIpuytB1ctpyywvyaY2TAAUQVCZIGqwiqFQf6u9lvj/SJQepGUzNV18Xpk+NLCaCE2j7CWrZE0tEf9xLZYiQ==}
+  '@testing-library/react@15.0.4':
+    resolution: {integrity: sha512-Fw/LM1emOHKfCxv5R0tz+25TOtiMt0o5Np1zJmb4LbSacOagXQX4ooAaHiJfGUMe+OjUk504BX11W+9Z8CvyZA==}
     engines: {node: '>=18'}
     peerDependencies:
       react: ^18.0.0
@@ -11928,7 +11928,7 @@ snapshots:
       jest: 29.7.0(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@swc/core@1.4.16(@swc/helpers@0.5.10))(@types/node@20.12.7)(typescript@5.4.5))
       vitest: 1.5.0(@types/node@20.12.7)(jsdom@24.0.0)
 
-  '@testing-library/react@15.0.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@testing-library/react@15.0.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@babel/runtime': 7.24.4
       '@testing-library/dom': 10.0.0
