@@ -27,7 +27,7 @@ export const modalVariants = tv({
       md: { base: 'max-w-md' },
       lg: { base: 'max-w-lg' },
       xl: { base: 'max-w-5xl' },
-      full: { base: 'h-full max-w-full' },
+      full: { base: 'h-[80dvh] max-w-full' },
     },
   },
 });
