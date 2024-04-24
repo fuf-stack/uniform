@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.4.0...pixels-v0.5.0) (2024-04-24)
+
+
+### Features
+
+* **pixels:** refactor Modal sizes + update tailwind variants ([8f80363](https://github.com/fuf-stack/uniform/commit/8f80363acbddd8aed080fe637267cbdc3c844abd))
+
 ## [0.4.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.3.2...pixels-v0.4.0) (2024-04-22)
 
 
