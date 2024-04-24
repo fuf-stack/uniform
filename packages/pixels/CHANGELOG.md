@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.2](https://github.com/fuf-stack/uniform/compare/pixels-v0.5.1...pixels-v0.5.2) (2024-04-24)
+
+
+### Bug Fixes
+
+* **deps:** update nextui monorepo ([4e77f5e](https://github.com/fuf-stack/uniform/commit/4e77f5edfcaa301ec567903742c71d163a8015ff))
+
 ## [0.5.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.5.0...pixels-v0.5.1) (2024-04-24)
 
 
