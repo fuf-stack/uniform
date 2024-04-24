@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.0](https://github.com/fuf-stack/uniform/compare/uniform-v0.1.0...uniform-v0.2.0) (2024-04-24)
+
+
+### Features
+
+* **pixels:** refactor Modal sizes + update tailwind variants ([8f80363](https://github.com/fuf-stack/uniform/commit/8f80363acbddd8aed080fe637267cbdc3c844abd))
+
+
+### Bug Fixes
+
+* **deps:** update nextui monorepo ([4e77f5e](https://github.com/fuf-stack/uniform/commit/4e77f5edfcaa301ec567903742c71d163a8015ff))
+
 ## [0.1.0](https://github.com/fuf-stack/uniform/compare/uniform-v0.0.6...uniform-v0.1.0) (2024-04-22)
 
 
