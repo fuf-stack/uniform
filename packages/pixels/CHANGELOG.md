@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.5.0...pixels-v0.5.1) (2024-04-24)
+
+
+### Bug Fixes
+
+* **pixels:** fix outside scroll bar in full size modal ([127be69](https://github.com/fuf-stack/uniform/commit/127be694b0a9d644bbe49d0e3dd2cf0300f13ba9))
+
 ## [0.5.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.4.0...pixels-v0.5.0) (2024-04-24)
 
 
