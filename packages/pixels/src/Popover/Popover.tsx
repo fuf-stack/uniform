@@ -3,9 +3,6 @@ import type { ReactNode } from 'react';
 
 import { Popover, PopoverContent, PopoverTrigger } from '@nextui-org/popover';
 import cn from 'classnames';
-import createDebug from 'debug';
-
-const debug = createDebug('component:Popover');
 
 export interface PopoverProps {
   /** child components */
@@ -39,8 +36,6 @@ export default ({
   testId = undefined,
   title = undefined,
 }: PopoverProps) => {
-  debug('Popover');
-
   return (
     <Popover
       placement={placement}

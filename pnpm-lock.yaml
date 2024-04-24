@@ -158,9 +158,6 @@ importers:
       classnames:
         specifier: 2.5.1
         version: 2.5.1
-      debug:
-        specifier: 4.3.4
-        version: 4.3.4(supports-color@5.5.0)
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -246,9 +243,6 @@ importers:
       classnames:
         specifier: 2.5.1
         version: 2.5.1
-      debug:
-        specifier: 4.3.4
-        version: 4.3.4(supports-color@5.5.0)
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -298,9 +292,6 @@ importers:
 
   packages/veto:
     dependencies:
-      debug:
-        specifier: 4.3.4
-        version: 4.3.4(supports-color@5.5.0)
       validator:
         specifier: 13.11.0
         version: 13.11.0

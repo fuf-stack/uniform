@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import type { VariantProps } from 'tailwind-variants';
 
 import {
   Modal as NextModal,
@@ -7,31 +8,52 @@ import {
   ModalFooter as NextModalFooter,
   ModalHeader as NextModalHeader,
 } from '@nextui-org/modal';
-import cn from 'classnames';
-import createDebug from 'debug';
+import { tv } from 'tailwind-variants';
 
-const debug = createDebug('component:Modal');
+// modal variants
+export const modalVariants = tv({
+  slots: {
+    backdrop: '',
+    base: '',
+    body: '',
+    closeButton: '',
+    footer: '',
+    header: '',
+    wrapper: '',
+  },
+  variants: {
+    size: {
+      sm: { base: 'max-w-sm' },
+      md: { base: 'max-w-md' },
+      lg: { base: 'max-w-lg' },
+      xl: { base: 'max-w-5xl' },
+      full: { base: 'h-full max-w-full' },
+    },
+  },
+});
 
-export const modalSizeOptions = ['sm', 'md', 'lg'] as const;
-type ModalSize = (typeof modalSizeOptions)[number];
+type ModalVariantProps = VariantProps<typeof modalVariants>;
+type ModalVariantSlots = Partial<
+  Record<keyof ReturnType<typeof modalVariants>, string>
+>;
 
-export interface ModalProps {
-  /** child components */
+export interface ModalProps extends ModalVariantProps {
+  /** modal body content */
   children?: ReactNode;
   /** CSS class name */
-  className?: string | string[];
-  /** HTML data-testid attribute used in e2e tests */
+  className?: string | ModalVariantSlots;
+  /** modal footer */
   footer?: ReactNode;
+  /** modal header */
+  header?: ReactNode;
   /** open state (controlled) */
   isOpen: boolean;
   /** close event handler */
   onClose: () => void;
   /** modal size */
-  size?: ModalSize;
-  /** e2e test id */
+  size?: ModalVariantProps['size'];
+  /** HTML data-testid attribute used in e2e tests */
   testId?: string;
-  /** modal header */
-  title?: ReactNode;
 }
 
 /**
@@ -41,46 +63,47 @@ const Modal = ({
   children = null,
   className = undefined,
   footer = undefined,
+  header = undefined,
   isOpen,
   onClose,
   size = 'md',
   testId = undefined,
-  title = undefined,
 }: ModalProps) => {
-  debug('Modal', { size });
+  // classNames from slots
+  const variants = modalVariants({ size });
+  const classNameObj = (typeof className === 'object' && className) || {};
+  const classNames = {
+    backdrop: variants.backdrop({ className: classNameObj.backdrop }),
+    base: variants.base({
+      className: classNameObj.base || (className as string),
+    }),
+    body: variants.body({ className: classNameObj.body }),
+    closeButton: variants.closeButton({ className: classNameObj.closeButton }),
+    footer: variants.footer({ className: classNameObj.footer }),
+    header: variants.header({ className: classNameObj.header }),
+    wrapper: variants.wrapper({ className: classNameObj.wrapper }),
+  };
+
   return (
-    <div className={cn(className)} data-testid={testId}>
-      <NextModal
-        backdrop="opaque"
-        classNames={{
-          base: cn(
-            {
-              'lg:w-11/12': size === 'lg',
-              'w-2/12': size === 'sm',
-              'w-6/12': size === 'md',
-            },
-            // overwrite !rounded-none from nextui
-            '!rounded-lg',
-          ),
-        }}
-        isOpen={isOpen}
-        onClose={onClose}
-        scrollBehavior="inside"
-        size="full"
-      >
-        <NextModalContent data-testid={testId ? `${testId}_modal` : 'modal'}>
-          {() => (
-            <>
-              {title && <NextModalHeader>{title}</NextModalHeader>}
-              <NextModalBody className="bg-ex-background">
-                {children}
-              </NextModalBody>
-              {footer && <NextModalFooter>{footer}</NextModalFooter>}
-            </>
-          )}
-        </NextModalContent>
-      </NextModal>
-    </div>
+    <NextModal
+      backdrop="opaque"
+      classNames={classNames}
+      data-testid={testId}
+      isOpen={isOpen}
+      onClose={onClose}
+      placement="center"
+      scrollBehavior="inside"
+    >
+      <NextModalContent data-testid={testId ? `modal_${testId}` : 'modal'}>
+        {() => (
+          <>
+            {header && <NextModalHeader>{header}</NextModalHeader>}
+            <NextModalBody>{children}</NextModalBody>
+            {footer && <NextModalFooter>{footer}</NextModalFooter>}
+          </>
+        )}
+      </NextModalContent>
+    </NextModal>
   );
 };
 

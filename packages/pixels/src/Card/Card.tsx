@@ -8,17 +8,14 @@ import {
   CardHeader as NextCardHeader,
 } from '@nextui-org/card';
 import { Divider as NextDivider } from '@nextui-org/divider';
-import createDebug from 'debug';
 import { tv } from 'tailwind-variants';
-
-const debug = createDebug('component:Card');
 
 // card styling variants
 export const cardVariants = tv({
   slots: {
-    base: 'border border-slate-300',
+    base: 'border border-divider',
     body: '',
-    divider: 'my-0 bg-slate-300',
+    divider: 'my-0 border-divider',
     footer: '',
     header: 'text-base font-semibold',
   },
@@ -30,7 +27,7 @@ type CardVariantSlots = Partial<
 >;
 
 export interface CardProps extends CardVariantProps {
-  /** child components */
+  /** card body content */
   children?: ReactNode;
   /** CSS class name */
   className?: string | CardVariantSlots;
@@ -52,63 +49,47 @@ const Card = ({
   header = undefined,
   footer = undefined,
 }: CardProps) => {
-  debug('Card', { className, testId });
-  const {
-    base: baseSlot,
-    body: bodySlot,
-    divider: dividerSlot,
-    footer: footerSlot,
-    header: headerSlot,
-  } = cardVariants();
+  // classNames from slots
+  const variants = cardVariants();
+  const classNameObj = (typeof className === 'object' && className) || {};
+  const classNames = {
+    base: variants.base({
+      className: classNameObj.base || (className as string),
+    }),
+    header: variants.header({ className: classNameObj.header }),
+    body: variants.body({ className: classNameObj.body }),
+    footer: variants.footer({ className: classNameObj.footer }),
+  };
+
+  const divider = (
+    <NextDivider
+      className={variants.divider({ className: classNameObj.divider })}
+    />
+  );
 
   return (
     <NextCard
+      classNames={classNames}
       data-testid={testId && `card_${testId}`}
-      className={baseSlot({
-        className: typeof className === 'object' ? className.base : className,
-      })}
       fullWidth
       radius="sm"
       shadow="none"
     >
       {header && (
         <>
-          <NextCardHeader
-            data-testid={testId && `card_header_${testId}`}
-            className={headerSlot({
-              className: typeof className === 'object' && className.header,
-            })}
-          >
+          <NextCardHeader data-testid={testId && `card_header_${testId}`}>
             {header}
           </NextCardHeader>
-          <NextDivider
-            className={dividerSlot({
-              className: typeof className === 'object' && className.divider,
-            })}
-          />
+          {divider}
         </>
       )}
-      <NextCardBody
-        data-testid={testId && `card_body_${testId}`}
-        className={bodySlot({
-          className: typeof className === 'object' && className.body,
-        })}
-      >
+      <NextCardBody data-testid={testId && `card_body_${testId}`}>
         {children}
       </NextCardBody>
       {footer && (
         <>
-          <NextDivider
-            className={dividerSlot({
-              className: typeof className === 'object' && className.divider,
-            })}
-          />
-          <NextCardFooter
-            data-testid={testId && `card_footer_${testId}`}
-            className={footerSlot({
-              className: typeof className === 'object' && className.footer,
-            })}
-          >
+          {divider}
+          <NextCardFooter data-testid={testId && `card_footer_${testId}`}>
             {footer}
           </NextCardFooter>
         </>

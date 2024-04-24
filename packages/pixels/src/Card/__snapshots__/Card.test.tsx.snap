@@ -3,7 +3,7 @@
 exports[`Story Snapshots > CustomSlotStyles 1`] = `
 <div>
   <div
-    class="flex flex-col relative overflow-hidden height-auto box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-none rounded-small w-full transition-transform-background motion-reduce:transition-none border border-slate-300 text-blue-400"
+    class="flex flex-col relative overflow-hidden height-auto box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-none rounded-small w-full transition-transform-background motion-reduce:transition-none border border-divider text-blue-400"
     tabindex="-1"
   >
     <div
@@ -12,7 +12,7 @@ exports[`Story Snapshots > CustomSlotStyles 1`] = `
       Header
     </div>
     <hr
-      class="shrink-0 border-none w-full h-divider my-0 bg-yellow-400"
+      class="shrink-0 border-none w-full h-divider my-0 border-divider bg-yellow-400"
       role="separator"
     />
     <div
@@ -25,7 +25,7 @@ exports[`Story Snapshots > CustomSlotStyles 1`] = `
       </p>
     </div>
     <hr
-      class="shrink-0 border-none w-full h-divider my-0 bg-yellow-400"
+      class="shrink-0 border-none w-full h-divider my-0 border-divider bg-yellow-400"
       role="separator"
     />
     <div
@@ -40,7 +40,7 @@ exports[`Story Snapshots > CustomSlotStyles 1`] = `
 exports[`Story Snapshots > Default 1`] = `
 <div>
   <div
-    class="flex flex-col relative overflow-hidden height-auto text-foreground box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-none rounded-small w-full transition-transform-background motion-reduce:transition-none border border-slate-300"
+    class="flex flex-col relative overflow-hidden height-auto text-foreground box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-none rounded-small w-full transition-transform-background motion-reduce:transition-none border border-divider"
     tabindex="-1"
   >
     <div
@@ -59,7 +59,7 @@ exports[`Story Snapshots > Default 1`] = `
 exports[`Story Snapshots > FooterAndHeader 1`] = `
 <div>
   <div
-    class="flex flex-col relative overflow-hidden height-auto text-foreground box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-none rounded-small w-full transition-transform-background motion-reduce:transition-none border border-slate-300"
+    class="flex flex-col relative overflow-hidden height-auto text-foreground box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-none rounded-small w-full transition-transform-background motion-reduce:transition-none border border-divider"
     tabindex="-1"
   >
     <div
@@ -68,7 +68,7 @@ exports[`Story Snapshots > FooterAndHeader 1`] = `
       Header
     </div>
     <hr
-      class="shrink-0 border-none w-full h-divider my-0 bg-slate-300"
+      class="shrink-0 bg-divider border-none w-full h-divider my-0 border-divider"
       role="separator"
     />
     <div
@@ -81,7 +81,7 @@ exports[`Story Snapshots > FooterAndHeader 1`] = `
       </p>
     </div>
     <hr
-      class="shrink-0 border-none w-full h-divider my-0 bg-slate-300"
+      class="shrink-0 bg-divider border-none w-full h-divider my-0 border-divider"
       role="separator"
     />
     <div

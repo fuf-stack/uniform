@@ -12,9 +12,6 @@ import {
   DropdownTrigger as NextDropdownTrigger,
 } from '@nextui-org/dropdown';
 import cn from 'classnames';
-import createDebug from 'debug';
-
-const debug = createDebug('component:Menu');
 
 /**
  * Menu item type
@@ -103,8 +100,6 @@ const Menu = ({
   isDisabled = false,
   items,
 }: MenuProps) => {
-  debug('Menu', { items });
-
   return (
     <NextDropdown isDisabled={isDisabled}>
       <NextDropdownTrigger className={cn(className)} data-testid={testId}>

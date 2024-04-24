@@ -1,13 +1,10 @@
-import { test } from 'vitest';
+import { describe } from 'vitest';
 
-test.todo('is todo');
+import storySnapshots from '@repo/storybook-config/story-snapshots';
 
-// import { describe } from 'vitest';
+import * as stories from './Modal.stories';
 
-// import storySnapshots from '@repo/storybook-config/story-snapshots';
-
-// import * as stories from './Modal.stories';
-
-// describe('Story Snapshots', () => {
-//   storySnapshots(stories);
-// });
+// TODO: TypeError: Cannot read properties of null (reading 'useState')
+describe.skip('Story Snapshots', () => {
+  storySnapshots(stories);
+});
