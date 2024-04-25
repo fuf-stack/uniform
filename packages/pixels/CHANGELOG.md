@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.3](https://github.com/fuf-stack/uniform/compare/pixels-v0.5.2...pixels-v0.5.3) (2024-04-25)
+
+
+### Bug Fixes
+
+* **pixels:** fixed not needed onClick in Tooltip component ([4032802](https://github.com/fuf-stack/uniform/commit/4032802d78da41e9616a76fbd9b5c02c418934a0))
+
 ## [0.5.2](https://github.com/fuf-stack/uniform/compare/pixels-v0.5.1...pixels-v0.5.2) (2024-04-24)
 
 
