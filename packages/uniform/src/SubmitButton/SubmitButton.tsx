@@ -12,13 +12,15 @@ export interface SubmitButtonProps {
   /** child components */
   children?: ReactNode;
   /** CSS class name */
-  className?: string | string[];
+  className?: string;
   /** color of the button */
   color?: ButtonProps['color'];
   /** If set loading animation is shown */
   loading?: boolean;
   /** function called when the button is pressed. */
   onClick?: ButtonProps['onClick'];
+  /** size of the button */
+  size?: ButtonProps['size'];
   /** HTML data-testid attribute used in e2e tests */
   testId?: string;
 }
@@ -32,6 +34,7 @@ const SubmitButton = ({
   color = 'success',
   loading = false,
   onClick = undefined,
+  size = 'md',
   testId = 'form_submit_button',
 }: SubmitButtonProps) => {
   const {
@@ -46,6 +49,7 @@ const SubmitButton = ({
       disabled={!isValid || isSubmitting || isValidating}
       loading={loading}
       onClick={onClick}
+      size={size}
       type="submit"
     >
       {children}
