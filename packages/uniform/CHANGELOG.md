@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/fuf-stack/uniform/compare/uniform-v0.2.0...uniform-v0.2.1) (2024-04-25)
+
+
+### Bug Fixes
+
+* **uniform:** expose submit button size prop ([3ba91c1](https://github.com/fuf-stack/uniform/commit/3ba91c104d40b898cf5bdd372ba6588badd0240c))
+
 ## [0.2.0](https://github.com/fuf-stack/uniform/compare/uniform-v0.1.0...uniform-v0.2.0) (2024-04-24)
 
 
