@@ -45,9 +45,7 @@ const Tooltip = ({
     containerPadding={containerPadding}
     content={content}
     defaultOpen={defaultOpen}
-    onClick={(e) => {
-      e.preventDefault();
-    }}
+    onClick={(e) => e.preventDefault()}
     onOpenChange={onOpenChange}
     placement={placement}
     shouldFlip

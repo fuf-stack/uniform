@@ -1,12 +1,52 @@
 import type { ButtonProps as NextButtonProps } from '@nextui-org/button';
 import type { ReactNode } from 'react';
+import type { VariantProps } from 'tailwind-variants';
 
 import { Button as NextButton } from '@nextui-org/button';
-import cn from 'classnames';
+import { tv } from 'tailwind-variants';
 
 import LoadingSpinner from './subcomponents/LoadingSpinner';
 
-export interface ButtonProps {
+export const buttonVariants = tv({
+  base: '',
+  variants: {
+    color: {
+      default: '',
+      primary: '',
+      secondary: '',
+      success: '',
+      warning: '',
+      danger: '',
+    },
+    variant: {
+      solid: '',
+      bordered: '',
+      light: '',
+      flat: '',
+      faded: '',
+      shadow: '',
+      ghost: '',
+    },
+  },
+  compoundVariants: [
+    // white text on solid / shadow success button
+    {
+      color: 'success',
+      variant: ['solid', 'shadow'],
+      class: 'text-white',
+    },
+    // white text on solid / shadow warning button
+    {
+      color: 'warning',
+      variant: ['solid', 'shadow'],
+      class: 'text-white',
+    },
+  ],
+});
+
+type ButtonVariantProps = VariantProps<typeof buttonVariants>;
+
+export interface ButtonProps extends ButtonVariantProps {
   /** sets HTML aria-label attribute */
   ariaLabel?: string;
   /** child components */
@@ -56,7 +96,7 @@ const Button = ({
   return (
     <NextButton
       aria-label={ariaLabel}
-      className={cn(className)}
+      className={buttonVariants({ color, variant, className })}
       color={color}
       data-testid={testId}
       disableAnimation={disableAnimation}

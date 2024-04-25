@@ -1,11 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import type { ButtonProps } from './Button';
 
-import Button from './Button';
+import Button, { buttonVariants } from './Button';
 
 const meta: Meta<typeof Button> = {
   title: 'pixels/Button',
   component: Button,
+  argTypes: {
+    color: {
+      control: { type: 'radio' },
+      options: Object.keys(buttonVariants.variants.color),
+    },
+  },
 };
 
 export default meta;
@@ -66,12 +72,12 @@ export const AllSizes: StoryObj<typeof Button> = {
 };
 
 export const AllVariants: StoryObj<typeof Button> = {
-  render: () => (
+  render: (args) => (
     <>
       {['solid', 'bordered', 'light', 'flat', 'faded', 'shadow', 'ghost'].map(
         (variant) => (
           <div key={variant} style={{ marginTop: '10px' }}>
-            <Button variant={variant as ButtonProps['variant']}>
+            <Button variant={variant as ButtonProps['variant']} {...args}>
               {variant}
             </Button>
           </div>
