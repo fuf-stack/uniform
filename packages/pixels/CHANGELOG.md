@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.5](https://github.com/fuf-stack/uniform/compare/pixels-v0.5.4...pixels-v0.5.5) (2024-04-26)
+
+
+### Bug Fixes
+
+* **pixels:** add modal_body id to body of modal ([0d1b26a](https://github.com/fuf-stack/uniform/commit/0d1b26ab823d42e83d042c2a91cb061367a76d71))
+
 ## [0.5.4](https://github.com/fuf-stack/uniform/compare/pixels-v0.5.3...pixels-v0.5.4) (2024-04-25)
 
 
