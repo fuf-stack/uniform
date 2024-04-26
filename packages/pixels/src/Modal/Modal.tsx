@@ -98,7 +98,7 @@ const Modal = ({
         {() => (
           <>
             {header && <NextModalHeader>{header}</NextModalHeader>}
-            <NextModalBody>{children}</NextModalBody>
+            <NextModalBody id="modal_body">{children}</NextModalBody>
             {footer && <NextModalFooter>{footer}</NextModalFooter>}
           </>
         )}
