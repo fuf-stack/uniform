@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/fuf-stack/uniform/compare/uniform-v0.2.1...uniform-v0.2.2) (2024-04-26)
+
+
+### Bug Fixes
+
+* **uniform:** version bump ([2d89f38](https://github.com/fuf-stack/uniform/commit/2d89f38bf16d0284b8301008435fec3bb3323a31))
+
 ## [0.2.1](https://github.com/fuf-stack/uniform/compare/uniform-v0.2.0...uniform-v0.2.1) (2024-04-25)
 
 
