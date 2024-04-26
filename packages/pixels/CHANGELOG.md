@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.4](https://github.com/fuf-stack/uniform/compare/pixels-v0.5.3...pixels-v0.5.4) (2024-04-25)
+
+
+### Bug Fixes
+
+* **pixels:** fix button color of success und warning ([da21dd4](https://github.com/fuf-stack/uniform/commit/da21dd42d1dd753a2c4293fae6a8c3ec09c9112d))
+
 ## [0.5.3](https://github.com/fuf-stack/uniform/compare/pixels-v0.5.2...pixels-v0.5.3) (2024-04-25)
 
 

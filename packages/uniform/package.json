@@ -1,6 +1,6 @@
 {
   "name": "@fuf-stack/uniform",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "fuf react form library",
   "author": "Hannes Tiede",
   "homepage": "https://github.com/fuf-stack/uniform#readme",
@@ -88,8 +88,8 @@
     "@react-aria/visually-hidden": "3.8.10",
     "react-icons": "5.1.0",
     "classnames": "2.5.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "18.3.0",
+    "react-dom": "18.3.0",
     "react-hook-form": "7.51.3",
     "react-select": "5.8.0",
     "slug": "9.0.0",
@@ -101,8 +101,8 @@
     "@repo/tsup-config": "workspace:*",
     "@repo/vite-config": "workspace:*",
     "@types/debug": "4.1.12",
-    "@types/react": "18.2.79",
-    "@types/react-dom": "18.2.25",
+    "@types/react": "18.3.0",
+    "@types/react-dom": "18.3.0",
     "@types/slug": "5.0.8"
   }
 }
