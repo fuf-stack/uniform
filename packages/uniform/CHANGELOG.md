@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.3](https://github.com/fuf-stack/uniform/compare/uniform-v0.2.2...uniform-v0.2.3) (2024-04-29)
+
+
+### Bug Fixes
+
+* **pixels,uniform:** move react to dev deps ([ec8e8d4](https://github.com/fuf-stack/uniform/commit/ec8e8d4e8e281d9434e00d7b81de0a9769371627))
+
 ## [0.2.2](https://github.com/fuf-stack/uniform/compare/uniform-v0.2.1...uniform-v0.2.2) (2024-04-26)
 
 
