@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.6](https://github.com/fuf-stack/uniform/compare/pixels-v0.5.5...pixels-v0.5.6) (2024-04-29)
+
+
+### Bug Fixes
+
+* **pixels,uniform:** move react to dev deps ([ec8e8d4](https://github.com/fuf-stack/uniform/commit/ec8e8d4e8e281d9434e00d7b81de0a9769371627))
+
 ## [0.5.5](https://github.com/fuf-stack/uniform/compare/pixels-v0.5.4...pixels-v0.5.5) (2024-04-26)
 
 
