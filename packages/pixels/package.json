@@ -80,6 +80,10 @@
     "prepack": "rm -rf ./dist && pnpm build",
     "test": "vitest ./src"
   },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
   "dependencies": {
     "@nextui-org/button": "2.0.31",
     "@nextui-org/card": "2.0.28",
