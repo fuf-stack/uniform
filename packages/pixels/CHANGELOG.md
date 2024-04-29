@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.7](https://github.com/fuf-stack/uniform/compare/pixels-v0.5.6...pixels-v0.5.7) (2024-04-29)
+
+
+### Bug Fixes
+
+* **pixels,uniform:** add react to peer deps ([37412e5](https://github.com/fuf-stack/uniform/commit/37412e51e8199bf6359e09efc1167ddc63c2e838))
+
 ## [0.5.6](https://github.com/fuf-stack/uniform/compare/pixels-v0.5.5...pixels-v0.5.6) (2024-04-29)
 
 
