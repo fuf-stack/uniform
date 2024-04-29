@@ -2,7 +2,7 @@
   "name": "@fuf-stack/pixels",
   "description": "fuf react component library",
   "author": "Hannes Tiede",
-  "version": "0.5.6",
+  "version": "0.5.7",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.cjs",
