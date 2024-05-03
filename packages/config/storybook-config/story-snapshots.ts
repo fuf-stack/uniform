@@ -41,8 +41,9 @@ export default (storyFile: StoryFile) => {
   stories.forEach(({ name, story }) => {
     test(name, async () => {
       const mounted = render(story());
-      // Ensures a consistent snapshot by waiting for the component to render by adding a delay of 1 ms before taking the snapshot.
-      await new Promise((resolve) => setTimeout(resolve, 1));
+      // Ensures a consistent snapshot by waiting for the component to render by adding a delay of 100ms before taking the snapshot.
+      // eslint-disable-next-line no-promise-executor-return
+      await new Promise((resolve) => setTimeout(resolve, 100));
       expect(mounted.container).toMatchSnapshot();
     });
   });
