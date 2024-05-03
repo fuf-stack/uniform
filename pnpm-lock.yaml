@@ -49,7 +49,7 @@ importers:
         version: 8.0.9(@types/react@18.3.1)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/addon-interactions':
         specifier: 8.0.9
-        version: 8.0.9(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@swc/core@1.4.16(@swc/helpers@0.5.10))(@types/node@20.12.7)(typescript@5.4.5)))(vitest@1.5.0(@types/node@20.12.7)(jsdom@24.0.0))
+        version: 8.0.9(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@swc/core@1.4.16(@swc/helpers@0.5.10))(@types/node@20.12.7)(typescript@5.4.5)))(vitest@1.5.2(@types/node@20.12.7)(jsdom@24.0.0))
       '@storybook/addon-links':
         specifier: 8.0.9
         version: 8.0.9(react@18.3.1)
@@ -67,7 +67,7 @@ importers:
         version: 8.0.9(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.16.1)(typescript@5.4.5)(vite@5.2.10(@types/node@20.12.7))
       '@storybook/test':
         specifier: 8.0.9
-        version: 8.0.9(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@swc/core@1.4.16(@swc/helpers@0.5.10))(@types/node@20.12.7)(typescript@5.4.5)))(vitest@1.5.0(@types/node@20.12.7)(jsdom@24.0.0))
+        version: 8.0.9(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@swc/core@1.4.16(@swc/helpers@0.5.10))(@types/node@20.12.7)(typescript@5.4.5)))(vitest@1.5.2(@types/node@20.12.7)(jsdom@24.0.0))
       '@storybook/test-runner':
         specifier: 0.17.0
         version: 0.17.0(@swc/helpers@0.5.10)(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(encoding@0.1.13)(ts-node@10.9.2(@swc/core@1.4.16(@swc/helpers@0.5.10))(@types/node@20.12.7)(typescript@5.4.5))
@@ -238,8 +238,8 @@ importers:
         specifier: 2.1.2
         version: 2.1.2(@nextui-org/theme@2.2.3(tailwindcss@3.4.3(ts-node@10.9.2(@swc/core@1.4.16(@swc/helpers@0.5.10))(@types/node@20.12.7)(typescript@5.4.5))))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwind-variants@0.2.1(tailwindcss@3.4.3(ts-node@10.9.2(@swc/core@1.4.16(@swc/helpers@0.5.10))(@types/node@20.12.7)(typescript@5.4.5))))
       '@react-aria/visually-hidden':
-        specifier: 3.8.10
-        version: 3.8.10(react@18.3.1)
+        specifier: 3.8.11
+        version: 3.8.11(react@18.3.1)
       classnames:
         specifier: 2.5.1
         version: 2.5.1
@@ -2129,6 +2129,11 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
 
+  '@react-aria/interactions@3.21.2':
+    resolution: {integrity: sha512-Ju706DtoEmI/2vsfu9DCEIjDqsRBVLm/wmt2fr0xKbBca7PtmK8daajxFWz+eTq+EJakvYfLr7gWgLau9HyWXg==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+
   '@react-aria/label@3.7.6':
     resolution: {integrity: sha512-ap9iFS+6RUOqeW/F2JoNpERqMn1PvVIo3tTMrJ1TY1tIwyJOxdCBRgx9yjnPBnr+Ywguep+fkPNNi/m74+tXVQ==}
     peerDependencies:
@@ -2169,6 +2174,12 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
 
+  '@react-aria/ssr@3.9.3':
+    resolution: {integrity: sha512-5bUZ93dmvHFcmfUcEN7qzYe8yQQ8JY+nHN6m9/iSDCQ/QmCiE0kWXYwhurjw5ch6I8WokQzx66xKIMHBAa4NNA==}
+    engines: {node: '>= 12'}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+
   '@react-aria/switch@3.6.2':
     resolution: {integrity: sha512-X5m/omyhXK+V/vhJFsHuRs2zmt9Asa/RuzlldbXnWohLdeuHMPgQnV8C9hg3f+sRi3sh9UUZ64H61pCtRoZNwg==}
     peerDependencies:
@@ -2194,8 +2205,13 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
 
-  '@react-aria/visually-hidden@3.8.10':
-    resolution: {integrity: sha512-np8c4wxdbE7ZrMv/bnjwEfpX0/nkWy9sELEb0sK8n4+HJ+WycoXXrVxBUb9tXgL/GCx5ReeDQChjQWwajm/z3A==}
+  '@react-aria/utils@3.24.0':
+    resolution: {integrity: sha512-JAxkPhK5fCvFVNY2YG3TW3m1nTzwRcbz7iyTSkUzLFat4N4LZ7Kzh7NMHsgeE/oMOxd8zLY+XsUxMu/E/2GujA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+
+  '@react-aria/visually-hidden@3.8.11':
+    resolution: {integrity: sha512-1JFruyAatoKnC18qrix8Q1gyUNlizWZvYdPADgB5btakMy0PEGTWPmFRK5gFsO+N0CZLCFTCip0dkUv6rrp31w==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
 
@@ -2254,6 +2270,11 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
 
+  '@react-stately/utils@3.10.0':
+    resolution: {integrity: sha512-nji2i9fTYg65ZWx/3r11zR1F2tGya+mBubRCbMTwHyRnsSLFZaeq/W6lmrOyIy1uMJKBNKLJpqfmpT4x7rw6pg==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+
   '@react-stately/utils@3.9.1':
     resolution: {integrity: sha512-yzw75GE0iUWiyps02BOAPTrybcsMIxEJlzXqtvllAb01O9uX5n0i3X+u2eCpj2UoDF4zS08Ps0jPgWxg8xEYtA==}
     peerDependencies:
@@ -2301,6 +2322,11 @@ packages:
 
   '@react-types/shared@3.22.1':
     resolution: {integrity: sha512-PCpa+Vo6BKnRMuOEzy5zAZ3/H5tnQg1e80khMhK2xys0j6ZqzkgQC+fHMNZ7VDFNLqqNMj/o0eVeSBDh2POjkw==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+
+  '@react-types/shared@3.23.0':
+    resolution: {integrity: sha512-GQm/iPiii3ikcaMNR4WdVkJ4w0mKtV3mLqeSfSqzdqbPr6vONkqXbh3RhPlPmAJs1b4QHnexd/wZQP3U9DHOwQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
 
@@ -3134,20 +3160,11 @@ packages:
   '@vitest/expect@1.3.1':
     resolution: {integrity: sha512-xofQFwIzfdmLLlHa6ag0dPV8YsnKOCP1KdAeVVh34vSjN2dcUiXYCD9htu/9eM7t8Xln4v03U9HLxLpPlsXdZw==}
 
-  '@vitest/expect@1.5.0':
-    resolution: {integrity: sha512-0pzuCI6KYi2SIC3LQezmxujU9RK/vwC1U9R0rLuGlNGcOuDWxqWKu6nUdFsX9tH1WU0SXtAxToOsEjeUn1s3hA==}
-
   '@vitest/expect@1.5.2':
     resolution: {integrity: sha512-rf7MTD1WCoDlN3FfYJ9Llfp0PbdtOMZ3FIF0AVkDnKbp3oiMW1c8AmvRZBcqbAhDUAvF52e9zx4WQM1r3oraVA==}
 
-  '@vitest/runner@1.5.0':
-    resolution: {integrity: sha512-7HWwdxXP5yDoe7DTpbif9l6ZmDwCzcSIK38kTSIt6CFEpMjX4EpCgT6wUmS0xTXqMI6E/ONmfgRKmaujpabjZQ==}
-
   '@vitest/runner@1.5.2':
     resolution: {integrity: sha512-7IJ7sJhMZrqx7HIEpv3WrMYcq8ZNz9L6alo81Y6f8hV5mIE6yVZsFoivLZmr0D777klm1ReqonE9LyChdcmw6g==}
-
-  '@vitest/snapshot@1.5.0':
-    resolution: {integrity: sha512-qpv3fSEuNrhAO3FpH6YYRdaECnnRjg9VxbhdtPwPRnzSfHVXnNzzrpX4cJxqiwgRMo7uRMWDFBlsBq4Cr+rO3A==}
 
   '@vitest/snapshot@1.5.2':
     resolution: {integrity: sha512-CTEp/lTYos8fuCc9+Z55Ga5NVPKUgExritjF5VY7heRFUfheoAqBneUlvXSUJHUZPjnPmyZA96yLRJDP1QATFQ==}
@@ -7879,11 +7896,6 @@ packages:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
 
-  vite-node@1.5.0:
-    resolution: {integrity: sha512-tV8h6gMj6vPzVCa7l+VGq9lwoJjW8Y79vst8QZZGiuRAfijU+EEWuc0kFpmndQrWhMMhet1jdSF+40KSZUqIIw==}
-    engines: {node: ^18.0.0 || >=20.0.0}
-    hasBin: true
-
   vite-node@1.5.2:
     resolution: {integrity: sha512-Y8p91kz9zU+bWtF7HGt6DVw2JbhyuB2RlZix3FPYAYmUyZ3n7iTp8eSyLyY6sxtPegvxQtmlTMhfPhUfCUF93A==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -7926,31 +7938,6 @@ packages:
       sugarss:
         optional: true
       terser:
-        optional: true
-
-  vitest@1.5.0:
-    resolution: {integrity: sha512-d8UKgR0m2kjdxDWX6911uwxout6GHS0XaGH1cksSIVVG8kRlE7G7aBw7myKQCvDI5dT4j7ZMa+l706BIORMDLw==}
-    engines: {node: ^18.0.0 || >=20.0.0}
-    hasBin: true
-    peerDependencies:
-      '@edge-runtime/vm': '*'
-      '@types/node': ^18.0.0 || >=20.0.0
-      '@vitest/browser': 1.5.0
-      '@vitest/ui': 1.5.0
-      happy-dom: '*'
-      jsdom: '*'
-    peerDependenciesMeta:
-      '@edge-runtime/vm':
-        optional: true
-      '@types/node':
-        optional: true
-      '@vitest/browser':
-        optional: true
-      '@vitest/ui':
-        optional: true
-      happy-dom:
-        optional: true
-      jsdom:
         optional: true
 
   vitest@1.5.2:
@@ -10005,7 +9992,7 @@ snapshots:
       '@react-aria/focus': 3.16.2(react@18.3.1)
       '@react-aria/interactions': 3.21.1(react@18.3.1)
       '@react-aria/utils': 3.23.2(react@18.3.1)
-      '@react-aria/visually-hidden': 3.8.10(react@18.3.1)
+      '@react-aria/visually-hidden': 3.8.11(react@18.3.1)
       '@react-stately/checkbox': 3.6.3(react@18.3.1)
       '@react-stately/toggle': 3.7.2(react@18.3.1)
       '@react-types/checkbox': 3.7.1(react@18.3.1)
@@ -10197,7 +10184,7 @@ snapshots:
       '@react-aria/interactions': 3.21.1(react@18.3.1)
       '@react-aria/radio': 3.10.2(react@18.3.1)
       '@react-aria/utils': 3.23.2(react@18.3.1)
-      '@react-aria/visually-hidden': 3.8.10(react@18.3.1)
+      '@react-aria/visually-hidden': 3.8.11(react@18.3.1)
       '@react-stately/radio': 3.10.2(react@18.3.1)
       '@react-types/radio': 3.7.1(react@18.3.1)
       '@react-types/shared': 3.22.1(react@18.3.1)
@@ -10251,7 +10238,7 @@ snapshots:
       '@react-aria/form': 3.0.3(react@18.3.1)
       '@react-aria/interactions': 3.21.1(react@18.3.1)
       '@react-aria/utils': 3.23.2(react@18.3.1)
-      '@react-aria/visually-hidden': 3.8.10(react@18.3.1)
+      '@react-aria/visually-hidden': 3.8.11(react@18.3.1)
       '@react-types/shared': 3.22.1(react@18.3.1)
       framer-motion: 11.1.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
@@ -10287,7 +10274,7 @@ snapshots:
       '@react-aria/interactions': 3.21.1(react@18.3.1)
       '@react-aria/switch': 3.6.2(react@18.3.1)
       '@react-aria/utils': 3.23.2(react@18.3.1)
-      '@react-aria/visually-hidden': 3.8.10(react@18.3.1)
+      '@react-aria/visually-hidden': 3.8.11(react@18.3.1)
       '@react-stately/toggle': 3.7.2(react@18.3.1)
       '@react-types/shared': 3.22.1(react@18.3.1)
       react: 18.3.1
@@ -10717,6 +10704,14 @@ snapshots:
       '@swc/helpers': 0.5.10
       react: 18.3.1
 
+  '@react-aria/interactions@3.21.2(react@18.3.1)':
+    dependencies:
+      '@react-aria/ssr': 3.9.3(react@18.3.1)
+      '@react-aria/utils': 3.24.0(react@18.3.1)
+      '@react-types/shared': 3.23.0(react@18.3.1)
+      '@swc/helpers': 0.5.10
+      react: 18.3.1
+
   '@react-aria/label@3.7.6(react@18.3.1)':
     dependencies:
       '@react-aria/utils': 3.23.2(react@18.3.1)
@@ -10763,7 +10758,7 @@ snapshots:
       '@react-aria/interactions': 3.21.1(react@18.3.1)
       '@react-aria/ssr': 3.9.2(react@18.3.1)
       '@react-aria/utils': 3.23.2(react@18.3.1)
-      '@react-aria/visually-hidden': 3.8.10(react@18.3.1)
+      '@react-aria/visually-hidden': 3.8.11(react@18.3.1)
       '@react-stately/overlays': 3.6.5(react@18.3.1)
       '@react-types/button': 3.9.2(react@18.3.1)
       '@react-types/overlays': 3.8.5(react@18.3.1)
@@ -10799,6 +10794,11 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
 
   '@react-aria/ssr@3.9.2(react@18.3.1)':
+    dependencies:
+      '@swc/helpers': 0.5.10
+      react: 18.3.1
+
+  '@react-aria/ssr@3.9.3(react@18.3.1)':
     dependencies:
       '@swc/helpers': 0.5.10
       react: 18.3.1
@@ -10854,11 +10854,20 @@ snapshots:
       clsx: 2.1.0
       react: 18.3.1
 
-  '@react-aria/visually-hidden@3.8.10(react@18.3.1)':
+  '@react-aria/utils@3.24.0(react@18.3.1)':
     dependencies:
-      '@react-aria/interactions': 3.21.1(react@18.3.1)
-      '@react-aria/utils': 3.23.2(react@18.3.1)
-      '@react-types/shared': 3.22.1(react@18.3.1)
+      '@react-aria/ssr': 3.9.3(react@18.3.1)
+      '@react-stately/utils': 3.10.0(react@18.3.1)
+      '@react-types/shared': 3.23.0(react@18.3.1)
+      '@swc/helpers': 0.5.10
+      clsx: 2.1.0
+      react: 18.3.1
+
+  '@react-aria/visually-hidden@3.8.11(react@18.3.1)':
+    dependencies:
+      '@react-aria/interactions': 3.21.2(react@18.3.1)
+      '@react-aria/utils': 3.24.0(react@18.3.1)
+      '@react-types/shared': 3.23.0(react@18.3.1)
       '@swc/helpers': 0.5.10
       react: 18.3.1
 
@@ -10947,6 +10956,11 @@ snapshots:
       '@swc/helpers': 0.5.10
       react: 18.3.1
 
+  '@react-stately/utils@3.10.0(react@18.3.1)':
+    dependencies:
+      '@swc/helpers': 0.5.10
+      react: 18.3.1
+
   '@react-stately/utils@3.9.1(react@18.3.1)':
     dependencies:
       '@swc/helpers': 0.5.10
@@ -10995,6 +11009,10 @@ snapshots:
       react: 18.3.1
 
   '@react-types/shared@3.22.1(react@18.3.1)':
+    dependencies:
+      react: 18.3.1
+
+  '@react-types/shared@3.23.0(react@18.3.1)':
     dependencies:
       react: 18.3.1
 
@@ -11191,11 +11209,11 @@ snapshots:
     dependencies:
       '@storybook/global': 5.0.0
 
-  '@storybook/addon-interactions@8.0.9(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@swc/core@1.4.16(@swc/helpers@0.5.10))(@types/node@20.12.7)(typescript@5.4.5)))(vitest@1.5.0(@types/node@20.12.7)(jsdom@24.0.0))':
+  '@storybook/addon-interactions@8.0.9(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@swc/core@1.4.16(@swc/helpers@0.5.10))(@types/node@20.12.7)(typescript@5.4.5)))(vitest@1.5.2(@types/node@20.12.7)(jsdom@24.0.0))':
     dependencies:
       '@storybook/global': 5.0.0
       '@storybook/instrumenter': 8.0.9
-      '@storybook/test': 8.0.9(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@swc/core@1.4.16(@swc/helpers@0.5.10))(@types/node@20.12.7)(typescript@5.4.5)))(vitest@1.5.0(@types/node@20.12.7)(jsdom@24.0.0))
+      '@storybook/test': 8.0.9(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@swc/core@1.4.16(@swc/helpers@0.5.10))(@types/node@20.12.7)(typescript@5.4.5)))(vitest@1.5.2(@types/node@20.12.7)(jsdom@24.0.0))
       '@storybook/types': 8.0.9
       polished: 4.3.1
       ts-dedent: 2.2.0
@@ -11840,14 +11858,14 @@ snapshots:
       - supports-color
       - ts-node
 
-  '@storybook/test@8.0.9(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@swc/core@1.4.16(@swc/helpers@0.5.10))(@types/node@20.12.7)(typescript@5.4.5)))(vitest@1.5.0(@types/node@20.12.7)(jsdom@24.0.0))':
+  '@storybook/test@8.0.9(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@swc/core@1.4.16(@swc/helpers@0.5.10))(@types/node@20.12.7)(typescript@5.4.5)))(vitest@1.5.2(@types/node@20.12.7)(jsdom@24.0.0))':
     dependencies:
       '@storybook/client-logger': 8.0.9
       '@storybook/core-events': 8.0.9
       '@storybook/instrumenter': 8.0.9
       '@storybook/preview-api': 8.0.9
       '@testing-library/dom': 9.3.4
-      '@testing-library/jest-dom': 6.4.2(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@swc/core@1.4.16(@swc/helpers@0.5.10))(@types/node@20.12.7)(typescript@5.4.5)))(vitest@1.5.0(@types/node@20.12.7)(jsdom@24.0.0))
+      '@testing-library/jest-dom': 6.4.2(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@swc/core@1.4.16(@swc/helpers@0.5.10))(@types/node@20.12.7)(typescript@5.4.5)))(vitest@1.5.2(@types/node@20.12.7)(jsdom@24.0.0))
       '@testing-library/user-event': 14.5.2(@testing-library/dom@9.3.4)
       '@vitest/expect': 1.3.1
       '@vitest/spy': 1.5.0
@@ -11977,7 +11995,7 @@ snapshots:
       lz-string: 1.5.0
       pretty-format: 27.5.1
 
-  '@testing-library/jest-dom@6.4.2(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@swc/core@1.4.16(@swc/helpers@0.5.10))(@types/node@20.12.7)(typescript@5.4.5)))(vitest@1.5.0(@types/node@20.12.7)(jsdom@24.0.0))':
+  '@testing-library/jest-dom@6.4.2(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@swc/core@1.4.16(@swc/helpers@0.5.10))(@types/node@20.12.7)(typescript@5.4.5)))(vitest@1.5.2(@types/node@20.12.7)(jsdom@24.0.0))':
     dependencies:
       '@adobe/css-tools': 4.3.3
       '@babel/runtime': 7.24.4
@@ -11990,7 +12008,7 @@ snapshots:
     optionalDependencies:
       '@jest/globals': 29.7.0
       jest: 29.7.0(@types/node@20.12.7)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@swc/core@1.4.16(@swc/helpers@0.5.10))(@types/node@20.12.7)(typescript@5.4.5))
-      vitest: 1.5.0(@types/node@20.12.7)(jsdom@24.0.0)
+      vitest: 1.5.2(@types/node@20.12.7)(jsdom@24.0.0)
 
   '@testing-library/react@15.0.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -12405,38 +12423,17 @@ snapshots:
       '@vitest/utils': 1.3.1
       chai: 4.4.1
 
-  '@vitest/expect@1.5.0':
-    dependencies:
-      '@vitest/spy': 1.5.0
-      '@vitest/utils': 1.5.0
-      chai: 4.4.1
-    optional: true
-
   '@vitest/expect@1.5.2':
     dependencies:
       '@vitest/spy': 1.5.2
       '@vitest/utils': 1.5.2
       chai: 4.4.1
 
-  '@vitest/runner@1.5.0':
-    dependencies:
-      '@vitest/utils': 1.5.0
-      p-limit: 5.0.0
-      pathe: 1.1.2
-    optional: true
-
   '@vitest/runner@1.5.2':
     dependencies:
       '@vitest/utils': 1.5.2
       p-limit: 5.0.0
       pathe: 1.1.2
-
-  '@vitest/snapshot@1.5.0':
-    dependencies:
-      magic-string: 0.30.10
-      pathe: 1.1.2
-      pretty-format: 29.7.0
-    optional: true
 
   '@vitest/snapshot@1.5.2':
     dependencies:
@@ -17874,24 +17871,6 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite-node@1.5.0(@types/node@20.12.7):
-    dependencies:
-      cac: 6.7.14
-      debug: 4.3.4(supports-color@5.5.0)
-      pathe: 1.1.2
-      picocolors: 1.0.0
-      vite: 5.2.10(@types/node@20.12.7)
-    transitivePeerDependencies:
-      - '@types/node'
-      - less
-      - lightningcss
-      - sass
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-    optional: true
-
   vite-node@1.5.2(@types/node@20.12.7):
     dependencies:
       cac: 6.7.14
@@ -17937,41 +17916,6 @@ snapshots:
     optionalDependencies:
       '@types/node': 20.12.7
       fsevents: 2.3.3
-
-  vitest@1.5.0(@types/node@20.12.7)(jsdom@24.0.0):
-    dependencies:
-      '@vitest/expect': 1.5.0
-      '@vitest/runner': 1.5.0
-      '@vitest/snapshot': 1.5.0
-      '@vitest/spy': 1.5.0
-      '@vitest/utils': 1.5.0
-      acorn-walk: 8.3.2
-      chai: 4.4.1
-      debug: 4.3.4(supports-color@5.5.0)
-      execa: 8.0.1
-      local-pkg: 0.5.0
-      magic-string: 0.30.10
-      pathe: 1.1.2
-      picocolors: 1.0.0
-      std-env: 3.7.0
-      strip-literal: 2.1.0
-      tinybench: 2.8.0
-      tinypool: 0.8.4
-      vite: 5.2.10(@types/node@20.12.7)
-      vite-node: 1.5.0(@types/node@20.12.7)
-      why-is-node-running: 2.2.2
-    optionalDependencies:
-      '@types/node': 20.12.7
-      jsdom: 24.0.0
-    transitivePeerDependencies:
-      - less
-      - lightningcss
-      - sass
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-    optional: true
 
   vitest@1.5.2(@types/node@20.12.7)(jsdom@24.0.0):
     dependencies:
