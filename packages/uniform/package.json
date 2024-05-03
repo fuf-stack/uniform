@@ -36,6 +36,11 @@
       "require": "./dist/hooks/index.cjs",
       "types": "./dist/hooks/index.d.ts"
     },
+    "./Input": {
+      "import": "./dist/Input/index.js",
+      "require": "./dist/Input/index.cjs",
+      "types": "./dist/Input/index.d.ts"
+    },
     "./partials/FieldCopyTestIdButton": {
       "import": "./dist/partials/FieldCopyTestIdButton/index.js",
       "require": "./dist/partials/FieldCopyTestIdButton/index.cjs",
