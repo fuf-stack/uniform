@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.0](https://github.com/fuf-stack/uniform/compare/uniform-v0.2.4...uniform-v0.3.0) (2024-05-03)
+
+
+### Features
+
+* **uniform:** add initial input component ([e1e5cd8](https://github.com/fuf-stack/uniform/commit/e1e5cd85e513138777670764f9f347362bac2933))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @react-aria/visually-hidden to v3.8.11 ([9a55b2f](https://github.com/fuf-stack/uniform/commit/9a55b2ff61bbf2bd0160e80e02bcf864597e3547))
+* **deps:** update dependency react-icons to v5.2.0 ([41b3577](https://github.com/fuf-stack/uniform/commit/41b3577f1ece67686e72569b91d5d608283d7290))
+* **uniform:** skip input tests for now ([654561e](https://github.com/fuf-stack/uniform/commit/654561e2e065a3fbc3f89c9617576cc0ef76d286))
+
 ## [0.2.4](https://github.com/fuf-stack/uniform/compare/uniform-v0.2.3...uniform-v0.2.4) (2024-04-29)
 
 
