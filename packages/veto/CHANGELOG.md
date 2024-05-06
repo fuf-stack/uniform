@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.0](https://github.com/fuf-stack/uniform/compare/veto-v0.2.1...veto-v0.3.0) (2024-05-06)
+
+
+### Features
+
+* **pixels:** refactor Modal sizes + update tailwind variants ([8f80363](https://github.com/fuf-stack/uniform/commit/8f80363acbddd8aed080fe637267cbdc3c844abd))
+
+
+### Bug Fixes
+
+* **deps:** update dependency zod to v3.23.3 ([37cb1bb](https://github.com/fuf-stack/uniform/commit/37cb1bb56f5312be2d835781c2a98990211ab803))
+* **deps:** update dependency zod to v3.23.4 ([494027c](https://github.com/fuf-stack/uniform/commit/494027cdea52bb207383d9e72f6dd628f850438a))
+* **deps:** update dependency zod to v3.23.5 ([7acc828](https://github.com/fuf-stack/uniform/commit/7acc82890f28035297c62a8212753c6ee08aaaaa))
+* **deps:** update dependency zod to v3.23.6 ([8cdff31](https://github.com/fuf-stack/uniform/commit/8cdff31c67b13a416ae61352c0e72690a6c1c27f))
+
 ## [0.2.1](https://github.com/fuf-stack/uniform/compare/veto-v0.2.0...veto-v0.2.1) (2024-04-22)
 
 
