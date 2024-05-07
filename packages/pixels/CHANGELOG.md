@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.5.8](https://github.com/fuf-stack/uniform/compare/pixels-v0.5.7...pixels-v0.5.8) (2024-05-07)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-icons to v5.2.0 ([41b3577](https://github.com/fuf-stack/uniform/commit/41b3577f1ece67686e72569b91d5d608283d7290))
+* **deps:** update dependency react-icons to v5.2.1 ([ebb3e80](https://github.com/fuf-stack/uniform/commit/ebb3e8015c5bd76b4e95b7e3a875c84d32d77ce5))
+* **pixels:** add @nextui-org/theme as dep ([4fa160a](https://github.com/fuf-stack/uniform/commit/4fa160addeb5372da932a36b78dc1cb9d07bd1ab))
+
 ## [0.5.7](https://github.com/fuf-stack/uniform/compare/pixels-v0.5.6...pixels-v0.5.7) (2024-04-29)
 
 
