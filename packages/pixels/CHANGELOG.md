@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.9](https://github.com/fuf-stack/uniform/compare/pixels-v0.5.8...pixels-v0.5.9) (2024-05-07)
+
+
+### Bug Fixes
+
+* **pixels:** export nextui theme ([363fe14](https://github.com/fuf-stack/uniform/commit/363fe14587fce0f7fb96bef8174ed0b31a6fed76))
+
 ## [0.5.8](https://github.com/fuf-stack/uniform/compare/pixels-v0.5.7...pixels-v0.5.8) (2024-05-07)
 
 
