@@ -9,7 +9,7 @@ import { lightTheme } from '@uiw/react-json-view/light';
 import { vscodeTheme } from '@uiw/react-json-view/vscode';
 import cn from 'classnames';
 
-import Button from '../Button';
+import { Button } from '../Button';
 
 /**
  * returns the value (JSON string or object) as object
