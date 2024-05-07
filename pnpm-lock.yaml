@@ -159,8 +159,8 @@ importers:
         specifier: 2.5.1
         version: 2.5.1
       react-icons:
-        specifier: 5.2.0
-        version: 5.2.0(react@18.3.1)
+        specifier: 5.2.1
+        version: 5.2.1(react@18.3.1)
       react-json-view:
         specifier: 1.21.3
         version: 1.21.3(@types/react@18.3.1)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -247,8 +247,8 @@ importers:
         specifier: 7.51.4
         version: 7.51.4(react@18.3.1)
       react-icons:
-        specifier: 5.2.0
-        version: 5.2.0(react@18.3.1)
+        specifier: 5.2.1
+        version: 5.2.1(react@18.3.1)
       react-select:
         specifier: 5.8.0
         version: 5.8.0(@types/react@18.3.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -6660,8 +6660,8 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18
 
-  react-icons@5.2.0:
-    resolution: {integrity: sha512-n52Y7Eb4MgQZHsSZOhSXv1zs2668/hBYKfSRIvKh42yExjyhZu0d1IK2CLLZ3BZB1oo13lDfwx2vOh2z9FTV6Q==}
+  react-icons@5.2.1:
+    resolution: {integrity: sha512-zdbW5GstTzXaVKvGSyTaBalt7HSfuK5ovrzlpyiWHAFXndXTdd/1hdDHI4xBM1Mn7YriT6aqESucFl9kEXzrdw==}
     peerDependencies:
       react: '*'
 
@@ -16281,7 +16281,7 @@ snapshots:
     dependencies:
       react: 18.3.1
 
-  react-icons@5.2.0(react@18.3.1):
+  react-icons@5.2.1(react@18.3.1):
     dependencies:
       react: 18.3.1
 
