@@ -1,6 +1,8 @@
+/* eslint-disable import/prefer-default-export */
+
 import { useEffect, useState } from 'react';
 
-export default <Value>(value: Value, delay: number) => {
+export const useDebounce = <Value>(value: Value, delay: number) => {
   // State and setters for debounced value
   const [debouncedValue, setDebouncedValue] = useState(value);
   useEffect(

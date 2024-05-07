@@ -24,6 +24,11 @@
       "require": "./dist/Card/index.cjs",
       "types": "./dist/Card/index.d.ts"
     },
+    "./hooks": {
+      "import": "./dist/hooks/index.js",
+      "require": "./dist/hooks/index.cjs",
+      "types": "./dist/hooks/index.d.ts"
+    },
     "./Json": {
       "import": "./dist/Json/index.js",
       "require": "./dist/Json/index.cjs",
@@ -48,6 +53,11 @@
       "import": "./dist/Popover/index.js",
       "require": "./dist/Popover/index.cjs",
       "types": "./dist/Popover/index.d.ts"
+    },
+    "./theme": {
+      "import": "./dist/theme/index.js",
+      "require": "./dist/theme/index.cjs",
+      "types": "./dist/theme/index.d.ts"
     },
     "./Tooltip": {
       "import": "./dist/Tooltip/index.js",

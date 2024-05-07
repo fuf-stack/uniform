@@ -1,6 +1,3 @@
-import useDebounce from './hooks/useDebounce';
-import useLocalStorage from './hooks/useLocalStorage';
-
 // components
 export * from './Button';
 export * from './Card';
@@ -12,4 +9,7 @@ export * from './Popover';
 export * from './Tooltip';
 
 // hooks
-export { useDebounce, useLocalStorage };
+export * from './hooks';
+
+// theme
+export * from './theme';

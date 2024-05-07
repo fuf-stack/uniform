@@ -1,8 +1,10 @@
+/* eslint-disable import/prefer-default-export */
+
 import type { Dispatch, SetStateAction } from 'react';
 
 import { useEffect, useState } from 'react';
 
-const useLocalStorage = <T>(
+export const useLocalStorage = <T>(
   key: string,
   initialValue: T | (() => T),
 ): [T, Dispatch<SetStateAction<T>>] => {
@@ -79,5 +81,3 @@ const useLocalStorage = <T>(
 
   return [storedValue, setValue];
 };
-
-export default useLocalStorage;
