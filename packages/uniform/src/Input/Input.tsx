@@ -12,6 +12,8 @@ import FieldValidationError from '../partials/FieldValidationError';
 export interface InputProps {
   /** CSS class name */
   className?: string;
+  /** input field is disabled */
+  disabled?: boolean;
   /** added content to the end of the input Field. */
   endContent?: ReactNode;
   /** form field label (set to false to disable label) */
@@ -33,6 +35,7 @@ export interface InputProps {
  */
 const Input = ({
   className = undefined,
+  disabled = false,
   endContent = undefined,
   label = undefined,
   name,
@@ -47,6 +50,7 @@ const Input = ({
   return (
     <Controller
       control={control}
+      disabled={disabled}
       name={name}
       render={({
         field: { disabled: isDisabled, onChange, onBlur, value, ref },
