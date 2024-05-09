@@ -23,7 +23,7 @@
     "@storybook/react": "8.0.10",
     "@storybook/react-vite": "8.0.10",
     "@storybook/test": "8.0.10",
-    "@storybook/test-runner": "0.17.0",
+    "@storybook/test-runner": "0.18.0",
     "axe-playwright": "2.0.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
