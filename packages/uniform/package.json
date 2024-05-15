@@ -51,6 +51,11 @@
       "require": "./dist/partials/FieldValidationError/index.cjs",
       "types": "./dist/partials/FieldValidationError/index.d.ts"
     },
+    "./Select": {
+      "import": "./dist/Select/index.js",
+      "require": "./dist/Select/index.cjs",
+      "types": "./dist/Select/index.d.ts"
+    },
     "./SubmitButton": {
       "import": "./dist/SubmitButton/index.js",
       "require": "./dist/SubmitButton/index.cjs",

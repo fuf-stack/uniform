@@ -58,4 +58,6 @@ export type {
 // also export z
 export { z } from 'zod';
 
+export { veto };
+
 export default veto;
