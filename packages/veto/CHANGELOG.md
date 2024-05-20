@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.1](https://github.com/fuf-stack/uniform/compare/veto-v0.3.0...veto-v0.3.1) (2024-05-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependency validator to v13.12.0 ([145ad79](https://github.com/fuf-stack/uniform/commit/145ad794377f0cc17c58b735026c831cdb9468bc))
+* **deps:** update dependency zod to v3.23.7 ([ba5b0dd](https://github.com/fuf-stack/uniform/commit/ba5b0ddce7bd616fbd1fbdfb657a90565c56f424))
+* **deps:** update dependency zod to v3.23.8 ([4d8fe8a](https://github.com/fuf-stack/uniform/commit/4d8fe8a678e23912b50bd28561033ce87e099130))
+
 ## [0.3.0](https://github.com/fuf-stack/uniform/compare/veto-v0.2.1...veto-v0.3.0) (2024-05-06)
 
 
