@@ -1,6 +1,6 @@
-import type { ZodNumber } from 'zod';
+import type { ZodNumber } from 'src/zodResolved';
 
-import { z } from 'zod';
+import { z } from 'src/zodResolved';
 
 export type VNumber = ZodNumber;
 

@@ -1,8 +1,4 @@
 // import types
-import type {
-  ZodEffects as VetoEffects,
-  RefinementCtx as VRefinementCtx,
-} from 'zod';
 import type { VJson, VJsonObject } from './types/json/json';
 import type { VNumber } from './types/number/number';
 import type { VObject } from './types/object/object';
@@ -17,6 +13,10 @@ import type {
   VetoTypeAny,
   vInfer,
 } from './veto';
+import type {
+  ZodEffects as VetoEffects,
+  RefinementCtx as VRefinementCtx,
+} from './zodResolved';
 
 // import veto
 import veto from './veto';
@@ -56,6 +56,6 @@ export type {
 };
 
 // also export z
-export { z } from 'zod';
+export { z } from './zodResolved';
 
 export default veto;

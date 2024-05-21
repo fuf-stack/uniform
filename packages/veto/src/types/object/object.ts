@@ -1,6 +1,6 @@
-import type { ZodObject, ZodRawShape, ZodTypeAny } from 'zod';
+import type { ZodObject, ZodRawShape, ZodTypeAny } from 'src/zodResolved';
 
-import { z } from 'zod';
+import { z } from 'src/zodResolved';
 
 export type VObject<T extends ZodRawShape> = ZodObject<T, 'strict', ZodTypeAny>;
 

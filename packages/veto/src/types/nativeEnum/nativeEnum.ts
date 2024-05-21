@@ -1,3 +1,3 @@
-import { z } from 'zod';
+import { z } from 'src/zodResolved';
 
 export default z.nativeEnum;
