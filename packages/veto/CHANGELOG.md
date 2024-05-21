@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.12](https://github.com/fuf-stack/uniform/compare/veto-v0.3.11...veto-v0.3.12) (2024-05-21)
+
+
+### Bug Fixes
+
+* **veto:** improve protable type of string ([b161e51](https://github.com/fuf-stack/uniform/commit/b161e51c0403ffd8c28d437aa4752cd3edcb1afd))
+
 ## [0.3.11](https://github.com/fuf-stack/uniform/compare/veto-v0.3.10...veto-v0.3.11) (2024-05-21)
 
 
