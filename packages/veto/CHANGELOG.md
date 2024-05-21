@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.2](https://github.com/fuf-stack/uniform/compare/veto-v0.3.1...veto-v0.3.2) (2024-05-21)
+
+
+### Bug Fixes
+
+* **veto:** try to export zod types to make them portable ([9f28172](https://github.com/fuf-stack/uniform/commit/9f28172fa3cba2f1bec203cb2a2c60039217afb1))
+
 ## [0.3.1](https://github.com/fuf-stack/uniform/compare/veto-v0.3.0...veto-v0.3.1) (2024-05-20)
 
 
