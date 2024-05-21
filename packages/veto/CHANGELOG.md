@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.7](https://github.com/fuf-stack/uniform/compare/veto-v0.3.6...veto-v0.3.7) (2024-05-21)
+
+
+### Bug Fixes
+
+* **veto:** add corrext protable type for VObject ([b22f8c1](https://github.com/fuf-stack/uniform/commit/b22f8c1a6b88fed5f07049799388cff5e6fa31fb))
+
 ## [0.3.6](https://github.com/fuf-stack/uniform/compare/veto-v0.3.5...veto-v0.3.6) (2024-05-21)
 
 
