@@ -5,8 +5,8 @@ const config = {
   },
   entries: [
     {
-      filePath: './src/index.ts',
-      outFile: './dist/index.d.ts',
+      filePath: './src/zodTypes.ts',
+      outFile: './dist/zodTypes.d.ts',
       output: {
         noBanner: true,
       },
