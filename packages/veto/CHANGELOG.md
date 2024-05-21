@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.4](https://github.com/fuf-stack/uniform/compare/veto-v0.3.3...veto-v0.3.4) (2024-05-21)
+
+
+### Bug Fixes
+
+* **veto:** try to bundle zod resolved ([f424891](https://github.com/fuf-stack/uniform/commit/f4248919018aa32fee3a7feec6ef649ecf2fb592))
+
 ## [0.3.3](https://github.com/fuf-stack/uniform/compare/veto-v0.3.2...veto-v0.3.3) (2024-05-21)
 
 
