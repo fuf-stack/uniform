@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.13](https://github.com/fuf-stack/uniform/compare/veto-v0.3.12...veto-v0.3.13) (2024-05-21)
+
+
+### Bug Fixes
+
+* **veto:** use --dts-resolve ([c3e8781](https://github.com/fuf-stack/uniform/commit/c3e8781164045e294b070741b1d67a744ef1466b))
+
 ## [0.3.12](https://github.com/fuf-stack/uniform/compare/veto-v0.3.11...veto-v0.3.12) (2024-05-21)
 
 
