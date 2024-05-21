@@ -26,7 +26,8 @@
     "url": "https://github.com/fuf-stack/uniforms/issues"
   },
   "scripts": {
-    "build": "rm -rf ./dist && tsup",
+    "build": "rm -rf ./dist && tsup && pnpm build:dts",
+    "build:dts": "pnpm dts-bundle-generator --config ./dtsconfig.js",
     "dev": "tsup --watch",
     "test": "vitest ./src"
   },
@@ -35,6 +36,7 @@
     "zod": "3.23.8"
   },
   "devDependencies": {
-    "@types/validator": "13.11.10"
+    "@types/validator": "13.11.10",
+    "dts-bundle-generator": "9.5.1"
   }
 }

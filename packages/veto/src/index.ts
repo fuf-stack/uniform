@@ -2,12 +2,7 @@
 import type {
   ZodEffects as VetoEffects,
   RefinementCtx as VRefinementCtx,
-  // eslint-disable-next-line import/no-duplicates
 } from 'zod';
-// Also export all zod types to prevent
-// This is likely not portable. A type annotation is necessary.
-// eslint-disable-next-line import/no-duplicates
-import type * as ZodTypes from 'zod';
 import type { VJson, VJsonObject } from './types/json/json';
 import type { VNumber } from './types/number/number';
 import type { VObject } from './types/object/object';
@@ -58,7 +53,6 @@ export type {
   VObject,
   VRefinementCtx,
   VString,
-  ZodTypes,
 };
 
 // also export z
