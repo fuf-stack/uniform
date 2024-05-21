@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.6](https://github.com/fuf-stack/uniform/compare/veto-v0.3.5...veto-v0.3.6) (2024-05-21)
+
+
+### Bug Fixes
+
+* **veto:** cleanup index exports ([6f26f94](https://github.com/fuf-stack/uniform/commit/6f26f94747dc9c5c29653ea73507cc67d52078cd))
+
 ## [0.3.5](https://github.com/fuf-stack/uniform/compare/veto-v0.3.4...veto-v0.3.5) (2024-05-21)
 
 
