@@ -6,7 +6,7 @@ import type {
 import type { VJson, VJsonObject } from './types/json/json';
 import type { VNumber } from './types/number/number';
 import type { VObject } from './types/object/object';
-import type { VString } from './types/string/string';
+// import type { VString } from './types/string/string';
 import type {
   VetoError,
   VetoInput,
@@ -33,7 +33,7 @@ export { default as nativeEnum } from './types/nativeEnum/nativeEnum';
 export { default as number } from './types/number/number';
 export { default as object } from './types/object/object';
 export { default as record } from './types/record/record';
-export { default as string } from './types/string/string';
+export * from './types/string/string';
 export { default as vEnum } from './types/vEnum/vEnum';
 
 // export ts types
@@ -52,7 +52,7 @@ export type {
   VNumber,
   VObject,
   VRefinementCtx,
-  VString,
+  // VString,
 };
 
 export default veto;
