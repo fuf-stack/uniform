@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.3](https://github.com/fuf-stack/uniform/compare/veto-v0.3.2...veto-v0.3.3) (2024-05-21)
+
+
+### Bug Fixes
+
+* **veto:** bundle zod types with dts-bundle-generator ([82a2c29](https://github.com/fuf-stack/uniform/commit/82a2c29495420a6e3fd7ef0e0312fc752cc94a09))
+* **veto:** try to bundle zod correctly ([b2c61bd](https://github.com/fuf-stack/uniform/commit/b2c61bdd31489844e142be5ed2135980557fa911))
+
 ## [0.3.2](https://github.com/fuf-stack/uniform/compare/veto-v0.3.1...veto-v0.3.2) (2024-05-21)
 
 
