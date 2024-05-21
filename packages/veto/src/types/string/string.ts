@@ -5,7 +5,9 @@ export type VStringOptions = {
   min: number;
 };
 
-export const string = (options?: VStringOptions) =>
+type ZString = z.ZodString;
+
+export const string = (options?: VStringOptions): ZString =>
   z
     // see: https://zod.dev/?id=strings
     .string()
