@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.5](https://github.com/fuf-stack/uniform/compare/veto-v0.3.4...veto-v0.3.5) (2024-05-21)
+
+
+### Bug Fixes
+
+* **veto:** include zod types with --dts-resolve ([684e9b6](https://github.com/fuf-stack/uniform/commit/684e9b6d6101f4aff7e10b187d95ffaf9e2447ac))
+
 ## [0.3.4](https://github.com/fuf-stack/uniform/compare/veto-v0.3.3...veto-v0.3.4) (2024-05-21)
 
 
