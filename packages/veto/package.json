@@ -26,7 +26,7 @@
     "url": "https://github.com/fuf-stack/uniforms/issues"
   },
   "scripts": {
-    "build": "rm -rf ./dist && tsup --dts-resolve",
+    "build": "rm -rf ./dist && tsup",
     "dev": "tsup --watch",
     "test": "vitest ./src"
   },
