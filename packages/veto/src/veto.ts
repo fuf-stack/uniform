@@ -6,9 +6,9 @@ import type {
   ZodObject,
   ZodRawShape,
   ZodTypeAny,
-} from 'src/zodResolved';
+} from 'zod';
 
-import { z } from 'src/zodResolved';
+import { z } from 'zod';
 
 // global zod error map
 // see: https://zod.dev/ERROR_HANDLING?id=global-error-map

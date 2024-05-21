@@ -1,4 +1,4 @@
-import { z } from 'src/zodResolved';
+import { z } from 'zod';
 
 type MakeElementsUniqueOptions =
   | true

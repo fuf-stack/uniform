@@ -1,6 +1,6 @@
-import type { ZodString } from 'src/zodResolved';
+import type { ZodString } from 'zod';
 
-import { z } from 'src/zodResolved';
+import { z } from 'zod';
 
 type VStringOptions = {
   /** min string length, defaults to 1 */

@@ -1,4 +1,4 @@
-import { z } from 'src/zodResolved';
+import { z } from 'zod';
 
 // see: https://zod.dev/?id=json-type
 
