@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.14](https://github.com/fuf-stack/uniform/compare/veto-v0.3.13...veto-v0.3.14) (2024-05-22)
+
+
+### Bug Fixes
+
+* **veto:** make all validators portable ([fc9bf0b](https://github.com/fuf-stack/uniform/commit/fc9bf0b11b0acae96e8cdfee54064bb7f4a76222))
+
 ## [0.3.13](https://github.com/fuf-stack/uniform/compare/veto-v0.3.12...veto-v0.3.13) (2024-05-21)
 
 
