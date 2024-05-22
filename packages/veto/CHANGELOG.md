@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.30](https://github.com/fuf-stack/uniform/compare/veto-v0.3.29...veto-v0.3.30) (2024-05-22)
+
+
+### Bug Fixes
+
+* **veto:** remove zod from peerDeps ([45bd8e9](https://github.com/fuf-stack/uniform/commit/45bd8e9a186845a9ed6cbce10454560905d56f4e))
+
 ## [0.3.29](https://github.com/fuf-stack/uniform/compare/veto-v0.3.28...veto-v0.3.29) (2024-05-22)
 
 
