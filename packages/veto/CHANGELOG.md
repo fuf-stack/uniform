@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.23](https://github.com/fuf-stack/uniform/compare/veto-v0.3.22...veto-v0.3.23) (2024-05-22)
+
+
+### Bug Fixes
+
+* **veto:** add type VetoOptional ([486a7a1](https://github.com/fuf-stack/uniform/commit/486a7a1908528f02015ba03bdb48b3ff6c42874e))
+
 ## [0.3.22](https://github.com/fuf-stack/uniform/compare/veto-v0.3.21...veto-v0.3.22) (2024-05-22)
 
 
