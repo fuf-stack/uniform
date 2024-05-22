@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.27](https://github.com/fuf-stack/uniform/compare/veto-v0.3.26...veto-v0.3.27) (2024-05-22)
+
+
+### Bug Fixes
+
+* **veto:** add VetoNullable, VArraySchema and VArraySchema ([6d42799](https://github.com/fuf-stack/uniform/commit/6d427995a67eeef5857084b83bb295e5b2f8d480))
+
 ## [0.3.26](https://github.com/fuf-stack/uniform/compare/veto-v0.3.25...veto-v0.3.26) (2024-05-22)
 
 
