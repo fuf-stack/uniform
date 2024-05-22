@@ -13,8 +13,9 @@ export const string = (options?: VStringOptions) =>
     .min(options?.min || options?.min === 0 ? options.min : 1);
 
 export type VString = typeof string;
+export type VStringSchema = ReturnType<VString>;
 
 /** when used with refine or superRefine */
 export type VStringRefined<Options = undefined> = (
   options?: Options,
-) => z.ZodEffects<ReturnType<VString>, string, string>;
+) => z.ZodEffects<VStringSchema, string, string>;

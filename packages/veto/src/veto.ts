@@ -293,10 +293,10 @@ export type VetoInstance = ReturnType<typeof v>;
  */
 // eslint-disable-next-line @typescript-eslint/naming-convention
 export type vInfer<T extends VetoSchema> =
-  // wrap raw shapes with ZodObject
+  // wrap raw shapes with VetoObject
   T extends VetoRawShape
     ? z.infer<VetoObject<T>>
-    : // just infer type when already zod object
+    : // just infer type when already veto object
       T extends VetoTypeAny
       ? z.infer<T>
       : never;
