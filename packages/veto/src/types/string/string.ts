@@ -1,5 +1,3 @@
-import type { ZodString } from 'zod';
-
 import { z } from 'zod';
 
 export type VStringOptions = {
@@ -7,9 +5,7 @@ export type VStringOptions = {
   min: number;
 };
 
-export type VStringReturn = ZodString;
-
-export const string = (options?: VStringOptions): VStringReturn =>
+export const string = (options?: VStringOptions) =>
   z
     // see: https://zod.dev/?id=strings
     .string()
@@ -17,3 +13,8 @@ export const string = (options?: VStringOptions): VStringReturn =>
     .min(options?.min || options?.min === 0 ? options.min : 1);
 
 export type VString = typeof string;
+
+/** when used with refine or superRefine */
+export type VStringRefined = (
+  options?: VStringOptions,
+) => z.ZodEffects<ReturnType<VString>, string, string>;
