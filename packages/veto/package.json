@@ -31,9 +31,6 @@
     "dev": "tsup --watch",
     "test": "vitest ./src"
   },
-  "peerDependencies": {
-    "zod": "^3.0.0"
-  },
   "dependencies": {
     "validator": "13.12.0"
   },
