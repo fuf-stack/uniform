@@ -1,3 +1,5 @@
+import type { ZodString } from 'zod';
+
 import { z } from 'zod';
 
 export type VStringOptions = {
@@ -5,7 +7,7 @@ export type VStringOptions = {
   min: number;
 };
 
-export const string = (options?: VStringOptions) =>
+export const string = (options?: VStringOptions): VStringSchema =>
   z
     // see: https://zod.dev/?id=strings
     .string()
@@ -13,7 +15,7 @@ export const string = (options?: VStringOptions) =>
     .min(options?.min || options?.min === 0 ? options.min : 1);
 
 export type VString = typeof string;
-export type VStringSchema = ReturnType<VString>;
+export type VStringSchema = ZodString;
 
 /** when used with refine or superRefine */
 export type VStringRefined<Options = undefined> = (

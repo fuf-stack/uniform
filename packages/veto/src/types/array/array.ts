@@ -4,7 +4,7 @@ import type { ZodArray } from 'zod';
 import { z } from 'zod';
 
 // eslint-disable-next-line prefer-destructuring
-export const array = z.array;
+export const array: <T extends VetoTypeAny>(schema: T) => ZodArray<T> = z.array;
 
 export type VArray = typeof array;
 export type VArraySchema<T extends VetoTypeAny> = ZodArray<T>;

@@ -4,7 +4,7 @@ import type { strictObject } from 'zod';
 import { z } from 'zod';
 
 /** strict object that */
-export const object = <T extends VetoRawShape>(schema: T) =>
+export const object = <T extends VetoRawShape>(schema: T): VObjectSchema<T> =>
   z
     // see: https://zod.dev/?id=objects
     .object(schema)
