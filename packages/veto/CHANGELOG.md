@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.21](https://github.com/fuf-stack/uniform/compare/veto-v0.3.20...veto-v0.3.21) (2024-05-22)
+
+
+### Bug Fixes
+
+* **veto:** add VStringRefined type ([f7d3dd2](https://github.com/fuf-stack/uniform/commit/f7d3dd2c0aeb2e96d82eee5adee2cfd37f122a24))
+
 ## [0.3.20](https://github.com/fuf-stack/uniform/compare/veto-v0.3.19...veto-v0.3.20) (2024-05-22)
 
 
