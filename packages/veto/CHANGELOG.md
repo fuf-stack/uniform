@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.19](https://github.com/fuf-stack/uniform/compare/veto-v0.3.18...veto-v0.3.19) (2024-05-22)
+
+
+### Bug Fixes
+
+* **veto:** create dts with tsup ([cabc23d](https://github.com/fuf-stack/uniform/commit/cabc23d4b0347706add79137f169f8c8d7dda8ec))
+
 ## [0.3.18](https://github.com/fuf-stack/uniform/compare/veto-v0.3.17...veto-v0.3.18) (2024-05-22)
 
 
