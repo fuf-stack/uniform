@@ -1,3 +1,5 @@
+import type { ZodString } from 'zod';
+
 import { z } from 'zod';
 
 export type VStringOptions = {
@@ -5,7 +7,7 @@ export type VStringOptions = {
   min: number;
 };
 
-export type VStringReturn = ReturnType<typeof z.string>;
+export type VStringReturn = ZodString;
 
 export const string = (options?: VStringOptions): VStringReturn =>
   z
