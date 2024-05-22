@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.25](https://github.com/fuf-stack/uniform/compare/veto-v0.3.24...veto-v0.3.25) (2024-05-22)
+
+
+### Bug Fixes
+
+* **veto:** add type VEnumSchema ([3cd9156](https://github.com/fuf-stack/uniform/commit/3cd915675643eeaaf233bc806f400af3a400551b))
+
 ## [0.3.24](https://github.com/fuf-stack/uniform/compare/veto-v0.3.23...veto-v0.3.24) (2024-05-22)
 
 
