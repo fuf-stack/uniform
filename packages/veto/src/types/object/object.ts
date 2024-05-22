@@ -1,4 +1,4 @@
-import type { VetoRawShape } from 'src/types';
+import type { VetoEffects, VetoRawShape } from 'src/types';
 import type { strictObject } from 'zod';
 
 import { z } from 'zod';
@@ -17,6 +17,6 @@ export type VObjectSchema<T extends VetoRawShape> = ReturnType<
 >;
 
 /** when used with refine or superRefine */
-export type VObjectRefined<T extends VetoRawShape> = z.ZodEffects<
+export type VObjectRefined<T extends VetoRawShape> = VetoEffects<
   VObjectSchema<T>
 >;
