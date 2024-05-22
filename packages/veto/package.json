@@ -26,7 +26,7 @@
     "url": "https://github.com/fuf-stack/uniforms/issues"
   },
   "scripts": {
-    "build": "rm -rf ./dist && tsup && pnpm build:dts",
+    "build": "rm -rf ./dist && tsup",
     "build:dts": "pnpm dts-bundle-generator --config ./dtsbundle.config.js",
     "dev": "tsup --watch",
     "test": "vitest ./src"
