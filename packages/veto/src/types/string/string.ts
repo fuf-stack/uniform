@@ -15,6 +15,6 @@ export const string = (options?: VStringOptions) =>
 export type VString = typeof string;
 
 /** when used with refine or superRefine */
-export type VStringRefined = (
-  options?: VStringOptions,
+export type VStringRefined<Options = undefined> = (
+  options?: Options,
 ) => z.ZodEffects<ReturnType<VString>, string, string>;
