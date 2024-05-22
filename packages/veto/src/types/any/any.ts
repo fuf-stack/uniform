@@ -1,3 +1,5 @@
 import { z } from 'zod';
 
-export default z.any;
+export const { any } = z;
+
+export type VAny = typeof any;

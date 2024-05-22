@@ -1,7 +1,6 @@
-import type { ZodNumber } from 'zod';
-
 import { z } from 'zod';
 
-export type VNumber = ZodNumber;
+// eslint-disable-next-line prefer-destructuring
+export const number = z.number;
 
-export default z.number;
+export type VNumber = typeof number;

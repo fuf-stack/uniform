@@ -1,5 +1,10 @@
 import { z } from 'zod';
 
+// eslint-disable-next-line prefer-destructuring
+export const array = z.array;
+
+export type VArray = typeof array;
+
 type MakeElementsUniqueOptions =
   | true
   | {
@@ -72,9 +77,7 @@ type ArrayRefinements = {
   unique: MakeElementsUniqueOptions;
 };
 
-export const refineArray = <T extends z.ZodArray<z.ZodTypeAny, 'many'>>(
-  schema: T,
-) => {
+export const refineArray = <T extends ReturnType<VArray>>(schema: T) => {
   type Element = T['element'];
 
   return (
@@ -91,5 +94,3 @@ export const refineArray = <T extends z.ZodArray<z.ZodTypeAny, 'many'>>(
     return _schema;
   };
 };
-
-export default z.array;

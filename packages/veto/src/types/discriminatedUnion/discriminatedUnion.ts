@@ -1,3 +1,6 @@
 import { z } from 'zod';
 
-export default z.discriminatedUnion;
+// eslint-disable-next-line prefer-destructuring
+export const discriminatedUnion = z.discriminatedUnion;
+
+export type VDiscriminatedUnion = typeof discriminatedUnion;

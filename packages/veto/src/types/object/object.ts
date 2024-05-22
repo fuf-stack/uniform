@@ -2,7 +2,8 @@ import type { ZodRawShape } from 'zod';
 
 import { z } from 'zod';
 
-const object = <T extends ZodRawShape>(schema: T) =>
+/** strict object that */
+export const object = <T extends ZodRawShape>(schema: T) =>
   z
     // see: https://zod.dev/?id=objects
     .object(schema)
@@ -10,5 +11,3 @@ const object = <T extends ZodRawShape>(schema: T) =>
     .strict();
 
 export type VObject = typeof object;
-
-export default object;

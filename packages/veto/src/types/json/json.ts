@@ -5,19 +5,19 @@ import { z } from 'zod';
 const literalSchema = z.union([z.string(), z.number(), z.boolean(), z.null()]);
 
 type Literal = z.infer<typeof literalSchema>;
-export type VJsonObject = { [key: string]: VJson };
-export type VJson = Literal | VJsonObject | VJson[];
+export type JsonObject = { [key: string]: JsonAll };
+export type JsonAll = Literal | JsonObject | JsonAll[];
 
-const jsonSchema: () => z.ZodType<VJson> = () =>
-  z.lazy(() =>
-    z.union([literalSchema, z.array(jsonSchema()), z.record(jsonSchema())]),
-  );
+export const json: () => z.ZodType<JsonAll> = () =>
+  z.lazy(() => z.union([literalSchema, z.array(json()), z.record(json())]));
+
+export type VJson = typeof json;
 
 /**
  * JSON, but only objects
  * @see: https://www.w3schools.com/js/js_json_objects.asp
  */
 export const jsonObject = () =>
-  z.record(jsonSchema(), { invalid_type_error: 'Invalid json object' });
+  z.record(json(), { invalid_type_error: 'Invalid json object' });
 
-export default jsonSchema;
+export type VJsonObject = typeof jsonObject;
