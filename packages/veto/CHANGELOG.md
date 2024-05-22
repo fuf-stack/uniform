@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.20](https://github.com/fuf-stack/uniform/compare/veto-v0.3.19...veto-v0.3.20) (2024-05-22)
+
+
+### Bug Fixes
+
+* **veto:** use direct string return type ([2803b0d](https://github.com/fuf-stack/uniform/commit/2803b0d91e2f70011c3d684afaac76dffcc24bd1))
+
 ## [0.3.19](https://github.com/fuf-stack/uniform/compare/veto-v0.3.18...veto-v0.3.19) (2024-05-22)
 
 
