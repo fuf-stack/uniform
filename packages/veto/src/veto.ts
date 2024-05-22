@@ -42,6 +42,11 @@ z.setErrorMap(exErrorMap);
 /** veto schema types */
 export interface VetoRawShape extends ZodRawShape {}
 export interface VetoTypeAny extends ZodTypeAny {}
+export type VetoObject<T extends ZodRawShape> = ZodObject<
+  T,
+  'strict',
+  VetoTypeAny
+>;
 export type VetoSchema = VetoRawShape | VetoTypeAny;
 
 type VetoOptions = {
@@ -197,9 +202,9 @@ const formatError = (error: ZodError<VetoInput>): VetoFormattedError => {
 
 const v = <T extends VetoSchema>(schema: T, options?: VetoOptions) => {
   const vSchema = schema.safeParse
-    ? (schema as ZodTypeAny)
+    ? (schema as VetoTypeAny)
     : z
-        .object(schema as ZodRawShape)
+        .object(schema as VetoRawShape)
         //  If there are any unknown keys in the input always throw an error.
         // see: https://github.com/colinhacks/zod#strict
         .strict();
@@ -272,11 +277,11 @@ export type VetoInstance = ReturnType<typeof v>;
  * This TypeScript type alias vInfer defines a conditional type that
  * takes in a generic type parameter T, which can either be a schema
  * definition from the VetoSchema interface or a schema
- * instance from the ZodTypeAny interface of zod.
+ * instance from the VetoTypeAny interface.
  *
  * If T is a schema definition from VetoSchema, it is
- * converted into a ZodObject and its inferred type is returned
- * using the z.infer method. If T is already a ZodTypeAny schema
+ * converted into a VetoObject and its inferred type is returned
+ * using the z.infer method. If T is already a VetoTypeAny schema
  * instance, then the inferred type is simply returned
  * using the z.infer method.
  *
@@ -287,12 +292,13 @@ export type VetoInstance = ReturnType<typeof v>;
  *
  * @see https://zod.dev/?id=type-inference
  */
+// eslint-disable-next-line @typescript-eslint/naming-convention
 export type vInfer<T extends VetoSchema> =
   // wrap raw shapes with ZodObject
   T extends ZodRawShape
-    ? z.infer<ZodObject<T, 'strict', ZodTypeAny>>
+    ? z.infer<VetoObject<T>>
     : // just infer type when already zod object
-      T extends ZodTypeAny
+      T extends VetoTypeAny
       ? z.infer<T>
       : never;
 
