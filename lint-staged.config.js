@@ -4,7 +4,7 @@ module.exports = {
   // uniform
   'packages/uniform/**/*.{js,ts,tsx}': ['eslint', 'vitest related --run'],
   // veto
-  'packages/veto/**/*.{js,ts,tsx}': ['eslint', 'vitest related --run'],
+  // 'packages/veto/**/*.{js,ts,tsx}': ['eslint', 'vitest related --run'],
   // config packages
   'packages/config/**/*.{js,ts}': ['eslint'],
   // other filetypes

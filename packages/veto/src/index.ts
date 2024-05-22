@@ -1,35 +1,9 @@
-// import types
-import type {
-  ZodEffects as VetoEffects,
-  RefinementCtx as VRefinementCtx,
-} from 'zod';
-import type {
-  VetoError,
-  VetoInput,
-  VetoInstance,
-  VetoRawShape,
-  VetoSchema,
-  VetoSuccess,
-  VetoTypeAny,
-  vInfer,
-} from './veto';
-
 // import veto
 import veto from './veto';
 
-// export typescript types
-export type {
-  VetoEffects,
-  VetoError,
-  VetoInput,
-  VetoInstance,
-  VetoRawShape,
-  VetoSchema,
-  VetoSuccess,
-  VetoTypeAny,
-  vInfer,
-  VRefinementCtx,
-};
+// export veto ts types
+export type * from './types';
+export type * from './veto';
 
 // export veto validator types
 export * from './types/and/and';

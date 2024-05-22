@@ -1,3 +1,5 @@
+import type { ZodType } from 'zod';
+
 import { z } from 'zod';
 
 // see: https://zod.dev/?id=json-type
@@ -8,7 +10,7 @@ type Literal = z.infer<typeof literalSchema>;
 export type JsonObject = { [key: string]: JsonAll };
 export type JsonAll = Literal | JsonObject | JsonAll[];
 
-export const json: () => z.ZodType<JsonAll> = () =>
+export const json: () => ZodType<JsonAll> = () =>
   z.lazy(() => z.union([literalSchema, z.array(json()), z.record(json())]));
 
 export type VJson = typeof json;

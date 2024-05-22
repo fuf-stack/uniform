@@ -3,28 +3,30 @@ import type {
   ZodError,
   ZodErrorMap,
   ZodIssueCode,
-  ZodObject,
-  ZodRawShape,
-  ZodTypeAny,
 } from 'zod';
+import type { VetoObject, VetoRawShape, VetoTypeAny } from './types';
 
 import { z } from 'zod';
 
+export type VetoErrorMap = ZodErrorMap;
+
+const issueCodes = z.ZodIssueCode;
+
 // global zod error map
 // see: https://zod.dev/ERROR_HANDLING?id=global-error-map
-const exErrorMap: ZodErrorMap = (issue, ctx) => {
+const exErrorMap: VetoErrorMap = (issue, ctx) => {
   /*
   This is where you override the various error codes
   */
   switch (issue.code) {
-    case z.ZodIssueCode.invalid_type:
+    case issueCodes.invalid_type:
       if (issue.received === 'undefined') {
         return { message: 'Field is required' };
       }
       return { message: ctx.defaultError };
 
     // improve error message of discriminated unions, when field is undefined
-    case z.ZodIssueCode.invalid_union_discriminator:
+    case issueCodes.invalid_union_discriminator:
       // eslint-disable-next-line no-case-declarations
       const received = issue.path.reduce((acc, c) => acc && acc[c], ctx.data);
       if (received === undefined) {
@@ -40,13 +42,6 @@ const exErrorMap: ZodErrorMap = (issue, ctx) => {
 z.setErrorMap(exErrorMap);
 
 /** veto schema types */
-export interface VetoRawShape extends ZodRawShape {}
-export interface VetoTypeAny extends ZodTypeAny {}
-export type VetoObject<T extends ZodRawShape> = ZodObject<
-  T,
-  'strict',
-  VetoTypeAny
->;
 export type VetoSchema = VetoRawShape | VetoTypeAny;
 
 type VetoOptions = {
@@ -60,8 +55,10 @@ export type VetoSuccess<SchemaType> = SafeParseSuccess<SchemaType> & {
   errors: null;
 };
 
+type VetoIssueCode = ZodIssueCode;
+
 type VetoFieldError = {
-  code: ZodIssueCode;
+  code: VetoIssueCode;
   message: string;
 };
 
@@ -75,11 +72,13 @@ export type VetoError = {
   errors: VetoFormattedError;
 };
 
+type VetoUnformatedError = ZodError<VetoInput>;
+
 /**
  * Helper method that formats zod errors to desired
  * veto error format
  */
-const formatError = (error: ZodError<VetoInput>): VetoFormattedError => {
+const formatError = (error: VetoUnformatedError): VetoFormattedError => {
   const errorFormatted = error.format(
     // remove path from issue
     ({ path: _path, ...issue }) => issue,
@@ -295,7 +294,7 @@ export type VetoInstance = ReturnType<typeof v>;
 // eslint-disable-next-line @typescript-eslint/naming-convention
 export type vInfer<T extends VetoSchema> =
   // wrap raw shapes with ZodObject
-  T extends ZodRawShape
+  T extends VetoRawShape
     ? z.infer<VetoObject<T>>
     : // just infer type when already zod object
       T extends VetoTypeAny
