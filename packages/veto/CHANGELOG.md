@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.15](https://github.com/fuf-stack/uniform/compare/veto-v0.3.14...veto-v0.3.15) (2024-05-22)
+
+
+### Bug Fixes
+
+* **veto:** use dts-bundle-generator to generate types bundle ([b82220b](https://github.com/fuf-stack/uniform/commit/b82220b76f8a97746e7b02f0e115482b940415b7))
+
 ## [0.3.14](https://github.com/fuf-stack/uniform/compare/veto-v0.3.13...veto-v0.3.14) (2024-05-22)
 
 
