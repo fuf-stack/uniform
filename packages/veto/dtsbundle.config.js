@@ -16,7 +16,7 @@ const config = {
         // This is likely not portable. A type annotation is necessary.
         // see: https://github.com/microsoft/TypeScript/issues/47663
         // see: https://github.com/quadristan/ts-indirect-type-reference-bug
-        inlinedLibraries: ['zod'],
+        // inlinedLibraries: ['zod'],
       },
     },
   ],
