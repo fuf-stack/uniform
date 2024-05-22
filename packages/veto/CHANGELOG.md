@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.17](https://github.com/fuf-stack/uniform/compare/veto-v0.3.16...veto-v0.3.17) (2024-05-22)
+
+
+### Bug Fixes
+
+* **veto:** refactor some schema types ([4805648](https://github.com/fuf-stack/uniform/commit/480564898eb1d2858ff98b798c62ab333dcb5676))
+* **veto:** refactor some types ([9dd9380](https://github.com/fuf-stack/uniform/commit/9dd938096bc87b22f14fa1ef9b4733d21d23cced))
+
 ## [0.3.16](https://github.com/fuf-stack/uniform/compare/veto-v0.3.15...veto-v0.3.16) (2024-05-22)
 
 
