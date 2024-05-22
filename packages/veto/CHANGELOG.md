@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.16](https://github.com/fuf-stack/uniform/compare/veto-v0.3.15...veto-v0.3.16) (2024-05-22)
+
+
+### Bug Fixes
+
+* **veto:** do not inline zod types ([6c313b1](https://github.com/fuf-stack/uniform/commit/6c313b1399db76280273203f1e02377a37d70b11))
+
 ## [0.3.15](https://github.com/fuf-stack/uniform/compare/veto-v0.3.14...veto-v0.3.15) (2024-05-22)
 
 
