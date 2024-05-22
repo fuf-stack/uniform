@@ -1,7 +1,7 @@
 {
   "name": "@fuf-stack/veto",
   "description": "fuf schema validation library",
-  "version": "0.3.24",
+  "version": "0.3.25",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
