@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.24](https://github.com/fuf-stack/uniform/compare/veto-v0.3.23...veto-v0.3.24) (2024-05-22)
+
+
+### Bug Fixes
+
+* **veto:** add VObjectSchema type ([4c4aa8a](https://github.com/fuf-stack/uniform/commit/4c4aa8a5ed13bfe6c6978cfbe4feb32fb8489ad6))
+
 ## [0.3.23](https://github.com/fuf-stack/uniform/compare/veto-v0.3.22...veto-v0.3.23) (2024-05-22)
 
 
