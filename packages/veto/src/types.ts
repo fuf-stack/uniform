@@ -2,13 +2,16 @@ import type {
   RefinementCtx,
   ZodEffects,
   ZodObject,
+  ZodOptional,
   ZodRawShape,
   ZodTypeAny,
 } from 'zod';
 
-export interface VetoRawShape extends ZodRawShape {}
+export type VetoRawShape = { [k: string]: VetoTypeAny };
 
-export interface VetoTypeAny extends ZodTypeAny {}
+export type VetoTypeAny = ZodTypeAny;
+
+export type VetoOptional<T extends VetoTypeAny> = ZodOptional<T>;
 
 export type VetoObject<T extends ZodRawShape> = ZodObject<
   T,
