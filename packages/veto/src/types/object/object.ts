@@ -15,3 +15,8 @@ export type VObject = typeof object;
 export type VObjectSchema<T extends VetoRawShape> = ReturnType<
   typeof strictObject<T>
 >;
+
+/** when used with refine or superRefine */
+export type VObjectRefined<T extends VetoRawShape> = z.ZodEffects<
+  VObjectSchema<T>
+>;
