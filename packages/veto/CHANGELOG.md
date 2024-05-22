@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.29](https://github.com/fuf-stack/uniform/compare/veto-v0.3.28...veto-v0.3.29) (2024-05-22)
+
+
+### Bug Fixes
+
+* **veto:** bundle zod types again with --dts-resolve ([2e4e698](https://github.com/fuf-stack/uniform/commit/2e4e6980821fe6a547b9581a9d1ad667800add7d))
+
 ## [0.3.28](https://github.com/fuf-stack/uniform/compare/veto-v0.3.27...veto-v0.3.28) (2024-05-22)
 
 
