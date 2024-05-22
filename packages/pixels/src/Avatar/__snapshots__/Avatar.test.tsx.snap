@@ -1,5 +1,193 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Story Snapshots > AllBorderRadii 1`] = `
+<div>
+  <div
+    class="flex space-x-4"
+  >
+    <span
+      class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-none"
+      tabindex="-1"
+    >
+      <span
+        aria-label="avatar"
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-inherit w-full h-full"
+        role="img"
+      >
+        <svg
+          aria-hidden="true"
+          fill="none"
+          height="80%"
+          role="presentation"
+          viewBox="0 0 24 24"
+          width="80%"
+        >
+          <path
+            d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+            fill="currentColor"
+          />
+          <path
+            d="M17.0809 14.1489C14.2909 12.2889 9.74094 12.2889 6.93094 14.1489C5.66094 14.9989 4.96094 16.1489 4.96094 17.3789C4.96094 18.6089 5.66094 19.7489 6.92094 20.5889C8.32094 21.5289 10.1609 21.9989 12.0009 21.9989C13.8409 21.9989 15.6809 21.5289 17.0809 20.5889C18.3409 19.7389 19.0409 18.5989 19.0409 17.3589C19.0309 16.1289 18.3409 14.9889 17.0809 14.1489Z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
+    </span>
+    <span
+      class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-small"
+      tabindex="-1"
+    >
+      <span
+        aria-label="avatar"
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-inherit w-full h-full"
+        role="img"
+      >
+        <svg
+          aria-hidden="true"
+          fill="none"
+          height="80%"
+          role="presentation"
+          viewBox="0 0 24 24"
+          width="80%"
+        >
+          <path
+            d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+            fill="currentColor"
+          />
+          <path
+            d="M17.0809 14.1489C14.2909 12.2889 9.74094 12.2889 6.93094 14.1489C5.66094 14.9989 4.96094 16.1489 4.96094 17.3789C4.96094 18.6089 5.66094 19.7489 6.92094 20.5889C8.32094 21.5289 10.1609 21.9989 12.0009 21.9989C13.8409 21.9989 15.6809 21.5289 17.0809 20.5889C18.3409 19.7389 19.0409 18.5989 19.0409 17.3589C19.0309 16.1289 18.3409 14.9889 17.0809 14.1489Z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
+    </span>
+    <span
+      class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-medium"
+      tabindex="-1"
+    >
+      <span
+        aria-label="avatar"
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-inherit w-full h-full"
+        role="img"
+      >
+        <svg
+          aria-hidden="true"
+          fill="none"
+          height="80%"
+          role="presentation"
+          viewBox="0 0 24 24"
+          width="80%"
+        >
+          <path
+            d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+            fill="currentColor"
+          />
+          <path
+            d="M17.0809 14.1489C14.2909 12.2889 9.74094 12.2889 6.93094 14.1489C5.66094 14.9989 4.96094 16.1489 4.96094 17.3789C4.96094 18.6089 5.66094 19.7489 6.92094 20.5889C8.32094 21.5289 10.1609 21.9989 12.0009 21.9989C13.8409 21.9989 15.6809 21.5289 17.0809 20.5889C18.3409 19.7389 19.0409 18.5989 19.0409 17.3589C19.0309 16.1289 18.3409 14.9889 17.0809 14.1489Z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
+    </span>
+    <span
+      class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-large"
+      tabindex="-1"
+    >
+      <span
+        aria-label="avatar"
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-inherit w-full h-full"
+        role="img"
+      >
+        <svg
+          aria-hidden="true"
+          fill="none"
+          height="80%"
+          role="presentation"
+          viewBox="0 0 24 24"
+          width="80%"
+        >
+          <path
+            d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+            fill="currentColor"
+          />
+          <path
+            d="M17.0809 14.1489C14.2909 12.2889 9.74094 12.2889 6.93094 14.1489C5.66094 14.9989 4.96094 16.1489 4.96094 17.3789C4.96094 18.6089 5.66094 19.7489 6.92094 20.5889C8.32094 21.5289 10.1609 21.9989 12.0009 21.9989C13.8409 21.9989 15.6809 21.5289 17.0809 20.5889C18.3409 19.7389 19.0409 18.5989 19.0409 17.3589C19.0309 16.1289 18.3409 14.9889 17.0809 14.1489Z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
+    </span>
+    <span
+      class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full"
+      tabindex="-1"
+    >
+      <span
+        aria-label="avatar"
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-inherit w-full h-full"
+        role="img"
+      >
+        <svg
+          aria-hidden="true"
+          fill="none"
+          height="80%"
+          role="presentation"
+          viewBox="0 0 24 24"
+          width="80%"
+        >
+          <path
+            d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+            fill="currentColor"
+          />
+          <path
+            d="M17.0809 14.1489C14.2909 12.2889 9.74094 12.2889 6.93094 14.1489C5.66094 14.9989 4.96094 16.1489 4.96094 17.3789C4.96094 18.6089 5.66094 19.7489 6.92094 20.5889C8.32094 21.5289 10.1609 21.9989 12.0009 21.9989C13.8409 21.9989 15.6809 21.5289 17.0809 20.5889C18.3409 19.7389 19.0409 18.5989 19.0409 17.3589C19.0309 16.1289 18.3409 14.9889 17.0809 14.1489Z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Story Snapshots > AllSizes 1`] = `
+<div>
+  <div
+    class="flex space-x-4"
+  >
+    <span
+      class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-8 h-8 text-tiny bg-default text-default-foreground rounded-full"
+      tabindex="-1"
+    >
+      <img
+        alt="avatar"
+        class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+        src="/src/Avatar/sample_image/avatar.png"
+      />
+    </span>
+    <span
+      class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full"
+      tabindex="-1"
+    >
+      <img
+        alt="avatar"
+        class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+        src="/src/Avatar/sample_image/avatar.png"
+      />
+    </span>
+    <span
+      class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-14 h-14 text-small bg-default text-default-foreground rounded-full"
+      tabindex="-1"
+    >
+      <img
+        alt="avatar"
+        class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+        src="/src/Avatar/sample_image/avatar.png"
+      />
+    </span>
+  </div>
+</div>
+`;
+
 exports[`Story Snapshots > Bordered 1`] = `
 <div>
   <span
@@ -9,9 +197,68 @@ exports[`Story Snapshots > Bordered 1`] = `
     <img
       alt="avatar"
       class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
-      src="/src/Avatar/sample_image/avatar_line.png"
+      src="/src/Avatar/sample_image/avatar.png"
     />
   </span>
+</div>
+`;
+
+exports[`Story Snapshots > CustomSizes 1`] = `
+<div>
+  <div
+    class="flex space-x-4"
+  >
+    <span
+      class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-tiny bg-default text-default-foreground rounded-full h-8 w-8"
+      tabindex="-1"
+    >
+      <img
+        alt="avatar"
+        class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+        src="/src/Avatar/sample_image/avatar.png"
+      />
+    </span>
+    <span
+      class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-tiny bg-default text-default-foreground rounded-full h-12 w-12"
+      tabindex="-1"
+    >
+      <img
+        alt="avatar"
+        class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+        src="/src/Avatar/sample_image/avatar.png"
+      />
+    </span>
+    <span
+      class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-tiny bg-default text-default-foreground rounded-full h-16 w-16"
+      tabindex="-1"
+    >
+      <img
+        alt="avatar"
+        class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+        src="/src/Avatar/sample_image/avatar.png"
+      />
+    </span>
+    <span
+      class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-tiny bg-default text-default-foreground rounded-full h-20 w-20"
+      tabindex="-1"
+    >
+      <img
+        alt="avatar"
+        class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+        src="/src/Avatar/sample_image/avatar.png"
+      />
+    </span>
+    <span
+      class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-tiny bg-default text-default-foreground rounded-full h-24 w-24"
+      tabindex="-1"
+    >
+      <img
+        alt="avatar"
+        class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+        src="/src/Avatar/sample_image/avatar.png"
+      />
+    </span>
+  </div>
 </div>
 `;
 
@@ -57,13 +304,13 @@ exports[`Story Snapshots > Disabled 1`] = `
     <img
       alt="avatar"
       class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
-      src="/src/Avatar/sample_image/avatar_line.png"
+      src="/src/Avatar/sample_image/avatar.png"
     />
   </span>
 </div>
 `;
 
-exports[`Story Snapshots > FallbackImage 1`] = `
+exports[`Story Snapshots > FallbackIcon 1`] = `
 <div>
   <span
     class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full"
@@ -71,13 +318,22 @@ exports[`Story Snapshots > FallbackImage 1`] = `
   >
     <div
       aria-label="avatar"
-      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-full h-full"
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center"
       role="img"
     >
-      <img
-        class="h-full w-full"
-        src="/src/Avatar/sample_image/avatar_blue.png"
-      />
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 512 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"
+        />
+      </svg>
     </div>
   </span>
 </div>
@@ -91,7 +347,7 @@ exports[`Story Snapshots > FallbackString 1`] = `
   >
     <div
       aria-label="avatar"
-      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-full h-full"
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center"
       role="img"
     >
       JD
@@ -111,40 +367,11 @@ exports[`Story Snapshots > Inline 1`] = `
       <img
         alt="avatar"
         class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
-        src="/src/Avatar/sample_image/avatar_line.png"
+        src="/src/Avatar/sample_image/avatar.png"
       />
     </span>
     " inline
   </p>
-</div>
-`;
-
-exports[`Story Snapshots > WithIcon 1`] = `
-<div>
-  <span
-    class="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-10 h-10 text-tiny bg-default text-default-foreground rounded-full"
-    tabindex="-1"
-  >
-    <span
-      aria-label="avatar"
-      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-inherit w-full h-full"
-      role="img"
-    >
-      <svg
-        fill="currentColor"
-        height="20"
-        stroke="currentColor"
-        stroke-width="0"
-        viewBox="0 0 512 512"
-        width="20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"
-        />
-      </svg>
-    </span>
-  </span>
 </div>
 `;
 
@@ -157,7 +384,7 @@ exports[`Story Snapshots > WithImage 1`] = `
     <img
       alt="avatar"
       class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
-      src="/src/Avatar/sample_image/avatar_line.png"
+      src="/src/Avatar/sample_image/avatar.png"
     />
   </span>
 </div>
@@ -180,7 +407,7 @@ exports[`Story Snapshots > WithMenu 1`] = `
       <img
         alt="avatar"
         class="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
-        src="/src/Avatar/sample_image/avatar_line.png"
+        src="/src/Avatar/sample_image/avatar.png"
       />
     </span>
   </button>
