@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.26](https://github.com/fuf-stack/uniform/compare/veto-v0.3.25...veto-v0.3.26) (2024-05-22)
+
+
+### Bug Fixes
+
+* **veto:** add VObjectRefined type ([874dd00](https://github.com/fuf-stack/uniform/commit/874dd0070aa5714bbcf1823e065ec9a9f374b7b9))
+* **veto:** use VetoEffects  in VObjectRefined ([dd284d5](https://github.com/fuf-stack/uniform/commit/dd284d5b757d1673accc09dd40d41f9164cf1a8b))
+
 ## [0.3.25](https://github.com/fuf-stack/uniform/compare/veto-v0.3.24...veto-v0.3.25) (2024-05-22)
 
 
