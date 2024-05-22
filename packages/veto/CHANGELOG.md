@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.18](https://github.com/fuf-stack/uniform/compare/veto-v0.3.17...veto-v0.3.18) (2024-05-22)
+
+
+### Bug Fixes
+
+* **veto:** try to make string portable ([2a01afa](https://github.com/fuf-stack/uniform/commit/2a01afad1ba3c93c59e84aaeda5ad3b41dc1fc6c))
+
 ## [0.3.17](https://github.com/fuf-stack/uniform/compare/veto-v0.3.16...veto-v0.3.17) (2024-05-22)
 
 
