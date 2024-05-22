@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.28](https://github.com/fuf-stack/uniform/compare/veto-v0.3.27...veto-v0.3.28) (2024-05-22)
+
+
+### Bug Fixes
+
+* **veto:** refactor some portable type anotations ([0569b95](https://github.com/fuf-stack/uniform/commit/0569b952dadf3de74637d749976c0f2bb1fce6b5))
+
 ## [0.3.27](https://github.com/fuf-stack/uniform/compare/veto-v0.3.26...veto-v0.3.27) (2024-05-22)
 
 
