@@ -1,6 +1,7 @@
 import type {
   RefinementCtx,
   ZodEffects,
+  ZodNullable,
   ZodObject,
   ZodOptional,
   ZodRawShape,
@@ -10,6 +11,8 @@ import type {
 export type VetoRawShape = { [k: string]: VetoTypeAny };
 
 export type VetoTypeAny = ZodTypeAny;
+
+export type VetoNullable<T extends VetoTypeAny> = ZodNullable<T>;
 
 export type VetoOptional<T extends VetoTypeAny> = ZodOptional<T>;
 

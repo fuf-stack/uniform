@@ -1,4 +1,5 @@
 import type { VetoEffects, VetoRefinementCtx, VetoTypeAny } from 'src/types';
+import type { ZodArray } from 'zod';
 
 import { z } from 'zod';
 
@@ -6,6 +7,10 @@ import { z } from 'zod';
 export const array = z.array;
 
 export type VArray = typeof array;
+export type VArraySchema<T extends VetoTypeAny> = ZodArray<T>;
+
+/** when used with refine or superRefine */
+export type VArrayRefined<T extends VetoTypeAny> = VetoEffects<VArraySchema<T>>;
 
 type MakeElementsUniqueOptions =
   | true
