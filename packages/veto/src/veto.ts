@@ -75,6 +75,35 @@ export type VetoError = {
 type VetoUnformatedError = ZodError<VetoInput>;
 
 /**
+ * This TypeScript type alias vInfer defines a conditional type that
+ * takes in a generic type parameter T, which can either be a schema
+ * definition from the VetoSchema interface or a schema
+ * instance from the VetoTypeAny interface.
+ *
+ * If T is a schema definition from VetoSchema, it is
+ * converted into a VetoObject and its inferred type is returned
+ * using the z.infer method. If T is already a VetoTypeAny schema
+ * instance, then the inferred type is simply returned
+ * using the z.infer method.
+ *
+ * The resulting inferred type returned by vInfer is a
+ * TypeScript type that represents the expected shape of data
+ * validated by the given schema. This ensures type safety when
+ * working with ex-veto data.
+ *
+ * @see https://zod.dev/?id=type-inference
+ */
+// eslint-disable-next-line @typescript-eslint/naming-convention
+export type vInfer<T extends VetoSchema> =
+  // wrap raw shapes with VetoObject
+  T extends VetoRawShape
+    ? z.infer<VetoObject<T>>
+    : // just infer type when already veto object
+      T extends VetoTypeAny
+      ? z.infer<T>
+      : never;
+
+/**
  * Helper method that formats zod errors to desired
  * veto error format
  */
@@ -199,7 +228,10 @@ const formatError = (error: VetoUnformatedError): VetoFormattedError => {
   return reformatError(errorFormatted, true);
 };
 
-const v = <T extends VetoSchema>(schema: T, options?: VetoOptions) => {
+export const veto = <T extends VetoSchema>(
+  schema: T,
+  options?: VetoOptions,
+) => {
   const vSchema = schema.safeParse
     ? (schema as VetoTypeAny)
     : z
@@ -270,35 +302,6 @@ const v = <T extends VetoSchema>(schema: T, options?: VetoOptions) => {
 };
 
 /** A veto instance */
-export type VetoInstance = ReturnType<typeof v>;
+export type VetoInstance = ReturnType<typeof veto>;
 
-/**
- * This TypeScript type alias vInfer defines a conditional type that
- * takes in a generic type parameter T, which can either be a schema
- * definition from the VetoSchema interface or a schema
- * instance from the VetoTypeAny interface.
- *
- * If T is a schema definition from VetoSchema, it is
- * converted into a VetoObject and its inferred type is returned
- * using the z.infer method. If T is already a VetoTypeAny schema
- * instance, then the inferred type is simply returned
- * using the z.infer method.
- *
- * The resulting inferred type returned by vInfer is a
- * TypeScript type that represents the expected shape of data
- * validated by the given schema. This ensures type safety when
- * working with ex-veto data.
- *
- * @see https://zod.dev/?id=type-inference
- */
-// eslint-disable-next-line @typescript-eslint/naming-convention
-export type vInfer<T extends VetoSchema> =
-  // wrap raw shapes with VetoObject
-  T extends VetoRawShape
-    ? z.infer<VetoObject<T>>
-    : // just infer type when already veto object
-      T extends VetoTypeAny
-      ? z.infer<T>
-      : never;
-
-export default v;
+export default veto;

@@ -1,9 +1,8 @@
 // import veto
-import veto from './veto';
+import { veto } from './veto';
 
 // export veto ts types
 export type * from './types';
-export type * from './veto';
 
 // export veto validator types
 export * from './types/and/and';
@@ -20,4 +19,7 @@ export * from './types/record/record';
 export * from './types/string/string';
 export * from './types/vEnum/vEnum';
 
+export * from './veto';
+
+// also export veto as default
 export default veto;
