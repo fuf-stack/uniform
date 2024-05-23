@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.32](https://github.com/fuf-stack/uniform/compare/veto-v0.3.31...veto-v0.3.32) (2024-05-23)
+
+
+### Bug Fixes
+
+* **veto:** refactor exports ([e079b27](https://github.com/fuf-stack/uniform/commit/e079b2781804297624e44aa4ea2ec5a403d5a31a))
+
 ## [0.3.31](https://github.com/fuf-stack/uniform/compare/veto-v0.3.30...veto-v0.3.31) (2024-05-22)
 
 
