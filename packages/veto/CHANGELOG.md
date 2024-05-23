@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.31](https://github.com/fuf-stack/uniform/compare/veto-v0.3.30...veto-v0.3.31) (2024-05-22)
+
+
+### Bug Fixes
+
+* **veto:** add type anotation to discriminatedUnion ([2ccd2ee](https://github.com/fuf-stack/uniform/commit/2ccd2eeffa303c94b7e13b291b13d19cc35e7a8d))
+
 ## [0.3.30](https://github.com/fuf-stack/uniform/compare/veto-v0.3.29...veto-v0.3.30) (2024-05-22)
 
 
