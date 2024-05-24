@@ -137,5 +137,3 @@ export const WithMenu: Story = {
     </Menu>
   ),
 };
-
-// TODO: all sizes, Add component avatar group

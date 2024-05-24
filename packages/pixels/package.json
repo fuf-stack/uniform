@@ -19,6 +19,11 @@
       "require": "./dist/Avatar/index.cjs",
       "types": "./dist/Avatar/index.d.ts"
     },
+    "./AvatarGroup": {
+      "import": "./dist/AvatarGroup/index.js",
+      "require": "./dist/AvatarGroup/index.cjs",
+      "types": "./dist/AvatarGroup/index.d.ts"
+    },
     "./Button": {
       "import": "./dist/Button/index.js",
       "require": "./dist/Button/index.cjs",
