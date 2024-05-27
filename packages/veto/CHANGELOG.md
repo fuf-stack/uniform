@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/fuf-stack/uniform/compare/veto-v0.3.32...veto-v0.4.0) (2024-05-27)
+
+
+### Features
+
+* **veto:** add objectLoose ([bed4cff](https://github.com/fuf-stack/uniform/commit/bed4cffecf78c165fbc69ed436d35032a8e4a189))
+
 ## [0.3.32](https://github.com/fuf-stack/uniform/compare/veto-v0.3.31...veto-v0.3.32) (2024-05-23)
 
 
