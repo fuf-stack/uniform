@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.6.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.5.9...pixels-v0.6.0) (2024-05-24)
+
+
+### Features
+
+* **pixels:** add initial avatar component ([7870a51](https://github.com/fuf-stack/uniform/commit/7870a515feb91836db4986c08de3874455a7ac99))
+
+
+### Bug Fixes
+
+* **pixels:** update storyshots ([3a2a657](https://github.com/fuf-stack/uniform/commit/3a2a657762e83b647e6b712d5967b4899b20662f))
+
 ## [0.5.9](https://github.com/fuf-stack/uniform/compare/pixels-v0.5.8...pixels-v0.5.9) (2024-05-07)
 
 

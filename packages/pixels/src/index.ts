@@ -1,5 +1,6 @@
 // components
 export * from './Avatar';
+export * from './AvatarGroup';
 export * from './Button';
 export * from './Card';
 export * from './Json';
