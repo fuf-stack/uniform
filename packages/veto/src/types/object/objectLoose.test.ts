@@ -1,23 +1,23 @@
 import { expect, it } from 'vitest';
 
-import v, { object, string } from 'src';
+import v, { objectLoose, string } from 'src';
 
 const schema = {
-  objectField: object({ key: string() }),
+  objectLooseField: objectLoose({ key: string() }),
 };
 
-const validInput = { objectField: { key: 'some string' } };
+const validInput = { objectLooseField: { key: 'some string' } };
 
 it('rejects missing fields', () => {
   const result = v(schema).validate({
-    objectField: {},
+    objectLooseField: {},
   });
   expect(result).toStrictEqual({
     success: false,
     data: null,
     errors: {
       _errors: [],
-      objectField: {
+      objectLooseField: {
         _errors: [],
         key: [
           {
@@ -32,39 +32,32 @@ it('rejects missing fields', () => {
   });
 });
 
-it('rejects unknown fields', () => {
-  const result = v(schema).validate({
-    objectField: {
+it('accepts unknown fields and strips data', () => {
+  const validUnknownInput = {
+    objectLooseField: {
       key: 'some string',
       otherField: 'some other string',
     },
-  });
+  };
+  const result = v(schema).validate(validUnknownInput);
   expect(result).toStrictEqual({
-    success: false,
-    data: null,
-    errors: {
-      _errors: [],
-      objectField: [
-        {
-          code: 'unrecognized_keys',
-          keys: ['otherField'],
-          message: "Unrecognized key(s) in object: 'otherField'",
-        },
-      ],
-    },
+    success: true,
+    // otherField is striped from input
+    data: validInput,
+    errors: null,
   });
 });
 
 it('rejects non-object value', () => {
   const result = v(schema).validate({
-    objectField: ['some string'],
+    objectLooseField: ['some string'],
   });
   expect(result).toStrictEqual({
     success: false,
     data: null,
     errors: {
       _errors: [],
-      objectField: [
+      objectLooseField: [
         {
           code: 'invalid_type',
           expected: 'object',
@@ -76,7 +69,7 @@ it('rejects non-object value', () => {
   });
 });
 
-it('accepts valid object value', () => {
+it('accepts valid objectLoose value', () => {
   const result = v(schema).validate(validInput);
   expect(result).toStrictEqual({
     success: true,

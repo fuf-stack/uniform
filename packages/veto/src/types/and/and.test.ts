@@ -6,6 +6,7 @@ import v, {
   literal,
   nativeEnum,
   object,
+  objectLoose,
   string,
   vEnum,
 } from 'src';
@@ -61,15 +62,15 @@ it('combines enum string schema validations correctly', () => {
   });
 });
 
-it.skip('combines striped object and discriminatedUnion schemas as expected', () => {
-  const baseSchema = object({
+it('combines loose object and discriminatedUnion schemas as expected', () => {
+  const baseSchema = objectLoose({
     baseField: string(),
     comment: string().optional(),
-  }).strip();
+  });
   const discriminatedUnionSchema = discriminatedUnion('type', [
-    object({ type: literal('typeA') }),
-    object({ type: literal('typeB'), bField: string() }),
-  ]).strip();
+    objectLoose({ type: literal('typeA') }),
+    objectLoose({ type: literal('typeB'), bField: string() }),
+  ]);
   const combinedSchema = and(baseSchema, discriminatedUnionSchema);
 
   const data = {
@@ -85,15 +86,15 @@ it.skip('combines striped object and discriminatedUnion schemas as expected', ()
   });
 });
 
-it.skip('throws expected errors for striped object and discriminatedUnion schemas', () => {
-  const baseSchema = object({
+it('throws expected errors for loose object and discriminatedUnion schemas', () => {
+  const baseSchema = objectLoose({
     baseField: string(),
     comment: string().optional(),
-  }).strip();
+  });
   const discriminatedUnionSchema = discriminatedUnion('type', [
-    object({ type: literal('typeA') }),
-    object({ type: literal('typeB'), bField: string() }),
-  ]).strip();
+    objectLoose({ type: literal('typeA') }),
+    objectLoose({ type: literal('typeB'), bField: string() }),
+  ]);
   const combinedSchema = and(baseSchema, discriminatedUnionSchema);
 
   const data = { type: 'typeB', invalidField: false };
