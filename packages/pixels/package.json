@@ -4,8 +4,8 @@
   "author": "Hannes Tiede",
   "version": "0.6.0",
   "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.cjs",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "sideEffects": false,
   "exports": {
