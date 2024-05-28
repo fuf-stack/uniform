@@ -5,11 +5,10 @@ import { FaChevronDown, FaChevronUp, FaTimesCircle } from 'react-icons/fa';
 import { HiOutlineClipboard, HiOutlineClipboardCheck } from 'react-icons/hi';
 
 import JsonView from '@uiw/react-json-view';
-import { lightTheme } from '@uiw/react-json-view/light';
-import { vscodeTheme } from '@uiw/react-json-view/vscode';
 import cn from 'classnames';
 
 import { Button } from '../Button';
+import { lightTheme, vscodeTheme } from './theme';
 
 /**
  * returns the value (JSON string or object) as object
