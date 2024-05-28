@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.7.0...pixels-v0.7.1) (2024-05-28)
+
+
+### Bug Fixes
+
+* **pixels:** add Json themes to component ([13328d9](https://github.com/fuf-stack/uniform/commit/13328d9244bd6490a391f0119ca825ea2872746a))
+
 ## [0.7.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.6.0...pixels-v0.7.0) (2024-05-28)
 
 
