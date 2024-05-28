@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.7.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.6.0...pixels-v0.7.0) (2024-05-28)
+
+
+### Features
+
+* **pixels:** add initial AvatarGroup component ([6f03630](https://github.com/fuf-stack/uniform/commit/6f0363065b5569e1e5b49c578b2f6fe55576bc0e))
+
+
+### Bug Fixes
+
+* **pixels:** add correct module export ([16c783d](https://github.com/fuf-stack/uniform/commit/16c783dfd01467d476d5763f717bd8e952ab7784))
+
 ## [0.6.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.5.9...pixels-v0.6.0) (2024-05-24)
 
 
