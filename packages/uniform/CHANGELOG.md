@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.2](https://github.com/fuf-stack/uniform/compare/uniform-v0.3.1...uniform-v0.3.2) (2024-05-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-hook-form to v7.51.5 ([a8d9ecf](https://github.com/fuf-stack/uniform/commit/a8d9ecf2c8ab4015fd31d2ab08fc61f4beaddcee))
+* **deps:** update dependency slug to v9.1.0 ([79c8002](https://github.com/fuf-stack/uniform/commit/79c8002ce22c0153c1f5a94b9d9a1d3acac11db3))
+* **uniform:** add correct module export ([620b391](https://github.com/fuf-stack/uniform/commit/620b391d9748c8372910b97b676ccff747d1a8d2))
+
 ## [0.3.1](https://github.com/fuf-stack/uniform/compare/uniform-v0.3.0...uniform-v0.3.1) (2024-05-21)
 
 
