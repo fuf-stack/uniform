@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.2](https://github.com/fuf-stack/uniform/compare/pixels-v0.7.1...pixels-v0.7.2) (2024-05-28)
+
+
+### Bug Fixes
+
+* **pixels:** bundle react-json-view for now ([daf06c7](https://github.com/fuf-stack/uniform/commit/daf06c7cd85e120e5a88070a9761b76025ba1839))
+
 ## [0.7.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.7.0...pixels-v0.7.1) (2024-05-28)
 
 
