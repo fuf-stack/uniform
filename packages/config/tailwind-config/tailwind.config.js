@@ -13,6 +13,7 @@ const path = require('path');
 const NEXTUI_THEME_USED_COMPONENT_PATHS = [
   'autocomplete',
   'avatar',
+  'accordion',
   'button',
   'card',
   'chip',

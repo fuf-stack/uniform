@@ -14,6 +14,11 @@
       "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
     },
+    "./Accordion": {
+      "import": "./dist/Accordion/index.js",
+      "require": "./dist/Accordion/index.cjs",
+      "types": "./dist/Accordion/index.d.ts"
+    },
     "./Avatar": {
       "import": "./dist/Avatar/index.js",
       "require": "./dist/Avatar/index.cjs",
@@ -106,6 +111,7 @@
   },
   "dependencies": {
     "@nextui-org/avatar": "2.0.27",
+    "@nextui-org/accordion": "2.0.33",
     "@nextui-org/button": "2.0.31",
     "@nextui-org/card": "2.0.28",
     "@nextui-org/chip": "2.0.28",
