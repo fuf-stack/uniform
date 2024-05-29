@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.7.2...pixels-v0.8.0) (2024-05-29)
+
+
+### Features
+
+* **pixels:** add initial accordion ([cc3cf96](https://github.com/fuf-stack/uniform/commit/cc3cf96082c3d8f76b480b0a8b609f5e3d929b20))
+
 ## [0.7.2](https://github.com/fuf-stack/uniform/compare/pixels-v0.7.1...pixels-v0.7.2) (2024-05-28)
 
 
