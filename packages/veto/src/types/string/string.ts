@@ -2,16 +2,22 @@ import type { ZodString } from 'zod';
 
 import { z } from 'zod';
 
-type VStringOptions = {
+export type VStringOptions = {
   /** min string length, defaults to 1 */
   min: number;
 };
 
-export type VString = ZodString;
-
-export default (options?: VStringOptions): VString =>
+export const string = (options?: VStringOptions): VStringSchema =>
   z
     // see: https://zod.dev/?id=strings
     .string()
     // expect strings to be at least 1 char long by default
     .min(options?.min || options?.min === 0 ? options.min : 1);
+
+export type VString = typeof string;
+export type VStringSchema = ZodString;
+
+/** when used with refine or superRefine */
+export type VStringRefined<Options = undefined> = (
+  options?: Options,
+) => z.ZodEffects<VStringSchema, string, string>;

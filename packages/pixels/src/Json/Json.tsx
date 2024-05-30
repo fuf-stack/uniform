@@ -4,8 +4,12 @@ import { useState } from 'react';
 import { FaChevronDown, FaChevronUp, FaTimesCircle } from 'react-icons/fa';
 import { HiOutlineClipboard, HiOutlineClipboardCheck } from 'react-icons/hi';
 
+// INFO: react-json-view is bundled with --dts-resolve for now
+// eslint-disable-next-line import/no-extraneous-dependencies
 import JsonView from '@uiw/react-json-view';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { lightTheme } from '@uiw/react-json-view/light';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { vscodeTheme } from '@uiw/react-json-view/vscode';
 import cn from 'classnames';
 

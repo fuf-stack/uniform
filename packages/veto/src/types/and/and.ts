@@ -1,4 +1,6 @@
 import { z } from 'zod';
 
 // TODO: make it accept a list
-export default z.intersection;
+export const and = z.intersection;
+
+export type VAnd = typeof and;

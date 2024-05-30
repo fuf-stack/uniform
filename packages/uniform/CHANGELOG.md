@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.3.2](https://github.com/fuf-stack/uniform/compare/uniform-v0.3.1...uniform-v0.3.2) (2024-05-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-hook-form to v7.51.5 ([a8d9ecf](https://github.com/fuf-stack/uniform/commit/a8d9ecf2c8ab4015fd31d2ab08fc61f4beaddcee))
+* **deps:** update dependency slug to v9.1.0 ([79c8002](https://github.com/fuf-stack/uniform/commit/79c8002ce22c0153c1f5a94b9d9a1d3acac11db3))
+* **uniform:** add correct module export ([620b391](https://github.com/fuf-stack/uniform/commit/620b391d9748c8372910b97b676ccff747d1a8d2))
+
+## [0.3.1](https://github.com/fuf-stack/uniform/compare/uniform-v0.3.0...uniform-v0.3.1) (2024-05-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @react-aria/visually-hidden to v3.8.12 ([0518f58](https://github.com/fuf-stack/uniform/commit/0518f580bfaaa86ae73908190856fd23e7db8d8c))
+* **deps:** update dependency react-hook-form to v7.51.4 ([5c3ecb8](https://github.com/fuf-stack/uniform/commit/5c3ecb8f17a78a69d0d73649a415d831352055f4))
+* **deps:** update dependency react-icons to v5.2.1 ([ebb3e80](https://github.com/fuf-stack/uniform/commit/ebb3e8015c5bd76b4e95b7e3a875c84d32d77ce5))
+* **uniform:** add @nextui-org/theme as dep ([13bf2d2](https://github.com/fuf-stack/uniform/commit/13bf2d257363c5ccf2001d83f9e5060411770e0e))
+
 ## [0.3.0](https://github.com/fuf-stack/uniform/compare/uniform-v0.2.4...uniform-v0.3.0) (2024-05-03)
 
 

@@ -1,4 +1,16 @@
+import type { VetoEffects, VetoRefinementCtx, VetoTypeAny } from 'src/types';
+import type { ZodArray } from 'zod';
+
 import { z } from 'zod';
+
+// eslint-disable-next-line prefer-destructuring
+export const array: <T extends VetoTypeAny>(schema: T) => ZodArray<T> = z.array;
+
+export type VArray = typeof array;
+export type VArraySchema<T extends VetoTypeAny> = ZodArray<T>;
+
+/** when used with refine or superRefine */
+export type VArrayRefined<T extends VetoTypeAny> = VetoEffects<VArraySchema<T>>;
 
 type MakeElementsUniqueOptions =
   | true
@@ -15,7 +27,7 @@ type MakeElementsUniqueOptions =
 
 /** Refinement to make array elements unique */
 const makeElementsUnique = (options: MakeElementsUniqueOptions) => {
-  return <T extends z.ZodTypeAny>(data: T[], ctx: z.RefinementCtx) => {
+  return <T extends VetoTypeAny>(data: T[], ctx: VetoRefinementCtx) => {
     const mapFn = (options !== true && options?.mapFn) || ((x) => x);
     // add error to (second) duplicate array element
     const dataMapped = data.map(mapFn);
@@ -72,14 +84,10 @@ type ArrayRefinements = {
   unique: MakeElementsUniqueOptions;
 };
 
-export const refineArray = <T extends z.ZodArray<z.ZodTypeAny, 'many'>>(
-  schema: T,
-) => {
+export const refineArray = <T extends ReturnType<VArray>>(schema: T) => {
   type Element = T['element'];
 
-  return (
-    refinements: ArrayRefinements,
-  ): z.ZodEffects<T, Element['_output'][], Element['_input'][]> => {
+  return (refinements: ArrayRefinements): VetoEffects<Element> => {
     let _schema;
 
     // add unique refinement
@@ -91,5 +99,3 @@ export const refineArray = <T extends z.ZodArray<z.ZodTypeAny, 'many'>>(
     return _schema;
   };
 };
-
-export default z.array;

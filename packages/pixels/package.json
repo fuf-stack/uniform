@@ -2,10 +2,10 @@
   "name": "@fuf-stack/pixels",
   "description": "fuf react component library",
   "author": "Hannes Tiede",
-  "version": "0.5.9",
+  "version": "0.8.0",
   "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.cjs",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "sideEffects": false,
   "exports": {
@@ -13,6 +13,21 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
+    },
+    "./Accordion": {
+      "import": "./dist/Accordion/index.js",
+      "require": "./dist/Accordion/index.cjs",
+      "types": "./dist/Accordion/index.d.ts"
+    },
+    "./Avatar": {
+      "import": "./dist/Avatar/index.js",
+      "require": "./dist/Avatar/index.cjs",
+      "types": "./dist/Avatar/index.d.ts"
+    },
+    "./AvatarGroup": {
+      "import": "./dist/AvatarGroup/index.js",
+      "require": "./dist/AvatarGroup/index.cjs",
+      "types": "./dist/AvatarGroup/index.d.ts"
     },
     "./Button": {
       "import": "./dist/Button/index.js",
@@ -86,7 +101,7 @@
     "url": "https://github.com/fuf-stack/uniforms/issues"
   },
   "scripts": {
-    "build": "tsup --config node_modules/@repo/tsup-config/config.ts",
+    "build": "tsup --config node_modules/@repo/tsup-config/config.ts --dts-resolve",
     "prepack": "rm -rf ./dist && pnpm build",
     "test": "vitest ./src"
   },
@@ -95,6 +110,8 @@
     "react-dom": ">=18"
   },
   "dependencies": {
+    "@nextui-org/avatar": "2.0.27",
+    "@nextui-org/accordion": "2.0.33",
     "@nextui-org/button": "2.0.31",
     "@nextui-org/card": "2.0.28",
     "@nextui-org/chip": "2.0.28",
@@ -108,7 +125,6 @@
     "classnames": "2.5.1",
     "react-icons": "5.2.1",
     "react-json-view": "1.21.3",
-    "@uiw/react-json-view": "2.0.0-alpha.24",
     "tailwind-variants": "0.2.1"
   },
   "devDependencies": {
@@ -117,8 +133,9 @@
     "@repo/tsup-config": "workspace:*",
     "@repo/vite-config": "workspace:*",
     "@types/debug": "4.1.12",
-    "@types/react": "18.3.1",
+    "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
+    "@uiw/react-json-view": "2.0.0-alpha.24",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   }

@@ -1,5 +1,50 @@
 # Changelog
 
+## [0.8.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.7.2...pixels-v0.8.0) (2024-05-29)
+
+
+### Features
+
+* **pixels:** add initial accordion ([cc3cf96](https://github.com/fuf-stack/uniform/commit/cc3cf96082c3d8f76b480b0a8b609f5e3d929b20))
+
+## [0.7.2](https://github.com/fuf-stack/uniform/compare/pixels-v0.7.1...pixels-v0.7.2) (2024-05-28)
+
+
+### Bug Fixes
+
+* **pixels:** bundle react-json-view for now ([daf06c7](https://github.com/fuf-stack/uniform/commit/daf06c7cd85e120e5a88070a9761b76025ba1839))
+
+## [0.7.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.7.0...pixels-v0.7.1) (2024-05-28)
+
+
+### Bug Fixes
+
+* **pixels:** add Json themes to component ([13328d9](https://github.com/fuf-stack/uniform/commit/13328d9244bd6490a391f0119ca825ea2872746a))
+
+## [0.7.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.6.0...pixels-v0.7.0) (2024-05-28)
+
+
+### Features
+
+* **pixels:** add initial AvatarGroup component ([6f03630](https://github.com/fuf-stack/uniform/commit/6f0363065b5569e1e5b49c578b2f6fe55576bc0e))
+
+
+### Bug Fixes
+
+* **pixels:** add correct module export ([16c783d](https://github.com/fuf-stack/uniform/commit/16c783dfd01467d476d5763f717bd8e952ab7784))
+
+## [0.6.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.5.9...pixels-v0.6.0) (2024-05-24)
+
+
+### Features
+
+* **pixels:** add initial avatar component ([7870a51](https://github.com/fuf-stack/uniform/commit/7870a515feb91836db4986c08de3874455a7ac99))
+
+
+### Bug Fixes
+
+* **pixels:** update storyshots ([3a2a657](https://github.com/fuf-stack/uniform/commit/3a2a657762e83b647e6b712d5967b4899b20662f))
+
 ## [0.5.9](https://github.com/fuf-stack/uniform/compare/pixels-v0.5.8...pixels-v0.5.9) (2024-05-07)
 
 
