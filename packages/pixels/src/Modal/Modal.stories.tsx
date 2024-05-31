@@ -1,11 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import type { ModalProps } from './Modal';
 
-import { useState } from 'react';
-
+import { useArgs } from '@storybook/preview-api';
 import { expect, userEvent, within } from '@storybook/test';
 
-import Button from '../Button';
+import { Button } from '../Button';
 import Modal, { modalVariants } from './Modal';
 import { longContent } from './storyData';
 
@@ -18,21 +17,27 @@ const meta: Meta<typeof Modal> = {
       options: Object.keys(modalVariants.variants.size),
     },
   },
-  render: (args) => {
-    const [open, setOpen] = useState(false);
-    return (
-      <>
-        <Button onClick={() => setOpen(true)} testId="modal_trigger">
-          Open Modal
-        </Button>
-        <Modal {...args} isOpen={open} onClose={() => setOpen(false)} />
-      </>
-    );
-  },
 };
 
 export default meta;
 type Story = StoryObj<ModalProps>;
+
+const Template: Story['render'] = (args) => {
+  const [{ isOpen }, setArgs] = useArgs();
+
+  const onClick = () => setArgs({ isOpen: true });
+
+  const onClose = () => setArgs({ isOpen: false });
+
+  return (
+    <>
+      <Button onClick={onClick} testId="modal_trigger">
+        Open Modal
+      </Button>
+      <Modal {...args} isOpen={isOpen} onClose={onClose} />
+    </>
+  );
+};
 
 const openModal: Story['play'] = async ({ canvasElement }) => {
   const body = within(canvasElement?.parentElement as HTMLElement);
@@ -47,6 +52,7 @@ export const Default: Story = {
     header: 'Modal Header',
     children: 'Modal Content',
   },
+  render: Template,
 };
 
 export const WithHeaderAndFooter: Story = {
@@ -55,6 +61,7 @@ export const WithHeaderAndFooter: Story = {
     children: 'Modal Content',
     footer: <Button>Some Action</Button>,
   },
+  render: Template,
 };
 
 export const ScrollLongContent: Story = {
@@ -62,6 +69,7 @@ export const ScrollLongContent: Story = {
     header: 'Modal Header',
     children: longContent,
   },
+  render: Template,
   play: openModal,
 };
 
@@ -78,36 +86,43 @@ export const CustomStyles: Story = {
       closeButton: 'hover:bg-white/5 active:bg-white/10',
     },
   },
+  render: Template,
   play: openModal,
 };
 
-export const AllSizes: Story = {
-  args: {
-    header: 'Size',
-  },
-  render: (args) => (
+const AllSizesTemplate: Story['render'] = (args) => {
+  const [{ isOpen, content, size: currentSize }, setArgs] = useArgs();
+
+  return (
     <>
       {Object.keys(modalVariants.variants.size).map((size) => {
-        const [content, setContent] = useState<string | JSX.Element | false>(
-          false,
-        );
         return (
           <div key={size} className="mt-2">
             <Button
-              onClick={() => setContent(`short ${size} content`)}
+              onClick={() =>
+                setArgs({
+                  isOpen: true,
+                  size,
+                  content: `short ${size} content`,
+                })
+              }
               className="mr-2"
             >
               {size}
             </Button>
-            <Button onClick={() => setContent(longContent)}>
+            <Button
+              onClick={() =>
+                setArgs({ isOpen: true, size, content: longContent })
+              }
+            >
               {size} scroll
             </Button>
             <Modal
               {...args}
               header={`Size ${size} Modal`}
-              isOpen={!!content}
-              onClose={() => setContent(false)}
-              size={size as ModalProps['size']}
+              isOpen={isOpen}
+              onClose={() => setArgs({ isOpen: false })}
+              size={currentSize}
             >
               {content}
             </Modal>
@@ -115,7 +130,14 @@ export const AllSizes: Story = {
         );
       })}
     </>
-  ),
+  );
+};
+
+export const AllSizes: Story = {
+  args: {
+    header: 'Size',
+  },
+  render: AllSizesTemplate,
   argTypes: {
     // do not show size in controls table
     size: {
