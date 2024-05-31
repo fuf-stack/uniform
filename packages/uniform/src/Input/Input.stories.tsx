@@ -70,6 +70,21 @@ export const Required: Story = {
   },
 };
 
+export const Disabled: Story = {
+  // parameters: {
+  //   formProps: {
+  //     validation: v({
+  //       inputField: vt.string(),
+  //     }),
+  //   },
+  // },
+  args: {
+    label: 'Input Field',
+    name: 'inputField',
+    disabled: true,
+  },
+};
+
 export const Invalid: Story = {
   // parameters: {
   //   formProps: {
