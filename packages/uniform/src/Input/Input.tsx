@@ -6,8 +6,8 @@ import { Input as NextInput } from '@nextui-org/input';
 import cn from 'classnames';
 
 import { useFormContext } from '../hooks';
-import FieldCopyTestIdButton from '../partials/FieldCopyTestIdButton';
-import FieldValidationError from '../partials/FieldValidationError';
+import { FieldCopyTestIdButton } from '../partials/FieldCopyTestIdButton';
+import { FieldValidationError } from '../partials/FieldValidationError';
 
 export interface InputProps {
   /** CSS class name */
