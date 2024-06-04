@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.8.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.8.0...pixels-v0.8.1) (2024-06-04)
+
+
+### Bug Fixes
+
+* **deps:** update nextui monorepo ([98b9382](https://github.com/fuf-stack/uniform/commit/98b938227600472d40f4e5753ddfcfb845f517e5))
+* **pixels:** accordion required props ([026aa17](https://github.com/fuf-stack/uniform/commit/026aa173d6b9f4844e92e5484faea065c32b70c2))
+* **pixels:** allow rendering accordion items as react children ([8251313](https://github.com/fuf-stack/uniform/commit/8251313dad52bc67cf3cc1cf82730628c86ea041))
+* **pixels:** use storybook useArgs in Modal story ([19c656e](https://github.com/fuf-stack/uniform/commit/19c656e58ac31a2bda6496b504385e7a286d2dc5))
+
 ## [0.8.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.7.2...pixels-v0.8.0) (2024-05-29)
 
 
