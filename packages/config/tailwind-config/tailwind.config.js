@@ -11,9 +11,9 @@ const path = require('path');
  * update with: pnpm list "@nextui-org/*" --recursive | grep @nextui-org/ | sort | uniq -u
  */
 const NEXTUI_THEME_USED_COMPONENT_PATHS = [
+  'accordion',
   'autocomplete',
   'avatar',
-  'accordion',
   'button',
   'card',
   'chip',

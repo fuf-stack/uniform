@@ -15,11 +15,11 @@ export interface AccordionProps {
   /** CSS class name */
   className?: string;
   /** Array of keys for the AccordionItem(s) to be expanded by default */
-  defaultSelectedKeys: undefined | 'all' | Iterable<number | string>;
+  defaultSelectedKeys?: undefined | 'all' | Iterable<number | string>;
   /** Disables the Accordion */
   disabled?: boolean;
   /** Array of keys for the AccordionItems to disable */
-  disabledKeys: Iterable<number | string>;
+  disabledKeys?: Iterable<number | string>;
   /** Force always one AccordionItem to be open. */
   disallowEmptySelection?: boolean;
   /** props for styling the Divider */
@@ -27,9 +27,9 @@ export interface AccordionProps {
   /** Hide the expanded/collapsed indicator icon */
   hideIndicator?: boolean;
   /** Callback function for when a Accordion Item is expanded or collapsed */
-  onSelectionChange: (keys: 'all' | Iterable<number | string>) => unknown;
+  onSelectionChange?: (keys: 'all' | Iterable<number | string>) => unknown;
   /** Set whether multiple or only a single AccordionItems can be expanded */
-  selectionMode: 'single' | 'multiple';
+  selectionMode?: 'single' | 'multiple';
   /** enable or disable the divider between each AccordionItem */
   showDivider?: boolean;
   /** style variant of the Accordion */
@@ -48,6 +48,7 @@ const Accordion = ({
   disabledKeys = [],
   disallowEmptySelection = false,
   dividerProps = {},
+  onSelectionChange = undefined,
   selectionMode = 'multiple',
   showDivider = true,
   variant = 'light',
@@ -56,14 +57,15 @@ const Accordion = ({
     // @ts-expect-error not sure here
     <NextAccordion
       className={className}
-      variant={variant}
-      selectionMode={selectionMode}
-      isDisabled={disabled}
-      showDivider={showDivider}
-      dividerProps={dividerProps}
-      disallowEmptySelection={disallowEmptySelection}
-      disabledKeys={disabledKeys}
       defaultSelectedKeys={defaultSelectedKeys}
+      disabledKeys={disabledKeys}
+      disallowEmptySelection={disallowEmptySelection}
+      dividerProps={dividerProps}
+      isDisabled={disabled}
+      onSelectionChange={onSelectionChange}
+      selectionMode={selectionMode}
+      showDivider={showDivider}
+      variant={variant}
     >
       {accordionItems.map((item, index) => (
         <AccordionItem
