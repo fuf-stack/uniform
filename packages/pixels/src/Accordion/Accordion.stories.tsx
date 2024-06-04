@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 import type { AccordionProps } from './Accordion';
 
 import Accordion from './Accordion';
-import AccordionItem from './AccordionItem';
 
 const meta: Meta<typeof Accordion> = {
   title: 'pixels/Accordion',
@@ -90,17 +89,4 @@ export const NoDivider: Story = {
     showDivider: false,
     accordionItems,
   },
-};
-
-export const ItemsRenderedAsChildren: Story = {
-  args: {
-    accordionItems,
-  },
-  render: ({ accordionItems: items, ...args }) => (
-    <div className="w-96">
-      <Accordion {...args}>
-        {items?.map((item) => <AccordionItem {...item} />)}
-      </Accordion>
-    </div>
-  ),
 };

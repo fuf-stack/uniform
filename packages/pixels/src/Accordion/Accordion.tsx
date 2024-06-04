@@ -1,11 +1,20 @@
 import type { AccordionProps as NextAccordionProps } from '@nextui-org/accordion';
 import type { DividerProps } from '@nextui-org/divider';
-import type { AccordionItemProps } from './AccordionItem';
+import type { ReactNode } from 'react';
 
 import {
   AccordionItem,
   Accordion as NextAccordion,
 } from '@nextui-org/accordion';
+
+export interface AccordionItemProps {
+  /** Content of the accordion item */
+  children: ReactNode;
+  /** Disables the accordion item */
+  disabled?: boolean;
+  /** Accordion item title */
+  title: ReactNode;
+}
 
 export interface AccordionProps {
   /** Props for AccordionItems, will render the accordion items programmatically */
@@ -30,9 +39,9 @@ export interface AccordionProps {
   onSelectionChange?: (keys: 'all' | Iterable<number | string>) => unknown;
   /** Set whether multiple or only a single AccordionItems can be expanded */
   selectionMode?: 'single' | 'multiple';
-  /** enable or disable the divider between each AccordionItem */
+  /** Enable or disable the divider between each AccordionItem */
   showDivider?: boolean;
-  /** style variant of the Accordion */
+  /** Style variant of the Accordion */
   variant?: 'light' | 'shadow' | 'bordered' | 'splitted';
 }
 
@@ -41,7 +50,6 @@ export interface AccordionProps {
  */
 const Accordion = ({
   accordionItems = [],
-  children = undefined,
   className = '',
   defaultSelectedKeys = [],
   disabled = false,
@@ -54,7 +62,6 @@ const Accordion = ({
   variant = 'light',
 }: AccordionProps) => {
   return (
-    // @ts-expect-error not sure here
     <NextAccordion
       className={className}
       defaultSelectedKeys={defaultSelectedKeys}
@@ -76,7 +83,6 @@ const Accordion = ({
           {...item}
         />
       ))}
-      {children}
     </NextAccordion>
   );
 };
