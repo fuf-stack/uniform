@@ -2,10 +2,14 @@ import type { Meta, StoryObj } from '@storybook/react';
 import type { AccordionProps } from './Accordion';
 
 import Accordion from './Accordion';
+import AccordionItem from './AccordionItem';
 
 const meta: Meta<typeof Accordion> = {
   title: 'pixels/Accordion',
   component: Accordion,
+  args: {
+    className: 'w-96',
+  },
 };
 
 export default meta;
@@ -25,7 +29,6 @@ export const Default: Story = {
 
 export const WithSubtitle: Story = {
   args: {
-    className: 'w-96',
     accordionItems: [
       { title: '1.', children: <div>First item</div>, subtitle: 'Subtitle' },
       { title: '2.', children: <div>Second item</div>, subtitle: 'Subtitle' },
@@ -35,15 +38,15 @@ export const WithSubtitle: Story = {
 };
 export const AllVariants: Story = {
   args: {
-    className: 'mb-12',
     accordionItems,
   },
   render: (args) => (
     <div className="w-96">
       {['light', 'shadow', 'bordered', 'splitted'].map((variant) => (
         <Accordion
-          key={variant}
           {...args}
+          key={variant}
+          className="mb-12"
           variant={variant as AccordionProps['variant']}
         />
       ))}
@@ -51,24 +54,21 @@ export const AllVariants: Story = {
   ),
 };
 
-export const Multi: Story = {
+export const OnlySingleSelection: Story = {
   args: {
-    className: 'w-96',
-    selectionMode: 'multiple',
+    selectionMode: 'single',
     accordionItems,
   },
 };
 
 export const AllDisabled: Story = {
   args: {
-    className: 'w-96',
     disabled: true,
     accordionItems,
   },
 };
 export const SomeDisabled: Story = {
   args: {
-    className: 'w-96',
     disabledKeys: ['1'],
     accordionItems: [
       { title: '1.', children: <div>First item</div>, disabled: true },
@@ -80,7 +80,6 @@ export const SomeDisabled: Story = {
 
 export const DefaultOpen: Story = {
   args: {
-    className: 'w-96',
     defaultSelectedKeys: ['1'],
     accordionItems,
   },
@@ -88,8 +87,20 @@ export const DefaultOpen: Story = {
 
 export const NoDivider: Story = {
   args: {
-    className: 'w-96',
     showDivider: false,
     accordionItems,
   },
+};
+
+export const ItemsRenderedAsChildren: Story = {
+  args: {
+    accordionItems,
+  },
+  render: ({ accordionItems: items, ...args }) => (
+    <div className="w-96">
+      <Accordion {...args}>
+        {items?.map((item) => <AccordionItem {...item} />)}
+      </Accordion>
+    </div>
+  ),
 };

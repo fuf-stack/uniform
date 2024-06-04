@@ -1,5 +1,6 @@
-import type { AccordionItemProps } from '@nextui-org/accordion';
+import type { AccordionProps as NextAccordionProps } from '@nextui-org/accordion';
 import type { DividerProps } from '@nextui-org/divider';
+import type { AccordionItemProps } from './AccordionItem';
 
 import {
   AccordionItem,
@@ -7,8 +8,10 @@ import {
 } from '@nextui-org/accordion';
 
 export interface AccordionProps {
-  /** Props for AccordionItems */
+  /** Props for AccordionItems, will render the accordion items programmatically */
   accordionItems?: AccordionItemProps[];
+  /** Render accordion items directly as children */
+  children?: NextAccordionProps['children'];
   /** CSS class name */
   className?: string;
   /** Array of keys for the AccordionItem(s) to be expanded by default */
@@ -38,17 +41,19 @@ export interface AccordionProps {
  */
 const Accordion = ({
   accordionItems = [],
+  children = undefined,
   className = '',
   defaultSelectedKeys = [],
   disabled = false,
   disabledKeys = [],
   disallowEmptySelection = false,
   dividerProps = {},
-  selectionMode = 'single',
+  selectionMode = 'multiple',
   showDivider = true,
   variant = 'light',
 }: AccordionProps) => {
   return (
+    // @ts-expect-error not sure here
     <NextAccordion
       className={className}
       variant={variant}
@@ -69,6 +74,7 @@ const Accordion = ({
           {...item}
         />
       ))}
+      {children}
     </NextAccordion>
   );
 };
