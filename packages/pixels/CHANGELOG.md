@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.2](https://github.com/fuf-stack/uniform/compare/pixels-v0.8.1...pixels-v0.8.2) (2024-06-04)
+
+
+### Bug Fixes
+
+* **pixels:** remove children render logic from accordion ([b9a04f0](https://github.com/fuf-stack/uniform/commit/b9a04f0ac337333ed6f03066137bcd181763d30f))
+
 ## [0.8.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.8.0...pixels-v0.8.1) (2024-06-04)
 
 
