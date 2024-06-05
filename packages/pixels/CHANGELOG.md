@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.3](https://github.com/fuf-stack/uniform/compare/pixels-v0.9.2...pixels-v0.9.3) (2024-06-05)
+
+
+### Bug Fixes
+
+* **pixels:** add helper types TVClassName and TVProps ([04e9ae0](https://github.com/fuf-stack/uniform/commit/04e9ae0a7e47b60d8db534f84cf905d6f14527d9))
+
 ## [0.9.2](https://github.com/fuf-stack/uniform/compare/pixels-v0.9.1...pixels-v0.9.2) (2024-06-05)
 
 
