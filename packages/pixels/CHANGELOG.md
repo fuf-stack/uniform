@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.10.0...pixels-v0.10.1) (2024-06-05)
+
+
+### Bug Fixes
+
+* **pixels:** update package description ([c079374](https://github.com/fuf-stack/uniform/commit/c079374dcd7a446ced2a135cafb4e30b865ce486))
+
 ## [0.10.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.9.3...pixels-v0.10.0) (2024-06-05)
 
 
