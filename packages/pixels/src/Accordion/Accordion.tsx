@@ -1,11 +1,28 @@
-import type { AccordionProps as NextAccordionProps } from '@nextui-org/accordion';
 import type { DividerProps } from '@nextui-org/divider';
+import type { VariantProps } from '@nextui-org/theme';
 import type { ReactNode } from 'react';
 
 import {
-  AccordionItem,
   Accordion as NextAccordion,
+  AccordionItem as NextAccordionItem,
 } from '@nextui-org/accordion';
+import { tv } from 'tailwind-variants';
+
+// card styling variants
+// see: https://nextui.org/docs/components/accordion#accordion-item-slots
+export const accordionVariants = tv({
+  slots: {
+    base: '',
+    content: '',
+    heading: '',
+    indicator: '',
+    startContent: '',
+    subtitle: '',
+    title: '',
+    titleWrapper: '',
+    trigger: '',
+  },
+});
 
 export interface AccordionItemProps {
   /** Content of the accordion item */
@@ -14,15 +31,20 @@ export interface AccordionItemProps {
   disabled?: boolean;
   /** Accordion item title */
   title: ReactNode;
+  /** Accordion item subtitle */
+  subtitle?: ReactNode;
 }
 
-export interface AccordionProps {
+type AccordionVariantProps = VariantProps<typeof accordionVariants>;
+type AccordionVariantSlots = Partial<
+  Record<keyof ReturnType<typeof accordionVariants>, string>
+>;
+
+export interface AccordionProps extends AccordionVariantProps {
   /** Props for AccordionItems, will render the accordion items programmatically */
   accordionItems?: AccordionItemProps[];
-  /** Render accordion items directly as children */
-  children?: NextAccordionProps['children'];
   /** CSS class name */
-  className?: string;
+  className?: string | AccordionVariantSlots;
   /** Array of keys for the AccordionItem(s) to be expanded by default */
   defaultSelectedKeys?: undefined | 'all' | Iterable<number | string>;
   /** Disables the Accordion */
@@ -61,21 +83,42 @@ const Accordion = ({
   showDivider = true,
   variant = 'light',
 }: AccordionProps) => {
+  // itemClasses from className slots
+  const variants = accordionVariants();
+  const classNameObj = (typeof className === 'object' && className) || {};
+  const itemClasses = {
+    base: variants.base({
+      className: classNameObj.base || (className as string),
+    }),
+    content: variants.content({ className: classNameObj.content }),
+    heading: variants.heading({ className: classNameObj.heading }),
+    indicator: variants.indicator({ className: classNameObj.indicator }),
+    startContent: variants.startContent({
+      className: classNameObj.startContent,
+    }),
+    subtitle: variants.subtitle({ className: classNameObj.subtitle }),
+    title: variants.title({ className: classNameObj.title }),
+    titleWrapper: variants.titleWrapper({
+      className: classNameObj.titleWrapper,
+    }),
+    trigger: variants.trigger({ className: classNameObj.trigger }),
+  };
+
   return (
     <NextAccordion
-      className={className}
       defaultSelectedKeys={defaultSelectedKeys}
       disabledKeys={disabledKeys}
       disallowEmptySelection={disallowEmptySelection}
       dividerProps={dividerProps}
       isDisabled={disabled}
+      itemClasses={itemClasses}
       onSelectionChange={onSelectionChange}
       selectionMode={selectionMode}
       showDivider={showDivider}
       variant={variant}
     >
       {accordionItems.map((item, index) => (
-        <AccordionItem
+        <NextAccordionItem
           // eslint-disable-next-line react/no-array-index-key
           key={index}
           isDisabled={disabled || item?.disabled}

@@ -84,9 +84,16 @@ export const DefaultOpen: Story = {
   },
 };
 
-export const NoDivider: Story = {
+export const CustomStyles: Story = {
   args: {
-    showDivider: false,
     accordionItems,
+    className: {
+      base: 'py-0 w-96',
+      title: 'font-normal text-medium',
+      trigger:
+        'px-2 py-0 data-[hover=true]:bg-blue-100 rounded-lg h-14 flex items-center',
+      indicator: 'text-medium',
+      content: 'text-small px-2',
+    },
   },
 };
