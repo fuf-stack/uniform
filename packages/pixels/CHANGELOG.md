@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.2](https://github.com/fuf-stack/uniform/compare/pixels-v0.9.1...pixels-v0.9.2) (2024-06-05)
+
+
+### Bug Fixes
+
+* **pixels:** remove children prop from accordion ([1454866](https://github.com/fuf-stack/uniform/commit/1454866c6ba41f6cfe5259041787cfef650fd6e3))
+
 ## [0.9.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.9.0...pixels-v0.9.1) (2024-06-05)
 
 
