@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.4.0](https://github.com/fuf-stack/uniform/compare/uniform-v0.3.2...uniform-v0.4.0) (2024-06-05)
+
+
+### Features
+
+* **pixel-utils:** add initial package ([e09d5a2](https://github.com/fuf-stack/uniform/commit/e09d5a2f1092f5a0f7bb006eac332a5cb38d1fd9))
+* **uniform:** add Input component ([57d038d](https://github.com/fuf-stack/uniform/commit/57d038d00cf130ef4e639c17e79d605038da3f7b))
+
+
+### Bug Fixes
+
+* **deps:** update nextui monorepo ([98b9382](https://github.com/fuf-stack/uniform/commit/98b938227600472d40f4e5753ddfcfb845f517e5))
+
 ## [0.3.2](https://github.com/fuf-stack/uniform/compare/uniform-v0.3.1...uniform-v0.3.2) (2024-05-28)
 
 
