@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.9.0...pixels-v0.9.1) (2024-06-05)
+
+
+### Bug Fixes
+
+* **pixels:** allow children in accordion for astro ([4ee9d3a](https://github.com/fuf-stack/uniform/commit/4ee9d3ac7aee4d54a8b716b7ee3f1d191772f8bb))
+
 ## [0.9.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.8.4...pixels-v0.9.0) (2024-06-05)
 
 
