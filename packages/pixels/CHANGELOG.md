@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.3](https://github.com/fuf-stack/uniform/compare/pixels-v0.8.2...pixels-v0.8.3) (2024-06-05)
+
+
+### Bug Fixes
+
+* **pixels:** add tailwind variants to accordion ([0dee82c](https://github.com/fuf-stack/uniform/commit/0dee82cd5891fd10810633c43e196fa4ff579552))
+
 ## [0.8.2](https://github.com/fuf-stack/uniform/compare/pixels-v0.8.1...pixels-v0.8.2) (2024-06-04)
 
 
