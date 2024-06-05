@@ -9,7 +9,7 @@ import {
 
 import { tv, variantsToClassNames } from '../utils';
 
-// card styling variants
+// accordion styling variants
 // see: https://nextui.org/docs/components/accordion#accordion-item-slots
 export const accordionVariants = tv({
   slots: {
