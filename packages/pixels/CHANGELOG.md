@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.4](https://github.com/fuf-stack/uniform/compare/pixels-v0.8.3...pixels-v0.8.4) (2024-06-05)
+
+
+### Bug Fixes
+
+* **pixels:** add indicatorLeft prop to accordion ([3f8a199](https://github.com/fuf-stack/uniform/commit/3f8a19951f2341279c786c6d2344f4eb708da8fc))
+
 ## [0.8.3](https://github.com/fuf-stack/uniform/compare/pixels-v0.8.2...pixels-v0.8.3) (2024-06-05)
 
 
