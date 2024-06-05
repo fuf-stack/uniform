@@ -8,7 +8,8 @@ import {
   ModalFooter as NextModalFooter,
   ModalHeader as NextModalHeader,
 } from '@nextui-org/modal';
-import { tv } from 'tailwind-variants';
+
+import { tv, variantsToClassNames } from '../utils';
 
 // modal variants
 export const modalVariants = tv({
@@ -71,18 +72,7 @@ const Modal = ({
 }: ModalProps) => {
   // classNames from slots
   const variants = modalVariants({ size });
-  const classNameObj = (typeof className === 'object' && className) || {};
-  const classNames = {
-    backdrop: variants.backdrop({ className: classNameObj.backdrop }),
-    base: variants.base({
-      className: classNameObj.base || (className as string),
-    }),
-    body: variants.body({ className: classNameObj.body }),
-    closeButton: variants.closeButton({ className: classNameObj.closeButton }),
-    footer: variants.footer({ className: classNameObj.footer }),
-    header: variants.header({ className: classNameObj.header }),
-    wrapper: variants.wrapper({ className: classNameObj.wrapper }),
-  };
+  const classNames = variantsToClassNames(variants, className, 'base');
 
   return (
     <NextModal

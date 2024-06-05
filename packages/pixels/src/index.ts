@@ -14,5 +14,5 @@ export * from './Tooltip';
 // hooks
 export * from './hooks';
 
-// theme
-export * from './theme';
+// utils
+export * from './utils';

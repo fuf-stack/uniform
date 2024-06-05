@@ -6,7 +6,8 @@ import {
   Accordion as NextAccordion,
   AccordionItem as NextAccordionItem,
 } from '@nextui-org/accordion';
-import { tv } from 'tailwind-variants';
+
+import { tv, variantsToClassNames } from '../utils';
 
 // card styling variants
 // see: https://nextui.org/docs/components/accordion#accordion-item-slots
@@ -83,7 +84,7 @@ export interface AccordionProps extends AccordionVariantProps {
  */
 const Accordion = ({
   accordionItems = [],
-  className = '',
+  className = undefined,
   defaultSelectedKeys = [],
   disabled = false,
   disabledKeys = [],
@@ -97,29 +98,15 @@ const Accordion = ({
 }: AccordionProps) => {
   // itemClasses from className slots
   const variants = accordionVariants({ indicatorLeft });
-  const classNameObj = (typeof className === 'object' && className) || {};
-  const itemClasses = {
-    base: variants.base({ className: classNameObj.base }),
-    content: variants.content({ className: classNameObj.content }),
-    heading: variants.heading({ className: classNameObj.heading }),
-    indicator: variants.indicator({ className: classNameObj.indicator }),
-    startContent: variants.startContent({
-      className: classNameObj.startContent,
-    }),
-    subtitle: variants.subtitle({ className: classNameObj.subtitle }),
-    title: variants.title({ className: classNameObj.title }),
-    titleWrapper: variants.titleWrapper({
-      className: classNameObj.titleWrapper,
-    }),
-    trigger: variants.trigger({ className: classNameObj.trigger }),
-  };
-  const wrapperClass = variants.wrapper({
-    className: typeof className === 'string' ? className : classNameObj.wrapper,
-  });
+  const { wrapper, ...itemClasses } = variantsToClassNames(
+    variants,
+    className,
+    'wrapper',
+  );
 
   return (
     <NextAccordion
-      className={wrapperClass}
+      className={wrapper}
       defaultSelectedKeys={defaultSelectedKeys}
       disabledKeys={disabledKeys}
       disallowEmptySelection={disallowEmptySelection}

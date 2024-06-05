@@ -8,7 +8,8 @@ import {
   CardHeader as NextCardHeader,
 } from '@nextui-org/card';
 import { Divider as NextDivider } from '@nextui-org/divider';
-import { tv } from 'tailwind-variants';
+
+import { tv, variantsToClassNames } from '../utils';
 
 // card styling variants
 export const cardVariants = tv({
@@ -51,21 +52,13 @@ const Card = ({
 }: CardProps) => {
   // classNames from slots
   const variants = cardVariants();
-  const classNameObj = (typeof className === 'object' && className) || {};
-  const classNames = {
-    base: variants.base({
-      className: classNameObj.base || (className as string),
-    }),
-    header: variants.header({ className: classNameObj.header }),
-    body: variants.body({ className: classNameObj.body }),
-    footer: variants.footer({ className: classNameObj.footer }),
-  };
-
-  const divider = (
-    <NextDivider
-      className={variants.divider({ className: classNameObj.divider })}
-    />
+  const { divider: dividerClassName, ...classNames } = variantsToClassNames(
+    variants,
+    className,
+    'base',
   );
+
+  const divider = <NextDivider className={dividerClassName} />;
 
   return (
     <NextCard

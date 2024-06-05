@@ -3,8 +3,8 @@ import type { ReactNode } from 'react';
 import type { VariantProps } from 'tailwind-variants';
 
 import { Button as NextButton } from '@nextui-org/button';
-import { tv } from 'tailwind-variants';
 
+import { tv } from '../utils';
 import LoadingSpinner from './subcomponents/LoadingSpinner';
 
 export const buttonVariants = tv({
