@@ -1,6 +1,6 @@
 {
   "name": "@fuf-stack/pixels",
-  "description": "fuf react component library",
+  "description": "fuf core react component library",
   "author": "Hannes Tiede",
   "version": "0.10.0",
   "type": "module",
