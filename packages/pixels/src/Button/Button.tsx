@@ -1,6 +1,6 @@
 import type { ButtonProps as NextButtonProps } from '@nextui-org/button';
 import type { ReactNode } from 'react';
-import type { VariantProps } from 'tailwind-variants';
+import type { TVProps } from '../utils';
 
 import { Button as NextButton } from '@nextui-org/button';
 
@@ -44,15 +44,15 @@ export const buttonVariants = tv({
   ],
 });
 
-type ButtonVariantProps = VariantProps<typeof buttonVariants>;
+type VariantProps = TVProps<typeof buttonVariants>;
 
-export interface ButtonProps extends ButtonVariantProps {
+export interface ButtonProps extends VariantProps {
   /** sets HTML aria-label attribute */
   ariaLabel?: string;
   /** child components */
   children?: ReactNode;
   /** CSS class name */
-  className?: string | string[];
+  className?: string;
   /** next ui button color  */
   color?: NextButtonProps['color'];
   /** disables function of the button. */

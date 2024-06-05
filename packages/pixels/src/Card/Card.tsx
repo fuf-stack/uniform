@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import type { VariantProps } from 'tailwind-variants';
+import type { TVClassName, TVProps } from '../utils';
 
 import {
   Card as NextCard,
@@ -22,16 +22,14 @@ export const cardVariants = tv({
   },
 });
 
-type CardVariantProps = VariantProps<typeof cardVariants>;
-type CardVariantSlots = Partial<
-  Record<keyof ReturnType<typeof cardVariants>, string>
->;
+type VariantProps = TVProps<typeof cardVariants>;
+type ClassName = TVClassName<typeof cardVariants>;
 
-export interface CardProps extends CardVariantProps {
+export interface CardProps extends VariantProps {
   /** card body content */
   children?: ReactNode;
   /** CSS class name */
-  className?: string | CardVariantSlots;
+  className?: ClassName;
   /** footer content */
   footer?: ReactNode;
   /** header content */

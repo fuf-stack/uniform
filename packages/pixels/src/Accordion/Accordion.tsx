@@ -1,6 +1,6 @@
 import type { DividerProps } from '@nextui-org/divider';
-import type { VariantProps } from '@nextui-org/theme';
 import type { ReactNode } from 'react';
+import type { TVClassName, TVProps } from '../utils';
 
 import {
   Accordion as NextAccordion,
@@ -47,16 +47,14 @@ export interface AccordionItemProps {
   subtitle?: ReactNode;
 }
 
-type AccordionVariantProps = VariantProps<typeof accordionVariants>;
-type AccordionVariantSlots = Partial<
-  Record<keyof ReturnType<typeof accordionVariants>, string>
->;
+type VariantProps = TVProps<typeof accordionVariants>;
+type ClassName = TVClassName<typeof accordionVariants>;
 
-export interface AccordionProps extends AccordionVariantProps {
+export interface AccordionProps extends VariantProps {
   /** Props for AccordionItems, will render the accordion items programmatically */
   accordionItems?: AccordionItemProps[];
   /** CSS class name */
-  className?: string | AccordionVariantSlots;
+  className?: ClassName;
   /** Array of keys for the AccordionItem(s) to be expanded by default */
   defaultSelectedKeys?: undefined | 'all' | Iterable<number | string>;
   /** Disables the Accordion */

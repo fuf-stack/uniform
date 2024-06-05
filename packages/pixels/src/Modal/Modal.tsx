@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import type { VariantProps } from 'tailwind-variants';
+import type { TVClassName, TVProps } from '../utils';
 
 import {
   Modal as NextModal,
@@ -33,16 +33,14 @@ export const modalVariants = tv({
   },
 });
 
-type ModalVariantProps = VariantProps<typeof modalVariants>;
-type ModalVariantSlots = Partial<
-  Record<keyof ReturnType<typeof modalVariants>, string>
->;
+type VariantProps = TVProps<typeof modalVariants>;
+type ClassName = TVClassName<typeof modalVariants>;
 
-export interface ModalProps extends ModalVariantProps {
+export interface ModalProps extends VariantProps {
   /** modal body content */
   children?: ReactNode;
   /** CSS class name */
-  className?: string | ModalVariantSlots;
+  className?: ClassName;
   /** modal footer */
   footer?: ReactNode;
   /** modal header */
@@ -52,7 +50,7 @@ export interface ModalProps extends ModalVariantProps {
   /** close event handler */
   onClose: () => void;
   /** modal size */
-  size?: ModalVariantProps['size'];
+  size?: VariantProps['size'];
   /** HTML data-testid attribute used in e2e tests */
   testId?: string;
 }
