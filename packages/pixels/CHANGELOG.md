@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.8.4...pixels-v0.9.0) (2024-06-05)
+
+
+### Features
+
+* **pixels:** add variantsToClassNames helper ([59cd05d](https://github.com/fuf-stack/uniform/commit/59cd05d6f6075f0c63424b82404e8f1bd3bdffb8))
+
 ## [0.8.4](https://github.com/fuf-stack/uniform/compare/pixels-v0.8.3...pixels-v0.8.4) (2024-06-05)
 
 
