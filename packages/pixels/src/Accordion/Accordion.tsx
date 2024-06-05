@@ -95,6 +95,8 @@ const Accordion = ({
   selectionMode = 'multiple',
   showDivider = true,
   variant = 'light',
+  // @ts-expect-error we allow also children, this is somehow required when used in astro
+  children = undefined,
 }: AccordionProps) => {
   // itemClasses from className slots
   const variants = accordionVariants({ indicatorLeft });
@@ -127,6 +129,7 @@ const Accordion = ({
           {...item}
         />
       ))}
+      {children}
     </NextAccordion>
   );
 };
