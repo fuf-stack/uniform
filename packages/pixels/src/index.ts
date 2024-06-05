@@ -13,6 +13,3 @@ export * from './Tooltip';
 
 // hooks
 export * from './hooks';
-
-// utils
-export * from './utils';

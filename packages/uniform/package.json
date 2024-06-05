@@ -85,6 +85,7 @@
     "@dnd-kit/modifiers": "7.0.0",
     "@dnd-kit/sortable": "8.0.0",
     "@dnd-kit/utilities": "3.2.2",
+    "@fuf-stack/pixel-utils": "workspace:*",
     "@fuf-stack/pixels": "workspace:*",
     "@fuf-stack/veto": "workspace:*",
     "@nextui-org/button": "2.0.33",
@@ -97,11 +98,9 @@
     "@nextui-org/theme": "2.2.5",
     "@react-aria/visually-hidden": "3.8.12",
     "react-icons": "5.2.1",
-    "classnames": "2.5.1",
     "react-hook-form": "7.51.5",
     "react-select": "5.8.0",
-    "slug": "9.1.0",
-    "tailwind-variants": "0.2.1"
+    "slug": "9.1.0"
   },
   "devDependencies": {
     "@repo/storybook-config": "workspace:*",

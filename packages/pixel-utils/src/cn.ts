@@ -1,2 +1,3 @@
 /* eslint-disable import/prefer-default-export */
-export { nextui } from '@nextui-org/theme';
+
+export { default as cn } from 'classnames';

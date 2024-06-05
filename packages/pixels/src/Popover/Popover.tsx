@@ -2,7 +2,8 @@ import type { PopoverProps as NextPopoverProps } from '@nextui-org/popover';
 import type { ReactNode } from 'react';
 
 import { Popover, PopoverContent, PopoverTrigger } from '@nextui-org/popover';
-import cn from 'classnames';
+
+import { cn } from '@fuf-stack/pixel-utils';
 
 export interface PopoverProps {
   /** child components */
@@ -41,6 +42,7 @@ export default ({
       placement={placement}
       radius="sm"
       showArrow
+      // eslint-disable-next-line react/jsx-props-no-spreading
       {...(openControlled
         ? { isOpen: openControlled.open, onOpenChange: openControlled.setOpen }
         : {})}

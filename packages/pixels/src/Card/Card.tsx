@@ -1,5 +1,5 @@
+import type { TVClassName, TVProps } from '@fuf-stack/pixel-utils';
 import type { ReactNode } from 'react';
-import type { TVClassName, TVProps } from '../utils';
 
 import {
   Card as NextCard,
@@ -9,7 +9,7 @@ import {
 } from '@nextui-org/card';
 import { Divider as NextDivider } from '@nextui-org/divider';
 
-import { tv, variantsToClassNames } from '../utils';
+import { tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
 
 // card styling variants
 export const cardVariants = tv({

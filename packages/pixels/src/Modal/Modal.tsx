@@ -1,5 +1,5 @@
+import type { TVClassName, TVProps } from '@fuf-stack/pixel-utils';
 import type { ReactNode } from 'react';
-import type { TVClassName, TVProps } from '../utils';
 
 import {
   Modal as NextModal,
@@ -9,7 +9,7 @@ import {
   ModalHeader as NextModalHeader,
 } from '@nextui-org/modal';
 
-import { tv, variantsToClassNames } from '../utils';
+import { tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
 
 // modal variants
 export const modalVariants = tv({

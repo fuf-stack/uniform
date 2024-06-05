@@ -1,13 +1,13 @@
+import type { TVClassName, TVProps } from '@fuf-stack/pixel-utils';
 import type { DividerProps } from '@nextui-org/divider';
 import type { ReactNode } from 'react';
-import type { TVClassName, TVProps } from '../utils';
 
 import {
   Accordion as NextAccordion,
   AccordionItem as NextAccordionItem,
 } from '@nextui-org/accordion';
 
-import { tv, variantsToClassNames } from '../utils';
+import { tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
 
 // accordion styling variants
 // see: https://nextui.org/docs/components/accordion#accordion-item-slots

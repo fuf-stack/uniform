@@ -1,10 +1,11 @@
+import type { TVProps } from '@fuf-stack/pixel-utils';
 import type { ButtonProps as NextButtonProps } from '@nextui-org/button';
 import type { ReactNode } from 'react';
-import type { TVProps } from '../utils';
 
 import { Button as NextButton } from '@nextui-org/button';
 
-import { tv } from '../utils';
+import { tv } from '@fuf-stack/pixel-utils';
+
 import LoadingSpinner from './subcomponents/LoadingSpinner';
 
 export const buttonVariants = tv({

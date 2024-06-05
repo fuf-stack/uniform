@@ -2,7 +2,8 @@ import type { ChipProps } from '@nextui-org/chip';
 import type { ReactNode } from 'react';
 
 import { Chip as NextLabel } from '@nextui-org/chip';
-import cn from 'classnames';
+
+import { cn } from '@fuf-stack/pixel-utils';
 
 export interface LabelProps {
   /** content of the label */

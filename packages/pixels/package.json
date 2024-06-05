@@ -69,11 +69,6 @@
       "require": "./dist/Popover/index.cjs",
       "types": "./dist/Popover/index.d.ts"
     },
-    "./theme": {
-      "import": "./dist/theme/index.js",
-      "require": "./dist/theme/index.cjs",
-      "types": "./dist/theme/index.d.ts"
-    },
     "./Tooltip": {
       "import": "./dist/Tooltip/index.js",
       "require": "./dist/Tooltip/index.cjs",
@@ -110,6 +105,7 @@
     "react-dom": ">=18"
   },
   "dependencies": {
+    "@fuf-stack/pixel-utils": "workspace:*",
     "@nextui-org/avatar": "2.0.29",
     "@nextui-org/accordion": "2.0.34",
     "@nextui-org/button": "2.0.33",
@@ -122,10 +118,8 @@
     "@nextui-org/system": "2.2.1",
     "@nextui-org/theme": "2.2.5",
     "@nextui-org/tooltip": "2.0.35",
-    "classnames": "2.5.1",
     "react-icons": "5.2.1",
-    "react-json-view": "1.21.3",
-    "tailwind-variants": "0.2.1"
+    "react-json-view": "1.21.3"
   },
   "devDependencies": {
     "@repo/storybook-config": "workspace:*",

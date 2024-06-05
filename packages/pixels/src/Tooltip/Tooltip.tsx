@@ -1,7 +1,8 @@
 import type { ReactNode } from 'react';
 
 import { Tooltip as NextTooltip } from '@nextui-org/tooltip';
-import cn from 'classnames';
+
+import { cn } from '@fuf-stack/pixel-utils';
 
 export const tooltipPlacementOptions = [
   'top',

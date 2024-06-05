@@ -11,7 +11,8 @@ import JsonView from '@uiw/react-json-view';
 import { lightTheme } from '@uiw/react-json-view/light';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { vscodeTheme } from '@uiw/react-json-view/vscode';
-import cn from 'classnames';
+
+import { cn } from '@fuf-stack/pixel-utils';
 
 import { Button } from '../Button';
 
