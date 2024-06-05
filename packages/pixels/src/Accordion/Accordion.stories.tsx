@@ -38,6 +38,7 @@ export const WithSubtitle: Story = {
 export const AllVariants: Story = {
   args: {
     accordionItems,
+    indicatorLeft: false,
   },
   render: (args) => (
     <div className="w-96">
@@ -84,16 +85,24 @@ export const DefaultOpen: Story = {
   },
 };
 
+export const IndicatorLeft: Story = {
+  args: {
+    accordionItems,
+    indicatorLeft: true,
+  },
+};
+
 export const CustomStyles: Story = {
   args: {
     accordionItems,
     className: {
-      base: 'py-0 w-96',
+      base: 'py-0',
       title: 'font-normal text-medium',
       trigger:
-        'px-2 py-0 data-[hover=true]:bg-blue-100 rounded-lg h-14 flex items-center',
-      indicator: 'text-medium',
+        'py-0 data-[hover=true]:bg-blue-100 rounded-lg h-14 flex items-center',
+      indicator: 'text-medium rotate-180 data-[open=true]:rotate-90',
       content: 'text-small px-2',
+      wrapper: 'w-96',
     },
   },
 };

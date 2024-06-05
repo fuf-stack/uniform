@@ -21,6 +21,17 @@ export const accordionVariants = tv({
     title: '',
     titleWrapper: '',
     trigger: '',
+    // outer accordion wrapper
+    wrapper: '',
+  },
+  variants: {
+    indicatorLeft: {
+      true: {
+        content: 'pl-7',
+        indicator: '-rotate-180 data-[open=true]:-rotate-90',
+        trigger: 'flex-row-reverse',
+      },
+    },
   },
 });
 
@@ -78,18 +89,17 @@ const Accordion = ({
   disabledKeys = [],
   disallowEmptySelection = false,
   dividerProps = {},
+  indicatorLeft = false,
   onSelectionChange = undefined,
   selectionMode = 'multiple',
   showDivider = true,
   variant = 'light',
 }: AccordionProps) => {
   // itemClasses from className slots
-  const variants = accordionVariants();
+  const variants = accordionVariants({ indicatorLeft });
   const classNameObj = (typeof className === 'object' && className) || {};
   const itemClasses = {
-    base: variants.base({
-      className: classNameObj.base || (className as string),
-    }),
+    base: variants.base({ className: classNameObj.base }),
     content: variants.content({ className: classNameObj.content }),
     heading: variants.heading({ className: classNameObj.heading }),
     indicator: variants.indicator({ className: classNameObj.indicator }),
@@ -103,9 +113,13 @@ const Accordion = ({
     }),
     trigger: variants.trigger({ className: classNameObj.trigger }),
   };
+  const wrapperClass = variants.wrapper({
+    className: typeof className === 'string' ? className : classNameObj.wrapper,
+  });
 
   return (
     <NextAccordion
+      className={wrapperClass}
       defaultSelectedKeys={defaultSelectedKeys}
       disabledKeys={disabledKeys}
       disallowEmptySelection={disallowEmptySelection}
