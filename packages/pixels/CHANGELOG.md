@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.9.3...pixels-v0.10.0) (2024-06-05)
+
+
+### Features
+
+* **pixel-utils:** add initial package ([e09d5a2](https://github.com/fuf-stack/uniform/commit/e09d5a2f1092f5a0f7bb006eac332a5cb38d1fd9))
+
 ## [0.9.3](https://github.com/fuf-stack/uniform/compare/pixels-v0.9.2...pixels-v0.9.3) (2024-06-05)
 
 ### Bug Fixes
