@@ -9,7 +9,7 @@ import { SubmitButton } from '@fuf-stack/uniform';
 
 // import v, * as vt from '@fuf-stack/veto';
 
-import Form from '../Form';
+import { Form } from '../Form';
 import Input from './Input';
 
 const meta: Meta<typeof Input> = {
@@ -125,9 +125,9 @@ export const WithSelect: Story = {
         id="currency"
         name="currency"
       >
-        <option>@ger.win.int.kn.</option>
-        <option>@corp.int.kn</option>
-        <option>@usa.win.int.kn</option>
+        <option>@fuf.cool</option>
+        <option>@gmail.com</option>
+        <option>@pixelpost.org</option>
       </select>
     ),
   },

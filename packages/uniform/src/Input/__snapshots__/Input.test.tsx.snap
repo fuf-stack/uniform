@@ -608,13 +608,13 @@ exports[`Story Snapshots > WithSelect 1`] = `
                 name="currency"
               >
                 <option>
-                  @ger.win.int.kn.
+                  @fuf.cool
                 </option>
                 <option>
-                  @corp.int.kn
+                  @gmail.com
                 </option>
                 <option>
-                  @usa.win.int.kn
+                  @pixelpost.org
                 </option>
               </select>
             </div>
