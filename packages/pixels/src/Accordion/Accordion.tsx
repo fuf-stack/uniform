@@ -33,6 +33,11 @@ export const accordionVariants = tv({
         trigger: 'flex-row-reverse',
       },
     },
+    showDivider: {
+      true: {
+        base: '[&:not(:last-child)]:border-b', // INFO: circumvents using hr divider with bootstrap styles in some projects. TODO: Remove if bootstrap is removed.
+      },
+    },
   },
 });
 
@@ -95,7 +100,7 @@ const Accordion = ({
   variant = 'light',
 }: AccordionProps) => {
   // itemClasses from className slots
-  const variants = accordionVariants({ indicatorLeft });
+  const variants = accordionVariants({ indicatorLeft, showDivider });
   const { wrapper, ...itemClasses } = variantsToClassNames(
     variants,
     className,
@@ -113,7 +118,7 @@ const Accordion = ({
       itemClasses={itemClasses}
       onSelectionChange={onSelectionChange}
       selectionMode={selectionMode}
-      showDivider={showDivider}
+      showDivider={false}
       variant={variant}
     >
       {accordionItems.map((item, index) => (
