@@ -12,8 +12,8 @@ importers:
         specifier: 0.9.7
         version: 0.9.7(@babel/core@7.24.7)(typescript@5.4.5)(vitest@1.6.0(@types/node@20.14.2)(jsdom@24.1.0))
       '@fuf-stack/project-cli-tools':
-        specifier: 0.4.4
-        version: 0.4.4(@types/node@20.14.2)(babel-plugin-macros@3.1.0)(typescript@5.4.5)
+        specifier: 0.4.5
+        version: 0.4.5(@types/node@20.14.2)(babel-plugin-macros@3.1.0)(typescript@5.4.5)
       '@fuf-stack/vitest-config':
         specifier: 0.1.4
         version: 0.1.4(@types/node@20.14.2)(jsdom@24.1.0)
@@ -1480,8 +1480,8 @@ packages:
   '@fuf-stack/eslint-config-fuf@0.9.7':
     resolution: {integrity: sha512-rB48gl0lHwrO6opMwYy9mCWZMNiWnF4MgN9vMkOFTuFcDeeBg5I4RqAqW7W3DOwyVhE5NZdBjJqT7G0329oe3Q==}
 
-  '@fuf-stack/project-cli-tools@0.4.4':
-    resolution: {integrity: sha512-7hspuoaEjXODlHfuhd+x7SFutH4qr1IRDOQ6fr81zra2Sm594MbB6EkXkmaw24pG1aZoQ+i3s7gC2wOWkmdasg==}
+  '@fuf-stack/project-cli-tools@0.4.5':
+    resolution: {integrity: sha512-kYRceWRkYOA6RwfIy9gfxW6XXjHEDDh8fJ5i7bwz2tJhEeRIJSMgzFuTTPIJKn/HBZnY12ibzOsSpH2WP6dYbg==}
 
   '@fuf-stack/vitest-config@0.1.4':
     resolution: {integrity: sha512-mTB7BaInJzzlyRAzzdAWLe91nN6IYRu0yMQm1//yCDTb6+fqZpUjxBdf4cc63BS9XC3hymYKskUBtrcFdH15LA==}
@@ -1651,8 +1651,8 @@ packages:
   '@jsdevtools/coverage-istanbul-loader@3.0.5':
     resolution: {integrity: sha512-EUCPEkaRPvmHjWAAZkWMT7JDzpw7FKB00WTISaiXsbNOd5hCHg77XLA8sLYLFDo1zepYLo2w7GstN8YBqRXZfA==}
 
-  '@lerna-lite/cli@3.4.0':
-    resolution: {integrity: sha512-8T7WsUFhCIO9sm+cY7IfkngHZVEKi1Jcu1+vVExnInO9ONEaaX+XBclDwfQXR5U3wrJR43jSq45C9djYigJ/7w==}
+  '@lerna-lite/cli@3.5.1':
+    resolution: {integrity: sha512-kWhjomm8iwI6MxC/Au7Mv9pztOm4QVEKR72+YQ59qfP1sVwIX6jlWNaBmszXonry34v226GDs6gDE31Vl3QHoQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -1676,16 +1676,16 @@ packages:
       '@lerna-lite/watch':
         optional: true
 
-  '@lerna-lite/core@3.4.0':
-    resolution: {integrity: sha512-IFN8wojsl77zKQ5pe0DEW8BYr4qdbyNJCZEa9E9mE3Gh+N7JeB7doGlTqg1pu5eigaSh/UP4SeHvV2jq3Cm4Tg==}
+  '@lerna-lite/core@3.5.1':
+    resolution: {integrity: sha512-cPOcwlEETXyraa2A0202B4GKYdlHsJ7i2YGzPY5PYrtV7AkjpETqKbQhhWzuQWXFJpdIuzuowmMeX/6XcVtorA==}
     engines: {node: ^18.0.0 || >=20.0.0}
 
-  '@lerna-lite/init@3.4.0':
-    resolution: {integrity: sha512-5lKL0Ab5vsk8PVNEUby6IVlgA3OxC+9pRH/jWhDMdgDKci9apCuTGoKMhVY8ixsbKvg9+ObRs3eIuMlxs4mvWw==}
+  '@lerna-lite/init@3.5.1':
+    resolution: {integrity: sha512-N7p9ByH4OE/UaWUzz7BL51pnkNxU4tQetEMbn/4QFTh0EfFYP4OXF3zq2Y5Egs8l1Mx/iso9Ly68VHaE8aKPeQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
 
-  '@lerna-lite/version@3.4.0':
-    resolution: {integrity: sha512-LQ265fmNCkJ9s1ndM4idttMB7PhO2ndKdxUciXe6+0PJLIkEOmWJ5v3fVHyDiOMtzFGC4LgCw4HISGgEU5ELLA==}
+  '@lerna-lite/version@3.5.1':
+    resolution: {integrity: sha512-IRRgPkWvitN+6bH/SUUCCnW8k9+O+8eZH6WmE6g+wXL7XCnG7EyeNs6RMGbTIQkYJ+CZNbSn7OTzVxr2udFigw==}
     engines: {node: ^18.0.0 || >=20.0.0}
 
   '@ljharb/through@2.3.13':
@@ -3966,9 +3966,9 @@ packages:
     resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==}
     engines: {node: '>= 0.8'}
 
-  commander@11.1.0:
-    resolution: {integrity: sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ==}
-    engines: {node: '>=16'}
+  commander@12.1.0:
+    resolution: {integrity: sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==}
+    engines: {node: '>=18'}
 
   commander@3.0.2:
     resolution: {integrity: sha512-Gar0ASD4BDyKC4hl4DwHqDrmvjoxWKZigVnAbn5H1owvm4CxCPdb0HQDehwNYMJpla5+M2tPmPARzhtYuwpHow==}
@@ -4192,15 +4192,6 @@ packages:
 
   debug@3.2.7:
     resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
-
-  debug@4.3.4:
-    resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
-    engines: {node: '>=6.0'}
     peerDependencies:
       supports-color: '*'
     peerDependenciesMeta:
@@ -5937,10 +5928,6 @@ packages:
     resolution: {integrity: sha512-utWOt/GHzuUxnLKxB6dk81RoOeoNeHgbrXiuGk4yyF5qlRz+iIVWu56E2fqGHFrXz0QNUhLB/8nKqvRH66JKGQ==}
     engines: {node: '>=10'}
 
-  lilconfig@3.0.0:
-    resolution: {integrity: sha512-K2U4W2Ff5ibV7j7ydLr+zLAkIg5JJ4lPn1Ltsdt+Tz/IjQ8buJ55pZAxoP34lqIiwtF9iAvtLv3JGv7CAyAg+g==}
-    engines: {node: '>=14'}
-
   lilconfig@3.1.2:
     resolution: {integrity: sha512-eop+wDAvpItUys0FWkHIKeC9ybYrTGbU41U5K7+bttZZeohvnY7M9dZ5kB21GNWiFT2q1OoPTvncPCgSOVO5ow==}
     engines: {node: '>=14'}
@@ -5955,13 +5942,13 @@ packages:
   linguist-languages@7.27.0:
     resolution: {integrity: sha512-Wzx/22c5Jsv2ag+uKy+ITanGA5hzvBZngrNGDXLTC7ZjGM6FLCYGgomauTkxNJeP9of353OM0pWqngYA180xgw==}
 
-  lint-staged@15.2.2:
-    resolution: {integrity: sha512-TiTt93OPh1OZOsb5B7k96A/ATl2AjIZo+vnzFZ6oHK5FuTk63ByDtxGQpHm+kFETjEWqgkF95M8FRXKR/LEBcw==}
+  lint-staged@15.2.5:
+    resolution: {integrity: sha512-j+DfX7W9YUvdzEZl3Rk47FhDF6xwDBV5wwsCPw6BwWZVPYJemusQmvb9bRsW23Sqsaa+vRloAWogbK4BUuU2zA==}
     engines: {node: '>=18.12.0'}
     hasBin: true
 
-  listr2@8.0.1:
-    resolution: {integrity: sha512-ovJXBXkKGfq+CwmKTjluEqFi3p4h8xvkxGQQAQan22YCgef4KZ1mKGjzfGh6PL6AW5Csw0QiQPNuQyH+6Xk3hA==}
+  listr2@8.2.1:
+    resolution: {integrity: sha512-irTfvpib/rNiD637xeevjO2l3Z5loZmuaRi0L0YE5LfijwVY96oyVn0DFD3o/teAok7nfobMG1THvvcHh/BP6g==}
     engines: {node: '>=18.0.0'}
 
   load-json-file@7.0.1:
@@ -6168,10 +6155,6 @@ packages:
     resolution: {integrity: sha512-iclAHeNqNm68zFtnZ0e+1L2yUIdvzNoauKU4WBA3VvH/vPFieF7qfRlwUZU+DA9P9bPXIS90ulxoUoCH23sV2w==}
     engines: {node: '>= 0.6'}
 
-  micromatch@4.0.5:
-    resolution: {integrity: sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA==}
-    engines: {node: '>=8.6'}
-
   micromatch@4.0.7:
     resolution: {integrity: sha512-LPP/3KorzCwBxfeUuZmaR6bG2kdeHSbe0P2tY3FLRU4vYrjYz5hI4QZwV0njUx3jeuKe67YukQ1LSPZBKDqO/Q==}
     engines: {node: '>=8.6'}
@@ -6346,8 +6329,8 @@ packages:
   node-releases@2.0.14:
     resolution: {integrity: sha512-y10wOWt8yZpqXmOgRo77WaHEmhYQYGNA6y421PKsKYWEK8aW+cqAphborZDhqfyKrbZEN92CN1X2KbafY2s7Yw==}
 
-  nodemon@3.1.0:
-    resolution: {integrity: sha512-xqlktYlDMCepBJd43ZQhjWwMw2obW/JRvkrLxq5RCNcuDDX1DbcPT+qT1IlIIdf+DhnWs90JpTMe+Y5KxOchvA==}
+  nodemon@3.1.3:
+    resolution: {integrity: sha512-m4Vqs+APdKzDFpuaL9F9EVOF85+h070FnkHVEoU4+rmT6Vw0bmNl7s61VEkY/cJkL7RCv1p4urnUDUMrS5rk2w==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -7828,38 +7811,38 @@ packages:
     peerDependencies:
       typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
 
-  turbo-darwin-64@1.13.3:
-    resolution: {integrity: sha512-glup8Qx1qEFB5jerAnXbS8WrL92OKyMmg5Hnd4PleLljAeYmx+cmmnsmLT7tpaVZIN58EAAwu8wHC6kIIqhbWA==}
+  turbo-darwin-64@1.13.4:
+    resolution: {integrity: sha512-A0eKd73R7CGnRinTiS7txkMElg+R5rKFp9HV7baDiEL4xTG1FIg/56Vm7A5RVgg8UNgG2qNnrfatJtb+dRmNdw==}
     cpu: [x64]
     os: [darwin]
 
-  turbo-darwin-arm64@1.13.3:
-    resolution: {integrity: sha512-/np2xD+f/+9qY8BVtuOQXRq5f9LehCFxamiQnwdqWm5iZmdjygC5T3uVSYuagVFsZKMvX3ycySwh8dylGTl6lg==}
+  turbo-darwin-arm64@1.13.4:
+    resolution: {integrity: sha512-eG769Q0NF6/Vyjsr3mKCnkG/eW6dKMBZk6dxWOdrHfrg6QgfkBUk0WUUujzdtVPiUIvsh4l46vQrNVd9EOtbyA==}
     cpu: [arm64]
     os: [darwin]
 
-  turbo-linux-64@1.13.3:
-    resolution: {integrity: sha512-G+HGrau54iAnbXLfl+N/PynqpDwi/uDzb6iM9hXEDG+yJnSJxaHMShhOkXYJPk9offm9prH33Khx2scXrYVW1g==}
+  turbo-linux-64@1.13.4:
+    resolution: {integrity: sha512-Bq0JphDeNw3XEi+Xb/e4xoKhs1DHN7OoLVUbTIQz+gazYjigVZvtwCvgrZI7eW9Xo1eOXM2zw2u1DGLLUfmGkQ==}
     cpu: [x64]
     os: [linux]
 
-  turbo-linux-arm64@1.13.3:
-    resolution: {integrity: sha512-qWwEl5VR02NqRyl68/3pwp3c/olZuSp+vwlwrunuoNTm6JXGLG5pTeme4zoHNnk0qn4cCX7DFrOboArlYxv0wQ==}
+  turbo-linux-arm64@1.13.4:
+    resolution: {integrity: sha512-BJcXw1DDiHO/okYbaNdcWN6szjXyHWx9d460v6fCHY65G8CyqGU3y2uUTPK89o8lq/b2C8NK0yZD+Vp0f9VoIg==}
     cpu: [arm64]
     os: [linux]
 
-  turbo-windows-64@1.13.3:
-    resolution: {integrity: sha512-Nudr4bRChfJzBPzEmpVV85VwUYRCGKecwkBFpbp2a4NtrJ3+UP1VZES653ckqCu2FRyRuS0n03v9euMbAvzH+Q==}
+  turbo-windows-64@1.13.4:
+    resolution: {integrity: sha512-OFFhXHOFLN7A78vD/dlVuuSSVEB3s9ZBj18Tm1hk3aW1HTWTuAw0ReN6ZNlVObZUHvGy8d57OAGGxf2bT3etQw==}
     cpu: [x64]
     os: [win32]
 
-  turbo-windows-arm64@1.13.3:
-    resolution: {integrity: sha512-ouJCgsVLd3icjRLmRvHQDDZnmGzT64GBupM1Y+TjtYn2LVaEBoV6hicFy8x5DUpnqdLy+YpCzRMkWlwhmkX7sQ==}
+  turbo-windows-arm64@1.13.4:
+    resolution: {integrity: sha512-u5A+VOKHswJJmJ8o8rcilBfU5U3Y1TTAfP9wX8bFh8teYF1ghP0EhtMRLjhtp6RPa+XCxHHVA2CiC3gbh5eg5g==}
     cpu: [arm64]
     os: [win32]
 
-  turbo@1.13.3:
-    resolution: {integrity: sha512-n17HJv4F4CpsYTvKzUJhLbyewbXjq1oLCi90i5tW1TiWDz16ML1eDG7wi5dHaKxzh5efIM56SITnuVbMq5dk4g==}
+  turbo@1.13.4:
+    resolution: {integrity: sha512-1q7+9UJABuBAHrcC4Sxp5lOqYS5mvxRrwa33wpIyM18hlOCpRD/fTJNxZ0vhbMcJmz15o9kkVm743mPn7p6jpQ==}
     hasBin: true
 
   type-check@0.4.0:
@@ -8379,10 +8362,6 @@ packages:
   yaml@1.10.2:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
-
-  yaml@2.3.4:
-    resolution: {integrity: sha512-8aAvwVUSHpfEqTQ4w/KMlf3HcRdt50E5ODIQJBw1fQ5RL34xabzxtUlzTXVqc4rkZsPbvrXKWnABCD7kWSmocA==}
-    engines: {node: '>= 14'}
 
   yaml@2.4.5:
     resolution: {integrity: sha512-aBx2bnqDzVOyNKfsysjA2ms5ZlnjSAW2eG3/L5G/CSujfjLJTJsEw1bGw8kCf04KodQWk1pxlGnZ56CRxiawmg==}
@@ -9755,18 +9734,18 @@ snapshots:
       - typescript
       - vitest
 
-  '@fuf-stack/project-cli-tools@0.4.4(@types/node@20.14.2)(babel-plugin-macros@3.1.0)(typescript@5.4.5)':
+  '@fuf-stack/project-cli-tools@0.4.5(@types/node@20.14.2)(babel-plugin-macros@3.1.0)(typescript@5.4.5)':
     dependencies:
       '@commitlint/cli': 19.3.0(@types/node@20.14.2)(typescript@5.4.5)
       '@commitlint/config-conventional': 19.2.2
       '@commitlint/config-pnpm-scopes': 19.1.0
-      '@lerna-lite/cli': 3.4.0(@lerna-lite/version@3.4.0(babel-plugin-macros@3.1.0)(typescript@5.4.5))(babel-plugin-macros@3.1.0)(typescript@5.4.5)
-      '@lerna-lite/version': 3.4.0(babel-plugin-macros@3.1.0)(typescript@5.4.5)
+      '@lerna-lite/cli': 3.5.1(@lerna-lite/version@3.5.1(babel-plugin-macros@3.1.0)(typescript@5.4.5))(babel-plugin-macros@3.1.0)(typescript@5.4.5)
+      '@lerna-lite/version': 3.5.1(babel-plugin-macros@3.1.0)(typescript@5.4.5)
       commitizen: 4.3.0(@types/node@20.14.2)(typescript@5.4.5)
       husky: 9.0.11
-      lint-staged: 15.2.2
-      nodemon: 3.1.0
-      turbo: 1.13.3
+      lint-staged: 15.2.5
+      nodemon: 3.1.3
+      turbo: 1.13.4
       wait-on: 7.2.0
     transitivePeerDependencies:
       - '@lerna-lite/exec'
@@ -10080,10 +10059,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@lerna-lite/cli@3.4.0(@lerna-lite/version@3.4.0(babel-plugin-macros@3.1.0)(typescript@5.4.5))(babel-plugin-macros@3.1.0)(typescript@5.4.5)':
+  '@lerna-lite/cli@3.5.1(@lerna-lite/version@3.5.1(babel-plugin-macros@3.1.0)(typescript@5.4.5))(babel-plugin-macros@3.1.0)(typescript@5.4.5)':
     dependencies:
-      '@lerna-lite/core': 3.4.0(babel-plugin-macros@3.1.0)(typescript@5.4.5)
-      '@lerna-lite/init': 3.4.0(babel-plugin-macros@3.1.0)(typescript@5.4.5)
+      '@lerna-lite/core': 3.5.1(babel-plugin-macros@3.1.0)(typescript@5.4.5)
+      '@lerna-lite/init': 3.5.1(babel-plugin-macros@3.1.0)(typescript@5.4.5)
       dedent: 1.5.3(babel-plugin-macros@3.1.0)
       dotenv: 16.4.5
       import-local: 3.1.0
@@ -10091,14 +10070,14 @@ snapshots:
       npmlog: 7.0.1
       yargs: 17.7.2
     optionalDependencies:
-      '@lerna-lite/version': 3.4.0(babel-plugin-macros@3.1.0)(typescript@5.4.5)
+      '@lerna-lite/version': 3.5.1(babel-plugin-macros@3.1.0)(typescript@5.4.5)
     transitivePeerDependencies:
       - babel-plugin-macros
       - bluebird
       - supports-color
       - typescript
 
-  '@lerna-lite/core@3.4.0(babel-plugin-macros@3.1.0)(typescript@5.4.5)':
+  '@lerna-lite/core@3.5.1(babel-plugin-macros@3.1.0)(typescript@5.4.5)':
     dependencies:
       '@npmcli/run-script': 8.1.0
       chalk: 5.3.0
@@ -10132,9 +10111,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@lerna-lite/init@3.4.0(babel-plugin-macros@3.1.0)(typescript@5.4.5)':
+  '@lerna-lite/init@3.5.1(babel-plugin-macros@3.1.0)(typescript@5.4.5)':
     dependencies:
-      '@lerna-lite/core': 3.4.0(babel-plugin-macros@3.1.0)(typescript@5.4.5)
+      '@lerna-lite/core': 3.5.1(babel-plugin-macros@3.1.0)(typescript@5.4.5)
       fs-extra: 11.2.0
       p-map: 7.0.2
       write-json-file: 5.0.0
@@ -10144,10 +10123,10 @@ snapshots:
       - supports-color
       - typescript
 
-  '@lerna-lite/version@3.4.0(babel-plugin-macros@3.1.0)(typescript@5.4.5)':
+  '@lerna-lite/version@3.5.1(babel-plugin-macros@3.1.0)(typescript@5.4.5)':
     dependencies:
-      '@lerna-lite/cli': 3.4.0(@lerna-lite/version@3.4.0(babel-plugin-macros@3.1.0)(typescript@5.4.5))(babel-plugin-macros@3.1.0)(typescript@5.4.5)
-      '@lerna-lite/core': 3.4.0(babel-plugin-macros@3.1.0)(typescript@5.4.5)
+      '@lerna-lite/cli': 3.5.1(@lerna-lite/version@3.5.1(babel-plugin-macros@3.1.0)(typescript@5.4.5))(babel-plugin-macros@3.1.0)(typescript@5.4.5)
+      '@lerna-lite/core': 3.5.1(babel-plugin-macros@3.1.0)(typescript@5.4.5)
       '@octokit/plugin-enterprise-rest': 6.0.1
       '@octokit/rest': 20.1.1
       chalk: 5.3.0
@@ -10169,6 +10148,7 @@ snapshots:
       node-fetch: 3.3.2
       npm-package-arg: 11.0.2
       npmlog: 7.0.1
+      p-limit: 5.0.0
       p-map: 7.0.2
       p-pipe: 4.0.0
       p-reduce: 3.0.0
@@ -13527,7 +13507,7 @@ snapshots:
     dependencies:
       delayed-stream: 1.0.0
 
-  commander@11.1.0: {}
+  commander@12.1.0: {}
 
   commander@3.0.2: {}
 
@@ -13791,10 +13771,6 @@ snapshots:
   debug@3.2.7:
     dependencies:
       ms: 2.1.3
-
-  debug@4.3.4:
-    dependencies:
-      ms: 2.1.2
 
   debug@4.3.5(supports-color@5.5.0):
     dependencies:
@@ -16014,8 +15990,6 @@ snapshots:
 
   lilconfig@2.1.0: {}
 
-  lilconfig@3.0.0: {}
-
   lilconfig@3.1.2: {}
 
   lines-and-columns@1.2.4: {}
@@ -16024,22 +15998,22 @@ snapshots:
 
   linguist-languages@7.27.0: {}
 
-  lint-staged@15.2.2:
+  lint-staged@15.2.5:
     dependencies:
       chalk: 5.3.0
-      commander: 11.1.0
-      debug: 4.3.4
+      commander: 12.1.0
+      debug: 4.3.5(supports-color@5.5.0)
       execa: 8.0.1
-      lilconfig: 3.0.0
-      listr2: 8.0.1
-      micromatch: 4.0.5
+      lilconfig: 3.1.2
+      listr2: 8.2.1
+      micromatch: 4.0.7
       pidtree: 0.6.0
       string-argv: 0.3.2
-      yaml: 2.3.4
+      yaml: 2.4.5
     transitivePeerDependencies:
       - supports-color
 
-  listr2@8.0.1:
+  listr2@8.2.1:
     dependencies:
       cli-truncate: 4.0.0
       colorette: 2.0.20
@@ -16235,11 +16209,6 @@ snapshots:
 
   methods@1.1.2: {}
 
-  micromatch@4.0.5:
-    dependencies:
-      braces: 3.0.3
-      picomatch: 2.3.1
-
   micromatch@4.0.7:
     dependencies:
       braces: 3.0.3
@@ -16396,7 +16365,7 @@ snapshots:
 
   node-releases@2.0.14: {}
 
-  nodemon@3.1.0:
+  nodemon@3.1.3:
     dependencies:
       chokidar: 3.6.0
       debug: 4.3.5(supports-color@5.5.0)
@@ -18018,32 +17987,32 @@ snapshots:
       tslib: 1.14.1
       typescript: 5.4.5
 
-  turbo-darwin-64@1.13.3:
+  turbo-darwin-64@1.13.4:
     optional: true
 
-  turbo-darwin-arm64@1.13.3:
+  turbo-darwin-arm64@1.13.4:
     optional: true
 
-  turbo-linux-64@1.13.3:
+  turbo-linux-64@1.13.4:
     optional: true
 
-  turbo-linux-arm64@1.13.3:
+  turbo-linux-arm64@1.13.4:
     optional: true
 
-  turbo-windows-64@1.13.3:
+  turbo-windows-64@1.13.4:
     optional: true
 
-  turbo-windows-arm64@1.13.3:
+  turbo-windows-arm64@1.13.4:
     optional: true
 
-  turbo@1.13.3:
+  turbo@1.13.4:
     optionalDependencies:
-      turbo-darwin-64: 1.13.3
-      turbo-darwin-arm64: 1.13.3
-      turbo-linux-64: 1.13.3
-      turbo-linux-arm64: 1.13.3
-      turbo-windows-64: 1.13.3
-      turbo-windows-arm64: 1.13.3
+      turbo-darwin-64: 1.13.4
+      turbo-darwin-arm64: 1.13.4
+      turbo-linux-64: 1.13.4
+      turbo-linux-arm64: 1.13.4
+      turbo-windows-64: 1.13.4
+      turbo-windows-arm64: 1.13.4
 
   type-check@0.4.0:
     dependencies:
@@ -18571,8 +18540,6 @@ snapshots:
   yallist@4.0.0: {}
 
   yaml@1.10.2: {}
-
-  yaml@2.3.4: {}
 
   yaml@2.4.5: {}
 
