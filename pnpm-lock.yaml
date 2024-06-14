@@ -12,8 +12,8 @@ importers:
         specifier: 0.9.7
         version: 0.9.7(@babel/core@7.24.7)(typescript@5.4.5)(vitest@1.6.0(@types/node@20.14.2)(jsdom@24.1.0))
       '@fuf-stack/project-cli-tools':
-        specifier: 0.4.5
-        version: 0.4.5(@types/node@20.14.2)(babel-plugin-macros@3.1.0)(typescript@5.4.5)
+        specifier: 0.4.6
+        version: 0.4.6(@types/node@20.14.2)(babel-plugin-macros@3.1.0)(typescript@5.4.5)
       '@fuf-stack/vitest-config':
         specifier: 0.1.4
         version: 0.1.4(@types/node@20.14.2)(jsdom@24.1.0)
@@ -1480,8 +1480,8 @@ packages:
   '@fuf-stack/eslint-config-fuf@0.9.7':
     resolution: {integrity: sha512-rB48gl0lHwrO6opMwYy9mCWZMNiWnF4MgN9vMkOFTuFcDeeBg5I4RqAqW7W3DOwyVhE5NZdBjJqT7G0329oe3Q==}
 
-  '@fuf-stack/project-cli-tools@0.4.5':
-    resolution: {integrity: sha512-kYRceWRkYOA6RwfIy9gfxW6XXjHEDDh8fJ5i7bwz2tJhEeRIJSMgzFuTTPIJKn/HBZnY12ibzOsSpH2WP6dYbg==}
+  '@fuf-stack/project-cli-tools@0.4.6':
+    resolution: {integrity: sha512-bIH8161YT4LMe3NulDb7OVwD3Tvumavg+Syy6Yn7BqEAGXscUG4ALk9G4UMQMgyl8QjxsnCQElCbjtPVdsm8kw==}
 
   '@fuf-stack/vitest-config@0.1.4':
     resolution: {integrity: sha512-mTB7BaInJzzlyRAzzdAWLe91nN6IYRu0yMQm1//yCDTb6+fqZpUjxBdf4cc63BS9XC3hymYKskUBtrcFdH15LA==}
@@ -1686,8 +1686,8 @@ packages:
     resolution: {integrity: sha512-N7p9ByH4OE/UaWUzz7BL51pnkNxU4tQetEMbn/4QFTh0EfFYP4OXF3zq2Y5Egs8l1Mx/iso9Ly68VHaE8aKPeQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
 
-  '@lerna-lite/version@3.5.1':
-    resolution: {integrity: sha512-IRRgPkWvitN+6bH/SUUCCnW8k9+O+8eZH6WmE6g+wXL7XCnG7EyeNs6RMGbTIQkYJ+CZNbSn7OTzVxr2udFigw==}
+  '@lerna-lite/version@3.5.2':
+    resolution: {integrity: sha512-SEAwfox4jgYeEJI+DLjwSRP7qI2j5SUz902v+jjhBJkIxJwE+GDNNmH+Iih3W7HOK8La05CbtFvEpxUODGFtlA==}
     engines: {node: ^18.0.0 || >=20.0.0}
 
   '@ljharb/through@2.3.13':
@@ -5996,8 +5996,8 @@ packages:
   linguist-languages@7.27.0:
     resolution: {integrity: sha512-Wzx/22c5Jsv2ag+uKy+ITanGA5hzvBZngrNGDXLTC7ZjGM6FLCYGgomauTkxNJeP9of353OM0pWqngYA180xgw==}
 
-  lint-staged@15.2.5:
-    resolution: {integrity: sha512-j+DfX7W9YUvdzEZl3Rk47FhDF6xwDBV5wwsCPw6BwWZVPYJemusQmvb9bRsW23Sqsaa+vRloAWogbK4BUuU2zA==}
+  lint-staged@15.2.7:
+    resolution: {integrity: sha512-+FdVbbCZ+yoh7E/RosSdqKJyUM2OEjTciH0TFNkawKgvFp1zbGlEC39RADg+xKBG1R4mhoH2j85myBQZ5wR+lw==}
     engines: {node: '>=18.12.0'}
     hasBin: true
 
@@ -9788,16 +9788,16 @@ snapshots:
       - typescript
       - vitest
 
-  '@fuf-stack/project-cli-tools@0.4.5(@types/node@20.14.2)(babel-plugin-macros@3.1.0)(typescript@5.4.5)':
+  '@fuf-stack/project-cli-tools@0.4.6(@types/node@20.14.2)(babel-plugin-macros@3.1.0)(typescript@5.4.5)':
     dependencies:
       '@commitlint/cli': 19.3.0(@types/node@20.14.2)(typescript@5.4.5)
       '@commitlint/config-conventional': 19.2.2
       '@commitlint/config-pnpm-scopes': 19.1.0
-      '@lerna-lite/cli': 3.5.1(@lerna-lite/version@3.5.1(babel-plugin-macros@3.1.0)(typescript@5.4.5))(babel-plugin-macros@3.1.0)(typescript@5.4.5)
-      '@lerna-lite/version': 3.5.1(babel-plugin-macros@3.1.0)(typescript@5.4.5)
+      '@lerna-lite/cli': 3.5.1(@lerna-lite/version@3.5.2(babel-plugin-macros@3.1.0)(typescript@5.4.5))(babel-plugin-macros@3.1.0)(typescript@5.4.5)
+      '@lerna-lite/version': 3.5.2(babel-plugin-macros@3.1.0)(typescript@5.4.5)
       commitizen: 4.3.0(@types/node@20.14.2)(typescript@5.4.5)
       husky: 9.0.11
-      lint-staged: 15.2.5
+      lint-staged: 15.2.7
       nodemon: 3.1.3
       turbo: 1.13.4
       wait-on: 7.2.0
@@ -10113,7 +10113,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@lerna-lite/cli@3.5.1(@lerna-lite/version@3.5.1(babel-plugin-macros@3.1.0)(typescript@5.4.5))(babel-plugin-macros@3.1.0)(typescript@5.4.5)':
+  '@lerna-lite/cli@3.5.1(@lerna-lite/version@3.5.2(babel-plugin-macros@3.1.0)(typescript@5.4.5))(babel-plugin-macros@3.1.0)(typescript@5.4.5)':
     dependencies:
       '@lerna-lite/core': 3.5.1(babel-plugin-macros@3.1.0)(typescript@5.4.5)
       '@lerna-lite/init': 3.5.1(babel-plugin-macros@3.1.0)(typescript@5.4.5)
@@ -10124,7 +10124,7 @@ snapshots:
       npmlog: 7.0.1
       yargs: 17.7.2
     optionalDependencies:
-      '@lerna-lite/version': 3.5.1(babel-plugin-macros@3.1.0)(typescript@5.4.5)
+      '@lerna-lite/version': 3.5.2(babel-plugin-macros@3.1.0)(typescript@5.4.5)
     transitivePeerDependencies:
       - babel-plugin-macros
       - bluebird
@@ -10177,9 +10177,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@lerna-lite/version@3.5.1(babel-plugin-macros@3.1.0)(typescript@5.4.5)':
+  '@lerna-lite/version@3.5.2(babel-plugin-macros@3.1.0)(typescript@5.4.5)':
     dependencies:
-      '@lerna-lite/cli': 3.5.1(@lerna-lite/version@3.5.1(babel-plugin-macros@3.1.0)(typescript@5.4.5))(babel-plugin-macros@3.1.0)(typescript@5.4.5)
+      '@lerna-lite/cli': 3.5.1(@lerna-lite/version@3.5.2(babel-plugin-macros@3.1.0)(typescript@5.4.5))(babel-plugin-macros@3.1.0)(typescript@5.4.5)
       '@lerna-lite/core': 3.5.1(babel-plugin-macros@3.1.0)(typescript@5.4.5)
       '@octokit/plugin-enterprise-rest': 6.0.1
       '@octokit/rest': 20.1.1
@@ -16200,7 +16200,7 @@ snapshots:
 
   linguist-languages@7.27.0: {}
 
-  lint-staged@15.2.5:
+  lint-staged@15.2.7:
     dependencies:
       chalk: 5.3.0
       commander: 12.1.0
