@@ -13,7 +13,7 @@
   "devDependencies": {
     "@types/node": "20.14.2",
     "@fuf-stack/eslint-config-fuf": "0.9.7",
-    "@fuf-stack/project-cli-tools": "0.4.5",
+    "@fuf-stack/project-cli-tools": "0.4.6",
     "@fuf-stack/vitest-config": "0.1.4",
     "ts-node": "10.9.2",
     "typescript": "5.4.5"
