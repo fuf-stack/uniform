@@ -269,8 +269,8 @@ importers:
         specifier: 3.8.12
         version: 3.8.12(react@18.3.1)
       react-hook-form:
-        specifier: 7.51.5
-        version: 7.51.5(react@18.3.1)
+        specifier: 7.52.0
+        version: 7.52.0(react@18.3.1)
       react-icons:
         specifier: 5.2.1
         version: 5.2.1(react@18.3.1)
@@ -7041,11 +7041,11 @@ packages:
       react: ^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1 || ^18.0.0
       react-dom: ^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1 || ^18.0.0
 
-  react-hook-form@7.51.5:
-    resolution: {integrity: sha512-J2ILT5gWx1XUIJRETiA7M19iXHlG74+6O3KApzvqB/w8S5NQR7AbU8HVZrMALdmDgWpRPYiZJl0zx8Z4L2mP6Q==}
+  react-hook-form@7.52.0:
+    resolution: {integrity: sha512-mJX506Xc6mirzLsmXUJyqlAI3Kj9Ph2RhplYhUVffeOQSnubK2uVqBFOBJmvKikvbFV91pxVXmDiR+QMF19x6A==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
-      react: ^16.8.0 || ^17 || ^18
+      react: ^16.8.0 || ^17 || ^18 || ^19
 
   react-icons@5.2.1:
     resolution: {integrity: sha512-zdbW5GstTzXaVKvGSyTaBalt7HSfuK5ovrzlpyiWHAFXndXTdd/1hdDHI4xBM1Mn7YriT6aqESucFl9kEXzrdw==}
@@ -12129,7 +12129,7 @@ snapshots:
       node-fetch: 2.7.0(encoding@0.1.13)
       picomatch: 2.3.1
       pkg-dir: 5.0.0
-      prettier-fallback: prettier@3.3.1
+      prettier-fallback: prettier@3.3.2
       pretty-hrtime: 1.0.3
       resolve-from: 5.0.0
       semver: 7.6.2
@@ -12166,7 +12166,7 @@ snapshots:
       node-fetch: 2.7.0(encoding@0.1.13)
       picomatch: 2.3.1
       pkg-dir: 5.0.0
-      prettier-fallback: prettier@3.3.1
+      prettier-fallback: prettier@3.3.2
       pretty-hrtime: 1.0.3
       resolve-from: 5.0.0
       semver: 7.6.2
@@ -17253,7 +17253,7 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       react-is: 18.1.0
 
-  react-hook-form@7.51.5(react@18.3.1):
+  react-hook-form@7.52.0(react@18.3.1):
     dependencies:
       react: 18.3.1
 
