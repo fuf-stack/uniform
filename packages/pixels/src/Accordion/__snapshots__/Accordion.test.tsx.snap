@@ -3,11 +3,11 @@
 exports[`Story Snapshots > AllDisabled 1`] = `
 <div>
   <div
-    class="px-2 w-96"
+    class="px-2 divide-y divide-solid w-96"
     data-orientation="vertical"
   >
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium opacity-disabled pointer-events-none [&:not(:last-child)]:border-b"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium opacity-disabled pointer-events-none"
       data-disabled="true"
     >
       <h2
@@ -58,7 +58,7 @@ exports[`Story Snapshots > AllDisabled 1`] = `
       </h2>
     </div>
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium opacity-disabled pointer-events-none [&:not(:last-child)]:border-b"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium opacity-disabled pointer-events-none"
       data-disabled="true"
     >
       <h2
@@ -109,7 +109,7 @@ exports[`Story Snapshots > AllDisabled 1`] = `
       </h2>
     </div>
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium opacity-disabled pointer-events-none [&:not(:last-child)]:border-b"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium opacity-disabled pointer-events-none"
       data-disabled="true"
     >
       <h2
@@ -169,11 +169,11 @@ exports[`Story Snapshots > AllVariants 1`] = `
     class="w-96"
   >
     <div
-      class="px-2 w-full mb-12"
+      class="px-2 w-full divide-y divide-solid mb-12"
       data-orientation="vertical"
     >
       <div
-        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
         <h2>
           <button
@@ -217,7 +217,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
         </h2>
       </div>
       <div
-        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
         <h2>
           <button
@@ -261,7 +261,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
         </h2>
       </div>
       <div
-        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
         <h2>
           <button
@@ -306,11 +306,11 @@ exports[`Story Snapshots > AllVariants 1`] = `
       </div>
     </div>
     <div
-      class="px-4 shadow-medium rounded-medium bg-content1 w-full mb-12"
+      class="px-4 shadow-medium rounded-medium bg-content1 w-full divide-y divide-solid mb-12"
       data-orientation="vertical"
     >
       <div
-        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
         <h2>
           <button
@@ -354,7 +354,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
         </h2>
       </div>
       <div
-        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
         <h2>
           <button
@@ -398,7 +398,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
         </h2>
       </div>
       <div
-        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
         <h2>
           <button
@@ -443,11 +443,11 @@ exports[`Story Snapshots > AllVariants 1`] = `
       </div>
     </div>
     <div
-      class="px-4 border-medium border-divider rounded-medium w-full mb-12"
+      class="px-4 border-medium border-divider rounded-medium w-full divide-y divide-solid mb-12"
       data-orientation="vertical"
     >
       <div
-        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
         <h2>
           <button
@@ -491,7 +491,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
         </h2>
       </div>
       <div
-        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
         <h2>
           <button
@@ -535,7 +535,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
         </h2>
       </div>
       <div
-        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
         <h2>
           <button
@@ -580,11 +580,11 @@ exports[`Story Snapshots > AllVariants 1`] = `
       </div>
     </div>
     <div
-      class="px-2 group is-splitted flex flex-col gap-2 w-full mb-12"
+      class="px-2 group is-splitted flex flex-col gap-2 w-full divide-y divide-solid mb-12"
       data-orientation="vertical"
     >
       <div
-        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
         <h2>
           <button
@@ -628,7 +628,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
         </h2>
       </div>
       <div
-        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
         <h2>
           <button
@@ -672,7 +672,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
         </h2>
       </div>
       <div
-        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+        class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
         <h2>
           <button
@@ -723,11 +723,11 @@ exports[`Story Snapshots > AllVariants 1`] = `
 exports[`Story Snapshots > CustomStyles 1`] = `
 <div>
   <div
-    class="px-2 w-96"
+    class="px-2 divide-y divide-solid w-96"
     data-orientation="vertical"
   >
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b py-0"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium py-0"
     >
       <h2>
         <button
@@ -771,7 +771,7 @@ exports[`Story Snapshots > CustomStyles 1`] = `
       </h2>
     </div>
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b py-0"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium py-0"
     >
       <h2>
         <button
@@ -815,7 +815,7 @@ exports[`Story Snapshots > CustomStyles 1`] = `
       </h2>
     </div>
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b py-0"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium py-0"
     >
       <h2>
         <button
@@ -865,11 +865,11 @@ exports[`Story Snapshots > CustomStyles 1`] = `
 exports[`Story Snapshots > Default 1`] = `
 <div>
   <div
-    class="px-2 w-96"
+    class="px-2 divide-y divide-solid w-96"
     data-orientation="vertical"
   >
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
       <h2>
         <button
@@ -913,7 +913,7 @@ exports[`Story Snapshots > Default 1`] = `
       </h2>
     </div>
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
       <h2>
         <button
@@ -957,7 +957,7 @@ exports[`Story Snapshots > Default 1`] = `
       </h2>
     </div>
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
       <h2>
         <button
@@ -1007,11 +1007,11 @@ exports[`Story Snapshots > Default 1`] = `
 exports[`Story Snapshots > DefaultOpen 1`] = `
 <div>
   <div
-    class="px-2 w-96"
+    class="px-2 divide-y divide-solid w-96"
     data-orientation="vertical"
   >
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
       <h2>
         <button
@@ -1055,7 +1055,7 @@ exports[`Story Snapshots > DefaultOpen 1`] = `
       </h2>
     </div>
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       data-open="true"
     >
       <h2
@@ -1121,7 +1121,7 @@ exports[`Story Snapshots > DefaultOpen 1`] = `
       </section>
     </div>
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
       <h2>
         <button
@@ -1171,11 +1171,11 @@ exports[`Story Snapshots > DefaultOpen 1`] = `
 exports[`Story Snapshots > IndicatorLeft 1`] = `
 <div>
   <div
-    class="px-2 w-96"
+    class="px-2 divide-y divide-solid w-96"
     data-orientation="vertical"
   >
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
       <h2>
         <button
@@ -1219,7 +1219,7 @@ exports[`Story Snapshots > IndicatorLeft 1`] = `
       </h2>
     </div>
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
       <h2>
         <button
@@ -1263,7 +1263,7 @@ exports[`Story Snapshots > IndicatorLeft 1`] = `
       </h2>
     </div>
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
       <h2>
         <button
@@ -1313,11 +1313,11 @@ exports[`Story Snapshots > IndicatorLeft 1`] = `
 exports[`Story Snapshots > OnlySingleSelection 1`] = `
 <div>
   <div
-    class="px-2 w-96"
+    class="px-2 divide-y divide-solid w-96"
     data-orientation="vertical"
   >
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
       <h2>
         <button
@@ -1361,7 +1361,7 @@ exports[`Story Snapshots > OnlySingleSelection 1`] = `
       </h2>
     </div>
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
       <h2>
         <button
@@ -1405,7 +1405,7 @@ exports[`Story Snapshots > OnlySingleSelection 1`] = `
       </h2>
     </div>
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
       <h2>
         <button
@@ -1455,11 +1455,11 @@ exports[`Story Snapshots > OnlySingleSelection 1`] = `
 exports[`Story Snapshots > SomeDisabled 1`] = `
 <div>
   <div
-    class="px-2 w-96"
+    class="px-2 divide-y divide-solid w-96"
     data-orientation="vertical"
   >
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium opacity-disabled pointer-events-none [&:not(:last-child)]:border-b"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium opacity-disabled pointer-events-none"
       data-disabled="true"
       disabled=""
     >
@@ -1511,7 +1511,7 @@ exports[`Story Snapshots > SomeDisabled 1`] = `
       </h2>
     </div>
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium opacity-disabled pointer-events-none [&:not(:last-child)]:border-b"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium opacity-disabled pointer-events-none"
       data-disabled="true"
     >
       <h2
@@ -1562,7 +1562,7 @@ exports[`Story Snapshots > SomeDisabled 1`] = `
       </h2>
     </div>
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
       <h2>
         <button
@@ -1612,11 +1612,11 @@ exports[`Story Snapshots > SomeDisabled 1`] = `
 exports[`Story Snapshots > WithSubtitle 1`] = `
 <div>
   <div
-    class="px-2 w-96"
+    class="px-2 divide-y divide-solid w-96"
     data-orientation="vertical"
   >
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
       <h2>
         <button
@@ -1665,7 +1665,7 @@ exports[`Story Snapshots > WithSubtitle 1`] = `
       </h2>
     </div>
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
       <h2>
         <button
@@ -1714,7 +1714,7 @@ exports[`Story Snapshots > WithSubtitle 1`] = `
       </h2>
     </div>
     <div
-      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium [&:not(:last-child)]:border-b"
+      class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
       <h2>
         <button

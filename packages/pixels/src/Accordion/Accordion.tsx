@@ -35,7 +35,7 @@ export const accordionVariants = tv({
     },
     showDivider: {
       true: {
-        base: '[&:not(:last-child)]:border-b', // INFO: circumvents using hr divider with bootstrap styles in some projects. TODO: Remove if bootstrap is removed.
+        wrapper: 'divide-y divide-solid',
       },
     },
   },
