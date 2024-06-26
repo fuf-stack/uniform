@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.11.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.10.1...pixels-v0.11.0) (2024-06-26)
+
+
+### Features
+
+* **pixels:** use border style instead of hr divider in Accordion component ([04e95c3](https://github.com/fuf-stack/uniform/commit/04e95c31c8c2758ae2c15129d056b20c97404965))
+* **pixels:** use divide instead of border-b in Accordion component ([653f64b](https://github.com/fuf-stack/uniform/commit/653f64bbd5c0bf9cd62aaf51ea601567ae1ac09d))
+
 ## [0.10.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.10.0...pixels-v0.10.1) (2024-06-05)
 
 
