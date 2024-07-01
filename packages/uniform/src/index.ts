@@ -6,3 +6,4 @@ export * from './Input';
 export * from './partials/FieldCopyTestIdButton';
 export * from './partials/FieldValidationError';
 export * from './SubmitButton';
+export * from './Switch';
