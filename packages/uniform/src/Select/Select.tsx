@@ -9,18 +9,14 @@ import classNames from 'classnames';
 import { tv } from 'tailwind-variants';
 
 import { useFormContext } from '../hooks';
-import FieldCopyTestIdButton from '../partials/FieldCopyTestIdButton';
-import FieldValidationError from '../partials/FieldValidationError';
+import { FieldCopyTestIdButton } from '../partials/FieldCopyTestIdButton';
+import { FieldValidationError } from '../partials/FieldValidationError';
 
 type SelectOption = {
   /** option label */
   label?: React.ReactNode;
   /** option value */
   value: string;
-  /** disables the option */
-  disabled?: boolean;
-  /** HTML data-testid attribute of the option */
-  testId?: string;
 };
 export interface SelectProps {
   /** CSS class name */
@@ -29,6 +25,10 @@ export interface SelectProps {
   clearable?: boolean;
   /** Set the select to disabled state. */
   disabled?: boolean;
+
+  filterOption?:
+    | undefined
+    | ((option?: SelectOption, inputValue?: string) => boolean);
   /** The value of the search input */
   inputValue?: string;
   /** Label that should be associated with the select. */
@@ -83,7 +83,7 @@ const DropdownIndicatorComponent: typeof components.DropdownIndicator = (
   );
 };
 
-export const ReactSelectStyledVariants = tv({
+export const SelectVariants = tv({
   slots: {
     clearIndicator:
       'rounded-md p-1 text-neutral-500 hover:cursor-pointer hover:bg-gray-200 hover:text-neutral-800 hover:dark:bg-default-200 hover:dark:text-default-500',
@@ -114,7 +114,7 @@ export const ReactSelectStyledVariants = tv({
     noOptionsMessage:
       'rounded-sm bg-gray-50 p-2 text-neutral-500 dark:bg-default-100',
     option: 'rounded px-3 py-2 hover:cursor-pointer',
-    placeholder: 'py-0.5  pl-1 text-neutral-500',
+    placeholder: 'py-0.5 pl-1 text-neutral-500',
     selectContainer: '',
     singleValue: '!ml-1 !leading-7',
     valueContainer: 'gap-1 p-1',
@@ -143,6 +143,7 @@ const Select = ({
   className = undefined,
   clearable = true,
   disabled = false,
+  filterOption = undefined,
   inputValue = undefined,
   label: _label = undefined,
   loading = false,
@@ -192,13 +193,12 @@ const Select = ({
     placeholder: placeholderSlot,
     singleValue: singleValueSlot,
     valueContainer: valueContainerSlot,
-  } = ReactSelectStyledVariants({ invalid });
+  } = SelectVariants({ invalid });
 
   return (
     <Controller
       control={control}
       name={name}
-      disabled={disabled}
       render={({
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         field: { onChange, value, ref, onBlur },
@@ -209,7 +209,7 @@ const Select = ({
         >
           {label && (
             <label
-              htmlFor={`react-select-${name}-input`}
+              htmlFor={`react-select-${name}-input`} // {getTriggerProps().id}
               className={`${getLabelProps().className} !pointer-events-auto !static -mb-1 ml-1`}
             >
               {label}
@@ -222,8 +222,8 @@ const Select = ({
             data-testid={`${testId}_select`} // Does not affect the testId of the select, but is needed to pass it to sub-components
             // eslint-disable-next-line react/jsx-props-no-spreading
             {...() => {
-              // eslint-disable-next-line @typescript-eslint/no-unused-vars
-              const { className: className2, ...rest } = getTriggerProps();
+              // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/naming-convention
+              const { className: _className, ...rest } = getTriggerProps();
               return rest;
             }}
             aria-labelledby={
@@ -266,6 +266,7 @@ const Select = ({
               Option: OptionComponent,
               DropdownIndicator: DropdownIndicatorComponent,
             }}
+            filterOption={filterOption}
             instanceId={name}
             inputValue={inputValue}
             isClearable={clearable}
