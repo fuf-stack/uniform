@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.12.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.11.0...pixels-v0.12.0) (2024-07-04)
+
+
+### Features
+
+* **pixels:** add variant to label ([aa66ced](https://github.com/fuf-stack/uniform/commit/aa66ced339dbf6f1d5225f4caeaa0169db3cb83b))
+
 ## [0.11.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.10.1...pixels-v0.11.0) (2024-06-26)
 
 
