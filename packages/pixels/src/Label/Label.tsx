@@ -18,6 +18,8 @@ export interface LabelProps {
   size?: ChipProps['size'];
   /** element to be rendered in the left side of the label */
   startContent?: ChipProps['startContent'];
+  /** style variant of the label */
+  variant?: 'solid' | 'bordered' | 'light' | 'flat' | 'faded' | 'dot';
 }
 
 /**
@@ -30,6 +32,7 @@ const Label = ({
   endContent = undefined,
   size = 'md',
   startContent = undefined,
+  variant = 'solid',
 }: LabelProps) => (
   <NextLabel
     className={cn(className)}
@@ -37,6 +40,7 @@ const Label = ({
     endContent={endContent}
     size={size}
     startContent={startContent}
+    variant={variant}
   >
     {children}
   </NextLabel>

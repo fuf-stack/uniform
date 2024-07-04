@@ -58,3 +58,17 @@ export const AllSizes: Story = {
     </>
   ),
 };
+
+export const AllVariants: Story = {
+  render: () => (
+    <>
+      {['solid', 'bordered', 'light', 'flat', 'faded', 'dot'].map((variant) => (
+        <div key={variant} style={{ marginTop: '10px' }}>
+          <Label color="success" variant={variant as LabelProps['variant']}>
+            {variant}
+          </Label>
+        </div>
+      ))}
+    </>
+  ),
+};
