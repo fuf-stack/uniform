@@ -1,14 +1,30 @@
+import type { TVClassName, TVProps } from '@fuf-stack/pixel-utils';
 import type React from 'react';
 
 import { Avatar as NextAvatar } from '@nextui-org/avatar';
 
-export interface AvatarProps {
+import { tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
+
+// avatar styling variants
+export const avatarVariants = tv({
+  slots: {
+    base: '',
+    fallback: '',
+    icon: '',
+    img: '',
+    name: '',
+  },
+});
+
+type VariantProps = TVProps<typeof avatarVariants>;
+type ClassName = TVClassName<typeof avatarVariants>;
+export interface AvatarProps extends VariantProps {
   /* Display a border ring around the Avatar */
   bordered?: boolean;
   /* Roundness of the border around the Avatar */
   rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full';
   /** CSS class name */
-  className?: string;
+  className?: ClassName;
   /* Disables the Avatar */
   disabled?: boolean;
   /* Fallback content to display if the image fails to load or is not provided */
@@ -25,15 +41,19 @@ export interface AvatarProps {
 const Avatar = ({
   bordered = false,
   rounded = 'full',
-  className = '',
+  className: _className = undefined,
   disabled = false,
   fallback = undefined,
   size = 'md',
   src,
 }: AvatarProps) => {
+  // className from slots
+  const variants = avatarVariants();
+  const className = variantsToClassNames(variants, _className, 'base');
+
   return (
     <NextAvatar
-      className={className}
+      classNames={className}
       fallback={fallback}
       isBordered={bordered}
       isDisabled={disabled}

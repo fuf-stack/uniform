@@ -14,6 +14,8 @@ export interface LabelProps {
   color?: ChipProps['color'];
   /** element to be rendered in the right side of the label */
   endContent?: ChipProps['endContent'];
+  /** radius of the label */
+  radius?: ChipProps['radius'];
   /** size of the label */
   size?: ChipProps['size'];
   /** element to be rendered in the left side of the label */
@@ -30,6 +32,7 @@ const Label = ({
   className = undefined,
   color = 'default',
   endContent = undefined,
+  radius = 'full',
   size = 'md',
   startContent = undefined,
   variant = 'solid',
@@ -38,6 +41,7 @@ const Label = ({
     className={cn(className)}
     color={color}
     endContent={endContent}
+    radius={radius}
     size={size}
     startContent={startContent}
     variant={variant}
