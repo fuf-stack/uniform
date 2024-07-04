@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.13.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.12.0...pixels-v0.13.0) (2024-07-04)
+
+
+### Features
+
+* **pixels:** added slot support to Avatar component, added radius property to Label component ([4224b29](https://github.com/fuf-stack/uniform/commit/4224b290dabe34e9e3234fafc708c254aefe26c4))
+
+
+### Bug Fixes
+
+* **pixels:** fixed missing Label snapshot ([436eca7](https://github.com/fuf-stack/uniform/commit/436eca77d173780c2b3e0d2631072ba5a7d7146c))
+
 ## [0.12.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.11.0...pixels-v0.12.0) (2024-07-04)
 
 
