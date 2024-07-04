@@ -83,6 +83,76 @@ exports[`Story Snapshots > AllColors 1`] = `
 </div>
 `;
 
+exports[`Story Snapshots > AllRadius 1`] = `
+<div>
+  <div
+    style="margin-top: 10px;"
+  >
+    <div
+      class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap px-1 h-7 text-small rounded-none bg-default text-default-foreground"
+    >
+      <span
+        class="flex-1 text-inherit font-normal px-2"
+      >
+        none
+      </span>
+    </div>
+  </div>
+  <div
+    style="margin-top: 10px;"
+  >
+    <div
+      class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap px-1 h-7 text-small rounded-small bg-default text-default-foreground"
+    >
+      <span
+        class="flex-1 text-inherit font-normal px-2"
+      >
+        sm
+      </span>
+    </div>
+  </div>
+  <div
+    style="margin-top: 10px;"
+  >
+    <div
+      class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap px-1 h-7 text-small rounded-medium bg-default text-default-foreground"
+    >
+      <span
+        class="flex-1 text-inherit font-normal px-2"
+      >
+        md
+      </span>
+    </div>
+  </div>
+  <div
+    style="margin-top: 10px;"
+  >
+    <div
+      class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap px-1 h-7 text-small rounded-large bg-default text-default-foreground"
+    >
+      <span
+        class="flex-1 text-inherit font-normal px-2"
+      >
+        lg
+      </span>
+    </div>
+  </div>
+  <div
+    style="margin-top: 10px;"
+  >
+    <div
+      class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap px-1 h-7 text-small rounded-full bg-default text-default-foreground"
+    >
+      <span
+        class="flex-1 text-inherit font-normal px-2"
+      >
+        full
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Story Snapshots > AllSizes 1`] = `
 <div>
   <div
