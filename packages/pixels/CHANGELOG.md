@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.15.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.14.1...pixels-v0.15.0) (2024-07-05)
+
+
+### Features
+
+* **pixels:** added isOneChar and noOutline to Badge component ([1ff7e24](https://github.com/fuf-stack/uniform/commit/1ff7e24fc201ad509c504e505db4a8152c336fb7))
+
 ## [0.14.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.14.0...pixels-v0.14.1) (2024-07-05)
 
 
