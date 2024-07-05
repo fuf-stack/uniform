@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.15.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.15.0...pixels-v0.15.1) (2024-07-05)
+
+
+### Bug Fixes
+
+* **pixels:** fix Accordion divider color ([91412c6](https://github.com/fuf-stack/uniform/commit/91412c6a373935874b3b13ab794de69a024e5503))
+
 ## [0.15.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.14.1...pixels-v0.15.0) (2024-07-05)
 
 
