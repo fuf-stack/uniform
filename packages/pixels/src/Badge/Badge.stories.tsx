@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import type { BadgeProps } from './Badge';
 
+import { Avatar } from '../Avatar';
 import Badge from './Badge';
 
 const meta: Meta<typeof Badge> = {
@@ -11,14 +12,7 @@ const meta: Meta<typeof Badge> = {
 export default meta;
 type Story = StoryObj<typeof Badge>;
 
-const children = (
-  <p>
-    Some
-    <br /> Content
-    <br />
-    Some Content
-  </p>
-);
+const children = <Avatar src="" />;
 const content = 42;
 
 export const Default: Story = {
@@ -26,6 +20,59 @@ export const Default: Story = {
     children,
     content,
   },
+};
+
+export const IsOneChar: Story = {
+  args: {
+    isOneChar: true,
+    children,
+    content: 'X',
+  },
+};
+
+export const NoOutline: Story = {
+  args: {
+    children,
+    content,
+  },
+  render: (args: BadgeProps) => (
+    <dl>
+      <div className="gap-4 pb-8 sm:grid sm:grid-cols-2">
+        <dt>with outline</dt>
+        <dd>
+          <Badge {...args} />
+        </dd>
+      </div>
+      <div className="gap-4 pb-8 sm:grid sm:grid-cols-2">
+        <dt>without outline</dt>
+        <dd>
+          <Badge {...args} noOutline />
+        </dd>
+      </div>
+    </dl>
+  ),
+};
+
+export const NoContent: Story = {
+  args: {
+    children,
+  },
+  render: (args: BadgeProps) => (
+    <dl>
+      <div className="gap-4 pb-8 sm:grid sm:grid-cols-2">
+        <dt>with content</dt>
+        <dd>
+          <Badge {...args} content="42" />
+        </dd>
+      </div>
+      <div className="gap-4 pb-8 sm:grid sm:grid-cols-2">
+        <dt>without content</dt>
+        <dd>
+          <Badge {...args} />
+        </dd>
+      </div>
+    </dl>
+  ),
 };
 
 export const AllColors: Story = {
