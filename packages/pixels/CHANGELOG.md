@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.14.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.14.0...pixels-v0.14.1) (2024-07-05)
+
+
+### Bug Fixes
+
+* **pixels:** fixed missing Badge exports ([c13ed7c](https://github.com/fuf-stack/uniform/commit/c13ed7c8d17be624cb88508cee511a3c9fafed9b))
+
 ## [0.14.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.13.0...pixels-v0.14.0) (2024-07-05)
 
 
