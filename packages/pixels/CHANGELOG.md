@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.14.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.13.0...pixels-v0.14.0) (2024-07-05)
+
+
+### Features
+
+* added Badge component ([157266a](https://github.com/fuf-stack/uniform/commit/157266a540d015669b823ff852e70b7117baf836))
+
 ## [0.13.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.12.0...pixels-v0.13.0) (2024-07-04)
 
 
