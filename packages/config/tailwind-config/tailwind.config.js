@@ -14,6 +14,7 @@ const NEXTUI_THEME_USED_COMPONENT_PATHS = [
   'accordion',
   'autocomplete',
   'avatar',
+  'badge',
   'button',
   'card',
   'chip',

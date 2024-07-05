@@ -108,6 +108,7 @@
     "@fuf-stack/pixel-utils": "workspace:*",
     "@nextui-org/avatar": "2.0.29",
     "@nextui-org/accordion": "2.0.34",
+    "@nextui-org/badge": "2.0.29",
     "@nextui-org/button": "2.0.33",
     "@nextui-org/card": "2.0.30",
     "@nextui-org/chip": "2.0.29",

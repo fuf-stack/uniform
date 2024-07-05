@@ -1,0 +1,368 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Story Snapshots > AllColors 1`] = `
+<div>
+  <dl>
+    <div
+      class="gap-4 pb-8 sm:grid sm:grid-cols-2"
+    >
+      <dt>
+        default
+      </dt>
+      <dd>
+        <div
+          class="relative inline-flex shrink-0"
+        >
+          <p>
+            Some
+            <br />
+             Content
+            <br />
+            Some Content
+          </p>
+          <span
+            class="flex z-10 flex-wrap absolute box-border rounded-full whitespace-nowrap place-content-center origin-center items-center select-none font-regular scale-100 opacity-100 subpixel-antialiased data-[invisible=true]:scale-0 data-[invisible=true]:opacity-0 px-1 text-small border-2 border-background bg-default text-default-foreground top-[5%] right-[5%] translate-x-1/2 -translate-y-1/2"
+          >
+            42
+          </span>
+        </div>
+      </dd>
+    </div>
+    <div
+      class="gap-4 pb-8 sm:grid sm:grid-cols-2"
+    >
+      <dt>
+        primary
+      </dt>
+      <dd>
+        <div
+          class="relative inline-flex shrink-0"
+        >
+          <p>
+            Some
+            <br />
+             Content
+            <br />
+            Some Content
+          </p>
+          <span
+            class="flex z-10 flex-wrap absolute box-border rounded-full whitespace-nowrap place-content-center origin-center items-center select-none font-regular scale-100 opacity-100 subpixel-antialiased data-[invisible=true]:scale-0 data-[invisible=true]:opacity-0 px-1 text-small border-2 border-background bg-primary text-primary-foreground top-[5%] right-[5%] translate-x-1/2 -translate-y-1/2"
+          >
+            42
+          </span>
+        </div>
+      </dd>
+    </div>
+    <div
+      class="gap-4 pb-8 sm:grid sm:grid-cols-2"
+    >
+      <dt>
+        secondary
+      </dt>
+      <dd>
+        <div
+          class="relative inline-flex shrink-0"
+        >
+          <p>
+            Some
+            <br />
+             Content
+            <br />
+            Some Content
+          </p>
+          <span
+            class="flex z-10 flex-wrap absolute box-border rounded-full whitespace-nowrap place-content-center origin-center items-center select-none font-regular scale-100 opacity-100 subpixel-antialiased data-[invisible=true]:scale-0 data-[invisible=true]:opacity-0 px-1 text-small border-2 border-background bg-secondary text-secondary-foreground top-[5%] right-[5%] translate-x-1/2 -translate-y-1/2"
+          >
+            42
+          </span>
+        </div>
+      </dd>
+    </div>
+    <div
+      class="gap-4 pb-8 sm:grid sm:grid-cols-2"
+    >
+      <dt>
+        success
+      </dt>
+      <dd>
+        <div
+          class="relative inline-flex shrink-0"
+        >
+          <p>
+            Some
+            <br />
+             Content
+            <br />
+            Some Content
+          </p>
+          <span
+            class="flex z-10 flex-wrap absolute box-border rounded-full whitespace-nowrap place-content-center origin-center items-center select-none font-regular scale-100 opacity-100 subpixel-antialiased data-[invisible=true]:scale-0 data-[invisible=true]:opacity-0 px-1 text-small border-2 border-background bg-success text-success-foreground top-[5%] right-[5%] translate-x-1/2 -translate-y-1/2"
+          >
+            42
+          </span>
+        </div>
+      </dd>
+    </div>
+    <div
+      class="gap-4 pb-8 sm:grid sm:grid-cols-2"
+    >
+      <dt>
+        warning
+      </dt>
+      <dd>
+        <div
+          class="relative inline-flex shrink-0"
+        >
+          <p>
+            Some
+            <br />
+             Content
+            <br />
+            Some Content
+          </p>
+          <span
+            class="flex z-10 flex-wrap absolute box-border rounded-full whitespace-nowrap place-content-center origin-center items-center select-none font-regular scale-100 opacity-100 subpixel-antialiased data-[invisible=true]:scale-0 data-[invisible=true]:opacity-0 px-1 text-small border-2 border-background bg-warning text-warning-foreground top-[5%] right-[5%] translate-x-1/2 -translate-y-1/2"
+          >
+            42
+          </span>
+        </div>
+      </dd>
+    </div>
+    <div
+      class="gap-4 pb-8 sm:grid sm:grid-cols-2"
+    >
+      <dt>
+        danger
+      </dt>
+      <dd>
+        <div
+          class="relative inline-flex shrink-0"
+        >
+          <p>
+            Some
+            <br />
+             Content
+            <br />
+            Some Content
+          </p>
+          <span
+            class="flex z-10 flex-wrap absolute box-border rounded-full whitespace-nowrap place-content-center origin-center items-center select-none font-regular scale-100 opacity-100 subpixel-antialiased data-[invisible=true]:scale-0 data-[invisible=true]:opacity-0 px-1 text-small border-2 border-background bg-danger text-danger-foreground top-[5%] right-[5%] translate-x-1/2 -translate-y-1/2"
+          >
+            42
+          </span>
+        </div>
+      </dd>
+    </div>
+  </dl>
+</div>
+`;
+
+exports[`Story Snapshots > AllPlacements 1`] = `
+<div>
+  <dl>
+    <div
+      class="gap-4 pb-8 sm:grid sm:grid-cols-2"
+    >
+      <dt>
+        top-right
+      </dt>
+      <dd>
+        <div
+          class="relative inline-flex shrink-0"
+        >
+          <p>
+            Some
+            <br />
+             Content
+            <br />
+            Some Content
+          </p>
+          <span
+            class="flex z-10 flex-wrap absolute box-border rounded-full whitespace-nowrap place-content-center origin-center items-center select-none font-regular scale-100 opacity-100 subpixel-antialiased data-[invisible=true]:scale-0 data-[invisible=true]:opacity-0 px-1 text-small border-2 border-background bg-default text-default-foreground top-[5%] right-[5%] translate-x-1/2 -translate-y-1/2"
+          >
+            42
+          </span>
+        </div>
+      </dd>
+    </div>
+    <div
+      class="gap-4 pb-8 sm:grid sm:grid-cols-2"
+    >
+      <dt>
+        top-left
+      </dt>
+      <dd>
+        <div
+          class="relative inline-flex shrink-0"
+        >
+          <p>
+            Some
+            <br />
+             Content
+            <br />
+            Some Content
+          </p>
+          <span
+            class="flex z-10 flex-wrap absolute box-border rounded-full whitespace-nowrap place-content-center origin-center items-center select-none font-regular scale-100 opacity-100 subpixel-antialiased data-[invisible=true]:scale-0 data-[invisible=true]:opacity-0 px-1 text-small border-2 border-background bg-default text-default-foreground top-[5%] left-[5%] -translate-x-1/2 -translate-y-1/2"
+          >
+            42
+          </span>
+        </div>
+      </dd>
+    </div>
+    <div
+      class="gap-4 pb-8 sm:grid sm:grid-cols-2"
+    >
+      <dt>
+        bottom-right
+      </dt>
+      <dd>
+        <div
+          class="relative inline-flex shrink-0"
+        >
+          <p>
+            Some
+            <br />
+             Content
+            <br />
+            Some Content
+          </p>
+          <span
+            class="flex z-10 flex-wrap absolute box-border rounded-full whitespace-nowrap place-content-center origin-center items-center select-none font-regular scale-100 opacity-100 subpixel-antialiased data-[invisible=true]:scale-0 data-[invisible=true]:opacity-0 px-1 text-small border-2 border-background bg-default text-default-foreground bottom-[5%] right-[5%] translate-x-1/2 translate-y-1/2"
+          >
+            42
+          </span>
+        </div>
+      </dd>
+    </div>
+    <div
+      class="gap-4 pb-8 sm:grid sm:grid-cols-2"
+    >
+      <dt>
+        bottom-left
+      </dt>
+      <dd>
+        <div
+          class="relative inline-flex shrink-0"
+        >
+          <p>
+            Some
+            <br />
+             Content
+            <br />
+            Some Content
+          </p>
+          <span
+            class="flex z-10 flex-wrap absolute box-border rounded-full whitespace-nowrap place-content-center origin-center items-center select-none font-regular scale-100 opacity-100 subpixel-antialiased data-[invisible=true]:scale-0 data-[invisible=true]:opacity-0 px-1 text-small border-2 border-background bg-default text-default-foreground bottom-[5%] left-[5%] -translate-x-1/2 translate-y-1/2"
+          >
+            42
+          </span>
+        </div>
+      </dd>
+    </div>
+  </dl>
+</div>
+`;
+
+exports[`Story Snapshots > AllSizes 1`] = `
+<div>
+  <dl>
+    <div
+      class="gap-4 pb-8 sm:grid sm:grid-cols-2"
+    >
+      <dt>
+        sm
+      </dt>
+      <dd>
+        <div
+          class="relative inline-flex shrink-0"
+        >
+          <p>
+            Some
+            <br />
+             Content
+            <br />
+            Some Content
+          </p>
+          <span
+            class="flex z-10 flex-wrap absolute box-border rounded-full whitespace-nowrap place-content-center origin-center items-center select-none font-regular scale-100 opacity-100 subpixel-antialiased data-[invisible=true]:scale-0 data-[invisible=true]:opacity-0 px-1 text-tiny border-2 border-background bg-default text-default-foreground top-[5%] right-[5%] translate-x-1/2 -translate-y-1/2"
+          >
+            42
+          </span>
+        </div>
+      </dd>
+    </div>
+    <div
+      class="gap-4 pb-8 sm:grid sm:grid-cols-2"
+    >
+      <dt>
+        md 
+      </dt>
+      <dd>
+        <div
+          class="relative inline-flex shrink-0"
+        >
+          <p>
+            Some
+            <br />
+             Content
+            <br />
+            Some Content
+          </p>
+          <span
+            class="flex z-10 flex-wrap absolute box-border rounded-full whitespace-nowrap place-content-center origin-center items-center select-none font-regular scale-100 opacity-100 subpixel-antialiased data-[invisible=true]:scale-0 data-[invisible=true]:opacity-0 px-1 text-small border-2 border-background bg-default text-default-foreground top-[5%] right-[5%] translate-x-1/2 -translate-y-1/2"
+          >
+            42
+          </span>
+        </div>
+      </dd>
+    </div>
+    <div
+      class="gap-4 pb-8 sm:grid sm:grid-cols-2"
+    >
+      <dt>
+        lg
+      </dt>
+      <dd>
+        <div
+          class="relative inline-flex shrink-0"
+        >
+          <p>
+            Some
+            <br />
+             Content
+            <br />
+            Some Content
+          </p>
+          <span
+            class="flex z-10 flex-wrap absolute box-border rounded-full whitespace-nowrap place-content-center origin-center items-center select-none font-regular scale-100 opacity-100 subpixel-antialiased data-[invisible=true]:scale-0 data-[invisible=true]:opacity-0 px-1 text-small border-2 border-background bg-default text-default-foreground top-[5%] right-[5%] translate-x-1/2 -translate-y-1/2"
+          >
+            42
+          </span>
+        </div>
+      </dd>
+    </div>
+  </dl>
+</div>
+`;
+
+exports[`Story Snapshots > Default 1`] = `
+<div>
+  <div
+    class="relative inline-flex shrink-0"
+  >
+    <p>
+      Some
+      <br />
+       Content
+      <br />
+      Some Content
+    </p>
+    <span
+      class="flex z-10 flex-wrap absolute box-border rounded-full whitespace-nowrap place-content-center origin-center items-center select-none font-regular scale-100 opacity-100 subpixel-antialiased data-[invisible=true]:scale-0 data-[invisible=true]:opacity-0 px-1 text-small border-2 border-background bg-default text-default-foreground top-[5%] right-[5%] translate-x-1/2 -translate-y-1/2"
+    >
+      42
+    </span>
+  </div>
+</div>
+`;
