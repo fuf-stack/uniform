@@ -29,6 +29,11 @@
       "require": "./dist/AvatarGroup/index.cjs",
       "types": "./dist/AvatarGroup/index.d.ts"
     },
+    "./Badge": {
+      "import": "./dist/Badge/index.js",
+      "require": "./dist/Badge/index.cjs",
+      "types": "./dist/Badge/index.d.ts"
+    },
     "./Button": {
       "import": "./dist/Button/index.js",
       "require": "./dist/Button/index.cjs",
