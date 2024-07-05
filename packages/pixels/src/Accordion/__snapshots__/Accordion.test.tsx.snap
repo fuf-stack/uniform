@@ -3,7 +3,7 @@
 exports[`Story Snapshots > AllDisabled 1`] = `
 <div>
   <div
-    class="px-2 divide-y divide-solid w-96"
+    class="px-2 divide-y divide-solid divide-divider w-96"
     data-orientation="vertical"
   >
     <div
@@ -169,7 +169,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
     class="w-96"
   >
     <div
-      class="px-2 w-full divide-y divide-solid mb-12"
+      class="px-2 w-full divide-y divide-solid divide-divider mb-12"
       data-orientation="vertical"
     >
       <div
@@ -306,7 +306,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
       </div>
     </div>
     <div
-      class="px-4 shadow-medium rounded-medium bg-content1 w-full divide-y divide-solid mb-12"
+      class="px-4 shadow-medium rounded-medium bg-content1 w-full divide-y divide-solid divide-divider mb-12"
       data-orientation="vertical"
     >
       <div
@@ -443,7 +443,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
       </div>
     </div>
     <div
-      class="px-4 border-medium border-divider rounded-medium w-full divide-y divide-solid mb-12"
+      class="px-4 border-medium border-divider rounded-medium w-full divide-y divide-solid divide-divider mb-12"
       data-orientation="vertical"
     >
       <div
@@ -580,7 +580,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
       </div>
     </div>
     <div
-      class="px-2 group is-splitted flex flex-col gap-2 w-full divide-y divide-solid mb-12"
+      class="px-2 group is-splitted flex flex-col gap-2 w-full mb-12"
       data-orientation="vertical"
     >
       <div
@@ -723,7 +723,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
 exports[`Story Snapshots > CustomStyles 1`] = `
 <div>
   <div
-    class="px-2 divide-y divide-solid w-96"
+    class="px-2 divide-y divide-solid divide-divider w-96"
     data-orientation="vertical"
   >
     <div
@@ -865,7 +865,7 @@ exports[`Story Snapshots > CustomStyles 1`] = `
 exports[`Story Snapshots > Default 1`] = `
 <div>
   <div
-    class="px-2 divide-y divide-solid w-96"
+    class="px-2 divide-y divide-solid divide-divider w-96"
     data-orientation="vertical"
   >
     <div
@@ -1007,7 +1007,7 @@ exports[`Story Snapshots > Default 1`] = `
 exports[`Story Snapshots > DefaultOpen 1`] = `
 <div>
   <div
-    class="px-2 divide-y divide-solid w-96"
+    class="px-2 divide-y divide-solid divide-divider w-96"
     data-orientation="vertical"
   >
     <div
@@ -1171,7 +1171,7 @@ exports[`Story Snapshots > DefaultOpen 1`] = `
 exports[`Story Snapshots > IndicatorLeft 1`] = `
 <div>
   <div
-    class="px-2 divide-y divide-solid w-96"
+    class="px-2 divide-y divide-solid divide-divider w-96"
     data-orientation="vertical"
   >
     <div
@@ -1313,7 +1313,7 @@ exports[`Story Snapshots > IndicatorLeft 1`] = `
 exports[`Story Snapshots > OnlySingleSelection 1`] = `
 <div>
   <div
-    class="px-2 divide-y divide-solid w-96"
+    class="px-2 divide-y divide-solid divide-divider w-96"
     data-orientation="vertical"
   >
     <div
@@ -1455,7 +1455,7 @@ exports[`Story Snapshots > OnlySingleSelection 1`] = `
 exports[`Story Snapshots > SomeDisabled 1`] = `
 <div>
   <div
-    class="px-2 divide-y divide-solid w-96"
+    class="px-2 divide-y divide-solid divide-divider w-96"
     data-orientation="vertical"
   >
     <div
@@ -1612,7 +1612,7 @@ exports[`Story Snapshots > SomeDisabled 1`] = `
 exports[`Story Snapshots > WithSubtitle 1`] = `
 <div>
   <div
-    class="px-2 divide-y divide-solid w-96"
+    class="px-2 divide-y divide-solid divide-divider w-96"
     data-orientation="vertical"
   >
     <div

@@ -35,7 +35,7 @@ export const accordionVariants = tv({
     },
     showDivider: {
       true: {
-        wrapper: 'divide-y divide-solid',
+        wrapper: 'divide-y divide-solid divide-divider',
       },
     },
   },
@@ -87,7 +87,7 @@ export interface AccordionProps extends VariantProps {
  */
 const Accordion = ({
   accordionItems = [],
-  className = undefined,
+  className: _className = undefined,
   defaultSelectedKeys = [],
   disabled = false,
   disabledKeys = [],
@@ -100,22 +100,21 @@ const Accordion = ({
   variant = 'light',
 }: AccordionProps) => {
   // itemClasses from className slots
-  const variants = accordionVariants({ indicatorLeft, showDivider });
-  const { wrapper, ...itemClasses } = variantsToClassNames(
-    variants,
-    className,
-    'wrapper',
-  );
+  const variants = accordionVariants({
+    indicatorLeft,
+    showDivider: showDivider && variant !== 'splitted',
+  });
+  const classNames = variantsToClassNames(variants, _className, 'wrapper');
 
   return (
     <NextAccordion
-      className={wrapper}
+      className={classNames.wrapper}
       defaultSelectedKeys={defaultSelectedKeys}
       disabledKeys={disabledKeys}
       disallowEmptySelection={disallowEmptySelection}
       dividerProps={dividerProps}
       isDisabled={disabled}
-      itemClasses={itemClasses}
+      itemClasses={classNames}
       onSelectionChange={onSelectionChange}
       selectionMode={selectionMode}
       showDivider={false}
