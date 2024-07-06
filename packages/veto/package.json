@@ -19,11 +19,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/fuf-stack/uniforms.git",
+    "url": "https://github.com/fuf-stack/uniform.git",
     "directory": "packages/veto"
   },
   "bugs": {
-    "url": "https://github.com/fuf-stack/uniforms/issues"
+    "url": "https://github.com/fuf-stack/uniform/issues"
   },
   "scripts": {
     "build": "rm -rf ./dist && tsup --dts-resolve",

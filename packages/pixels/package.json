@@ -94,11 +94,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/fuf-stack/uniforms.git",
+    "url": "https://github.com/fuf-stack/uniform.git",
     "directory": "packages/pixels"
   },
   "bugs": {
-    "url": "https://github.com/fuf-stack/uniforms/issues"
+    "url": "https://github.com/fuf-stack/uniform/issues"
   },
   "scripts": {
     "build": "tsup --config node_modules/@repo/tsup-config/config.ts --dts-resolve",

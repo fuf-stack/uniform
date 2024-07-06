@@ -1,9 +1,5 @@
 {
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/withastro/astro.git"
-  },
   "scripts": {
     "build": "pnpm turbo build",
     "commit": "lint-staged && git-cz",
