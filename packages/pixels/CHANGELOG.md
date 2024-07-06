@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.15.2](https://github.com/fuf-stack/uniform/compare/pixels-v0.15.1...pixels-v0.15.2) (2024-07-06)
+
+
+### Bug Fixes
+
+* fix repository urls ([7d39c94](https://github.com/fuf-stack/uniform/commit/7d39c94bc3b73dd8820024db3ec6b131d9970f54))
+
 ## [0.15.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.15.0...pixels-v0.15.1) (2024-07-05)
 
 
