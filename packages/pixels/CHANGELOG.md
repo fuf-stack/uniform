@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.15.4](https://github.com/fuf-stack/uniform/compare/pixels-v0.15.3...pixels-v0.15.4) (2024-07-08)
+
+
+### Bug Fixes
+
+* **pixels:** change Accordion paddings to allow stryling of header ([295a94f](https://github.com/fuf-stack/uniform/commit/295a94fb05c895417ea0d58bfeb66dd1652fca98))
+
 ## [0.15.3](https://github.com/fuf-stack/uniform/compare/pixels-v0.15.2...pixels-v0.15.3) (2024-07-06)
 
 
