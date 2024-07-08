@@ -3,7 +3,7 @@
 exports[`Story Snapshots > AllDisabled 1`] = `
 <div>
   <div
-    class="px-2 divide-y divide-solid divide-divider w-96"
+    class="px-0 divide-y divide-solid divide-divider w-96"
     data-orientation="vertical"
   >
     <div
@@ -11,6 +11,7 @@ exports[`Story Snapshots > AllDisabled 1`] = `
       data-disabled="true"
     >
       <h2
+        class="px-4"
         data-disabled="true"
       >
         <button
@@ -62,6 +63,7 @@ exports[`Story Snapshots > AllDisabled 1`] = `
       data-disabled="true"
     >
       <h2
+        class="px-4"
         data-disabled="true"
       >
         <button
@@ -113,6 +115,7 @@ exports[`Story Snapshots > AllDisabled 1`] = `
       data-disabled="true"
     >
       <h2
+        class="px-4"
         data-disabled="true"
       >
         <button
@@ -169,13 +172,15 @@ exports[`Story Snapshots > AllVariants 1`] = `
     class="w-96"
   >
     <div
-      class="px-2 w-full divide-y divide-solid divide-divider mb-12"
+      class="w-full px-0 divide-y divide-solid divide-divider mb-12"
       data-orientation="vertical"
     >
       <div
         class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
-        <h2>
+        <h2
+          class="px-4"
+        >
           <button
             aria-expanded="false"
             class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"
@@ -219,7 +224,9 @@ exports[`Story Snapshots > AllVariants 1`] = `
       <div
         class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
-        <h2>
+        <h2
+          class="px-4"
+        >
           <button
             aria-expanded="false"
             class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"
@@ -263,7 +270,9 @@ exports[`Story Snapshots > AllVariants 1`] = `
       <div
         class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
-        <h2>
+        <h2
+          class="px-4"
+        >
           <button
             aria-expanded="false"
             class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"
@@ -306,13 +315,15 @@ exports[`Story Snapshots > AllVariants 1`] = `
       </div>
     </div>
     <div
-      class="px-4 shadow-medium rounded-medium bg-content1 w-full divide-y divide-solid divide-divider mb-12"
+      class="shadow-medium rounded-medium bg-content1 w-full px-0 divide-y divide-solid divide-divider mb-12"
       data-orientation="vertical"
     >
       <div
         class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
-        <h2>
+        <h2
+          class="px-4"
+        >
           <button
             aria-expanded="false"
             class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"
@@ -356,7 +367,9 @@ exports[`Story Snapshots > AllVariants 1`] = `
       <div
         class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
-        <h2>
+        <h2
+          class="px-4"
+        >
           <button
             aria-expanded="false"
             class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"
@@ -400,7 +413,9 @@ exports[`Story Snapshots > AllVariants 1`] = `
       <div
         class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
-        <h2>
+        <h2
+          class="px-4"
+        >
           <button
             aria-expanded="false"
             class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"
@@ -443,13 +458,15 @@ exports[`Story Snapshots > AllVariants 1`] = `
       </div>
     </div>
     <div
-      class="px-4 border-medium border-divider rounded-medium w-full divide-y divide-solid divide-divider mb-12"
+      class="border-medium border-divider rounded-medium w-full px-0 divide-y divide-solid divide-divider mb-12"
       data-orientation="vertical"
     >
       <div
         class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
-        <h2>
+        <h2
+          class="px-4"
+        >
           <button
             aria-expanded="false"
             class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"
@@ -493,7 +510,9 @@ exports[`Story Snapshots > AllVariants 1`] = `
       <div
         class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
-        <h2>
+        <h2
+          class="px-4"
+        >
           <button
             aria-expanded="false"
             class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"
@@ -537,7 +556,9 @@ exports[`Story Snapshots > AllVariants 1`] = `
       <div
         class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
-        <h2>
+        <h2
+          class="px-4"
+        >
           <button
             aria-expanded="false"
             class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"
@@ -580,13 +601,15 @@ exports[`Story Snapshots > AllVariants 1`] = `
       </div>
     </div>
     <div
-      class="px-2 group is-splitted flex flex-col gap-2 w-full mb-12"
+      class="group is-splitted flex flex-col gap-2 w-full px-0 mb-12"
       data-orientation="vertical"
     >
       <div
         class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
-        <h2>
+        <h2
+          class="px-4"
+        >
           <button
             aria-expanded="false"
             class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"
@@ -630,7 +653,9 @@ exports[`Story Snapshots > AllVariants 1`] = `
       <div
         class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
-        <h2>
+        <h2
+          class="px-4"
+        >
           <button
             aria-expanded="false"
             class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"
@@ -674,7 +699,9 @@ exports[`Story Snapshots > AllVariants 1`] = `
       <div
         class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
       >
-        <h2>
+        <h2
+          class="px-4"
+        >
           <button
             aria-expanded="false"
             class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"
@@ -723,13 +750,15 @@ exports[`Story Snapshots > AllVariants 1`] = `
 exports[`Story Snapshots > CustomStyles 1`] = `
 <div>
   <div
-    class="px-2 divide-y divide-solid divide-divider w-96"
+    class="px-0 divide-y divide-solid divide-divider w-96"
     data-orientation="vertical"
   >
     <div
       class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium py-0"
     >
-      <h2>
+      <h2
+        class="px-4"
+      >
         <button
           aria-expanded="false"
           class="w-full gap-3 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity py-0 data-[hover=true]:bg-blue-100 rounded-lg h-14 flex items-center"
@@ -773,7 +802,9 @@ exports[`Story Snapshots > CustomStyles 1`] = `
     <div
       class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium py-0"
     >
-      <h2>
+      <h2
+        class="px-4"
+      >
         <button
           aria-expanded="false"
           class="w-full gap-3 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity py-0 data-[hover=true]:bg-blue-100 rounded-lg h-14 flex items-center"
@@ -817,7 +848,9 @@ exports[`Story Snapshots > CustomStyles 1`] = `
     <div
       class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium py-0"
     >
-      <h2>
+      <h2
+        class="px-4"
+      >
         <button
           aria-expanded="false"
           class="w-full gap-3 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity py-0 data-[hover=true]:bg-blue-100 rounded-lg h-14 flex items-center"
@@ -865,13 +898,15 @@ exports[`Story Snapshots > CustomStyles 1`] = `
 exports[`Story Snapshots > Default 1`] = `
 <div>
   <div
-    class="px-2 divide-y divide-solid divide-divider w-96"
+    class="px-0 divide-y divide-solid divide-divider w-96"
     data-orientation="vertical"
   >
     <div
       class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
-      <h2>
+      <h2
+        class="px-4"
+      >
         <button
           aria-expanded="false"
           class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"
@@ -915,7 +950,9 @@ exports[`Story Snapshots > Default 1`] = `
     <div
       class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
-      <h2>
+      <h2
+        class="px-4"
+      >
         <button
           aria-expanded="false"
           class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"
@@ -959,7 +996,9 @@ exports[`Story Snapshots > Default 1`] = `
     <div
       class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
-      <h2>
+      <h2
+        class="px-4"
+      >
         <button
           aria-expanded="false"
           class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"
@@ -1007,13 +1046,15 @@ exports[`Story Snapshots > Default 1`] = `
 exports[`Story Snapshots > DefaultOpen 1`] = `
 <div>
   <div
-    class="px-2 divide-y divide-solid divide-divider w-96"
+    class="px-0 divide-y divide-solid divide-divider w-96"
     data-orientation="vertical"
   >
     <div
       class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
-      <h2>
+      <h2
+        class="px-4"
+      >
         <button
           aria-expanded="false"
           class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"
@@ -1059,6 +1100,7 @@ exports[`Story Snapshots > DefaultOpen 1`] = `
       data-open="true"
     >
       <h2
+        class="px-4"
         data-open="true"
       >
         <button
@@ -1109,7 +1151,7 @@ exports[`Story Snapshots > DefaultOpen 1`] = `
       >
         <div
           aria-labelledby=":r1o:"
-          class="py-2"
+          class="py-2 px-4"
           data-open="true"
           id=":r1p:"
           role="region"
@@ -1123,7 +1165,9 @@ exports[`Story Snapshots > DefaultOpen 1`] = `
     <div
       class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
-      <h2>
+      <h2
+        class="px-4"
+      >
         <button
           aria-expanded="false"
           class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"
@@ -1171,13 +1215,15 @@ exports[`Story Snapshots > DefaultOpen 1`] = `
 exports[`Story Snapshots > IndicatorLeft 1`] = `
 <div>
   <div
-    class="px-2 divide-y divide-solid divide-divider w-96"
+    class="px-0 divide-y divide-solid divide-divider w-96"
     data-orientation="vertical"
   >
     <div
       class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
-      <h2>
+      <h2
+        class="px-4"
+      >
         <button
           aria-expanded="false"
           class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity flex-row-reverse"
@@ -1221,7 +1267,9 @@ exports[`Story Snapshots > IndicatorLeft 1`] = `
     <div
       class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
-      <h2>
+      <h2
+        class="px-4"
+      >
         <button
           aria-expanded="false"
           class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity flex-row-reverse"
@@ -1265,7 +1313,9 @@ exports[`Story Snapshots > IndicatorLeft 1`] = `
     <div
       class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
-      <h2>
+      <h2
+        class="px-4"
+      >
         <button
           aria-expanded="false"
           class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity flex-row-reverse"
@@ -1313,13 +1363,15 @@ exports[`Story Snapshots > IndicatorLeft 1`] = `
 exports[`Story Snapshots > OnlySingleSelection 1`] = `
 <div>
   <div
-    class="px-2 divide-y divide-solid divide-divider w-96"
+    class="px-0 divide-y divide-solid divide-divider w-96"
     data-orientation="vertical"
   >
     <div
       class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
-      <h2>
+      <h2
+        class="px-4"
+      >
         <button
           aria-expanded="false"
           class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"
@@ -1363,7 +1415,9 @@ exports[`Story Snapshots > OnlySingleSelection 1`] = `
     <div
       class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
-      <h2>
+      <h2
+        class="px-4"
+      >
         <button
           aria-expanded="false"
           class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"
@@ -1407,7 +1461,9 @@ exports[`Story Snapshots > OnlySingleSelection 1`] = `
     <div
       class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
-      <h2>
+      <h2
+        class="px-4"
+      >
         <button
           aria-expanded="false"
           class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"
@@ -1455,7 +1511,7 @@ exports[`Story Snapshots > OnlySingleSelection 1`] = `
 exports[`Story Snapshots > SomeDisabled 1`] = `
 <div>
   <div
-    class="px-2 divide-y divide-solid divide-divider w-96"
+    class="px-0 divide-y divide-solid divide-divider w-96"
     data-orientation="vertical"
   >
     <div
@@ -1464,6 +1520,7 @@ exports[`Story Snapshots > SomeDisabled 1`] = `
       disabled=""
     >
       <h2
+        class="px-4"
         data-disabled="true"
       >
         <button
@@ -1515,6 +1572,7 @@ exports[`Story Snapshots > SomeDisabled 1`] = `
       data-disabled="true"
     >
       <h2
+        class="px-4"
         data-disabled="true"
       >
         <button
@@ -1564,7 +1622,9 @@ exports[`Story Snapshots > SomeDisabled 1`] = `
     <div
       class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
-      <h2>
+      <h2
+        class="px-4"
+      >
         <button
           aria-expanded="false"
           class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"
@@ -1612,13 +1672,15 @@ exports[`Story Snapshots > SomeDisabled 1`] = `
 exports[`Story Snapshots > WithSubtitle 1`] = `
 <div>
   <div
-    class="px-2 divide-y divide-solid divide-divider w-96"
+    class="px-0 divide-y divide-solid divide-divider w-96"
     data-orientation="vertical"
   >
     <div
       class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
-      <h2>
+      <h2
+        class="px-4"
+      >
         <button
           aria-expanded="false"
           class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"
@@ -1667,7 +1729,9 @@ exports[`Story Snapshots > WithSubtitle 1`] = `
     <div
       class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
-      <h2>
+      <h2
+        class="px-4"
+      >
         <button
           aria-expanded="false"
           class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"
@@ -1716,7 +1780,9 @@ exports[`Story Snapshots > WithSubtitle 1`] = `
     <div
       class="group-[.is-splitted]:px-4 group-[.is-splitted]:bg-content1 group-[.is-splitted]:shadow-medium group-[.is-splitted]:rounded-medium"
     >
-      <h2>
+      <h2
+        class="px-4"
+      >
         <button
           aria-expanded="false"
           class="flex py-4 w-full h-full gap-3 items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-opacity"

@@ -14,8 +14,8 @@ import { tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
 export const accordionVariants = tv({
   slots: {
     base: '',
-    content: '',
-    heading: '',
+    content: 'px-4',
+    heading: 'px-4',
     indicator: '',
     startContent: '',
     subtitle: '',
@@ -23,7 +23,7 @@ export const accordionVariants = tv({
     titleWrapper: '',
     trigger: '',
     // outer accordion wrapper
-    wrapper: '',
+    wrapper: 'px-0',
   },
   variants: {
     indicatorLeft: {
