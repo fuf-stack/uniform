@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.2](https://github.com/fuf-stack/uniform/compare/veto-v0.4.1...veto-v0.4.2) (2024-07-09)
+
+
+### Bug Fixes
+
+* **veto:** fix ts return type of refineArray ([83e2052](https://github.com/fuf-stack/uniform/commit/83e2052d851dae9098c737a89aa186bd360463e1))
+
 ## [0.4.1](https://github.com/fuf-stack/uniform/compare/veto-v0.4.0...veto-v0.4.1) (2024-07-09)
 
 
