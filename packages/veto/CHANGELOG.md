@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.3](https://github.com/fuf-stack/uniform/compare/veto-v0.4.2...veto-v0.4.3) (2024-07-09)
+
+
+### Bug Fixes
+
+* **veto:** fix VetoSuccess type infer ([6ab6b53](https://github.com/fuf-stack/uniform/commit/6ab6b530a2bbf0930dc91f6a83ada6d6c7a2463e))
+
 ## [0.4.2](https://github.com/fuf-stack/uniform/compare/veto-v0.4.1...veto-v0.4.2) (2024-07-09)
 
 
