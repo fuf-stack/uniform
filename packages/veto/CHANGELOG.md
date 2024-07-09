@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.1](https://github.com/fuf-stack/uniform/compare/veto-v0.4.0...veto-v0.4.1) (2024-07-09)
+
+
+### Bug Fixes
+
+* fix repo urls ([fc79102](https://github.com/fuf-stack/uniform/commit/fc791022cf9bdc72234f6e16013bcc0aa382f174))
+* fix repository urls ([7d39c94](https://github.com/fuf-stack/uniform/commit/7d39c94bc3b73dd8820024db3ec6b131d9970f54))
+
 ## [0.4.0](https://github.com/fuf-stack/uniform/compare/veto-v0.3.32...veto-v0.4.0) (2024-05-27)
 
 
