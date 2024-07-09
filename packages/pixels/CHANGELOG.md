@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.16.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.15.4...pixels-v0.16.0) (2024-07-09)
+
+
+### Features
+
+* **pixels:** add slots to Label ([6c9b044](https://github.com/fuf-stack/uniform/commit/6c9b044e44e3954e8eebafca8ce1e09d662543d8))
+* **pixels:** add slots to Tooltip ([71c0d83](https://github.com/fuf-stack/uniform/commit/71c0d83230a3a5406413c1859d55511b37276a44))
+
 ## [0.15.4](https://github.com/fuf-stack/uniform/compare/pixels-v0.15.3...pixels-v0.15.4) (2024-07-08)
 
 
