@@ -1,15 +1,27 @@
+import type { TVClassName, TVProps } from '@fuf-stack/pixel-utils';
 import type { ChipProps } from '@nextui-org/chip';
 import type { ReactNode } from 'react';
 
 import { Chip as NextLabel } from '@nextui-org/chip';
 
-import { cn } from '@fuf-stack/pixel-utils';
+import { tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
 
-export interface LabelProps {
+// label variants
+export const labelVariants = tv({
+  slots: {
+    base: '',
+    content: '',
+  },
+});
+
+type VariantProps = TVProps<typeof labelVariants>;
+type ClassName = TVClassName<typeof labelVariants>;
+
+export interface LabelProps extends VariantProps {
   /** content of the label */
   children: ReactNode;
   /** CSS class name */
-  className?: string;
+  className?: ClassName;
   /** color of the label */
   color?: ChipProps['color'];
   /** element to be rendered in the right side of the label */
@@ -29,25 +41,31 @@ export interface LabelProps {
  */
 const Label = ({
   children,
-  className = undefined,
+  className: _className = undefined,
   color = 'default',
   endContent = undefined,
   radius = 'full',
   size = 'md',
   startContent = undefined,
   variant = 'solid',
-}: LabelProps) => (
-  <NextLabel
-    className={cn(className)}
-    color={color}
-    endContent={endContent}
-    radius={radius}
-    size={size}
-    startContent={startContent}
-    variant={variant}
-  >
-    {children}
-  </NextLabel>
-);
+}: LabelProps) => {
+  // classNames from slots
+  const variants = labelVariants();
+  const classNames = variantsToClassNames(variants, _className, 'base');
+
+  return (
+    <NextLabel
+      classNames={classNames}
+      color={color}
+      endContent={endContent}
+      radius={radius}
+      size={size}
+      startContent={startContent}
+      variant={variant}
+    >
+      {children}
+    </NextLabel>
+  );
+};
 
 export default Label;
