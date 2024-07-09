@@ -6,6 +6,7 @@ import type {
 } from 'zod';
 import type { VetoObject, VetoRawShape, VetoTypeAny } from './types';
 
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { z } from 'zod';
 
 export type VetoErrorMap = ZodErrorMap;
@@ -116,7 +117,7 @@ const formatError = (error: VetoUnformatedError): VetoFormattedError => {
   const reformatError = (
     levelError: Record<string, unknown>,
     isTopLevelError = false,
-  ): any => {
+  ) => {
     let errorCopy = JSON.parse(JSON.stringify(levelError));
 
     // move params of of custom errors to top level (remove params)

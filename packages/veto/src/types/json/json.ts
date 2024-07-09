@@ -1,5 +1,6 @@
 import type { ZodType } from 'zod';
 
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { z } from 'zod';
 
 // see: https://zod.dev/?id=json-type

@@ -1,6 +1,7 @@
 import type { VetoEffects, VetoRefinementCtx, VetoTypeAny } from 'src/types';
 import type { ZodArray } from 'zod';
 
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { z } from 'zod';
 
 // eslint-disable-next-line prefer-destructuring
@@ -20,6 +21,7 @@ type MakeElementsUniqueOptions =
       /** a custom error (sub-)path that allows creating the element is not unique error on a sub field */
       elementErrorPath?: string[];
       /** helper to transform array elements before comparing them */
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       mapFn?: (arg: any) => any;
       /** custom error method in case elements are not unique (global) */
       message?: string;
@@ -87,7 +89,9 @@ type ArrayRefinements = {
 export const refineArray = <T extends ReturnType<VArray>>(schema: T) => {
   type Element = T['element'];
 
-  return (refinements: ArrayRefinements): VetoEffects<Element> => {
+  return (
+    refinements: ArrayRefinements,
+  ): VetoEffects<VArraySchema<Element>> => {
     let _schema;
 
     // add unique refinement

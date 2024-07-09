@@ -1,5 +1,6 @@
 import type { ZodEnum } from 'zod';
 
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { z } from 'zod';
 
 // eslint-disable-next-line prefer-destructuring
