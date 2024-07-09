@@ -241,7 +241,7 @@ export const veto = <T extends VetoSchema>(
         // see: https://github.com/colinhacks/zod#strict
         .strict();
 
-  type SchemaType = z.infer<typeof vSchema>;
+  type SchemaType = vInfer<T>;
 
   const validate = <InputType extends VetoInput>(
     input: InputType,

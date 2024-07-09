@@ -20,7 +20,7 @@ describe('validate', () => {
     expect(result).toHaveProperty('data', input);
   });
 
-  it('schema can be a zod type', () => {
+  it('schema can be a zod object type', () => {
     const schema = object({ stringField: string() });
     const input = { stringField: 'a string' };
     const result = v(schema).validate(input);
