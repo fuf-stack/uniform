@@ -8,7 +8,9 @@ exports[`Story Snapshots > AllPlacements 1`] = `
     <span
       class="cursor-pointer"
     >
-      top
+      <p>
+        top
+      </p>
     </span>
   </div>
   <div
@@ -17,7 +19,9 @@ exports[`Story Snapshots > AllPlacements 1`] = `
     <span
       class="cursor-pointer"
     >
-      bottom
+      <p>
+        bottom
+      </p>
     </span>
   </div>
   <div
@@ -26,7 +30,9 @@ exports[`Story Snapshots > AllPlacements 1`] = `
     <span
       class="cursor-pointer"
     >
-      left
+      <p>
+        left
+      </p>
     </span>
   </div>
   <div
@@ -35,7 +41,9 @@ exports[`Story Snapshots > AllPlacements 1`] = `
     <span
       class="cursor-pointer"
     >
-      right
+      <p>
+        right
+      </p>
     </span>
   </div>
 </div>
@@ -46,7 +54,9 @@ exports[`Story Snapshots > Default 1`] = `
   <span
     class="cursor-pointer"
   >
-    hover me
+    <p>
+      hover me
+    </p>
   </span>
 </div>
 `;

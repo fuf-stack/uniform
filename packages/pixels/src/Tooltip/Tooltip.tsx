@@ -10,6 +10,7 @@ export const tooltipVariants = tv({
   slots: {
     base: '',
     content: '',
+    wrapper: 'cursor-pointer',
   },
 });
 
@@ -58,19 +59,21 @@ const Tooltip = ({
   const classNames = variantsToClassNames(variants, _className, 'base');
 
   return (
-    <NextTooltip
-      classNames={classNames}
-      containerPadding={containerPadding}
-      content={content}
-      defaultOpen={defaultOpen}
-      onClick={(e) => e.preventDefault()}
-      onOpenChange={onOpenChange}
-      placement={placement}
-      shouldFlip
-      showArrow
-    >
-      <span className="cursor-pointer">{children}</span>
-    </NextTooltip>
+    <span className={classNames.wrapper}>
+      <NextTooltip
+        classNames={classNames}
+        containerPadding={containerPadding}
+        content={content}
+        defaultOpen={defaultOpen}
+        onClick={(e) => e.preventDefault()}
+        onOpenChange={onOpenChange}
+        placement={placement}
+        shouldFlip
+        showArrow
+      >
+        {children}
+      </NextTooltip>
+    </span>
   );
 };
 
