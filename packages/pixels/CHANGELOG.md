@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.16.2](https://github.com/fuf-stack/uniform/compare/pixels-v0.16.1...pixels-v0.16.2) (2024-07-10)
+
+
+### Bug Fixes
+
+* **pixels:** fixed missing base wrapper slot in Tooltip ([8288198](https://github.com/fuf-stack/uniform/commit/82881981f53935b078d718f3b7374083166815ff))
+
 ## [0.16.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.16.0...pixels-v0.16.1) (2024-07-10)
 
 
