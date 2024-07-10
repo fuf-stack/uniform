@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.16.4](https://github.com/fuf-stack/uniform/compare/pixels-v0.16.3...pixels-v0.16.4) (2024-07-10)
+
+
+### Bug Fixes
+
+* **pixels:** fixed wrong tooltip positioning ([3e37611](https://github.com/fuf-stack/uniform/commit/3e37611511de8e6939ddc430abc66ea3a2220b01))
+
 ## [0.16.3](https://github.com/fuf-stack/uniform/compare/pixels-v0.16.2...pixels-v0.16.3) (2024-07-10)
 
 
