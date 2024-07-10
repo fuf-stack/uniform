@@ -9,8 +9,11 @@ import { tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
 // label variants
 export const labelVariants = tv({
   slots: {
+    avatar: '',
     base: '',
+    closeButton: '',
     content: '',
+    dot: '',
   },
 });
 
