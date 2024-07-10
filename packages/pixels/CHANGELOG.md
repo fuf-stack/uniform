@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.16.3](https://github.com/fuf-stack/uniform/compare/pixels-v0.16.2...pixels-v0.16.3) (2024-07-10)
+
+
+### Bug Fixes
+
+* **pixels:** fixed wrong Tooltip node structure ([f251cdd](https://github.com/fuf-stack/uniform/commit/f251cddaa8caa10edff3196d2d8c6c58a20e3a31))
+
 ## [0.16.2](https://github.com/fuf-stack/uniform/compare/pixels-v0.16.1...pixels-v0.16.2) (2024-07-10)
 
 
