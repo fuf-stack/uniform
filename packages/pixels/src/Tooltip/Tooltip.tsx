@@ -59,21 +59,19 @@ const Tooltip = ({
   const classNames = variantsToClassNames(variants, _className, 'base');
 
   return (
-    <span className={classNames.wrapper}>
-      <NextTooltip
-        classNames={classNames}
-        containerPadding={containerPadding}
-        content={content}
-        defaultOpen={defaultOpen}
-        onClick={(e) => e.preventDefault()}
-        onOpenChange={onOpenChange}
-        placement={placement}
-        shouldFlip
-        showArrow
-      >
-        {children}
-      </NextTooltip>
-    </span>
+    <NextTooltip
+      classNames={classNames}
+      containerPadding={containerPadding}
+      content={content}
+      defaultOpen={defaultOpen}
+      onClick={(e) => e.preventDefault()}
+      onOpenChange={onOpenChange}
+      placement={placement}
+      shouldFlip
+      showArrow
+    >
+      <span className={classNames.wrapper}>{children}</span>
+    </NextTooltip>
   );
 };
 
