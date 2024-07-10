@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.16.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.16.0...pixels-v0.16.1) (2024-07-10)
+
+
+### Bug Fixes
+
+* **pixels:** added missing Label  variant slots ([594f00e](https://github.com/fuf-stack/uniform/commit/594f00e954166c534e2556b9a15140d3050ba6d0))
+* **veto:** fix ts return type of refineArray ([83e2052](https://github.com/fuf-stack/uniform/commit/83e2052d851dae9098c737a89aa186bd360463e1))
+
 ## [0.16.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.15.4...pixels-v0.16.0) (2024-07-09)
 
 
