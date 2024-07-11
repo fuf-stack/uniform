@@ -6,7 +6,7 @@ exports[`Story Snapshots > AllPlacements 1`] = `
     class="mb-12"
   >
     <span
-      class="cursor-pointer"
+      class="inline-flex cursor-pointer items-center"
     >
       top
     </span>
@@ -15,7 +15,7 @@ exports[`Story Snapshots > AllPlacements 1`] = `
     class="mb-12"
   >
     <span
-      class="cursor-pointer"
+      class="inline-flex cursor-pointer items-center"
     >
       bottom
     </span>
@@ -24,7 +24,7 @@ exports[`Story Snapshots > AllPlacements 1`] = `
     class="mb-12"
   >
     <span
-      class="cursor-pointer"
+      class="inline-flex cursor-pointer items-center"
     >
       left
     </span>
@@ -33,7 +33,7 @@ exports[`Story Snapshots > AllPlacements 1`] = `
     class="mb-12"
   >
     <span
-      class="cursor-pointer"
+      class="inline-flex cursor-pointer items-center"
     >
       right
     </span>
@@ -44,7 +44,7 @@ exports[`Story Snapshots > AllPlacements 1`] = `
 exports[`Story Snapshots > Default 1`] = `
 <div>
   <span
-    class="cursor-pointer"
+    class="inline-flex cursor-pointer items-center"
   >
     hover me
   </span>

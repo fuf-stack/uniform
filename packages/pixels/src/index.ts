@@ -1,4 +1,8 @@
 // components
+export * from './Accordion';
+export * from './Avatar';
+export * from './AvatarGroup';
+export * from './Badge';
 export * from './Button';
 export * from './Card';
 export * from './Json';
@@ -10,6 +14,3 @@ export * from './Tooltip';
 
 // hooks
 export * from './hooks';
-
-// theme
-export * from './theme';

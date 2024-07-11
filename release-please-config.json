@@ -3,6 +3,7 @@
   "release-type": "node",
   "include-component-in-tag": true,
   "packages": {
+    "packages/pixel-utils": {},
     "packages/pixels": {},
     "packages/uniform": {},
     "packages/veto": {}
