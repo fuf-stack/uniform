@@ -77,7 +77,7 @@ exports[`Story Snapshots > AllowAllDelete 1`] = `
                 data-testid="fieldarray_0"
               >
                 <div
-                  class="group flex flex-col w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+                  class="group flex flex-col data-[hidden=true]:hidden w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
                   data-filled="true"
                   data-filled-within="true"
                   data-has-elements="true"
@@ -231,7 +231,7 @@ exports[`Story Snapshots > Custom 1`] = `
                 data-testid="some_test_id_0"
               >
                 <div
-                  class="group flex flex-col w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+                  class="group flex flex-col data-[hidden=true]:hidden w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
                   data-filled="true"
                   data-filled-within="true"
                   data-has-elements="true"
@@ -277,7 +277,7 @@ exports[`Story Snapshots > Custom 1`] = `
                   </div>
                 </div>
                 <div
-                  class="group flex flex-col w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+                  class="group flex flex-col data-[hidden=true]:hidden w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
                   data-filled="true"
                   data-filled-within="true"
                   data-has-elements="true"
@@ -535,7 +535,7 @@ exports[`Story Snapshots > Default 1`] = `
                 data-testid="some_test_id_0"
               >
                 <div
-                  class="group flex flex-col w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+                  class="group flex flex-col data-[hidden=true]:hidden w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
                   data-filled="true"
                   data-filled-within="true"
                   data-has-elements="true"
@@ -698,7 +698,7 @@ exports[`Story Snapshots > Dragable 1`] = `
                 data-testid="fieldarray_0"
               >
                 <div
-                  class="group flex flex-col w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
+                  class="group flex flex-col data-[hidden=true]:hidden w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
                   data-filled="true"
                   data-filled-within="true"
                   data-has-elements="true"
@@ -817,7 +817,7 @@ exports[`Story Snapshots > Dragable 1`] = `
                 data-testid="fieldarray_1"
               >
                 <div
-                  class="group flex flex-col w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
+                  class="group flex flex-col data-[hidden=true]:hidden w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
                   data-filled="true"
                   data-filled-within="true"
                   data-has-elements="true"
@@ -974,7 +974,7 @@ exports[`Story Snapshots > Duplicate 1`] = `
                 data-testid="some_test_id_0"
               >
                 <div
-                  class="group flex flex-col w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+                  class="group flex flex-col data-[hidden=true]:hidden w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
                   data-filled="true"
                   data-filled-within="true"
                   data-has-elements="true"
@@ -1020,7 +1020,7 @@ exports[`Story Snapshots > Duplicate 1`] = `
                   </div>
                 </div>
                 <div
-                  class="group flex flex-col w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+                  class="group flex flex-col data-[hidden=true]:hidden w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
                   data-filled="true"
                   data-filled-within="true"
                   data-has-elements="true"
@@ -1192,7 +1192,7 @@ exports[`Story Snapshots > HideAllButAdd 1`] = `
                 data-testid="fieldarray_0"
               >
                 <div
-                  class="group flex flex-col w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+                  class="group flex flex-col data-[hidden=true]:hidden w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
                   data-filled="true"
                   data-filled-within="true"
                   data-has-elements="true"
@@ -1401,7 +1401,7 @@ exports[`Story Snapshots > HideAllButtons 1`] = `
                 data-testid="fieldarray_0"
               >
                 <div
-                  class="group flex flex-col w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+                  class="group flex flex-col data-[hidden=true]:hidden w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
                   data-filled="true"
                   data-filled-within="true"
                   data-has-elements="true"
@@ -1595,7 +1595,7 @@ exports[`Story Snapshots > Invalid 1`] = `
                 data-testid="fieldarray_0"
               >
                 <div
-                  class="group flex flex-col w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+                  class="group flex flex-col data-[hidden=true]:hidden w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
                   data-filled="true"
                   data-filled-within="true"
                   data-has-elements="true"
@@ -1819,7 +1819,7 @@ exports[`Story Snapshots > Required 1`] = `
                 data-testid="fieldarray_0"
               >
                 <div
-                  class="group flex flex-col w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+                  class="group flex flex-col data-[hidden=true]:hidden w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
                   data-filled="true"
                   data-filled-within="true"
                   data-has-elements="true"
@@ -2037,7 +2037,7 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
                 data-testid="fieldarray_0"
               >
                 <div
-                  class="group flex flex-col w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
+                  class="group flex flex-col data-[hidden=true]:hidden w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
                   data-filled="true"
                   data-filled-within="true"
                   data-has-elements="true"
@@ -2177,7 +2177,7 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
                 data-testid="fieldarray_1"
               >
                 <div
-                  class="group flex flex-col w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
+                  class="group flex flex-col data-[hidden=true]:hidden w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
                   data-filled="true"
                   data-filled-within="true"
                   data-has-elements="true"
