@@ -4,6 +4,6 @@ import storySnapshots from '@repo/storybook-config/story-snapshots';
 
 import * as stories from './RadioGroup.stories';
 
-describe.skip('Story Snapshots', () => {
+describe('Story Snapshots', () => {
   storySnapshots(stories);
 });

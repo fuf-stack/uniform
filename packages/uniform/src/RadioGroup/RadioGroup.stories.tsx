@@ -6,10 +6,10 @@ import { action } from '@storybook/addon-actions';
 import { userEvent, within } from '@storybook/test';
 
 import { SubmitButton } from '@fuf-stack/uniform';
+import { veto } from '@fuf-stack/veto';
+import * as vt from '@fuf-stack/veto';
 
-// import v, * as vt from '@fuf-stack/veto';
-
-import Form from '../Form';
+import { Form } from '../Form';
 import RadioGroup from './RadioGroup';
 
 const meta: Meta<typeof RadioGroup> = {
@@ -17,7 +17,11 @@ const meta: Meta<typeof RadioGroup> = {
   component: RadioGroup,
   decorators: [
     (Story, { parameters }) => (
-      <Form {...(parameters?.formProps || {})} onSubmit={action('onSubmit')}>
+      <Form
+        className="min-w-60"
+        onSubmit={action('onSubmit')}
+        {...(parameters?.formProps || {})}
+      >
         <Story />
         <div className="mt-4 flex justify-end">
           <SubmitButton />
@@ -103,9 +107,9 @@ export const Inline: Story = {
 };
 
 export const WithInitialValue: Story = {
-  // parameters: {
-  //   formProps: { initialValues: { radioGroupField: 'option 2' } },
-  // },
+  parameters: {
+    formProps: { initialValues: { radioGroupField: 'option 2' } },
+  },
   args: {
     name: 'radioGroupField',
     options: [
@@ -139,12 +143,12 @@ export const DisabledOption: Story = {
   },
 };
 
-// const requiredValidation = v({
-//   radioGroupField: vt.string(),
-// });
+const requiredValidation = veto({
+  radioGroupField: vt.string(),
+});
 
 export const Required: Story = {
-  // parameters: { formProps: { validation: requiredValidation } },
+  parameters: { formProps: { validation: requiredValidation } },
   args: {
     label: 'radioGroupField',
     name: 'radioGroupField',
@@ -157,15 +161,15 @@ export const Required: Story = {
 };
 
 export const Invalid: Story = {
-  // parameters: {
-  //   formProps: {
-  //     validation: v({
-  //       radioGroupField: vt
-  //         .string()
-  //         .refine((value) => value !== 'two', 'Please use another option'),
-  //     }),
-  //   },
-  // },
+  parameters: {
+    formProps: {
+      validation: veto({
+        radioGroupField: vt
+          .string()
+          .refine((value) => value !== 'two', 'Please use another option'),
+      }),
+    },
+  },
   args: {
     name: 'radioGroupField',
     label: 'radioGroupField',

@@ -51,6 +51,11 @@
       "require": "./dist/partials/FieldValidationError/index.cjs",
       "types": "./dist/partials/FieldValidationError/index.d.ts"
     },
+    "./RadioGroup": {
+      "import": "./dist/RadioGroup/index.js",
+      "require": "./dist/RadioGroup/index.cjs",
+      "types": "./dist/RadioGroup/index.d.ts"
+    },
     "./Select": {
       "import": "./dist/Select/index.js",
       "require": "./dist/Select/index.cjs",

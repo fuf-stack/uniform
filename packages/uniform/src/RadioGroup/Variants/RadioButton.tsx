@@ -1,5 +1,4 @@
-import classNames from 'classnames';
-
+import { cn } from '@fuf-stack/pixel-utils';
 import { Button } from '@fuf-stack/pixels';
 
 interface RadioButtonProps {
@@ -25,7 +24,7 @@ export const RadioButton = ({
   return (
     <Button
       key={`index_${value}`}
-      className={classNames(className)}
+      className={cn(className)}
       disabled={isDisabled}
       onClick={() => {
         return onChange(value);

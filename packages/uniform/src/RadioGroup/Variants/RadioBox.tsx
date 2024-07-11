@@ -3,14 +3,15 @@ import type { ReactNode } from 'react';
 
 import { useRadio } from '@nextui-org/radio';
 import { VisuallyHidden } from '@react-aria/visually-hidden';
-import classNames from 'classnames';
+
+import { cn } from '@fuf-stack/pixel-utils';
 
 interface RadioProps extends NextRadioProps {
+  /** icon for the option */
   icon?: ReactNode;
 }
 
 export const RadioBox = ({ icon = undefined, ...props }: RadioProps) => {
-  // TODO: define props
   const {
     children,
     Component,
@@ -26,8 +27,9 @@ export const RadioBox = ({ icon = undefined, ...props }: RadioProps) => {
 
   return (
     <Component
+      // eslint-disable-next-line react/jsx-props-no-spreading
       {...getBaseProps()}
-      className={classNames(
+      className={cn(
         'group inline-flex flex-auto cursor-pointer items-center justify-between gap-4 rounded-lg border-2 border-default p-4 hover:bg-content2 data-[selected=true]:border-primary',
         {
           // disabled styles
@@ -36,16 +38,21 @@ export const RadioBox = ({ icon = undefined, ...props }: RadioProps) => {
       )}
     >
       <VisuallyHidden>
+        {/* eslint-disable-next-line react/jsx-props-no-spreading  */}
         <input {...getInputProps()} />
       </VisuallyHidden>
+      {/* eslint-disable-next-line react/jsx-props-no-spreading  */}
       <span {...getWrapperProps()}>
+        {/* eslint-disable-next-line react/jsx-props-no-spreading  */}
         <span {...getControlProps()} />
       </span>
       {icon}
       <div
+        // eslint-disable-next-line react/jsx-props-no-spreading
         {...getLabelWrapperProps()}
-        className={classNames(getLabelWrapperProps().className, 'grow')}
+        className={cn(getLabelWrapperProps().className, 'grow')}
       >
+        {/* eslint-disable-next-line react/jsx-props-no-spreading  */}
         {children && <span {...getLabelProps()}>{children}</span>}
         {description && (
           <span className="text-small text-foreground opacity-70">
