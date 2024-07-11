@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.5.0](https://github.com/fuf-stack/uniform/compare/uniform-v0.4.0...uniform-v0.5.0) (2024-07-11)
+
+
+### Features
+
+* **uniform:** add initial FieldArray component ([#277](https://github.com/fuf-stack/uniform/issues/277)) ([9b7b436](https://github.com/fuf-stack/uniform/commit/9b7b4367f4bc4ee7d43f25b3b2492bb00c204885))
+* **uniform:** add initial RadioGroup component ([#276](https://github.com/fuf-stack/uniform/issues/276)) ([8a2588e](https://github.com/fuf-stack/uniform/commit/8a2588e204c657914b813dfcd9e05cf827e285dd))
+* **uniform:** add initial Select component  ([#272](https://github.com/fuf-stack/uniform/issues/272)) ([9563809](https://github.com/fuf-stack/uniform/commit/95638095a7b9e25f191e4455ec35947510c17251))
+* **uniform:** add initial Switch component ([#242](https://github.com/fuf-stack/uniform/issues/242)) ([806181a](https://github.com/fuf-stack/uniform/commit/806181a30bbca3449fdc9bf1077c8a4251a2c8ce))
+* **uniform:** add initial TextArea component ([#275](https://github.com/fuf-stack/uniform/issues/275)) ([2fc0bae](https://github.com/fuf-stack/uniform/commit/2fc0bae76046160425e77de52bc7617610be48f7))
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-hook-form to v7.52.0 ([ab9294e](https://github.com/fuf-stack/uniform/commit/ab9294ee2fd054b94300d7593ea0cb5b7f1bfedb))
+* **deps:** update dependency react-hook-form to v7.52.1 ([01eb8ea](https://github.com/fuf-stack/uniform/commit/01eb8ea2836561e70e0019e3c0e2d2de6d17624a))
+* **deps:** update nextui monorepo ([b0b96f1](https://github.com/fuf-stack/uniform/commit/b0b96f16ee79eebc910f803741a7724d03da69f6))
+* **uniform:** update FieldArray snapshot ([7473e5a](https://github.com/fuf-stack/uniform/commit/7473e5a2b1a9b63aa09feac5e63ba14ea47bedf5))
+* update snapshots after nextui update ([b831bee](https://github.com/fuf-stack/uniform/commit/b831beebd9eaa26896455fa3f2ada8d7d4600f7c))
+
 ## [0.4.0](https://github.com/fuf-stack/uniform/compare/uniform-v0.3.2...uniform-v0.4.0) (2024-06-05)
 
 ### Features
