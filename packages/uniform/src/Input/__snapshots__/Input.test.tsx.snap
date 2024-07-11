@@ -6,7 +6,7 @@ exports[`Story Snapshots > Default 1`] = `
     class="flex w-full flex-row justify-between gap-6"
   >
     <form
-      class="flex-grow"
+      class="flex-grow min-w-60"
       data-testid=""
     >
       <div
@@ -94,7 +94,7 @@ exports[`Story Snapshots > Disabled 1`] = `
     class="flex w-full flex-row justify-between gap-6"
   >
     <form
-      class="flex-grow"
+      class="flex-grow min-w-60"
       data-testid=""
     >
       <div
@@ -186,7 +186,7 @@ exports[`Story Snapshots > Invalid 1`] = `
     class="flex w-full flex-row justify-between gap-6"
   >
     <form
-      class="flex-grow"
+      class="flex-grow min-w-60"
       data-testid=""
     >
       <div
@@ -276,7 +276,7 @@ exports[`Story Snapshots > Required 1`] = `
     class="flex w-full flex-row justify-between gap-6"
   >
     <form
-      class="flex-grow"
+      class="flex-grow min-w-60"
       data-testid=""
     >
       <div
@@ -285,6 +285,7 @@ exports[`Story Snapshots > Required 1`] = `
         data-filled-within="true"
         data-has-elements="true"
         data-has-label="true"
+        data-required="true"
         data-slot="base"
       >
         <div
@@ -297,7 +298,7 @@ exports[`Story Snapshots > Required 1`] = `
             style="cursor: text;"
           >
             <label
-              class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:left-0 left-3 rtl:left-auto rtl:right-3 text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
+              class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 after:content-['*'] after:text-danger after:ml-0.5 rtl:after:ml-[unset] rtl:after:mr-0.5 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:left-0 left-3 rtl:left-auto rtl:right-3 text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
               data-slot="label"
               for="react-aria-react-useId-mock"
               id="react-aria-react-useId-mock"
@@ -312,6 +313,7 @@ exports[`Story Snapshots > Required 1`] = `
                 aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
                 aria-label=" "
                 aria-labelledby="react-aria-react-useId-mock"
+                aria-required="true"
                 class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 text-small h-full"
                 data-slot="input"
                 data-testid="inputfield"
@@ -329,8 +331,10 @@ exports[`Story Snapshots > Required 1`] = `
         class="mt-4 flex justify-end"
       >
         <button
-          class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white"
+          class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white"
+          data-disabled="true"
           data-testid="form_submit_button"
+          disabled=""
           type="submit"
         >
           Submit
@@ -366,15 +370,16 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
     class="flex w-full flex-row justify-between gap-6"
   >
     <form
-      class="flex-grow"
+      class="flex-grow min-w-60"
       data-testid=""
     >
       <div
-        class="group flex flex-col w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+        class="group flex flex-col w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
         data-filled="true"
         data-filled-within="true"
         data-has-elements="true"
         data-has-label="true"
+        data-has-value="true"
         data-slot="base"
       >
         <div
@@ -382,7 +387,7 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
           data-slot="main-wrapper"
         >
           <div
-            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-primary"
+            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-primary is-filled"
             data-slot="input-wrapper"
             style="cursor: text;"
           >
@@ -400,14 +405,16 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
                 aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
                 aria-label=" "
                 aria-labelledby="react-aria-react-useId-mock"
-                class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 text-small h-full"
+                class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 text-small h-full is-filled"
+                data-filled="true"
+                data-filled-within="true"
                 data-slot="input"
                 data-testid="inputfield"
                 id="react-aria-react-useId-mock"
                 name="inputField"
                 placeholder=" "
                 type="text"
-                value=""
+                value="initial value"
               />
             </div>
           </div>
@@ -454,7 +461,7 @@ exports[`Story Snapshots > WithLabel 1`] = `
     class="flex w-full flex-row justify-between gap-6"
   >
     <form
-      class="flex-grow"
+      class="flex-grow min-w-60"
       data-testid=""
     >
       <div
@@ -544,7 +551,7 @@ exports[`Story Snapshots > WithSelect 1`] = `
     class="flex w-full flex-row justify-between gap-6"
   >
     <form
-      class="flex-grow"
+      class="flex-grow min-w-60"
       data-testid=""
     >
       <div

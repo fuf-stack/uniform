@@ -3,7 +3,7 @@ import type { AvatarProps } from './Avatar';
 
 import { FaEnvelope } from 'react-icons/fa';
 
-import Menu from '../Menu';
+import { Menu } from '../Menu';
 import Avatar from './Avatar';
 
 import avatar from './sample_image/avatar.png'; // https://pixabay.com/vectors/avatar-icon-placeholder-profile-3814049/
