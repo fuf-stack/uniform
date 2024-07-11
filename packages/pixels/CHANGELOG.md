@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.17.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.16.4...pixels-v0.17.0) (2024-07-11)
+
+
+### Features
+
+* **uniform:** add initial Select component  ([#272](https://github.com/fuf-stack/uniform/issues/272)) ([9563809](https://github.com/fuf-stack/uniform/commit/95638095a7b9e25f191e4455ec35947510c17251))
+
 ## [0.16.4](https://github.com/fuf-stack/uniform/compare/pixels-v0.16.3...pixels-v0.16.4) (2024-07-10)
 
 ### Bug Fixes
