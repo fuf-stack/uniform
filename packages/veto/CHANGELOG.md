@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/fuf-stack/uniform/compare/veto-v0.4.3...veto-v0.5.0) (2024-07-11)
+
+
+### Features
+
+* **uniform:** add initial Select component  ([#272](https://github.com/fuf-stack/uniform/issues/272)) ([9563809](https://github.com/fuf-stack/uniform/commit/95638095a7b9e25f191e4455ec35947510c17251))
+
 ## [0.4.3](https://github.com/fuf-stack/uniform/compare/veto-v0.4.2...veto-v0.4.3) (2024-07-09)
 
 ### Bug Fixes
