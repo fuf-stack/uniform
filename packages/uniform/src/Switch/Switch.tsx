@@ -4,8 +4,8 @@ import { useInput } from '@nextui-org/input';
 import { Switch as NextSwitch } from '@nextui-org/switch';
 
 import { useFormContext } from '../hooks';
-import FieldCopyTestIdButton from '../partials/FieldCopyTestIdButton';
-import FieldValidationError from '../partials/FieldValidationError';
+import { FieldCopyTestIdButton } from '../partials/FieldCopyTestIdButton';
+import { FieldValidationError } from '../partials/FieldValidationError';
 
 export interface SwitchProps {
   /** CSS class name */
