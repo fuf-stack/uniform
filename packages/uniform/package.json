@@ -16,6 +16,11 @@
       "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
     },
+    "./FieldArray": {
+      "import": "./dist/FieldArray/index.js",
+      "require": "./dist/FieldArray/index.cjs",
+      "types": "./dist/FieldArray/index.d.ts"
+    },
     "./Form": {
       "import": "./dist/Form/index.js",
       "require": "./dist/Form/index.cjs",

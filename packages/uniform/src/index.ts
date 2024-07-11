@@ -1,3 +1,4 @@
+export * from './FieldArray';
 export * from './Form';
 export * from './Grid';
 export * from './helpers';
