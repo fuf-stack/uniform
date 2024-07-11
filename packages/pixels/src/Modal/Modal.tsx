@@ -1,5 +1,5 @@
+import type { TVClassName, TVProps } from '@fuf-stack/pixel-utils';
 import type { ReactNode } from 'react';
-import type { VariantProps } from 'tailwind-variants';
 
 import {
   Modal as NextModal,
@@ -8,7 +8,8 @@ import {
   ModalFooter as NextModalFooter,
   ModalHeader as NextModalHeader,
 } from '@nextui-org/modal';
-import { tv } from 'tailwind-variants';
+
+import { tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
 
 // modal variants
 export const modalVariants = tv({
@@ -32,16 +33,14 @@ export const modalVariants = tv({
   },
 });
 
-type ModalVariantProps = VariantProps<typeof modalVariants>;
-type ModalVariantSlots = Partial<
-  Record<keyof ReturnType<typeof modalVariants>, string>
->;
+type VariantProps = TVProps<typeof modalVariants>;
+type ClassName = TVClassName<typeof modalVariants>;
 
-export interface ModalProps extends ModalVariantProps {
+export interface ModalProps extends VariantProps {
   /** modal body content */
   children?: ReactNode;
   /** CSS class name */
-  className?: string | ModalVariantSlots;
+  className?: ClassName;
   /** modal footer */
   footer?: ReactNode;
   /** modal header */
@@ -51,7 +50,7 @@ export interface ModalProps extends ModalVariantProps {
   /** close event handler */
   onClose: () => void;
   /** modal size */
-  size?: ModalVariantProps['size'];
+  size?: VariantProps['size'];
   /** HTML data-testid attribute used in e2e tests */
   testId?: string;
 }
@@ -71,18 +70,7 @@ const Modal = ({
 }: ModalProps) => {
   // classNames from slots
   const variants = modalVariants({ size });
-  const classNameObj = (typeof className === 'object' && className) || {};
-  const classNames = {
-    backdrop: variants.backdrop({ className: classNameObj.backdrop }),
-    base: variants.base({
-      className: classNameObj.base || (className as string),
-    }),
-    body: variants.body({ className: classNameObj.body }),
-    closeButton: variants.closeButton({ className: classNameObj.closeButton }),
-    footer: variants.footer({ className: classNameObj.footer }),
-    header: variants.header({ className: classNameObj.header }),
-    wrapper: variants.wrapper({ className: classNameObj.wrapper }),
-  };
+  const classNames = variantsToClassNames(variants, className, 'base');
 
   return (
     <NextModal

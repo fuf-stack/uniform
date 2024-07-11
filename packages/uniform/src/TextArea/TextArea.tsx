@@ -3,11 +3,12 @@ import type { ReactNode } from 'react';
 import { Controller } from 'react-hook-form';
 
 import { Textarea as NextTextArea } from '@nextui-org/input';
-import cn from 'classnames';
+
+import { cn } from '@fuf-stack/pixel-utils';
 
 import { useFormContext } from '../hooks';
-import FieldCopyTestIdButton from '../partials/FieldCopyTestIdButton';
-import FieldValidationError from '../partials/FieldValidationError';
+import { FieldCopyTestIdButton } from '../partials/FieldCopyTestIdButton';
+import { FieldValidationError } from '../partials/FieldValidationError';
 
 export interface TextAreaProps {
   /** Child components. The content of the textarea. */

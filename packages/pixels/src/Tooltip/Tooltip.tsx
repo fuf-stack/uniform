@@ -1,7 +1,21 @@
+import type { TVClassName, TVProps } from '@fuf-stack/pixel-utils';
 import type { ReactNode } from 'react';
 
 import { Tooltip as NextTooltip } from '@nextui-org/tooltip';
-import cn from 'classnames';
+
+import { tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
+
+// tooltip variants
+export const tooltipVariants = tv({
+  slots: {
+    base: '',
+    content: '',
+    wrapper: 'inline-flex cursor-pointer items-center',
+  },
+});
+
+type VariantProps = TVProps<typeof tooltipVariants>;
+type ClassName = TVClassName<typeof tooltipVariants>;
 
 export const tooltipPlacementOptions = [
   'top',
@@ -11,11 +25,11 @@ export const tooltipPlacementOptions = [
 ] as const;
 export type TooltipPlacement = (typeof tooltipPlacementOptions)[number];
 
-export interface TooltipProps {
+export interface TooltipProps extends VariantProps {
   /** trigger child components */
   children: ReactNode;
   /** CSS class name */
-  className?: string;
+  className?: ClassName;
   /** placement padding in px */
   containerPadding?: number;
   /** content displayed in the tooltip */
@@ -33,26 +47,32 @@ export interface TooltipProps {
  */
 const Tooltip = ({
   children,
-  className = undefined,
+  className: _className = undefined,
   content,
   placement = 'top',
   defaultOpen = false,
   onOpenChange = undefined,
   containerPadding = 0,
-}: TooltipProps) => (
-  <NextTooltip
-    className={cn(className)}
-    containerPadding={containerPadding}
-    content={content}
-    defaultOpen={defaultOpen}
-    onClick={(e) => e.preventDefault()}
-    onOpenChange={onOpenChange}
-    placement={placement}
-    shouldFlip
-    showArrow
-  >
-    <span className="cursor-pointer">{children}</span>
-  </NextTooltip>
-);
+}: TooltipProps) => {
+  // classNames from slots
+  const variants = tooltipVariants();
+  const classNames = variantsToClassNames(variants, _className, 'base');
+
+  return (
+    <NextTooltip
+      classNames={classNames}
+      containerPadding={containerPadding}
+      content={content}
+      defaultOpen={defaultOpen}
+      onClick={(e) => e.preventDefault()}
+      onOpenChange={onOpenChange}
+      placement={placement}
+      shouldFlip
+      showArrow
+    >
+      <span className={classNames.wrapper}>{children}</span>
+    </NextTooltip>
+  );
+};
 
 export default Tooltip;
