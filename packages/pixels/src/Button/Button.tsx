@@ -1,9 +1,10 @@
+import type { TVProps } from '@fuf-stack/pixel-utils';
 import type { ButtonProps as NextButtonProps } from '@nextui-org/button';
 import type { ReactNode } from 'react';
-import type { VariantProps } from 'tailwind-variants';
 
 import { Button as NextButton } from '@nextui-org/button';
-import { tv } from 'tailwind-variants';
+
+import { tv } from '@fuf-stack/pixel-utils';
 
 import LoadingSpinner from './subcomponents/LoadingSpinner';
 
@@ -44,15 +45,15 @@ export const buttonVariants = tv({
   ],
 });
 
-type ButtonVariantProps = VariantProps<typeof buttonVariants>;
+type VariantProps = TVProps<typeof buttonVariants>;
 
-export interface ButtonProps extends ButtonVariantProps {
+export interface ButtonProps extends VariantProps {
   /** sets HTML aria-label attribute */
   ariaLabel?: string;
   /** child components */
   children?: ReactNode;
   /** CSS class name */
-  className?: string | string[];
+  className?: string;
   /** next ui button color  */
   color?: NextButtonProps['color'];
   /** disables function of the button. */

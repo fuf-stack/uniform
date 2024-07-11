@@ -1,7 +1,7 @@
 {
   "name": "@fuf-stack/veto",
   "description": "fuf schema validation library",
-  "version": "0.3.0",
+  "version": "0.4.3",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -19,22 +19,24 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fuf-stack/uniforms.git",
+    "url": "https://github.com/fuf-stack/uniform.git",
     "directory": "packages/veto"
   },
   "bugs": {
-    "url": "https://github.com/fuf-stack/uniforms/issues"
+    "url": "https://github.com/fuf-stack/uniform/issues"
   },
   "scripts": {
-    "build": "rm -rf ./dist && tsup",
+    "build": "rm -rf ./dist && tsup --dts-resolve",
+    "build:dts": "pnpm dts-bundle-generator --config ./dtsbundle.config.js",
     "dev": "tsup --watch",
     "test": "vitest ./src"
   },
   "dependencies": {
-    "validator": "13.12.0",
-    "zod": "3.23.8"
+    "validator": "13.12.0"
   },
   "devDependencies": {
-    "@types/validator": "13.11.9"
+    "@types/validator": "13.12.0",
+    "dts-bundle-generator": "9.5.1",
+    "zod": "3.23.8"
   }
 }

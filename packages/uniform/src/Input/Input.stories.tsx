@@ -74,6 +74,14 @@ export const Required: Story = {
   },
 };
 
+export const Disabled: Story = {
+  args: {
+    label: 'Input Field',
+    name: 'inputField',
+    disabled: true,
+  },
+};
+
 export const Invalid: Story = {
   parameters: {
     formProps: {
@@ -114,9 +122,9 @@ export const WithSelect: Story = {
         id="currency"
         name="currency"
       >
-        <option>@ger.win.int.kn.</option>
-        <option>@corp.int.kn</option>
-        <option>@usa.win.int.kn</option>
+        <option>@fuf.cool</option>
+        <option>@gmail.com</option>
+        <option>@pixelpost.org</option>
       </select>
     ),
   },

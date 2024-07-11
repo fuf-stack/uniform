@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-import cn from 'classnames';
+import { cn } from '@fuf-stack/pixel-utils';
 
 export interface GridProps {
   /** child components */

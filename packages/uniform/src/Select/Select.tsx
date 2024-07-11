@@ -4,8 +4,8 @@ import { Controller } from 'react-hook-form';
 import ReactSelect, { components } from 'react-select';
 
 import { useSelect } from '@nextui-org/select';
-import classNames from 'classnames';
-import { tv } from 'tailwind-variants';
+
+import { cn, tv } from '@fuf-stack/pixel-utils';
 
 import { useFormContext } from '../hooks';
 import { FieldCopyTestIdButton } from '../partials/FieldCopyTestIdButton';
@@ -203,10 +203,7 @@ const Select = ({
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         field: { onChange, value, ref, onBlur },
       }) => (
-        <div
-          className={classNames(className, 'mt-2')}
-          data-testid={`${testId}_select`}
-        >
+        <div className={cn(className, 'mt-2')} data-testid={`${testId}_select`}>
           {label && (
             <label
               htmlFor={`react-select-${name}-input`} // {getTriggerProps().id}

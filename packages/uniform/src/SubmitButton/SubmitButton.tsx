@@ -1,8 +1,7 @@
 import type { ButtonProps } from '@fuf-stack/pixels';
 import type { ReactNode } from 'react';
 
-import cn from 'classnames';
-
+import { cn } from '@fuf-stack/pixel-utils';
 import { Button } from '@fuf-stack/pixels';
 
 import { slugify } from '../helpers';

@@ -3,28 +3,31 @@ import type {
   ZodError,
   ZodErrorMap,
   ZodIssueCode,
-  ZodObject,
-  ZodRawShape,
-  ZodTypeAny,
 } from 'zod';
+import type { VetoObject, VetoRawShape, VetoTypeAny } from './types';
 
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { z } from 'zod';
+
+export type VetoErrorMap = ZodErrorMap;
+
+const issueCodes = z.ZodIssueCode;
 
 // global zod error map
 // see: https://zod.dev/ERROR_HANDLING?id=global-error-map
-const exErrorMap: ZodErrorMap = (issue, ctx) => {
+const exErrorMap: VetoErrorMap = (issue, ctx) => {
   /*
   This is where you override the various error codes
   */
   switch (issue.code) {
-    case z.ZodIssueCode.invalid_type:
+    case issueCodes.invalid_type:
       if (issue.received === 'undefined') {
         return { message: 'Field is required' };
       }
       return { message: ctx.defaultError };
 
     // improve error message of discriminated unions, when field is undefined
-    case z.ZodIssueCode.invalid_union_discriminator:
+    case issueCodes.invalid_union_discriminator:
       // eslint-disable-next-line no-case-declarations
       const received = issue.path.reduce((acc, c) => acc && acc[c], ctx.data);
       if (received === undefined) {
@@ -40,8 +43,6 @@ const exErrorMap: ZodErrorMap = (issue, ctx) => {
 z.setErrorMap(exErrorMap);
 
 /** veto schema types */
-export interface VetoRawShape extends ZodRawShape {}
-export interface VetoTypeAny extends ZodTypeAny {}
 export type VetoSchema = VetoRawShape | VetoTypeAny;
 
 type VetoOptions = {
@@ -55,8 +56,10 @@ export type VetoSuccess<SchemaType> = SafeParseSuccess<SchemaType> & {
   errors: null;
 };
 
+type VetoIssueCode = ZodIssueCode;
+
 type VetoFieldError = {
-  code: ZodIssueCode;
+  code: VetoIssueCode;
   message: string;
 };
 
@@ -70,11 +73,42 @@ export type VetoError = {
   errors: VetoFormattedError;
 };
 
+type VetoUnformatedError = ZodError<VetoInput>;
+
+/**
+ * This TypeScript type alias vInfer defines a conditional type that
+ * takes in a generic type parameter T, which can either be a schema
+ * definition from the VetoSchema interface or a schema
+ * instance from the VetoTypeAny interface.
+ *
+ * If T is a schema definition from VetoSchema, it is
+ * converted into a VetoObject and its inferred type is returned
+ * using the z.infer method. If T is already a VetoTypeAny schema
+ * instance, then the inferred type is simply returned
+ * using the z.infer method.
+ *
+ * The resulting inferred type returned by vInfer is a
+ * TypeScript type that represents the expected shape of data
+ * validated by the given schema. This ensures type safety when
+ * working with ex-veto data.
+ *
+ * @see https://zod.dev/?id=type-inference
+ */
+// eslint-disable-next-line @typescript-eslint/naming-convention
+export type vInfer<T extends VetoSchema> =
+  // wrap raw shapes with VetoObject
+  T extends VetoRawShape
+    ? z.infer<VetoObject<T>>
+    : // just infer type when already veto object
+      T extends VetoTypeAny
+      ? z.infer<T>
+      : never;
+
 /**
  * Helper method that formats zod errors to desired
  * veto error format
  */
-const formatError = (error: ZodError<VetoInput>): VetoFormattedError => {
+const formatError = (error: VetoUnformatedError): VetoFormattedError => {
   const errorFormatted = error.format(
     // remove path from issue
     ({ path: _path, ...issue }) => issue,
@@ -83,7 +117,7 @@ const formatError = (error: ZodError<VetoInput>): VetoFormattedError => {
   const reformatError = (
     levelError: Record<string, unknown>,
     isTopLevelError = false,
-  ): any => {
+  ) => {
     let errorCopy = JSON.parse(JSON.stringify(levelError));
 
     // move params of of custom errors to top level (remove params)
@@ -195,16 +229,19 @@ const formatError = (error: ZodError<VetoInput>): VetoFormattedError => {
   return reformatError(errorFormatted, true);
 };
 
-const v = <T extends VetoSchema>(schema: T, options?: VetoOptions) => {
+export const veto = <T extends VetoSchema>(
+  schema: T,
+  options?: VetoOptions,
+) => {
   const vSchema = schema.safeParse
-    ? (schema as ZodTypeAny)
+    ? (schema as VetoTypeAny)
     : z
-        .object(schema as ZodRawShape)
+        .object(schema as VetoRawShape)
         //  If there are any unknown keys in the input always throw an error.
         // see: https://github.com/colinhacks/zod#strict
         .strict();
 
-  type SchemaType = z.infer<typeof vSchema>;
+  type SchemaType = vInfer<T>;
 
   const validate = <InputType extends VetoInput>(
     input: InputType,
@@ -266,34 +303,6 @@ const v = <T extends VetoSchema>(schema: T, options?: VetoOptions) => {
 };
 
 /** A veto instance */
-export type VetoInstance = ReturnType<typeof v>;
+export type VetoInstance = ReturnType<typeof veto>;
 
-/**
- * This TypeScript type alias vInfer defines a conditional type that
- * takes in a generic type parameter T, which can either be a schema
- * definition from the VetoSchema interface or a schema
- * instance from the ZodTypeAny interface of zod.
- *
- * If T is a schema definition from VetoSchema, it is
- * converted into a ZodObject and its inferred type is returned
- * using the z.infer method. If T is already a ZodTypeAny schema
- * instance, then the inferred type is simply returned
- * using the z.infer method.
- *
- * The resulting inferred type returned by vInfer is a
- * TypeScript type that represents the expected shape of data
- * validated by the given schema. This ensures type safety when
- * working with ex-veto data.
- *
- * @see https://zod.dev/?id=type-inference
- */
-export type vInfer<T extends VetoSchema> =
-  // wrap raw shapes with ZodObject
-  T extends ZodRawShape
-    ? z.infer<ZodObject<T, 'strict', ZodTypeAny>>
-    : // just infer type when already zod object
-      T extends ZodTypeAny
-      ? z.infer<T>
-      : never;
-
-export default v;
+export default veto;
