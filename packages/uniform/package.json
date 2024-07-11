@@ -60,6 +60,11 @@
       "import": "./dist/SubmitButton/index.js",
       "require": "./dist/SubmitButton/index.cjs",
       "types": "./dist/SubmitButton/index.d.ts"
+    },
+    "./Switch": {
+      "import": "./dist/Switch/index.js",
+      "require": "./dist/Switch/index.cjs",
+      "types": "./dist/Switch/index.d.ts"
     }
   },
   "files": [
