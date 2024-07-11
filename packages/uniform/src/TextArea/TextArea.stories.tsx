@@ -4,18 +4,22 @@ import { action } from '@storybook/addon-actions';
 import { userEvent, within } from '@storybook/test';
 
 import { SubmitButton } from '@fuf-stack/uniform';
+import { veto } from '@fuf-stack/veto';
+import * as vt from '@fuf-stack/veto';
 
-// import v, * as vt from '@fuf-stack/veto';
-
-import Form from '../Form';
+import { Form } from '../Form';
 import TextArea from './TextArea';
 
-export default {
+const meta: Meta<typeof TextArea> = {
   title: 'uniform/TextArea',
   component: TextArea,
   decorators: [
     (Story, { parameters }) => (
-      <Form {...(parameters?.formProps || {})} onSubmit={action('onSubmit')}>
+      <Form
+        className="min-w-60"
+        onSubmit={action('onSubmit')}
+        {...(parameters?.formProps || {})}
+      >
         <Story />
         <div className="mt-4 flex justify-end">
           <SubmitButton />
@@ -23,8 +27,9 @@ export default {
       </Form>
     ),
   ],
-} as Meta<typeof TextArea>;
+};
 
+export default meta;
 type Story = StoryObj<typeof TextArea>;
 
 export const Default: Story = {
@@ -34,45 +39,45 @@ export const Default: Story = {
 };
 
 export const WithInitialValue: Story = {
-  // parameters: {
-  //   formProps: {
-  //     initialValues: {
-  //       textareaField:
-  //         'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
-  //     },
-  //   },
-  // },
+  parameters: {
+    formProps: {
+      initialValues: {
+        textareaField:
+          'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
+      },
+    },
+  },
   args: {
     name: 'textareaField',
   },
 };
 
-// const requiredValidation = v({
-//   textareaField: vt.string(),
-// });
+const requiredValidation = veto({
+  textareaField: vt.string(),
+});
 
 export const Required: Story = {
-  // parameters: { formProps: { validation: requiredValidation } },
+  parameters: { formProps: { validation: requiredValidation } },
   args: {
     label: 'textareaField',
     name: 'textareaField',
   },
 };
 
-// const validation = v({
-//   textareaField: vt
-//     .string()
-//     .regex(
-//       /^[a-z0-9\s]+$/i,
-//       'Must only contain alphanumeric characters and spaces.',
-//     )
-//     .min(2),
-// });
+const validation = veto({
+  textareaField: vt
+    .string()
+    .regex(
+      /^[a-z0-9\s]+$/i,
+      'Must only contain alphanumeric characters and spaces.',
+    )
+    .min(2),
+});
 
 export const Invalid: Story = {
-  // parameters: {
-  //   formProps: { validation },
-  // },
+  parameters: {
+    formProps: { validation },
+  },
   args: {
     label: 'Text Area',
     name: 'textareaField',

@@ -65,6 +65,11 @@
       "import": "./dist/Switch/index.js",
       "require": "./dist/Switch/index.cjs",
       "types": "./dist/Switch/index.d.ts"
+    },
+    "./TextArea": {
+      "import": "./dist/TextArea/index.js",
+      "require": "./dist/TextArea/index.cjs",
+      "types": "./dist/TextArea/index.d.ts"
     }
   },
   "files": [
