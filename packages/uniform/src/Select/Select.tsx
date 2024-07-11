@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import type { Props } from 'react-select';
 
 import { Controller } from 'react-hook-form';
@@ -18,6 +17,7 @@ type SelectOption = {
   /** option value */
   value: string;
 };
+
 export interface SelectProps {
   /** CSS class name */
   className?: string; // string;
@@ -83,7 +83,7 @@ const DropdownIndicatorComponent: typeof components.DropdownIndicator = (
   );
 };
 
-export const SelectVariants = tv({
+export const selectVariants = tv({
   slots: {
     clearIndicator:
       'rounded-md p-1 text-neutral-500 hover:cursor-pointer hover:bg-gray-200 hover:text-neutral-800 hover:dark:bg-default-200 hover:dark:text-default-500',
@@ -193,7 +193,7 @@ const Select = ({
     placeholder: placeholderSlot,
     singleValue: singleValueSlot,
     valueContainer: valueContainerSlot,
-  } = SelectVariants({ invalid });
+  } = selectVariants({ invalid });
 
   return (
     <Controller
@@ -219,7 +219,8 @@ const Select = ({
           <ReactSelect
             aria-errormessage=""
             aria-invalid={invalid}
-            data-testid={`${testId}_select`} // Does not affect the testId of the select, but is needed to pass it to sub-components
+            // Does not affect the testId of the select, but is needed to pass it to sub-components
+            data-testid={`${testId}_select`}
             // eslint-disable-next-line react/jsx-props-no-spreading
             {...() => {
               // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/naming-convention
@@ -231,9 +232,10 @@ const Select = ({
             }
             classNames={{
               control: ({ isFocused }) =>
+                // border focus style
                 controlSlot({
                   className: !invalid && isFocused && '!border-primary',
-                }), // make the border blue when focused
+                }),
               placeholder: () => placeholderSlot(),
               input: () => inputSlot(),
               valueContainer: () => valueContainerSlot(),

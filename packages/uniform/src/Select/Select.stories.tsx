@@ -19,9 +19,9 @@ const meta: Meta<typeof Select> = {
   decorators: [
     (Story, { parameters }) => (
       <Form
-        {...(parameters?.formProps || {})}
         onSubmit={action('onSubmit')}
         className="min-w-60"
+        {...(parameters?.formProps || {})}
       >
         <Story />
         <div className="mt-4 flex justify-end">
