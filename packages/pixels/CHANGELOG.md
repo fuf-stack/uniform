@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.17.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.17.0...pixels-v0.17.1) (2024-07-11)
+
+
+### Bug Fixes
+
+* update snapshots after nextui update ([b831bee](https://github.com/fuf-stack/uniform/commit/b831beebd9eaa26896455fa3f2ada8d7d4600f7c))
+
 ## [0.17.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.16.4...pixels-v0.17.0) (2024-07-11)
 
 
