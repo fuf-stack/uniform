@@ -10,7 +10,7 @@ exports[`Story Snapshots > Default 1`] = `
       data-testid=""
     >
       <div
-        class="group flex flex-col w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+        class="group flex flex-col data-[hidden=true]:hidden w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
         data-filled="true"
         data-filled-within="true"
         data-has-elements="true"
@@ -98,7 +98,7 @@ exports[`Story Snapshots > Disabled 1`] = `
       data-testid=""
     >
       <div
-        class="group flex flex-col w-full opacity-disabled pointer-events-none group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+        class="group flex flex-col data-[hidden=true]:hidden w-full opacity-disabled pointer-events-none group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
         data-disabled="true"
         data-filled="true"
         data-filled-within="true"
@@ -190,7 +190,7 @@ exports[`Story Snapshots > Invalid 1`] = `
       data-testid=""
     >
       <div
-        class="group flex flex-col w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+        class="group flex flex-col data-[hidden=true]:hidden w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
         data-filled="true"
         data-filled-within="true"
         data-has-elements="true"
@@ -280,7 +280,7 @@ exports[`Story Snapshots > Required 1`] = `
       data-testid=""
     >
       <div
-        class="group flex flex-col w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+        class="group flex flex-col data-[hidden=true]:hidden w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
         data-filled="true"
         data-filled-within="true"
         data-has-elements="true"
@@ -374,7 +374,7 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
       data-testid=""
     >
       <div
-        class="group flex flex-col w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
+        class="group flex flex-col data-[hidden=true]:hidden w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
         data-filled="true"
         data-filled-within="true"
         data-has-elements="true"
@@ -465,7 +465,7 @@ exports[`Story Snapshots > WithLabel 1`] = `
       data-testid=""
     >
       <div
-        class="group flex flex-col w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+        class="group flex flex-col data-[hidden=true]:hidden w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
         data-filled="true"
         data-filled-within="true"
         data-has-elements="true"
@@ -555,7 +555,7 @@ exports[`Story Snapshots > WithSelect 1`] = `
       data-testid=""
     >
       <div
-        class="group flex flex-col w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+        class="group flex flex-col data-[hidden=true]:hidden w-full group relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
         data-filled="true"
         data-filled-within="true"
         data-has-elements="true"

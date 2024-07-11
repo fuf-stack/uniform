@@ -10,7 +10,7 @@ exports[`Story Snapshots > Default 1`] = `
       data-testid=""
     >
       <div
-        class="group flex flex-col w-full"
+        class="group flex flex-col data-[hidden=true]:hidden w-full"
         data-filled="true"
         data-filled-within="true"
         data-has-elements="true"
@@ -93,7 +93,7 @@ exports[`Story Snapshots > Invalid 1`] = `
       data-testid=""
     >
       <div
-        class="group flex flex-col w-full"
+        class="group flex flex-col data-[hidden=true]:hidden w-full"
         data-filled="true"
         data-filled-within="true"
         data-has-elements="true"
@@ -182,7 +182,7 @@ exports[`Story Snapshots > Required 1`] = `
       data-testid=""
     >
       <div
-        class="group flex flex-col w-full"
+        class="group flex flex-col data-[hidden=true]:hidden w-full"
         data-filled="true"
         data-filled-within="true"
         data-has-elements="true"
@@ -271,7 +271,7 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
       data-testid=""
     >
       <div
-        class="group flex flex-col w-full is-filled"
+        class="group flex flex-col data-[hidden=true]:hidden w-full is-filled"
         data-filled="true"
         data-filled-within="true"
         data-has-elements="true"
