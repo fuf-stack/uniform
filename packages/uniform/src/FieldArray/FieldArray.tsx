@@ -30,8 +30,8 @@ import { useInput } from '@nextui-org/input';
 import { Button } from '@fuf-stack/pixels';
 
 import { useFormContext } from '../hooks';
-import FieldCopyTestIdButton from '../partials/FieldCopyTestIdButton';
-import FieldValidationError from '../partials/FieldValidationError';
+import { FieldCopyTestIdButton } from '../partials/FieldCopyTestIdButton';
+import { FieldValidationError } from '../partials/FieldValidationError';
 import FieldArrayField from './FieldArrayField';
 
 export type FieldArrayHideOption = 'add' | 'remove' | 'move' | 'insert' | 'all';

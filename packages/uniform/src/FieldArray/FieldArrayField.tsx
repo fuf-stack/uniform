@@ -17,7 +17,7 @@ import { Button } from '@fuf-stack/pixels';
 
 import { slugify } from '../helpers';
 import { useFormContext } from '../hooks';
-import FieldValidationError from '../partials/FieldValidationError';
+import { FieldValidationError } from '../partials/FieldValidationError';
 
 interface FieldArrayFieldProps {
   children: React.ReactNode;

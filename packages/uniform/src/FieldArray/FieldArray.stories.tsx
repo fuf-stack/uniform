@@ -8,31 +8,28 @@ import {
   FaTimes,
 } from 'react-icons/fa';
 
-// import { useEffect } from 'react';
-
-// import v, * as vt from '@fuf-stack/veto';
-// import { refineArray } from '@fuf-stack/veto';
 import { action } from '@storybook/addon-actions';
 import { expect, userEvent, within } from '@storybook/test';
 
 import { Button } from '@fuf-stack/pixels';
 import { SubmitButton } from '@fuf-stack/uniform';
+import { veto } from '@fuf-stack/veto';
+import * as vt from '@fuf-stack/veto';
 
-import Form from '../Form';
-import Input from '../Input';
+import { Form } from '../Form';
+import { Input } from '../Input';
 import FieldArray from './FieldArray';
 
 const meta: Meta<typeof FieldArray> = {
-  // TODO: Es entstehen divs im DOM vom Draggable (id:announcement-...)
-  parameters: {
-    storyshots: { disable: true },
-  },
-  title: 'uniform/DraggableFieldArray',
+  title: 'uniform/FieldArray',
   component: FieldArray,
-  argTypes: { onSubmit: { action: 'onSubmit' } },
   decorators: [
     (Story, { parameters }) => (
-      <Form {...(parameters?.formProps || {})} onSubmit={action('onSubmit')}>
+      <Form
+        className="min-w-60"
+        onSubmit={action('onSubmit')}
+        {...(parameters?.formProps || {})}
+      >
         <Story />
         <div className="mt-4 flex justify-end">
           <SubmitButton />
@@ -40,7 +37,7 @@ const meta: Meta<typeof FieldArray> = {
       </Form>
     ),
   ],
-} as Meta<typeof FieldArray>;
+};
 
 export default meta;
 type Story = StoryObj<typeof FieldArray>;
@@ -51,17 +48,16 @@ export const Default: Story = {
     children: (name, index) => (
       <Input name={`${name}.name`} label={`name ${index}`} />
     ),
-
     testId: 'some-test-id',
   },
 };
 
 export const WithInitialValue: Story = {
-  // parameters: {
-  //   formProps: {
-  //     initialValues: { FieldArray: [{ name: 'Max' }, { name: 'Maria' }] },
-  //   },
-  // },
+  parameters: {
+    formProps: {
+      initialValues: { FieldArray: [{ name: 'Max' }, { name: 'Maria' }] },
+    },
+  },
   args: {
     name: 'FieldArray',
     children: (name, index) => (
@@ -71,25 +67,25 @@ export const WithInitialValue: Story = {
   },
 };
 
-// const formValidator_2 = v({
-//   fieldArray: refineArray(vt.array(vt.object({ name: vt.string() })))({
-//     unique: {
-//       elementMessage: 'Contains duplicate name',
-//       mapFn: (val) => {
-//         return val?.name;
-//       },
-//       elementErrorPath: ['name'],
-//     },
-//   }),
-// });
+const validationRequired = veto({
+  fieldArray: vt.refineArray(vt.array(vt.object({ name: vt.string() })))({
+    unique: {
+      elementMessage: 'Contains duplicate name',
+      mapFn: (val) => {
+        return val?.name;
+      },
+      elementErrorPath: ['name'],
+    },
+  }),
+});
 
 export const Required: Story = {
-  // parameters: {
-  //   formProps: {
-  //     validation: formValidator_2,
-  //     initialValues: { fieldArray: [{}] },
-  //   },
-  // },
+  parameters: {
+    formProps: {
+      validation: validationRequired,
+      initialValues: { fieldArray: [{}] },
+    },
+  },
   args: {
     name: 'fieldArray',
     children: (name, index) => (
@@ -98,63 +94,33 @@ export const Required: Story = {
   },
 };
 
-// const formValidator = v({
-//   fieldArray: vt
-//     .array(
-//       vt
-//         .object({
-//           name: vt
-//             .string()
-//             .regex(
-//               /^[a-z0-9\s]+$/i,
-//               'Must only contain alphanumeric characters and spaces.',
-//             )
-//             .min(8),
-//         })
-//         .refine(() => false, {
-//           message: 'Custom error at the object level.',
-//         }),
-//     )
-//     .min(3),
-// });
-
-// export const InvalidStatic: Story = {
-//   // parameters: {
-//   //   formProps: {
-//   //     validation: formValidator,
-//   //     initialValues: { fieldArray: [{ name: 'invälid' }, { name: 'invälid' }] },
-//   //   },
-//   // },
-//   args: {
-//     name: 'fieldArray',
-//     label: 'FieldArray',
-//     children: (name, index) => (
-//       <Input
-//         testId={`${name}_name`}
-//         name={`${name}.name`}
-//         label={`name ${index}`}
-//       />
-//     ),
-//     testId: 'fieldarray',
-//   },
-//   render: (args) => {
-//     // eslint-disable-next-line react-hooks/rules-of-hooks
-//     const { trigger } = useFormContext();
-//     // eslint-disable-next-line react-hooks/rules-of-hooks
-//     useEffect(() => {
-//       trigger();
-//     }, []);
-//     return <FieldArray {...args} />;
-//   },
-// };
+const formValidator = veto({
+  fieldArray: vt
+    .array(
+      vt
+        .object({
+          name: vt
+            .string()
+            .regex(
+              /^[a-z0-9\s]+$/i,
+              'Must only contain alphanumeric characters and spaces.',
+            )
+            .min(8),
+        })
+        .refine(() => false, {
+          message: 'Custom error at the object level.',
+        }),
+    )
+    .min(3),
+});
 
 export const Invalid: Story = {
-  // parameters: {
-  //   formProps: {
-  //     validation: formValidator,
-  //     initialValues: { fieldArray: [{}] },
-  //   },
-  // },
+  parameters: {
+    formProps: {
+      validation: formValidator,
+      initialValues: { fieldArray: [{}] },
+    },
+  },
   args: {
     name: 'fieldArray',
     label: 'FieldArray',
@@ -218,11 +184,11 @@ export const Invalid: Story = {
 };
 
 export const HideAllButtons: Story = {
-  // parameters: {
-  //   formProps: {
-  //     initialValues: { fieldArray: [{}] },
-  //   },
-  // },
+  parameters: {
+    formProps: {
+      initialValues: { fieldArray: [{}] },
+    },
+  },
   args: {
     name: 'fieldArray',
     children: (name, index) => (
@@ -233,11 +199,11 @@ export const HideAllButtons: Story = {
   },
 };
 export const HideAllButAdd: Story = {
-  // parameters: {
-  //   formProps: {
-  //     initialValues: { fieldArray: [{}] },
-  //   },
-  // },
+  parameters: {
+    formProps: {
+      initialValues: { fieldArray: [{}] },
+    },
+  },
   args: {
     name: 'fieldArray',
     children: (name, index) => (
@@ -248,11 +214,11 @@ export const HideAllButAdd: Story = {
 };
 
 export const AllowAllDelete: Story = {
-  // parameters: {
-  //   formProps: {
-  //     initialValues: { fieldArray: [{}] },
-  //   },
-  // },
+  parameters: {
+    formProps: {
+      initialValues: { fieldArray: [{}] },
+    },
+  },
   args: {
     name: 'fieldArray',
     children: (name, index) => (
@@ -264,11 +230,11 @@ export const AllowAllDelete: Story = {
 };
 
 export const Custom: Story = {
-  // parameters: {
-  //   formProps: {
-  //     initialValues: { fieldArray: [{}] },
-  //   },
-  // },
+  parameters: {
+    formProps: {
+      initialValues: { fieldArray: [{}] },
+    },
+  },
   args: {
     name: 'fieldArray',
     children: (name, index, length, move, insert, remove) => (
@@ -276,11 +242,9 @@ export const Custom: Story = {
         <Input name={`${name}.name`} label={`name ${index}`} />
         <Input name={`${name}.age`} label={`age ${index}`} />
         <Button className="mt-2" onClick={() => move(index, index - 1)}>
-          {/* <Icon name="faAngleUp" /> */}
           <FaAngleUp />
         </Button>
         <Button className="mt-2" onClick={() => move(index, index + 1)}>
-          {/* <Icon name="faAngleDown" /> */}
           <FaAngleDown />
         </Button>
         <Button
@@ -289,11 +253,9 @@ export const Custom: Story = {
             insert(index + 1, {});
           }}
         >
-          {/* <Icon name="faPlus" /> */}
           <FaPlus />
         </Button>
         <Button className="mt-2" onClick={() => remove(index)}>
-          {/* <Icon name="faTimes" /> */}
           <FaTimes />
         </Button>
       </>
@@ -304,23 +266,14 @@ export const Custom: Story = {
 };
 
 export const Duplicate: Story = {
-  // parameters: {
-  //   formProps: {
-  //     initialValues: { fieldArray: [{}] },
-  //   },
-  // },
+  parameters: {
+    formProps: {
+      initialValues: { fieldArray: [{}] },
+    },
+  },
   args: {
     name: 'fieldArray',
-    children: (
-      name,
-
-      index,
-      length,
-      move,
-      insert,
-      remove,
-      duplicate,
-    ) => (
+    children: (name, index, remove, duplicate) => (
       <>
         <Input name={`${name}.name`} label={`name ${index}`} />
         <Input name={`${name}.age`} label={`age ${index}`} />
@@ -330,11 +283,9 @@ export const Duplicate: Story = {
             duplicate(index);
           }}
         >
-          {/* <Icon name="faCopy" /> */}
           <FaCopy />
         </Button>
         <Button className="mt-2" onClick={() => remove(index)}>
-          {/* <Icon name="faTimes" /> */}
           <FaTimes />
         </Button>
       </>
@@ -345,19 +296,18 @@ export const Duplicate: Story = {
 };
 
 export const Dragable: Story = {
-  // parameters: {
-  //   formProps: {
-  //     initialValues: {
-  //       fieldArray: [{ name: 'The First' }, { name: 'The Second' }],
-  //     },
-  //   },
-  // },
+  parameters: {
+    formProps: {
+      initialValues: {
+        fieldArray: [{ name: 'The First' }, { name: 'The Second' }],
+      },
+    },
+  },
   args: {
     name: 'fieldArray',
     children: (name, index) => (
       <Input name={`${name}.name`} label={`name at index ${index}`} />
     ),
-
     testId: 'fieldarray',
     moveField: ['drag-drop'],
   },
