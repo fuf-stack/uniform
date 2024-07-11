@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.0](https://github.com/fuf-stack/uniform/compare/pixel-utils-v0.0.2...pixel-utils-v0.1.0) (2024-07-11)
+
+
+### Features
+
+* **uniform:** add initial Select component  ([#272](https://github.com/fuf-stack/uniform/issues/272)) ([9563809](https://github.com/fuf-stack/uniform/commit/95638095a7b9e25f191e4455ec35947510c17251))
+
+
+### Bug Fixes
+
+* **veto:** fix ts return type of refineArray ([83e2052](https://github.com/fuf-stack/uniform/commit/83e2052d851dae9098c737a89aa186bd360463e1))
+
 ## [0.0.2](https://github.com/fuf-stack/uniform/compare/pixel-utils-v0.0.1...pixel-utils-v0.0.2) (2024-07-08)
 
 ### Bug Fixes
