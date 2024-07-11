@@ -1,4 +1,17 @@
+import type { VetoEffects, VetoRefinementCtx, VetoTypeAny } from 'src/types';
+import type { ZodArray } from 'zod';
+
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { z } from 'zod';
+
+// eslint-disable-next-line prefer-destructuring
+export const array: <T extends VetoTypeAny>(schema: T) => ZodArray<T> = z.array;
+
+export type VArray = typeof array;
+export type VArraySchema<T extends VetoTypeAny> = ZodArray<T>;
+
+/** when used with refine or superRefine */
+export type VArrayRefined<T extends VetoTypeAny> = VetoEffects<VArraySchema<T>>;
 
 type MakeElementsUniqueOptions =
   | true
@@ -8,6 +21,7 @@ type MakeElementsUniqueOptions =
       /** a custom error (sub-)path that allows creating the element is not unique error on a sub field */
       elementErrorPath?: string[];
       /** helper to transform array elements before comparing them */
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       mapFn?: (arg: any) => any;
       /** custom error method in case elements are not unique (global) */
       message?: string;
@@ -15,7 +29,7 @@ type MakeElementsUniqueOptions =
 
 /** Refinement to make array elements unique */
 const makeElementsUnique = (options: MakeElementsUniqueOptions) => {
-  return <T extends z.ZodTypeAny>(data: T[], ctx: z.RefinementCtx) => {
+  return <T extends VetoTypeAny>(data: T[], ctx: VetoRefinementCtx) => {
     const mapFn = (options !== true && options?.mapFn) || ((x) => x);
     // add error to (second) duplicate array element
     const dataMapped = data.map(mapFn);
@@ -72,14 +86,12 @@ type ArrayRefinements = {
   unique: MakeElementsUniqueOptions;
 };
 
-export const refineArray = <T extends z.ZodArray<z.ZodTypeAny, 'many'>>(
-  schema: T,
-) => {
+export const refineArray = <T extends ReturnType<VArray>>(schema: T) => {
   type Element = T['element'];
 
   return (
     refinements: ArrayRefinements,
-  ): z.ZodEffects<T, Element['_output'][], Element['_input'][]> => {
+  ): VetoEffects<VArraySchema<Element>> => {
     let _schema;
 
     // add unique refinement
@@ -91,5 +103,3 @@ export const refineArray = <T extends z.ZodArray<z.ZodTypeAny, 'many'>>(
     return _schema;
   };
 };
-
-export default z.array;

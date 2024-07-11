@@ -5,7 +5,7 @@ import type { FieldValues, SubmitHandler } from 'react-hook-form';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 
-import cn from 'classnames';
+import { cn } from '@fuf-stack/pixel-utils';
 
 import { slugify } from '../helpers';
 import FormProvider from './subcomponents/FormContext';
@@ -68,7 +68,7 @@ const Form = ({
           resolver: async (values) => {
             const { data, errors, ...rest } = await validation.validateAsync(
               removeNullishFields(values),
-          );
+            );
             // https://github.com/react-hook-form/resolvers/blob/master/zod/src/zod.ts
             return { values: data || {}, errors: errors || {}, ...rest };
           },

@@ -4,8 +4,7 @@ import { useEffect, useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import { FaBug } from 'react-icons/fa6';
 
-import cn from 'classnames';
-
+import { cn } from '@fuf-stack/pixel-utils';
 import { Button, Card, Json, useLocalStorage } from '@fuf-stack/pixels';
 
 import { useFormContext } from '../../hooks';

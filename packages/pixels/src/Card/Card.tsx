@@ -1,5 +1,5 @@
+import type { TVClassName, TVProps } from '@fuf-stack/pixel-utils';
 import type { ReactNode } from 'react';
-import type { VariantProps } from 'tailwind-variants';
 
 import {
   Card as NextCard,
@@ -8,7 +8,8 @@ import {
   CardHeader as NextCardHeader,
 } from '@nextui-org/card';
 import { Divider as NextDivider } from '@nextui-org/divider';
-import { tv } from 'tailwind-variants';
+
+import { tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
 
 // card styling variants
 export const cardVariants = tv({
@@ -21,16 +22,14 @@ export const cardVariants = tv({
   },
 });
 
-type CardVariantProps = VariantProps<typeof cardVariants>;
-type CardVariantSlots = Partial<
-  Record<keyof ReturnType<typeof cardVariants>, string>
->;
+type VariantProps = TVProps<typeof cardVariants>;
+type ClassName = TVClassName<typeof cardVariants>;
 
-export interface CardProps extends CardVariantProps {
+export interface CardProps extends VariantProps {
   /** card body content */
   children?: ReactNode;
   /** CSS class name */
-  className?: string | CardVariantSlots;
+  className?: ClassName;
   /** footer content */
   footer?: ReactNode;
   /** header content */
@@ -51,21 +50,13 @@ const Card = ({
 }: CardProps) => {
   // classNames from slots
   const variants = cardVariants();
-  const classNameObj = (typeof className === 'object' && className) || {};
-  const classNames = {
-    base: variants.base({
-      className: classNameObj.base || (className as string),
-    }),
-    header: variants.header({ className: classNameObj.header }),
-    body: variants.body({ className: classNameObj.body }),
-    footer: variants.footer({ className: classNameObj.footer }),
-  };
-
-  const divider = (
-    <NextDivider
-      className={variants.divider({ className: classNameObj.divider })}
-    />
+  const { divider: dividerClassName, ...classNames } = variantsToClassNames(
+    variants,
+    className,
+    'base',
   );
+
+  const divider = <NextDivider className={dividerClassName} />;
 
   return (
     <NextCard
