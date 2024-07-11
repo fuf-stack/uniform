@@ -5,7 +5,6 @@ import v, {
   discriminatedUnion,
   literal,
   nativeEnum,
-  object,
   objectLoose,
   string,
   vEnum,

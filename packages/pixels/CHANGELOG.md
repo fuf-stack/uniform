@@ -2,130 +2,112 @@
 
 ## [0.16.4](https://github.com/fuf-stack/uniform/compare/pixels-v0.16.3...pixels-v0.16.4) (2024-07-10)
 
-
 ### Bug Fixes
 
-* **pixels:** fixed wrong tooltip positioning ([3e37611](https://github.com/fuf-stack/uniform/commit/3e37611511de8e6939ddc430abc66ea3a2220b01))
+- **pixels:** fixed wrong tooltip positioning ([3e37611](https://github.com/fuf-stack/uniform/commit/3e37611511de8e6939ddc430abc66ea3a2220b01))
 
 ## [0.16.3](https://github.com/fuf-stack/uniform/compare/pixels-v0.16.2...pixels-v0.16.3) (2024-07-10)
 
-
 ### Bug Fixes
 
-* **pixels:** fixed wrong Tooltip node structure ([f251cdd](https://github.com/fuf-stack/uniform/commit/f251cddaa8caa10edff3196d2d8c6c58a20e3a31))
+- **pixels:** fixed wrong Tooltip node structure ([f251cdd](https://github.com/fuf-stack/uniform/commit/f251cddaa8caa10edff3196d2d8c6c58a20e3a31))
 
 ## [0.16.2](https://github.com/fuf-stack/uniform/compare/pixels-v0.16.1...pixels-v0.16.2) (2024-07-10)
 
-
 ### Bug Fixes
 
-* **pixels:** fixed missing base wrapper slot in Tooltip ([8288198](https://github.com/fuf-stack/uniform/commit/82881981f53935b078d718f3b7374083166815ff))
+- **pixels:** fixed missing base wrapper slot in Tooltip ([8288198](https://github.com/fuf-stack/uniform/commit/82881981f53935b078d718f3b7374083166815ff))
 
 ## [0.16.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.16.0...pixels-v0.16.1) (2024-07-10)
 
-
 ### Bug Fixes
 
-* **pixels:** added missing Label  variant slots ([594f00e](https://github.com/fuf-stack/uniform/commit/594f00e954166c534e2556b9a15140d3050ba6d0))
-* **veto:** fix ts return type of refineArray ([83e2052](https://github.com/fuf-stack/uniform/commit/83e2052d851dae9098c737a89aa186bd360463e1))
+- **pixels:** added missing Label variant slots ([594f00e](https://github.com/fuf-stack/uniform/commit/594f00e954166c534e2556b9a15140d3050ba6d0))
+- **veto:** fix ts return type of refineArray ([83e2052](https://github.com/fuf-stack/uniform/commit/83e2052d851dae9098c737a89aa186bd360463e1))
 
 ## [0.16.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.15.4...pixels-v0.16.0) (2024-07-09)
 
-
 ### Features
 
-* **pixels:** add slots to Label ([6c9b044](https://github.com/fuf-stack/uniform/commit/6c9b044e44e3954e8eebafca8ce1e09d662543d8))
-* **pixels:** add slots to Tooltip ([71c0d83](https://github.com/fuf-stack/uniform/commit/71c0d83230a3a5406413c1859d55511b37276a44))
+- **pixels:** add slots to Label ([6c9b044](https://github.com/fuf-stack/uniform/commit/6c9b044e44e3954e8eebafca8ce1e09d662543d8))
+- **pixels:** add slots to Tooltip ([71c0d83](https://github.com/fuf-stack/uniform/commit/71c0d83230a3a5406413c1859d55511b37276a44))
 
 ## [0.15.4](https://github.com/fuf-stack/uniform/compare/pixels-v0.15.3...pixels-v0.15.4) (2024-07-08)
 
-
 ### Bug Fixes
 
-* **pixels:** change Accordion paddings to allow stryling of header ([295a94f](https://github.com/fuf-stack/uniform/commit/295a94fb05c895417ea0d58bfeb66dd1652fca98))
+- **pixels:** change Accordion paddings to allow stryling of header ([295a94f](https://github.com/fuf-stack/uniform/commit/295a94fb05c895417ea0d58bfeb66dd1652fca98))
 
 ## [0.15.3](https://github.com/fuf-stack/uniform/compare/pixels-v0.15.2...pixels-v0.15.3) (2024-07-06)
 
-
 ### Bug Fixes
 
-* fix repo urls ([fc79102](https://github.com/fuf-stack/uniform/commit/fc791022cf9bdc72234f6e16013bcc0aa382f174))
+- fix repo urls ([fc79102](https://github.com/fuf-stack/uniform/commit/fc791022cf9bdc72234f6e16013bcc0aa382f174))
 
 ## [0.15.2](https://github.com/fuf-stack/uniform/compare/pixels-v0.15.1...pixels-v0.15.2) (2024-07-06)
 
-
 ### Bug Fixes
 
-* fix repository urls ([7d39c94](https://github.com/fuf-stack/uniform/commit/7d39c94bc3b73dd8820024db3ec6b131d9970f54))
+- fix repository urls ([7d39c94](https://github.com/fuf-stack/uniform/commit/7d39c94bc3b73dd8820024db3ec6b131d9970f54))
 
 ## [0.15.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.15.0...pixels-v0.15.1) (2024-07-05)
 
-
 ### Bug Fixes
 
-* **pixels:** fix Accordion divider color ([91412c6](https://github.com/fuf-stack/uniform/commit/91412c6a373935874b3b13ab794de69a024e5503))
+- **pixels:** fix Accordion divider color ([91412c6](https://github.com/fuf-stack/uniform/commit/91412c6a373935874b3b13ab794de69a024e5503))
 
 ## [0.15.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.14.1...pixels-v0.15.0) (2024-07-05)
 
-
 ### Features
 
-* **pixels:** added isOneChar and noOutline to Badge component ([1ff7e24](https://github.com/fuf-stack/uniform/commit/1ff7e24fc201ad509c504e505db4a8152c336fb7))
+- **pixels:** added isOneChar and noOutline to Badge component ([1ff7e24](https://github.com/fuf-stack/uniform/commit/1ff7e24fc201ad509c504e505db4a8152c336fb7))
 
 ## [0.14.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.14.0...pixels-v0.14.1) (2024-07-05)
 
-
 ### Bug Fixes
 
-* **pixels:** fixed missing Badge exports ([c13ed7c](https://github.com/fuf-stack/uniform/commit/c13ed7c8d17be624cb88508cee511a3c9fafed9b))
+- **pixels:** fixed missing Badge exports ([c13ed7c](https://github.com/fuf-stack/uniform/commit/c13ed7c8d17be624cb88508cee511a3c9fafed9b))
 
 ## [0.14.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.13.0...pixels-v0.14.0) (2024-07-05)
 
-
 ### Features
 
-* added Badge component ([157266a](https://github.com/fuf-stack/uniform/commit/157266a540d015669b823ff852e70b7117baf836))
+- added Badge component ([157266a](https://github.com/fuf-stack/uniform/commit/157266a540d015669b823ff852e70b7117baf836))
 
 ## [0.13.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.12.0...pixels-v0.13.0) (2024-07-04)
 
-
 ### Features
 
-* **pixels:** added slot support to Avatar component, added radius property to Label component ([4224b29](https://github.com/fuf-stack/uniform/commit/4224b290dabe34e9e3234fafc708c254aefe26c4))
-
+- **pixels:** added slot support to Avatar component, added radius property to Label component ([4224b29](https://github.com/fuf-stack/uniform/commit/4224b290dabe34e9e3234fafc708c254aefe26c4))
 
 ### Bug Fixes
 
-* **pixels:** fixed missing Label snapshot ([436eca7](https://github.com/fuf-stack/uniform/commit/436eca77d173780c2b3e0d2631072ba5a7d7146c))
+- **pixels:** fixed missing Label snapshot ([436eca7](https://github.com/fuf-stack/uniform/commit/436eca77d173780c2b3e0d2631072ba5a7d7146c))
 
 ## [0.12.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.11.0...pixels-v0.12.0) (2024-07-04)
 
-
 ### Features
 
-* **pixels:** add variant to label ([aa66ced](https://github.com/fuf-stack/uniform/commit/aa66ced339dbf6f1d5225f4caeaa0169db3cb83b))
+- **pixels:** add variant to label ([aa66ced](https://github.com/fuf-stack/uniform/commit/aa66ced339dbf6f1d5225f4caeaa0169db3cb83b))
 
 ## [0.11.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.10.1...pixels-v0.11.0) (2024-06-26)
 
-
 ### Features
 
-* **pixels:** use border style instead of hr divider in Accordion component ([04e95c3](https://github.com/fuf-stack/uniform/commit/04e95c31c8c2758ae2c15129d056b20c97404965))
-* **pixels:** use divide instead of border-b in Accordion component ([653f64b](https://github.com/fuf-stack/uniform/commit/653f64bbd5c0bf9cd62aaf51ea601567ae1ac09d))
+- **pixels:** use border style instead of hr divider in Accordion component ([04e95c3](https://github.com/fuf-stack/uniform/commit/04e95c31c8c2758ae2c15129d056b20c97404965))
+- **pixels:** use divide instead of border-b in Accordion component ([653f64b](https://github.com/fuf-stack/uniform/commit/653f64bbd5c0bf9cd62aaf51ea601567ae1ac09d))
 
 ## [0.10.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.10.0...pixels-v0.10.1) (2024-06-05)
 
-
 ### Bug Fixes
 
-* **pixels:** update package description ([c079374](https://github.com/fuf-stack/uniform/commit/c079374dcd7a446ced2a135cafb4e30b865ce486))
+- **pixels:** update package description ([c079374](https://github.com/fuf-stack/uniform/commit/c079374dcd7a446ced2a135cafb4e30b865ce486))
 
 ## [0.10.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.9.3...pixels-v0.10.0) (2024-06-05)
 
-
 ### Features
 
-* **pixel-utils:** add initial package ([e09d5a2](https://github.com/fuf-stack/uniform/commit/e09d5a2f1092f5a0f7bb006eac332a5cb38d1fd9))
+- **pixel-utils:** add initial package ([e09d5a2](https://github.com/fuf-stack/uniform/commit/e09d5a2f1092f5a0f7bb006eac332a5cb38d1fd9))
 
 ## [0.9.3](https://github.com/fuf-stack/uniform/compare/pixels-v0.9.2...pixels-v0.9.3) (2024-06-05)
 

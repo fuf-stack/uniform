@@ -2,7 +2,7 @@ import type { AvatarProps } from '../Avatar/Avatar';
 
 import { AvatarGroup as NextAvatarGroup } from '@nextui-org/avatar';
 
-import Avatar from '../Avatar';
+import { Avatar } from '../Avatar';
 
 export interface AvatarGroupProps {
   /* Display a border ring around the Avatar */
