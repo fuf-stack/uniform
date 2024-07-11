@@ -5,6 +5,7 @@ export * from './hooks';
 export * from './Input';
 export * from './partials/FieldCopyTestIdButton';
 export * from './partials/FieldValidationError';
+export * from './RadioGroup';
 export * from './Select';
 export * from './SubmitButton';
 export * from './Switch';
