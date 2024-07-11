@@ -1,4 +1,6 @@
 module.exports = {
+  // pixel-utils
+  'packages/pixel-utils/**/*.{js,ts,tsx}': ['eslint'],
   // pixels
   'packages/pixels/**/*.{js,ts,tsx}': ['eslint', 'vitest related --run'],
   // uniform

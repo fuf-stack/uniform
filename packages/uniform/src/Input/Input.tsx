@@ -3,15 +3,18 @@ import type { ReactNode } from 'react';
 import { Controller } from 'react-hook-form';
 
 import { Input as NextInput } from '@nextui-org/input';
-import cn from 'classnames';
+
+import { cn } from '@fuf-stack/pixel-utils';
 
 import { useFormContext } from '../hooks';
-import FieldCopyTestIdButton from '../partials/FieldCopyTestIdButton';
-import FieldValidationError from '../partials/FieldValidationError';
+import { FieldCopyTestIdButton } from '../partials/FieldCopyTestIdButton';
+import { FieldValidationError } from '../partials/FieldValidationError';
 
 export interface InputProps {
   /** CSS class name */
   className?: string;
+  /** input field is disabled */
+  disabled?: boolean;
   /** added content to the end of the input Field. */
   endContent?: ReactNode;
   /** form field label (set to false to disable label) */
@@ -33,6 +36,7 @@ export interface InputProps {
  */
 const Input = ({
   className = undefined,
+  disabled = false,
   endContent = undefined,
   label = undefined,
   name,
@@ -47,6 +51,7 @@ const Input = ({
   return (
     <Controller
       control={control}
+      disabled={disabled}
       name={name}
       render={({
         field: { disabled: isDisabled, onChange, onBlur, value, ref },

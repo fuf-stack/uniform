@@ -58,3 +58,29 @@ export const AllSizes: Story = {
     </>
   ),
 };
+
+export const AllRadius: Story = {
+  render: () => (
+    <>
+      {['none', 'sm', 'md', 'lg', 'full'].map((radius) => (
+        <div key={radius} style={{ marginTop: '10px' }}>
+          <Label radius={radius as LabelProps['radius']}>{radius}</Label>
+        </div>
+      ))}
+    </>
+  ),
+};
+
+export const AllVariants: Story = {
+  render: () => (
+    <>
+      {['solid', 'bordered', 'light', 'flat', 'faded', 'dot'].map((variant) => (
+        <div key={variant} style={{ marginTop: '10px' }}>
+          <Label color="success" variant={variant as LabelProps['variant']}>
+            {variant}
+          </Label>
+        </div>
+      ))}
+    </>
+  ),
+};

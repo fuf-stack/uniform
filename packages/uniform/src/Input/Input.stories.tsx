@@ -6,10 +6,10 @@ import { action } from '@storybook/addon-actions';
 import { expect, userEvent, within } from '@storybook/test';
 
 import { SubmitButton } from '@fuf-stack/uniform';
+import { veto } from '@fuf-stack/veto';
+import * as vt from '@fuf-stack/veto';
 
-// import v, * as vt from '@fuf-stack/veto';
-
-import Form from '../Form';
+import { Form } from '../Form';
 import Input from './Input';
 
 const meta: Meta<typeof Input> = {
@@ -17,7 +17,11 @@ const meta: Meta<typeof Input> = {
   component: Input,
   decorators: [
     (Story, { parameters }) => (
-      <Form {...(parameters?.formProps || {})} onSubmit={action('onSubmit')}>
+      <Form
+        className="min-w-60"
+        onSubmit={action('onSubmit')}
+        {...(parameters?.formProps || {})}
+      >
         <Story />
         <div className="mt-4 flex justify-end">
           <SubmitButton />
@@ -44,7 +48,7 @@ export const WithLabel: Story = {
 };
 
 export const WithInitialValue: Story = {
-  // parameters: { formProps: { initialValues: { inputField: 'initial value' } } },
+  parameters: { formProps: { initialValues: { inputField: 'initial value' } } },
   args: {
     name: 'inputField',
   },
@@ -57,34 +61,42 @@ export const WithInitialValue: Story = {
 };
 
 export const Required: Story = {
-  // parameters: {
-  //   formProps: {
-  //     validation: v({
-  //       inputField: vt.string(),
-  //     }),
-  //   },
-  // },
+  parameters: {
+    formProps: {
+      validation: veto({
+        inputField: vt.string(),
+      }),
+    },
+  },
   args: {
     label: 'Input Field',
     name: 'inputField',
   },
 };
 
+export const Disabled: Story = {
+  args: {
+    label: 'Input Field',
+    name: 'inputField',
+    disabled: true,
+  },
+};
+
 export const Invalid: Story = {
-  // parameters: {
-  //   formProps: {
-  //     validation: v({
-  //       inputField: vt
-  //         .string()
-  //         .regex(
-  //           /^[a-z0-9\s]+$/i,
-  //           'Must only contain alphanumeric characters and spaces.',
-  //         )
-  //         .min(2)
-  //         .optional(),
-  //     }),
-  //   },
-  // },
+  parameters: {
+    formProps: {
+      validation: veto({
+        inputField: vt
+          .string()
+          .regex(
+            /^[a-z0-9\s]+$/i,
+            'Must only contain alphanumeric characters and spaces.',
+          )
+          .min(2)
+          .optional(),
+      }),
+    },
+  },
   args: {
     label: 'InvalidField',
     name: 'inputField',
@@ -110,9 +122,9 @@ export const WithSelect: Story = {
         id="currency"
         name="currency"
       >
-        <option>@ger.win.int.kn.</option>
-        <option>@corp.int.kn</option>
-        <option>@usa.win.int.kn</option>
+        <option>@fuf.cool</option>
+        <option>@gmail.com</option>
+        <option>@pixelpost.org</option>
       </select>
     ),
   },

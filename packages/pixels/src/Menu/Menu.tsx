@@ -11,7 +11,8 @@ import {
   DropdownSection as NextDropdownSection,
   DropdownTrigger as NextDropdownTrigger,
 } from '@nextui-org/dropdown';
-import cn from 'classnames';
+
+import { cn } from '@fuf-stack/pixel-utils';
 
 /**
  * Menu item type

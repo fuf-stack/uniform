@@ -2,8 +2,60 @@ import { expect, it } from 'vitest';
 
 import v, { object, string } from 'src';
 
+const schema = {
+  objectField: object({ key: string() }),
+};
+
+const validInput = { objectField: { key: 'some string' } };
+
+it('rejects missing fields', () => {
+  const result = v(schema).validate({
+    objectField: {},
+  });
+  expect(result).toStrictEqual({
+    success: false,
+    data: null,
+    errors: {
+      _errors: [],
+      objectField: {
+        _errors: [],
+        key: [
+          {
+            code: 'invalid_type',
+            expected: 'string',
+            message: 'Field is required',
+            received: 'undefined',
+          },
+        ],
+      },
+    },
+  });
+});
+
+it('rejects unknown fields', () => {
+  const result = v(schema).validate({
+    objectField: {
+      key: 'some string',
+      otherField: 'some other string',
+    },
+  });
+  expect(result).toStrictEqual({
+    success: false,
+    data: null,
+    errors: {
+      _errors: [],
+      objectField: [
+        {
+          code: 'unrecognized_keys',
+          keys: ['otherField'],
+          message: "Unrecognized key(s) in object: 'otherField'",
+        },
+      ],
+    },
+  });
+});
+
 it('rejects non-object value', () => {
-  const schema = { objectField: object({ key: string() }) };
   const result = v(schema).validate({
     objectField: ['some string'],
   });
@@ -21,5 +73,14 @@ it('rejects non-object value', () => {
         },
       ],
     },
+  });
+});
+
+it('accepts valid object value', () => {
+  const result = v(schema).validate(validInput);
+  expect(result).toStrictEqual({
+    success: true,
+    data: validInput,
+    errors: null,
   });
 });
