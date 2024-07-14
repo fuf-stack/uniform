@@ -135,7 +135,7 @@
     "@types/debug": "4.1.12",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
-    "@uiw/react-json-view": "2.0.0-alpha.24",
+    "@uiw/react-json-view": "2.0.0-alpha.25",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   }
