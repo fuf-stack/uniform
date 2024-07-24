@@ -14,7 +14,7 @@
     "@types/node": "20.14.12",
     "@fuf-stack/eslint-config-fuf": "0.10.3",
     "@fuf-stack/project-cli-tools": "0.4.7",
-    "@fuf-stack/vitest-config": "0.1.4",
+    "@fuf-stack/vitest-config": "0.1.8",
     "ts-node": "10.9.2",
     "typescript": "5.5.4"
   },
