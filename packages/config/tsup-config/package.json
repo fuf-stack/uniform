@@ -6,6 +6,6 @@
   "type": "module",
   "main": "config.ts",
   "devDependencies": {
-    "tsup": "8.2.3"
+    "tsup": "8.2.4"
   }
 }
