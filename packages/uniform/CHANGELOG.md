@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.5.1](https://github.com/fuf-stack/uniform/compare/uniform-v0.5.0...uniform-v0.5.1) (2024-08-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @react-aria/visually-hidden to v3.8.13 ([ab0341a](https://github.com/fuf-stack/uniform/commit/ab0341a0f356b48428068495e1381d48dc41752f))
+* **deps:** update dependency @react-aria/visually-hidden to v3.8.14 ([38d8cee](https://github.com/fuf-stack/uniform/commit/38d8cee5dff8f4a518a6a8bc701dd4f4d96206fe))
+* **deps:** update dependency react-hook-form to v7.52.2 ([ce62b4b](https://github.com/fuf-stack/uniform/commit/ce62b4b3bc1b73b21373e891f5eaeabb1ee4f67f))
+
 ## [0.5.0](https://github.com/fuf-stack/uniform/compare/uniform-v0.4.0...uniform-v0.5.0) (2024-07-11)
 
 
