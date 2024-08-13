@@ -306,8 +306,8 @@ importers:
         specifier: 18.3.0
         version: 18.3.0
       '@types/slug':
-        specifier: 5.0.8
-        version: 5.0.8
+        specifier: 5.0.9
+        version: 5.0.9
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -3057,8 +3057,8 @@ packages:
   '@types/serve-static@1.15.7':
     resolution: {integrity: sha512-W8Ym+h8nhuRwaKPaDw34QUkwsGi6Rc4yYqvKFo5rm2FUEhCFbzVWrxXUxuKK8TASjWsysJY0nsmNCGhCOIsrOw==}
 
-  '@types/slug@5.0.8':
-    resolution: {integrity: sha512-mblTWR1OST257k1gZ3QvqG+ERSr8Ea6dyM1FH6Jtm4jeXi0/r0/95VNctofuiywPxCVQuE8AuFoqmvJ4iVUlXQ==}
+  '@types/slug@5.0.9':
+    resolution: {integrity: sha512-6Yp8BSplP35Esa/wOG1wLNKiqXevpQTEF/RcL/NV6BBQaMmZh4YlDwCgrrFSoUE4xAGvnKd5c+lkQJmPrBAzfQ==}
 
   '@types/stack-utils@2.0.3':
     resolution: {integrity: sha512-9aEbYZ3TbYMznPdcdr3SmIrLXwC/AKZXQeCf9Pgao5CKb8CyHuEX5jzWPTkvregvhRJHcpRO6BFoGW9ycaOkYw==}
@@ -11830,7 +11830,7 @@ snapshots:
       '@types/node': 20.14.15
       '@types/send': 0.17.4
 
-  '@types/slug@5.0.8': {}
+  '@types/slug@5.0.9': {}
 
   '@types/stack-utils@2.0.3': {}
 
