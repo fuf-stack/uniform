@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.18.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.17.1...pixels-v0.18.0) (2024-08-20)
+
+
+### Features
+
+* **pixels:** added placement property to Popover component ([05dce43](https://github.com/fuf-stack/uniform/commit/05dce4313d3fcd40d1c7170ea5f0f0469704675d))
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-icons to v5.3.0 ([a814999](https://github.com/fuf-stack/uniform/commit/a814999aa5805b9a944c2ed1d5722c0984c5563e))
+
 ## [0.17.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.17.0...pixels-v0.17.1) (2024-07-11)
 
 
