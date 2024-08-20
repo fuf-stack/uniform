@@ -14,10 +14,12 @@ export interface PopoverProps {
   content: ReactNode;
   /** HTML data-testid attribute used in e2e tests */
   contentTestId?: string;
-  /** placement of the popover relative to its trigger reference */
-  placement?: NextPopoverProps['placement'];
   /** use as controlled component  */
   openControlled?: { open: boolean; setOpen: (open: boolean) => void };
+  /** placement of the popover relative to its trigger reference */
+  placement?: NextPopoverProps['placement'];
+  /** The container element in which the overlay portal will be placed. */
+  portalContainer: NextPopoverProps['portalContainer'];
   /** HTML data-testid attribute used in e2e tests */
   testId?: string;
   /** popover title */
@@ -32,14 +34,16 @@ export default ({
   className = undefined,
   content,
   contentTestId = undefined,
-  placement = 'top',
   openControlled = undefined,
+  placement = 'top',
+  portalContainer = undefined,
   testId = undefined,
   title = undefined,
 }: PopoverProps) => {
   return (
     <Popover
       placement={placement}
+      portalContainer={portalContainer}
       radius="sm"
       showArrow
       // eslint-disable-next-line react/jsx-props-no-spreading
