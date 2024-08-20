@@ -19,7 +19,7 @@ export interface PopoverProps {
   /** placement of the popover relative to its trigger reference */
   placement?: NextPopoverProps['placement'];
   /** The container element in which the overlay portal will be placed. */
-  portalContainer: NextPopoverProps['portalContainer'];
+  portalContainer?: NextPopoverProps['portalContainer'];
   /** HTML data-testid attribute used in e2e tests */
   testId?: string;
   /** popover title */
