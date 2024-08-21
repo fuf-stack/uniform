@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.18.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.18.0...pixels-v0.18.1) (2024-08-21)
+
+
+### Bug Fixes
+
+* **pixels:** added optional flag to portalContainer property in Popover component ([cb50d51](https://github.com/fuf-stack/uniform/commit/cb50d51b19d1a2e7570e9c6de705e690c8483d1e))
+
 ## [0.18.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.17.1...pixels-v0.18.0) (2024-08-20)
 
 
