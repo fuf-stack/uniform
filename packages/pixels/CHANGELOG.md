@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.19.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.18.1...pixels-v0.19.0) (2024-08-23)
+
+
+### Features
+
+* **pixels:** added ScrollShadow component ([f60ff59](https://github.com/fuf-stack/uniform/commit/f60ff59231a841be62347e0c7e3b46e69e87add7))
+* **pixels:** extended Popover component ([6c32edf](https://github.com/fuf-stack/uniform/commit/6c32edfe54b662011f603f26fa6962c8f3d66f61))
+
 ## [0.18.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.18.0...pixels-v0.18.1) (2024-08-21)
 
 
