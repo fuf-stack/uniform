@@ -1,17 +1,32 @@
+import type { TVClassName, TVProps } from '@fuf-stack/pixel-utils';
 import type { PopoverProps as NextPopoverProps } from '@nextui-org/popover';
 import type { ReactNode } from 'react';
 
 import { Popover, PopoverContent, PopoverTrigger } from '@nextui-org/popover';
 
-import { cn } from '@fuf-stack/pixel-utils';
+import { tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
 
 import ScrollShadow from '../ScrollShadow/ScrollShadow';
 
-export interface PopoverProps {
+// popover styling variants
+export const popoverVariants = tv({
+  slots: {
+    body: 'w-full px-2.5 py-1',
+    content: 'flex max-h-[80vh] w-[400px] flex-col p-0',
+    footer: 'w-full px-2.5 py-1',
+    header: 'w-full px-2.5 py-1',
+    trigger: '',
+  },
+});
+
+type VariantProps = TVProps<typeof popoverVariants>;
+type ClassName = TVClassName<typeof popoverVariants>;
+
+export interface PopoverProps extends VariantProps {
   /** child components */
   children?: ReactNode;
   /** CSS class name */
-  className?: string | string[];
+  className?: ClassName;
   /** content of the popover */
   content: ReactNode;
   /** HTML data-testid attribute used in e2e tests */
@@ -37,7 +52,7 @@ export interface PopoverProps {
  */
 export default ({
   children = null,
-  className = undefined,
+  className: _className = undefined,
   content,
   contentTestId = undefined,
   footer = undefined,
@@ -48,9 +63,13 @@ export default ({
   testId = undefined,
   title = undefined,
 }: PopoverProps) => {
+  // className from slots
+  const variants = popoverVariants();
+  const className = variantsToClassNames(variants, _className, 'trigger');
+
   return (
     <Popover
-      classNames={{ content: 'p-0' }}
+      classNames={className}
       placement={placement}
       portalContainer={portalContainer}
       radius="sm"
@@ -61,27 +80,25 @@ export default ({
         ? { isOpen: openControlled.open, onOpenChange: openControlled.setOpen }
         : {})}
     >
-      <PopoverTrigger className={cn(className)} data-testid={testId}>
+      <PopoverTrigger data-testid={testId}>
         {/* NOTE: type and aria properties are injected by PopoverTrigger */}
         {/* eslint-disable-next-line react/button-has-type */}
         <button>{children}</button>
       </PopoverTrigger>
       <PopoverContent data-testid={contentTestId}>
-        <div className="flex max-h-[80vh] flex-col">
-          {title && (
-            <div className="px-2.5 py-1">
-              {title}
-              <hr />
-            </div>
-          )}
-          <ScrollShadow className="px-2.5 py-1">{content}</ScrollShadow>
-          {footer && (
-            <div className="px-2.5 py-1">
-              <hr />
-              {footer}
-            </div>
-          )}
-        </div>
+        {title && (
+          <div className={className.header}>
+            {title}
+            <hr />
+          </div>
+        )}
+        <ScrollShadow className={className.body}>{content}</ScrollShadow>
+        {footer && (
+          <div className={className.footer}>
+            <hr />
+            {footer}
+          </div>
+        )}
       </PopoverContent>
     </Popover>
   );
