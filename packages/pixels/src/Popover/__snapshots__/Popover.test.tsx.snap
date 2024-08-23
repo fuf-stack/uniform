@@ -1,6 +1,55 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Story Snapshots > BlockOuterScrollbar 1`] = `
+<div>
+  <div
+    class="h-[2000px]"
+  >
+    <button
+      aria-expanded="false"
+      class="z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased"
+      data-slot="trigger"
+      data-testid="testId42"
+      type="button"
+    >
+      i am the trigger
+    </button>
+  </div>
+</div>
+`;
+
 exports[`Story Snapshots > Default 1`] = `
+<div>
+  <button
+    aria-expanded="false"
+    class="z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased"
+    data-slot="trigger"
+    type="button"
+  >
+    i am the trigger
+  </button>
+</div>
+`;
+
+exports[`Story Snapshots > DoubleScrollbar 1`] = `
+<div>
+  <div
+    class="h-[2000px]"
+  >
+    <button
+      aria-expanded="false"
+      class="z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased"
+      data-slot="trigger"
+      data-testid="testId42"
+      type="button"
+    >
+      i am the trigger
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Story Snapshots > Footer 1`] = `
 <div>
   <button
     aria-expanded="false"
