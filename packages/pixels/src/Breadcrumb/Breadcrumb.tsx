@@ -53,7 +53,7 @@ export interface BreadcrumbProps extends VariantProps {
   hideSeparator?: boolean;
   /** disables all items */
   disabled?: boolean;
-  /** Maximum number of items to show without ... */
+  /** Maximum number of items to show without "..." in between */
   maxItems?: number;
   /** Radius of the Breadcrumb */
   radius?: 'none' | 'sm' | 'md' | 'lg' | 'full';
