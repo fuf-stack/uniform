@@ -14,7 +14,7 @@ export interface ScrollShadowProps {
 }
 
 /**
- * Scroll Shadow component based on [NextUI Card](https://nextui.org/docs/components/scroll-shadow)
+ * Scroll Shadow component based on [NextUI Scroll Shadow](https://nextui.org/docs/components/scroll-shadow)
  */
 export default ({
   children = null,
