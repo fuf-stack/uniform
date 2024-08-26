@@ -1,0 +1,1524 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Story Snapshots > AllSizes 1`] = `
+<div>
+  <div>
+    <span
+      class="mb-2"
+    >
+      sm
+      :
+    </span>
+    <nav
+      aria-label="Breadcrumbs"
+      class="mb-12"
+      data-slot="base"
+    >
+      <ol
+        class="flex flex-wrap list-none rounded-none"
+        data-slot="list"
+      >
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-tiny hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Home
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-tiny hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Music
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-tiny hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Artist
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-tiny hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Album
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            aria-current="page"
+            aria-disabled="true"
+            class="flex gap-1 items-center whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-tiny no-underline cursor-default transition-opacity text-foreground"
+            data-current="true"
+            data-slot="item"
+            role="link"
+          >
+            Song
+          </span>
+        </li>
+      </ol>
+    </nav>
+    <span
+      class="mb-2"
+    >
+      md
+      :
+    </span>
+    <nav
+      aria-label="Breadcrumbs"
+      class="mb-12"
+      data-slot="base"
+    >
+      <ol
+        class="flex flex-wrap list-none rounded-none"
+        data-slot="list"
+      >
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Home
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Music
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Artist
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Album
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            aria-current="page"
+            aria-disabled="true"
+            class="flex gap-1 items-center whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small no-underline cursor-default transition-opacity text-foreground"
+            data-current="true"
+            data-slot="item"
+            role="link"
+          >
+            Song
+          </span>
+        </li>
+      </ol>
+    </nav>
+    <span
+      class="mb-2"
+    >
+      lg
+      :
+    </span>
+    <nav
+      aria-label="Breadcrumbs"
+      class="mb-12"
+      data-slot="base"
+    >
+      <ol
+        class="flex flex-wrap list-none rounded-none"
+        data-slot="list"
+      >
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-medium hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Home
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-medium hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Music
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-medium hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Artist
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-medium hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Album
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            aria-current="page"
+            aria-disabled="true"
+            class="flex gap-1 items-center whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium no-underline cursor-default transition-opacity text-foreground"
+            data-current="true"
+            data-slot="item"
+            role="link"
+          >
+            Song
+          </span>
+        </li>
+      </ol>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Story Snapshots > AllVariants 1`] = `
+<div>
+  <div>
+    <span
+      class="mb-2"
+    >
+      solid
+      :
+    </span>
+    <nav
+      aria-label="Breadcrumbs"
+      class="mb-12"
+      data-slot="base"
+    >
+      <ol
+        class="flex flex-wrap list-none rounded-none bg-default-100 max-w-fit px-2.5 py-1.5"
+        data-slot="list"
+      >
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Home
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Music
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Artist
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Album
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            aria-current="page"
+            aria-disabled="true"
+            class="flex gap-1 items-center whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small no-underline cursor-default transition-opacity text-foreground"
+            data-current="true"
+            data-slot="item"
+            role="link"
+          >
+            Song
+          </span>
+        </li>
+      </ol>
+    </nav>
+    <span
+      class="mb-2"
+    >
+      bordered
+      :
+    </span>
+    <nav
+      aria-label="Breadcrumbs"
+      class="mb-12"
+      data-slot="base"
+    >
+      <ol
+        class="flex flex-wrap list-none rounded-none border-medium border-default-200 shadow-sm max-w-fit px-2.5 py-1.5"
+        data-slot="list"
+      >
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Home
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Music
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Artist
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Album
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            aria-current="page"
+            aria-disabled="true"
+            class="flex gap-1 items-center whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small no-underline cursor-default transition-opacity text-foreground"
+            data-current="true"
+            data-slot="item"
+            role="link"
+          >
+            Song
+          </span>
+        </li>
+      </ol>
+    </nav>
+    <span
+      class="mb-2"
+    >
+      light
+      :
+    </span>
+    <nav
+      aria-label="Breadcrumbs"
+      class="mb-12"
+      data-slot="base"
+    >
+      <ol
+        class="flex flex-wrap list-none rounded-none"
+        data-slot="list"
+      >
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Home
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Music
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Artist
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+            data-slot="item"
+            role="link"
+            tabindex="0"
+          >
+            Album
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 text-foreground/50"
+            data-slot="separator"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </span>
+        </li>
+        <li
+          class="flex items-center"
+          data-slot="base"
+        >
+          <span
+            aria-current="page"
+            aria-disabled="true"
+            class="flex gap-1 items-center whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small no-underline cursor-default transition-opacity text-foreground"
+            data-current="true"
+            data-slot="item"
+            role="link"
+          >
+            Song
+          </span>
+        </li>
+      </ol>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Story Snapshots > Default 1`] = `
+<div>
+  <nav
+    aria-label="Breadcrumbs"
+    data-slot="base"
+  >
+    <ol
+      class="flex flex-wrap list-none rounded-none"
+      data-slot="list"
+    >
+      <li
+        class="flex items-center"
+        data-slot="base"
+      >
+        <span
+          class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+          data-slot="item"
+          role="link"
+          tabindex="0"
+        >
+          Home
+        </span>
+        <span
+          aria-hidden="true"
+          class="px-1 text-foreground/50"
+          data-slot="separator"
+        >
+          <svg
+            aria-hidden="true"
+            fill="none"
+            focusable="false"
+            height="1em"
+            role="presentation"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="m9 18 6-6-6-6"
+            />
+          </svg>
+        </span>
+      </li>
+      <li
+        class="flex items-center"
+        data-slot="base"
+      >
+        <span
+          class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+          data-slot="item"
+          role="link"
+          tabindex="0"
+        >
+          Music
+        </span>
+        <span
+          aria-hidden="true"
+          class="px-1 text-foreground/50"
+          data-slot="separator"
+        >
+          <svg
+            aria-hidden="true"
+            fill="none"
+            focusable="false"
+            height="1em"
+            role="presentation"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="m9 18 6-6-6-6"
+            />
+          </svg>
+        </span>
+      </li>
+      <li
+        class="flex items-center"
+        data-slot="base"
+      >
+        <span
+          class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+          data-slot="item"
+          role="link"
+          tabindex="0"
+        >
+          Artist
+        </span>
+        <span
+          aria-hidden="true"
+          class="px-1 text-foreground/50"
+          data-slot="separator"
+        >
+          <svg
+            aria-hidden="true"
+            fill="none"
+            focusable="false"
+            height="1em"
+            role="presentation"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="m9 18 6-6-6-6"
+            />
+          </svg>
+        </span>
+      </li>
+      <li
+        class="flex items-center"
+        data-slot="base"
+      >
+        <span
+          class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+          data-slot="item"
+          role="link"
+          tabindex="0"
+        >
+          Album
+        </span>
+        <span
+          aria-hidden="true"
+          class="px-1 text-foreground/50"
+          data-slot="separator"
+        >
+          <svg
+            aria-hidden="true"
+            fill="none"
+            focusable="false"
+            height="1em"
+            role="presentation"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="m9 18 6-6-6-6"
+            />
+          </svg>
+        </span>
+      </li>
+      <li
+        class="flex items-center"
+        data-slot="base"
+      >
+        <span
+          aria-current="page"
+          aria-disabled="true"
+          class="flex gap-1 items-center whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small no-underline cursor-default transition-opacity text-foreground"
+          data-current="true"
+          data-slot="item"
+          role="link"
+        >
+          Song
+        </span>
+      </li>
+    </ol>
+  </nav>
+</div>
+`;
+
+exports[`Story Snapshots > WithMaxItems 1`] = `
+<div>
+  <nav
+    aria-label="Breadcrumbs"
+    data-slot="base"
+  >
+    <ol
+      class="flex flex-wrap list-none rounded-none"
+      data-slot="list"
+    >
+      <li
+        class="flex items-center"
+        data-slot="base"
+      >
+        <span
+          class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+          data-slot="item"
+          role="link"
+          tabindex="0"
+        >
+          Home
+        </span>
+        <span
+          aria-hidden="true"
+          class="px-1 text-foreground/50"
+          data-slot="separator"
+        >
+          <svg
+            aria-hidden="true"
+            fill="none"
+            focusable="false"
+            height="1em"
+            role="presentation"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="m9 18 6-6-6-6"
+            />
+          </svg>
+        </span>
+      </li>
+      <li
+        class="flex items-center"
+        data-slot="base"
+      >
+        <span
+          class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+          data-slot="item"
+          role="link"
+          tabindex="0"
+        >
+          <svg
+            aria-hidden="true"
+            class="text-medium"
+            data-slot="ellipsis"
+            fill="none"
+            height="1em"
+            shape-rendering="geometricPrecision"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <circle
+              cx="12"
+              cy="12"
+              fill="currentColor"
+              r="1"
+            />
+            <circle
+              cx="19"
+              cy="12"
+              fill="currentColor"
+              r="1"
+            />
+            <circle
+              cx="5"
+              cy="12"
+              fill="currentColor"
+              r="1"
+            />
+          </svg>
+        </span>
+        <span
+          aria-hidden="true"
+          class="px-1 text-foreground/50"
+          data-slot="separator"
+        >
+          <svg
+            aria-hidden="true"
+            fill="none"
+            focusable="false"
+            height="1em"
+            role="presentation"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="m9 18 6-6-6-6"
+            />
+          </svg>
+        </span>
+      </li>
+      <li
+        class="flex items-center"
+        data-slot="base"
+      >
+        <span
+          class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+          data-slot="item"
+          role="link"
+          tabindex="0"
+        >
+          Album
+        </span>
+        <span
+          aria-hidden="true"
+          class="px-1 text-foreground/50"
+          data-slot="separator"
+        >
+          <svg
+            aria-hidden="true"
+            fill="none"
+            focusable="false"
+            height="1em"
+            role="presentation"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="m9 18 6-6-6-6"
+            />
+          </svg>
+        </span>
+      </li>
+      <li
+        class="flex items-center"
+        data-slot="base"
+      >
+        <span
+          aria-current="page"
+          aria-disabled="true"
+          class="flex gap-1 items-center whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small no-underline cursor-default transition-opacity text-foreground"
+          data-current="true"
+          data-slot="item"
+          role="link"
+        >
+          Song
+        </span>
+      </li>
+    </ol>
+  </nav>
+</div>
+`;
+
+exports[`Story Snapshots > WithSeparator 1`] = `
+<div>
+  <nav
+    aria-label="Breadcrumbs"
+    data-slot="base"
+  >
+    <ol
+      class="flex flex-wrap list-none rounded-none"
+      data-slot="list"
+    >
+      <li
+        class="flex items-center"
+        data-slot="base"
+      >
+        <span
+          class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+          data-slot="item"
+          role="link"
+          tabindex="0"
+        >
+          Home
+        </span>
+        <span
+          aria-hidden="true"
+          class="px-1 text-foreground/50"
+          data-slot="separator"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="flex items-center"
+        data-slot="base"
+      >
+        <span
+          class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+          data-slot="item"
+          role="link"
+          tabindex="0"
+        >
+          Music
+        </span>
+        <span
+          aria-hidden="true"
+          class="px-1 text-foreground/50"
+          data-slot="separator"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="flex items-center"
+        data-slot="base"
+      >
+        <span
+          class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+          data-slot="item"
+          role="link"
+          tabindex="0"
+        >
+          Artist
+        </span>
+        <span
+          aria-hidden="true"
+          class="px-1 text-foreground/50"
+          data-slot="separator"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="flex items-center"
+        data-slot="base"
+      >
+        <span
+          class="flex gap-1 items-center cursor-pointer whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-foreground/50 text-small hover:opacity-80 active:opacity-disabled transition-opacity no-underline"
+          data-slot="item"
+          role="link"
+          tabindex="0"
+        >
+          Album
+        </span>
+        <span
+          aria-hidden="true"
+          class="px-1 text-foreground/50"
+          data-slot="separator"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="flex items-center"
+        data-slot="base"
+      >
+        <span
+          aria-current="page"
+          aria-disabled="true"
+          class="flex gap-1 items-center whitespace-nowrap line-clamp-1 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small no-underline cursor-default transition-opacity text-foreground"
+          data-current="true"
+          data-slot="item"
+          role="link"
+        >
+          Song
+        </span>
+      </li>
+    </ol>
+  </nav>
+</div>
+`;
