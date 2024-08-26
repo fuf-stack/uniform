@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.20.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.19.0...pixels-v0.20.0) (2024-08-26)
+
+
+### Features
+
+* **pixels:** add bottom and top border for light variant of Accordion ([7efea1a](https://github.com/fuf-stack/uniform/commit/7efea1ad221dd57643955e33d3a32b6597ce03af))
+
 ## [0.19.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.18.1...pixels-v0.19.0) (2024-08-23)
 
 
