@@ -38,6 +38,11 @@ export const accordionVariants = tv({
         wrapper: 'divide-y divide-solid divide-divider',
       },
     },
+    showBottomTopDivider: {
+      true: {
+        wrapper: 'border-b border-t border-solid border-divider',
+      },
+    },
   },
 });
 
@@ -103,6 +108,7 @@ const Accordion = ({
   const variants = accordionVariants({
     indicatorLeft,
     showDivider: showDivider && variant !== 'splitted',
+    showBottomTopDivider: showDivider && variant === 'light',
   });
   const classNames = variantsToClassNames(variants, _className, 'wrapper');
 
