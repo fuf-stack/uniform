@@ -115,13 +115,13 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: 4.3.1
-        version: 4.3.1(vite@5.4.2(@types/node@22.1.0))
+        version: 4.3.1(vite@5.4.2(@types/node@20.16.1))
       vite:
         specifier: 5.4.2
-        version: 5.4.2(@types/node@22.1.0)
+        version: 5.4.2(@types/node@20.16.1)
       vite-tsconfig-paths:
         specifier: 4.3.2
-        version: 4.3.2(typescript@5.5.4)(vite@5.4.2(@types/node@22.1.0))
+        version: 4.3.2(typescript@5.5.4)(vite@5.4.2(@types/node@20.16.1))
 
   packages/pixel-utils:
     dependencies:
@@ -8229,7 +8229,7 @@ snapshots:
       '@babel/traverse': 7.24.8
       '@babel/types': 7.24.8
       convert-source-map: 2.0.0
-      debug: 4.3.5
+      debug: 4.3.6(supports-color@5.5.0)
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       semver: 6.3.1
@@ -17528,7 +17528,7 @@ snapshots:
 
   vite-tsconfig-paths@4.3.2(typescript@5.5.4)(vite@5.4.2(@types/node@20.16.1)):
     dependencies:
-      debug: 4.3.5
+      debug: 4.3.6(supports-color@5.5.0)
       globrex: 0.1.2
       tsconfck: 3.1.1(typescript@5.5.4)
     optionalDependencies:
