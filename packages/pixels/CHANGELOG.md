@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.21.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.20.0...pixels-v0.21.0) (2024-08-26)
+
+
+### Features
+
+* **pixels:** add breadcrumbs component ([74ac311](https://github.com/fuf-stack/uniform/commit/74ac3114ae760641626c2747aaf510f7da7039b6))
+
+
+### Bug Fixes
+
+* **pixels:** fixed type in ScrollShadow component ([6d4ebeb](https://github.com/fuf-stack/uniform/commit/6d4ebeba60026283594f3d8fd550b4bce7098225))
+
 ## [0.20.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.19.0...pixels-v0.20.0) (2024-08-26)
 
 
