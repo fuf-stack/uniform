@@ -92,3 +92,24 @@ export const AllSizes: Story = {
     </div>
   ),
 };
+
+export const AllUnderlines: Story = {
+  args: {
+    breadcrumbItems,
+  },
+  render: (args) => (
+    <div>
+      {['none', 'active', 'hover', 'focus', 'always'].map((underline) => (
+        <>
+          <span className="mb-2">{underline}:</span>
+          <Breadcrumb
+            {...args}
+            key={underline}
+            className="mb-12"
+            underline={underline as BreadcrumbProps['underline']}
+          />
+        </>
+      ))}
+    </div>
+  ),
+};

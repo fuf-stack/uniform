@@ -61,6 +61,8 @@ export interface BreadcrumbProps extends VariantProps {
   separator?: ReactNode;
   /** Size of the Breadcrumb */
   size?: 'sm' | 'md' | 'lg';
+  /** Adjust when the breadcrumb items should be underlined */
+  underline?: 'none' | 'active' | 'hover' | 'focus' | 'always';
   /** Style variant of the Breadcrumbs */
   variant?: 'solid' | 'bordered' | 'light';
 }
@@ -79,6 +81,7 @@ const Breadcrumb = ({
   radius = 'none',
   separator = undefined,
   size = 'md',
+  underline = 'hover',
   variant = 'light',
 }: BreadcrumbProps) => {
   // itemClasses from className slots
@@ -97,6 +100,7 @@ const Breadcrumb = ({
       radius={radius}
       separator={separator}
       size={size}
+      underline={underline}
       variant={variant}
     >
       {breadcrumbItems.map((item, index) => (
