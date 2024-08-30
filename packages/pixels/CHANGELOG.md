@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.22.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.21.0...pixels-v0.22.0) (2024-08-30)
+
+
+### Features
+
+* **pixels:** add underline prop to Breadcrumb ([16a6fa7](https://github.com/fuf-stack/uniform/commit/16a6fa73aa57d51c71874ddda183b1efcb949024))
+
 ## [0.21.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.20.0...pixels-v0.21.0) (2024-08-26)
 
 
