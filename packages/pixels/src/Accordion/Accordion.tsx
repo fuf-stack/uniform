@@ -79,6 +79,8 @@ export interface AccordionProps extends VariantProps {
   hideIndicator?: boolean;
   /** Callback function for when a Accordion Item is expanded or collapsed */
   onSelectionChange?: (keys: 'all' | Iterable<number | string>) => unknown;
+  /** Selected keys (controlled) */
+  selectedKeys?: undefined | 'all' | Iterable<number | string>;
   /** Set whether multiple or only a single AccordionItems can be expanded */
   selectionMode?: 'single' | 'multiple';
   /** Enable or disable the divider between each AccordionItem */
@@ -100,6 +102,7 @@ const Accordion = ({
   dividerProps = {},
   indicatorLeft = false,
   onSelectionChange = undefined,
+  selectedKeys = undefined,
   selectionMode = 'multiple',
   showDivider = true,
   variant = 'light',
@@ -122,6 +125,7 @@ const Accordion = ({
       isDisabled={disabled}
       itemClasses={classNames}
       onSelectionChange={onSelectionChange}
+      selectedKeys={selectedKeys}
       selectionMode={selectionMode}
       showDivider={false}
       variant={variant}
