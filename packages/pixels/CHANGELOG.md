@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.23.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.22.0...pixels-v0.23.0) (2024-09-23)
+
+
+### Features
+
+* **pixels:** add selectedKeysProp to Accordion ([7aa1fc8](https://github.com/fuf-stack/uniform/commit/7aa1fc8ad441f4cb9db49270952fafcccdd8624f))
+
 ## [0.22.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.21.0...pixels-v0.22.0) (2024-08-30)
 
 
