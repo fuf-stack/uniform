@@ -37,15 +37,14 @@ const SubmitButton = ({
   testId = 'form_submit_button',
 }: SubmitButtonProps) => {
   const {
-    formState: { isValid, isSubmitting, isValidating },
+    formState: { isSubmitting, isValidating },
   } = useFormContext();
-
   return (
     <Button
       className={cn(className)}
       color={color}
       testId={slugify(testId)}
-      disabled={!isValid || isSubmitting || isValidating}
+      disabled={isSubmitting || isValidating}
       loading={loading}
       onClick={onClick}
       size={size}
