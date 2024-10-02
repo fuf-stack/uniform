@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.6.0](https://github.com/fuf-stack/uniform/compare/uniform-v0.5.0...uniform-v0.6.0) (2024-10-02)
+
+
+### Features
+
+* **uniform:** add toggle for showing and hiding copy ID button ([4b3d8c6](https://github.com/fuf-stack/uniform/commit/4b3d8c6e809450508f12a650ee0f80993f15548a))
+* **uniform:** remove deprecated validation option and rename new copy state variable ([3a1cf9d](https://github.com/fuf-stack/uniform/commit/3a1cf9d9fd847b58a71d7808000b41558bb5cba4))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @react-aria/visually-hidden to v3.8.13 ([ab0341a](https://github.com/fuf-stack/uniform/commit/ab0341a0f356b48428068495e1381d48dc41752f))
+* **deps:** update dependency @react-aria/visually-hidden to v3.8.14 ([38d8cee](https://github.com/fuf-stack/uniform/commit/38d8cee5dff8f4a518a6a8bc701dd4f4d96206fe))
+* **deps:** update dependency @react-aria/visually-hidden to v3.8.15 ([10f5e92](https://github.com/fuf-stack/uniform/commit/10f5e92e1711b3434cfc894d77a461d6d0fc4b3a))
+* **deps:** update dependency @react-aria/visually-hidden to v3.8.16 ([1bd77fc](https://github.com/fuf-stack/uniform/commit/1bd77fc5289992288c6a021ea4c2f7f822666b88))
+* **deps:** update dependency react-hook-form to v7.52.2 ([ce62b4b](https://github.com/fuf-stack/uniform/commit/ce62b4b3bc1b73b21373e891f5eaeabb1ee4f67f))
+* **deps:** update dependency react-hook-form to v7.53.0 ([602fa8b](https://github.com/fuf-stack/uniform/commit/602fa8b94753631728bd178bf94960ca9e016969))
+* **deps:** update dependency react-icons to v5.3.0 ([a814999](https://github.com/fuf-stack/uniform/commit/a814999aa5805b9a944c2ed1d5722c0984c5563e))
+* **deps:** update dependency react-select to v5.8.1 ([7e44322](https://github.com/fuf-stack/uniform/commit/7e44322ffe42e5a0ce7e54e1d2b6995c8cd9f0a6))
+
 ## [0.5.0](https://github.com/fuf-stack/uniform/compare/uniform-v0.4.0...uniform-v0.5.0) (2024-07-11)
 
 
