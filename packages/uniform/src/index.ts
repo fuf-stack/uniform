@@ -1,3 +1,4 @@
+export * from './CheckboxGroup';
 export * from './FieldArray';
 export * from './Form';
 export * from './Grid';
