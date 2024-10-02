@@ -16,6 +16,11 @@
       "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
     },
+    "./CheckboxGroup": {
+      "import": "./dist/CheckboxGroup/index.js",
+      "require": "./dist/CheckboxGroup/index.cjs",
+      "types": "./dist/CheckboxGroup/index.d.ts"
+    },
     "./FieldArray": {
       "import": "./dist/FieldArray/index.js",
       "require": "./dist/FieldArray/index.cjs",
