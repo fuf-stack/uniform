@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0](https://github.com/fuf-stack/uniform/compare/uniform-v0.6.0...uniform-v0.7.0) (2024-10-02)
+
+
+### Features
+
+* **uniform:** add CheckboxGroup tu uniform ([8dc79b2](https://github.com/fuf-stack/uniform/commit/8dc79b2b79c225a18e3382e7fa4fdb40c29445e6))
+
 ## [0.6.0](https://github.com/fuf-stack/uniform/compare/uniform-v0.5.0...uniform-v0.6.0) (2024-10-02)
 
 
