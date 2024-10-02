@@ -15,7 +15,7 @@ interface FormDebugViewerProps {
 }
 
 const LOCALSTORAGE_DEBUG_KEY = 'uniform:form-debug-enabled';
-const LOCALSTORAGE_COPY_KEY = 'uniform:form-debug-copy-enabled';
+const LOCALSTORAGE_COPY_TEST_ID_KEY = 'uniform:form-debug-copy-test-id-enabled';
 
 /** Renders a form debug panel with information about the current form state */
 const FormDebugViewer = ({ className = undefined }: FormDebugViewerProps) => {
@@ -26,7 +26,10 @@ const FormDebugViewer = ({ className = undefined }: FormDebugViewerProps) => {
   } = useFormContext();
 
   const [debug, setDebug] = useLocalStorage(LOCALSTORAGE_DEBUG_KEY, false);
-  const [copy, setCopy] = useLocalStorage(LOCALSTORAGE_COPY_KEY, false);
+  const [copyTestId, setCopyTestId] = useLocalStorage(
+    LOCALSTORAGE_COPY_TEST_ID_KEY,
+    false,
+  );
 
   const [validationErrors, setValidationErrors] = useState<
     VetoError['errors'] | null
@@ -76,12 +79,12 @@ const FormDebugViewer = ({ className = undefined }: FormDebugViewerProps) => {
       }
     >
       <Button
-        variant={copy ? 'solid' : 'light'}
+        variant={copyTestId ? 'solid' : 'light'}
         icon={<FaBullseye />}
         className="mb-4 ml-auto mr-auto"
-        onClick={() => setCopy(!copy)}
+        onClick={() => setCopyTestId(!copyTestId)}
       >
-        {copy ? 'Hide CopyButton' : 'Show CopyButton'}
+        {copyTestId ? 'Hide CopyButton' : 'Show CopyButton'}
       </Button>
       <Json
         value={{

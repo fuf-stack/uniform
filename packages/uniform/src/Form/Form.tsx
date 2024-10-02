@@ -2,7 +2,6 @@ import type { VetoInstance } from '@fuf-stack/veto';
 import type { ReactNode } from 'react';
 import type { FieldValues, SubmitHandler } from 'react-hook-form';
 
-import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 
 import { cn } from '@fuf-stack/pixel-utils';
@@ -39,13 +38,7 @@ export interface FormProps {
   /** veto validation schema */
   validation?: VetoInstance;
   /** when the validation should be triggered */
-  validationTrigger?:
-    | 'onChange'
-    | 'onBlur'
-    | 'onSubmit'
-    | 'onTouched'
-    | 'all'
-    | 'all-instant';
+  validationTrigger?: 'onChange' | 'onBlur' | 'onSubmit' | 'onTouched' | 'all';
 }
 
 /**
@@ -74,21 +67,11 @@ const Form = ({
           },
           // set rhf mode
           // see: https://react-hook-form.com/docs/useform#mode
-          mode: validationTrigger === 'all-instant' ? 'all' : validationTrigger,
+          mode: validationTrigger,
         }
       : {
           defaultValues: initialValues,
         },
-  );
-
-  useEffect(
-    () => {
-      if (validationTrigger === 'all-instant') {
-        methods.trigger();
-      }
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [validationTrigger],
   );
 
   return (

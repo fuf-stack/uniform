@@ -9,14 +9,14 @@ export interface FieldCopyTestIdButtonProps {
 }
 
 const LOCALSTORAGE_DEBUG_KEY = 'uniform:form-debug-enabled';
-const LOCALSTORAGE_COPY_KEY = 'uniform:form-debug-copy-enabled';
+const LOCALSTORAGE_COPY_TEST_ID_KEY = 'uniform:form-debug-copy-test-id-enabled';
 
 const FieldCopyTestIdButton = ({
   className = undefined,
   testId,
 }: FieldCopyTestIdButtonProps) => {
   const [debug] = useLocalStorage(LOCALSTORAGE_DEBUG_KEY, false);
-  const [copy] = useLocalStorage(LOCALSTORAGE_COPY_KEY, false);
+  const [copyTestId] = useLocalStorage(LOCALSTORAGE_COPY_TEST_ID_KEY, false);
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(testId).catch((err) => {
@@ -24,7 +24,7 @@ const FieldCopyTestIdButton = ({
     });
   };
 
-  if (!debug || !copy) {
+  if (!debug || !copyTestId) {
     return null;
   }
 
