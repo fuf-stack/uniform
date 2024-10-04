@@ -98,12 +98,14 @@ const FormProvider: React.FC<FormProviderProps> = ({
   });
 
   // Create submit handler
+  // eslint-disable-next-line consistent-return
   const handleSubmit = async (e?: React.BaseSyntheticEvent) => {
     if (!canSubmit) {
       console.warn(
         '[FormProvider] form submit was canceled canSubmit is false...',
       );
-      return;
+      e?.preventDefault();
+      return Promise.resolve();
     }
     await methods.handleSubmit(onSubmit)(e);
   };
