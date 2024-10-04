@@ -4,39 +4,47 @@ import type { FieldError } from 'react-hook-form';
 import { useContext } from 'react';
 import { useFormContext as useHookFormContext } from 'react-hook-form';
 
-import { ValidationSchemaContext } from '../../Form/subcomponents/FormContext';
+import { UniformContext } from '../../Form/subcomponents/FormContext';
 import { slugify } from '../../helpers';
 
-// FIX: This fixes the problem that the innerType is not checked for optionals...
+/** Checks whether the field is an optional type by recursively checking inner types */
 const recursiveSearchInnerType = (schema: VetoSchema): boolean => {
-  if (schema?._def?.innerType) {
-    if (schema?._def?.innerType?._def?.typeName === 'ZodOptional') {
-      return schema?._def?.innerType?._def?.typeName !== 'ZodOptional';
+  let currentSchema = schema;
+
+  // Loop through inner types to find the root type
+  while (currentSchema?._def?.innerType) {
+    currentSchema = currentSchema._def.innerType;
+    if (currentSchema?._def?.typeName === 'ZodOptional') {
+      // Stop recursion if optional is found
+      return false;
     }
-    return recursiveSearchInnerType(schema?._def?.innerType);
   }
+  // If no optional was found, assume it's required
   return true;
 };
 
-// TODO: Fix problem ".optional().nullable()" is required, ".nullable().optional()" is not required...
+/** Recursive search to check whether a field is required or optional */
 export const recursiveFieldKeySearch = (
   schema: VetoSchema,
   path: string[],
 ): boolean | null => {
   const [current, ...rest] = path;
-  // ignore optionals on the path to the desired field
 
   let currentSchema = schema;
 
+  // Handle ZodOptional schema: unwrap and continue searching
   if (schema?._def?.typeName === 'ZodOptional') {
     // @ts-expect-error not sure here
     currentSchema = schema.unwrap();
-  } else if (schema?._def?.typeName === 'ZodEffects') {
-    // in case of an effect, unwrap the effect and call with schema (clould be optional) and complete path.
-    return recursiveFieldKeySearch(schema._def?.schema, path);
   }
 
-  // TODO: This needs further investigation. It is nor yet completely clear how to handle intersections!
+  // Handle ZodEffects (transformations or validation effects)
+  if (schema?._def?.typeName === 'ZodEffects') {
+    // Unwrap and continue
+    return recursiveFieldKeySearch(schema._def.schema, path);
+  }
+
+  // Handle ZodIntersection (intersection types)
   if (currentSchema?._def?.typeName === 'ZodIntersection') {
     return (
       (currentSchema._def.left?.schema
@@ -48,14 +56,13 @@ export const recursiveFieldKeySearch = (
     );
   }
 
-  // get shape of an object or objects of an array
+  // Get the shape of an object or elements of an array schema
   // @ts-expect-error not sure here
-  const shape = currentSchema?.shape ?? currentSchema?.element?.shape; // ??
+  const shape = currentSchema?.shape ?? currentSchema?.element?.shape;
 
   if (shape && shape[current]) {
-    // currentSchema?._def.schema.unwrap()?.shape;
     if (rest.length === 0) {
-      // At the end of the path check if the field is optional or required
+      // At the end of the path, check if the field is optional
       return (
         shape[current]?._def?.typeName !== 'ZodOptional' &&
         recursiveSearchInnerType(shape[current])
@@ -63,32 +70,45 @@ export const recursiveFieldKeySearch = (
     }
     return recursiveFieldKeySearch(shape[current], rest);
   }
-
-  return null; // field not found
+  // Return null if field not found
+  return null;
 };
 
-/** TODO: add description */
+/**
+ * Custom hook that extends react-hook-form's useFormContext to add validation and state management.
+ */
 export const useFormContext = () => {
   const {
+    formState,
     // https://react-hook-form.com/docs/useform/getfieldstate
     // for getFieldState a subscription to formState properties is needed!
-    formState,
     getFieldState: getFieldStateOrig,
     ...otherMethods
   } = useHookFormContext();
-  const validation = useContext(ValidationSchemaContext);
 
-  // update getFieldState
+  const uniformContext = useContext(UniformContext);
+
+  /**
+   * Updated getFieldState method which returns:
+   * - Whether the field is required by checking the validation schema
+   * - Existing field state information (errors, etc.)
+   */
   const getFieldState = (name: string, testId?: string) => {
     const fieldPath =
       typeof name === 'string' ? name.replace(/\[\d+\]/g, '').split('.') : name;
+
+    // Check if the field is required using the validation schema
     const required =
-      (validation && recursiveFieldKeySearch(validation.schema, fieldPath)) ||
+      (uniformContext?.validation &&
+        recursiveFieldKeySearch(uniformContext.validation.schema, fieldPath)) ||
       false;
+
+    // Get the original field state (errors, etc.) from react-hook-form
     const { error, ...rest } = getFieldStateOrig(name, formState);
+
     return {
       ...rest,
-      error: error as FieldError[] | undefined, // TODO: change to correct type @Hannes ;)
+      error: error as FieldError[] | undefined, // Ensure correct type for error
       required,
       testId: slugify(testId || name),
     };
@@ -96,8 +116,8 @@ export const useFormContext = () => {
 
   return {
     ...otherMethods,
+    ...uniformContext,
     getFieldState,
-    validation,
     formState,
   };
 };
