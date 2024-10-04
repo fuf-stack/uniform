@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.8.0](https://github.com/fuf-stack/uniform/compare/uniform-v0.7.0...uniform-v0.8.0) (2024-10-04)
+
+
+### Features
+
+* **uniform:** add setCanSubmit functionality + refactor form context ([0126835](https://github.com/fuf-stack/uniform/commit/01268353cce9e4747aa0144aa4fc214258f4486e))
+* **uniform:** update dependency ([13f12d2](https://github.com/fuf-stack/uniform/commit/13f12d2eba89bf126b43a2665c31972b5a6f65ff))
+
+
+### Bug Fixes
+
+* **uniform:** update package json and pnpm-lock ([718e36e](https://github.com/fuf-stack/uniform/commit/718e36eab6d29cc038caadf6598ed287df9f148d))
+
 ## [0.7.0](https://github.com/fuf-stack/uniform/compare/uniform-v0.6.0...uniform-v0.7.0) (2024-10-02)
 
 
