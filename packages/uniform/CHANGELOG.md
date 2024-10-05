@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.3](https://github.com/fuf-stack/uniform/compare/uniform-v0.8.2...uniform-v0.8.3) (2024-10-05)
+
+
+### Bug Fixes
+
+* **uniform:** update prevent submit logic to useState ([b6af758](https://github.com/fuf-stack/uniform/commit/b6af758716f6499ceed798b9a3e22134f499cb6b))
+
 ## [0.8.2](https://github.com/fuf-stack/uniform/compare/uniform-v0.8.1...uniform-v0.8.2) (2024-10-05)
 
 
