@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.4](https://github.com/fuf-stack/uniform/compare/uniform-v0.8.3...uniform-v0.8.4) (2024-10-05)
+
+
+### Bug Fixes
+
+* **uniform:** only prevent submit when form is valid ([ceb3e1c](https://github.com/fuf-stack/uniform/commit/ceb3e1c5610f41b30a6f074644e66c0c2a88a0d9))
+
 ## [0.8.3](https://github.com/fuf-stack/uniform/compare/uniform-v0.8.2...uniform-v0.8.3) (2024-10-05)
 
 
