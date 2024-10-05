@@ -2,7 +2,7 @@ import type { VetoInstance } from '@fuf-stack/veto';
 import type { ReactNode } from 'react';
 import type { FieldValues, SubmitHandler } from 'react-hook-form';
 
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useRef } from 'react';
 import { FormProvider as HookFormProvider, useForm } from 'react-hook-form';
 
 /**
@@ -18,26 +18,27 @@ export const removeNullishFields = (obj: Record<string, unknown>) => {
 };
 
 /**
- * The `UniformContext` provides the form submission state (`canSubmit`) and the ability to control
- * submission behavior (`setCanSubmit`). Additionally, it may provide an optional `validation` schema
- * (from Veto) for form validation purposes.
+ * The `UniformContext` provides control over the form's submission behavior and may optionally include
+ * a Veto validation schema for form validation.
  *
- * This context is used by components that need to control or be aware of the form submission state,
- * or that require access to the validation schema for managing validation logic.
+ * Specifically, this context offers:
+ * 1. **Form Submission Control**: The `preventSubmit` function allows components to enable or disable
+ *    form submissions.
+ * 2. **Optional Validation Schema**: The `validation` property may hold a Veto validation schema instance
+ *    that can be used to validate form fields and handle validation logic.
  *
- * The context's default value is `undefined` until provided by the `FormProvider` component.
+ * This context is useful for components that need to interact with or control the form submission state,
+ * or access the validation schema for managing form validation logic.
  */
-export const UniformContext = React.createContext<
-  | {
-      /** Whether the form can be submitted */
-      canSubmit: boolean;
-      /** Function to update the form's submission state (enabled/disabled) */
-      setCanSubmit: React.Dispatch<React.SetStateAction<boolean>>;
-      /** Optional Veto validation schema instance for form validation */
-      validation?: VetoInstance;
-    }
-  | undefined
->(undefined);
+export const UniformContext = React.createContext<{
+  /** Function to update if the form can currently be submitted */
+  preventSubmit: (prevent: boolean) => void;
+  /** Optional Veto validation schema instance for form validation */
+  validation?: VetoInstance;
+}>({
+  preventSubmit: () => undefined,
+  validation: undefined,
+});
 
 // Define props for the FormProvider component, extending HookForm's props
 interface FormProviderProps {
@@ -56,9 +57,10 @@ interface FormProviderProps {
 }
 
 /**
- * FormProvider component provides both:
- * 1. The veto validation schema context
- * 2. The form submission control context
+ * FormProvider component provides:
+ * - The veto validation schema context
+ * - Submit handler creation and submission control with preventSubmit
+ * - React Hook Form context
  */
 const FormProvider: React.FC<FormProviderProps> = ({
   children,
@@ -67,14 +69,19 @@ const FormProvider: React.FC<FormProviderProps> = ({
   validation = undefined,
   validationTrigger,
 }) => {
-  // Local state to control if form can be submitted
-  const [canSubmit, setCanSubmit] = useState(true);
+  // Control if the form can currently be submitted
+  const preventSubmit = useRef(false);
 
   // Memoize the context value to prevent re-renders
   const contextValue = useMemo(
-    () => ({ canSubmit, setCanSubmit, validation }),
+    () => ({
+      preventSubmit: (prevent: boolean) => {
+        preventSubmit.current = prevent;
+      },
+      validation,
+    }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [canSubmit],
+    [],
   );
 
   // Initialize react hook form
@@ -100,9 +107,9 @@ const FormProvider: React.FC<FormProviderProps> = ({
   // Create submit handler
   // eslint-disable-next-line consistent-return
   const handleSubmit = async (e?: React.BaseSyntheticEvent) => {
-    if (!canSubmit) {
+    if (preventSubmit.current) {
       console.warn(
-        '[FormProvider] form submit was canceled canSubmit is false...',
+        '[FormProvider] form submit was prevented because preventSubmit is true...',
       );
       e?.preventDefault();
       return Promise.resolve();
