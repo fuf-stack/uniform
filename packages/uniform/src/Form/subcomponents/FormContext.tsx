@@ -107,7 +107,9 @@ const FormProvider: React.FC<FormProviderProps> = ({
   // Create submit handler
   // eslint-disable-next-line consistent-return
   const handleSubmit = async (e?: React.BaseSyntheticEvent) => {
-    if (preventSubmit) {
+    // only prevent submit when form state is valid, because otherwise
+    // submit will only trigger validation and add errors / focus invalid fields
+    if (methods.formState.isValid && preventSubmit) {
       console.warn(
         '[FormProvider] form submit was prevented because preventSubmit is true...',
       );
