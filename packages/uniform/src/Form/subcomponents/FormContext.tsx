@@ -2,7 +2,7 @@ import type { VetoInstance } from '@fuf-stack/veto';
 import type { ReactNode } from 'react';
 import type { FieldValues, SubmitHandler } from 'react-hook-form';
 
-import React, { useMemo, useRef } from 'react';
+import React, { useMemo, useState } from 'react';
 import { FormProvider as HookFormProvider, useForm } from 'react-hook-form';
 
 /**
@@ -70,13 +70,13 @@ const FormProvider: React.FC<FormProviderProps> = ({
   validationTrigger,
 }) => {
   // Control if the form can currently be submitted
-  const preventSubmit = useRef(false);
+  const [preventSubmit, setPreventSubmit] = useState(false);
 
   // Memoize the context value to prevent re-renders
   const contextValue = useMemo(
     () => ({
       preventSubmit: (prevent: boolean) => {
-        preventSubmit.current = prevent;
+        setPreventSubmit(prevent);
       },
       validation,
     }),
@@ -107,7 +107,7 @@ const FormProvider: React.FC<FormProviderProps> = ({
   // Create submit handler
   // eslint-disable-next-line consistent-return
   const handleSubmit = async (e?: React.BaseSyntheticEvent) => {
-    if (preventSubmit.current) {
+    if (preventSubmit) {
       console.warn(
         '[FormProvider] form submit was prevented because preventSubmit is true...',
       );
