@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.1](https://github.com/fuf-stack/uniform/compare/uniform-v0.8.0...uniform-v0.8.1) (2024-10-04)
+
+
+### Bug Fixes
+
+* **uniform:** try to fix handleSubmit when submit disabled ([8ea48fc](https://github.com/fuf-stack/uniform/commit/8ea48fcf2eeefb8f49b494362c7086a39f0905b2))
+
 ## [0.8.0](https://github.com/fuf-stack/uniform/compare/uniform-v0.7.0...uniform-v0.8.0) (2024-10-04)
 
 
