@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.24.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.23.1...pixels-v0.24.0) (2024-10-06)
+
+
+### Features
+
+* **pixel-motion:** add inital package based in framer-motion ([f26b490](https://github.com/fuf-stack/uniform/commit/f26b490cdd1441575e4d9c6ddaaed8210451e7c5))
+
 ## [0.23.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.23.0...pixels-v0.23.1) (2024-10-06)
 
 
