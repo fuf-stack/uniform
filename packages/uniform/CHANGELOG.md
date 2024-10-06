@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.5](https://github.com/fuf-stack/uniform/compare/uniform-v0.8.4...uniform-v0.8.5) (2024-10-06)
+
+
+### Bug Fixes
+
+* **uniform:** fix select snapshots ([0523c33](https://github.com/fuf-stack/uniform/commit/0523c3340737874022d79f951690d1ab4de02283))
+
 ## [0.8.4](https://github.com/fuf-stack/uniform/compare/uniform-v0.8.3...uniform-v0.8.4) (2024-10-05)
 
 
