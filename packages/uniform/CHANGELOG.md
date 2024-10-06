@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.0](https://github.com/fuf-stack/uniform/compare/uniform-v0.8.5...uniform-v0.9.0) (2024-10-06)
+
+
+### Features
+
+* **pixel-motion:** add inital package based in framer-motion ([f26b490](https://github.com/fuf-stack/uniform/commit/f26b490cdd1441575e4d9c6ddaaed8210451e7c5))
+
 ## [0.8.5](https://github.com/fuf-stack/uniform/compare/uniform-v0.8.4...uniform-v0.8.5) (2024-10-06)
 
 
