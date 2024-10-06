@@ -10,7 +10,7 @@ exports[`Story Snapshots > Default 1`] = `
       data-testid=""
     >
       <label
-        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent"
+        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none"
         data-testid="switchfield"
       >
         <span
@@ -82,7 +82,7 @@ exports[`Story Snapshots > Disabled 1`] = `
       data-testid=""
     >
       <label
-        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent opacity-disabled pointer-events-none"
+        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none opacity-disabled pointer-events-none"
         data-disabled="true"
         data-testid="switchfield"
       >
@@ -156,7 +156,7 @@ exports[`Story Snapshots > Invalid 1`] = `
       data-testid=""
     >
       <label
-        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent"
+        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none"
         data-testid="switchfield"
         required=""
       >
@@ -236,7 +236,7 @@ exports[`Story Snapshots > Required 1`] = `
       data-testid=""
     >
       <label
-        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent"
+        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none"
         data-testid="switchfield"
         required=""
       >
@@ -316,7 +316,7 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
       data-testid=""
     >
       <label
-        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent"
+        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none"
         data-selected="true"
         data-testid="switchfield"
       >
