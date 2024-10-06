@@ -141,6 +141,9 @@ importers:
       classnames:
         specifier: 2.5.1
         version: 2.5.1
+      tailwind-merge:
+        specifier: 2.5.3
+        version: 2.5.3
       tailwind-variants:
         specifier: 0.2.1
         version: 0.2.1(tailwindcss@3.4.13(ts-node@10.9.2(@swc/core@1.7.26(@swc/helpers@0.5.13))(@types/node@22.7.4)(typescript@5.6.2)))
