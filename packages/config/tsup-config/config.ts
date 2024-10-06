@@ -48,9 +48,9 @@ export default defineConfig({
       const key = file.replace('dist/', '').replace('/index.js', '');
       // eslint-disable-next-line no-param-reassign
       exports[key] = {
+        types: file.replace('.js', '.d.ts'),
         import: file,
         require: file.replace('.js', '.cjs'),
-        types: file.replace('.js', '.d.ts'),
       };
       return exports;
     }, {});

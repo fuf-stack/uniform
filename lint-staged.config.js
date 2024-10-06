@@ -1,4 +1,6 @@
 module.exports = {
+  // pixel-motion
+  'packages/pixel-motion/**/*.{js,ts,tsx}': ['eslint'],
   // pixel-utils
   'packages/pixel-utils/**/*.{js,ts,tsx}': ['eslint'],
   // pixels

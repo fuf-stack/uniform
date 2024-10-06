@@ -12,79 +12,79 @@
   "sideEffects": false,
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.cjs"
     },
     "./CheckboxGroup": {
+      "types": "./dist/CheckboxGroup/index.d.ts",
       "import": "./dist/CheckboxGroup/index.js",
-      "require": "./dist/CheckboxGroup/index.cjs",
-      "types": "./dist/CheckboxGroup/index.d.ts"
+      "require": "./dist/CheckboxGroup/index.cjs"
     },
     "./FieldArray": {
+      "types": "./dist/FieldArray/index.d.ts",
       "import": "./dist/FieldArray/index.js",
-      "require": "./dist/FieldArray/index.cjs",
-      "types": "./dist/FieldArray/index.d.ts"
+      "require": "./dist/FieldArray/index.cjs"
     },
     "./Form": {
+      "types": "./dist/Form/index.d.ts",
       "import": "./dist/Form/index.js",
-      "require": "./dist/Form/index.cjs",
-      "types": "./dist/Form/index.d.ts"
+      "require": "./dist/Form/index.cjs"
     },
     "./Grid": {
+      "types": "./dist/Grid/index.d.ts",
       "import": "./dist/Grid/index.js",
-      "require": "./dist/Grid/index.cjs",
-      "types": "./dist/Grid/index.d.ts"
+      "require": "./dist/Grid/index.cjs"
     },
     "./helpers": {
+      "types": "./dist/helpers/index.d.ts",
       "import": "./dist/helpers/index.js",
-      "require": "./dist/helpers/index.cjs",
-      "types": "./dist/helpers/index.d.ts"
+      "require": "./dist/helpers/index.cjs"
     },
     "./hooks": {
+      "types": "./dist/hooks/index.d.ts",
       "import": "./dist/hooks/index.js",
-      "require": "./dist/hooks/index.cjs",
-      "types": "./dist/hooks/index.d.ts"
+      "require": "./dist/hooks/index.cjs"
     },
     "./Input": {
+      "types": "./dist/Input/index.d.ts",
       "import": "./dist/Input/index.js",
-      "require": "./dist/Input/index.cjs",
-      "types": "./dist/Input/index.d.ts"
+      "require": "./dist/Input/index.cjs"
     },
     "./partials/FieldCopyTestIdButton": {
+      "types": "./dist/partials/FieldCopyTestIdButton/index.d.ts",
       "import": "./dist/partials/FieldCopyTestIdButton/index.js",
-      "require": "./dist/partials/FieldCopyTestIdButton/index.cjs",
-      "types": "./dist/partials/FieldCopyTestIdButton/index.d.ts"
+      "require": "./dist/partials/FieldCopyTestIdButton/index.cjs"
     },
     "./partials/FieldValidationError": {
+      "types": "./dist/partials/FieldValidationError/index.d.ts",
       "import": "./dist/partials/FieldValidationError/index.js",
-      "require": "./dist/partials/FieldValidationError/index.cjs",
-      "types": "./dist/partials/FieldValidationError/index.d.ts"
+      "require": "./dist/partials/FieldValidationError/index.cjs"
     },
     "./RadioGroup": {
+      "types": "./dist/RadioGroup/index.d.ts",
       "import": "./dist/RadioGroup/index.js",
-      "require": "./dist/RadioGroup/index.cjs",
-      "types": "./dist/RadioGroup/index.d.ts"
+      "require": "./dist/RadioGroup/index.cjs"
     },
     "./Select": {
+      "types": "./dist/Select/index.d.ts",
       "import": "./dist/Select/index.js",
-      "require": "./dist/Select/index.cjs",
-      "types": "./dist/Select/index.d.ts"
+      "require": "./dist/Select/index.cjs"
     },
     "./SubmitButton": {
+      "types": "./dist/SubmitButton/index.d.ts",
       "import": "./dist/SubmitButton/index.js",
-      "require": "./dist/SubmitButton/index.cjs",
-      "types": "./dist/SubmitButton/index.d.ts"
+      "require": "./dist/SubmitButton/index.cjs"
     },
     "./Switch": {
+      "types": "./dist/Switch/index.d.ts",
       "import": "./dist/Switch/index.js",
-      "require": "./dist/Switch/index.cjs",
-      "types": "./dist/Switch/index.d.ts"
+      "require": "./dist/Switch/index.cjs"
     },
     "./TextArea": {
+      "types": "./dist/TextArea/index.d.ts",
       "import": "./dist/TextArea/index.js",
-      "require": "./dist/TextArea/index.cjs",
-      "types": "./dist/TextArea/index.d.ts"
+      "require": "./dist/TextArea/index.cjs"
     }
   },
   "files": [
@@ -127,6 +127,7 @@
     "@nextui-org/system": "2.2.6",
     "@nextui-org/theme": "2.2.11",
     "@react-aria/visually-hidden": "3.8.16",
+    "framer-motion": "11.11.1",
     "react-icons": "5.3.0",
     "react-hook-form": "7.53.0",
     "react-select": "5.8.1",

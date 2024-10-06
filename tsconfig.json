@@ -1,6 +1,8 @@
 {
   "references": [
     { "path": "packages/config/storybook-config" },
+    { "path": "packages/pixel-motion" },
+    { "path": "packages/pixel-utils" },
     { "path": "packages/pixels" },
     { "path": "packages/uniform" },
     { "path": "packages/veto" }

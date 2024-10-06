@@ -1,8 +1,8 @@
 {
-  "name": "@fuf-stack/pixel-utils",
-  "description": "fuf pixels helper utils",
+  "name": "@fuf-stack/pixel-motion",
+  "description": "fuf pixel motion with framer motion",
   "author": "Hannes Tiede",
-  "version": "0.1.1",
+  "version": "0.0.0",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -18,20 +18,21 @@
   "files": [
     "./dist"
   ],
-  "homepage": "https://github.com/fuf-stack/uniform/tree/main/packages/pixel-utils",
+  "homepage": "https://github.com/fuf-stack/uniform/tree/main/packages/pixel-motion",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
   "keywords": [
+    "animation",
     "react",
-    "tailwind",
+    "motion",
     "utils"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/fuf-stack/uniform.git",
-    "directory": "packages/pixel-utils"
+    "directory": "packages/pixel-motion"
   },
   "bugs": {
     "url": "https://github.com/fuf-stack/uniform/issues"
@@ -41,9 +42,7 @@
     "prepack": "rm -rf ./dist && pnpm build"
   },
   "dependencies": {
-    "@nextui-org/theme": "2.2.11",
-    "classnames": "2.5.1",
-    "tailwind-variants": "0.2.1"
+    "framer-motion": "11.11.1"
   },
   "devDependencies": {
     "@repo/tsup-config": "workspace:*"

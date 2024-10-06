@@ -10,84 +10,84 @@
   "sideEffects": false,
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.cjs"
     },
     "./Accordion": {
+      "types": "./dist/Accordion/index.d.ts",
       "import": "./dist/Accordion/index.js",
-      "require": "./dist/Accordion/index.cjs",
-      "types": "./dist/Accordion/index.d.ts"
+      "require": "./dist/Accordion/index.cjs"
     },
     "./Avatar": {
+      "types": "./dist/Avatar/index.d.ts",
       "import": "./dist/Avatar/index.js",
-      "require": "./dist/Avatar/index.cjs",
-      "types": "./dist/Avatar/index.d.ts"
+      "require": "./dist/Avatar/index.cjs"
     },
     "./AvatarGroup": {
+      "types": "./dist/AvatarGroup/index.d.ts",
       "import": "./dist/AvatarGroup/index.js",
-      "require": "./dist/AvatarGroup/index.cjs",
-      "types": "./dist/AvatarGroup/index.d.ts"
+      "require": "./dist/AvatarGroup/index.cjs"
     },
     "./Badge": {
+      "types": "./dist/Badge/index.d.ts",
       "import": "./dist/Badge/index.js",
-      "require": "./dist/Badge/index.cjs",
-      "types": "./dist/Badge/index.d.ts"
+      "require": "./dist/Badge/index.cjs"
     },
     "./Breadcrumb": {
+      "types": "./dist/Breadcrumb/index.d.ts",
       "import": "./dist/Breadcrumb/index.js",
-      "require": "./dist/Breadcrumb/index.cjs",
-      "types": "./dist/Breadcrumb/index.d.ts"
+      "require": "./dist/Breadcrumb/index.cjs"
     },
     "./Button": {
+      "types": "./dist/Button/index.d.ts",
       "import": "./dist/Button/index.js",
-      "require": "./dist/Button/index.cjs",
-      "types": "./dist/Button/index.d.ts"
+      "require": "./dist/Button/index.cjs"
     },
     "./Card": {
+      "types": "./dist/Card/index.d.ts",
       "import": "./dist/Card/index.js",
-      "require": "./dist/Card/index.cjs",
-      "types": "./dist/Card/index.d.ts"
+      "require": "./dist/Card/index.cjs"
     },
     "./hooks": {
+      "types": "./dist/hooks/index.d.ts",
       "import": "./dist/hooks/index.js",
-      "require": "./dist/hooks/index.cjs",
-      "types": "./dist/hooks/index.d.ts"
+      "require": "./dist/hooks/index.cjs"
     },
     "./Json": {
+      "types": "./dist/Json/index.d.ts",
       "import": "./dist/Json/index.js",
-      "require": "./dist/Json/index.cjs",
-      "types": "./dist/Json/index.d.ts"
+      "require": "./dist/Json/index.cjs"
     },
     "./Label": {
+      "types": "./dist/Label/index.d.ts",
       "import": "./dist/Label/index.js",
-      "require": "./dist/Label/index.cjs",
-      "types": "./dist/Label/index.d.ts"
+      "require": "./dist/Label/index.cjs"
     },
     "./Menu": {
+      "types": "./dist/Menu/index.d.ts",
       "import": "./dist/Menu/index.js",
-      "require": "./dist/Menu/index.cjs",
-      "types": "./dist/Menu/index.d.ts"
+      "require": "./dist/Menu/index.cjs"
     },
     "./Modal": {
+      "types": "./dist/Modal/index.d.ts",
       "import": "./dist/Modal/index.js",
-      "require": "./dist/Modal/index.cjs",
-      "types": "./dist/Modal/index.d.ts"
+      "require": "./dist/Modal/index.cjs"
     },
     "./Popover": {
+      "types": "./dist/Popover/index.d.ts",
       "import": "./dist/Popover/index.js",
-      "require": "./dist/Popover/index.cjs",
-      "types": "./dist/Popover/index.d.ts"
+      "require": "./dist/Popover/index.cjs"
     },
     "./ScrollShadow": {
+      "types": "./dist/ScrollShadow/index.d.ts",
       "import": "./dist/ScrollShadow/index.js",
-      "require": "./dist/ScrollShadow/index.cjs",
-      "types": "./dist/ScrollShadow/index.d.ts"
+      "require": "./dist/ScrollShadow/index.cjs"
     },
     "./Tooltip": {
+      "types": "./dist/Tooltip/index.d.ts",
       "import": "./dist/Tooltip/index.js",
-      "require": "./dist/Tooltip/index.cjs",
-      "types": "./dist/Tooltip/index.d.ts"
+      "require": "./dist/Tooltip/index.cjs"
     }
   },
   "files": [
@@ -136,6 +136,7 @@
     "@nextui-org/system": "2.2.6",
     "@nextui-org/theme": "2.2.11",
     "@nextui-org/tooltip": "2.0.41",
+    "framer-motion": "11.11.1",
     "react-icons": "5.3.0",
     "react-json-view": "1.21.3"
   },
