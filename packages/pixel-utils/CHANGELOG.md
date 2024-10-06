@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/fuf-stack/uniform/compare/pixel-utils-v0.2.0...pixel-utils-v0.3.0) (2024-10-06)
+
+
+### Features
+
+* **pixel-utils:** add tw merge to cn + add tests ([81577c4](https://github.com/fuf-stack/uniform/commit/81577c449c5834ffdadf3ba5dc01d8c78c229020))
+
 ## [0.2.0](https://github.com/fuf-stack/uniform/compare/pixel-utils-v0.1.1...pixel-utils-v0.2.0) (2024-10-06)
 
 
