@@ -128,7 +128,6 @@ const Menu = ({
                 title={item.label as DropdownSectionProps['title']}
                 key={item.key}
               >
-                {/* @ts-expect-error ts problem here with render fn */}
                 {(sectionItem) => {
                   return renderMenuItem(sectionItem);
                 }}

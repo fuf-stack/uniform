@@ -41,7 +41,7 @@
     "prepack": "rm -rf ./dist && pnpm build"
   },
   "dependencies": {
-    "@nextui-org/theme": "2.2.6",
+    "@nextui-org/theme": "2.2.11",
     "classnames": "2.5.1",
     "tailwind-variants": "0.2.1"
   },
