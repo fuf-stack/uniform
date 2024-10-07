@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.2](https://github.com/fuf-stack/uniform/compare/uniform-v0.9.1...uniform-v0.9.2) (2024-10-07)
+
+
+### Bug Fixes
+
+* **uniform:** make select compatible with modal and card + refactor code ([a28c65e](https://github.com/fuf-stack/uniform/commit/a28c65e2e6a9710b98101ee2959cca3c713f3c21))
+
 ## [0.9.1](https://github.com/fuf-stack/uniform/compare/uniform-v0.9.0...uniform-v0.9.1) (2024-10-07)
 
 
