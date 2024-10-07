@@ -37,7 +37,7 @@ type Story = StoryObj<typeof Select>;
 
 const args: Story['args'] = {
   name: 'selectField',
-  label: 'label',
+  label: 'Some Label',
   options: [
     { value: 'chocolate', label: 'Chocolate' },
     { value: 'vanilla', label: 'Vanilla' },

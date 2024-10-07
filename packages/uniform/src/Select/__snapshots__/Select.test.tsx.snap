@@ -10,103 +10,115 @@ exports[`Story Snapshots > Default 1`] = `
       data-testid=""
     >
       <div
-        class="mt-2"
-        data-testid="selectfield_select"
+        class="group mt-2"
+        data-filled="true"
+        data-has-label="true"
+        data-slot="base"
+        data-testid="selectfield"
       >
-        <label
-          class="block absolute subpixel-antialiased text-foreground-500 pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto !static -mb-1 ml-1"
-          for="react-select-selectField-input"
-        >
-          label
-        </label>
         <div
-          class="css-b62m3t-container"
+          class="w-full flex flex-col"
+          data-slot="mainWrapper"
         >
-          <span
-            class="css-1f43avz-a11yText-A11yText"
-            id="react-select-selectField-live-region"
-          />
-          <span
-            aria-atomic="false"
-            aria-live="polite"
-            aria-relevant="additions text"
-            class="css-1f43avz-a11yText-A11yText"
-            role="log"
-          />
           <div
-            class="rounded-lg border-2 border-gray-200 shadow-sm !duration-150 transition-background hover:border-gray-400 motion-reduce:transition-none dark:border-default-200 hover:dark:border-default-400 focus:dark:border-default-400 css-cp01gg-control"
+            class="relative"
           >
-            <div
-              class="gap-1 p-1 css-14oxtc6"
+            <label
+              class="relative subpixel-antialiased pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto bottom-2 ml-1"
+              for="react-select-selectField-input"
             >
-              <div
-                class="py-0.5 pl-1 text-neutral-500 css-1vlsb4t-placeholder"
-                id="react-select-selectField-placeholder"
-              >
-                Select...
-              </div>
-              <div
-                class="py-0.5 pl-1 css-n9qnu9"
-                data-value=""
-              >
-                <input
-                  aria-activedescendant=""
-                  aria-autocomplete="list"
-                  aria-describedby="react-select-selectField-placeholder"
-                  aria-errormessage=""
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-invalid="false"
-                  aria-labelledby="react-aria-react-useId-mock"
-                  autocapitalize="none"
-                  autocomplete="off"
-                  autocorrect="off"
-                  class=""
-                  data-testid="selectfield_select_input"
-                  id="react-select-selectField-input"
-                  role="combobox"
-                  spellcheck="false"
-                  style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-                  tabindex="0"
-                  type="text"
-                  value=""
-                />
-              </div>
-            </div>
+              Some Label
+            </label>
             <div
-              class="gap-1 p-1 css-1wy0on6"
+              class="css-b62m3t-container"
             >
               <span
-                class="bg-gray-300 dark:bg-default-300 css-j4w2j1-indicatorSeparator"
+                class="css-1f43avz-a11yText-A11yText"
+                id="react-select-selectField-live-region"
+              />
+              <span
+                aria-atomic="false"
+                aria-live="polite"
+                aria-relevant="additions text"
+                class="css-1f43avz-a11yText-A11yText"
+                role="log"
               />
               <div
-                data-testid="selectfield_select_dropdown"
+                class="rounded-lg border-2 border-default-200 shadow-sm !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none css-cp01gg-control"
               >
                 <div
-                  aria-hidden="true"
-                  class="rounded-md p-1 text-neutral-500 hover:cursor-pointer hover:bg-gray-200 hover:text-black hover:dark:bg-default-200 hover:dark:text-default-500 css-g56vrd-indicatorContainer"
+                  class="gap-1 p-1 css-14oxtc6"
                 >
-                  <svg
-                    aria-hidden="true"
-                    class="css-tj5bde-Svg"
-                    focusable="false"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    width="20"
+                  <div
+                    class="py-0.5 pl-1 text-foreground-500 css-1vlsb4t-placeholder"
+                    id="react-select-selectField-placeholder"
                   >
-                    <path
-                      d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                    Select...
+                  </div>
+                  <div
+                    class="py-0.5 pl-1 css-n9qnu9"
+                    data-value=""
+                  >
+                    <input
+                      aria-activedescendant=""
+                      aria-autocomplete="list"
+                      aria-describedby="react-select-selectField-placeholder"
+                      aria-errormessage=""
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      aria-invalid="false"
+                      aria-labelledby="react-aria-react-useId-mock"
+                      autocapitalize="none"
+                      autocomplete="off"
+                      autocorrect="off"
+                      class=""
+                      data-testid="selectfield_select_input"
+                      id="react-select-selectField-input"
+                      role="combobox"
+                      spellcheck="false"
+                      style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                      tabindex="0"
+                      type="text"
+                      value=""
                     />
-                  </svg>
+                  </div>
+                </div>
+                <div
+                  class="gap-1 p-1 css-1wy0on6"
+                >
+                  <span
+                    class="bg-default-300 css-j4w2j1-indicatorSeparator"
+                  />
+                  <div
+                    data-testid="selectfield_select_dropdown"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="rounded-md p-1 text-foreground-500 hover:cursor-pointer hover:bg-default-200 hover:text-black css-g56vrd-indicatorContainer"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="css-tj5bde-Svg"
+                        focusable="false"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        width="20"
+                      >
+                        <path
+                          d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <input
+                name="selectField"
+                type="hidden"
+                value=""
+              />
             </div>
           </div>
-          <input
-            name="selectField"
-            type="hidden"
-            value=""
-          />
         </div>
       </div>
       <div
@@ -154,118 +166,130 @@ exports[`Story Snapshots > InitialValue 1`] = `
       data-testid=""
     >
       <div
-        class="mt-2"
-        data-testid="selectfield_select"
+        class="group mt-2"
+        data-filled="true"
+        data-has-label="true"
+        data-slot="base"
+        data-testid="selectfield"
       >
-        <label
-          class="block absolute subpixel-antialiased text-foreground-500 pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto !static -mb-1 ml-1"
-          for="react-select-selectField-input"
-        >
-          label
-        </label>
         <div
-          class="css-b62m3t-container"
+          class="w-full flex flex-col"
+          data-slot="mainWrapper"
         >
-          <span
-            class="css-1f43avz-a11yText-A11yText"
-            id="react-select-selectField-live-region"
-          />
-          <span
-            aria-atomic="false"
-            aria-live="polite"
-            aria-relevant="additions text"
-            class="css-1f43avz-a11yText-A11yText"
-            role="log"
-          />
           <div
-            class="rounded-lg border-2 border-gray-200 shadow-sm !duration-150 transition-background hover:border-gray-400 motion-reduce:transition-none dark:border-default-200 hover:dark:border-default-400 focus:dark:border-default-400 css-cp01gg-control"
+            class="relative"
           >
-            <div
-              class="gap-1 p-1 css-14oxtc6"
+            <label
+              class="relative subpixel-antialiased pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto bottom-2 ml-1"
+              for="react-select-selectField-input"
             >
-              <div
-                class="!ml-1 !leading-7 font-normal w-full text-left rtl:text-right text-small truncate group-data-[has-value=true]:text-default-foreground css-w54w9q-singleValue"
-              >
-                Vanilla
-              </div>
-              <div
-                class="py-0.5 pl-1 css-n9qnu9"
-                data-value=""
-              >
-                <input
-                  aria-activedescendant=""
-                  aria-autocomplete="list"
-                  aria-errormessage=""
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-invalid="false"
-                  aria-labelledby="react-aria-react-useId-mock"
-                  autocapitalize="none"
-                  autocomplete="off"
-                  autocorrect="off"
-                  class=""
-                  data-testid="selectfield_select_input"
-                  id="react-select-selectField-input"
-                  role="combobox"
-                  spellcheck="false"
-                  style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-                  tabindex="0"
-                  type="text"
-                  value=""
-                />
-              </div>
-            </div>
+              Some Label
+            </label>
             <div
-              class="gap-1 p-1 css-1wy0on6"
+              class="css-b62m3t-container"
             >
-              <div
-                aria-hidden="true"
-                class="rounded-md p-1 text-neutral-500 hover:cursor-pointer hover:bg-gray-200 hover:text-neutral-800 hover:dark:bg-default-200 hover:dark:text-default-500 css-g56vrd-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="css-tj5bde-Svg"
-                  focusable="false"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  width="20"
-                >
-                  <path
-                    d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                  />
-                </svg>
-              </div>
               <span
-                class="bg-gray-300 dark:bg-default-300 css-j4w2j1-indicatorSeparator"
+                class="css-1f43avz-a11yText-A11yText"
+                id="react-select-selectField-live-region"
+              />
+              <span
+                aria-atomic="false"
+                aria-live="polite"
+                aria-relevant="additions text"
+                class="css-1f43avz-a11yText-A11yText"
+                role="log"
               />
               <div
-                data-testid="selectfield_select_dropdown"
+                class="rounded-lg border-2 border-default-200 shadow-sm !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none css-cp01gg-control"
               >
                 <div
-                  aria-hidden="true"
-                  class="rounded-md p-1 text-neutral-500 hover:cursor-pointer hover:bg-gray-200 hover:text-black hover:dark:bg-default-200 hover:dark:text-default-500 css-g56vrd-indicatorContainer"
+                  class="gap-1 p-1 css-14oxtc6"
                 >
-                  <svg
-                    aria-hidden="true"
-                    class="css-tj5bde-Svg"
-                    focusable="false"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    width="20"
+                  <div
+                    class="!ml-1 !leading-7 font-normal w-full text-left rtl:text-right text-small truncate group-data-[has-value=true]:text-default-foreground css-w54w9q-singleValue"
                   >
-                    <path
-                      d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                    Vanilla
+                  </div>
+                  <div
+                    class="py-0.5 pl-1 css-n9qnu9"
+                    data-value=""
+                  >
+                    <input
+                      aria-activedescendant=""
+                      aria-autocomplete="list"
+                      aria-errormessage=""
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      aria-invalid="false"
+                      aria-labelledby="react-aria-react-useId-mock"
+                      autocapitalize="none"
+                      autocomplete="off"
+                      autocorrect="off"
+                      class=""
+                      data-testid="selectfield_select_input"
+                      id="react-select-selectField-input"
+                      role="combobox"
+                      spellcheck="false"
+                      style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                      tabindex="0"
+                      type="text"
+                      value=""
                     />
-                  </svg>
+                  </div>
+                </div>
+                <div
+                  class="gap-1 p-1 css-1wy0on6"
+                >
+                  <div
+                    aria-hidden="true"
+                    class="rounded-md p-1 text-foreground-500 hover:cursor-pointer hover:bg-default-200 hover:text-foreground-800 css-g56vrd-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="css-tj5bde-Svg"
+                      focusable="false"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      width="20"
+                    >
+                      <path
+                        d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                      />
+                    </svg>
+                  </div>
+                  <span
+                    class="bg-default-300 css-j4w2j1-indicatorSeparator"
+                  />
+                  <div
+                    data-testid="selectfield_select_dropdown"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="rounded-md p-1 text-foreground-500 hover:cursor-pointer hover:bg-default-200 hover:text-black css-g56vrd-indicatorContainer"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="css-tj5bde-Svg"
+                        focusable="false"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        width="20"
+                      >
+                        <path
+                          d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <input
+                name="selectField"
+                type="hidden"
+                value="vanilla"
+              />
             </div>
           </div>
-          <input
-            name="selectField"
-            type="hidden"
-            value="vanilla"
-          />
         </div>
       </div>
       <div
@@ -313,118 +337,130 @@ exports[`Story Snapshots > Invalid 1`] = `
       data-testid=""
     >
       <div
-        class="mt-2"
-        data-testid="selectfield_select"
+        class="group mt-2"
+        data-filled="true"
+        data-has-label="true"
+        data-slot="base"
+        data-testid="selectfield"
       >
-        <label
-          class="block absolute subpixel-antialiased text-foreground-500 pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto !static -mb-1 ml-1"
-          for="react-select-selectField-input"
-        >
-          label
-        </label>
         <div
-          class="css-b62m3t-container"
+          class="w-full flex flex-col"
+          data-slot="mainWrapper"
         >
-          <span
-            class="css-1f43avz-a11yText-A11yText"
-            id="react-select-selectField-live-region"
-          />
-          <span
-            aria-atomic="false"
-            aria-live="polite"
-            aria-relevant="additions text"
-            class="css-1f43avz-a11yText-A11yText"
-            role="log"
-          />
           <div
-            class="rounded-lg border-2 border-gray-200 shadow-sm !duration-150 transition-background hover:border-gray-400 motion-reduce:transition-none dark:border-default-200 hover:dark:border-default-400 focus:dark:border-default-400 css-cp01gg-control"
+            class="relative"
           >
-            <div
-              class="gap-1 p-1 css-14oxtc6"
+            <label
+              class="relative subpixel-antialiased pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto bottom-2 ml-1"
+              for="react-select-selectField-input"
             >
-              <div
-                class="!ml-1 !leading-7 font-normal w-full text-left rtl:text-right text-small truncate group-data-[has-value=true]:text-default-foreground css-w54w9q-singleValue"
-              >
-                Vanilla
-              </div>
-              <div
-                class="py-0.5 pl-1 css-n9qnu9"
-                data-value=""
-              >
-                <input
-                  aria-activedescendant=""
-                  aria-autocomplete="list"
-                  aria-errormessage=""
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-invalid="false"
-                  aria-labelledby="react-aria-react-useId-mock"
-                  autocapitalize="none"
-                  autocomplete="off"
-                  autocorrect="off"
-                  class=""
-                  data-testid="selectfield_select_input"
-                  id="react-select-selectField-input"
-                  role="combobox"
-                  spellcheck="false"
-                  style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-                  tabindex="0"
-                  type="text"
-                  value=""
-                />
-              </div>
-            </div>
+              Some Label
+            </label>
             <div
-              class="gap-1 p-1 css-1wy0on6"
+              class="css-b62m3t-container"
             >
-              <div
-                aria-hidden="true"
-                class="rounded-md p-1 text-neutral-500 hover:cursor-pointer hover:bg-gray-200 hover:text-neutral-800 hover:dark:bg-default-200 hover:dark:text-default-500 css-g56vrd-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="css-tj5bde-Svg"
-                  focusable="false"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  width="20"
-                >
-                  <path
-                    d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                  />
-                </svg>
-              </div>
               <span
-                class="bg-gray-300 dark:bg-default-300 css-j4w2j1-indicatorSeparator"
+                class="css-1f43avz-a11yText-A11yText"
+                id="react-select-selectField-live-region"
+              />
+              <span
+                aria-atomic="false"
+                aria-live="polite"
+                aria-relevant="additions text"
+                class="css-1f43avz-a11yText-A11yText"
+                role="log"
               />
               <div
-                data-testid="selectfield_select_dropdown"
+                class="rounded-lg border-2 border-default-200 shadow-sm !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none css-cp01gg-control"
               >
                 <div
-                  aria-hidden="true"
-                  class="rounded-md p-1 text-neutral-500 hover:cursor-pointer hover:bg-gray-200 hover:text-black hover:dark:bg-default-200 hover:dark:text-default-500 css-g56vrd-indicatorContainer"
+                  class="gap-1 p-1 css-14oxtc6"
                 >
-                  <svg
-                    aria-hidden="true"
-                    class="css-tj5bde-Svg"
-                    focusable="false"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    width="20"
+                  <div
+                    class="!ml-1 !leading-7 font-normal w-full text-left rtl:text-right text-small truncate group-data-[has-value=true]:text-default-foreground css-w54w9q-singleValue"
                   >
-                    <path
-                      d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                    Vanilla
+                  </div>
+                  <div
+                    class="py-0.5 pl-1 css-n9qnu9"
+                    data-value=""
+                  >
+                    <input
+                      aria-activedescendant=""
+                      aria-autocomplete="list"
+                      aria-errormessage=""
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      aria-invalid="false"
+                      aria-labelledby="react-aria-react-useId-mock"
+                      autocapitalize="none"
+                      autocomplete="off"
+                      autocorrect="off"
+                      class=""
+                      data-testid="selectfield_select_input"
+                      id="react-select-selectField-input"
+                      role="combobox"
+                      spellcheck="false"
+                      style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                      tabindex="0"
+                      type="text"
+                      value=""
                     />
-                  </svg>
+                  </div>
+                </div>
+                <div
+                  class="gap-1 p-1 css-1wy0on6"
+                >
+                  <div
+                    aria-hidden="true"
+                    class="rounded-md p-1 text-foreground-500 hover:cursor-pointer hover:bg-default-200 hover:text-foreground-800 css-g56vrd-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="css-tj5bde-Svg"
+                      focusable="false"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      width="20"
+                    >
+                      <path
+                        d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                      />
+                    </svg>
+                  </div>
+                  <span
+                    class="bg-default-300 css-j4w2j1-indicatorSeparator"
+                  />
+                  <div
+                    data-testid="selectfield_select_dropdown"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="rounded-md p-1 text-foreground-500 hover:cursor-pointer hover:bg-default-200 hover:text-black css-g56vrd-indicatorContainer"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="css-tj5bde-Svg"
+                        focusable="false"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        width="20"
+                      >
+                        <path
+                          d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <input
+                name="selectField"
+                type="hidden"
+                value="vanilla"
+              />
             </div>
           </div>
-          <input
-            name="selectField"
-            type="hidden"
-            value="vanilla"
-          />
         </div>
       </div>
       <div
@@ -488,103 +524,115 @@ exports[`Story Snapshots > MenuIsVisibleInCard 1`] = `
           class="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased"
         >
           <div
-            class="mt-2"
-            data-testid="selectfield_select"
+            class="group mt-2"
+            data-filled="true"
+            data-has-label="true"
+            data-slot="base"
+            data-testid="selectfield"
           >
-            <label
-              class="block absolute subpixel-antialiased text-foreground-500 pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto !static -mb-1 ml-1"
-              for="react-select-selectField-input"
-            >
-              label
-            </label>
             <div
-              class="css-b62m3t-container"
+              class="w-full flex flex-col"
+              data-slot="mainWrapper"
             >
-              <span
-                class="css-1f43avz-a11yText-A11yText"
-                id="react-select-selectField-live-region"
-              />
-              <span
-                aria-atomic="false"
-                aria-live="polite"
-                aria-relevant="additions text"
-                class="css-1f43avz-a11yText-A11yText"
-                role="log"
-              />
               <div
-                class="rounded-lg border-2 border-gray-200 shadow-sm !duration-150 transition-background hover:border-gray-400 motion-reduce:transition-none dark:border-default-200 hover:dark:border-default-400 focus:dark:border-default-400 css-cp01gg-control"
+                class="relative"
               >
-                <div
-                  class="gap-1 p-1 css-14oxtc6"
+                <label
+                  class="relative subpixel-antialiased pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto bottom-2 ml-1"
+                  for="react-select-selectField-input"
                 >
-                  <div
-                    class="py-0.5 pl-1 text-neutral-500 css-1vlsb4t-placeholder"
-                    id="react-select-selectField-placeholder"
-                  >
-                    Select...
-                  </div>
-                  <div
-                    class="py-0.5 pl-1 css-n9qnu9"
-                    data-value=""
-                  >
-                    <input
-                      aria-activedescendant=""
-                      aria-autocomplete="list"
-                      aria-describedby="react-select-selectField-placeholder"
-                      aria-errormessage=""
-                      aria-expanded="false"
-                      aria-haspopup="true"
-                      aria-invalid="false"
-                      aria-labelledby="react-aria-react-useId-mock"
-                      autocapitalize="none"
-                      autocomplete="off"
-                      autocorrect="off"
-                      class=""
-                      data-testid="selectfield_select_input"
-                      id="react-select-selectField-input"
-                      role="combobox"
-                      spellcheck="false"
-                      style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-                      tabindex="0"
-                      type="text"
-                      value=""
-                    />
-                  </div>
-                </div>
+                  Some Label
+                </label>
                 <div
-                  class="gap-1 p-1 css-1wy0on6"
+                  class="css-b62m3t-container"
                 >
                   <span
-                    class="bg-gray-300 dark:bg-default-300 css-j4w2j1-indicatorSeparator"
+                    class="css-1f43avz-a11yText-A11yText"
+                    id="react-select-selectField-live-region"
+                  />
+                  <span
+                    aria-atomic="false"
+                    aria-live="polite"
+                    aria-relevant="additions text"
+                    class="css-1f43avz-a11yText-A11yText"
+                    role="log"
                   />
                   <div
-                    data-testid="selectfield_select_dropdown"
+                    class="rounded-lg border-2 border-default-200 shadow-sm !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none css-cp01gg-control"
                   >
                     <div
-                      aria-hidden="true"
-                      class="rounded-md p-1 text-neutral-500 hover:cursor-pointer hover:bg-gray-200 hover:text-black hover:dark:bg-default-200 hover:dark:text-default-500 css-g56vrd-indicatorContainer"
+                      class="gap-1 p-1 css-14oxtc6"
                     >
-                      <svg
-                        aria-hidden="true"
-                        class="css-tj5bde-Svg"
-                        focusable="false"
-                        height="20"
-                        viewBox="0 0 20 20"
-                        width="20"
+                      <div
+                        class="py-0.5 pl-1 text-foreground-500 css-1vlsb4t-placeholder"
+                        id="react-select-selectField-placeholder"
                       >
-                        <path
-                          d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                        Select...
+                      </div>
+                      <div
+                        class="py-0.5 pl-1 css-n9qnu9"
+                        data-value=""
+                      >
+                        <input
+                          aria-activedescendant=""
+                          aria-autocomplete="list"
+                          aria-describedby="react-select-selectField-placeholder"
+                          aria-errormessage=""
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          aria-invalid="false"
+                          aria-labelledby="react-aria-react-useId-mock"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          class=""
+                          data-testid="selectfield_select_input"
+                          id="react-select-selectField-input"
+                          role="combobox"
+                          spellcheck="false"
+                          style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                          tabindex="0"
+                          type="text"
+                          value=""
                         />
-                      </svg>
+                      </div>
+                    </div>
+                    <div
+                      class="gap-1 p-1 css-1wy0on6"
+                    >
+                      <span
+                        class="bg-default-300 css-j4w2j1-indicatorSeparator"
+                      />
+                      <div
+                        data-testid="selectfield_select_dropdown"
+                      >
+                        <div
+                          aria-hidden="true"
+                          class="rounded-md p-1 text-foreground-500 hover:cursor-pointer hover:bg-default-200 hover:text-black css-g56vrd-indicatorContainer"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="css-tj5bde-Svg"
+                            focusable="false"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            width="20"
+                          >
+                            <path
+                              d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   </div>
+                  <input
+                    name="selectField"
+                    type="hidden"
+                    value=""
+                  />
                 </div>
               </div>
-              <input
-                name="selectField"
-                type="hidden"
-                value=""
-              />
             </div>
           </div>
         </div>
@@ -685,104 +733,116 @@ exports[`Story Snapshots > MultiSelect 1`] = `
       data-testid=""
     >
       <div
-        class="mt-2"
-        data-testid="selectfield_select"
+        class="group mt-2"
+        data-filled="true"
+        data-has-label="true"
+        data-slot="base"
+        data-testid="selectfield"
       >
-        <label
-          class="block absolute subpixel-antialiased text-foreground-500 pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto !static -mb-1 ml-1"
-          for="react-select-selectField-input"
-        >
-          label
-        </label>
         <div
-          class="css-b62m3t-container"
+          class="w-full flex flex-col"
+          data-slot="mainWrapper"
         >
-          <span
-            class="css-1f43avz-a11yText-A11yText"
-            id="react-select-selectField-live-region"
-          />
-          <span
-            aria-atomic="false"
-            aria-live="polite"
-            aria-relevant="additions text"
-            class="css-1f43avz-a11yText-A11yText"
-            role="log"
-          />
           <div
-            class="rounded-lg border-2 border-gray-200 shadow-sm !duration-150 transition-background hover:border-gray-400 motion-reduce:transition-none dark:border-default-200 hover:dark:border-default-400 focus:dark:border-default-400 css-cp01gg-control"
+            class="relative"
           >
-            <div
-              class="gap-1 p-1 css-14oxtc6"
+            <label
+              class="relative subpixel-antialiased pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto bottom-2 ml-1"
+              for="react-select-selectField-input"
             >
+              Some Label
+            </label>
+            <div
+              class="css-b62m3t-container"
+            >
+              <span
+                class="css-1f43avz-a11yText-A11yText"
+                id="react-select-selectField-live-region"
+              />
+              <span
+                aria-atomic="false"
+                aria-live="polite"
+                aria-relevant="additions text"
+                class="css-1f43avz-a11yText-A11yText"
+                role="log"
+              />
               <div
-                class="py-0.5 pl-1 text-neutral-500 css-1vlsb4t-placeholder"
-                id="react-select-selectField-placeholder"
+                class="rounded-lg border-2 border-default-200 shadow-sm !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none css-cp01gg-control"
               >
-                Select...
+                <div
+                  class="gap-1 p-1 css-14oxtc6"
+                >
+                  <div
+                    class="py-0.5 pl-1 text-foreground-500 css-1vlsb4t-placeholder"
+                    id="react-select-selectField-placeholder"
+                  >
+                    Select...
+                  </div>
+                  <div
+                    class="py-0.5 pl-1 css-n9qnu9"
+                    data-value=""
+                  >
+                    <input
+                      aria-activedescendant=""
+                      aria-autocomplete="list"
+                      aria-describedby="react-select-selectField-placeholder"
+                      aria-errormessage=""
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      aria-invalid="false"
+                      aria-labelledby="react-aria-react-useId-mock"
+                      autocapitalize="none"
+                      autocomplete="off"
+                      autocorrect="off"
+                      class=""
+                      data-testid="selectfield_select_input"
+                      id="react-select-selectField-input"
+                      role="combobox"
+                      spellcheck="false"
+                      style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                      tabindex="0"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="gap-1 p-1 css-1wy0on6"
+                >
+                  <span
+                    class="bg-default-300 css-j4w2j1-indicatorSeparator"
+                  />
+                  <div
+                    data-testid="selectfield_select_dropdown"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="rounded-md p-1 text-foreground-500 hover:cursor-pointer hover:bg-default-200 hover:text-black css-g56vrd-indicatorContainer"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="css-tj5bde-Svg"
+                        focusable="false"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        width="20"
+                      >
+                        <path
+                          d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div
-                class="py-0.5 pl-1 css-n9qnu9"
-                data-value=""
-              >
+              <div>
                 <input
-                  aria-activedescendant=""
-                  aria-autocomplete="list"
-                  aria-describedby="react-select-selectField-placeholder"
-                  aria-errormessage=""
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-invalid="false"
-                  aria-labelledby="react-aria-react-useId-mock"
-                  autocapitalize="none"
-                  autocomplete="off"
-                  autocorrect="off"
-                  class=""
-                  data-testid="selectfield_select_input"
-                  id="react-select-selectField-input"
-                  role="combobox"
-                  spellcheck="false"
-                  style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-                  tabindex="0"
-                  type="text"
+                  name="selectField"
+                  type="hidden"
                   value=""
                 />
               </div>
             </div>
-            <div
-              class="gap-1 p-1 css-1wy0on6"
-            >
-              <span
-                class="bg-gray-300 dark:bg-default-300 css-j4w2j1-indicatorSeparator"
-              />
-              <div
-                data-testid="selectfield_select_dropdown"
-              >
-                <div
-                  aria-hidden="true"
-                  class="rounded-md p-1 text-neutral-500 hover:cursor-pointer hover:bg-gray-200 hover:text-black hover:dark:bg-default-200 hover:dark:text-default-500 css-g56vrd-indicatorContainer"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="css-tj5bde-Svg"
-                    focusable="false"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    width="20"
-                  >
-                    <path
-                      d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <input
-              name="selectField"
-              type="hidden"
-              value=""
-            />
           </div>
         </div>
       </div>
@@ -831,103 +891,115 @@ exports[`Story Snapshots > Required 1`] = `
       data-testid=""
     >
       <div
-        class="mt-2"
-        data-testid="selectfield_select"
+        class="group mt-2"
+        data-filled="true"
+        data-has-label="true"
+        data-slot="base"
+        data-testid="selectfield"
       >
-        <label
-          class="block absolute subpixel-antialiased text-foreground-500 pointer-events-none after:content-['*'] after:text-danger after:ms-0.5 will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto !static -mb-1 ml-1"
-          for="react-select-selectField-input"
-        >
-          label
-        </label>
         <div
-          class="css-b62m3t-container"
+          class="w-full flex flex-col"
+          data-slot="mainWrapper"
         >
-          <span
-            class="css-1f43avz-a11yText-A11yText"
-            id="react-select-selectField-live-region"
-          />
-          <span
-            aria-atomic="false"
-            aria-live="polite"
-            aria-relevant="additions text"
-            class="css-1f43avz-a11yText-A11yText"
-            role="log"
-          />
           <div
-            class="rounded-lg border-2 border-gray-200 shadow-sm !duration-150 transition-background hover:border-gray-400 motion-reduce:transition-none dark:border-default-200 hover:dark:border-default-400 focus:dark:border-default-400 css-cp01gg-control"
+            class="relative"
           >
-            <div
-              class="gap-1 p-1 css-14oxtc6"
+            <label
+              class="relative subpixel-antialiased pointer-events-none after:content-['*'] after:text-danger after:ms-0.5 will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto bottom-2 ml-1"
+              for="react-select-selectField-input"
             >
-              <div
-                class="py-0.5 pl-1 text-neutral-500 css-1vlsb4t-placeholder"
-                id="react-select-selectField-placeholder"
-              >
-                Select...
-              </div>
-              <div
-                class="py-0.5 pl-1 css-n9qnu9"
-                data-value=""
-              >
-                <input
-                  aria-activedescendant=""
-                  aria-autocomplete="list"
-                  aria-describedby="react-select-selectField-placeholder"
-                  aria-errormessage=""
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-invalid="false"
-                  aria-labelledby="react-aria-react-useId-mock"
-                  autocapitalize="none"
-                  autocomplete="off"
-                  autocorrect="off"
-                  class=""
-                  data-testid="selectfield_select_input"
-                  id="react-select-selectField-input"
-                  role="combobox"
-                  spellcheck="false"
-                  style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-                  tabindex="0"
-                  type="text"
-                  value=""
-                />
-              </div>
-            </div>
+              Some Label
+            </label>
             <div
-              class="gap-1 p-1 css-1wy0on6"
+              class="css-b62m3t-container"
             >
               <span
-                class="bg-gray-300 dark:bg-default-300 css-j4w2j1-indicatorSeparator"
+                class="css-1f43avz-a11yText-A11yText"
+                id="react-select-selectField-live-region"
+              />
+              <span
+                aria-atomic="false"
+                aria-live="polite"
+                aria-relevant="additions text"
+                class="css-1f43avz-a11yText-A11yText"
+                role="log"
               />
               <div
-                data-testid="selectfield_select_dropdown"
+                class="rounded-lg border-2 border-default-200 shadow-sm !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none css-cp01gg-control"
               >
                 <div
-                  aria-hidden="true"
-                  class="rounded-md p-1 text-neutral-500 hover:cursor-pointer hover:bg-gray-200 hover:text-black hover:dark:bg-default-200 hover:dark:text-default-500 css-g56vrd-indicatorContainer"
+                  class="gap-1 p-1 css-14oxtc6"
                 >
-                  <svg
-                    aria-hidden="true"
-                    class="css-tj5bde-Svg"
-                    focusable="false"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    width="20"
+                  <div
+                    class="py-0.5 pl-1 text-foreground-500 css-1vlsb4t-placeholder"
+                    id="react-select-selectField-placeholder"
                   >
-                    <path
-                      d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                    Select...
+                  </div>
+                  <div
+                    class="py-0.5 pl-1 css-n9qnu9"
+                    data-value=""
+                  >
+                    <input
+                      aria-activedescendant=""
+                      aria-autocomplete="list"
+                      aria-describedby="react-select-selectField-placeholder"
+                      aria-errormessage=""
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      aria-invalid="false"
+                      aria-labelledby="react-aria-react-useId-mock"
+                      autocapitalize="none"
+                      autocomplete="off"
+                      autocorrect="off"
+                      class=""
+                      data-testid="selectfield_select_input"
+                      id="react-select-selectField-input"
+                      role="combobox"
+                      spellcheck="false"
+                      style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                      tabindex="0"
+                      type="text"
+                      value=""
                     />
-                  </svg>
+                  </div>
+                </div>
+                <div
+                  class="gap-1 p-1 css-1wy0on6"
+                >
+                  <span
+                    class="bg-default-300 css-j4w2j1-indicatorSeparator"
+                  />
+                  <div
+                    data-testid="selectfield_select_dropdown"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class="rounded-md p-1 text-foreground-500 hover:cursor-pointer hover:bg-default-200 hover:text-black css-g56vrd-indicatorContainer"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="css-tj5bde-Svg"
+                        focusable="false"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        width="20"
+                      >
+                        <path
+                          d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <input
+                name="selectField"
+                type="hidden"
+                value=""
+              />
             </div>
           </div>
-          <input
-            name="selectField"
-            type="hidden"
-            value=""
-          />
         </div>
       </div>
       <div
