@@ -81,6 +81,8 @@ export interface SelectProps extends VariantProps {
   filterOption?:
     | undefined
     | ((option?: SelectOption, inputValue?: string) => boolean);
+  /** Format the label of the option */
+  formatOptionLabel?: undefined | Props['formatOptionLabel'];
   /** The value of the search input */
   inputValue?: string;
   /** Label that should be associated with the select. */
@@ -141,6 +143,7 @@ const Select = ({
   clearable = true,
   disabled = false,
   filterOption = undefined,
+  formatOptionLabel = undefined,
   inputValue = undefined,
   label: _label = undefined,
   loading = false,
@@ -266,6 +269,7 @@ const Select = ({
                   DropdownIndicator: DropdownIndicatorComponent,
                 }}
                 filterOption={filterOption}
+                formatOptionLabel={formatOptionLabel}
                 instanceId={name}
                 inputValue={inputValue}
                 isClearable={clearable}
