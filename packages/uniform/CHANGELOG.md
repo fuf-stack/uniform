@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.3](https://github.com/fuf-stack/uniform/compare/uniform-v0.9.2...uniform-v0.9.3) (2024-10-07)
+
+
+### Bug Fixes
+
+* **uniform:** refactor select label style to tv slot ([75353d1](https://github.com/fuf-stack/uniform/commit/75353d15ba669013597f7da0ef0111ec86ee71a0))
+
 ## [0.9.2](https://github.com/fuf-stack/uniform/compare/uniform-v0.9.1...uniform-v0.9.2) (2024-10-07)
 
 
