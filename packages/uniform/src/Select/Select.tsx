@@ -274,7 +274,6 @@ const Select = ({
                 menuShouldBlockScroll
                 options={options}
                 placeholder={placeholder}
-                value={options.find((option) => option.value === value)}
                 onBlur={(_e) => {
                   setIsFocused(false);
                   return onBlur();
@@ -297,6 +296,8 @@ const Select = ({
                 }}
                 onInputChange={onInputChange}
                 ref={ref}
+                // set complete option as value by current field value
+                value={options.find((option) => option.value === value)}
                 unstyled
               />
             </div>
