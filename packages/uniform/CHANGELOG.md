@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.1](https://github.com/fuf-stack/uniform/compare/uniform-v0.9.0...uniform-v0.9.1) (2024-10-07)
+
+
+### Bug Fixes
+
+* **uniform:** add formatOptionLabel to select ([6275900](https://github.com/fuf-stack/uniform/commit/62759004cb5680c230db11efd8d35b3f1717f51d))
+* **uniform:** select styling and tv logic ([6c3afc1](https://github.com/fuf-stack/uniform/commit/6c3afc1fbe19218649c5254892c6d14f88efba7f))
+
 ## [0.9.0](https://github.com/fuf-stack/uniform/compare/uniform-v0.8.5...uniform-v0.9.0) (2024-10-06)
 
 
