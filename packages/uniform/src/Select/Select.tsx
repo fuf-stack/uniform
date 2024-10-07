@@ -34,18 +34,15 @@ export const selectVariants = tv({
     loadingMessage: '',
     menu: 'mt-2 rounded-xl border border-default-200 bg-background p-1 shadow-lg',
     menuList: '',
-    // ensure menu has same z-index as modal so it is visible when rendered in modal
-    // see: https://github.com/nextui-org/nextui/blob/main/packages/core/theme/src/components/modal.ts (see z-50)
-    menuPortal: '!z-50',
     multiValue: 'items-center gap-1.5 rounded bg-default-100 py-0.5 pl-2 pr-1',
     multiValueContainer: '',
     multiValueLabel: 'py-0.5 leading-6',
     multiValueRemove:
       'rounded text-default-500 hover:cursor-pointer hover:border-default-300 hover:text-default-800',
     noOptionsMessage: 'rounded-sm p-2 text-foreground-500',
-    option: 'rounded px-3 py-2 hover:cursor-pointer',
-    option_selected: 'bg-default-300',
     option_focused: 'bg-default-100 active:bg-default-200',
+    option_selected: 'bg-default-300',
+    option: 'rounded px-3 py-2 hover:cursor-pointer',
     placeholder: 'py-0.5 pl-1 text-foreground-500',
     selectContainer: '',
     singleValue: '!ml-1 !leading-7',
@@ -163,25 +160,25 @@ const Select = ({
   const classNames = variantsToClassNames(variants, className, 'base');
 
   const {
-    label,
     getBaseProps,
+    getErrorMessageProps,
+    getHelperWrapperProps,
     getLabelProps,
+    getMainWrapperProps,
     getTriggerProps,
     getValueProps,
-    getMainWrapperProps,
-    getHelperWrapperProps,
-    getErrorMessageProps,
+    label,
   } = useSelect({
-    isLoading: loading,
-    isInvalid: invalid,
-    isRequired: required,
-    isDisabled: disabled,
+    children: [],
+    classNames,
     errorMessage: JSON.stringify(error),
+    isDisabled: disabled,
+    isInvalid: invalid,
+    isLoading: loading,
+    isRequired: required,
     label: _label,
     labelPlacement: 'outside',
     placeholder: ' ',
-    children: [],
-    classNames,
   });
 
   return (
@@ -217,28 +214,22 @@ const Select = ({
               )}
               <ReactSelect
                 aria-errormessage=""
-                aria-invalid={invalid}
-                // Does not affect the testId of the select, but is needed to pass it to sub-components
-                data-testid={`${testId}_select`}
-                // eslint-disable-next-line react/jsx-props-no-spreading
-                {...() => {
-                  // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/naming-convention
-                  const { className: _className, ...rest } = getTriggerProps();
-                  return rest;
-                }}
                 aria-labelledby={
                   getTriggerProps()['aria-labelledby']?.split(' ')[1]
                 }
+                aria-invalid={invalid}
                 classNames={{
                   control: () =>
                     cn(classNames.control, {
                       [classNames.control_focused]: isFocused && !invalid,
                     }),
-                  placeholder: () => classNames.placeholder,
+                  clearIndicator: () => classNames.clearIndicator,
+                  dropdownIndicator: () => classNames.dropdownIndicator,
+                  groupHeading: () => classNames.groupHeading,
+                  indicatorsContainer: () => classNames.indicatorsContainer,
+                  indicatorSeparator: () => classNames.indicatorSeparator,
                   input: () => classNames.input,
-                  valueContainer: () => classNames.valueContainer,
-                  singleValue: () =>
-                    cn(classNames.singleValue, `${getValueProps().className}`),
+                  menu: () => classNames.menu,
                   multiValue: () => classNames.multiValue,
                   multiValueLabel: () =>
                     cn(
@@ -246,12 +237,7 @@ const Select = ({
                       `${getValueProps().className}`,
                     ),
                   multiValueRemove: () => classNames.multiValueRemove,
-                  indicatorsContainer: () => classNames.indicatorsContainer,
-                  clearIndicator: () => classNames.clearIndicator,
-                  indicatorSeparator: () => classNames.indicatorSeparator,
-                  dropdownIndicator: () => classNames.dropdownIndicator,
-                  menu: () => classNames.menu,
-                  groupHeading: () => classNames.groupHeading,
+                  noOptionsMessage: () => classNames.noOptionsMessage,
                   option: ({
                     isFocused: optionIsFocused,
                     isSelected: optionIsSelected,
@@ -260,25 +246,39 @@ const Select = ({
                       [classNames.option_focused]: optionIsFocused,
                       [classNames.option_selected]: optionIsSelected,
                     }),
-                  noOptionsMessage: () => classNames.noOptionsMessage,
-                  menuPortal: () => classNames.menuPortal,
+                  placeholder: () => classNames.placeholder,
+                  singleValue: () =>
+                    cn(classNames.singleValue, `${getValueProps().className}`),
+                  valueContainer: () => classNames.valueContainer,
                 }}
                 components={{
                   Input: InputComponent,
                   Option: OptionComponent,
                   DropdownIndicator: DropdownIndicatorComponent,
                 }}
+                // Does not affect the testId of the select, but is needed to pass it to sub-components
+                data-testid={`${testId}_select`}
                 filterOption={filterOption}
                 formatOptionLabel={formatOptionLabel}
-                instanceId={name}
                 inputValue={inputValue}
+                instanceId={name}
                 isClearable={clearable}
                 isDisabled={disabled}
                 isLoading={loading}
                 isMulti={multiSelect}
+                name={name}
+                // set menuPosition to fixed so that menu can be rendered
+                // inside Card / Modal components, menuShouldBlockScroll
+                // prevents container scroll when menu is open
+                menuPosition="fixed"
+                menuShouldBlockScroll
                 options={options}
                 placeholder={placeholder}
-                unstyled
+                value={options.find((option) => option.value === value)}
+                onBlur={(_e) => {
+                  setIsFocused(false);
+                  return onBlur();
+                }}
                 onChange={(option) => {
                   if (multiSelect) {
                     const transformedOptions: string[] = [];
@@ -292,22 +292,12 @@ const Select = ({
                     onChange(option && option.value);
                   }
                 }}
-                onInputChange={onInputChange}
-                // attach menu modal or body so it works in card and modal
-                menuPortalTarget={
-                  (document.getElementById('modal_body')?.parentNode
-                    ?.parentNode as HTMLElement) || document.body
-                }
-                value={options.find((option) => option.value === value)}
-                onBlur={(_e) => {
-                  setIsFocused(false);
-                  return onBlur();
-                }}
                 onFocus={(_e) => {
                   setIsFocused(true);
                 }}
-                name={name}
+                onInputChange={onInputChange}
                 ref={ref}
+                unstyled
               />
             </div>
             {error && (

@@ -7,3 +7,4 @@ import * as stories from './Select.stories';
 describe('Story Snapshots', () => {
   storySnapshots(stories);
 });
+
