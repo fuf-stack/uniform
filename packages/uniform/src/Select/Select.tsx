@@ -30,6 +30,7 @@ export const selectVariants = tv({
     indicatorsContainer: 'gap-1 p-1',
     indicatorSeparator: 'bg-default-300',
     input: 'py-0.5 pl-1',
+    label: '!pointer-events-auto relative bottom-2 ml-1 inline',
     loadingIndicator: '',
     loadingMessage: '',
     menu: 'mt-2 rounded-xl border border-default-200 bg-background p-1 shadow-lg',
@@ -201,12 +202,7 @@ const Select = ({
               {label && (
                 <label
                   htmlFor={`react-select-${name}-input`}
-                  className={cn(
-                    getLabelProps()
-                      .className.replace('absolute', 'relative')
-                      .replace('block', ''),
-                    '!pointer-events-auto bottom-2 ml-1',
-                  )}
+                  className={cn(getLabelProps().className, classNames.label)}
                 >
                   {label}
                   <FieldCopyTestIdButton testId={testId} />

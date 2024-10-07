@@ -24,7 +24,7 @@ exports[`Story Snapshots > Default 1`] = `
             class="relative"
           >
             <label
-              class="relative subpixel-antialiased pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto bottom-2 ml-1"
+              class="subpixel-antialiased pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto relative bottom-2 ml-1 inline"
               for="react-select-selectField-input"
             >
               Some Label
@@ -180,7 +180,7 @@ exports[`Story Snapshots > InitialValue 1`] = `
             class="relative"
           >
             <label
-              class="relative subpixel-antialiased pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto bottom-2 ml-1"
+              class="subpixel-antialiased pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto relative bottom-2 ml-1 inline"
               for="react-select-selectField-input"
             >
               Some Label
@@ -351,7 +351,7 @@ exports[`Story Snapshots > Invalid 1`] = `
             class="relative"
           >
             <label
-              class="relative subpixel-antialiased pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto bottom-2 ml-1"
+              class="subpixel-antialiased pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto relative bottom-2 ml-1 inline"
               for="react-select-selectField-input"
             >
               Some Label
@@ -538,7 +538,7 @@ exports[`Story Snapshots > MenuIsVisibleInCard 1`] = `
                 class="relative"
               >
                 <label
-                  class="relative subpixel-antialiased pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto bottom-2 ml-1"
+                  class="subpixel-antialiased pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto relative bottom-2 ml-1 inline"
                   for="react-select-selectField-input"
                 >
                   Some Label
@@ -747,7 +747,7 @@ exports[`Story Snapshots > MultiSelect 1`] = `
             class="relative"
           >
             <label
-              class="relative subpixel-antialiased pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto bottom-2 ml-1"
+              class="subpixel-antialiased pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto relative bottom-2 ml-1 inline"
               for="react-select-selectField-input"
             >
               Some Label
@@ -905,7 +905,7 @@ exports[`Story Snapshots > Required 1`] = `
             class="relative"
           >
             <label
-              class="relative subpixel-antialiased pointer-events-none after:content-['*'] after:text-danger after:ms-0.5 will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto bottom-2 ml-1"
+              class="subpixel-antialiased pointer-events-none after:content-['*'] after:text-danger after:ms-0.5 will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto relative bottom-2 ml-1 inline"
               for="react-select-selectField-input"
             >
               Some Label
