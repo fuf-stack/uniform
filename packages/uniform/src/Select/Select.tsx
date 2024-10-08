@@ -33,7 +33,7 @@ export const selectVariants = tv({
     label: '!pointer-events-auto relative bottom-2 ml-1 inline',
     loadingIndicator: '',
     loadingMessage: '',
-    menu: 'mt-2 rounded-xl border border-default-200 bg-background p-1 shadow-lg',
+    menu: 'mt-2 rounded-xl border border-default-200 bg-content1 p-1 shadow-lg',
     menuList: '',
     // ensure menu has same z-index as modal so it is visible when rendered in modal
     // see: https://github.com/nextui-org/nextui/blob/main/packages/core/theme/src/components/modal.ts (see z-50)
