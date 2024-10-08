@@ -9,11 +9,11 @@ import { FieldValidationError } from '../partials/FieldValidationError';
 
 export interface SwitchProps {
   /** CSS class name */
-  className: string;
+  className?: string;
   /** whether the select should be disabled */
   disabled?: boolean;
   /** component displayed next to the switch. */
-  label: React.ReactNode;
+  label?: React.ReactNode;
   /** name the field is registered under */
   name: string;
   /** HTML data-testid attribute used in e2e tests */
@@ -24,7 +24,7 @@ export interface SwitchProps {
  *  Switch component based on [NextUI Switch](https://nextui.org/docs/components/switch)
  */
 const Switch = ({
-  className,
+  className = undefined,
   disabled = false,
   label: _label = undefined,
   name,
