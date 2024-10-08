@@ -19,7 +19,7 @@ export const selectVariants = tv({
     clearIndicator:
       'rounded-md p-1 text-foreground-500 hover:cursor-pointer hover:bg-default-200 hover:text-foreground-800',
     control:
-      'rounded-lg border-2 border-default-200 shadow-sm !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none',
+      'rounded-lg border-2 border-default-200 shadow-md !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none',
     control_focused: 'border-primary hover:border-primary',
     crossIcon: '',
     downChevron: '',
@@ -35,6 +35,9 @@ export const selectVariants = tv({
     loadingMessage: '',
     menu: 'mt-2 rounded-xl border border-default-200 bg-background p-1 shadow-lg',
     menuList: '',
+    // ensure menu has same z-index as modal so it is visible when rendered in modal
+    // see: https://github.com/nextui-org/nextui/blob/main/packages/core/theme/src/components/modal.ts (see z-50)
+    menuPortal: '!z-50',
     multiValue: 'items-center gap-1.5 rounded bg-default-100 py-0.5 pl-2 pr-1',
     multiValueContainer: '',
     multiValueLabel: 'py-0.5 leading-6',
@@ -226,6 +229,8 @@ const Select = ({
                   indicatorSeparator: () => classNames.indicatorSeparator,
                   input: () => classNames.input,
                   menu: () => classNames.menu,
+                  menuList: () => classNames.menuList,
+                  menuPortal: () => classNames.menuPortal,
                   multiValue: () => classNames.multiValue,
                   multiValueLabel: () =>
                     cn(
