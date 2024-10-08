@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.4](https://github.com/fuf-stack/uniform/compare/uniform-v0.9.3...uniform-v0.9.4) (2024-10-08)
+
+
+### Bug Fixes
+
+* **uniform:** remove shadow from control ([632b881](https://github.com/fuf-stack/uniform/commit/632b881328c2ac4db1a9106bba396358bcaeb3ce))
+* **uniform:** try to set z index on select menu to 50 ([021234e](https://github.com/fuf-stack/uniform/commit/021234e90e7994d4b67a19154af659e0be5f86fb))
+
 ## [0.9.3](https://github.com/fuf-stack/uniform/compare/uniform-v0.9.2...uniform-v0.9.3) (2024-10-07)
 
 
