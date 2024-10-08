@@ -44,7 +44,7 @@ exports[`Story Snapshots > Default 1`] = `
                 role="log"
               />
               <div
-                class="rounded-lg border-2 border-default-200 shadow-md !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none css-cp01gg-control"
+                class="rounded-lg border-2 border-default-200 !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none css-cp01gg-control"
               >
                 <div
                   class="gap-1 p-1 css-14oxtc6"
@@ -200,7 +200,7 @@ exports[`Story Snapshots > InitialValue 1`] = `
                 role="log"
               />
               <div
-                class="rounded-lg border-2 border-default-200 shadow-md !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none css-cp01gg-control"
+                class="rounded-lg border-2 border-default-200 !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none css-cp01gg-control"
               >
                 <div
                   class="gap-1 p-1 css-14oxtc6"
@@ -371,7 +371,7 @@ exports[`Story Snapshots > Invalid 1`] = `
                 role="log"
               />
               <div
-                class="rounded-lg border-2 border-default-200 shadow-md !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none css-cp01gg-control"
+                class="rounded-lg border-2 border-default-200 !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none css-cp01gg-control"
               >
                 <div
                   class="gap-1 p-1 css-14oxtc6"
@@ -558,7 +558,7 @@ exports[`Story Snapshots > MenuIsVisibleInCard 1`] = `
                     role="log"
                   />
                   <div
-                    class="rounded-lg border-2 border-default-200 shadow-md !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none css-cp01gg-control"
+                    class="rounded-lg border-2 border-default-200 !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none css-cp01gg-control"
                   >
                     <div
                       class="gap-1 p-1 css-14oxtc6"
@@ -767,7 +767,7 @@ exports[`Story Snapshots > MultiSelect 1`] = `
                 role="log"
               />
               <div
-                class="rounded-lg border-2 border-default-200 shadow-md !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none css-cp01gg-control"
+                class="rounded-lg border-2 border-default-200 !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none css-cp01gg-control"
               >
                 <div
                   class="gap-1 p-1 css-14oxtc6"
@@ -925,7 +925,7 @@ exports[`Story Snapshots > Required 1`] = `
                 role="log"
               />
               <div
-                class="rounded-lg border-2 border-default-200 shadow-md !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none css-cp01gg-control"
+                class="rounded-lg border-2 border-default-200 !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none css-cp01gg-control"
               >
                 <div
                   class="gap-1 p-1 css-14oxtc6"

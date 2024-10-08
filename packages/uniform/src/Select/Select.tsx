@@ -19,7 +19,7 @@ export const selectVariants = tv({
     clearIndicator:
       'rounded-md p-1 text-foreground-500 hover:cursor-pointer hover:bg-default-200 hover:text-foreground-800',
     control:
-      'rounded-lg border-2 border-default-200 shadow-md !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none',
+      'rounded-lg border-2 border-default-200 !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none',
     control_focused: 'border-primary hover:border-primary',
     crossIcon: '',
     downChevron: '',
