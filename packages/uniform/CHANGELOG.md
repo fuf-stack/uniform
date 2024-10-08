@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.5](https://github.com/fuf-stack/uniform/compare/uniform-v0.9.4...uniform-v0.9.5) (2024-10-08)
+
+
+### Bug Fixes
+
+* **uniform:** add more complex example stories ([7cbe613](https://github.com/fuf-stack/uniform/commit/7cbe613f74c0a4c3fa60956a305caf76d53d04f0))
+* **uniform:** change bg color of menu in select to bg-content1 ([e4ce7df](https://github.com/fuf-stack/uniform/commit/e4ce7df3ccbdb828df3d629dd8cdcf824777af42))
+
 ## [0.9.4](https://github.com/fuf-stack/uniform/compare/uniform-v0.9.3...uniform-v0.9.4) (2024-10-08)
 
 
