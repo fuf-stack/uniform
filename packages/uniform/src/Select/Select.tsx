@@ -15,7 +15,7 @@ import { FieldValidationError } from '../partials/FieldValidationError';
 
 export const selectVariants = tv({
   slots: {
-    base: '',
+    base: 'group',
     clearIndicator:
       'rounded-md p-1 text-foreground-500 hover:cursor-pointer hover:bg-default-200 hover:text-foreground-800',
     control:
@@ -83,7 +83,7 @@ export interface SelectProps extends VariantProps {
     | undefined
     | ((option?: SelectOption, inputValue?: string) => boolean);
   /** Format the label of the option */
-  formatOptionLabel?: undefined | Props['formatOptionLabel'];
+  renderOptionLabel?: undefined | Props['formatOptionLabel'];
   /** The value of the search input */
   inputValue?: string;
   /** Label that should be associated with the select. */
@@ -144,7 +144,7 @@ const Select = ({
   clearable = true,
   disabled = false,
   filterOption = undefined,
-  formatOptionLabel = undefined,
+  renderOptionLabel = undefined,
   inputValue = undefined,
   label: _label = undefined,
   loading = false,
@@ -196,7 +196,7 @@ const Select = ({
         <div
           // eslint-disable-next-line react/jsx-props-no-spreading
           {...getBaseProps()}
-          className={cn(classNames.base, 'group mt-2')}
+          className={cn(classNames.base)}
           data-testid={testId}
         >
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
@@ -260,7 +260,7 @@ const Select = ({
                 // Does not affect the testId of the select, but is needed to pass it to sub-components
                 data-testid={`${testId}_select`}
                 filterOption={filterOption}
-                formatOptionLabel={formatOptionLabel}
+                formatOptionLabel={renderOptionLabel}
                 inputValue={inputValue}
                 instanceId={name}
                 isClearable={clearable}

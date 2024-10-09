@@ -10,7 +10,7 @@ exports[`Story Snapshots > Default 1`] = `
       data-testid=""
     >
       <div
-        class="group mt-2"
+        class="group"
         data-filled="true"
         data-has-label="true"
         data-slot="base"
@@ -166,7 +166,7 @@ exports[`Story Snapshots > InitialValue 1`] = `
       data-testid=""
     >
       <div
-        class="group mt-2"
+        class="group"
         data-filled="true"
         data-has-label="true"
         data-slot="base"
@@ -337,7 +337,7 @@ exports[`Story Snapshots > Invalid 1`] = `
       data-testid=""
     >
       <div
-        class="group mt-2"
+        class="group"
         data-filled="true"
         data-has-label="true"
         data-slot="base"
@@ -524,7 +524,7 @@ exports[`Story Snapshots > MenuIsVisibleInCard 1`] = `
           class="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased"
         >
           <div
-            class="group mt-2"
+            class="group"
             data-filled="true"
             data-has-label="true"
             data-slot="base"
@@ -733,7 +733,7 @@ exports[`Story Snapshots > MultiSelect 1`] = `
       data-testid=""
     >
       <div
-        class="group mt-2"
+        class="group"
         data-filled="true"
         data-has-label="true"
         data-slot="base"
@@ -891,7 +891,7 @@ exports[`Story Snapshots > Required 1`] = `
       data-testid=""
     >
       <div
-        class="group mt-2"
+        class="group"
         data-filled="true"
         data-has-label="true"
         data-slot="base"
