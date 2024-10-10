@@ -1,15 +1,38 @@
+import type { TVClassName, TVProps } from '@fuf-stack/pixel-utils';
+
 import { Controller } from 'react-hook-form';
 
 import { useInput } from '@nextui-org/input';
 import { Switch as NextSwitch } from '@nextui-org/switch';
 
+import { tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
+
 import { useFormContext } from '../hooks';
 import { FieldCopyTestIdButton } from '../partials/FieldCopyTestIdButton';
 import { FieldValidationError } from '../partials/FieldValidationError';
 
-export interface SwitchProps {
+export const switchVariants = tv({
+  slots: {
+    base: '',
+    endContent: '',
+    errorMessage: 'ml-1 mt-1',
+    // See NextUI styles for group-data condition, e.g.: https://github.com/nextui-org/nextui/blob/main/packages/core/theme/src/components/select.ts
+    label:
+      'text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]',
+    outerWrapper: '',
+    startContent: '',
+    thumb: '',
+    thumbIcon: '',
+    wrapper: '',
+  },
+});
+
+type VariantProps = TVProps<typeof switchVariants>;
+type ClassName = TVClassName<typeof switchVariants>;
+
+export interface SwitchProps extends VariantProps {
   /** CSS class name */
-  className?: string;
+  className?: ClassName;
   /** whether the select should be disabled */
   disabled?: boolean;
   /** component displayed next to the switch. */
@@ -43,6 +66,12 @@ const Switch = ({
       placeholder: ' ',
     });
 
+  const variants = switchVariants();
+  const classNames = variantsToClassNames(variants, className, 'outerWrapper');
+
+  console.log('getHelperWrapperProps()', getHelperWrapperProps());
+  console.log('getErrorMessageProps()', getErrorMessageProps());
+
   return (
     <Controller
       name={name}
@@ -51,39 +80,37 @@ const Switch = ({
       render={({
         field: { disabled: isDisabled, value, ref, onBlur, onChange },
       }) => (
-        <>
+        <div className={classNames.outerWrapper}>
           <NextSwitch
             aria-describedby={getInputProps()['aria-describedby']}
-            required={required}
-            isSelected={!!value}
-            className={className}
-            classNames={{
-              label: `text-bold block text-ellipsis text-small ${invalid ? 'text-danger' : ''}`,
-            }}
+            classNames={classNames}
+            // See NextUI styles for group-data condition (data-invalid), e.g.: https://github.com/nextui-org/nextui/blob/main/packages/components/select/src/use-select.ts
+            data-invalid={invalid}
+            data-required={required}
             data-testid={testId}
             isDisabled={isDisabled}
-            value={value}
-            onChange={onChange}
-            onBlur={onBlur}
+            isSelected={!!value}
             name={name}
+            onBlur={onBlur}
+            onChange={onChange}
             ref={ref}
+            required={required}
+            value={value}
           >
             {label}
-            {!!required && !!_label && (
-              <span className="!text-danger">{' \u002A'}</span>
-            )}
             <FieldCopyTestIdButton testId={testId} />
           </NextSwitch>
           {error && (
-            // eslint-disable-next-line react/jsx-props-no-spreading
-            <div {...getHelperWrapperProps()}>
-              {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-              <div {...getErrorMessageProps()}>
+            <div className={classNames.errorMessage}>
+              <div
+                /* eslint-disable-next-line react/jsx-props-no-spreading */
+                {...getErrorMessageProps()}
+              >
                 <FieldValidationError error={error} />
               </div>
             </div>
           )}
-        </>
+        </div>
       )}
     />
   );

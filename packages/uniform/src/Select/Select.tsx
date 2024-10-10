@@ -19,7 +19,7 @@ export const selectVariants = tv({
     clearIndicator:
       'rounded-md p-1 text-foreground-500 hover:cursor-pointer hover:bg-default-200 hover:text-foreground-800',
     control:
-      'rounded-lg border-2 border-default-200 !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none',
+      'rounded-lg border-2 border-default-200 !duration-150 transition-background hover:border-default-400 group-data-[invalid=true]:border-danger group-data-[invalid=true]:hover:border-danger motion-reduce:transition-none',
     control_focused: 'border-primary hover:border-primary',
     crossIcon: '',
     downChevron: '',
@@ -30,7 +30,9 @@ export const selectVariants = tv({
     indicatorsContainer: 'gap-1 p-1',
     indicatorSeparator: 'bg-default-300',
     input: 'py-0.5 pl-1',
-    label: '!pointer-events-auto relative bottom-2 ml-1 inline',
+    // See NextUI styles for group-data condition, e.g.: https://github.com/nextui-org/nextui/blob/main/packages/core/theme/src/components/select.ts
+    label:
+      'pointer-events-auto relative bottom-1.5 ml-1 text-small subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]',
     loadingIndicator: '',
     loadingMessage: '',
     menu: 'mt-2 rounded-xl border border-default-200 bg-content1 p-1 shadow-lg',
@@ -51,13 +53,6 @@ export const selectVariants = tv({
     selectContainer: '',
     singleValue: '!ml-1 !leading-7',
     valueContainer: 'gap-1 p-1',
-  },
-  variants: {
-    invalid: {
-      true: {
-        control: 'border-danger hover:border-danger',
-      },
-    },
   },
 });
 
@@ -160,7 +155,7 @@ const Select = ({
 
   const [isFocused, setIsFocused] = useState(false);
 
-  const variants = selectVariants({ invalid });
+  const variants = selectVariants();
   const classNames = variantsToClassNames(variants, className, 'base');
 
   const {
@@ -168,7 +163,6 @@ const Select = ({
     getErrorMessageProps,
     getHelperWrapperProps,
     getLabelProps,
-    getMainWrapperProps,
     getTriggerProps,
     getValueProps,
     label,
@@ -198,120 +192,116 @@ const Select = ({
           {...getBaseProps()}
           className={cn(classNames.base)}
           data-testid={testId}
+          // See NextUI styles for group-data condition (data-invalid), e.g.: https://github.com/nextui-org/nextui/blob/main/packages/components/select/src/use-select.ts
+          data-required={required}
         >
-          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-          <div {...getMainWrapperProps()}>
-            <div className="relative">
-              {label && (
-                <label
-                  htmlFor={`react-select-${name}-input`}
-                  className={cn(getLabelProps().className, classNames.label)}
-                >
-                  {label}
-                  <FieldCopyTestIdButton testId={testId} />
-                </label>
-              )}
-              <ReactSelect
-                aria-errormessage=""
-                aria-labelledby={
-                  getTriggerProps()['aria-labelledby']?.split(' ')[1]
-                }
-                aria-invalid={invalid}
-                classNames={{
-                  control: () =>
-                    cn(classNames.control, {
-                      [classNames.control_focused]: isFocused && !invalid,
-                    }),
-                  clearIndicator: () => classNames.clearIndicator,
-                  dropdownIndicator: () => classNames.dropdownIndicator,
-                  groupHeading: () => classNames.groupHeading,
-                  indicatorsContainer: () => classNames.indicatorsContainer,
-                  indicatorSeparator: () => classNames.indicatorSeparator,
-                  input: () => classNames.input,
-                  menu: () => classNames.menu,
-                  menuList: () => classNames.menuList,
-                  menuPortal: () => classNames.menuPortal,
-                  multiValue: () => classNames.multiValue,
-                  multiValueLabel: () =>
-                    cn(
-                      classNames.multiValueLabel,
-                      `${getValueProps().className}`,
-                    ),
-                  multiValueRemove: () => classNames.multiValueRemove,
-                  noOptionsMessage: () => classNames.noOptionsMessage,
-                  option: ({
-                    isFocused: optionIsFocused,
-                    isSelected: optionIsSelected,
-                  }) =>
-                    cn(classNames.option, {
-                      [classNames.option_focused]: optionIsFocused,
-                      [classNames.option_selected]: optionIsSelected,
-                    }),
-                  placeholder: () => classNames.placeholder,
-                  singleValue: () =>
-                    cn(classNames.singleValue, `${getValueProps().className}`),
-                  valueContainer: () => classNames.valueContainer,
-                }}
-                components={{
-                  Input: InputComponent,
-                  Option: OptionComponent,
-                  DropdownIndicator: DropdownIndicatorComponent,
-                }}
-                // Does not affect the testId of the select, but is needed to pass it to sub-components
-                data-testid={`${testId}_select`}
-                filterOption={filterOption}
-                formatOptionLabel={renderOptionLabel}
-                inputValue={inputValue}
-                instanceId={name}
-                isClearable={clearable}
-                isDisabled={disabled}
-                isLoading={loading}
-                isMulti={multiSelect}
-                name={name}
-                // set menuPosition to fixed so that menu can be rendered
-                // inside Card / Modal components, menuShouldBlockScroll
-                // prevents container scroll when menu is open
-                menuPosition="fixed"
-                menuShouldBlockScroll
-                options={options}
-                placeholder={placeholder}
-                onBlur={(_e) => {
-                  setIsFocused(false);
-                  return onBlur();
-                }}
-                onChange={(option) => {
-                  if (multiSelect) {
-                    const transformedOptions: string[] = [];
-                    // @ts-expect-error in this case option is an array.
-                    option?.forEach((o: { value: string }) => {
-                      transformedOptions.push(o.value);
-                    });
-                    onChange(transformedOptions);
-                  } else {
-                    // @ts-expect-error in this case option is of type SelectOption and has the property value.
-                    onChange(option && option.value);
-                  }
-                }}
-                onFocus={(_e) => {
-                  setIsFocused(true);
-                }}
-                onInputChange={onInputChange}
-                ref={ref}
-                // set complete option as value by current field value
-                value={options.find((option) => option.value === value)}
-                unstyled
-              />
-            </div>
-            {error && (
-              // eslint-disable-next-line react/jsx-props-no-spreading
-              <div {...getHelperWrapperProps()}>
-                {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-                <div {...getErrorMessageProps()}>
-                  <FieldValidationError error={error} />
-                </div>
+          {label && (
+            <label
+              className={classNames.label}
+              data-slot="label"
+              htmlFor={`react-select-${name}-input`}
+              id={getLabelProps().id}
+            >
+              {label}
+              <FieldCopyTestIdButton testId={testId} />
+            </label>
+          )}
+          <ReactSelect
+            aria-errormessage=""
+            aria-labelledby={
+              getTriggerProps()['aria-labelledby']?.split(' ')[1]
+            }
+            aria-invalid={invalid}
+            classNames={{
+              control: () =>
+                cn(classNames.control, {
+                  [classNames.control_focused]: isFocused && !invalid,
+                }),
+              clearIndicator: () => classNames.clearIndicator,
+              dropdownIndicator: () => classNames.dropdownIndicator,
+              groupHeading: () => classNames.groupHeading,
+              indicatorsContainer: () => classNames.indicatorsContainer,
+              indicatorSeparator: () => classNames.indicatorSeparator,
+              input: () => classNames.input,
+              menu: () => classNames.menu,
+              menuList: () => classNames.menuList,
+              menuPortal: () => classNames.menuPortal,
+              multiValue: () => classNames.multiValue,
+              multiValueLabel: () =>
+                cn(classNames.multiValueLabel, `${getValueProps().className}`),
+              multiValueRemove: () => classNames.multiValueRemove,
+              noOptionsMessage: () => classNames.noOptionsMessage,
+              option: ({
+                isFocused: optionIsFocused,
+                isSelected: optionIsSelected,
+              }) =>
+                cn(classNames.option, {
+                  [classNames.option_focused]: optionIsFocused,
+                  [classNames.option_selected]: optionIsSelected,
+                }),
+              placeholder: () => classNames.placeholder,
+              singleValue: () =>
+                cn(classNames.singleValue, `${getValueProps().className}`),
+              valueContainer: () => classNames.valueContainer,
+            }}
+            components={{
+              Input: InputComponent,
+              Option: OptionComponent,
+              DropdownIndicator: DropdownIndicatorComponent,
+            }}
+            // Does not affect the testId of the select, but is needed to pass it to sub-components
+            data-testid={`${testId}_select`}
+            filterOption={filterOption}
+            formatOptionLabel={renderOptionLabel}
+            inputValue={inputValue}
+            instanceId={name}
+            isClearable={clearable}
+            isDisabled={disabled}
+            isLoading={loading}
+            isMulti={multiSelect}
+            name={name}
+            // set menuPosition to fixed so that menu can be rendered
+            // inside Card / Modal components, menuShouldBlockScroll
+            // prevents container scroll when menu is open
+            menuPosition="fixed"
+            menuShouldBlockScroll
+            options={options}
+            placeholder={placeholder}
+            onBlur={(_e) => {
+              setIsFocused(false);
+              return onBlur();
+            }}
+            onChange={(option) => {
+              if (multiSelect) {
+                const transformedOptions: string[] = [];
+                // @ts-expect-error in this case option is an array.
+                option?.forEach((o: { value: string }) => {
+                  transformedOptions.push(o.value);
+                });
+                onChange(transformedOptions);
+              } else {
+                // @ts-expect-error in this case option is of type SelectOption and has the property value.
+                onChange(option && option.value);
+              }
+            }}
+            onFocus={(_e) => {
+              setIsFocused(true);
+            }}
+            onInputChange={onInputChange}
+            ref={ref}
+            // set complete option as value by current field value
+            value={options.find((option) => option.value === value)}
+            unstyled
+          />
+          {error && (
+            // eslint-disable-next-line react/jsx-props-no-spreading
+            <div {...getHelperWrapperProps()}>
+              {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+              <div {...getErrorMessageProps()}>
+                <FieldValidationError error={error} />
               </div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       )}
     />

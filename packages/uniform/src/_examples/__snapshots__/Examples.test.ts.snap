@@ -125,112 +125,106 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                   class="group"
                   data-filled="true"
                   data-has-label="true"
+                  data-required="true"
                   data-slot="base"
                   data-testid="selectfield"
                 >
-                  <div
-                    class="w-full flex flex-col"
-                    data-slot="mainWrapper"
+                  <label
+                    class="pointer-events-auto relative bottom-1.5 ml-1 text-small subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+                    data-slot="label"
+                    for="react-select-selectField-input"
+                    id="react-aria-react-useId-mock"
                   >
+                    Select Field
+                  </label>
+                  <div
+                    class="css-b62m3t-container"
+                  >
+                    <span
+                      class="css-1f43avz-a11yText-A11yText"
+                      id="react-select-selectField-live-region"
+                    />
+                    <span
+                      aria-atomic="false"
+                      aria-live="polite"
+                      aria-relevant="additions text"
+                      class="css-1f43avz-a11yText-A11yText"
+                      role="log"
+                    />
                     <div
-                      class="relative"
+                      class="rounded-lg border-2 border-default-200 !duration-150 transition-background hover:border-default-400 group-data-[invalid=true]:border-danger group-data-[invalid=true]:hover:border-danger motion-reduce:transition-none css-cp01gg-control"
                     >
-                      <label
-                        class="subpixel-antialiased pointer-events-none after:content-['*'] after:text-danger after:ms-0.5 will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none group-data-[filled=true]:text-foreground pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 text-small group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto relative bottom-2 ml-1 inline"
-                        for="react-select-selectField-input"
-                      >
-                        Select Field
-                      </label>
                       <div
-                        class="css-b62m3t-container"
+                        class="gap-1 p-1 css-14oxtc6"
+                      >
+                        <div
+                          class="py-0.5 pl-1 text-foreground-500 css-1vlsb4t-placeholder"
+                          id="react-select-selectField-placeholder"
+                        >
+                          Select...
+                        </div>
+                        <div
+                          class="py-0.5 pl-1 css-n9qnu9"
+                          data-value=""
+                        >
+                          <input
+                            aria-activedescendant=""
+                            aria-autocomplete="list"
+                            aria-describedby="react-select-selectField-placeholder"
+                            aria-errormessage=""
+                            aria-expanded="false"
+                            aria-haspopup="true"
+                            aria-invalid="false"
+                            aria-labelledby="react-aria-react-useId-mock"
+                            autocapitalize="none"
+                            autocomplete="off"
+                            autocorrect="off"
+                            class=""
+                            data-testid="selectfield_select_input"
+                            id="react-select-selectField-input"
+                            role="combobox"
+                            spellcheck="false"
+                            style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                            tabindex="0"
+                            type="text"
+                            value=""
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="gap-1 p-1 css-1wy0on6"
                       >
                         <span
-                          class="css-1f43avz-a11yText-A11yText"
-                          id="react-select-selectField-live-region"
-                        />
-                        <span
-                          aria-atomic="false"
-                          aria-live="polite"
-                          aria-relevant="additions text"
-                          class="css-1f43avz-a11yText-A11yText"
-                          role="log"
+                          class="bg-default-300 css-j4w2j1-indicatorSeparator"
                         />
                         <div
-                          class="rounded-lg border-2 border-default-200 !duration-150 transition-background hover:border-default-400 motion-reduce:transition-none css-cp01gg-control"
+                          data-testid="selectfield_select_dropdown"
                         >
                           <div
-                            class="gap-1 p-1 css-14oxtc6"
+                            aria-hidden="true"
+                            class="rounded-md p-1 text-foreground-500 hover:cursor-pointer hover:bg-default-200 hover:text-black css-g56vrd-indicatorContainer"
                           >
-                            <div
-                              class="py-0.5 pl-1 text-foreground-500 css-1vlsb4t-placeholder"
-                              id="react-select-selectField-placeholder"
+                            <svg
+                              aria-hidden="true"
+                              class="css-tj5bde-Svg"
+                              focusable="false"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              width="20"
                             >
-                              Select...
-                            </div>
-                            <div
-                              class="py-0.5 pl-1 css-n9qnu9"
-                              data-value=""
-                            >
-                              <input
-                                aria-activedescendant=""
-                                aria-autocomplete="list"
-                                aria-describedby="react-select-selectField-placeholder"
-                                aria-errormessage=""
-                                aria-expanded="false"
-                                aria-haspopup="true"
-                                aria-invalid="false"
-                                aria-labelledby="react-aria-react-useId-mock"
-                                autocapitalize="none"
-                                autocomplete="off"
-                                autocorrect="off"
-                                class=""
-                                data-testid="selectfield_select_input"
-                                id="react-select-selectField-input"
-                                role="combobox"
-                                spellcheck="false"
-                                style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
-                                tabindex="0"
-                                type="text"
-                                value=""
+                              <path
+                                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
                               />
-                            </div>
-                          </div>
-                          <div
-                            class="gap-1 p-1 css-1wy0on6"
-                          >
-                            <span
-                              class="bg-default-300 css-j4w2j1-indicatorSeparator"
-                            />
-                            <div
-                              data-testid="selectfield_select_dropdown"
-                            >
-                              <div
-                                aria-hidden="true"
-                                class="rounded-md p-1 text-foreground-500 hover:cursor-pointer hover:bg-default-200 hover:text-black css-g56vrd-indicatorContainer"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  class="css-tj5bde-Svg"
-                                  focusable="false"
-                                  height="20"
-                                  viewBox="0 0 20 20"
-                                  width="20"
-                                >
-                                  <path
-                                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                                  />
-                                </svg>
-                              </div>
-                            </div>
+                            </svg>
                           </div>
                         </div>
-                        <input
-                          name="selectField"
-                          type="hidden"
-                          value=""
-                        />
                       </div>
                     </div>
+                    <input
+                      name="selectField"
+                      type="hidden"
+                      value=""
+                    />
                   </div>
                 </div>
                 <div
@@ -324,57 +318,55 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                     </div>
                   </div>
                 </div>
-                <label
-                  aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
-                  class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none"
-                  data-testid="switchfield"
-                  required=""
-                >
-                  <span
-                    style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                  >
-                    <input
-                      aria-labelledby=":r0:"
-                      name="switchField"
-                      role="switch"
-                      type="checkbox"
-                      value=""
-                    />
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:bg-primary group-data-[selected=true]:text-primary-foreground w-12 h-7 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background"
+                <div>
+                  <label
+                    aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
+                    class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none"
+                    data-invalid="false"
+                    data-required="true"
+                    data-testid="switchfield"
+                    required=""
                   >
                     <span
-                      class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-5 h-5 text-small group-data-[selected=true]:ml-5 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-5 transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4"
-                    />
-                  </span>
-                  <span
-                    class="relative select-none text-bold block text-ellipsis text-small"
-                    id=":r0:"
-                  >
-                    Switch Field
-                    <span
-                      class="!text-danger"
+                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
                     >
-                       *
+                      <input
+                        aria-labelledby=":r0:"
+                        name="switchField"
+                        role="switch"
+                        type="checkbox"
+                        value=""
+                      />
                     </span>
-                  </span>
-                </label>
+                    <span
+                      aria-hidden="true"
+                      class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:bg-primary group-data-[selected=true]:text-primary-foreground w-12 h-7 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background"
+                    >
+                      <span
+                        class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-5 h-5 text-small group-data-[selected=true]:ml-5 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-5 transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4"
+                      />
+                    </span>
+                    <span
+                      class="relative select-none text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+                      id=":r0:"
+                    >
+                      Switch Field
+                    </span>
+                  </label>
+                </div>
                 <div
                   aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
                   aria-label=" "
-                  class="relative flex flex-col gap-2"
+                  class="relative flex flex-col gap-2 group"
+                  data-invalid="false"
                   data-testid="checkboxfield"
                   id="react-aria-react-useId-mock"
                   role="group"
                 >
                   <span
-                    class="relative text-medium text-foreground-500 after:content-['*'] after:text-danger after:ml-0.5"
+                    class="relative after:content-['*'] after:text-danger after:ml-0.5 text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger"
                   >
-                    <label
-                      class="text-bold text-ellipsis text-small text-foreground-500"
-                    >
+                    <label>
                       checkboxField
                     </label>
                   </span>
@@ -385,6 +377,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                   >
                     <label
                       class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
+                      data-invalid="false"
                       data-testid="checkboxfield_option_1"
                     >
                       <span
@@ -395,6 +388,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                           aria-label="1"
                           aria-labelledby=":r1:"
                           aria-required="true"
+                          name="checkboxField"
                           type="checkbox"
                           value="1"
                         />
@@ -422,7 +416,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                         </svg>
                       </span>
                       <span
-                        class="relative text-foreground select-none text-medium transition-colors-opacity before:transition-width motion-reduce:transition-none"
+                        class="relative text-foreground select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-sm"
                         id=":r1:"
                       >
                         1
@@ -430,6 +424,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                     </label>
                     <label
                       class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
+                      data-invalid="false"
                       data-testid="checkboxfield_option_2"
                     >
                       <span
@@ -440,6 +435,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                           aria-label="2"
                           aria-labelledby=":r2:"
                           aria-required="true"
+                          name="checkboxField"
                           type="checkbox"
                           value="2"
                         />
@@ -467,7 +463,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                         </svg>
                       </span>
                       <span
-                        class="relative text-foreground select-none text-medium transition-colors-opacity before:transition-width motion-reduce:transition-none"
+                        class="relative text-foreground select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-sm"
                         id=":r2:"
                       >
                         2
@@ -475,6 +471,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                     </label>
                     <label
                       class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
+                      data-invalid="false"
                       data-testid="checkboxfield_option_3"
                     >
                       <span
@@ -485,6 +482,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                           aria-label="3"
                           aria-labelledby=":r3:"
                           aria-required="true"
+                          name="checkboxField"
                           type="checkbox"
                           value="3"
                         />
@@ -512,7 +510,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                         </svg>
                       </span>
                       <span
-                        class="relative text-foreground select-none text-medium transition-colors-opacity before:transition-width motion-reduce:transition-none"
+                        class="relative text-foreground select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-sm"
                         id=":r3:"
                       >
                         3
@@ -525,17 +523,17 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                   aria-label=" "
                   aria-orientation="horizontal"
                   aria-required="true"
-                  class="relative flex flex-col gap-2"
+                  class="relative flex flex-col gap-2 group"
+                  data-invalid="false"
+                  data-required="true"
                   data-testid="radiofield"
                   id="react-aria-react-useId-mock"
                   role="radiogroup"
                 >
                   <span
-                    class="relative text-foreground-500 after:content-['*'] after:text-danger after:ml-0.5"
+                    class="relative after:content-['*'] after:text-danger after:ml-0.5 text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger"
                   >
-                    <label
-                      class=""
-                    >
+                    <label>
                       Radio Field
                     </label>
                   </span>
@@ -573,7 +571,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                         class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
                       >
                         <span
-                          class="relative text-foreground select-none text-medium transition-colors motion-reduce:transition-none"
+                          class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
                           id=":r4:"
                         >
                           LabelA
@@ -609,7 +607,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                         class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
                       >
                         <span
-                          class="relative text-foreground select-none text-medium transition-colors motion-reduce:transition-none"
+                          class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
                           id=":r6:"
                         >
                           LabelB
@@ -645,7 +643,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                         class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
                       >
                         <span
-                          class="relative text-foreground select-none text-medium transition-colors motion-reduce:transition-none"
+                          class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
                           id=":r8:"
                         >
                           LabelC
@@ -659,17 +657,17 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                   aria-label=" "
                   aria-orientation="horizontal"
                   aria-required="true"
-                  class="relative flex flex-col gap-2"
+                  class="relative flex flex-col gap-2 group"
+                  data-invalid="false"
+                  data-required="true"
                   data-testid="radiobuttonfield"
                   id="react-aria-react-useId-mock"
                   role="radiogroup"
                 >
                   <span
-                    class="relative text-foreground-500 after:content-['*'] after:text-danger after:ml-0.5"
+                    class="relative after:content-['*'] after:text-danger after:ml-0.5 text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger"
                   >
-                    <label
-                      class=""
-                    >
+                    <label>
                       Radio Button Field
                     </label>
                   </span>
@@ -679,7 +677,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                     role="presentation"
                   >
                     <div
-                      class="inline-flex items-center justify-center h-auto"
+                      class="inline-flex items-center justify-center h-auto rounded-xl group-data-[invalid=true]:border group-data-[invalid=true]:border-danger"
                       role="group"
                     >
                       <button
@@ -708,17 +706,17 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                   aria-label=" "
                   aria-orientation="vertical"
                   aria-required="true"
-                  class="relative flex flex-col gap-2 md:col-span-2"
+                  class="relative flex flex-col gap-2 group md:col-span-2"
+                  data-invalid="false"
+                  data-required="true"
                   data-testid="radioboxfield"
                   id="react-aria-react-useId-mock"
                   role="radiogroup"
                 >
                   <span
-                    class="relative text-foreground-500 after:content-['*'] after:text-danger after:ml-0.5"
+                    class="relative after:content-['*'] after:text-danger after:ml-0.5 text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger"
                   >
-                    <label
-                      class=""
-                    >
+                    <label>
                       Radio Box Field
                     </label>
                   </span>
@@ -756,7 +754,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                         class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset] grow"
                       >
                         <span
-                          class="relative text-foreground select-none text-medium transition-colors motion-reduce:transition-none"
+                          class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
                           id=":ra:"
                         >
                           LabelA
@@ -792,7 +790,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                         class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset] grow"
                       >
                         <span
-                          class="relative text-foreground select-none text-medium transition-colors motion-reduce:transition-none"
+                          class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
                           id=":rc:"
                         >
                           LabelB
@@ -828,7 +826,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                         class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset] grow"
                       >
                         <span
-                          class="relative text-foreground select-none text-medium transition-colors motion-reduce:transition-none"
+                          class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
                           id=":re:"
                         >
                           LabelC

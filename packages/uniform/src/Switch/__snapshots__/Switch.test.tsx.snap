@@ -9,34 +9,38 @@ exports[`Story Snapshots > Default 1`] = `
       class="flex-grow min-w-60"
       data-testid=""
     >
-      <label
-        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none"
-        data-testid="switchfield"
-      >
-        <span
-          style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-        >
-          <input
-            aria-labelledby=":r0:"
-            name="switchField"
-            role="switch"
-            type="checkbox"
-            value=""
-          />
-        </span>
-        <span
-          aria-hidden="true"
-          class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:bg-primary group-data-[selected=true]:text-primary-foreground w-12 h-7 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background"
+      <div>
+        <label
+          class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none"
+          data-invalid="false"
+          data-required="false"
+          data-testid="switchfield"
         >
           <span
-            class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-5 h-5 text-small group-data-[selected=true]:ml-5 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-5 transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4"
+            style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+          >
+            <input
+              aria-labelledby=":r0:"
+              name="switchField"
+              role="switch"
+              type="checkbox"
+              value=""
+            />
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:bg-primary group-data-[selected=true]:text-primary-foreground w-12 h-7 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background"
+          >
+            <span
+              class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-5 h-5 text-small group-data-[selected=true]:ml-5 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-5 transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4"
+            />
+          </span>
+          <span
+            class="relative select-none text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+            id=":r0:"
           />
-        </span>
-        <span
-          class="relative select-none text-bold block text-ellipsis text-small"
-          id=":r0:"
-        />
-      </label>
+        </label>
+      </div>
       <div
         class="mt-4 flex justify-end"
       >
@@ -81,36 +85,40 @@ exports[`Story Snapshots > Disabled 1`] = `
       class="flex-grow min-w-60"
       data-testid=""
     >
-      <label
-        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none opacity-disabled pointer-events-none"
-        data-disabled="true"
-        data-testid="switchfield"
-      >
-        <span
-          style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-        >
-          <input
-            aria-labelledby=":r2:"
-            disabled=""
-            name="switchField"
-            role="switch"
-            type="checkbox"
-            value=""
-          />
-        </span>
-        <span
-          aria-hidden="true"
-          class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:bg-primary group-data-[selected=true]:text-primary-foreground w-12 h-7 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background"
+      <div>
+        <label
+          class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none opacity-disabled pointer-events-none"
+          data-disabled="true"
+          data-invalid="false"
+          data-required="false"
+          data-testid="switchfield"
         >
           <span
-            class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-5 h-5 text-small group-data-[selected=true]:ml-5 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-5 transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4"
+            style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+          >
+            <input
+              aria-labelledby=":r2:"
+              disabled=""
+              name="switchField"
+              role="switch"
+              type="checkbox"
+              value=""
+            />
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:bg-primary group-data-[selected=true]:text-primary-foreground w-12 h-7 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background"
+          >
+            <span
+              class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-5 h-5 text-small group-data-[selected=true]:ml-5 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-5 transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4"
+            />
+          </span>
+          <span
+            class="relative select-none text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+            id=":r2:"
           />
-        </span>
-        <span
-          class="relative select-none text-bold block text-ellipsis text-small"
-          id=":r2:"
-        />
-      </label>
+        </label>
+      </div>
       <div
         class="mt-4 flex justify-end"
       >
@@ -155,42 +163,41 @@ exports[`Story Snapshots > Invalid 1`] = `
       class="flex-grow min-w-60"
       data-testid=""
     >
-      <label
-        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none"
-        data-testid="switchfield"
-        required=""
-      >
-        <span
-          style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-        >
-          <input
-            aria-labelledby=":r4:"
-            name="switchField"
-            role="switch"
-            type="checkbox"
-            value=""
-          />
-        </span>
-        <span
-          aria-hidden="true"
-          class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:bg-primary group-data-[selected=true]:text-primary-foreground w-12 h-7 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background"
+      <div>
+        <label
+          class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none"
+          data-invalid="false"
+          data-required="true"
+          data-testid="switchfield"
+          required=""
         >
           <span
-            class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-5 h-5 text-small group-data-[selected=true]:ml-5 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-5 transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4"
-          />
-        </span>
-        <span
-          class="relative select-none text-bold block text-ellipsis text-small"
-          id=":r4:"
-        >
-          switch
-          <span
-            class="!text-danger"
+            style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
           >
-             *
+            <input
+              aria-labelledby=":r4:"
+              name="switchField"
+              role="switch"
+              type="checkbox"
+              value=""
+            />
           </span>
-        </span>
-      </label>
+          <span
+            aria-hidden="true"
+            class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:bg-primary group-data-[selected=true]:text-primary-foreground w-12 h-7 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background"
+          >
+            <span
+              class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-5 h-5 text-small group-data-[selected=true]:ml-5 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-5 transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4"
+            />
+          </span>
+          <span
+            class="relative select-none text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+            id=":r4:"
+          >
+            switch
+          </span>
+        </label>
+      </div>
       <div
         class="mt-4 flex justify-end"
       >
@@ -235,42 +242,41 @@ exports[`Story Snapshots > Required 1`] = `
       class="flex-grow min-w-60"
       data-testid=""
     >
-      <label
-        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none"
-        data-testid="switchfield"
-        required=""
-      >
-        <span
-          style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-        >
-          <input
-            aria-labelledby=":r3:"
-            name="switchField"
-            role="switch"
-            type="checkbox"
-            value=""
-          />
-        </span>
-        <span
-          aria-hidden="true"
-          class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:bg-primary group-data-[selected=true]:text-primary-foreground w-12 h-7 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background"
+      <div>
+        <label
+          class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none"
+          data-invalid="false"
+          data-required="true"
+          data-testid="switchfield"
+          required=""
         >
           <span
-            class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-5 h-5 text-small group-data-[selected=true]:ml-5 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-5 transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4"
-          />
-        </span>
-        <span
-          class="relative select-none text-bold block text-ellipsis text-small"
-          id=":r3:"
-        >
-          switchField
-          <span
-            class="!text-danger"
+            style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
           >
-             *
+            <input
+              aria-labelledby=":r3:"
+              name="switchField"
+              role="switch"
+              type="checkbox"
+              value=""
+            />
           </span>
-        </span>
-      </label>
+          <span
+            aria-hidden="true"
+            class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:bg-primary group-data-[selected=true]:text-primary-foreground w-12 h-7 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background"
+          >
+            <span
+              class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-5 h-5 text-small group-data-[selected=true]:ml-5 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-5 transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4"
+            />
+          </span>
+          <span
+            class="relative select-none text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+            id=":r3:"
+          >
+            switchField
+          </span>
+        </label>
+      </div>
       <div
         class="mt-4 flex justify-end"
       >
@@ -315,36 +321,40 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
       class="flex-grow min-w-60"
       data-testid=""
     >
-      <label
-        class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none"
-        data-selected="true"
-        data-testid="switchfield"
-      >
-        <span
-          style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-        >
-          <input
-            aria-labelledby=":r1:"
-            checked=""
-            name="switchField"
-            role="switch"
-            type="checkbox"
-            value="true"
-          />
-        </span>
-        <span
-          aria-hidden="true"
-          class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:bg-primary group-data-[selected=true]:text-primary-foreground w-12 h-7 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background"
+      <div>
+        <label
+          class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none"
+          data-invalid="false"
+          data-required="false"
+          data-selected="true"
+          data-testid="switchfield"
         >
           <span
-            class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-5 h-5 text-small group-data-[selected=true]:ml-5 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-5 transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4"
+            style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+          >
+            <input
+              aria-labelledby=":r1:"
+              checked=""
+              name="switchField"
+              role="switch"
+              type="checkbox"
+              value="true"
+            />
+          </span>
+          <span
+            aria-hidden="true"
+            class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:bg-primary group-data-[selected=true]:text-primary-foreground w-12 h-7 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background"
+          >
+            <span
+              class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-5 h-5 text-small group-data-[selected=true]:ml-5 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-5 transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4"
+            />
+          </span>
+          <span
+            class="relative select-none text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+            id=":r1:"
           />
-        </span>
-        <span
-          class="relative select-none text-bold block text-ellipsis text-small"
-          id=":r1:"
-        />
-      </label>
+        </label>
+      </div>
       <div
         class="mt-4 flex justify-end"
       >

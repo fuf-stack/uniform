@@ -1,3 +1,4 @@
+import type { TVClassName, TVProps } from '@fuf-stack/pixel-utils';
 import type { ReactElement, ReactNode } from 'react';
 
 import { Controller } from 'react-hook-form';
@@ -5,7 +6,7 @@ import { Controller } from 'react-hook-form';
 import { ButtonGroup as NextButtonGroup } from '@nextui-org/button';
 import { RadioGroup as NextRadioGroup, Radio } from '@nextui-org/radio';
 
-import { cn } from '@fuf-stack/pixel-utils';
+import { cn, tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
 
 import { slugify } from '../helpers';
 import { useFormContext } from '../hooks';
@@ -13,6 +14,28 @@ import { FieldCopyTestIdButton } from '../partials/FieldCopyTestIdButton';
 import { FieldValidationError } from '../partials/FieldValidationError';
 import { RadioBox } from './Variants/RadioBox';
 import { RadioButton } from './Variants/RadioButton';
+
+export const radioGroupVariants = tv({
+  slots: {
+    base: 'group', // Needs group for group-data condition
+    buttonGroup:
+      'rounded-xl group-data-[invalid=true]:border group-data-[invalid=true]:border-danger', // optional if a button group is used
+    itemBase: '',
+    itemBaseActive: 'bg-opacity-50', // optional if a button group is used
+    itemControl: '',
+    itemDescription: '',
+    itemLabel: 'text-sm',
+    itemLabelWrapper: '',
+    itemWrapper: '',
+    // See NextUI styles for group-data condition, e.g.: https://github.com/nextui-org/nextui/blob/main/packages/core/theme/src/components/select.ts
+    label:
+      'text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger',
+    wrapper: '',
+  },
+});
+
+type VariantProps = TVProps<typeof radioGroupVariants>;
+type ClassName = TVClassName<typeof radioGroupVariants>;
 
 export interface RadioGroupOption {
   /** Description of the value. Works with variant radioBox. */
@@ -29,9 +52,9 @@ export interface RadioGroupOption {
   value: string;
 }
 
-export interface RadioGroupProps {
+export interface RadioGroupProps extends VariantProps {
   /** CSS class name */
-  className?: string;
+  className?: ClassName;
   /** Determines if the Buttons are disabled or not. */
   disabled?: boolean;
   /** determines orientation of the Buttons. */
@@ -65,6 +88,9 @@ const RadioGroup = ({
 
   const { error, invalid, required, testId } = getFieldState(name, _testId);
 
+  const variants = radioGroupVariants();
+  const classNames = variantsToClassNames(variants, className, 'base');
+
   return (
     <Controller
       control={control}
@@ -72,19 +98,30 @@ const RadioGroup = ({
       name={name}
       render={({ field: { onChange, disabled: isDisabled, onBlur, ref } }) => {
         let RadioComponents: ReactNode;
+
+        const itemClassNames = {
+          base: classNames.itemBase,
+          control: classNames.itemControl,
+          description: classNames.itemDescription,
+          label: classNames.itemLabel,
+          labelWrapper: classNames.itemLabelWrapper,
+          wrapper: classNames.itemWrapper,
+        };
+
         switch (variant) {
           case 'radioBox':
             RadioComponents = options.map((option) => (
               <RadioBox
-                key={option.value}
+                classNames={itemClassNames}
                 data-testid={slugify(
                   `${testId}_option_${option.testId || option.value}`,
                 )}
-                isDisabled={isDisabled || option.disabled}
-                value={option.value}
-                onChange={onChange}
                 description={option.description}
                 icon={option.icon}
+                isDisabled={isDisabled || option.disabled}
+                key={option.value}
+                onChange={onChange}
+                value={option.value}
               >
                 {option.label ? option.label : option.value}
               </RadioBox>
@@ -93,17 +130,18 @@ const RadioGroup = ({
           case 'radioButton':
             RadioComponents = options.map((option) => (
               <RadioButton
-                key={option.value}
+                className={cn(classNames.itemBase, {
+                  [classNames.itemBaseActive]:
+                    getValues()[name] !== option.value,
+                })}
                 data-testid={slugify(
                   `${testId}_option_${option.testId || option.value}`,
                 )}
                 isDisabled={isDisabled || option.disabled}
-                value={option.value}
+                key={option.value}
                 onChange={onChange}
+                value={option.value}
                 // TODO: how to do the classNames properly (make selected option darker with same color)
-                className={cn(
-                  `${getValues()[name] !== option.value ? 'bg-opacity-50' : ''}`,
-                )}
               >
                 {option.label ? option.label : option.value}
               </RadioButton>
@@ -112,13 +150,14 @@ const RadioGroup = ({
           default:
             RadioComponents = options.map((option) => (
               <Radio
-                key={option.value}
+                classNames={itemClassNames}
                 data-testid={slugify(
                   `${testId}_option_${option.testId || option.value}`,
                 )}
                 isDisabled={isDisabled || option.disabled}
-                value={option.value}
+                key={option.value}
                 onChange={onChange}
+                value={option.value}
               >
                 {option.label ? option.label : option.value}
               </Radio>
@@ -127,7 +166,11 @@ const RadioGroup = ({
 
         return (
           <NextRadioGroup
-            className={className}
+            // className={className}
+            classNames={classNames}
+            // See NextUI styles for group-data condition (data-invalid), e.g.: https://github.com/nextui-org/nextui/blob/main/packages/components/select/src/use-select.ts
+            data-invalid={invalid}
+            data-required={required}
             data-testid={testId}
             errorMessage={error && <FieldValidationError error={error} />}
             isDisabled={isDisabled}
@@ -136,21 +179,23 @@ const RadioGroup = ({
             label={
               label && (
                 // eslint-disable-next-line jsx-a11y/label-has-associated-control
-                <label className={`${invalid ? 'text-danger' : ''}`}>
+                <label>
                   {label}
                   <FieldCopyTestIdButton testId={testId} />
                 </label>
               )
             }
+            name={name}
             orientation={inline ? 'horizontal' : 'vertical'}
             onBlur={onBlur}
             onChange={onChange}
-            name={name}
             ref={ref}
           >
             {variant === 'radioButton' ? (
               // TODO: NextButtonGroup uses ref to modify Button style, but we wrap it, so it does not work at the moment.
-              <NextButtonGroup>{RadioComponents}</NextButtonGroup>
+              <NextButtonGroup className={classNames.buttonGroup}>
+                {RadioComponents}
+              </NextButtonGroup>
             ) : (
               RadioComponents
             )}
