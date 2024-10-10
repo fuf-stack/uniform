@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.9.6](https://github.com/fuf-stack/uniform/compare/uniform-v0.9.5...uniform-v0.9.6) (2024-10-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v11.11.2 ([4466f3a](https://github.com/fuf-stack/uniform/commit/4466f3a23b2b50eb51f6bf455b6b5927661aa9f4))
+* **deps:** update dependency framer-motion to v11.11.4 ([0dd94c6](https://github.com/fuf-stack/uniform/commit/0dd94c697601203e3260b989063f47c15c329b90))
+* **deps:** update dependency framer-motion to v11.11.7 ([bd35112](https://github.com/fuf-stack/uniform/commit/bd351125c84e5b9e20f2458f9e8edcb32e0abf1c))
+* **uniform:** change name of formatOptionLabel prop ([ce3deb2](https://github.com/fuf-stack/uniform/commit/ce3deb2806489b1d5b5d95a31006fd7f2eb32e64))
+* **uniform:** fix various styles ([90f9e09](https://github.com/fuf-stack/uniform/commit/90f9e0935a52b547d49e5211b50e4242c11e3b97))
+* **uniform:** switch position should be center ([ac114c1](https://github.com/fuf-stack/uniform/commit/ac114c16f159a8da84d0b37e8f37cb5907c4e66f))
+
 ## [0.9.5](https://github.com/fuf-stack/uniform/compare/uniform-v0.9.4...uniform-v0.9.5) (2024-10-08)
 
 
