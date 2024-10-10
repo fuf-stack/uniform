@@ -9,7 +9,9 @@ exports[`Story Snapshots > Default 1`] = `
       class="flex-grow min-w-60"
       data-testid=""
     >
-      <div>
+      <div
+        class="place-content-center"
+      >
         <label
           class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none"
           data-invalid="false"
@@ -85,7 +87,9 @@ exports[`Story Snapshots > Disabled 1`] = `
       class="flex-grow min-w-60"
       data-testid=""
     >
-      <div>
+      <div
+        class="place-content-center"
+      >
         <label
           class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none opacity-disabled pointer-events-none"
           data-disabled="true"
@@ -163,7 +167,9 @@ exports[`Story Snapshots > Invalid 1`] = `
       class="flex-grow min-w-60"
       data-testid=""
     >
-      <div>
+      <div
+        class="place-content-center"
+      >
         <label
           class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none"
           data-invalid="false"
@@ -242,7 +248,9 @@ exports[`Story Snapshots > Required 1`] = `
       class="flex-grow min-w-60"
       data-testid=""
     >
-      <div>
+      <div
+        class="place-content-center"
+      >
         <label
           class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none"
           data-invalid="false"
@@ -321,7 +329,9 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
       class="flex-grow min-w-60"
       data-testid=""
     >
-      <div>
+      <div
+        class="place-content-center"
+      >
         <label
           class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none"
           data-invalid="false"

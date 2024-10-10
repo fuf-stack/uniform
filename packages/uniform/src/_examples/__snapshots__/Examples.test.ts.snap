@@ -318,7 +318,9 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                     </div>
                   </div>
                 </div>
-                <div>
+                <div
+                  class="place-content-center"
+                >
                   <label
                     aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
                     class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none"

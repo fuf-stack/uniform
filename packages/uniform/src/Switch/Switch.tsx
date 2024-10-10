@@ -19,7 +19,7 @@ export const switchVariants = tv({
     // See NextUI styles for group-data condition, e.g.: https://github.com/nextui-org/nextui/blob/main/packages/core/theme/src/components/select.ts
     label:
       'text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]',
-    outerWrapper: '',
+    outerWrapper: 'place-content-center',
     startContent: '',
     thumb: '',
     thumbIcon: '',
