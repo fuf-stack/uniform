@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.9.7](https://github.com/fuf-stack/uniform/compare/uniform-v0.9.6...uniform-v0.9.7) (2024-10-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @react-aria/visually-hidden to v3.8.17 ([5a84776](https://github.com/fuf-stack/uniform/commit/5a84776566b0f175a3dc1d1a24b3cd084c7fdcce))
+* **deps:** update dependency framer-motion to v11.11.8 ([78e04ce](https://github.com/fuf-stack/uniform/commit/78e04cee19e2cc953d255a33bdd945cf147585a7))
+* **deps:** update dependency framer-motion to v11.11.9 ([e0f1f1f](https://github.com/fuf-stack/uniform/commit/e0f1f1fea4c94a3421d3af7185582fc02c80fd8b))
+* **uniform:** radio button had no testID ([b02ef51](https://github.com/fuf-stack/uniform/commit/b02ef5125ed6541916d6170d8994d8e91482aa69))
+
 ## [0.9.6](https://github.com/fuf-stack/uniform/compare/uniform-v0.9.5...uniform-v0.9.6) (2024-10-10)
 
 
