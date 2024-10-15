@@ -8,6 +8,8 @@ interface RadioButtonProps {
   className?: string;
   /** disables the option */
   isDisabled?: boolean;
+  /** HTML data-testid attribute of the option */
+  testID?: string;
   /** Callback function. Executed if the option is clicked. */
   onChange: (...event: unknown[]) => void;
   /** value of the option. */
@@ -15,17 +17,19 @@ interface RadioButtonProps {
 }
 
 export const RadioButton = ({
+  children,
   className = undefined,
-  value,
   isDisabled = false,
   onChange,
-  children,
+  testID = undefined,
+  value,
 }: RadioButtonProps) => {
   return (
     <Button
-      key={`index_${value}`}
       className={cn(className)}
+      testId={testID}
       disabled={isDisabled}
+      key={`index_${value}`}
       onClick={() => {
         return onChange(value);
       }}

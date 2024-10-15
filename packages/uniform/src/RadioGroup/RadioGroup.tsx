@@ -134,11 +134,11 @@ const RadioGroup = ({
                   [classNames.itemBaseActive]:
                     getValues()[name] !== option.value,
                 })}
-                data-testid={slugify(
-                  `${testId}_option_${option.testId || option.value}`,
-                )}
                 isDisabled={isDisabled || option.disabled}
                 key={option.value}
+                testID={slugify(
+                  `${testId}_option_${option.testId || option.value}`,
+                )}
                 onChange={onChange}
                 value={option.value}
                 // TODO: how to do the classNames properly (make selected option darker with same color)
