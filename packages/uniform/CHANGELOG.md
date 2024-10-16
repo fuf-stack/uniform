@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.8](https://github.com/fuf-stack/uniform/compare/uniform-v0.9.7...uniform-v0.9.8) (2024-10-16)
+
+
+### Bug Fixes
+
+* **uniform:** change testIds ([b2138d1](https://github.com/fuf-stack/uniform/commit/b2138d133097dbe77543caf37f89d7191d0a6c09))
+
 ## [0.9.7](https://github.com/fuf-stack/uniform/compare/uniform-v0.9.6...uniform-v0.9.7) (2024-10-15)
 
 
