@@ -102,15 +102,27 @@ export interface SelectProps extends VariantProps {
 const InputComponent: typeof components.Input = (props) => {
   // @ts-expect-error data-testid is not a default prop
   // eslint-disable-next-line react/prop-types, react/destructuring-assignment
-  const testId = `${props.selectProps['data-testid']}_input`;
+  const testId = `${props.selectProps['data-testid']}`;
   // eslint-disable-next-line react/jsx-props-no-spreading
   return <components.Input data-testid={testId} {...props} />;
+};
+
+const ControlComponent: typeof components.Control = (props) => {
+  // @ts-expect-error data-testid is not a default prop
+  // eslint-disable-next-line react/prop-types, react/destructuring-assignment
+  const testId = `${props.selectProps['data-testid']}_select`;
+  return (
+    <div data-testid={testId}>
+      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+      <components.Control {...props} />
+    </div>
+  );
 };
 
 const OptionComponent: typeof components.Option = (props) => {
   // @ts-expect-error data-testid is not a default prop
   // eslint-disable-next-line react/prop-types, react/destructuring-assignment
-  const testId = `${props.selectProps['data-testid']}_option_${props?.data?.testId ?? props?.data?.value}`;
+  const testId = `${props.selectProps['data-testid']}_select_option_${props?.data?.testId ?? props?.data?.value}`;
   return (
     <div data-testid={testId}>
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
@@ -126,7 +138,7 @@ const DropdownIndicatorComponent: typeof components.DropdownIndicator = (
   // eslint-disable-next-line react/prop-types
   const testId = props?.selectProps['data-testid'] as string;
   return (
-    <div data-testid={`${testId}_dropdown`}>
+    <div data-testid={`${testId}_select_dropdown`}>
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <components.DropdownIndicator {...props} />
     </div>
@@ -191,7 +203,7 @@ const Select = ({
           // eslint-disable-next-line react/jsx-props-no-spreading
           {...getBaseProps()}
           className={cn(classNames.base)}
-          data-testid={testId}
+          data-testid={`${testId}_wrapper`}
           // See NextUI styles for group-data condition (data-invalid), e.g.: https://github.com/nextui-org/nextui/blob/main/packages/components/select/src/use-select.ts
           data-required={required}
         >
@@ -248,9 +260,10 @@ const Select = ({
               Input: InputComponent,
               Option: OptionComponent,
               DropdownIndicator: DropdownIndicatorComponent,
+              Control: ControlComponent,
             }}
             // Does not affect the testId of the select, but is needed to pass it to sub-components
-            data-testid={`${testId}_select`}
+            data-testid={testId}
             filterOption={filterOption}
             formatOptionLabel={renderOptionLabel}
             inputValue={inputValue}
