@@ -10,7 +10,7 @@ exports[`Story Snapshots > Default 1`] = `
       data-testid=""
     >
       <div
-        class="group"
+        class="group leading-normal"
         data-filled="true"
         data-has-label="true"
         data-required="false"
@@ -164,7 +164,7 @@ exports[`Story Snapshots > InitialValue 1`] = `
       data-testid=""
     >
       <div
-        class="group"
+        class="group leading-normal"
         data-filled="true"
         data-has-label="true"
         data-required="false"
@@ -333,7 +333,7 @@ exports[`Story Snapshots > Invalid 1`] = `
       data-testid=""
     >
       <div
-        class="group"
+        class="group leading-normal"
         data-filled="true"
         data-has-label="true"
         data-required="false"
@@ -518,7 +518,7 @@ exports[`Story Snapshots > MenuIsVisibleInCard 1`] = `
           class="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased"
         >
           <div
-            class="group"
+            class="group leading-normal"
             data-filled="true"
             data-has-label="true"
             data-required="false"
@@ -725,7 +725,7 @@ exports[`Story Snapshots > MultiSelect 1`] = `
       data-testid=""
     >
       <div
-        class="group"
+        class="group leading-normal"
         data-filled="true"
         data-has-label="true"
         data-required="false"
@@ -881,7 +881,7 @@ exports[`Story Snapshots > Required 1`] = `
       data-testid=""
     >
       <div
-        class="group"
+        class="group leading-normal"
         data-filled="true"
         data-has-label="true"
         data-required="true"

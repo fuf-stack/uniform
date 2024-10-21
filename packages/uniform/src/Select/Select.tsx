@@ -16,7 +16,7 @@ import { FieldValidationError } from '../partials/FieldValidationError';
 
 export const selectVariants = tv({
   slots: {
-    base: 'group',
+    base: 'group leading-normal',
     clearIndicator:
       'rounded-md p-1 text-foreground-500 hover:cursor-pointer hover:bg-default-200 hover:text-foreground-800',
     control:
