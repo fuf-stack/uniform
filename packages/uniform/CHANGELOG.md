@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.9](https://github.com/fuf-stack/uniform/compare/uniform-v0.9.8...uniform-v0.9.9) (2024-10-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-hook-form to v7.53.1 ([a8878d7](https://github.com/fuf-stack/uniform/commit/a8878d7d948871d254cf359f5cb26ac60970c4a8))
+* **uniform:** fix testId of select options ([5b9a7cd](https://github.com/fuf-stack/uniform/commit/5b9a7cd25389a51e4fb6fecc260fdbe63203bc92))
+
 ## [0.9.8](https://github.com/fuf-stack/uniform/compare/uniform-v0.9.7...uniform-v0.9.8) (2024-10-16)
 
 
