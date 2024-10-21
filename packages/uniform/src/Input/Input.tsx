@@ -77,7 +77,13 @@ const Input = ({
             labelPlacement="outside"
             name={name}
             onBlur={onBlur}
-            onChange={onChange}
+            onChange={
+              type === 'number'
+                ? (e) => {
+                    onChange(Number(e.target.value));
+                  }
+                : onChange
+            }
             placeholder={placeholder}
             radius="sm"
             ref={ref}

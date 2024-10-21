@@ -129,3 +129,27 @@ export const WithSelect: Story = {
     ),
   },
 };
+
+export const Number: Story = {
+  parameters: {
+    formProps: {
+      validation: veto({
+        inputField: vt.number(),
+      }),
+    },
+  },
+  args: {
+    label: 'InvalidField',
+    name: 'inputField',
+    type: 'number',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const input = canvas.getByTestId('inputfield');
+    await userEvent.type(input, '2', {
+      delay: 100,
+    });
+
+    await expect(input.getAttribute('aria-invalid')).toBeNull();
+  },
+};
