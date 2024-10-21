@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.10](https://github.com/fuf-stack/uniform/compare/uniform-v0.9.9...uniform-v0.9.10) (2024-10-21)
+
+
+### Bug Fixes
+
+* **uniform:** explicitly set line hight for select ([46b7aef](https://github.com/fuf-stack/uniform/commit/46b7aef81db6d45ddba9a4f1756f92637b35e9b2))
+* **uniform:** value of input with type number actually has type number ([9d86abd](https://github.com/fuf-stack/uniform/commit/9d86abd58d898c0d839875b7297ee98005c0dc20))
+
 ## [0.9.9](https://github.com/fuf-stack/uniform/compare/uniform-v0.9.8...uniform-v0.9.9) (2024-10-21)
 
 
