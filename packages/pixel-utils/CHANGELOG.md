@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/fuf-stack/uniform/compare/pixel-utils-v0.3.0...pixel-utils-v0.3.1) (2024-10-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency tailwind-merge to v2.5.4 ([02b2a2c](https://github.com/fuf-stack/uniform/commit/02b2a2cb3c6cf37c18d3bae2c14efa90be0e9e10))
+
 ## [0.3.0](https://github.com/fuf-stack/uniform/compare/pixel-utils-v0.2.0...pixel-utils-v0.3.0) (2024-10-06)
 
 
