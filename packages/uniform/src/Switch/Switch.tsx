@@ -56,21 +56,17 @@ const Switch = ({
   const { control, getFieldState } = useFormContext();
   const { error, required, testId, invalid } = getFieldState(name, _testId);
 
-  const { label, getInputProps, getHelperWrapperProps, getErrorMessageProps } =
-    useInput({
-      errorMessage: JSON.stringify(error),
-      isInvalid: invalid,
-      isRequired: required,
-      label: _label,
-      labelPlacement: 'outside',
-      placeholder: ' ',
-    });
+  const { label, getInputProps, getErrorMessageProps } = useInput({
+    errorMessage: JSON.stringify(error),
+    isInvalid: invalid,
+    isRequired: required,
+    label: _label,
+    labelPlacement: 'outside',
+    placeholder: ' ',
+  });
 
   const variants = switchVariants();
   const classNames = variantsToClassNames(variants, className, 'outerWrapper');
-
-  console.log('getHelperWrapperProps()', getHelperWrapperProps());
-  console.log('getErrorMessageProps()', getErrorMessageProps());
 
   return (
     <Controller

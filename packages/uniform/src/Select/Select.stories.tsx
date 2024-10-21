@@ -55,7 +55,6 @@ const args: Story['args'] = {
     { value: 'strawberry', label: 'Strawberry' },
     { value: 'vanilla', label: 'Vanilla' },
   ],
-  testId: 'selectfield',
 };
 
 export const Default: Story = {

@@ -9,6 +9,7 @@ import { useSelect } from '@nextui-org/select';
 
 import { cn, tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
 
+import { slugify } from '../helpers';
 import { useFormContext } from '../hooks';
 import { FieldCopyTestIdButton } from '../partials/FieldCopyTestIdButton';
 import { FieldValidationError } from '../partials/FieldValidationError';
@@ -122,7 +123,7 @@ const ControlComponent: typeof components.Control = (props) => {
 const OptionComponent: typeof components.Option = (props) => {
   // @ts-expect-error data-testid is not a default prop
   // eslint-disable-next-line react/prop-types, react/destructuring-assignment
-  const testId = `${props.selectProps['data-testid']}_select_option_${props?.data?.testId ?? props?.data?.value}`;
+  const testId = `${props.selectProps['data-testid']}_select_option_${slugify(props?.data?.testId ?? props?.data?.value)}`;
   return (
     <div data-testid={testId}>
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
@@ -286,15 +287,11 @@ const Select = ({
             }}
             onChange={(option) => {
               if (multiSelect) {
-                const transformedOptions: string[] = [];
-                // @ts-expect-error in this case option is an array.
-                option?.forEach((o: { value: string }) => {
-                  transformedOptions.push(o.value);
-                });
-                onChange(transformedOptions);
+                onChange(
+                  (option as SelectOption[])?.map((_option) => _option.value),
+                );
               } else {
-                // @ts-expect-error in this case option is of type SelectOption and has the property value.
-                onChange(option && option.value);
+                onChange((option as SelectOption)?.value);
               }
             }}
             onFocus={(_e) => {
