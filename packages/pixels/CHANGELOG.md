@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.25.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.24.1...pixels-v0.25.0) (2024-10-22)
+
+
+### Features
+
+* removed fixed width on popover component ([94d48b0](https://github.com/fuf-stack/uniform/commit/94d48b03c0e34f645bb755cebe41fbd580efa1fe))
+
 ## [0.24.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.24.0...pixels-v0.24.1) (2024-10-21)
 
 
