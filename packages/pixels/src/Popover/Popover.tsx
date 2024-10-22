@@ -12,7 +12,7 @@ import ScrollShadow from '../ScrollShadow/ScrollShadow';
 export const popoverVariants = tv({
   slots: {
     body: 'w-full px-2.5 py-1',
-    content: 'flex max-h-[80vh] w-[400px] flex-col p-0',
+    content: 'flex max-h-[80vh] flex-col p-0',
     footer: 'w-full px-2.5 py-1',
     header: 'w-full px-2.5 py-1',
     trigger: '',
