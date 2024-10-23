@@ -234,8 +234,8 @@ importers:
         specifier: 18.3.1
         version: 18.3.1
       '@uiw/react-json-view':
-        specifier: 2.0.0-alpha.29
-        version: 2.0.0-alpha.29(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 2.0.0-alpha.30
+        version: 2.0.0-alpha.30(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -2762,8 +2762,8 @@ packages:
     resolution: {integrity: sha512-cDF0/Gf81QpY3xYyJKDV14Zwdmid5+uuENhjH2EqFaF0ni+yAyq/LzMaIJdhNJXZI7uLzwIlA+V7oWoyn6Curg==}
     engines: {node: ^18.18.0 || >=20.0.0}
 
-  '@uiw/react-json-view@2.0.0-alpha.29':
-    resolution: {integrity: sha512-1YtGUtbO45/H2gw23Bf0rqkOwpc/Cv4YaW4+zQ++1bvbGKQ9RUO4UwnnNfOMUIxdhiCNf7Oio/vH1WYbQkHK+Q==}
+  '@uiw/react-json-view@2.0.0-alpha.30':
+    resolution: {integrity: sha512-ufvvirUQcITU9s4R12b7hn/t7ngLCYp1KbBxE+eAD35o3Ey+uxfKvgWmIwGFhV3hFXXxMJ8SHQKwl/ywNCHsDA==}
     peerDependencies:
       '@babel/runtime': '>=7.10.0'
       react: '>=18.0.0'
@@ -10781,7 +10781,7 @@ snapshots:
       '@typescript-eslint/types': 7.18.0
       eslint-visitor-keys: 3.4.3
 
-  '@uiw/react-json-view@2.0.0-alpha.29(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@uiw/react-json-view@2.0.0-alpha.30(@babel/runtime@7.25.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@babel/runtime': 7.25.7
       react: 18.3.1
