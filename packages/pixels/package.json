@@ -146,7 +146,7 @@
     "@repo/tsup-config": "workspace:*",
     "@repo/vite-config": "workspace:*",
     "@types/debug": "4.1.12",
-    "@types/react": "18.3.11",
+    "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
     "@uiw/react-json-view": "2.0.0-alpha.29",
     "react": "18.3.1",
