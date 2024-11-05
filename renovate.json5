@@ -30,10 +30,10 @@
       matchPackagePatterns: '^@nextui-org',
       groupName: 'nextui monorepo',
     },
-    // framer-motion minir only (rate-limiting)
+    // framer-motion not patch releases (rate-limiting)
     {
       matchPackageNames: ['framer-motion'],
-      groupName: 'framer-motion minor updates',
+      excludeUpdateTypes: ['patch'],
     },
   ],
 }
