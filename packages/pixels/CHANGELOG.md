@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.27.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.26.0...pixels-v0.27.0) (2024-11-05)
+
+
+### Features
+
+* **pixels:** add initial ButtonGroup ([826054d](https://github.com/fuf-stack/uniform/commit/826054dc9fd8e213038f640974b11589f2443e4b))
+
 ## [0.26.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.25.1...pixels-v0.26.0) (2024-11-05)
 
 
