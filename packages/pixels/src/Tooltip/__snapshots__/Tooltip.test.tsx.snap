@@ -41,12 +41,32 @@ exports[`Story Snapshots > AllPlacements 1`] = `
 </div>
 `;
 
+exports[`Story Snapshots > CloseDelay 1`] = `
+<div>
+  <span
+    class="cursor-pointer"
+  >
+    3000 ms close delay
+  </span>
+</div>
+`;
+
 exports[`Story Snapshots > Default 1`] = `
 <div>
   <span
     class="cursor-pointer"
   >
     hover me
+  </span>
+</div>
+`;
+
+exports[`Story Snapshots > Delay 1`] = `
+<div>
+  <span
+    class="cursor-pointer"
+  >
+    1000 ms delay
   </span>
 </div>
 `;

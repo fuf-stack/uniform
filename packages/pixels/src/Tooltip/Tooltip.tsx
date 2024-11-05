@@ -30,6 +30,10 @@ export interface TooltipProps extends VariantProps {
   children: ReactNode;
   /** CSS class name */
   className?: ClassName;
+  /** delay in milliseconds before the tooltip opens. */
+  closeDelay?: number;
+  /** delay in milliseconds before the tooltip opens. */
+  delay?: number;
   /** placement padding in px */
   containerPadding?: number;
   /** content displayed in the tooltip */
@@ -48,11 +52,13 @@ export interface TooltipProps extends VariantProps {
 const Tooltip = ({
   children,
   className: _className = undefined,
-  content,
-  placement = 'top',
-  defaultOpen = false,
-  onOpenChange = undefined,
+  closeDelay = 500,
   containerPadding = 0,
+  content,
+  defaultOpen = false,
+  delay = 0,
+  onOpenChange = undefined,
+  placement = 'top',
 }: TooltipProps) => {
   // classNames from slots
   const variants = tooltipVariants();
@@ -61,9 +67,11 @@ const Tooltip = ({
   return (
     <NextTooltip
       classNames={classNames}
+      closeDelay={closeDelay}
       containerPadding={containerPadding}
       content={content}
       defaultOpen={defaultOpen}
+      delay={delay}
       onClick={(e) => e.preventDefault()}
       onOpenChange={onOpenChange}
       placement={placement}

@@ -17,6 +17,22 @@ export const Default: StoryObj<typeof Tooltip> = {
   },
 };
 
+export const Delay: StoryObj<typeof Tooltip> = {
+  args: {
+    content: 'I took 1 second',
+    children: '1000 ms delay',
+    delay: 1000,
+  },
+};
+
+export const CloseDelay: StoryObj<typeof Tooltip> = {
+  args: {
+    content: 'I will go in 3s',
+    children: '3000 ms close delay',
+    closeDelay: 3000,
+  },
+};
+
 export const AllPlacements: Story = {
   render: (args) => (
     <>
