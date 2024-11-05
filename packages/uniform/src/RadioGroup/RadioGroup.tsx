@@ -3,10 +3,10 @@ import type { ReactElement, ReactNode } from 'react';
 
 import { Controller } from 'react-hook-form';
 
-import { ButtonGroup as NextButtonGroup } from '@nextui-org/button';
 import { RadioGroup as NextRadioGroup, Radio } from '@nextui-org/radio';
 
 import { cn, tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
+import { ButtonGroup } from '@fuf-stack/pixels';
 
 import { slugify } from '../helpers';
 import { useFormContext } from '../hooks';
@@ -192,10 +192,9 @@ const RadioGroup = ({
             ref={ref}
           >
             {variant === 'radioButton' ? (
-              // TODO: NextButtonGroup uses ref to modify Button style, but we wrap it, so it does not work at the moment.
-              <NextButtonGroup className={classNames.buttonGroup}>
+              <ButtonGroup className={classNames.buttonGroup}>
                 {RadioComponents}
-              </NextButtonGroup>
+              </ButtonGroup>
             ) : (
               RadioComponents
             )}
