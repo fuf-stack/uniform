@@ -54,7 +54,7 @@ const TextArea = ({
           <NextTextArea
             className={cn(className)}
             classNames={{
-              inputWrapper: 'group-data-[focus=true]:border-primary',
+              inputWrapper: 'group-data-[focus=true]:border-focus',
             }}
             data-testid={testId}
             errorMessage={error && <FieldValidationError error={error} />}

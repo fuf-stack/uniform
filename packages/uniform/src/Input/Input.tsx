@@ -60,7 +60,7 @@ const Input = ({
           <NextInput
             className={cn(className)}
             classNames={{
-              inputWrapper: 'group-data-[focus=true]:border-primary',
+              inputWrapper: 'group-data-[focus=true]:border-focus',
             }}
             data-testid={testId}
             endContent={endContent}

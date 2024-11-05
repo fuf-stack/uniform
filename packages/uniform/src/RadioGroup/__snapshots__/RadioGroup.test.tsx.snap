@@ -876,7 +876,7 @@ exports[`Story Snapshots > RadioBox 1`] = `
           role="presentation"
         >
           <label
-            class="group inline-flex flex-auto cursor-pointer items-center justify-between gap-4 rounded-lg border-2 border-default p-4 hover:bg-content2 data-[selected=true]:border-primary"
+            class="group inline-flex flex-auto cursor-pointer items-center justify-between gap-4 rounded-lg border-2 border-default p-4 hover:bg-content2 data-[selected=true]:border-focus"
             data-testid="radiogroupfield_option_1"
           >
             <div
@@ -930,7 +930,7 @@ exports[`Story Snapshots > RadioBox 1`] = `
             </div>
           </label>
           <label
-            class="group inline-flex flex-auto cursor-pointer items-center justify-between gap-4 rounded-lg border-2 border-default p-4 hover:bg-content2 data-[selected=true]:border-primary"
+            class="group inline-flex flex-auto cursor-pointer items-center justify-between gap-4 rounded-lg border-2 border-default p-4 hover:bg-content2 data-[selected=true]:border-focus"
             data-testid="radiogroupfield_option_2"
           >
             <div
@@ -984,7 +984,7 @@ exports[`Story Snapshots > RadioBox 1`] = `
             </div>
           </label>
           <label
-            class="group inline-flex flex-auto cursor-pointer items-center justify-between gap-4 rounded-lg border-2 border-default p-4 hover:bg-content2 data-[selected=true]:border-primary"
+            class="group inline-flex flex-auto cursor-pointer items-center justify-between gap-4 rounded-lg border-2 border-default p-4 hover:bg-content2 data-[selected=true]:border-focus"
             data-testid="radiogroupfield_option_3"
           >
             <div

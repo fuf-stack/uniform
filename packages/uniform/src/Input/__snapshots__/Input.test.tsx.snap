@@ -22,7 +22,7 @@ exports[`Story Snapshots > Default 1`] = `
           data-slot="main-wrapper"
         >
           <div
-            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-primary"
+            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-focus"
             data-slot="input-wrapper"
             style="cursor: text;"
           >
@@ -111,7 +111,7 @@ exports[`Story Snapshots > Disabled 1`] = `
           data-slot="main-wrapper"
         >
           <div
-            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small pointer-events-none transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-primary"
+            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small pointer-events-none transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-focus"
             data-slot="input-wrapper"
             style="cursor: text;"
           >
@@ -202,7 +202,7 @@ exports[`Story Snapshots > Invalid 1`] = `
           data-slot="main-wrapper"
         >
           <div
-            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-primary"
+            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-focus"
             data-slot="input-wrapper"
             style="cursor: text;"
           >
@@ -293,7 +293,7 @@ exports[`Story Snapshots > Number 1`] = `
           data-slot="main-wrapper"
         >
           <div
-            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-primary"
+            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-focus"
             data-slot="input-wrapper"
             style="cursor: text;"
           >
@@ -385,7 +385,7 @@ exports[`Story Snapshots > Required 1`] = `
           data-slot="main-wrapper"
         >
           <div
-            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-primary"
+            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-focus"
             data-slot="input-wrapper"
             style="cursor: text;"
           >
@@ -477,7 +477,7 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
           data-slot="main-wrapper"
         >
           <div
-            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-primary is-filled"
+            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-focus is-filled"
             data-slot="input-wrapper"
             style="cursor: text;"
           >
@@ -567,7 +567,7 @@ exports[`Story Snapshots > WithLabel 1`] = `
           data-slot="main-wrapper"
         >
           <div
-            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-primary"
+            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-focus"
             data-slot="input-wrapper"
             style="cursor: text;"
           >
@@ -657,7 +657,7 @@ exports[`Story Snapshots > WithSelect 1`] = `
           data-slot="main-wrapper"
         >
           <div
-            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-primary"
+            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-focus"
             data-slot="input-wrapper"
             style="cursor: text;"
           >

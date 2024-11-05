@@ -39,7 +39,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                     data-slot="main-wrapper"
                   >
                     <div
-                      class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-primary"
+                      class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-focus"
                       data-slot="input-wrapper"
                       style="cursor: text;"
                     >
@@ -87,7 +87,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                     data-slot="main-wrapper"
                   >
                     <div
-                      class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-primary"
+                      class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-focus"
                       data-slot="input-wrapper"
                       style="cursor: text;"
                     >
@@ -245,7 +245,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                     data-slot="main-wrapper"
                   >
                     <div
-                      class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-primary"
+                      class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-focus"
                       data-slot="input-wrapper"
                       style="cursor: text;"
                     >
@@ -297,7 +297,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                     Text Area
                   </label>
                   <div
-                    class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-medium !h-auto transition-background !duration-150 transition-colors motion-reduce:transition-none py-2 group-data-[focus=true]:border-primary"
+                    class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-medium !h-auto transition-background !duration-150 transition-colors motion-reduce:transition-none py-2 group-data-[focus=true]:border-focus"
                     data-has-multiple-rows="true"
                     data-slot="input-wrapper"
                     style="cursor: text;"
@@ -736,7 +736,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                   >
                     <label
                       aria-required="true"
-                      class="group inline-flex flex-auto cursor-pointer items-center justify-between gap-4 rounded-lg border-2 border-default p-4 hover:bg-content2 data-[selected=true]:border-primary"
+                      class="group inline-flex flex-auto cursor-pointer items-center justify-between gap-4 rounded-lg border-2 border-default p-4 hover:bg-content2 data-[selected=true]:border-focus"
                       data-testid="radioboxfield_option_value0"
                     >
                       <div
@@ -772,7 +772,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                     </label>
                     <label
                       aria-required="true"
-                      class="group inline-flex flex-auto cursor-pointer items-center justify-between gap-4 rounded-lg border-2 border-default p-4 hover:bg-content2 data-[selected=true]:border-primary"
+                      class="group inline-flex flex-auto cursor-pointer items-center justify-between gap-4 rounded-lg border-2 border-default p-4 hover:bg-content2 data-[selected=true]:border-focus"
                       data-testid="radioboxfield_option_value1"
                     >
                       <div
@@ -808,7 +808,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                     </label>
                     <label
                       aria-required="true"
-                      class="group inline-flex flex-auto cursor-pointer items-center justify-between gap-4 rounded-lg border-2 border-default p-4 hover:bg-content2 data-[selected=true]:border-primary"
+                      class="group inline-flex flex-auto cursor-pointer items-center justify-between gap-4 rounded-lg border-2 border-default p-4 hover:bg-content2 data-[selected=true]:border-focus"
                       data-testid="radioboxfield_option_value2"
                     >
                       <div

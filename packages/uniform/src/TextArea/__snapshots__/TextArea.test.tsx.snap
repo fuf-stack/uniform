@@ -24,7 +24,7 @@ exports[`Story Snapshots > Default 1`] = `
           id="react-aria-react-useId-mock"
         />
         <div
-          class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-medium !h-auto transition-background !duration-150 transition-colors motion-reduce:transition-none py-2 group-data-[focus=true]:border-primary"
+          class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-medium !h-auto transition-background !duration-150 transition-colors motion-reduce:transition-none py-2 group-data-[focus=true]:border-focus"
           data-has-multiple-rows="true"
           data-slot="input-wrapper"
           style="cursor: text;"
@@ -110,7 +110,7 @@ exports[`Story Snapshots > Invalid 1`] = `
           Text Area
         </label>
         <div
-          class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-medium !h-auto transition-background !duration-150 transition-colors motion-reduce:transition-none py-2 group-data-[focus=true]:border-primary"
+          class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-medium !h-auto transition-background !duration-150 transition-colors motion-reduce:transition-none py-2 group-data-[focus=true]:border-focus"
           data-has-multiple-rows="true"
           data-slot="input-wrapper"
           style="cursor: text;"
@@ -197,7 +197,7 @@ exports[`Story Snapshots > Required 1`] = `
           textareaField
         </label>
         <div
-          class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-medium !h-auto transition-background !duration-150 transition-colors motion-reduce:transition-none py-2 group-data-[focus=true]:border-primary"
+          class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-medium !h-auto transition-background !duration-150 transition-colors motion-reduce:transition-none py-2 group-data-[focus=true]:border-focus"
           data-has-multiple-rows="true"
           data-slot="input-wrapper"
           style="cursor: text;"
@@ -282,7 +282,7 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
           id="react-aria-react-useId-mock"
         />
         <div
-          class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-medium !h-auto transition-background !duration-150 transition-colors motion-reduce:transition-none py-2 group-data-[focus=true]:border-primary is-filled"
+          class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-medium !h-auto transition-background !duration-150 transition-colors motion-reduce:transition-none py-2 group-data-[focus=true]:border-focus is-filled"
           data-has-multiple-rows="true"
           data-slot="input-wrapper"
           style="cursor: text;"
