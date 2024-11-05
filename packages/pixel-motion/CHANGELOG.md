@@ -8,6 +8,14 @@
 * **deps:** update dependency framer-motion to v11.11.10 ([1bd56ca](https://github.com/fuf-stack/uniform/commit/1bd56cabf6e13db87877b49114f8840719ff2b58))
 * **deps:** update dependency framer-motion to v11.11.11 ([e8e7011](https://github.com/fuf-stack/uniform/commit/e8e701139281d2810fd46475f3c1d9994683551d))
 
+## [1.0.2](https://github.com/fuf-stack/uniform/compare/pixel-motion-v1.0.1...pixel-motion-v1.0.2) (2024-11-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v11.11.10 ([1bd56ca](https://github.com/fuf-stack/uniform/commit/1bd56cabf6e13db87877b49114f8840719ff2b58))
+* **deps:** update dependency framer-motion to v11.11.11 ([e8e7011](https://github.com/fuf-stack/uniform/commit/e8e701139281d2810fd46475f3c1d9994683551d))
+
 ## [1.0.1](https://github.com/fuf-stack/uniform/compare/pixel-motion-v1.0.0...pixel-motion-v1.0.1) (2024-10-21)
 
 
