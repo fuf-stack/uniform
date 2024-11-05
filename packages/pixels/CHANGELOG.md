@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.26.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.25.1...pixels-v0.26.0) (2024-11-05)
+
+
+### Features
+
+* **pixels:** add delay and closeDelay to tooltip ([30683bc](https://github.com/fuf-stack/uniform/commit/30683bc08d14f4ca41a46a0c536712b67a4205cd))
+
 ## [0.25.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.25.0...pixels-v0.25.1) (2024-11-05)
 
 
