@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.10.0](https://github.com/fuf-stack/uniform/compare/uniform-v0.9.11...uniform-v0.10.0) (2024-11-05)
+
+
+### Features
+
+* **pixels:** add initial ButtonGroup ([826054d](https://github.com/fuf-stack/uniform/commit/826054dc9fd8e213038f640974b11589f2443e4b))
+
+
+### Bug Fixes
+
+* **uniform:** use border-focus for focus styles ([1568dfe](https://github.com/fuf-stack/uniform/commit/1568dfe5c5ffc9e5219c2f8f0dbcfc14b4f34ea9))
+
 ## [0.9.11](https://github.com/fuf-stack/uniform/compare/uniform-v0.9.10...uniform-v0.9.11) (2024-11-05)
 
 
