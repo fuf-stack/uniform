@@ -10,7 +10,7 @@ export const tooltipVariants = tv({
   slots: {
     base: '',
     content: '',
-    wrapper: 'inline-flex cursor-pointer items-center',
+    wrapper: 'cursor-pointer',
   },
 });
 
