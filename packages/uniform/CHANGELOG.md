@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.10.1](https://github.com/fuf-stack/uniform/compare/uniform-v0.10.0...uniform-v0.10.1) (2024-11-06)
+
+
+### Bug Fixes
+
+* **uniform:** add new debug prop from context to all form components ([09c9a91](https://github.com/fuf-stack/uniform/commit/09c9a914593e249b8dd3e2f3dc6dddb4b3645426))
+* **uniform:** refactor form debug state handling ([3a175a1](https://github.com/fuf-stack/uniform/commit/3a175a13f1fd5ba7f99a6dc7883116352a03ba0b))
+
 ## [0.10.0](https://github.com/fuf-stack/uniform/compare/uniform-v0.9.11...uniform-v0.10.0) (2024-11-05)
 
 
