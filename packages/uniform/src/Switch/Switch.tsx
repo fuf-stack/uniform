@@ -53,7 +53,7 @@ const Switch = ({
   name,
   testId: _testId = undefined,
 }: SwitchProps) => {
-  const { control, getFieldState } = useFormContext();
+  const { control, debugMode, getFieldState } = useFormContext();
   const { error, required, testId, invalid } = getFieldState(name, _testId);
 
   const { label, getInputProps, getErrorMessageProps } = useInput({
@@ -67,6 +67,8 @@ const Switch = ({
 
   const variants = switchVariants();
   const classNames = variantsToClassNames(variants, className, 'outerWrapper');
+
+  const showTestIdCopyButton = debugMode === 'debug-testids';
 
   return (
     <Controller
@@ -94,7 +96,7 @@ const Switch = ({
             value={value}
           >
             {label}
-            <FieldCopyTestIdButton testId={testId} />
+            {showTestIdCopyButton && <FieldCopyTestIdButton testId={testId} />}
           </NextSwitch>
           {error && (
             <div className={classNames.errorMessage}>

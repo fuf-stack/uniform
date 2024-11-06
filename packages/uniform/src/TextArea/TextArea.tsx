@@ -39,8 +39,11 @@ const TextArea = ({
   placeholder = ' ',
   testId: _testId = undefined,
 }: TextAreaProps) => {
-  const { control, getFieldState } = useFormContext();
+  const { control, debugMode, getFieldState } = useFormContext();
   const { error, invalid, required, testId } = getFieldState(name, _testId);
+
+  const showTestIdCopyButton = debugMode === 'debug-testids';
+  const showLabel = label || showTestIdCopyButton;
 
   return (
     <Controller
@@ -62,10 +65,14 @@ const TextArea = ({
             isRequired={required}
             isInvalid={invalid}
             label={
-              <>
-                {label}
-                <FieldCopyTestIdButton testId={testId} />
-              </>
+              showLabel && (
+                <>
+                  {label}
+                  {showTestIdCopyButton && (
+                    <FieldCopyTestIdButton testId={testId} />
+                  )}
+                </>
+              )
             }
             labelPlacement="outside"
             placeholder={placeholder}

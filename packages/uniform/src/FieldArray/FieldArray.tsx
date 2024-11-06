@@ -76,8 +76,15 @@ const FieldArray = ({
   testId: _testId = undefined,
   moveField = ['button'],
 }: FieldArrayProps) => {
-  const { control, getValues, getFieldState, register, trigger, watch } =
-    useFormContext();
+  const {
+    control,
+    debugMode,
+    getValues,
+    getFieldState,
+    register,
+    trigger,
+    watch,
+  } = useFormContext();
 
   const { fields, append, remove, insert, move } = useFieldArray({
     control,
@@ -125,6 +132,10 @@ const FieldArray = ({
       move(oldIndex, newIndex);
     }
   };
+
+  const showTestIdCopyButton = debugMode === 'debug-testids';
+  const showLabel = label || showTestIdCopyButton;
+
   return (
     <DndContext
       sensors={sensors}
@@ -137,7 +148,7 @@ const FieldArray = ({
         strategy={verticalListSortingStrategy}
       >
         <ul data-testid={testId}>
-          {label && (
+          {showLabel && (
             // eslint-disable-next-line jsx-a11y/label-has-associated-control
             <label
               // eslint-disable-next-line react/jsx-props-no-spreading
@@ -147,7 +158,7 @@ const FieldArray = ({
               {label}
             </label>
           )}
-          <FieldCopyTestIdButton testId={testId} />
+          {showTestIdCopyButton && <FieldCopyTestIdButton testId={testId} />}
 
           {fields.map((field, index) => {
             const duplicate = (i: number) => {

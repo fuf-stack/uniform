@@ -84,9 +84,12 @@ const RadioGroup = ({
   testId: _testId = undefined,
   variant = 'default',
 }: RadioGroupProps): ReactElement => {
-  const { control, getFieldState, getValues } = useFormContext();
+  const { control, debugMode, getFieldState, getValues } = useFormContext();
 
   const { error, invalid, required, testId } = getFieldState(name, _testId);
+
+  const showTestIdCopyButton = debugMode === 'debug-testids';
+  const showLabel = label || showTestIdCopyButton;
 
   const variants = radioGroupVariants();
   const classNames = variantsToClassNames(variants, className, 'base');
@@ -177,11 +180,13 @@ const RadioGroup = ({
             isInvalid={invalid}
             isRequired={required}
             label={
-              label && (
+              showLabel && (
                 // eslint-disable-next-line jsx-a11y/label-has-associated-control
                 <label>
                   {label}
-                  <FieldCopyTestIdButton testId={testId} />
+                  {showTestIdCopyButton && (
+                    <FieldCopyTestIdButton testId={testId} />
+                  )}
                 </label>
               )
             }

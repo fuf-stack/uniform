@@ -163,7 +163,7 @@ const Select = ({
   placeholder = undefined,
   testId: _testId = undefined,
 }: SelectProps) => {
-  const { control, getFieldState } = useFormContext();
+  const { control, debugMode, getFieldState } = useFormContext();
   const { error, invalid, required, testId } = getFieldState(name, _testId);
 
   const [isFocused, setIsFocused] = useState(false);
@@ -192,6 +192,9 @@ const Select = ({
     placeholder: ' ',
   });
 
+  const showTestIdCopyButton = debugMode === 'debug-testids';
+  const showLabel = label || showTestIdCopyButton;
+
   return (
     <Controller
       control={control}
@@ -208,7 +211,7 @@ const Select = ({
           // See NextUI styles for group-data condition (data-invalid), e.g.: https://github.com/nextui-org/nextui/blob/main/packages/components/select/src/use-select.ts
           data-required={required}
         >
-          {label && (
+          {showLabel && (
             <label
               className={classNames.label}
               data-slot="label"
@@ -216,7 +219,9 @@ const Select = ({
               id={getLabelProps().id}
             >
               {label}
-              <FieldCopyTestIdButton testId={testId} />
+              {showTestIdCopyButton && (
+                <FieldCopyTestIdButton testId={testId} />
+              )}
             </label>
           )}
           <ReactSelect
