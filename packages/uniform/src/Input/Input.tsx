@@ -45,8 +45,11 @@ const Input = ({
   testId: _testId = undefined,
   type = undefined,
 }: InputProps) => {
-  const { control, getFieldState } = useFormContext();
+  const { control, debugMode, getFieldState } = useFormContext();
   const { error, invalid, required, testId } = getFieldState(name, _testId);
+
+  const showTestIdCopyButton = debugMode === 'debug-testids';
+  const showLabel = label || showTestIdCopyButton;
 
   return (
     <Controller
@@ -69,10 +72,14 @@ const Input = ({
             isInvalid={invalid}
             isRequired={required}
             label={
-              <>
-                {label}
-                <FieldCopyTestIdButton testId={testId} />
-              </>
+              showLabel && (
+                <>
+                  {label}
+                  {showTestIdCopyButton && (
+                    <FieldCopyTestIdButton testId={testId} />
+                  )}
+                </>
+              )
             }
             labelPlacement="outside"
             name={name}

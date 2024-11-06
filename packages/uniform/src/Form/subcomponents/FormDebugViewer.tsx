@@ -5,7 +5,7 @@ import { FaTimes } from 'react-icons/fa';
 import { FaBug, FaBullseye } from 'react-icons/fa6';
 
 import { cn } from '@fuf-stack/pixel-utils';
-import { Button, Card, Json, useLocalStorage } from '@fuf-stack/pixels';
+import { Button, Card, Json } from '@fuf-stack/pixels';
 
 import { useFormContext } from '../../hooks';
 
@@ -14,28 +14,22 @@ interface FormDebugViewerProps {
   className?: string;
 }
 
-const LOCALSTORAGE_DEBUG_KEY = 'uniform:form-debug-enabled';
-const LOCALSTORAGE_COPY_TEST_ID_KEY = 'uniform:form-debug-copy-test-id-enabled';
-
 /** Renders a form debug panel with information about the current form state */
 const FormDebugViewer = ({ className = undefined }: FormDebugViewerProps) => {
   const {
-    watch,
+    debugMode,
     formState: { dirtyFields, isValid, isSubmitting },
+    setDebugMode,
     validation,
+    watch,
   } = useFormContext();
-
-  const [debug, setDebug] = useLocalStorage(LOCALSTORAGE_DEBUG_KEY, false);
-  const [copyTestId, setCopyTestId] = useLocalStorage(
-    LOCALSTORAGE_COPY_TEST_ID_KEY,
-    false,
-  );
 
   const [validationErrors, setValidationErrors] = useState<
     VetoError['errors'] | null
   >(null);
 
   const formValues = watch();
+  const debugTestIdsEnabled = debugMode === 'debug-testids';
 
   useEffect(
     () => {
@@ -51,11 +45,11 @@ const FormDebugViewer = ({ className = undefined }: FormDebugViewerProps) => {
     [JSON.stringify(formValues)],
   );
 
-  if (!debug) {
+  if (!debugMode || debugMode === 'off') {
     return (
       <Button
         ariaLabel="Enable form debug mode"
-        onClick={() => setDebug(!debug)}
+        onClick={() => setDebugMode('debug')}
         className="absolute bottom-2.5 right-2.5 w-5 text-default-400"
         variant="light"
         icon={<FaBug />}
@@ -71,7 +65,7 @@ const FormDebugViewer = ({ className = undefined }: FormDebugViewerProps) => {
           <span className="text-lg">Debug Mode</span>
           <Button
             icon={<FaTimes className="text-danger" />}
-            onClick={() => setDebug(false)}
+            onClick={() => setDebugMode('off')}
             size="sm"
             variant="flat"
           />
@@ -79,12 +73,14 @@ const FormDebugViewer = ({ className = undefined }: FormDebugViewerProps) => {
       }
     >
       <Button
-        variant={copyTestId ? 'solid' : 'light'}
+        variant={debugTestIdsEnabled ? 'solid' : 'light'}
         icon={<FaBullseye />}
         className="mb-4 ml-auto mr-auto"
-        onClick={() => setCopyTestId(!copyTestId)}
+        onClick={() =>
+          setDebugMode(debugMode === 'debug' ? 'debug-testids' : 'debug')
+        }
       >
-        {copyTestId ? 'Hide CopyButton' : 'Show CopyButton'}
+        {debugTestIdsEnabled ? 'Hide CopyButton' : 'Show CopyButton'}
       </Button>
       <Json
         value={{

@@ -5,6 +5,8 @@ import type { FieldValues, SubmitHandler } from 'react-hook-form';
 import React, { useMemo, useState } from 'react';
 import { FormProvider as HookFormProvider, useForm } from 'react-hook-form';
 
+import { useLocalStorage } from '@fuf-stack/pixels';
+
 /**
  * recursively removes all fields that are null or undefined before
  * the form data is passed to the veto validation function
@@ -16,6 +18,8 @@ export const removeNullishFields = (obj: Record<string, unknown>) => {
     }),
   );
 };
+
+type DebugMode = 'debug' | 'debug-testids' | 'off';
 
 /**
  * The `UniformContext` provides control over the form's submission behavior and may optionally include
@@ -31,12 +35,18 @@ export const removeNullishFields = (obj: Record<string, unknown>) => {
  * or access the validation schema for managing form validation logic.
  */
 export const UniformContext = React.createContext<{
+  /** Form debug mode enabled or not */
+  debugMode: DebugMode;
   /** Function to update if the form can currently be submitted */
   preventSubmit: (prevent: boolean) => void;
+  /** Setter to enable or disable form debug mode */
+  setDebugMode: (debugMode: DebugMode) => void;
   /** Optional Veto validation schema instance for form validation */
   validation?: VetoInstance;
 }>({
+  debugMode: 'off',
   preventSubmit: () => undefined,
+  setDebugMode: () => undefined,
   validation: undefined,
 });
 
@@ -56,10 +66,13 @@ interface FormProviderProps {
   validationTrigger: 'onChange' | 'onBlur' | 'onSubmit' | 'onTouched' | 'all';
 }
 
+const LOCALSTORAGE_DEBUG_MODE_KEY = 'uniform:debug-mode';
+
 /**
  * FormProvider component provides:
  * - The veto validation schema context
  * - Submit handler creation and submission control with preventSubmit
+ * - Form Debug Mode state
  * - React Hook Form context
  */
 const FormProvider: React.FC<FormProviderProps> = ({
@@ -72,16 +85,24 @@ const FormProvider: React.FC<FormProviderProps> = ({
   // Control if the form can currently be submitted
   const [preventSubmit, setPreventSubmit] = useState(false);
 
+  // Form Debug mode state is handled in the form context
+  const [debugMode, setDebugMode] = useLocalStorage<DebugMode>(
+    LOCALSTORAGE_DEBUG_MODE_KEY,
+    'off',
+  );
+
   // Memoize the context value to prevent re-renders
   const contextValue = useMemo(
     () => ({
+      debugMode,
       preventSubmit: (prevent: boolean) => {
         setPreventSubmit(prevent);
       },
+      setDebugMode,
       validation,
     }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [],
+    [debugMode],
   );
 
   // Initialize react hook form
