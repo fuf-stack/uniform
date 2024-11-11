@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.27.2](https://github.com/fuf-stack/uniform/compare/pixels-v0.27.1...pixels-v0.27.2) (2024-11-11)
+
+
+### Bug Fixes
+
+* **pixels:** use next-themes to resolve theme in Json ([9d6e36d](https://github.com/fuf-stack/uniform/commit/9d6e36d54d2802716275d763e6bdf5b69806cea1))
+
 ## [0.27.1](https://github.com/fuf-stack/uniform/compare/pixels-v0.27.0...pixels-v0.27.1) (2024-11-11)
 
 
