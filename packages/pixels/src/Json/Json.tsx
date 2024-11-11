@@ -1,15 +1,14 @@
+/* eslint-disable import/no-extraneous-dependencies */
+
 import type { ReactNode } from 'react';
 
 import { useState } from 'react';
 import { FaChevronDown, FaChevronUp, FaTimesCircle } from 'react-icons/fa';
 import { HiOutlineClipboard, HiOutlineClipboardCheck } from 'react-icons/hi';
 
-// INFO: react-json-view is bundled with --dts-resolve for now
-// eslint-disable-next-line import/no-extraneous-dependencies
+// INFO: react-json-view is bundled with --dts-resolve for now (dev dep)
 import JsonView from '@uiw/react-json-view';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { lightTheme } from '@uiw/react-json-view/light';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { vscodeTheme } from '@uiw/react-json-view/vscode';
 
 import { cn } from '@fuf-stack/pixel-utils';
@@ -34,6 +33,8 @@ export interface JsonProps {
   className?: string | string[] | null;
   /** When set to true, all nodes will be collapsed by default. Use an integer value to collapse at a particular depth. */
   collapsed?: boolean | number;
+  /** color scheme, if not provided will be determined by if body has dark class */
+  theme?: 'light' | 'dark';
   /** Object to be visualized JSON string or object */
   value: string | object;
 }
@@ -41,8 +42,14 @@ export interface JsonProps {
 /**
  * Json renderer based on [react-json-view](https://mac-s-g.github.io/react-json-view/demo/dist/)
  */
-const Json = ({ className = null, collapsed = false, value }: JsonProps) => {
-  const isDarkMode = document.body.classList.contains('dark');
+const Json = ({
+  className = null,
+  collapsed = false,
+  theme = undefined,
+  value,
+}: JsonProps) => {
+  const isDarkMode =
+    theme === 'dark' || document.body.classList.contains('dark');
 
   let content: ReactNode = null;
   let error: ReactNode = null;
