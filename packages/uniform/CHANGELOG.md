@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.3](https://github.com/fuf-stack/uniform/compare/uniform-v0.10.2...uniform-v0.10.3) (2024-11-11)
+
+
+### Bug Fixes
+
+* **uniform:** improve form debug disable logic, add setting for custom ls key ([23345dc](https://github.com/fuf-stack/uniform/commit/23345dc7b07dd02fc698a96cca51a1fb62e0f7e7))
+
 ## [0.10.2](https://github.com/fuf-stack/uniform/compare/uniform-v0.10.1...uniform-v0.10.2) (2024-11-11)
 
 
