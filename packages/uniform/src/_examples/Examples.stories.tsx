@@ -84,8 +84,8 @@ export const AllFieldRenderers: Story = {
     validation,
     children: (
       <Card
-        footer={<SubmitButton />}
         className={{ footer: 'flex-row-reverse' }}
+        footer={<SubmitButton />}
       >
         <Grid className="md:grid-cols-2">
           <Input
@@ -134,5 +134,24 @@ export const AllFieldRenderers: Story = {
         </Grid>
       </Card>
     ),
+  },
+};
+
+export const DebugModeDisabled: Story = {
+  args: {
+    debug: { disable: true },
+    children: (
+      <Card
+        className={{ footer: 'flex-row-reverse' }}
+        footer={<SubmitButton />}
+      >
+        <Input
+          name="stringField"
+          label="String Field"
+          placeholder="String Field..."
+        />
+      </Card>
+    ),
+    validation,
   },
 };

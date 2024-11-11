@@ -19,7 +19,16 @@ export const removeNullishFields = (obj: Record<string, unknown>) => {
   );
 };
 
-type DebugMode = 'debug' | 'debug-testids' | 'off';
+type DebugMode = 'debug' | 'debug-testids' | 'off' | 'disabled';
+
+export type DebugModeSettings = {
+  /** disable form debug completely */
+  disable?: boolean;
+  /** custom localStorage key to save debug mode state */
+  localStorageKey?: string;
+};
+
+const DEBUG_MODE_LOCAL_STORAGE_KEY_DEFAULT = 'uniform:debug-mode';
 
 /**
  * The `UniformContext` provides control over the form's submission behavior and may optionally include
@@ -37,6 +46,8 @@ type DebugMode = 'debug' | 'debug-testids' | 'off';
 export const UniformContext = React.createContext<{
   /** Form debug mode enabled or not */
   debugMode: DebugMode;
+  /** settings for from debug mode */
+  debugModeSettings?: DebugModeSettings;
   /** Function to update if the form can currently be submitted */
   preventSubmit: (prevent: boolean) => void;
   /** Setter to enable or disable form debug mode */
@@ -56,6 +67,8 @@ interface FormProviderProps {
   children: (childProps: {
     handleSubmit: (e?: React.BaseSyntheticEvent) => Promise<void>;
   }) => ReactNode;
+  /** settings for from debug mode */
+  debugModeSettings?: DebugModeSettings;
   /** initial form values */
   initialValues?: FieldValues;
   /** form submit handler */
@@ -66,8 +79,6 @@ interface FormProviderProps {
   validationTrigger: 'onChange' | 'onBlur' | 'onSubmit' | 'onTouched' | 'all';
 }
 
-const LOCALSTORAGE_DEBUG_MODE_KEY = 'uniform:debug-mode';
-
 /**
  * FormProvider component provides:
  * - The veto validation schema context
@@ -77,6 +88,7 @@ const LOCALSTORAGE_DEBUG_MODE_KEY = 'uniform:debug-mode';
  */
 const FormProvider: React.FC<FormProviderProps> = ({
   children,
+  debugModeSettings = undefined,
   initialValues = undefined,
   onSubmit,
   validation = undefined,
@@ -87,14 +99,16 @@ const FormProvider: React.FC<FormProviderProps> = ({
 
   // Form Debug mode state is handled in the form context
   const [debugMode, setDebugMode] = useLocalStorage<DebugMode>(
-    LOCALSTORAGE_DEBUG_MODE_KEY,
+    debugModeSettings?.localStorageKey || DEBUG_MODE_LOCAL_STORAGE_KEY_DEFAULT,
     'off',
   );
 
   // Memoize the context value to prevent re-renders
   const contextValue = useMemo(
     () => ({
-      debugMode,
+      // set debugMode to disabled when debugModeSettings.disable is true
+      // otherwise use current debug mode from localStorage
+      debugMode: debugModeSettings?.disable ? 'disabled' : debugMode,
       preventSubmit: (prevent: boolean) => {
         setPreventSubmit(prevent);
       },
@@ -102,7 +116,7 @@ const FormProvider: React.FC<FormProviderProps> = ({
       validation,
     }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [debugMode],
+    [debugMode, debugModeSettings?.disable],
   );
 
   // Initialize react hook form

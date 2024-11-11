@@ -1,6 +1,7 @@
 import type { VetoInstance } from '@fuf-stack/veto';
 import type { ReactNode } from 'react';
 import type { FieldValues, SubmitHandler } from 'react-hook-form';
+import type { DebugModeSettings } from './subcomponents/FormContext';
 
 import { cn } from '@fuf-stack/pixel-utils';
 
@@ -13,8 +14,8 @@ export interface FormProps {
   children: ReactNode | ReactNode[];
   /** CSS class name */
   className?: string | string[];
-  /** disable form debug completely */
-  disableDebug?: boolean;
+  /** settings for from debug mode */
+  debug?: DebugModeSettings;
   /** initial form values */
   initialValues?: FieldValues;
   /** name of the form */
@@ -35,7 +36,7 @@ export interface FormProps {
 const Form = ({
   children,
   className = undefined,
-  disableDebug = false,
+  debug = undefined,
   initialValues = undefined,
   name = undefined,
   onSubmit,
@@ -45,6 +46,7 @@ const Form = ({
 }: FormProps) => {
   return (
     <FormProvider
+      debugModeSettings={debug}
       initialValues={initialValues}
       onSubmit={onSubmit}
       validation={validation}
@@ -60,7 +62,7 @@ const Form = ({
           >
             {children}
           </form>
-          {!disableDebug && <FormDebugViewer className="w-96 flex-shrink" />}
+          {!debug?.disable && <FormDebugViewer className="w-96 flex-shrink" />}
         </div>
       )}
     </FormProvider>
