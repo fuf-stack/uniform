@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.10.2](https://github.com/fuf-stack/uniform/compare/uniform-v0.10.1...uniform-v0.10.2) (2024-11-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-hook-form to v7.53.2 ([#495](https://github.com/fuf-stack/uniform/issues/495)) ([5483f69](https://github.com/fuf-stack/uniform/commit/5483f69a8fdd200b916668cd6a2ec014c07c0cb3))
+* **deps:** update dependency react-select to v5.8.3 ([#498](https://github.com/fuf-stack/uniform/issues/498)) ([fe2421a](https://github.com/fuf-stack/uniform/commit/fe2421a27f04debac5be25988e9ee481580b1812))
+* **uniform:** add disableDebug prop ([d061810](https://github.com/fuf-stack/uniform/commit/d061810dcab9c2f105b459ad290b3d99d65896aa))
+
 ## [0.10.1](https://github.com/fuf-stack/uniform/compare/uniform-v0.10.0...uniform-v0.10.1) (2024-11-06)
 
 
