@@ -13,6 +13,8 @@ export interface FormProps {
   children: ReactNode | ReactNode[];
   /** CSS class name */
   className?: string | string[];
+  /** disable form debug completely */
+  disableDebug?: boolean;
   /** initial form values */
   initialValues?: FieldValues;
   /** name of the form */
@@ -33,6 +35,7 @@ export interface FormProps {
 const Form = ({
   children,
   className = undefined,
+  disableDebug = false,
   initialValues = undefined,
   name = undefined,
   onSubmit,
@@ -57,7 +60,7 @@ const Form = ({
           >
             {children}
           </form>
-          <FormDebugViewer className="w-96 flex-shrink" />
+          {!disableDebug && <FormDebugViewer className="w-96 flex-shrink" />}
         </div>
       )}
     </FormProvider>
