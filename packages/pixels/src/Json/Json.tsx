@@ -10,6 +10,7 @@ import { HiOutlineClipboard, HiOutlineClipboardCheck } from 'react-icons/hi';
 import JsonView from '@uiw/react-json-view';
 import { lightTheme } from '@uiw/react-json-view/light';
 import { vscodeTheme } from '@uiw/react-json-view/vscode';
+import { useTheme } from 'next-themes';
 
 import { cn } from '@fuf-stack/pixel-utils';
 
@@ -42,20 +43,17 @@ export interface JsonProps {
 /**
  * Json renderer based on [react-json-view](https://mac-s-g.github.io/react-json-view/demo/dist/)
  */
-const Json = ({
-  className = null,
-  collapsed = false,
-  theme = undefined,
-  value,
-}: JsonProps) => {
+const Json = ({ className = null, collapsed = false, value }: JsonProps) => {
+  const [showDetails, setShowDetails] = useState(false);
+
+  // determine theme, if no theme context available (next-themes)
+  // it will be determined by if body has dark class
+  const { resolvedTheme } = useTheme();
   const isDarkMode =
-    theme === 'dark' || document.body.classList.contains('dark');
+    resolvedTheme === 'dark' || document.body.classList.contains('dark');
 
   let content: ReactNode = null;
   let error: ReactNode = null;
-
-  const [showDetails, setShowDetails] = useState(false);
-
   try {
     content = (
       <JsonView
