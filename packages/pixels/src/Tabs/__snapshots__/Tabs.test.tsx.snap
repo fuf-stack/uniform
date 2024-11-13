@@ -1,0 +1,302 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Story Snapshots > Default 1`] = `
+<div>
+  <div
+    aria-label="Tabs"
+    class="inline-flex w-full"
+    data-slot="base"
+  >
+    <div
+      aria-label="Tabs"
+      aria-orientation="horizontal"
+      class="flex p-1 h-fit gap-2 items-center flex-nowrap overflow-x-scroll scrollbar-hide bg-default-100 rounded-medium w-full"
+      data-slot="tabList"
+      id="react-aria-:r0:"
+      role="tablist"
+    />
+  </div>
+</div>
+`;
+
+exports[`Story Snapshots > ManyTabs10 1`] = `
+<div>
+  <div
+    aria-label="Tabs"
+    class="inline-flex w-72"
+    data-slot="base"
+  >
+    <div
+      aria-label="Tabs"
+      aria-orientation="horizontal"
+      class="flex p-1 h-fit gap-2 items-center flex-nowrap overflow-x-scroll scrollbar-hide bg-default-100 rounded-medium w-full"
+      data-slot="tabList"
+      id="react-aria-:r8:"
+      role="tablist"
+    >
+      <button
+        aria-controls="react-aria-:r8:-tabpanel-tab1"
+        aria-selected="true"
+        class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+        data-key="tab1"
+        data-selected="true"
+        data-slot="tab"
+        id="react-aria-:r8:-tab-tab1"
+        role="tab"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="absolute z-0 inset-0 rounded-small bg-background dark:bg-default shadow-small"
+          data-slot="cursor"
+          style="opacity: 1;"
+        />
+        <div
+          class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+          data-slot="tabContent"
+        >
+          Tab 1
+        </div>
+      </button>
+      <button
+        aria-selected="false"
+        class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+        data-key="tab2"
+        data-slot="tab"
+        id="react-aria-:r8:-tab-tab2"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        <div
+          class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+          data-slot="tabContent"
+        >
+          Tab 2
+        </div>
+      </button>
+      <button
+        aria-selected="false"
+        class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+        data-key="tab3"
+        data-slot="tab"
+        id="react-aria-:r8:-tab-tab3"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        <div
+          class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+          data-slot="tabContent"
+        >
+          Tab 3
+        </div>
+      </button>
+      <button
+        aria-selected="false"
+        class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+        data-key="tab4"
+        data-slot="tab"
+        id="react-aria-:r8:-tab-tab4"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        <div
+          class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+          data-slot="tabContent"
+        >
+          Tab 4
+        </div>
+      </button>
+      <button
+        aria-selected="false"
+        class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+        data-key="tab5"
+        data-slot="tab"
+        id="react-aria-:r8:-tab-tab5"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        <div
+          class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+          data-slot="tabContent"
+        >
+          Tab 5
+        </div>
+      </button>
+      <button
+        aria-selected="false"
+        class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+        data-key="tab6"
+        data-slot="tab"
+        id="react-aria-:r8:-tab-tab6"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        <div
+          class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+          data-slot="tabContent"
+        >
+          Tab 6
+        </div>
+      </button>
+      <button
+        aria-selected="false"
+        class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+        data-key="tab7"
+        data-slot="tab"
+        id="react-aria-:r8:-tab-tab7"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        <div
+          class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+          data-slot="tabContent"
+        >
+          Tab 7
+        </div>
+      </button>
+      <button
+        aria-selected="false"
+        class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+        data-key="tab8"
+        data-slot="tab"
+        id="react-aria-:r8:-tab-tab8"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        <div
+          class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+          data-slot="tabContent"
+        >
+          Tab 8
+        </div>
+      </button>
+      <button
+        aria-selected="false"
+        class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+        data-key="tab9"
+        data-slot="tab"
+        id="react-aria-:r8:-tab-tab9"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        <div
+          class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+          data-slot="tabContent"
+        >
+          Tab 9
+        </div>
+      </button>
+      <button
+        aria-selected="false"
+        class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+        data-key="tab10"
+        data-slot="tab"
+        id="react-aria-:r8:-tab-tab10"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        <div
+          class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+          data-slot="tabContent"
+        >
+          Tab 10
+        </div>
+      </button>
+    </div>
+  </div>
+  <div
+    aria-labelledby="react-aria-:r8:-tab-tab1"
+    class="py-3 px-1 data-[inert=true]:hidden outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+    data-focus="false"
+    data-focus-visible="false"
+    data-slot="panel"
+    id="react-aria-:r8:-tabpanel-tab1"
+    role="tabpanel"
+    tabindex="0"
+  >
+    Content 1
+  </div>
+</div>
+`;
+
+exports[`Story Snapshots > WithTabs 1`] = `
+<div>
+  <div
+    aria-label="Tabs"
+    class="inline-flex w-full"
+    data-slot="base"
+  >
+    <div
+      aria-label="Tabs"
+      aria-orientation="horizontal"
+      class="flex p-1 h-fit gap-2 items-center flex-nowrap overflow-x-scroll scrollbar-hide bg-default-100 rounded-medium w-full"
+      data-slot="tabList"
+      id="react-aria-:r3:"
+      role="tablist"
+    >
+      <button
+        aria-controls="react-aria-:r3:-tabpanel-tab1"
+        aria-selected="true"
+        class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+        data-key="tab1"
+        data-selected="true"
+        data-slot="tab"
+        id="react-aria-:r3:-tab-tab1"
+        role="tab"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="absolute z-0 inset-0 rounded-small bg-background dark:bg-default shadow-small"
+          data-slot="cursor"
+          style="opacity: 1;"
+        />
+        <div
+          class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+          data-slot="tabContent"
+        >
+          Tab 1
+        </div>
+      </button>
+      <button
+        aria-selected="false"
+        class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+        data-key="tab2"
+        data-slot="tab"
+        id="react-aria-:r3:-tab-tab2"
+        role="tab"
+        tabindex="-1"
+        type="button"
+      >
+        <div
+          class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+          data-slot="tabContent"
+        >
+          Tab 2
+        </div>
+      </button>
+    </div>
+  </div>
+  <div
+    aria-labelledby="react-aria-:r3:-tab-tab1"
+    class="py-3 px-1 data-[inert=true]:hidden outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+    data-focus="false"
+    data-focus-visible="false"
+    data-slot="panel"
+    id="react-aria-:r3:-tabpanel-tab1"
+    role="tabpanel"
+    tabindex="0"
+  >
+    Content 1
+  </div>
+</div>
+`;
