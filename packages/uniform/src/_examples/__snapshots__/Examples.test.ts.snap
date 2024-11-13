@@ -537,7 +537,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                   role="radiogroup"
                 >
                   <span
-                    class="relative after:content-['*'] after:text-danger after:ml-0.5 text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger"
+                    class="relative after:content-['*'] after:text-danger after:ml-0.5 text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:text-danger"
                   >
                     <label>
                       Radio Field
@@ -567,10 +567,10 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                       </span>
                       <span
                         aria-hidden="true"
-                        class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+                        class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
                       >
                         <span
-                          class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                          class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
                         />
                       </span>
                       <div
@@ -603,10 +603,10 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                       </span>
                       <span
                         aria-hidden="true"
-                        class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+                        class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
                       >
                         <span
-                          class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                          class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
                         />
                       </span>
                       <div
@@ -639,10 +639,10 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                       </span>
                       <span
                         aria-hidden="true"
-                        class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+                        class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
                       >
                         <span
-                          class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                          class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
                         />
                       </span>
                       <div
@@ -671,7 +671,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                   role="radiogroup"
                 >
                   <span
-                    class="relative after:content-['*'] after:text-danger after:ml-0.5 text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger"
+                    class="relative after:content-['*'] after:text-danger after:ml-0.5 text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:text-danger"
                   >
                     <label>
                       Radio Button Field
@@ -723,7 +723,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                   role="radiogroup"
                 >
                   <span
-                    class="relative after:content-['*'] after:text-danger after:ml-0.5 text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger"
+                    class="relative after:content-['*'] after:text-danger after:ml-0.5 text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:text-danger"
                   >
                     <label>
                       Radio Box Field
@@ -753,10 +753,10 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                       </div>
                       <span
                         aria-hidden="true"
-                        class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+                        class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
                       >
                         <span
-                          class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                          class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
                         />
                       </span>
                       <div
@@ -789,10 +789,10 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                       </div>
                       <span
                         aria-hidden="true"
-                        class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+                        class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
                       >
                         <span
-                          class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                          class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
                         />
                       </span>
                       <div
@@ -825,10 +825,10 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                       </div>
                       <span
                         aria-hidden="true"
-                        class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+                        class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
                       >
                         <span
-                          class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                          class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
                         />
                       </span>
                       <div

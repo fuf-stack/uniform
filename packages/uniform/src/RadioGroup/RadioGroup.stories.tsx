@@ -94,6 +94,31 @@ export const RadioButton: Story = {
   },
 };
 
+export const RadioTabs: Story = {
+  args: {
+    name: 'radioGroupField',
+    variant: 'tabs',
+    options: [
+      {
+        content: 'Neutral element for multiplication.',
+        label: 'option 1',
+        id: '1',
+      },
+      {
+        content: 'The number for Nerds.',
+        label: 'option 2',
+        id: '2',
+      },
+      {
+        content:
+          'first prime number to be devisable by something other than 1.',
+        label: 'option 3',
+        id: '3',
+      },
+    ],
+  },
+};
+
 export const Inline: Story = {
   args: {
     inline: true,

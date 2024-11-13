@@ -84,6 +84,11 @@
       "import": "./dist/ScrollShadow/index.js",
       "require": "./dist/ScrollShadow/index.cjs"
     },
+    "./Tabs": {
+      "types": "./dist/Tabs/index.d.ts",
+      "import": "./dist/Tabs/index.js",
+      "require": "./dist/Tabs/index.cjs"
+    },
     "./Tooltip": {
       "types": "./dist/Tooltip/index.d.ts",
       "import": "./dist/Tooltip/index.js",
@@ -135,6 +140,7 @@
     "@nextui-org/scroll-shadow": "2.1.20",
     "@nextui-org/system": "2.2.6",
     "@nextui-org/theme": "2.2.11",
+    "@nextui-org/tabs": "2.0.37",
     "@nextui-org/tooltip": "2.0.41",
     "framer-motion": "11.11.15",
     "next-themes": "0.4.3",

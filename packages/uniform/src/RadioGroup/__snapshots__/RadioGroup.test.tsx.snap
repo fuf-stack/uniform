@@ -43,10 +43,10 @@ exports[`Story Snapshots > Default 1`] = `
             </span>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
@@ -78,10 +78,10 @@ exports[`Story Snapshots > Default 1`] = `
             </span>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
@@ -113,10 +113,10 @@ exports[`Story Snapshots > Default 1`] = `
             </span>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
@@ -201,8 +201,8 @@ exports[`Story Snapshots > DisabledCompletely 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-describedby=":rp: react-aria-react-useId-mock"
-                aria-labelledby=":ro:"
+                aria-describedby=":rq: react-aria-react-useId-mock"
+                aria-labelledby=":rp:"
                 disabled=""
                 name="radioGroupField"
                 type="radio"
@@ -211,10 +211,10 @@ exports[`Story Snapshots > DisabledCompletely 1`] = `
             </span>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
@@ -222,7 +222,7 @@ exports[`Story Snapshots > DisabledCompletely 1`] = `
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
-                id=":ro:"
+                id=":rp:"
               >
                 option 1
               </span>
@@ -237,8 +237,8 @@ exports[`Story Snapshots > DisabledCompletely 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-describedby=":rr: react-aria-react-useId-mock"
-                aria-labelledby=":rq:"
+                aria-describedby=":rs: react-aria-react-useId-mock"
+                aria-labelledby=":rr:"
                 disabled=""
                 name="radioGroupField"
                 type="radio"
@@ -247,10 +247,10 @@ exports[`Story Snapshots > DisabledCompletely 1`] = `
             </span>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
@@ -258,7 +258,7 @@ exports[`Story Snapshots > DisabledCompletely 1`] = `
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
-                id=":rq:"
+                id=":rr:"
               >
                 option 2
               </span>
@@ -273,8 +273,8 @@ exports[`Story Snapshots > DisabledCompletely 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-describedby=":rt: react-aria-react-useId-mock"
-                aria-labelledby=":rs:"
+                aria-describedby=":ru: react-aria-react-useId-mock"
+                aria-labelledby=":rt:"
                 disabled=""
                 name="radioGroupField"
                 type="radio"
@@ -283,10 +283,10 @@ exports[`Story Snapshots > DisabledCompletely 1`] = `
             </span>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
@@ -294,7 +294,7 @@ exports[`Story Snapshots > DisabledCompletely 1`] = `
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
-                id=":rs:"
+                id=":rt:"
               >
                 option 3
               </span>
@@ -370,8 +370,8 @@ exports[`Story Snapshots > DisabledOption 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-describedby=":rv: react-aria-react-useId-mock"
-                aria-labelledby=":ru:"
+                aria-describedby=":r10: react-aria-react-useId-mock"
+                aria-labelledby=":rv:"
                 name="radioGroupField"
                 tabindex="0"
                 type="radio"
@@ -380,10 +380,10 @@ exports[`Story Snapshots > DisabledOption 1`] = `
             </span>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
@@ -391,7 +391,7 @@ exports[`Story Snapshots > DisabledOption 1`] = `
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
-                id=":ru:"
+                id=":rv:"
               >
                 option 1
               </span>
@@ -406,8 +406,8 @@ exports[`Story Snapshots > DisabledOption 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-describedby=":r11: react-aria-react-useId-mock"
-                aria-labelledby=":r10:"
+                aria-describedby=":r12: react-aria-react-useId-mock"
+                aria-labelledby=":r11:"
                 disabled=""
                 name="radioGroupField"
                 type="radio"
@@ -416,10 +416,10 @@ exports[`Story Snapshots > DisabledOption 1`] = `
             </span>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
@@ -427,7 +427,7 @@ exports[`Story Snapshots > DisabledOption 1`] = `
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
-                id=":r10:"
+                id=":r11:"
               >
                 disabled option
               </span>
@@ -441,8 +441,8 @@ exports[`Story Snapshots > DisabledOption 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-describedby=":r13: react-aria-react-useId-mock"
-                aria-labelledby=":r12:"
+                aria-describedby=":r14: react-aria-react-useId-mock"
+                aria-labelledby=":r13:"
                 name="radioGroupField"
                 tabindex="0"
                 type="radio"
@@ -451,10 +451,10 @@ exports[`Story Snapshots > DisabledOption 1`] = `
             </span>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
@@ -462,7 +462,7 @@ exports[`Story Snapshots > DisabledOption 1`] = `
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
-                id=":r12:"
+                id=":r13:"
               >
                 option 3
               </span>
@@ -538,8 +538,8 @@ exports[`Story Snapshots > Inline 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-describedby=":rd: react-aria-react-useId-mock"
-                aria-labelledby=":rc:"
+                aria-describedby=":re: react-aria-react-useId-mock"
+                aria-labelledby=":rd:"
                 name="radioGroupField"
                 tabindex="0"
                 type="radio"
@@ -548,10 +548,10 @@ exports[`Story Snapshots > Inline 1`] = `
             </span>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
@@ -559,7 +559,7 @@ exports[`Story Snapshots > Inline 1`] = `
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
-                id=":rc:"
+                id=":rd:"
               >
                 option 1
               </span>
@@ -573,8 +573,8 @@ exports[`Story Snapshots > Inline 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-describedby=":rf: react-aria-react-useId-mock"
-                aria-labelledby=":re:"
+                aria-describedby=":rg: react-aria-react-useId-mock"
+                aria-labelledby=":rf:"
                 name="radioGroupField"
                 tabindex="0"
                 type="radio"
@@ -583,10 +583,10 @@ exports[`Story Snapshots > Inline 1`] = `
             </span>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
@@ -594,7 +594,7 @@ exports[`Story Snapshots > Inline 1`] = `
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
-                id=":re:"
+                id=":rf:"
               >
                 option 2
               </span>
@@ -608,8 +608,8 @@ exports[`Story Snapshots > Inline 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-describedby=":rh: react-aria-react-useId-mock"
-                aria-labelledby=":rg:"
+                aria-describedby=":ri: react-aria-react-useId-mock"
+                aria-labelledby=":rh:"
                 name="radioGroupField"
                 tabindex="0"
                 type="radio"
@@ -618,10 +618,10 @@ exports[`Story Snapshots > Inline 1`] = `
             </span>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
@@ -629,7 +629,7 @@ exports[`Story Snapshots > Inline 1`] = `
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
-                id=":rg:"
+                id=":rh:"
               >
                 option 3
               </span>
@@ -694,7 +694,7 @@ exports[`Story Snapshots > Invalid 1`] = `
         role="radiogroup"
       >
         <span
-          class="relative after:content-['*'] after:text-danger after:ml-0.5 text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger"
+          class="relative after:content-['*'] after:text-danger after:ml-0.5 text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:text-danger"
         >
           <label>
             radioGroupField
@@ -714,8 +714,8 @@ exports[`Story Snapshots > Invalid 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-describedby=":r1b: react-aria-react-useId-mock"
-                aria-labelledby=":r1a:"
+                aria-describedby=":r1c: react-aria-react-useId-mock"
+                aria-labelledby=":r1b:"
                 name="radioGroupField"
                 tabindex="0"
                 type="radio"
@@ -724,10 +724,10 @@ exports[`Story Snapshots > Invalid 1`] = `
             </span>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
@@ -735,7 +735,7 @@ exports[`Story Snapshots > Invalid 1`] = `
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
-                id=":r1a:"
+                id=":r1b:"
               >
                 one
               </span>
@@ -750,8 +750,8 @@ exports[`Story Snapshots > Invalid 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-describedby=":r1d: react-aria-react-useId-mock"
-                aria-labelledby=":r1c:"
+                aria-describedby=":r1e: react-aria-react-useId-mock"
+                aria-labelledby=":r1d:"
                 name="radioGroupField"
                 tabindex="0"
                 type="radio"
@@ -760,10 +760,10 @@ exports[`Story Snapshots > Invalid 1`] = `
             </span>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
@@ -771,7 +771,7 @@ exports[`Story Snapshots > Invalid 1`] = `
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
-                id=":r1c:"
+                id=":r1d:"
               >
                 two
               </span>
@@ -786,8 +786,8 @@ exports[`Story Snapshots > Invalid 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-describedby=":r1f: react-aria-react-useId-mock"
-                aria-labelledby=":r1e:"
+                aria-describedby=":r1g: react-aria-react-useId-mock"
+                aria-labelledby=":r1f:"
                 name="radioGroupField"
                 tabindex="0"
                 type="radio"
@@ -796,10 +796,10 @@ exports[`Story Snapshots > Invalid 1`] = `
             </span>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
@@ -807,7 +807,7 @@ exports[`Story Snapshots > Invalid 1`] = `
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
-                id=":r1e:"
+                id=":r1f:"
               >
                 three
               </span>
@@ -893,10 +893,10 @@ exports[`Story Snapshots > RadioBox 1`] = `
             </div>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <svg
@@ -947,10 +947,10 @@ exports[`Story Snapshots > RadioBox 1`] = `
             </div>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <svg
@@ -1001,10 +1001,10 @@ exports[`Story Snapshots > RadioBox 1`] = `
             </div>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <svg
@@ -1162,6 +1162,153 @@ exports[`Story Snapshots > RadioButton 1`] = `
 </div>
 `;
 
+exports[`Story Snapshots > RadioTabs 1`] = `
+<div>
+  <div
+    class="flex w-full flex-row justify-between gap-6"
+  >
+    <form
+      class="flex-grow min-w-60"
+      data-testid=""
+    >
+      <div
+        aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
+        aria-label=" "
+        aria-orientation="vertical"
+        class="relative flex flex-col gap-2 group"
+        data-invalid="false"
+        data-required="false"
+        data-testid="radiogroupfield"
+        id="react-aria-react-useId-mock"
+        role="radiogroup"
+      >
+        <div
+          class="flex flex-col flex-wrap gap-2 data-[orientation=horizontal]:flex-row"
+          data-orientation="vertical"
+          role="presentation"
+        >
+          <div
+            aria-label="Tabs"
+            class="inline-flex"
+            data-slot="base"
+          >
+            <div
+              aria-label="Tabs"
+              aria-orientation="horizontal"
+              class="flex p-1 h-fit gap-2 items-center flex-nowrap overflow-x-scroll scrollbar-hide bg-default-100 rounded-medium"
+              data-slot="tabList"
+              id="react-aria-react-useId-mock"
+              role="tablist"
+            >
+              <button
+                aria-controls="react-aria-react-useId-mock-tabpanel-1"
+                aria-selected="true"
+                class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+                data-key="1"
+                data-selected="true"
+                data-slot="tab"
+                id="react-aria-react-useId-mock-tab-1"
+                role="tab"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="absolute z-0 inset-0 rounded-small bg-background dark:bg-default shadow-small"
+                  data-slot="cursor"
+                  style="opacity: 1;"
+                />
+                <div
+                  class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+                  data-slot="tabContent"
+                >
+                  option 1
+                </div>
+              </button>
+              <button
+                aria-selected="false"
+                class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+                data-key="2"
+                data-slot="tab"
+                id="react-aria-react-useId-mock-tab-2"
+                role="tab"
+                tabindex="-1"
+                type="button"
+              >
+                <div
+                  class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+                  data-slot="tabContent"
+                >
+                  option 2
+                </div>
+              </button>
+              <button
+                aria-selected="false"
+                class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+                data-key="3"
+                data-slot="tab"
+                id="react-aria-react-useId-mock-tab-3"
+                role="tab"
+                tabindex="-1"
+                type="button"
+              >
+                <div
+                  class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+                  data-slot="tabContent"
+                >
+                  option 3
+                </div>
+              </button>
+            </div>
+          </div>
+          <div
+            aria-labelledby="react-aria-react-useId-mock-tab-1"
+            class="py-3 px-1 data-[inert=true]:hidden outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            data-focus="false"
+            data-focus-visible="false"
+            data-slot="panel"
+            id="react-aria-react-useId-mock-tabpanel-1"
+            role="tabpanel"
+            tabindex="0"
+          >
+            Neutral element for multiplication.
+          </div>
+        </div>
+      </div>
+      <div
+        class="mt-4 flex justify-end"
+      >
+        <button
+          class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white"
+          data-testid="form_submit_button"
+          type="submit"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+    <button
+      aria-label="Enable form debug mode"
+      class="z-0 group inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small gap-2 rounded-medium px-0 !gap-0 transition-transform-colors-opacity motion-reduce:transition-none bg-transparent data-[hover=true]:bg-default/40 min-w-10 h-10 absolute bottom-2.5 right-2.5 w-5 text-default-400"
+      type="button"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 512 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M256 0c53 0 96 43 96 96v3.6c0 15.7-12.7 28.4-28.4 28.4H188.4c-15.7 0-28.4-12.7-28.4-28.4V96c0-53 43-96 96-96zM41.4 105.4c12.5-12.5 32.8-12.5 45.3 0l64 64c.7 .7 1.3 1.4 1.9 2.1c14.2-7.3 30.4-11.4 47.5-11.4H312c17.1 0 33.2 4.1 47.5 11.4c.6-.7 1.2-1.4 1.9-2.1l64-64c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-64 64c-.7 .7-1.4 1.3-2.1 1.9c6.2 12 10.1 25.3 11.1 39.5H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H416c0 24.6-5.5 47.8-15.4 68.6c2.2 1.3 4.2 2.9 6 4.8l64 64c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0l-63.1-63.1c-24.5 21.8-55.8 36.2-90.3 39.6V240c0-8.8-7.2-16-16-16s-16 7.2-16 16V479.2c-34.5-3.4-65.8-17.8-90.3-39.6L86.6 502.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l64-64c1.9-1.9 3.9-3.4 6-4.8C101.5 367.8 96 344.6 96 320H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H96.3c1.1-14.1 5-27.5 11.1-39.5c-.7-.6-1.4-1.2-2.1-1.9l-64-64c-12.5-12.5-12.5-32.8 0-45.3z"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
 exports[`Story Snapshots > Required 1`] = `
 <div>
   <div
@@ -1184,7 +1331,7 @@ exports[`Story Snapshots > Required 1`] = `
         role="radiogroup"
       >
         <span
-          class="relative after:content-['*'] after:text-danger after:ml-0.5 text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger"
+          class="relative after:content-['*'] after:text-danger after:ml-0.5 text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:text-danger"
         >
           <label>
             radioGroupField
@@ -1204,8 +1351,8 @@ exports[`Story Snapshots > Required 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-describedby=":r15: react-aria-react-useId-mock"
-                aria-labelledby=":r14:"
+                aria-describedby=":r16: react-aria-react-useId-mock"
+                aria-labelledby=":r15:"
                 name="radioGroupField"
                 tabindex="0"
                 type="radio"
@@ -1214,10 +1361,10 @@ exports[`Story Snapshots > Required 1`] = `
             </span>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
@@ -1225,7 +1372,7 @@ exports[`Story Snapshots > Required 1`] = `
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
-                id=":r14:"
+                id=":r15:"
               >
                 1
               </span>
@@ -1240,8 +1387,8 @@ exports[`Story Snapshots > Required 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-describedby=":r17: react-aria-react-useId-mock"
-                aria-labelledby=":r16:"
+                aria-describedby=":r18: react-aria-react-useId-mock"
+                aria-labelledby=":r17:"
                 name="radioGroupField"
                 tabindex="0"
                 type="radio"
@@ -1250,10 +1397,10 @@ exports[`Story Snapshots > Required 1`] = `
             </span>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
@@ -1261,7 +1408,7 @@ exports[`Story Snapshots > Required 1`] = `
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
-                id=":r16:"
+                id=":r17:"
               >
                 2
               </span>
@@ -1276,8 +1423,8 @@ exports[`Story Snapshots > Required 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-describedby=":r19: react-aria-react-useId-mock"
-                aria-labelledby=":r18:"
+                aria-describedby=":r1a: react-aria-react-useId-mock"
+                aria-labelledby=":r19:"
                 name="radioGroupField"
                 tabindex="0"
                 type="radio"
@@ -1286,10 +1433,10 @@ exports[`Story Snapshots > Required 1`] = `
             </span>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
@@ -1297,7 +1444,7 @@ exports[`Story Snapshots > Required 1`] = `
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
-                id=":r18:"
+                id=":r19:"
               >
                 3
               </span>
@@ -1373,8 +1520,8 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-describedby=":rj: react-aria-react-useId-mock"
-                aria-labelledby=":ri:"
+                aria-describedby=":rk: react-aria-react-useId-mock"
+                aria-labelledby=":rj:"
                 name="radioGroupField"
                 tabindex="0"
                 type="radio"
@@ -1383,10 +1530,10 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
             </span>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
@@ -1394,7 +1541,7 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
-                id=":ri:"
+                id=":rj:"
               >
                 option 1
               </span>
@@ -1408,8 +1555,8 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-describedby=":rl: react-aria-react-useId-mock"
-                aria-labelledby=":rk:"
+                aria-describedby=":rm: react-aria-react-useId-mock"
+                aria-labelledby=":rl:"
                 name="radioGroupField"
                 tabindex="0"
                 type="radio"
@@ -1418,10 +1565,10 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
             </span>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
@@ -1429,7 +1576,7 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
-                id=":rk:"
+                id=":rl:"
               >
                 option 2
               </span>
@@ -1443,8 +1590,8 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-describedby=":rn: react-aria-react-useId-mock"
-                aria-labelledby=":rm:"
+                aria-describedby=":ro: react-aria-react-useId-mock"
+                aria-labelledby=":rn:"
                 name="radioGroupField"
                 tabindex="0"
                 type="radio"
@@ -1453,10 +1600,10 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
             </span>
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-primary text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
@@ -1464,7 +1611,7 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
-                id=":rm:"
+                id=":rn:"
               >
                 option 3
               </span>
