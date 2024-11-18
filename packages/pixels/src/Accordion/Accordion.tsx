@@ -62,7 +62,7 @@ type ClassName = TVClassName<typeof accordionVariants>;
 
 export interface AccordionProps extends VariantProps {
   /** Props for AccordionItems, will render the accordion items programmatically */
-  accordionItems?: AccordionItemProps[];
+  accordionItems: AccordionItemProps[];
   /** CSS class name */
   className?: ClassName;
   /** Array of keys for the AccordionItem(s) to be expanded by default */
@@ -93,7 +93,7 @@ export interface AccordionProps extends VariantProps {
  * Accordion component based on [NextUI Accordion](https://nextui.org/docs/components/accordion)
  */
 const Accordion = ({
-  accordionItems = [],
+  accordionItems,
   className: _className = undefined,
   defaultSelectedKeys = [],
   disabled = false,

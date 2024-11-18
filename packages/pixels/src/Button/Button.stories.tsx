@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import type { ButtonProps } from './Button';
 
+import { FaEnvelope } from 'react-icons/fa';
+
 import Button, { buttonVariants } from './Button';
 
 const meta: Meta<typeof Button> = {
@@ -18,6 +20,10 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
+  args: {},
+};
+
+export const Basic: Story = {
   args: {
     children: 'Button',
     testId: 'some-test-id',
@@ -28,6 +34,13 @@ export const Disabled: StoryObj<typeof Button> = {
   args: {
     children: 'Button',
     disabled: true,
+  },
+};
+
+export const IconOnly: Story = {
+  args: {
+    icon: <FaEnvelope />,
+    children: undefined,
   },
 };
 
