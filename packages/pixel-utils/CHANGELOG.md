@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.2](https://github.com/fuf-stack/uniform/compare/pixel-utils-v0.3.1...pixel-utils-v0.3.2) (2024-11-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency tailwind-variants to v0.3.0 ([#508](https://github.com/fuf-stack/uniform/issues/508)) ([d1f9c6a](https://github.com/fuf-stack/uniform/commit/d1f9c6a2bb03472983028b9a5400dcdf1728c0e2))
+
 ## [0.3.1](https://github.com/fuf-stack/uniform/compare/pixel-utils-v0.3.0...pixel-utils-v0.3.1) (2024-10-21)
 
 

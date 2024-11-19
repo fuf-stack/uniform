@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.28.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.27.2...pixels-v0.28.0) (2024-11-19)
+
+
+### Features
+
+* **pixels:** add tests for more coverage and fix some minor issues ([3f1d839](https://github.com/fuf-stack/uniform/commit/3f1d839e1d0b207e762a64d12c3f07f17cdc79d9))
+* **uniform,pixels:** add Tabs component and add tabs option to RadioGroup ([1a16232](https://github.com/fuf-stack/uniform/commit/1a16232162b9fdf8459c4464322ddebb585bdafb))
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v11.11.13 ([#509](https://github.com/fuf-stack/uniform/issues/509)) ([f903a7d](https://github.com/fuf-stack/uniform/commit/f903a7da75c9df77fe62892586cf0287feffc9ef))
+* **deps:** update dependency framer-motion to v11.11.15 ([#513](https://github.com/fuf-stack/uniform/issues/513)) ([4be4f9a](https://github.com/fuf-stack/uniform/commit/4be4f9a0dc7df3b89c9a7827c27fb175448b4fc3))
+* **deps:** update dependency framer-motion to v11.11.17 ([#515](https://github.com/fuf-stack/uniform/issues/515)) ([f76a216](https://github.com/fuf-stack/uniform/commit/f76a216e796e717cb436ad268b89b8234fe937e9))
+* **deps:** update dependency next-themes to v0.4.3 ([#504](https://github.com/fuf-stack/uniform/issues/504)) ([8c2a53e](https://github.com/fuf-stack/uniform/commit/8c2a53eba6105c496128e5daad52cff3019faabc))
+* **pixels:** refactor Breadcrumb slots ([c95f028](https://github.com/fuf-stack/uniform/commit/c95f02863c9b2e31def5ad5c16d17837f4642bf2))
+* **uniform,pixels:** add Tabs component test snapshot ([c02779e](https://github.com/fuf-stack/uniform/commit/c02779e0e95633b48bcfb345ddf3dbe7af52e9ac))
+
 ## [0.27.2](https://github.com/fuf-stack/uniform/compare/pixels-v0.27.1...pixels-v0.27.2) (2024-11-11)
 
 
