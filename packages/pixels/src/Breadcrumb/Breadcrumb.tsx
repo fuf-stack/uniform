@@ -12,11 +12,18 @@ import { tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
 // see: https://nextui.org/docs/components/breadcrumbs#breadcrumbitem-props
 export const breadcrumbVariants = tv({
   slots: {
-    wrapper: '', // base slot of breadcrumbs
-    list: '', // list slot of breadcrumbs
-    separator: '',
+    /** ellipsis slot */
+    ellipsis: '',
+    /** li > span slot */
     item: '',
-    base: '', // base for item slot
+    /** li  slot */
+    itemBase: '', // base for item slot
+    /** ol slot */
+    list: '',
+    /** separator slot */
+    separator: '',
+    /** nav slot, breadcrumb base slot in nextui */
+    nav: '',
   },
 });
 
@@ -86,16 +93,24 @@ const Breadcrumb = ({
 }: BreadcrumbProps) => {
   // itemClasses from className slots
   const variants = breadcrumbVariants({});
-  const classNames = variantsToClassNames(variants, _className, 'wrapper');
+  const classNames = variantsToClassNames(variants, _className, 'nav');
 
   return (
     <NextBreadcrumb
-      classNames={{ base: classNames.wrapper, list: classNames.list }}
+      classNames={{
+        base: classNames.nav,
+        ellipsis: classNames.separator,
+        list: classNames.list,
+      }}
       color={color}
       disableAnimation={disableAnimation}
       hideSeparator={hideSeparator}
       isDisabled={disabled}
-      itemClasses={classNames}
+      itemClasses={{
+        base: classNames.itemBase,
+        item: classNames.item,
+        separator: classNames.separator,
+      }}
       maxItems={maxItems}
       radius={radius}
       separator={separator}
