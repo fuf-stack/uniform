@@ -43,7 +43,7 @@ type ClassName = TVClassName<typeof breadcrumbVariants>;
 
 export interface BreadcrumbProps extends VariantProps {
   /** Props for breadcrumbItem, will render the breadcrumb items programmatically */
-  breadcrumbItems?: BreadcrumbItemProps[];
+  breadcrumbItems: BreadcrumbItemProps[];
   /** CSS class name */
   className?: ClassName;
   /** color of the active BreadcrumbItem */
@@ -78,7 +78,7 @@ export interface BreadcrumbProps extends VariantProps {
  * Breadcrumb component based on [NextUI Breadcrumbs](https://nextui.org/docs/components/breadcrumbs)
  */
 const Breadcrumb = ({
-  breadcrumbItems = [],
+  breadcrumbItems,
   className: _className = undefined,
   color = 'foreground',
   disableAnimation = false,
