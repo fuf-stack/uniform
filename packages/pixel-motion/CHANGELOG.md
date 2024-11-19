@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.3](https://github.com/fuf-stack/uniform/compare/pixel-motion-v1.0.2...pixel-motion-v1.0.3) (2024-11-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v11.11.13 ([#509](https://github.com/fuf-stack/uniform/issues/509)) ([f903a7d](https://github.com/fuf-stack/uniform/commit/f903a7da75c9df77fe62892586cf0287feffc9ef))
+* **deps:** update dependency framer-motion to v11.11.15 ([#513](https://github.com/fuf-stack/uniform/issues/513)) ([4be4f9a](https://github.com/fuf-stack/uniform/commit/4be4f9a0dc7df3b89c9a7827c27fb175448b4fc3))
+* **deps:** update dependency framer-motion to v11.11.17 ([#515](https://github.com/fuf-stack/uniform/issues/515)) ([f76a216](https://github.com/fuf-stack/uniform/commit/f76a216e796e717cb436ad268b89b8234fe937e9))
+
 ## [1.0.3](https://github.com/fuf-stack/uniform/compare/pixel-motion-v1.0.2...pixel-motion-v1.0.3) (2024-11-18)
 
 
