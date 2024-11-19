@@ -1,35 +1,54 @@
 import type { VariantProps } from '@nextui-org/theme';
+import type { ClassProp } from 'tailwind-variants';
 
-export { tv } from 'tailwind-variants';
+import { tv as tailwindVariants } from 'tailwind-variants';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type TVProps<Component extends (...args: any) => any> =
-  VariantProps<Component>;
+type ClassValue = string | string[];
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type TVClassName<Component extends (...args: any) => any> =
-  | Partial<Record<keyof ReturnType<Component>, string>>
-  | string;
+type TVSlotProps = {
+  [x: string]: string | number | undefined;
+  [x: number]: string | number | undefined;
+} & ClassProp<ClassValue>;
+
+type TVFunction = {
+  (slotProps?: TVSlotProps | undefined): string;
+};
+
+type TVRecord = Record<string, TVFunction>;
+
+export const tv = tailwindVariants;
+
+export type TVProps<T extends TVFunction> = VariantProps<T>;
+
+export type TVClassName<T extends TVFunction> =
+  | Partial<Record<keyof ReturnType<T>, ClassValue>>
+  | ClassValue;
 
 // converts tailwind-variants slots instance to actual classnames object
-export const variantsToClassNames = <T extends Record<string, unknown>>(
+export const variantsToClassNames = <T extends TVRecord>(
   variants: T,
-  className?: string | Record<string, string>,
+  className?: ClassValue | Record<string, ClassValue>,
   baseSlot?: keyof T,
 ): Record<keyof T, string> => {
-  const classNameObj = (typeof className === 'object' && className) || {};
-  // @ts-expect-error could be improved
-  return Object.fromEntries(
-    Object.entries(variants).map(([slot, variantFn]) => [
-      slot as keyof T,
-      baseSlot && slot === baseSlot
-        ? // @ts-expect-error could be improved
-          (variantFn({
-            className:
-              typeof className === 'string' ? className : classNameObj[slot],
-          }) as string)
-        : // @ts-expect-error could be improved
-          (variantFn({ className: classNameObj[slot] }) as string),
-    ]),
+  const classNames =
+    typeof className === 'object' && !Array.isArray(className) ? className : {};
+
+  return Object.entries(variants).reduce(
+    (acc, [slot, variantFn]) => {
+      const slotKey = slot as keyof T;
+      const slotClassName =
+        typeof className === 'string' || Array.isArray(className)
+          ? className
+          : classNames[slot];
+
+      // @ts-expect-error not sure here
+      acc[slotKey] = variantFn({
+        className:
+          baseSlot && slot === baseSlot ? slotClassName : classNames[slot],
+      });
+
+      return acc;
+    },
+    {} as Record<keyof T, string>,
   );
 };

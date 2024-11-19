@@ -115,4 +115,135 @@ describe('variantsToClassNames with tv', () => {
       slot2: 'text-center', // Default Tailwind class for slot2 remains
     });
   });
+
+  it('should handle array className for specific slots', () => {
+    const variants = tv({
+      slots: {
+        base: '', // Empty base slot
+        slot1: 'p-4', // Tailwind padding class
+        slot2: 'text-center', // Tailwind text alignment class
+      },
+    });
+
+    const classNameObj = {
+      slot1: ['text-red-500', 'hover:text-red-600'], // Text color with hover state
+      slot2: ['bg-blue-500', 'hover:bg-blue-600'], // Background color with hover state
+    };
+
+    const result = variantsToClassNames(variants(), classNameObj);
+    expect(result).toEqual({
+      base: undefined,
+      slot1: 'p-4 text-red-500 hover:text-red-600', // Default padding + text color + hover state
+      slot2: 'text-center bg-blue-500 hover:bg-blue-600', // Default alignment + bg color + hover state
+    });
+  });
+
+  it('should handle array className with baseSlot', () => {
+    const variants = tv({
+      slots: {
+        base: 'bg-white', // Default white background
+        slot1: 'p-4', // Tailwind padding class
+        slot2: 'text-center', // Tailwind text alignment class
+      },
+    });
+
+    // Array of classes targeting the base slot
+    const result = variantsToClassNames(
+      variants(),
+      ['border', 'hover:border-blue-500'], // Border with hover state
+      'base',
+    );
+    expect(result).toEqual({
+      base: 'bg-white border hover:border-blue-500', // Default bg + border classes merged
+      slot1: 'p-4', // Padding remains unchanged
+      slot2: 'text-center', // Alignment remains unchanged
+    });
+  });
+
+  it('should handle mixed array and string classNames', () => {
+    const variants = tv({
+      slots: {
+        base: 'bg-white', // Default white background
+        slot1: 'p-4', // Tailwind padding class
+        slot2: 'text-center', // Tailwind text alignment class
+      },
+    });
+
+    const classNameObj = {
+      base: ['shadow-md', 'hover:shadow-lg'], // Shadow with hover state
+      slot1: 'text-blue-500', // Single text color class
+      slot2: ['bg-gray-100', 'hover:bg-gray-200', 'dark:bg-gray-800'], // Background with hover and dark mode
+    };
+
+    const result = variantsToClassNames(variants(), classNameObj, 'base');
+    expect(result).toEqual({
+      base: 'bg-white shadow-md hover:shadow-lg', // Default bg + shadow classes merged
+      slot1: 'p-4 text-blue-500', // Default padding + text color
+      slot2: 'text-center bg-gray-100 hover:bg-gray-200 dark:bg-gray-800', // All classes merged correctly
+    });
+  });
+
+  it('should handle complex responsive and state variants in arrays', () => {
+    const variants = tv({
+      slots: {
+        base: 'bg-white', // Default white background
+        slot1: 'p-4', // Default padding
+        slot2: 'text-center', // Default text alignment
+      },
+    });
+
+    const classNameObj = {
+      base: [
+        'sm:bg-gray-100', // Small screen background
+        'md:bg-gray-200', // Medium screen background
+        'lg:bg-gray-300', // Large screen background
+        'hover:bg-blue-100', // Hover state background
+        'dark:bg-gray-800', // Dark mode background
+      ],
+      slot1: [
+        'sm:p-2', // Small screen padding
+        'md:p-4', // Medium screen padding
+        'lg:p-6', // Large screen padding
+        'hover:scale-105', // Hover scale effect
+        'active:scale-95', // Active state scale effect
+      ],
+      slot2: [
+        'sm:text-left', // Small screen alignment
+        'md:text-center', // Medium screen alignment
+        'lg:text-right', // Large screen alignment
+        'dark:text-white', // Dark mode text color
+      ],
+    };
+
+    const result = variantsToClassNames(variants(), classNameObj);
+    expect(result).toEqual({
+      base: 'bg-white sm:bg-gray-100 md:bg-gray-200 lg:bg-gray-300 hover:bg-blue-100 dark:bg-gray-800', // Responsive backgrounds merged
+      slot1: 'p-4 sm:p-2 md:p-4 lg:p-6 hover:scale-105 active:scale-95', // Responsive padding and interactions merged
+      slot2:
+        'text-center sm:text-left md:text-center lg:text-right dark:text-white', // Responsive alignment merged
+    });
+  });
+
+  it('should handle empty arrays in className object', () => {
+    const variants = tv({
+      slots: {
+        base: 'bg-white', // Default white background
+        slot1: 'p-4', // Tailwind padding class
+        slot2: 'text-center', // Tailwind text alignment class
+      },
+    });
+
+    const classNameObj = {
+      base: [], // Empty array should not affect default classes
+      slot1: ['text-blue-500'], // Single class in array
+      slot2: [], // Empty array should not affect default classes
+    };
+
+    const result = variantsToClassNames(variants(), classNameObj);
+    expect(result).toEqual({
+      base: 'bg-white', // Default background preserved
+      slot1: 'p-4 text-blue-500', // Default padding + new text color
+      slot2: 'text-center', // Default alignment preserved
+    });
+  });
 });
