@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@fuf-stack/eslint-config-fuf':
-        specifier: 0.10.13
-        version: 0.10.13(@babel/core@7.26.0)(typescript@5.6.3)(vitest@2.1.4(@types/node@22.9.0)(jsdom@25.0.1))
+        specifier: 0.11.0
+        version: 0.11.0(@babel/core@7.26.0)(typescript@5.6.3)(vitest@2.1.4(@types/node@22.9.0)(jsdom@25.0.1))
       '@fuf-stack/project-cli-tools':
         specifier: 0.4.13
         version: 0.4.13(@types/node@22.9.0)(babel-plugin-macros@3.1.0)(typescript@5.6.3)
@@ -1029,8 +1029,8 @@ packages:
   '@formatjs/intl-localematcher@0.5.7':
     resolution: {integrity: sha512-GGFtfHGQVFe/niOZp24Kal5b2i36eE2bNL0xi9Sg/yd0TR8aLjcteApZdHmismP5QQax1cMnZM9yWySUUjJteA==}
 
-  '@fuf-stack/eslint-config-fuf@0.10.13':
-    resolution: {integrity: sha512-VgXMN1KFMJgNa8zaoyQroVgqa4DPx6GsHI5jMKtNrPcYV4mnp+U185HXf169hlE3MgisD5b17lc8TVUlsRt9Xg==}
+  '@fuf-stack/eslint-config-fuf@0.11.0':
+    resolution: {integrity: sha512-C/uy3XSUmQlQGDVQOK6tV15G4gCG/aYx9p7GTb2NII88o+DYBuV/I8sADIV7NsJ/JSdVn5vgRu0Xbs0Vef5N0g==}
 
   '@fuf-stack/project-cli-tools@0.4.13':
     resolution: {integrity: sha512-IVcjW8bjvFvozgriJt7fZ2YQDyV12fCU+U1jS36z9xsajLynW+Bds08Czdg48r9UEgEM9Uuo7E9zy0jVBOjh5Q==}
@@ -1065,8 +1065,8 @@ packages:
     resolution: {integrity: sha512-e5+YUKENATs1JgYHMzTr2MW/NDcXGfYFAuOQU8gJgF/kEh4EqKgfGrfLI67bMD4tbhZVlkigz/9YYwWcbOFthg==}
     engines: {node: '>=10.13.0'}
 
-  '@ianvs/prettier-plugin-sort-imports@4.3.1':
-    resolution: {integrity: sha512-ZHwbyjkANZOjaBm3ZosADD2OUYGFzQGxfy67HmGZU94mHqe7g1LCMA7YYKB1Cq+UTPCBqlAYapY0KXAjKEw8Sg==}
+  '@ianvs/prettier-plugin-sort-imports@4.4.0':
+    resolution: {integrity: sha512-f4/e+/ANGk3tHuwRW0uh2YuBR50I4h1ZjGQ+5uD8sWfinHTivQsnieR5cz24t8M6Vx4rYvZ5v/IEKZhYpzQm9Q==}
     peerDependencies:
       '@vue/compiler-sfc': 2.7.x || 3.x
       prettier: 2 || 3
@@ -3851,8 +3851,8 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7
 
-  eslint-plugin-storybook@0.10.1:
-    resolution: {integrity: sha512-YpxkdqyiKpMIrRquuvBaCinsqmZJ86JvXRX/gtRa4Qctpk0ipFt2cWqEjkB1HHWWG0DVRXlUBKHjRogC2Ig1fg==}
+  eslint-plugin-storybook@0.11.1:
+    resolution: {integrity: sha512-yGKpAYkBm/Q2hZg476vRUAvd9lAccjjSvzU5nYy3BSQbKTPy7uopx7JEpwk2vSuw4weTMZzWF64z9/gp/K5RCg==}
     engines: {node: '>= 18'}
     peerDependencies:
       eslint: '>=6'
@@ -7738,10 +7738,10 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@fuf-stack/eslint-config-fuf@0.10.13(@babel/core@7.26.0)(typescript@5.6.3)(vitest@2.1.4(@types/node@22.9.0)(jsdom@25.0.1))':
+  '@fuf-stack/eslint-config-fuf@0.11.0(@babel/core@7.26.0)(typescript@5.6.3)(vitest@2.1.4(@types/node@22.9.0)(jsdom@25.0.1))':
     dependencies:
       '@babel/eslint-parser': 7.25.9(@babel/core@7.26.0)(eslint@8.57.1)
-      '@ianvs/prettier-plugin-sort-imports': 4.3.1(prettier@3.3.3)
+      '@ianvs/prettier-plugin-sort-imports': 4.4.0(prettier@3.3.3)
       '@prettier/plugin-php': 0.22.2(prettier@3.3.3)
       '@typescript-eslint/eslint-plugin': 7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.3))(eslint@8.57.1)(typescript@5.6.3)
       '@typescript-eslint/parser': 7.18.0(eslint@8.57.1)(typescript@5.6.3)
@@ -7755,11 +7755,11 @@ snapshots:
       eslint-plugin-prettier: 5.2.1(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.3.3)
       eslint-plugin-react: 7.37.2(eslint@8.57.1)
       eslint-plugin-react-hooks: 5.0.0(eslint@8.57.1)
-      eslint-plugin-storybook: 0.10.1(eslint@8.57.1)(typescript@5.6.3)
+      eslint-plugin-storybook: 0.11.1(eslint@8.57.1)(typescript@5.6.3)
       eslint-plugin-vitest: 0.4.1(@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.6.3))(eslint@8.57.1)(typescript@5.6.3))(eslint@8.57.1)(typescript@5.6.3)(vitest@2.1.4(@types/node@22.9.0)(jsdom@25.0.1))
       prettier: 3.3.3
       prettier-plugin-astro: 0.14.1
-      prettier-plugin-tailwindcss: 0.6.8(@ianvs/prettier-plugin-sort-imports@4.3.1(prettier@3.3.3))(prettier-plugin-astro@0.14.1)(prettier@3.3.3)
+      prettier-plugin-tailwindcss: 0.6.8(@ianvs/prettier-plugin-sort-imports@4.4.0(prettier@3.3.3))(prettier-plugin-astro@0.14.1)(prettier@3.3.3)
     transitivePeerDependencies:
       - '@babel/core'
       - '@prettier/plugin-pug'
@@ -7853,9 +7853,8 @@ snapshots:
 
   '@hutson/parse-repository-url@5.0.0': {}
 
-  '@ianvs/prettier-plugin-sort-imports@4.3.1(prettier@3.3.3)':
+  '@ianvs/prettier-plugin-sort-imports@4.4.0(prettier@3.3.3)':
     dependencies:
-      '@babel/core': 7.26.0
       '@babel/generator': 7.26.2
       '@babel/parser': 7.26.2
       '@babel/traverse': 7.25.9
@@ -11689,7 +11688,7 @@ snapshots:
       string.prototype.matchall: 4.0.11
       string.prototype.repeat: 1.0.0
 
-  eslint-plugin-storybook@0.10.1(eslint@8.57.1)(typescript@5.6.3):
+  eslint-plugin-storybook@0.11.1(eslint@8.57.1)(typescript@5.6.3):
     dependencies:
       '@storybook/csf': 0.1.11
       '@typescript-eslint/utils': 8.14.0(eslint@8.57.1)(typescript@5.6.3)
@@ -13819,11 +13818,11 @@ snapshots:
       prettier: 3.3.3
       sass-formatter: 0.7.9
 
-  prettier-plugin-tailwindcss@0.6.8(@ianvs/prettier-plugin-sort-imports@4.3.1(prettier@3.3.3))(prettier-plugin-astro@0.14.1)(prettier@3.3.3):
+  prettier-plugin-tailwindcss@0.6.8(@ianvs/prettier-plugin-sort-imports@4.4.0(prettier@3.3.3))(prettier-plugin-astro@0.14.1)(prettier@3.3.3):
     dependencies:
       prettier: 3.3.3
     optionalDependencies:
-      '@ianvs/prettier-plugin-sort-imports': 4.3.1(prettier@3.3.3)
+      '@ianvs/prettier-plugin-sort-imports': 4.4.0(prettier@3.3.3)
       prettier-plugin-astro: 0.14.1
 
   prettier@3.3.3: {}
