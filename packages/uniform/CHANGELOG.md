@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.11.0](https://github.com/fuf-stack/uniform/compare/uniform-v0.10.3...uniform-v0.11.0) (2024-11-22)
+
+
+### Features
+
+* **uniform,pixels:** add Tabs component and add tabs option to RadioGroup ([1a16232](https://github.com/fuf-stack/uniform/commit/1a16232162b9fdf8459c4464322ddebb585bdafb))
+* **uniform:** add Controller ([05298e2](https://github.com/fuf-stack/uniform/commit/05298e2b2308ad94f84a8dd498035d5181898fcf))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @react-aria/visually-hidden to v3.8.18 ([#524](https://github.com/fuf-stack/uniform/issues/524)) ([cedd341](https://github.com/fuf-stack/uniform/commit/cedd341e9674e6a1faf65d3bca1ed06c3f9a4fe4))
+* **deps:** update dependency framer-motion to v11.11.13 ([#509](https://github.com/fuf-stack/uniform/issues/509)) ([f903a7d](https://github.com/fuf-stack/uniform/commit/f903a7da75c9df77fe62892586cf0287feffc9ef))
+* **deps:** update dependency framer-motion to v11.11.15 ([#513](https://github.com/fuf-stack/uniform/issues/513)) ([4be4f9a](https://github.com/fuf-stack/uniform/commit/4be4f9a0dc7df3b89c9a7827c27fb175448b4fc3))
+* **deps:** update dependency framer-motion to v11.11.17 ([#515](https://github.com/fuf-stack/uniform/issues/515)) ([f76a216](https://github.com/fuf-stack/uniform/commit/f76a216e796e717cb436ad268b89b8234fe937e9))
+* **uniform:** add useFieldArray hook ([45dc079](https://github.com/fuf-stack/uniform/commit/45dc07938995ab5254f657073725719215cb566d))
+
 ## [0.10.3](https://github.com/fuf-stack/uniform/compare/uniform-v0.10.2...uniform-v0.10.3) (2024-11-11)
 
 
