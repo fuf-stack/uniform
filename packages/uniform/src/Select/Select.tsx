@@ -2,13 +2,13 @@ import type { TVClassName, TVProps } from '@fuf-stack/pixel-utils';
 import type { Props } from 'react-select';
 
 import { useState } from 'react';
-import { Controller } from 'react-hook-form';
 import ReactSelect, { components } from 'react-select';
 
 import { useSelect } from '@nextui-org/select';
 
 import { cn, tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
 
+import { Controller } from '../Controller';
 import { slugify } from '../helpers';
 import { useFormContext } from '../hooks';
 import { FieldCopyTestIdButton } from '../partials/FieldCopyTestIdButton';

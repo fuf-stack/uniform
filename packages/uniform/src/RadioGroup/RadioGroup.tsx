@@ -2,14 +2,13 @@ import type { TVClassName, TVProps } from '@fuf-stack/pixel-utils';
 import type { TabOptions } from '@fuf-stack/pixels/Tabs';
 import type { ReactElement, ReactNode } from 'react';
 
-import { Controller } from 'react-hook-form';
-
 import { RadioGroup as NextRadioGroup, Radio } from '@nextui-org/radio';
 
 import { cn, tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
 import { ButtonGroup } from '@fuf-stack/pixels';
 import Tabs from '@fuf-stack/pixels/Tabs';
 
+import { Controller } from '../Controller';
 import { slugify } from '../helpers';
 import { useFormContext } from '../hooks';
 import { FieldCopyTestIdButton } from '../partials/FieldCopyTestIdButton';

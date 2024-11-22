@@ -1,11 +1,10 @@
 import type { ReactNode } from 'react';
 
-import { Controller } from 'react-hook-form';
-
 import { Input as NextInput } from '@nextui-org/input';
 
 import { cn } from '@fuf-stack/pixel-utils';
 
+import { Controller } from '../Controller';
 import { useFormContext } from '../hooks';
 import { FieldCopyTestIdButton } from '../partials/FieldCopyTestIdButton';
 import { FieldValidationError } from '../partials/FieldValidationError';

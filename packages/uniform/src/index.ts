@@ -1,3 +1,4 @@
+export * from './Controller';
 export * from './CheckboxGroup';
 export * from './FieldArray';
 export * from './Form';

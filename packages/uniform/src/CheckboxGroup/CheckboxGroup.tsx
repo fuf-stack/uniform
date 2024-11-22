@@ -1,7 +1,5 @@
 import type { TVClassName, TVProps } from '@fuf-stack/pixel-utils';
 
-import { Controller } from 'react-hook-form';
-
 import {
   Checkbox,
   CheckboxGroup as NextCheckboxGroup,
@@ -9,6 +7,7 @@ import {
 
 import { tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
 
+import { Controller } from '../Controller';
 import { slugify } from '../helpers';
 import { useFormContext } from '../hooks';
 import { FieldCopyTestIdButton } from '../partials/FieldCopyTestIdButton';
