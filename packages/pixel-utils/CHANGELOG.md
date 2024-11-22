@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.0](https://github.com/fuf-stack/uniform/compare/pixel-utils-v0.3.2...pixel-utils-v0.4.0) (2024-11-19)
+
+
+### Features
+
+* **pixel-utils:** add support for string arrays for slots ([c3a302b](https://github.com/fuf-stack/uniform/commit/c3a302be3be6076571885b7d9239e41805e66b05))
+* **pixel-utils:** fix types of tv helpers ([2a88a80](https://github.com/fuf-stack/uniform/commit/2a88a807e01049a5b9e6be7aaf47d6e4cb7d3886))
+
 ## [0.3.2](https://github.com/fuf-stack/uniform/compare/pixel-utils-v0.3.1...pixel-utils-v0.3.2) (2024-11-19)
 
 
