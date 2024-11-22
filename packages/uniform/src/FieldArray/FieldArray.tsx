@@ -7,7 +7,6 @@ import type {
 } from 'react-hook-form';
 
 import { useEffect } from 'react';
-import { useFieldArray } from 'react-hook-form';
 
 import {
   closestCenter,
@@ -29,7 +28,7 @@ import { useInput } from '@nextui-org/input';
 
 import { Button } from '@fuf-stack/pixels';
 
-import { useFormContext } from '../hooks';
+import { useFieldArray, useFormContext } from '../hooks';
 import { FieldCopyTestIdButton } from '../partials/FieldCopyTestIdButton';
 import { FieldValidationError } from '../partials/FieldValidationError';
 import FieldArrayField from './FieldArrayField';

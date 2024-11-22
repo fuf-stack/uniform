@@ -138,6 +138,7 @@
     "@repo/tailwind-config": "workspace:*",
     "@repo/tsup-config": "workspace:*",
     "@repo/vite-config": "workspace:*",
+    "@testing-library/react-hooks": "8.0.1",
     "@types/debug": "4.1.12",
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
