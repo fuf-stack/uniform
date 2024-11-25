@@ -54,7 +54,7 @@ export interface BreadcrumbProps extends VariantProps {
     | 'success'
     | 'warning'
     | 'danger';
-  /** Disables the Breadcrumb animation */
+  /** Disables the breadcrumb animation */
   disableAnimation?: boolean;
   /** hides the separator between items */
   hideSeparator?: boolean;
@@ -62,15 +62,15 @@ export interface BreadcrumbProps extends VariantProps {
   disabled?: boolean;
   /** Maximum number of items to show without "..." in between */
   maxItems?: number;
-  /** Radius of the Breadcrumb */
+  /** Radius of the breadcrumb */
   radius?: 'none' | 'sm' | 'md' | 'lg' | 'full';
   /** Separator between items */
   separator?: ReactNode;
-  /** Size of the Breadcrumb */
+  /** Size of the breadcrumb */
   size?: 'sm' | 'md' | 'lg';
   /** Adjust when the breadcrumb items should be underlined */
   underline?: 'none' | 'active' | 'hover' | 'focus' | 'always';
-  /** Style variant of the Breadcrumbs */
+  /** Style variant of the breadcrumb */
   variant?: 'solid' | 'bordered' | 'light';
 }
 

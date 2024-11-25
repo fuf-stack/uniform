@@ -11,6 +11,7 @@ export * from './Label';
 export * from './Menu';
 export * from './Modal';
 export * from './Popover';
+export * from './Tabs';
 export * from './Tooltip';
 
 // hooks

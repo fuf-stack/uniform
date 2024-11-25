@@ -1,5 +1,5 @@
 import type { TVClassName, TVProps } from '@fuf-stack/pixel-utils';
-import type { TabOptions } from '@fuf-stack/pixels/Tabs';
+import type { TabProps } from '@fuf-stack/pixels/Tabs';
 import type { ReactElement, ReactNode } from 'react';
 
 import { RadioGroup as NextRadioGroup, Radio } from '@nextui-org/radio';
@@ -76,7 +76,7 @@ export interface RadioGroupProps<
   /** Radio button configuration. */
   options: V extends 'default' | 'radioBox' | 'radioButton'
     ? RadioGroupOption[]
-    : TabOptions[];
+    : TabProps[];
   /** Id to grab element in internal tests. */
   testId?: string;
   /** How the RadioGroup should look like. */
@@ -184,7 +184,7 @@ const RadioGroup = ({
             RadioComponents = (
               <Tabs
                 fullWidth={false}
-                tabs={options as TabOptions[]}
+                tabs={options as TabProps[]}
                 onSelectionChange={onChange}
               />
             );
