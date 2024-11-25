@@ -50,7 +50,7 @@ const FormDebugViewer = ({ className = undefined }: FormDebugViewerProps) => {
       <Button
         ariaLabel="Enable form debug mode"
         onClick={() => setDebugMode('debug')}
-        className="absolute bottom-2.5 right-2.5 w-5 text-default-400"
+        className="fixed bottom-2.5 right-2.5 w-5 text-default-400"
         variant="light"
         icon={<FaBug />}
       />

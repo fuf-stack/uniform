@@ -108,7 +108,10 @@ const formValidator = veto({
             .min(8),
         })
         .refine(() => false, {
-          message: 'Custom error at the object level.',
+          message: 'Custom error at the object level 1.',
+        })
+        .refine(() => false, {
+          message: 'Custom error at the object level 2.',
         }),
     )
     .min(3),
@@ -178,7 +181,10 @@ export const Invalid: Story = {
 
     // TODO: Comment in when error for the entire fieldArray element is displayed correctly.
     await expect(canvas.getByTestId('fieldarray')).toContainHTML(
-      'Custom error at the object level.',
+      'Custom error at the object level 1.',
+    );
+    await expect(canvas.getByTestId('fieldarray')).toContainHTML(
+      'Custom error at the object level 2.',
     );
   },
 };
