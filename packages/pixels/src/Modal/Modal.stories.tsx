@@ -147,3 +147,19 @@ export const AllSizes: Story = {
     },
   },
 };
+
+export const WithCustomHeader: Story = {
+  args: {
+    header: <div className="text-2xl">Custom Header</div>,
+    children: 'Modal Content',
+  },
+  render: Template,
+};
+
+export const WithNoHeader: Story = {
+  args: {
+    // header: <div className="text-2xl">Custom Header</div>,
+    children: 'Modal Content',
+  },
+  render: Template,
+};

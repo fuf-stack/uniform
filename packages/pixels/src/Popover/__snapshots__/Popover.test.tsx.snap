@@ -1,5 +1,15 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Coverage > renders no trigger with no children 1`] = `
+<button
+  aria-expanded="false"
+  aria-haspopup="dialog"
+  class="z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased"
+  data-slot="trigger"
+  type="button"
+/>
+`;
+
 exports[`Story Snapshots > BlockOuterScrollbar 1`] = `
 <div>
   <div

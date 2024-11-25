@@ -80,7 +80,11 @@ const Json = ({ className = null, collapsed = false, value }: JsonProps) => {
               { 'text-success': copied },
             );
             return (
-              <span className="relative !ml-0 !h-[1em] !w-0" style={style}>
+              <span
+                className="relative !ml-0 !h-[1em] !w-0"
+                style={style}
+                data-testid="copy-button"
+              >
                 {copied ? (
                   <HiOutlineClipboardCheck
                     // eslint-disable-next-line react/jsx-props-no-spreading

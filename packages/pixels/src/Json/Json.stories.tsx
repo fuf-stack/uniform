@@ -15,6 +15,10 @@ const testObject = {
   anObject: { bool: true, number: 123, null: null, string: 'a string' },
 };
 
+export const Default: Story = {
+  args: {},
+};
+
 // TODO: Some weird glitching behavior in storybook.
 export const AsJsonString: Story = {
   args: {

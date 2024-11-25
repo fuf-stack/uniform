@@ -21,7 +21,7 @@ const menuItems = [
         icon: <FaBars />,
         key: 'itemWithIcon',
         label: 'Item with icon',
-        onClick: () => {},
+        onClick: () => {}, // TODO: add action to the items
       },
       {
         description: 'description text',
@@ -47,13 +47,35 @@ const menuItems = [
 
 export const Default: Story = {
   args: {
-    children: 'trigger',
-    items: menuItems,
+    items: [],
   },
 };
 
 export const WithoutTrigger: Story = {
   args: {
     items: menuItems,
+  },
+};
+
+export const WithTrigger: Story = {
+  args: {
+    children: 'trigger',
+    items: menuItems,
+  },
+};
+
+export const SubMenu: Story = {
+  args: {
+    items: [
+      { key: 'first', label: 'firstItem' },
+      { key: 'subMenu', label: 'Sub Menu', items: menuItems },
+    ],
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    items: menuItems,
+    isDisabled: true,
   },
 };

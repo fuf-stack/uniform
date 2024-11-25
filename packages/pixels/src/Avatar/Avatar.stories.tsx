@@ -124,12 +124,10 @@ export const WithMenu: Story = {
         {
           key: 'edit-profile',
           label: 'Edit Profile',
-          onClick: () => {},
         },
         {
           key: 'logout',
           label: 'Logout',
-          onClick: () => {},
         },
       ]}
     >
