@@ -43,7 +43,7 @@
   "dependencies": {
     "@nextui-org/theme": "2.2.11",
     "classnames": "2.5.1",
-    "tailwind-merge": "2.5.4",
+    "tailwind-merge": "2.5.5",
     "tailwind-variants": "0.3.0"
   },
   "devDependencies": {
