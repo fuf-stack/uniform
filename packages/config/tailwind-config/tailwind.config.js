@@ -27,6 +27,7 @@ const NEXTUI_THEME_USED_COMPONENT_PATHS = [
   'radio',
   'select',
   'scroll-shadow',
+  'tabs',
   'toggle', // switch is toggle for some reason...
   'tooltip',
   // theme is not required

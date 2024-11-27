@@ -23,6 +23,7 @@ describe('Coverage', () => {
     const items = getByText('testItem');
     expect(items).toBeInTheDocument();
   });
+
   test('renders Menu items of item correctly', () => {
     const { container, getByText } = render(
       <Menu
