@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.29.0](https://github.com/fuf-stack/pixels/compare/pixels-v0.28.0...pixels-v0.29.0) (2024-11-27)
+
+
+### Features
+
+* **pixels:** bring test coverage to 100% ([579aeda](https://github.com/fuf-stack/pixels/commit/579aeda8c2ceb79928c3af7ea4ef1566b489bb87))
+
+
+### Bug Fixes
+
+* **pixels:** add tabs tailwind styles ([60f969d](https://github.com/fuf-stack/pixels/commit/60f969d9bfe11848ff201f8a58e8ceea3bf08c73))
+* **pixels:** refactore tabs and tab stories ([bb444bb](https://github.com/fuf-stack/pixels/commit/bb444bbdcf2df5ea76a5d2d4788e6b6de575110a))
+
 ## [0.28.0](https://github.com/fuf-stack/uniform/compare/pixels-v0.27.2...pixels-v0.28.0) (2024-11-19)
 
 
