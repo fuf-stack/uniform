@@ -16,20 +16,19 @@
   // only rebase merge requests when they become conflicted
   // see: https://docs.renovatebot.com/configuration-options/#rebasewhen
   rebaseWhen: 'conflicted',
-  // schedule: [
-  //   'after 10pm every weekday',
-  //   'before 8am every weekday',
-  //   // 'every weekend',
-  // ],
-  // stop updating pull requests with this label
   // https://docs.renovatebot.com/configuration-options/#stopupdatinglabel
   stopUpdatingLabel: 'renovate | stop update',
   packageRules: [
+    // @dnd-kit monorepo
+    {
+      matchPackagePatterns: '^@dnd-kit',
+    },
+
     // @nextui monorepo
     {
       matchPackagePatterns: '^@nextui-org',
-      groupName: 'nextui monorepo',
     },
+
     // framer-motion not patch releases (rate-limiting)
     {
       matchPackageNames: ['framer-motion'],
