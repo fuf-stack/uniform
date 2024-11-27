@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/fuf-stack/pixels/compare/pixel-motion-v1.0.3...pixel-motion-v1.0.4) (2024-11-27)
+
+
+### Bug Fixes
+
+* **uniform:** update @dnd-kit/core to v6.2.0 + update snapshots ([c696723](https://github.com/fuf-stack/pixels/commit/c69672378df5a3a6889c05329dda83a56fe04a61))
+
 ## [1.0.3](https://github.com/fuf-stack/uniform/compare/pixel-motion-v1.0.2...pixel-motion-v1.0.3) (2024-11-19)
 
 
