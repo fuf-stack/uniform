@@ -70,6 +70,14 @@ export const recursiveFieldKeySearch = (
     }
     return recursiveFieldKeySearch(shape[current], rest);
   }
+
+  // handle schema with element but not shape or element.shape due to for example ZodEffects
+  // @ts-expect-error not sure here
+  if (!!currentSchema?.element && !currentSchema?.element?.shape) {
+    // @ts-expect-error not sure here
+    return recursiveFieldKeySearch(currentSchema?.element, path);
+  }
+
   // Return null if field not found
   return null;
 };

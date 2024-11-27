@@ -163,7 +163,6 @@ describe('validateAsync', () => {
 
     expect(result).toHaveProperty('success', false);
     expect(result.errors).toMatchObject({
-      _errors: [],
       stringField: [
         {
           code: 'custom',
@@ -191,7 +190,6 @@ describe('validateAsync', () => {
 
     expect(result).toHaveProperty('success', false);
     expect(result.errors).toMatchObject({
-      _errors: [],
       stringField: [
         {
           code: 'invalid_type',

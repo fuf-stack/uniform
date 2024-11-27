@@ -16,9 +16,9 @@ it('rejects missing fields', () => {
     success: false,
     data: null,
     errors: {
-      _errors: [],
+
       objectLooseField: {
-        _errors: [],
+
         key: [
           {
             code: 'invalid_type',
@@ -56,7 +56,7 @@ it('rejects non-object value', () => {
     success: false,
     data: null,
     errors: {
-      _errors: [],
+
       objectLooseField: [
         {
           code: 'invalid_type',

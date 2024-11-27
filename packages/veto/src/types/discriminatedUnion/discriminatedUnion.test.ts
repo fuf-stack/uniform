@@ -17,9 +17,9 @@ it('rejects undefined discriminator', () => {
     success: false,
     data: null,
     errors: {
-      _errors: [],
+
       discriminatedUnionField: {
-        _errors: [],
+
         mode: [
           {
             code: 'invalid_union_discriminator',
@@ -40,7 +40,7 @@ it('rejects fields that are not defined in option', () => {
     success: false,
     data: null,
     errors: {
-      _errors: [],
+
       discriminatedUnionField: {
         _errors: [
           {

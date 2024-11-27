@@ -63,7 +63,12 @@ const FieldArrayField = ({
     transition,
   };
 
-  const { getFieldState, register, watch, trigger } = useFormContext();
+  const {
+    getFieldState,
+    // register,
+    watch,
+    trigger,
+  } = useFormContext();
   const { error, invalid } = getFieldState(`${name}`, undefined);
 
   // TODO: what about input props? and label props? Do we need a label?
@@ -76,11 +81,11 @@ const FieldArrayField = ({
   });
 
   // TODO: Check if this is a current issue: _error gets kicked out of the formValidation if no other errors exist. validationError exists, but the structure changes.
-  register(`${name}.${index}._errors`);
+  // register(`${name}.${index}._errors`);
 
   const formValues = watch();
   useEffect(() => {
-    trigger(`${name}.${index}._errors`);
+    trigger(`${name}.${index}`);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [JSON.stringify(formValues)]);
 
@@ -167,19 +172,20 @@ const FieldArrayField = ({
           ) : null}
         </div>
       </li>
-      {error &&
-        typeof error[index] !== 'undefined' &&
-        // @ts-expect-error rhf incompatibility
-        error[Number(index)]?._errors && ( // TODO: was String(). Check if Number is correct. (same below in FieldValidationError)
-          // eslint-disable-next-line react/jsx-props-no-spreading
-          <div {...getHelperWrapperProps()}>
-            {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-            <div {...getErrorMessageProps()}>
-              {/* @ts-expect-error rhf incompatibility */}
-              <FieldValidationError error={error[Number(index)]?._errors} />
-            </div>
+      {error && typeof error[index] !== 'undefined' && (
+        // // @ts-expect-error rhf incompatibility
+        // error[Number(index)]?._errors && ( // TODO: was String(). Check if Number is correct. (same below in FieldValidationError)
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        <div {...getHelperWrapperProps()}>
+          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+          <div {...getErrorMessageProps()}>
+            <FieldValidationError
+              /* @ts-expect-error rhf incompatibility */
+              error={error[Number(index)]?._errors || error[Number(index)]}
+            />
           </div>
-        )}
+        </div>
+      )}
     </>
   );
 };

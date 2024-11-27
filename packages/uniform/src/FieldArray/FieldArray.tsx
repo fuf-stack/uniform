@@ -80,7 +80,7 @@ const FieldArray = ({
     debugMode,
     getValues,
     getFieldState,
-    register,
+    // register,
     trigger,
     watch,
   } = useFormContext();
@@ -92,12 +92,12 @@ const FieldArray = ({
 
   const { error, testId, invalid, required } = getFieldState(name, _testId);
 
-  register(`${name}._errors`);
+  // register(`${name}._errors`);
 
   const formValues = watch();
 
   useEffect(() => {
-    trigger(`${name}._errors`);
+    trigger(`${name}`);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [JSON.stringify(formValues)]);
 

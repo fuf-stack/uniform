@@ -214,3 +214,36 @@ it('Intersection v2', () => {
   result = recursiveFieldKeySearch(validation.schema, fieldName);
   expect(result).toBe(true);
 });
+
+it('FieldArray', () => {
+  const validation = v({
+    fieldArray: vt
+      .array(
+        vt
+          .object({
+            name: vt
+              .string()
+              .regex(
+                /^[a-z0-9\s]+$/i,
+                'Must only contain alphanumeric characters and spaces.',
+              )
+              .min(8),
+          })
+          .refine(() => false, {
+            message: 'Custom error at the object level 1.',
+          })
+          .refine(() => false, {
+            message: 'Custom error at the object level 2.',
+          }),
+      )
+      .min(3),
+  });
+
+  const fieldName1 = ['fieldArray'];
+  const result1 = recursiveFieldKeySearch(validation.schema, fieldName1);
+  expect(result1).toBe(true);
+
+  const fieldName2 = ['fieldArray', 'name'];
+  const result2 = recursiveFieldKeySearch(validation.schema, fieldName2);
+  expect(result2).toBe(true);
+});

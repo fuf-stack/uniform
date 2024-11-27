@@ -111,7 +111,7 @@ export type vInfer<T extends VetoSchema> =
 const formatError = (error: VetoUnformatedError): VetoFormattedError => {
   const errorFormatted = error.format(
     // remove path from issue
-    ({ path: _path, ...issue }) => issue,
+    ({ path: _errorPath, ...issue }) => ({ _errorPath, ...issue }),
   );
 
   const reformatError = (
@@ -128,7 +128,7 @@ const formatError = (error: VetoUnformatedError): VetoFormattedError => {
 
     const _isZodFieldError = () => {
       /**
-       * Check if we are at the top level if the error. In this
+       * Check if we are at the top level of the error. In this
        * case we want to keep the top level _error field for
        * global validation errors e.g.:
        *
@@ -203,6 +203,17 @@ const formatError = (error: VetoUnformatedError): VetoFormattedError => {
         return false;
       }
 
+      // check if error is an array element error TODO: @Hannes check description
+      if (levelError._errors.length >= 0 && levelError._errors[0]._errorPath) {
+        if (
+          typeof levelError._errors[0]._errorPath[
+            levelError._errors[0]._errorPath.length - 1
+          ] === 'number'
+        ) {
+          return false;
+        }
+      }
+
       // if we end up here, the error is an array element error
       // and we want to remove the additional _error level
       return true;
@@ -219,14 +230,20 @@ const formatError = (error: VetoUnformatedError): VetoFormattedError => {
         return;
       }
       errorCopy[key] = Array.isArray(value)
-        ? value.map((item) => reformatError(item))
-        : reformatError(value);
+        ? value.map((item) => reformatError(item)) // further process _errors to reformat custom errors
+        : reformatError(value, false); // recursively process nested errors
     });
 
     return errorCopy;
   };
 
-  return reformatError(errorFormatted, true);
+  // remove path & empty _errors form all errors
+  const reformattedError = reformatError(errorFormatted, true);
+  return JSON.parse(JSON.stringify(reformattedError), (key, value) =>
+    key === '_errorPath' || (key === '_errors' && value.length === 0)
+      ? undefined
+      : value,
+  );
 };
 
 export const veto = <T extends VetoSchema>(
@@ -251,6 +268,7 @@ export const veto = <T extends VetoSchema>(
       ...(options?.defaults || {}),
       ...input,
     });
+
     // error result
     if (!result.success) {
       return {
@@ -277,6 +295,7 @@ export const veto = <T extends VetoSchema>(
       ...(options?.defaults || {}),
       ...input,
     });
+
     // error result
     if (!result.success) {
       return {

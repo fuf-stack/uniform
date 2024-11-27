@@ -10,7 +10,6 @@ it('rejects non-array value', () => {
     success: false,
     data: null,
     errors: {
-      _errors: [],
       arrayField: [
         {
           code: 'invalid_type',
@@ -31,7 +30,6 @@ it('rejects invalid min length', () => {
     success: false,
     data: null,
     errors: {
-      _errors: [],
       arrayField: {
         _errors: [
           {
@@ -56,7 +54,6 @@ it('rejects invalid max length', () => {
     success: false,
     data: null,
     errors: {
-      _errors: [],
       arrayField: {
         _errors: [
           {

@@ -1599,7 +1599,10 @@ exports[`Story Snapshots > Invalid 1`] = `
                   data-filled="true"
                   data-filled-within="true"
                   data-has-elements="true"
+                  data-has-helper="true"
                   data-has-label="true"
+                  data-invalid="true"
+                  data-required="true"
                   data-slot="base"
                 >
                   <div
@@ -1607,12 +1610,12 @@ exports[`Story Snapshots > Invalid 1`] = `
                     data-slot="main-wrapper"
                   >
                     <div
-                      class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-focus"
+                      class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none !border-danger group-data-[focus=true]:!border-danger group-data-[focus=true]:border-focus"
                       data-slot="input-wrapper"
                       style="cursor: text;"
                     >
                       <label
-                        class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
+                        class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 !text-danger after:content-['*'] after:text-danger after:ml-0.5 rtl:after:ml-[unset] rtl:after:mr-0.5 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
                         data-slot="label"
                         for="react-aria-react-useId-mock"
                         id="react-aria-react-useId-mock"
@@ -1625,9 +1628,11 @@ exports[`Story Snapshots > Invalid 1`] = `
                       >
                         <input
                           aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
+                          aria-invalid="true"
                           aria-label=" "
                           aria-labelledby="react-aria-react-useId-mock"
-                          class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small"
+                          aria-required="true"
+                          class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small !placeholder:text-danger !text-danger"
                           data-slot="input"
                           data-testid="fieldarray0_name"
                           id="react-aria-react-useId-mock"
@@ -1636,6 +1641,27 @@ exports[`Story Snapshots > Invalid 1`] = `
                           type="text"
                           value=""
                         />
+                      </div>
+                    </div>
+                    <div
+                      class="hidden group-data-[has-helper=true]:flex p-1 relative flex-col gap-1.5"
+                      data-slot="helper-wrapper"
+                    >
+                      <div
+                        class="text-tiny text-danger"
+                        data-slot="error-message"
+                        id="react-aria-react-useId-mock"
+                      >
+                        <ul
+                          aria-label="Error: Field is required"
+                          data-testid="field_is_required"
+                        >
+                          <li>
+                            <div>
+                              Field is required
+                            </div>
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -1654,9 +1680,15 @@ exports[`Story Snapshots > Invalid 1`] = `
             id="react-aria-react-useId-mock"
           >
             <ul
-              aria-label="Error: "
-              data-testid=""
-            />
+              aria-label="Error: Field is required"
+              data-testid="field_is_required"
+            >
+              <li>
+                <div>
+                  Field is required
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
         <button
@@ -1821,7 +1853,9 @@ exports[`Story Snapshots > Required 1`] = `
                   data-filled="true"
                   data-filled-within="true"
                   data-has-elements="true"
+                  data-has-helper="true"
                   data-has-label="true"
+                  data-invalid="true"
                   data-required="true"
                   data-slot="base"
                 >
@@ -1830,12 +1864,12 @@ exports[`Story Snapshots > Required 1`] = `
                     data-slot="main-wrapper"
                   >
                     <div
-                      class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-focus"
+                      class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none !border-danger group-data-[focus=true]:!border-danger group-data-[focus=true]:border-focus"
                       data-slot="input-wrapper"
                       style="cursor: text;"
                     >
                       <label
-                        class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 after:content-['*'] after:text-danger after:ml-0.5 rtl:after:ml-[unset] rtl:after:mr-0.5 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
+                        class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 !text-danger after:content-['*'] after:text-danger after:ml-0.5 rtl:after:ml-[unset] rtl:after:mr-0.5 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
                         data-slot="label"
                         for="react-aria-react-useId-mock"
                         id="react-aria-react-useId-mock"
@@ -1848,10 +1882,11 @@ exports[`Story Snapshots > Required 1`] = `
                       >
                         <input
                           aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
+                          aria-invalid="true"
                           aria-label=" "
                           aria-labelledby="react-aria-react-useId-mock"
                           aria-required="true"
-                          class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small"
+                          class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small !placeholder:text-danger !text-danger"
                           data-slot="input"
                           data-testid="fieldarray0.name"
                           id="react-aria-react-useId-mock"
@@ -1860,6 +1895,27 @@ exports[`Story Snapshots > Required 1`] = `
                           type="text"
                           value=""
                         />
+                      </div>
+                    </div>
+                    <div
+                      class="hidden group-data-[has-helper=true]:flex p-1 relative flex-col gap-1.5"
+                      data-slot="helper-wrapper"
+                    >
+                      <div
+                        class="text-tiny text-danger"
+                        data-slot="error-message"
+                        id="react-aria-react-useId-mock"
+                      >
+                        <ul
+                          aria-label="Error: Field is required"
+                          data-testid="field_is_required"
+                        >
+                          <li>
+                            <div>
+                              Field is required
+                            </div>
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -1878,9 +1934,15 @@ exports[`Story Snapshots > Required 1`] = `
             id="react-aria-react-useId-mock"
           >
             <ul
-              aria-label="Error: "
-              data-testid=""
-            />
+              aria-label="Error: Field is required"
+              data-testid="field_is_required"
+            >
+              <li>
+                <div>
+                  Field is required
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
         <button
@@ -1890,21 +1952,6 @@ exports[`Story Snapshots > Required 1`] = `
         >
           Add
         </button>
-        <div
-          class="group-data-[has-helper=true]:flex p-1 relative flex-col gap-1.5 block"
-          data-slot="helper-wrapper"
-        >
-          <div
-            class="text-tiny text-danger"
-            data-slot="error-message"
-            id="react-aria-react-useId-mock"
-          >
-            <ul
-              aria-label="Error: "
-              data-testid=""
-            />
-          </div>
-        </div>
       </ul>
       <div
         id="DndDescribedBy-2"
