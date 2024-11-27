@@ -16,9 +16,7 @@ it('rejects missing fields', () => {
     success: false,
     data: null,
     errors: {
-
       objectField: {
-
         key: [
           {
             code: 'invalid_type',
@@ -43,7 +41,6 @@ it('rejects unknown fields', () => {
     success: false,
     data: null,
     errors: {
-
       objectField: [
         {
           code: 'unrecognized_keys',
@@ -63,7 +60,6 @@ it('rejects non-object value', () => {
     success: false,
     data: null,
     errors: {
-
       objectField: [
         {
           code: 'invalid_type',

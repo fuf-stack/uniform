@@ -22,7 +22,6 @@ it('combines multiple string schema validations correctly', () => {
   expect(result2).toMatchObject({
     data: null,
     errors: {
-
       andField: [
         {
           code: 'too_small',
@@ -102,7 +101,6 @@ it('throws expected errors for loose object and discriminatedUnion schemas', () 
     success: false,
     data: null,
     errors: {
-
       bField: [
         {
           code: 'invalid_type',

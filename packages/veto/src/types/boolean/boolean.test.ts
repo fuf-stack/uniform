@@ -9,7 +9,6 @@ it('rejects non-boolean value', () => {
     success: false,
     data: null,
     errors: {
-
       booleanField: [
         {
           code: 'invalid_type',

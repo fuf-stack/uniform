@@ -12,7 +12,6 @@ it('rejects invalid enum value', () => {
     success: false,
     data: null,
     errors: {
-
       nativeEnumField: [
         {
           code: 'invalid_enum_value',

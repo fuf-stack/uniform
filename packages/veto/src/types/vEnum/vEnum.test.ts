@@ -9,7 +9,6 @@ it('rejects invalid enum value', () => {
     success: false,
     data: null,
     errors: {
-
       enumField: [
         {
           code: 'invalid_enum_value',

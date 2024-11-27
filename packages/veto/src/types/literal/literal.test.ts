@@ -8,7 +8,6 @@ it('rejects non-Literal input', () => {
   expect(result).toMatchObject({
     success: false,
     errors: {
-
       literalField: [
         {
           code: 'invalid_literal',

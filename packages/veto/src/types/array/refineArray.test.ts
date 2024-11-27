@@ -15,7 +15,6 @@ it('array refinement unique checks if elements are unique', () => {
     success: false,
     data: null,
     errors: {
-
       arrayField: {
         '3': [
           {
@@ -61,7 +60,6 @@ it('array refinement unique + mapFn checks if elements are unique on objects', (
     success: false,
     data: null,
     errors: {
-
       arrayField: {
         '3': [
           {
@@ -116,7 +114,6 @@ it('array refinement unique + mapFn checks if elements are unique on deeply nest
     success: false,
     data: null,
     errors: {
-
       arrayField: {
         '1': [
           {
@@ -171,10 +168,8 @@ it('array refinement unique + mapFn + elementErrorPath allows adding error to su
     success: false,
     data: null,
     errors: {
-
       arrayField: {
         1: {
-
           fieldB: [
             {
               code: 'custom',
