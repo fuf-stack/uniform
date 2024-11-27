@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.11.1](https://github.com/fuf-stack/pixels/compare/uniform-v0.11.0...uniform-v0.11.1) (2024-11-27)
+
+
+### Bug Fixes
+
+* **deps:** update dnd-kit monorepo ([a17f1c6](https://github.com/fuf-stack/pixels/commit/a17f1c62b33a1cc974df6acf2af1efb4d9bcd581))
+* **pixels:** refactore tabs and tab stories ([bb444bb](https://github.com/fuf-stack/pixels/commit/bb444bbdcf2df5ea76a5d2d4788e6b6de575110a))
+* **uniform:** position debug button always on bottom right corner ([cc5e3b2](https://github.com/fuf-stack/pixels/commit/cc5e3b2963d156fc1ca4c7c4d055b6b9ed213779))
+* **uniform:** update @dnd-kit/core to v6.2.0 + update snapshots ([c696723](https://github.com/fuf-stack/pixels/commit/c69672378df5a3a6889c05329dda83a56fe04a61))
+
 ## [0.11.0](https://github.com/fuf-stack/uniform/compare/uniform-v0.10.3...uniform-v0.11.0) (2024-11-22)
 
 
