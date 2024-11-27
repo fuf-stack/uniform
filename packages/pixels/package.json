@@ -98,7 +98,7 @@
   "files": [
     "./dist"
   ],
-  "homepage": "https://github.com/fuf-stack/uniform/tree/main/packages/pixels",
+  "homepage": "https://github.com/fuf-stack/pixels/tree/main/packages/pixels",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -109,11 +109,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/fuf-stack/uniform.git",
+    "url": "https://github.com/fuf-stack/pixels.git",
     "directory": "packages/pixels"
   },
   "bugs": {
-    "url": "https://github.com/fuf-stack/uniform/issues"
+    "url": "https://github.com/fuf-stack/pixels/issues"
   },
   "scripts": {
     "build": "tsup --config node_modules/@repo/tsup-config/config.ts --dts-resolve",

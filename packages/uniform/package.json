@@ -1,9 +1,9 @@
 {
-  "name": "@fuf-stack/uniform",
+  "name": "@fuf-stack/pixels",
   "version": "0.11.0",
   "description": "fuf react form library",
   "author": "Hannes Tiede",
-  "homepage": "https://github.com/fuf-stack/uniform#readme",
+  "homepage": "https://github.com/fuf-stack/pixels#readme",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -100,11 +100,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fuf-stack/uniform.git",
+    "url": "git+https://github.com/fuf-stack/pixels.git",
     "directory": "packages/uniform"
   },
   "bugs": {
-    "url": "https://github.com/fuf-stack/uniform/issues"
+    "url": "https://github.com/fuf-stack/pixels/issues"
   },
   "scripts": {
     "build": "tsup --config node_modules/@repo/tsup-config/config.ts",

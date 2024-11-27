@@ -18,7 +18,7 @@
   "files": [
     "./dist"
   ],
-  "homepage": "https://github.com/fuf-stack/uniform/tree/main/packages/pixel-motion",
+  "homepage": "https://github.com/fuf-stack/pixels/tree/main/packages/pixel-motion",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -31,11 +31,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/fuf-stack/uniform.git",
+    "url": "https://github.com/fuf-stack/pixels.git",
     "directory": "packages/pixel-motion"
   },
   "bugs": {
-    "url": "https://github.com/fuf-stack/uniform/issues"
+    "url": "https://github.com/fuf-stack/pixels/issues"
   },
   "scripts": {
     "build": "tsup --config node_modules/@repo/tsup-config/config.ts",

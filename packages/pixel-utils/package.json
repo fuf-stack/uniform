@@ -18,7 +18,7 @@
   "files": [
     "./dist"
   ],
-  "homepage": "https://github.com/fuf-stack/uniform/tree/main/packages/pixel-utils",
+  "homepage": "https://github.com/fuf-stack/pixels/tree/main/packages/pixel-utils",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -30,11 +30,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/fuf-stack/uniform.git",
+    "url": "https://github.com/fuf-stack/pixels.git",
     "directory": "packages/pixel-utils"
   },
   "bugs": {
-    "url": "https://github.com/fuf-stack/uniform/issues"
+    "url": "https://github.com/fuf-stack/pixels/issues"
   },
   "scripts": {
     "build": "tsup --config node_modules/@repo/tsup-config/config.ts",

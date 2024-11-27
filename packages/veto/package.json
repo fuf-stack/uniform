@@ -8,7 +8,7 @@
   "files": [
     "dist"
   ],
-  "homepage": "https://github.com/fuf-stack/uniform/tree/main/packages/veto",
+  "homepage": "https://github.com/fuf-stack/pixels/tree/main/packages/veto",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -19,11 +19,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/fuf-stack/uniform.git",
+    "url": "https://github.com/fuf-stack/pixels.git",
     "directory": "packages/veto"
   },
   "bugs": {
-    "url": "https://github.com/fuf-stack/uniform/issues"
+    "url": "https://github.com/fuf-stack/pixels/issues"
   },
   "scripts": {
     "build": "rm -rf ./dist && tsup --dts-resolve",
