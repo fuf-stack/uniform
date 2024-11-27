@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.1](https://github.com/fuf-stack/pixels/compare/pixel-utils-v0.4.0...pixel-utils-v0.4.1) (2024-11-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency tailwind-merge to v2.5.5 ([#530](https://github.com/fuf-stack/pixels/issues/530)) ([7fafba4](https://github.com/fuf-stack/pixels/commit/7fafba41cc4ea7089bcbb6c4f582756b9699b6b6))
+* **uniform:** update @dnd-kit/core to v6.2.0 + update snapshots ([c696723](https://github.com/fuf-stack/pixels/commit/c69672378df5a3a6889c05329dda83a56fe04a61))
+
 ## [0.4.0](https://github.com/fuf-stack/uniform/compare/pixel-utils-v0.3.2...pixel-utils-v0.4.0) (2024-11-19)
 
 
