@@ -167,7 +167,7 @@ exports[`Story Snapshots > AllowAllDelete 1`] = `
         aria-live="assertive"
         id="DndLiveRegion-6"
         role="status"
-        style="position: fixed; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
+        style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
       />
       <div
         class="mt-4 flex justify-end"
@@ -421,7 +421,7 @@ exports[`Story Snapshots > Custom 1`] = `
         aria-live="assertive"
         id="DndLiveRegion-7"
         role="status"
-        style="position: fixed; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
+        style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
       />
       <div
         class="mt-4 flex justify-end"
@@ -607,7 +607,7 @@ exports[`Story Snapshots > Default 1`] = `
         aria-live="assertive"
         id="DndLiveRegion-0"
         role="status"
-        style="position: fixed; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
+        style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
       />
       <div
         class="mt-4 flex justify-end"
@@ -910,7 +910,7 @@ exports[`Story Snapshots > Dragable 1`] = `
         aria-live="assertive"
         id="DndLiveRegion-9"
         role="status"
-        style="position: fixed; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
+        style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
       />
       <div
         class="mt-4 flex justify-end"
@@ -1128,7 +1128,7 @@ exports[`Story Snapshots > Duplicate 1`] = `
         aria-live="assertive"
         id="DndLiveRegion-8"
         role="status"
-        style="position: fixed; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
+        style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
       />
       <div
         class="mt-4 flex justify-end"
@@ -1264,7 +1264,7 @@ exports[`Story Snapshots > HideAllButAdd 1`] = `
         aria-live="assertive"
         id="DndLiveRegion-5"
         role="status"
-        style="position: fixed; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
+        style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
       />
       <div
         class="mt-4 flex justify-end"
@@ -1473,7 +1473,7 @@ exports[`Story Snapshots > HideAllButtons 1`] = `
         aria-live="assertive"
         id="DndLiveRegion-4"
         role="status"
-        style="position: fixed; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
+        style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
       />
       <div
         class="mt-4 flex justify-end"
@@ -1703,7 +1703,7 @@ exports[`Story Snapshots > Invalid 1`] = `
         aria-live="assertive"
         id="DndLiveRegion-3"
         role="status"
-        style="position: fixed; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
+        style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
       />
       <div
         class="mt-4 flex justify-end"
@@ -1921,7 +1921,7 @@ exports[`Story Snapshots > Required 1`] = `
         aria-live="assertive"
         id="DndLiveRegion-2"
         role="status"
-        style="position: fixed; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
+        style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
       />
       <div
         class="mt-4 flex justify-end"
@@ -2266,7 +2266,7 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
         aria-live="assertive"
         id="DndLiveRegion-1"
         role="status"
-        style="position: fixed; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
+        style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
       />
       <div
         class="mt-4 flex justify-end"
