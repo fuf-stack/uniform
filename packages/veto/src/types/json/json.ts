@@ -95,7 +95,8 @@ const createDeepJsonSchema = (levels: number) => {
  * const result = validator(levels).parse(data);
  * ```
  */
-export const json = (levels = 10) => createDeepJsonSchema(levels);
+export const json = (levels = 10) =>
+  createDeepJsonSchema(levels) as DeepJsonSchema;
 
 /**
  * Type representing the JSON validator function
