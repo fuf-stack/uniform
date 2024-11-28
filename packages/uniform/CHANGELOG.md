@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.12.0](https://github.com/fuf-stack/pixels/compare/uniform-v0.11.1...uniform-v0.12.0) (2024-11-28)
+
+
+### Features
+
+* **veto:** complete refactor of error formatting + package structure ([90a119e](https://github.com/fuf-stack/pixels/commit/90a119e5918e418b927946c7617463fc7926a213))
+
+
+### Bug Fixes
+
+* **uniform:** start fixing the validation errors ([87af8b4](https://github.com/fuf-stack/pixels/commit/87af8b443cab66ae8e4691255b9f547e25d05faa))
+
 ## [0.11.1](https://github.com/fuf-stack/pixels/compare/uniform-v0.11.0...uniform-v0.11.1) (2024-11-27)
 
 

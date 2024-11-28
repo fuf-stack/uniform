@@ -1,6 +1,6 @@
 {
   "private": true,
-  "packageManager": "pnpm@9.14.2",
+  "packageManager": "pnpm@9.14.3",
   "scripts": {
     "build": "pnpm turbo build",
     "commit": "lint-staged && git-cz",
@@ -15,7 +15,7 @@
     "@fuf-stack/eslint-config-fuf": "0.11.0",
     "@fuf-stack/project-cli-tools": "1.0.0",
     "@fuf-stack/vitest-config": "0.1.12",
-    "@types/node": "22.10.0",
+    "@types/node": "22.10.1",
     "ts-node": "10.9.2",
     "typescript": "5.7.2"
   },
