@@ -18,11 +18,8 @@ it('array refinement unique checks if elements are unique', () => {
       arrayField: {
         '3': [
           {
-            code: 'custom',
+            code: 'not_unique',
             message: 'Element already exists',
-            params: {
-              code: 'not_unique',
-            },
           },
         ],
         _errors: [
@@ -61,15 +58,14 @@ it('array refinement unique + mapFn checks if elements are unique on objects', (
     data: null,
     errors: {
       arrayField: {
-        '3': [
-          {
-            code: 'custom',
-            message: 'Element already exists',
-            params: {
+        '3': {
+          _errors: [
+            {
               code: 'not_unique',
+              message: 'Element already exists',
             },
-          },
-        ],
+          ],
+        },
         _errors: [
           {
             code: 'not_unique',
@@ -115,15 +111,14 @@ it('array refinement unique + mapFn checks if elements are unique on deeply nest
     data: null,
     errors: {
       arrayField: {
-        '1': [
-          {
-            code: 'custom',
-            message: 'Element already exists',
-            params: {
+        '1': {
+          _errors: [
+            {
               code: 'not_unique',
+              message: 'Element already exists',
             },
-          },
-        ],
+          ],
+        },
         _errors: [
           {
             code: 'not_unique',
@@ -153,7 +148,7 @@ it('array refinement unique + mapFn + elementErrorPath allows adding error to su
         mapFn: (val) => {
           return val?.data?.fieldB;
         },
-        elementErrorPath: ['fieldB'],
+        elementErrorPath: ['data', 'fieldB'],
       },
     }),
   };
@@ -169,16 +164,15 @@ it('array refinement unique + mapFn + elementErrorPath allows adding error to su
     data: null,
     errors: {
       arrayField: {
-        1: {
-          fieldB: [
-            {
-              code: 'custom',
-              message: 'Element already exists',
-              params: {
+        '1': {
+          data: {
+            fieldB: [
+              {
                 code: 'not_unique',
+                message: 'Element already exists',
               },
-            },
-          ],
+            ],
+          },
         },
         _errors: [
           {

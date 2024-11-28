@@ -41,13 +41,15 @@ it('rejects unknown fields', () => {
     success: false,
     data: null,
     errors: {
-      objectField: [
-        {
-          code: 'unrecognized_keys',
-          keys: ['otherField'],
-          message: "Unrecognized key(s) in object: 'otherField'",
-        },
-      ],
+      objectField: {
+        _errors: [
+          {
+            code: 'unrecognized_keys',
+            keys: ['otherField'],
+            message: "Unrecognized key(s) in object: 'otherField'",
+          },
+        ],
+      },
     },
   });
 });
@@ -60,14 +62,16 @@ it('rejects non-object value', () => {
     success: false,
     data: null,
     errors: {
-      objectField: [
-        {
-          code: 'invalid_type',
-          expected: 'object',
-          message: 'Expected object, received array',
-          received: 'array',
-        },
-      ],
+      objectField: {
+        _errors: [
+          {
+            code: 'invalid_type',
+            expected: 'object',
+            message: 'Expected object, received array',
+            received: 'array',
+          },
+        ],
+      },
     },
   });
 });

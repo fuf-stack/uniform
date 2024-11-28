@@ -351,6 +351,9 @@ importers:
       validator:
         specifier: 13.12.0
         version: 13.12.0
+      zodex:
+        specifier: 0.18.2
+        version: 0.18.2(zod@3.23.8)
     devDependencies:
       '@types/validator':
         specifier: 13.12.2
@@ -7210,6 +7213,11 @@ packages:
 
   zod@3.23.8:
     resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
+
+  zodex@0.18.2:
+    resolution: {integrity: sha512-GE0/S68lJhhBhJWeOSvq4BCigrguOeKFr7h3sbsMPd6kF4ZCHeVU/hOzNLHlj6d+ezNXcpQ4nHj6purY5RxQBg==}
+    peerDependencies:
+      zod: ^3.x
 
 snapshots:
 
@@ -15449,3 +15457,8 @@ snapshots:
   yoctocolors-cjs@2.1.2: {}
 
   zod@3.23.8: {}
+
+  zodex@0.18.2(zod@3.23.8):
+    dependencies:
+      type-fest: 4.27.0
+      zod: 3.23.8

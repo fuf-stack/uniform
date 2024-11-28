@@ -4,11 +4,11 @@ module.exports = {
   // pixel-utils
   'packages/pixel-utils/**/*.{js,ts,tsx}': ['eslint'],
   // pixels
-  'packages/pixels/**/*.{js,ts,tsx}': ['eslint', 'vitest related --run'],
+  'packages/pixels/**/*.{js,ts,tsx}': ['vitest related --run', 'eslint'],
   // uniform
-  'packages/uniform/**/*.{js,ts,tsx}': ['eslint', 'vitest related --run'],
+  'packages/uniform/**/*.{js,ts,tsx}': ['vitest related --run', 'eslint'],
   // veto
-  'packages/veto/**/*.{js,ts,tsx}': ['eslint', 'vitest related --run'],
+  'packages/veto/**/*.{js,ts,tsx}': ['vitest related --run', 'eslint'],
   // config packages
   'packages/config/**/*.{js,ts}': ['eslint'],
   // other filetypes

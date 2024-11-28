@@ -10,14 +10,16 @@ it('rejects non-array value', () => {
     success: false,
     data: null,
     errors: {
-      arrayField: [
-        {
-          code: 'invalid_type',
-          expected: 'array',
-          message: 'Expected array, received object',
-          received: 'object',
-        },
-      ],
+      arrayField: {
+        _errors: [
+          {
+            code: 'invalid_type',
+            expected: 'array',
+            message: 'Expected array, received object',
+            received: 'object',
+          },
+        ],
+      },
     },
   });
 });

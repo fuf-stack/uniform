@@ -1,6 +1,10 @@
 import type {
   RefinementCtx,
+  SafeParseSuccess,
   ZodEffects,
+  ZodError,
+  ZodErrorMap,
+  ZodIssueCode,
   ZodNullable,
   ZodObject,
   ZodOptional,
@@ -32,3 +36,39 @@ export type VetoEffects<T extends VetoTypeAny> = ZodEffects<
 >;
 
 export type VetoRefinementCtx = RefinementCtx;
+
+/** veto schema types */
+
+export type VetoErrorMap = ZodErrorMap;
+
+export type VetoSchema = VetoRawShape | VetoTypeAny;
+
+export type VetoOptions = {
+  /** optional defaults for the veto */
+  defaults?: Record<string, unknown>;
+};
+
+export type VetoInput = Record<string, unknown>;
+
+export type VetoSuccess<SchemaType> = SafeParseSuccess<SchemaType> & {
+  errors: null;
+};
+
+type VetoIssueCode = ZodIssueCode;
+
+type VetoFieldError = {
+  code: VetoIssueCode;
+  message: string;
+};
+
+export type VetoFormattedError = { [k: string]: VetoFieldError[] } & {
+  _errors?: VetoFieldError[];
+};
+
+export type VetoError = {
+  success: false;
+  data: null;
+  errors: VetoFormattedError;
+};
+
+export type VetoUnformattedError = ZodError<VetoInput>;

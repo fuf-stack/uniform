@@ -54,14 +54,16 @@ it('rejects non-object value', () => {
     success: false,
     data: null,
     errors: {
-      objectLooseField: [
-        {
-          code: 'invalid_type',
-          expected: 'object',
-          message: 'Expected object, received array',
-          received: 'array',
-        },
-      ],
+      objectLooseField: {
+        _errors: [
+          {
+            code: 'invalid_type',
+            expected: 'object',
+            message: 'Expected object, received array',
+            received: 'array',
+          },
+        ],
+      },
     },
   });
 });

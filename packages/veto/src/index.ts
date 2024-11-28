@@ -3,6 +3,7 @@ import { veto } from './veto';
 
 // export veto ts types
 export type * from './types';
+export type * from './vInfer';
 
 // export veto validator types
 export * from './types/and/and';
