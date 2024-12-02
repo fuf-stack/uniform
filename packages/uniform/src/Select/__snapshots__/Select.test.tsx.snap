@@ -49,7 +49,7 @@ exports[`Story Snapshots > Default 1`] = `
                 class="gap-1 p-1 css-14oxtc6"
               >
                 <div
-                  class="py-0.5 pl-1 text-foreground-500 css-1vlsb4t-placeholder"
+                  class="ml-1 py-0.5 pl-1 text-sm text-foreground-500 css-1vlsb4t-placeholder"
                   id="react-select-selectField-placeholder"
                 >
                   Select...
@@ -557,7 +557,7 @@ exports[`Story Snapshots > MenuIsVisibleInCard 1`] = `
                     class="gap-1 p-1 css-14oxtc6"
                   >
                     <div
-                      class="py-0.5 pl-1 text-foreground-500 css-1vlsb4t-placeholder"
+                      class="ml-1 py-0.5 pl-1 text-sm text-foreground-500 css-1vlsb4t-placeholder"
                       id="react-select-selectField-placeholder"
                     >
                       Select...
@@ -764,7 +764,7 @@ exports[`Story Snapshots > MultiSelect 1`] = `
                 class="gap-1 p-1 css-14oxtc6"
               >
                 <div
-                  class="py-0.5 pl-1 text-foreground-500 css-1vlsb4t-placeholder"
+                  class="ml-1 py-0.5 pl-1 text-sm text-foreground-500 css-1vlsb4t-placeholder"
                   id="react-select-selectField-placeholder"
                 >
                   Select...
@@ -920,7 +920,7 @@ exports[`Story Snapshots > Required 1`] = `
                 class="gap-1 p-1 css-14oxtc6"
               >
                 <div
-                  class="py-0.5 pl-1 text-foreground-500 css-1vlsb4t-placeholder"
+                  class="ml-1 py-0.5 pl-1 text-sm text-foreground-500 css-1vlsb4t-placeholder"
                   id="react-select-selectField-placeholder"
                 >
                   Select...

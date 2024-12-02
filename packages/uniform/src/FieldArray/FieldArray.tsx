@@ -6,7 +6,7 @@ import type {
   UseFieldArrayRemove,
 } from 'react-hook-form';
 
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 import {
   closestCenter,
@@ -80,9 +80,8 @@ const FieldArray = ({
     debugMode,
     getValues,
     getFieldState,
-    // register,
     trigger,
-    watch,
+    // watch
   } = useFormContext();
 
   const { fields, append, remove, insert, move } = useFieldArray({
@@ -92,14 +91,12 @@ const FieldArray = ({
 
   const { error, testId, invalid, required } = getFieldState(name, _testId);
 
-  // register(`${name}._errors`);
+  // const _formValues = watch();
 
-  const formValues = watch();
-
-  useEffect(() => {
-    trigger(`${name}`);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [JSON.stringify(formValues)]);
+  // useEffect(() => {
+  //   trigger(`${name}`);
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [JSON.stringify(fields)]);
 
   // TODO: what about input props?
   const { label, getLabelProps, getHelperWrapperProps, getErrorMessageProps } =
@@ -146,7 +143,7 @@ const FieldArray = ({
         items={fields.map((field) => field.id)}
         strategy={verticalListSortingStrategy}
       >
-        <ul data-testid={testId}>
+        <ul data-testid={testId} onBlur={() => trigger(`${name}`)}>
           {showLabel && (
             // eslint-disable-next-line jsx-a11y/label-has-associated-control
             <label

@@ -95,10 +95,10 @@ export const Required: Story = {
 };
 
 const formValidator = veto({
-  fieldArray: vt
-    .array(
-      vt
-        .object({
+  fieldArray: vt.refineArray(
+    vt
+      .array(
+        vt.object({
           name: vt
             .string()
             .regex(
@@ -106,15 +106,11 @@ const formValidator = veto({
               'Must only contain alphanumeric characters and spaces.',
             )
             .min(8),
-        })
-        .refine(() => false, {
-          message: 'Custom error at the object level 1.',
-        })
-        .refine(() => false, {
-          message: 'Custom error at the object level 2.',
+          test: vt.string().min(2),
         }),
-    )
-    .min(3),
+      )
+      .min(3),
+  )({ unique: { mapFn: (value) => value.name } }),
 });
 
 export const Invalid: Story = {
@@ -128,11 +124,18 @@ export const Invalid: Story = {
     name: 'fieldArray',
     label: 'FieldArray',
     children: (name, index) => (
-      <Input
-        testId={`${name}_name`}
-        name={`${name}.name`}
-        label={`name ${index}`}
-      />
+      <>
+        <Input
+          testId={`${name}_name`}
+          name={`${name}.name`}
+          label={`name ${index}`}
+        />
+        <Input
+          testId={`${name}_test`}
+          name={`${name}.test`}
+          label={`test ${index}`}
+        />
+      </>
     ),
     testId: 'fieldarray',
   },
@@ -151,6 +154,13 @@ export const Invalid: Story = {
     await userEvent.type(inputTwo, 'invälid', {
       delay: 100,
     });
+
+    await userEvent.click(canvas.getByTestId('fieldarray'), { delay: 100 });
+
+    // await userEvent.click(canvas.getByTestId('fieldarray'), { delay: 1000 });
+
+    // const submitButton = canvas.getByTestId('form_submit_button');
+    // await userEvent.click(submitButton, { delay: 100 });
 
     const inputInvalid = input.getAttribute('aria-invalid');
     await expect(inputInvalid).toBe('true');
@@ -179,12 +189,12 @@ export const Invalid: Story = {
       'String must contain at least 8 character(s)',
     );
 
-    // TODO: Comment in when error for the entire fieldArray element is displayed correctly.
+    // TODO: this should happen if fieldarray1_name is blurred but blurring does not seem to work by clicking somewhere else
     await expect(canvas.getByTestId('fieldarray')).toContainHTML(
-      'Custom error at the object level 1.',
+      'Element already exists',
     );
     await expect(canvas.getByTestId('fieldarray')).toContainHTML(
-      'Custom error at the object level 2.',
+      'Array elements are not unique',
     );
   },
 };

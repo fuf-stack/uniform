@@ -14,7 +14,7 @@ import { useLocalStorage } from '@fuf-stack/pixels';
 export const removeNullishFields = (obj: Record<string, unknown>) => {
   return JSON.parse(
     JSON.stringify(obj, (_key, value) => {
-      return value === null ? undefined : value;
+      return value === '' || value === null ? undefined : value;
     }),
   );
 };
@@ -151,7 +151,7 @@ const FormProvider: React.FC<FormProviderProps> = ({
       e?.preventDefault();
       return Promise.resolve();
     }
-    await methods.handleSubmit(onSubmit)(e);
+    await methods.handleSubmit(onSubmit)(e); // TODO: removeNullishFields here? @Hannes
   };
 
   return (
