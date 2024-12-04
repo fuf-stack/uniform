@@ -131,75 +131,6 @@ it('array refinement unique + mapFn checks if elements are unique on deeply nest
   });
 });
 
-it('todo', () => {
-  const schema = {
-    arrayField: refineArray(
-      array(
-        object({
-          fieldA: string(),
-          fieldB: string(),
-        }),
-      ),
-    )({
-      unique: {
-        mapFn: (val) => {
-          return val?.fieldA;
-        },
-      },
-    }),
-  };
-  const result = v(schema).validate({
-    arrayField: [
-      { fieldA: 'not-unique', fieldB: '' },
-      { fieldA: 'not-unique' },
-    ],
-  });
-
-  expect(result).toStrictEqual({
-    success: false,
-    data: null,
-    errors: {
-      arrayField: {
-        '0': {
-          fieldB: [
-            {
-              code: 'too_small',
-              exact: false,
-              inclusive: true,
-              message: 'String must contain at least 1 character(s)',
-              minimum: 1,
-              type: 'string',
-            },
-          ],
-        },
-        '1': {
-          fieldB: [
-            {
-              code: 'invalid_type',
-              expected: 'string',
-              message: 'Field is required',
-              received: 'undefined',
-            },
-          ],
-          _errors: [
-            {
-              code: 'not_unique',
-              message: 'Element already exists',
-            },
-          ],
-        },
-        _errors: [
-          {
-            code: 'not_unique',
-            message: 'Array elements are not unique',
-            type: 'array',
-          },
-        ],
-      },
-    },
-  });
-});
-
 it('array refinement unique + mapFn + elementErrorPath allows adding error to subfield', () => {
   const schema = {
     arrayField: refineArray(
@@ -243,6 +174,78 @@ it('array refinement unique + mapFn + elementErrorPath allows adding error to su
             ],
           },
         },
+        _errors: [
+          {
+            code: 'not_unique',
+            message: 'Array elements are not unique',
+            type: 'array',
+          },
+        ],
+      },
+    },
+  });
+});
+
+it('array errors are present when elements have errors', () => {
+  const schema = {
+    arrayField: refineArray(
+      array(
+        object({
+          fieldA: string(),
+          fieldB: string(),
+        }),
+      ),
+    )({
+      unique: {
+        mapFn: (val) => {
+          return val?.fieldA;
+        },
+      },
+    }),
+  };
+  const result = v(schema).validate({
+    arrayField: [
+      //  fieldB should have length of 1
+      { fieldA: 'not-unique', fieldB: '' },
+      //  fieldB is missing
+      { fieldA: 'not-unique' },
+    ],
+  });
+
+  expect(result).toStrictEqual({
+    success: false,
+    data: null,
+    errors: {
+      arrayField: {
+        '0': {
+          fieldB: [
+            {
+              code: 'too_small',
+              exact: false,
+              inclusive: true,
+              message: 'String must contain at least 1 character(s)',
+              minimum: 1,
+              type: 'string',
+            },
+          ],
+        },
+        '1': {
+          fieldB: [
+            {
+              code: 'invalid_type',
+              expected: 'string',
+              message: 'Field is required',
+              received: 'undefined',
+            },
+          ],
+          _errors: [
+            {
+              code: 'not_unique',
+              message: 'Element already exists',
+            },
+          ],
+        },
+        // array _error is present
         _errors: [
           {
             code: 'not_unique',
