@@ -6,7 +6,7 @@ import type {
 } from 'react-hook-form';
 import type { FieldArrayHideOption, MoveField } from './FieldArray';
 
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { FaAngleDown, FaAngleUp, FaGripLines } from 'react-icons/fa';
 
 import { useSortable } from '@dnd-kit/sortable';
@@ -65,8 +65,7 @@ const FieldArrayField = ({
 
   const {
     getFieldState,
-    // register,
-    watch,
+    // watch,
     trigger,
   } = useFormContext();
   const { error, invalid } = getFieldState(`${name}`, undefined);
@@ -80,18 +79,20 @@ const FieldArrayField = ({
     classNames: { helperWrapper: 'block' },
   });
 
-  // TODO: Check if this is a current issue: _error gets kicked out of the formValidation if no other errors exist. validationError exists, but the structure changes.
-  // register(`${name}.${index}._errors`);
-
-  const formValues = watch();
-  useEffect(() => {
-    trigger(`${name}.${index}`);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [JSON.stringify(formValues)]);
+  // const _formValues = watch();
+  // useEffect(() => {
+  //   trigger(`${name}.${index}`);
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [JSON.stringify(formValues)]);
 
   return (
     <>
-      <li ref={setNodeRef} style={style} className={className}>
+      <li
+        ref={setNodeRef}
+        style={style}
+        className={className}
+        onBlur={() => trigger(`${name}.${index}`)}
+      >
         {/** Start Button up/down */}
         {!hideButtons.includes('move') && !hideButtons.includes('all') && (
           <div className="mr-6 flex flex-row items-center">
@@ -181,7 +182,7 @@ const FieldArrayField = ({
           <div {...getErrorMessageProps()}>
             <FieldValidationError
               /* @ts-expect-error rhf incompatibility */
-              error={error[Number(index)]?._errors || error[Number(index)]}
+              error={error[Number(index)]?._errors}
             />
           </div>
         </div>

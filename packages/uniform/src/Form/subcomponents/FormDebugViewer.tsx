@@ -8,6 +8,7 @@ import { cn } from '@fuf-stack/pixel-utils';
 import { Button, Card, Json } from '@fuf-stack/pixels';
 
 import { useFormContext } from '../../hooks';
+import { removeNullishFields } from './FormContext';
 
 interface FormDebugViewerProps {
   /** CSS class name */
@@ -28,7 +29,7 @@ const FormDebugViewer = ({ className = undefined }: FormDebugViewerProps) => {
     VetoError['errors'] | null
   >(null);
 
-  const formValues = watch();
+  const formValues = removeNullishFields(watch());
   const debugTestIdsEnabled = debugMode === 'debug-testids';
 
   useEffect(

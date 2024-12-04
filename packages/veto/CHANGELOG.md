@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.1](https://github.com/fuf-stack/pixels/compare/veto-v0.6.0...veto-v0.6.1) (2024-11-28)
+
+
+### Bug Fixes
+
+* **veto:** try to add type annotation to new json validator ([cc831d5](https://github.com/fuf-stack/pixels/commit/cc831d562fa79c925e042c813e4429c052a87a16))
+
 ## [0.6.0](https://github.com/fuf-stack/pixels/compare/veto-v0.5.0...veto-v0.6.0) (2024-11-28)
 
 

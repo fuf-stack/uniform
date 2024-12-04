@@ -50,7 +50,7 @@ export const selectVariants = tv({
     option_focused: 'bg-default-100 active:bg-default-200',
     option_selected: 'bg-default-300',
     option: 'rounded px-3 py-2 hover:cursor-pointer',
-    placeholder: 'py-0.5 pl-1 text-foreground-500',
+    placeholder: 'ml-1 py-0.5 pl-1 text-sm text-foreground-500',
     selectContainer: '',
     singleValue: '!ml-1 !leading-7',
     valueContainer: 'gap-1 p-1',
