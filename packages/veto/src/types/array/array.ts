@@ -92,14 +92,18 @@ export const refineArray = <T extends ReturnType<VArray>>(schema: T) => {
   return (
     refinements: ArrayRefinements,
   ): VetoEffects<VArraySchema<Element>> => {
-    let _schema;
+    let _schema = schema as unknown as VetoEffects<VArraySchema<Element>>;
 
     // add unique refinement
     if (refinements.unique) {
-      _schema = schema.superRefine(makeElementsUnique(refinements.unique));
+      _schema = z.preprocess((val, ctx) => {
+        if (Array.isArray(val)) {
+          makeElementsUnique(refinements.unique)(val, ctx);
+        }
+        return val;
+      }, schema) as VetoEffects<VArraySchema<Element>>;
     }
 
-    // @ts-expect-error not sure here
     return _schema;
   };
 };
