@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.1](https://github.com/fuf-stack/pixels/compare/veto-v0.7.0...veto-v0.7.1) (2024-12-05)
+
+
+### Bug Fixes
+
+* **veto:** add custom to refineString ([da969ac](https://github.com/fuf-stack/pixels/commit/da969acf9583f5040e31e8c810067bde38867fba))
+
 ## [0.7.0](https://github.com/fuf-stack/pixels/compare/veto-v0.6.2...veto-v0.7.0) (2024-12-05)
 
 
