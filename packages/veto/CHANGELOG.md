@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.2](https://github.com/fuf-stack/pixels/compare/veto-v0.6.1...veto-v0.6.2) (2024-12-05)
+
+
+### Bug Fixes
+
+* **veto:** use preprocess in refineArray to fix missing error issue ([0b91b90](https://github.com/fuf-stack/pixels/commit/0b91b904c35b4caabfaba78823264a5a39dee4a6))
+
 ## [0.6.1](https://github.com/fuf-stack/pixels/compare/veto-v0.6.0...veto-v0.6.1) (2024-11-28)
 
 
