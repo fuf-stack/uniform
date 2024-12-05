@@ -82,10 +82,23 @@ const makeElementsUnique = (options: MakeElementsUniqueOptions) => {
   };
 };
 
+/** Configuration options for array validation refinements */
 type ArrayRefinements = {
+  /** Ensures array elements are unique based on specified criteria or comparison function */
   unique: MakeElementsUniqueOptions;
 };
 
+/**
+ * Applies validation refinements to an array schema
+ * @param schema - Base array schema to refine
+ * @returns Function that takes refinement options and returns enhanced schema
+ * @example
+ * ```ts
+ * const schema = refineArray(array(string()))({
+ *   unique: true
+ * });
+ * ```
+ */
 export const refineArray = <T extends ReturnType<VArray>>(schema: T) => {
   type Element = T['element'];
 
