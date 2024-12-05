@@ -81,7 +81,7 @@ describe('noConsecutiveCharacters', () => {
         field: [
           {
             code: 'custom',
-            message: 'Some consecutive characters are not allowed (!@)',
+            message: "Character '!' cannot appear consecutively",
           },
         ],
       },
@@ -97,6 +97,29 @@ describe('noConsecutiveCharacters', () => {
     const result = v(schema).validate({ field: 'hello!world@' });
     expect(result).toMatchObject({
       success: true,
+    });
+  });
+
+  it('should use custom error message', () => {
+    const schema = {
+      field: refineString(string())({
+        noConsecutiveCharacters: {
+          characters: ['!', '@'],
+          message: (char) => `No double ${char} allowed`,
+        },
+      }),
+    };
+    const result = v(schema).validate({ field: 'hello!!' });
+    expect(result).toMatchObject({
+      success: false,
+      errors: {
+        field: [
+          {
+            code: 'custom',
+            message: 'No double ! allowed',
+          },
+        ],
+      },
     });
   });
 });

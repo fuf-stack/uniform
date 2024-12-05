@@ -55,6 +55,8 @@ const blacklist = (options: BlacklistOptions) => {
 };
 
 type NoConsecutiveCharactersOptions = {
+  /** Custom error message function */
+  message?: (val: string) => string;
   /** Characters that cannot appear consecutively */
   characters: string[];
 };
@@ -62,23 +64,22 @@ type NoConsecutiveCharactersOptions = {
 /** Refinement to prevent certain consecutive characters */
 const noConsecutiveCharacters = (options: NoConsecutiveCharactersOptions) => {
   return (val: string, ctx: VetoRefinementCtx) => {
-    // Convert blacklist patterns to regex patterns
-    const noConsecutiveSpecialCharactersRegex = new RegExp(
-      `(${options.characters
-        .map((char) => {
-          const escaped = char.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
-          return `${escaped}${escaped}`;
-        })
-        .join('|')})`,
-      'i',
-    );
+    for (let i = 0; i < val.length - 1; i += 1) {
+      const currentChar = val[i];
+      const nextChar = val[i + 1];
 
-    // check for consecutive special characters
-    if (noConsecutiveSpecialCharactersRegex.test(val)) {
-      ctx.addIssue({
-        code: 'custom',
-        message: `Some consecutive characters are not allowed (${options.characters.join('')})`,
-      });
+      if (
+        options.characters.includes(currentChar) &&
+        currentChar === nextChar
+      ) {
+        ctx.addIssue({
+          code: 'custom',
+          message: options.message
+            ? options.message(currentChar)
+            : `Character '${currentChar}' cannot appear consecutively`,
+        });
+        return;
+      }
     }
   };
 };
