@@ -67,6 +67,35 @@ describe('blacklist', () => {
   });
 });
 
+describe('custom', () => {
+  it('should apply custom validation first', () => {
+    const schema = {
+      field: refineString(string())({
+        custom: (_val, ctx) => {
+          ctx.addIssue({ code: 'custom', message: 'Custom error first' });
+        },
+        blacklist: { patterns: ['test'] },
+      }),
+    };
+    const result = v(schema).validate({ field: 'test' });
+    expect(result).toMatchObject({
+      success: false,
+      errors: {
+        field: [
+          {
+            code: 'custom',
+            message: 'Custom error first',
+          },
+          {
+            code: 'custom',
+            message: "Value 'test' is blacklisted",
+          },
+        ],
+      },
+    });
+  });
+});
+
 describe('noConsecutiveCharacters', () => {
   it('should reject repeated characters', () => {
     const schema = {

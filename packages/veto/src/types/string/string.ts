@@ -1,4 +1,4 @@
-import type { VetoEffects, VetoRefinementCtx } from 'src/types';
+import type { VetoRefinementCtx } from 'src/types';
 import type { ZodString } from 'zod';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -88,6 +88,8 @@ const noConsecutiveCharacters = (options: NoConsecutiveCharactersOptions) => {
 type StringRefinements = {
   /** Filter out strings matching blacklist patterns with optional custom error messages */
   blacklist?: BlacklistOptions;
+  /** Custom refinement function for additional validation rules (will be applied first when present) */
+  custom?: (val: string, ctx: VetoRefinementCtx) => void;
   /** Prevent specified characters from appearing consecutively */
   noConsecutiveCharacters?: NoConsecutiveCharactersOptions;
 };
@@ -99,6 +101,11 @@ type StringRefinements = {
  * @example
  * ```ts
  * const schema = refineString(string())({
+ *   custom: (val, ctx) => {
+ *     if (!val.includes('@')) {
+ *       ctx.addIssue({ code: 'custom', message: 'Must contain @' });
+ *     }
+ *   },
  *   blacklist: { patterns: ['invalid*'] },
  *   noConsecutiveCharacters: { characters: ['!', '@'] }
  * });
@@ -106,22 +113,21 @@ type StringRefinements = {
  */
 export const refineString = <T extends VStringSchema>(schema: T) => {
   return (refinements: StringRefinements) => {
-    let _schema = schema as unknown as VetoEffects<T>;
+    return schema.superRefine((val, ctx) => {
+      // add custom refinement first
+      if (refinements.custom) {
+        refinements.custom(val, ctx);
+      }
 
-    // add blacklist refinement
-    if (refinements.blacklist) {
-      _schema = _schema.superRefine(
-        blacklist(refinements.blacklist),
-      ) as unknown as VetoEffects<T>;
-    }
+      // add blacklist refinement
+      if (refinements.blacklist) {
+        blacklist(refinements.blacklist)(val, ctx);
+      }
 
-    // add noConsecutiveCharacters refinement
-    if (refinements.noConsecutiveCharacters) {
-      _schema = _schema.superRefine(
-        noConsecutiveCharacters(refinements.noConsecutiveCharacters),
-      ) as unknown as VetoEffects<T>;
-    }
-
-    return _schema;
+      // add noConsecutiveCharacters refinement
+      if (refinements.noConsecutiveCharacters) {
+        noConsecutiveCharacters(refinements.noConsecutiveCharacters)(val, ctx);
+      }
+    });
   };
 };
