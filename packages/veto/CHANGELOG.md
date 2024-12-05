@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.7.0](https://github.com/fuf-stack/pixels/compare/veto-v0.6.2...veto-v0.7.0) (2024-12-05)
+
+
+### Features
+
+* **veto:** add refineString with backlist and noConsecutiveCharacters ([23c3946](https://github.com/fuf-stack/pixels/commit/23c394689e744782c74a1e1864c4ccc5266b83aa))
+
+
+### Bug Fixes
+
+* **veto:** improve noConsecutiveCharacters implementation ([6a1e214](https://github.com/fuf-stack/pixels/commit/6a1e21430f52614d67291da703001779a42040e1))
+
 ## [0.6.2](https://github.com/fuf-stack/pixels/compare/veto-v0.6.1...veto-v0.6.2) (2024-12-05)
 
 
