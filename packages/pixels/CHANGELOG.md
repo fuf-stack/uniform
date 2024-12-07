@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.29.2](https://github.com/fuf-stack/pixels/compare/pixels-v0.29.1...pixels-v0.29.2) (2024-12-07)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @nextui-org/accordion to v2.2.1 ([#578](https://github.com/fuf-stack/pixels/issues/578)) ([e282110](https://github.com/fuf-stack/pixels/commit/e282110629e59717bd83bdfdf8bd9a4f17a4922b))
+* **deps:** update dependency @nextui-org/accordion to v2.2.2 ([#584](https://github.com/fuf-stack/pixels/issues/584)) ([6b5713b](https://github.com/fuf-stack/pixels/commit/6b5713bbef7831bd37b8aa98a83c6a26d8f72b32))
+* **deps:** update dependency @nextui-org/avatar to v2.2.1 ([#579](https://github.com/fuf-stack/pixels/issues/579)) ([ea96e13](https://github.com/fuf-stack/pixels/commit/ea96e133236b59f4727c80576842e6fbb43d401a))
+* **deps:** update dependency @nextui-org/avatar to v2.2.2 ([#585](https://github.com/fuf-stack/pixels/issues/585)) ([bc2c3f7](https://github.com/fuf-stack/pixels/commit/bc2c3f7196fc51774fcb2e0c0dc42701b340de7e))
+* **deps:** update dependency @nextui-org/badge to v2.2.1 ([#580](https://github.com/fuf-stack/pixels/issues/580)) ([bba41b7](https://github.com/fuf-stack/pixels/commit/bba41b7c1e67ed130a19989e2e4150e11a28e3f3))
+* **deps:** update dependency @nextui-org/badge to v2.2.2 ([#586](https://github.com/fuf-stack/pixels/issues/586)) ([62a2f90](https://github.com/fuf-stack/pixels/commit/62a2f901d93a74bca55b0a7bf5a5298cd4c0bcdc))
+* **deps:** update dependency @nextui-org/breadcrumbs to v2.2.1 ([#581](https://github.com/fuf-stack/pixels/issues/581)) ([75ca2fd](https://github.com/fuf-stack/pixels/commit/75ca2fd6c7271e899d87a5a650e4b8b9f77bc06f))
+* **deps:** update dependency @nextui-org/breadcrumbs to v2.2.2 ([#587](https://github.com/fuf-stack/pixels/issues/587)) ([b779f0d](https://github.com/fuf-stack/pixels/commit/b779f0d1f610a9046c6cd59a328a3b2cc835119a))
+* **deps:** update dependency @nextui-org/card to v2.2.1 ([#583](https://github.com/fuf-stack/pixels/issues/583)) ([36daded](https://github.com/fuf-stack/pixels/commit/36dadedd58930e74df8bfa29b0909ee13f3265d4))
+* **deps:** update dependency @nextui-org/card to v2.2.2 ([#588](https://github.com/fuf-stack/pixels/issues/588)) ([98a776e](https://github.com/fuf-stack/pixels/commit/98a776e204f42ef1a52c69f96dd5ffabab490461))
+* **deps:** update dependency @nextui-org/chip to v2.2.2 ([#590](https://github.com/fuf-stack/pixels/issues/590)) ([aeb49ea](https://github.com/fuf-stack/pixels/commit/aeb49eaa8fffc1bbb3abc7177c4a4357861f4ea9))
+* **deps:** update dependency @nextui-org/divider to v2.2.2 ([#591](https://github.com/fuf-stack/pixels/issues/591)) ([d27c991](https://github.com/fuf-stack/pixels/commit/d27c991f99c61f799a74952f648a870a67fe4a67))
+* **deps:** update dependency @nextui-org/modal to v2.2.2 ([#594](https://github.com/fuf-stack/pixels/issues/594)) ([9750bfc](https://github.com/fuf-stack/pixels/commit/9750bfc5f36c2893c28a314e611e56bc2638acf1))
+* **deps:** update dependency @nextui-org/popover to v2.3.2 ([#595](https://github.com/fuf-stack/pixels/issues/595)) ([b2648ea](https://github.com/fuf-stack/pixels/commit/b2648eac4fec8d7885aeb4a21bd83daa8cd12cb8))
+* **deps:** update dependency @nextui-org/scroll-shadow to v2.3.2 ([#597](https://github.com/fuf-stack/pixels/issues/597)) ([b1f17bd](https://github.com/fuf-stack/pixels/commit/b1f17bd98392fe0f6525c2f569ebef8a11a657db))
+* **deps:** update dependency framer-motion to v11.12.0 ([#543](https://github.com/fuf-stack/pixels/issues/543)) ([7576487](https://github.com/fuf-stack/pixels/commit/75764872730bef460aa56bffa0c6db1c85a69559))
+* **deps:** update dependency framer-motion to v11.13.1 ([#560](https://github.com/fuf-stack/pixels/issues/560)) ([3ab47b0](https://github.com/fuf-stack/pixels/commit/3ab47b09ead87ec332961b83973846d99c8ab37c))
+* **deps:** update dependency next-themes to v0.4.4 ([#574](https://github.com/fuf-stack/pixels/issues/574)) ([6e33c94](https://github.com/fuf-stack/pixels/commit/6e33c94b44e9253f15de7359798368c96a705896))
+
 ## [0.29.1](https://github.com/fuf-stack/pixels/compare/pixels-v0.29.0...pixels-v0.29.1) (2024-11-27)
 
 
