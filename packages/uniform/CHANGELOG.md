@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.13.0](https://github.com/fuf-stack/pixels/compare/uniform-v0.12.1...uniform-v0.13.0) (2024-12-07)
+
+
+### Features
+
+* **uniform:** fix multiple form validation and style issues ([c33294f](https://github.com/fuf-stack/pixels/commit/c33294fb911ef208bd72bda44808e070e9a527a9))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @dnd-kit/core to v6.3.0 ([#565](https://github.com/fuf-stack/pixels/issues/565)) ([e4b6128](https://github.com/fuf-stack/pixels/commit/e4b61289837b0d64f504354128f7daef3d9791c5))
+* **deps:** update dependency @dnd-kit/core to v6.3.1 ([#569](https://github.com/fuf-stack/pixels/issues/569)) ([5f77a4f](https://github.com/fuf-stack/pixels/commit/5f77a4f810ef0debc6a3927f2235dd7be4c374d5))
+* **deps:** update dependency framer-motion to v11.13.1 ([#560](https://github.com/fuf-stack/pixels/issues/560)) ([3ab47b0](https://github.com/fuf-stack/pixels/commit/3ab47b09ead87ec332961b83973846d99c8ab37c))
+
 ## [0.12.1](https://github.com/fuf-stack/pixels/compare/uniform-v0.12.0...uniform-v0.12.1) (2024-11-29)
 
 
