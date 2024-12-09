@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.14.1](https://github.com/fuf-stack/pixels/compare/uniform-v0.14.0...uniform-v0.14.1) (2024-12-09)
+
+
+### Bug Fixes
+
+* **uniform:** minor issues with FieldArray and Input ([e30746c](https://github.com/fuf-stack/pixels/commit/e30746c97f3a2d8ce57052cf172cc0c2eef438fa))
+
 ## [0.14.0](https://github.com/fuf-stack/pixels/compare/uniform-v0.13.0...uniform-v0.14.0) (2024-12-09)
 
 
