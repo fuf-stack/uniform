@@ -26,6 +26,13 @@ export interface InputProps {
   startContent?: ReactNode;
   /** HTML data-testid attribute used in e2e tests */
   testId?: string;
+  /** allows disentangled display and form values for a field */
+  transformValue?: {
+    /** transforms the formValue of the field to the display value of the field */
+    displayValue: (value: string | number) => string | number;
+    /** transforms the displayValue of the field to the form value of the field */
+    formValue: (value: string) => string | number;
+  };
   /** input type */
   type?: 'number' | 'password';
 }
@@ -42,6 +49,7 @@ const Input = ({
   placeholder = ' ',
   startContent = undefined,
   testId: _testId = undefined,
+  transformValue = undefined,
   type = undefined,
 }: InputProps) => {
   const { control, debugMode, getFieldState } = useFormContext();
@@ -88,14 +96,19 @@ const Input = ({
                 ? (e) => {
                     onChange(Number(e.target.value));
                   }
-                : onChange
+                : (e) =>
+                    onChange(
+                      transformValue
+                        ? transformValue.formValue(e.target.value)
+                        : e.target.value,
+                    )
             }
             placeholder={placeholder}
             radius="sm"
             ref={ref}
             startContent={startContent}
             type={type}
-            value={value}
+            value={transformValue ? transformValue.displayValue(value) : value}
             variant="bordered"
           />
         );

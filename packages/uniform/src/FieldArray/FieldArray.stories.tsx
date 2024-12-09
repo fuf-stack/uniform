@@ -45,7 +45,7 @@ type Story = StoryObj<typeof FieldArray>;
 export const Default: Story = {
   args: {
     name: 'DefaultStory',
-    children: (name, index) => (
+    children: ({ name, index }) => (
       <Input name={`${name}.name`} label={`name ${index}`} />
     ),
     testId: 'some-test-id',
@@ -60,7 +60,7 @@ export const WithInitialValue: Story = {
   },
   args: {
     name: 'FieldArray',
-    children: (name, index) => (
+    children: ({ name, index }) => (
       <Input name={`${name}.name`} label={`name ${index}`} />
     ),
     testId: 'fieldarray',
@@ -88,7 +88,7 @@ export const Required: Story = {
   },
   args: {
     name: 'fieldArray',
-    children: (name, index) => (
+    children: ({ name, index }) => (
       <Input name={`${name}.name`} label={`name ${index}`} />
     ),
   },
@@ -123,7 +123,7 @@ export const Invalid: Story = {
   args: {
     name: 'fieldArray',
     label: 'FieldArray',
-    children: (name, index) => (
+    children: ({ name, index }) => (
       <>
         <Input
           testId={`${name}_name`}
@@ -207,7 +207,7 @@ export const HideAllButtons: Story = {
   },
   args: {
     name: 'fieldArray',
-    children: (name, index) => (
+    children: ({ name, index }) => (
       <Input name={`${name}.name`} label={`name ${index}`} />
     ),
     // hideButtons: ['all'],
@@ -222,7 +222,7 @@ export const HideAllButAdd: Story = {
   },
   args: {
     name: 'fieldArray',
-    children: (name, index) => (
+    children: ({ name, index }) => (
       <Input name={`${name}.name`} label={`name ${index}`} />
     ),
     hideButtons: ['insert', 'remove', 'move'],
@@ -237,7 +237,7 @@ export const AllowAllDelete: Story = {
   },
   args: {
     name: 'fieldArray',
-    children: (name, index) => (
+    children: ({ name, index }) => (
       <Input name={`${name}.name`} label={`name ${index}`} />
     ),
 
@@ -253,7 +253,7 @@ export const Custom: Story = {
   },
   args: {
     name: 'fieldArray',
-    children: (name, index, length, move, insert, remove) => (
+    children: ({ name, index, move, insert, remove }) => (
       <>
         <Input name={`${name}.name`} label={`name ${index}`} />
         <Input name={`${name}.age`} label={`age ${index}`} />
@@ -289,7 +289,7 @@ export const Duplicate: Story = {
   },
   args: {
     name: 'fieldArray',
-    children: (name, index, remove, duplicate) => (
+    children: ({ name, index, remove, duplicate }) => (
       <>
         <Input name={`${name}.name`} label={`name ${index}`} />
         <Input name={`${name}.age`} label={`age ${index}`} />
@@ -321,7 +321,7 @@ export const Dragable: Story = {
   },
   args: {
     name: 'fieldArray',
-    children: (name, index) => (
+    children: ({ name, index }) => (
       <Input name={`${name}.name`} label={`name at index ${index}`} />
     ),
     testId: 'fieldarray',

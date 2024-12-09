@@ -34,15 +34,15 @@ import { FieldValidationError } from '../partials/FieldValidationError';
 import FieldArrayField from './FieldArrayField';
 
 export type FieldArrayHideOption = 'add' | 'remove' | 'move' | 'insert' | 'all';
-export type FieldArrayFieldChildren = (
-  name: string,
-  index: number,
-  length: number,
-  move: UseFieldArrayMove,
-  insert: UseFieldArrayInsert<FieldValues, string>,
-  remove: UseFieldArrayRemove,
-  duplicate: (i: number) => void,
-) => JSX.Element;
+export type FieldArrayFieldChildren = (args: {
+  duplicate: (i: number) => void;
+  index: number;
+  insert: UseFieldArrayInsert<FieldValues, string>;
+  length: number;
+  move: UseFieldArrayMove;
+  name: string;
+  remove: UseFieldArrayRemove;
+}) => JSX.Element;
 
 export type MoveField = 'drag-drop' | 'button';
 
@@ -60,7 +60,7 @@ export interface FieldArrayProps {
   /** ID for test purposes. */
   testId?: string;
   /* how the fields can be moved */
-  moveField: MoveField[];
+  moveField?: MoveField[];
 }
 
 /**
@@ -90,13 +90,6 @@ const FieldArray = ({
   });
 
   const { error, testId, invalid, required } = getFieldState(name, _testId);
-
-  // const _formValues = watch();
-
-  // useEffect(() => {
-  //   trigger(`${name}`);
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [JSON.stringify(fields)]);
 
   // TODO: what about input props?
   const { label, getLabelProps, getHelperWrapperProps, getErrorMessageProps } =
@@ -164,30 +157,30 @@ const FieldArray = ({
 
             return (
               <FieldArrayField
-                id={field.id}
-                key={field.id}
-                testId={`${testId}_${index}`}
                 className="mb-3 mt-5 flex flex-row items-center"
                 field={field}
                 fields={fields}
                 hideButtons={hideButtons}
+                id={field.id}
                 index={index}
                 insert={insert}
+                key={field.id}
                 lastNotDeletable={lastNotDeletable}
                 move={move}
                 moveField={moveField}
                 name={name}
                 remove={remove}
+                testId={`${testId}_${index}`}
               >
-                {children(
-                  `${name}[${index}]`,
-                  index,
-                  fields.length,
-                  move,
-                  insert,
-                  remove,
+                {children({
                   duplicate,
-                )}
+                  index,
+                  insert,
+                  length: fields.length,
+                  move,
+                  name: `${name}[${index}]`,
+                  remove,
+                })}
               </FieldArrayField>
             );
           })}

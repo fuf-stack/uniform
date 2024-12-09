@@ -63,11 +63,7 @@ const FieldArrayField = ({
     transition,
   };
 
-  const {
-    getFieldState,
-    // watch,
-    trigger,
-  } = useFormContext();
+  const { getFieldState, trigger } = useFormContext();
   const { error, invalid } = getFieldState(`${name}`, undefined);
 
   // TODO: what about input props? and label props? Do we need a label?
@@ -78,12 +74,6 @@ const FieldArrayField = ({
     placeholder: ' ',
     classNames: { helperWrapper: 'block' },
   });
-
-  // const _formValues = watch();
-  // useEffect(() => {
-  //   trigger(`${name}.${index}`);
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [JSON.stringify(formValues)]);
 
   return (
     <>
