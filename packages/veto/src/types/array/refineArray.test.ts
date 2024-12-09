@@ -257,3 +257,17 @@ it('array errors are present when elements have errors', () => {
     },
   });
 });
+
+it('refineArray can be used with optional array', () => {
+  const schema = {
+    arrayField: refineArray(array(string()).optional())({
+      unique: true,
+    }),
+  };
+  const result = v(schema).validate({});
+  expect(result).toStrictEqual({
+    success: true,
+    data: {},
+    errors: null,
+  });
+});

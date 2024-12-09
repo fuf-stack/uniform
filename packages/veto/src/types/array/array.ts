@@ -1,4 +1,9 @@
-import type { VetoEffects, VetoRefinementCtx, VetoTypeAny } from 'src/types';
+import type {
+  VetoEffects,
+  VetoOptional,
+  VetoRefinementCtx,
+  VetoTypeAny,
+} from 'src/types';
 import type { ZodArray } from 'zod';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -88,10 +93,25 @@ type ArrayRefinements = {
   unique: MakeElementsUniqueOptions;
 };
 
+type RefineArrayInputArray =
+  | ReturnType<VArray>
+  | VetoOptional<ReturnType<VArray>>;
+
+// Extract the element type by handling both direct array schema and VetoOptional wrapped schema
+type ExtractElement<T> =
+  T extends VetoOptional<VetoTypeAny>
+    ? ExtractElement<ReturnType<T['unwrap']>>
+    : T extends { element: unknown }
+      ? T['element']
+      : never;
+
 /**
  * Applies validation refinements to an array schema
- * @param schema - Base array schema to refine
+ * @param schema - Base array schema to refine. Can be either:
+ *   - A direct array schema (ReturnType<VArray>)
+ *   - A wrapped optional array schema (VetoOptional<ReturnType<VArray>>)
  * @returns Function that takes refinement options and returns enhanced schema
+ *
  * @example
  * ```ts
  * const schema = refineArray(array(string()))({
@@ -99,8 +119,8 @@ type ArrayRefinements = {
  * });
  * ```
  */
-export const refineArray = <T extends ReturnType<VArray>>(schema: T) => {
-  type Element = T['element'];
+export const refineArray = <T extends RefineArrayInputArray>(schema: T) => {
+  type Element = ExtractElement<T>;
 
   return (
     refinements: ArrayRefinements,
