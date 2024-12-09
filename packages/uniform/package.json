@@ -146,7 +146,7 @@
     "@testing-library/react-hooks": "8.0.1",
     "@types/debug": "4.1.12",
     "@types/react": "18.3.14",
-    "@types/react-dom": "18.3.2",
+    "@types/react-dom": "18.3.3",
     "@types/slug": "5.0.9",
     "react": "18.3.1",
     "react-dom": "18.3.1"
