@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.2](https://github.com/fuf-stack/pixels/compare/veto-v0.7.1...veto-v0.7.2) (2024-12-09)
+
+
+### Bug Fixes
+
+* **veto:** allow optional array schemas in refineArray ([20f6ca0](https://github.com/fuf-stack/pixels/commit/20f6ca0fd8754be8326f8254340b89db6647df70))
+
 ## [0.7.1](https://github.com/fuf-stack/pixels/compare/veto-v0.7.0...veto-v0.7.1) (2024-12-05)
 
 
