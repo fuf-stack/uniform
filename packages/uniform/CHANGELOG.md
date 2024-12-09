@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.14.0](https://github.com/fuf-stack/pixels/compare/uniform-v0.13.0...uniform-v0.14.0) (2024-12-09)
+
+
+### Features
+
+* **uniform:** add option to have disjoint rhf and display value and some fixes for fieldArray ([8a23f1b](https://github.com/fuf-stack/pixels/commit/8a23f1b362ce2e54994921c1c8ef313a7539e640))
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-hook-form to v7.54.0 ([#601](https://github.com/fuf-stack/pixels/issues/601)) ([483978b](https://github.com/fuf-stack/pixels/commit/483978b425391b810c158ff38603020e38087d67))
+
 ## [0.13.0](https://github.com/fuf-stack/pixels/compare/uniform-v0.12.1...uniform-v0.13.0) (2024-12-07)
 
 
