@@ -1,4 +1,10 @@
-import type { VetoEffects, VetoRawShape } from 'src/types';
+import type {
+  VetoEffects,
+  VetoOptional,
+  VetoRawShape,
+  VetoRefinementCtx,
+  VetoTypeAny,
+} from 'src/types';
 import type { object as looseObject, strictObject } from 'zod';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -41,3 +47,62 @@ export type VObjectLooseSchema<T extends VetoRawShape> = ReturnType<
 export type VObjectLooseRefined<T extends VetoRawShape> = VetoEffects<
   VObjectLooseSchema<T>
 >;
+
+/** Configuration options for object validation refinements */
+type ObjectRefinements = {
+  /** Custom refinement function that takes the object data and context */
+  custom: (data: Record<string, unknown>, ctx: VetoRefinementCtx) => void;
+};
+
+type RefineObjectInputObject =
+  | ReturnType<VObject>
+  | ReturnType<VObjectLoose>
+  | VetoOptional<ReturnType<VObject>>
+  | VetoOptional<ReturnType<VObjectLoose>>;
+
+// Extract the shape type by handling both direct object schema and VetoOptional wrapped schema
+type ExtractShape<T> =
+  T extends VetoOptional<VetoTypeAny>
+    ? ExtractShape<ReturnType<T['unwrap']>>
+    : T extends { shape: VetoRawShape }
+      ? T['shape']
+      : never;
+
+/**
+ * Applies validation refinements to an object schema
+ * @param schema - Base object schema to refine. Can be either:
+ *   - A direct object schema (ReturnType<VObject | VObjectLoose>)
+ *   - A wrapped optional object schema (VetoOptional<ReturnType<VObject | VObjectLoose>>)
+ * @returns Function that takes refinement options and returns enhanced schema
+ *
+ * @example
+ * ```ts
+ * const schema = refineObject(object({ name: string() }))({
+ *   custom: (val, ctx) => {
+ *     if (val.name === 'invalid') {
+ *       ctx.addIssue({
+ *         code:  'custom',
+ *         message: 'Name cannot be "invalid"',
+ *       });
+ *     }
+ *   }
+ * });
+ * ```
+ */
+export const refineObject = <T extends RefineObjectInputObject>(schema: T) => {
+  type Shape = ExtractShape<T>;
+
+  return (
+    refinements: ObjectRefinements,
+  ): VetoEffects<VObjectSchema<Shape>> => {
+    // Add custom refinement
+    const _schema = z.preprocess((val, ctx) => {
+      if (val && typeof val === 'object' && !Array.isArray(val)) {
+        refinements.custom(val as Record<string, unknown>, ctx);
+      }
+      return val;
+    }, schema) as VetoEffects<VObjectSchema<Shape>>;
+
+    return _schema;
+  };
+};
