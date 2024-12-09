@@ -98,7 +98,7 @@ const Input = ({
                   }
                 : (e) =>
                     onChange(
-                      transformValue
+                      transformValue && transformValue.formValue
                         ? transformValue.formValue(e.target.value)
                         : e.target.value,
                     )
@@ -108,7 +108,11 @@ const Input = ({
             ref={ref}
             startContent={startContent}
             type={type}
-            value={transformValue ? transformValue.displayValue(value) : value}
+            value={
+              transformValue && transformValue.displayValue
+                ? transformValue.displayValue(value)
+                : value
+            }
             variant="bordered"
           />
         );

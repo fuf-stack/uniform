@@ -52,6 +52,16 @@ export const Default: Story = {
   },
 };
 
+export const FlatArray: Story = {
+  args: {
+    name: 'FieldArray',
+    children: ({ name, index }) => (
+      <Input name={`${name}`} label={`name ${index}`} />
+    ),
+    testId: 'fieldarray',
+  },
+};
+
 export const WithInitialValue: Story = {
   parameters: {
     formProps: {

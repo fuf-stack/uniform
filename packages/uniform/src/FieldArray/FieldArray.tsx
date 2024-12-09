@@ -104,7 +104,7 @@ const FieldArray = ({
     });
 
   if (lastNotDeletable && fields.length === 0) {
-    append({});
+    append(undefined); // TODO: Check if this breaks something
   }
 
   const sensors = useSensors(
@@ -178,7 +178,7 @@ const FieldArray = ({
                   insert,
                   length: fields.length,
                   move,
-                  name: `${name}[${index}]`,
+                  name: `${name}.${index}`,
                   remove,
                 })}
               </FieldArrayField>
@@ -189,7 +189,7 @@ const FieldArray = ({
             <Button
               testId={`${testId}_append`}
               size="sm"
-              onClick={() => append({})}
+              onClick={() => append(undefined)} // TODO: Check if this breaks something
             >
               Add
             </Button>
