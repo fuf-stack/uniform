@@ -20,14 +20,10 @@
   stopUpdatingLabel: 'renovate | stop update',
   packageRules: [
     // @dnd-kit monorepo
-    {
-      matchPackagePatterns: '^@dnd-kit',
-    },
+    { matchPackageNames: ['/^@dnd-kit/'] },
 
     // @nextui monorepo
-    {
-      matchPackagePatterns: '^@nextui-org',
-    },
+    { matchPackageNames: ['/^@nextui-org/'] },
 
     // framer-motion not patch releases (rate-limiting)
     {
