@@ -142,7 +142,7 @@
     "@nextui-org/theme": "2.2.11",
     "@nextui-org/tabs": "2.0.37",
     "@nextui-org/tooltip": "2.0.41",
-    "framer-motion": "11.13.1",
+    "framer-motion": "11.13.3",
     "next-themes": "0.4.4",
     "react-icons": "5.3.0"
   },
@@ -153,7 +153,7 @@
     "@repo/vite-config": "workspace:*",
     "@types/debug": "4.1.12",
     "@types/react": "18.3.14",
-    "@types/react-dom": "18.3.2",
+    "@types/react-dom": "18.3.3",
     "@uiw/react-json-view": "2.0.0-alpha.30",
     "react": "18.3.1",
     "react-dom": "18.3.1"
