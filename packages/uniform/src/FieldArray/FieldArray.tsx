@@ -6,8 +6,6 @@ import type {
   UseFieldArrayRemove,
 } from 'react-hook-form';
 
-// import { useEffect } from 'react';
-
 import {
   closestCenter,
   DndContext,
