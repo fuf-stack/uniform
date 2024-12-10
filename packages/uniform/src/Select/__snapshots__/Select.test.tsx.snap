@@ -203,7 +203,7 @@ exports[`Story Snapshots > InitialValue 1`] = `
                 class="gap-1 p-1 css-14oxtc6"
               >
                 <div
-                  class="!ml-1 !leading-7 font-normal w-full text-left rtl:text-right text-small truncate group-data-[has-value=true]:text-default-foreground css-w54w9q-singleValue"
+                  class="!ml-1 !leading-7 font-normal w-full text-start text-small truncate group-data-[has-value=true]:text-default-foreground css-w54w9q-singleValue"
                 >
                   Vanilla
                 </div>
@@ -372,7 +372,7 @@ exports[`Story Snapshots > Invalid 1`] = `
                 class="gap-1 p-1 css-14oxtc6"
               >
                 <div
-                  class="!ml-1 !leading-7 font-normal w-full text-left rtl:text-right text-small truncate group-data-[has-value=true]:text-default-foreground css-w54w9q-singleValue"
+                  class="!ml-1 !leading-7 font-normal w-full text-start text-small truncate group-data-[has-value=true]:text-default-foreground css-w54w9q-singleValue"
                 >
                   Vanilla
                 </div>

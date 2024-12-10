@@ -32,7 +32,7 @@ exports[`Story Snapshots > AllSizes 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -68,7 +68,7 @@ exports[`Story Snapshots > AllSizes 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -104,7 +104,7 @@ exports[`Story Snapshots > AllSizes 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -140,7 +140,7 @@ exports[`Story Snapshots > AllSizes 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -208,7 +208,7 @@ exports[`Story Snapshots > AllSizes 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -244,7 +244,7 @@ exports[`Story Snapshots > AllSizes 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -280,7 +280,7 @@ exports[`Story Snapshots > AllSizes 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -316,7 +316,7 @@ exports[`Story Snapshots > AllSizes 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -384,7 +384,7 @@ exports[`Story Snapshots > AllSizes 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -420,7 +420,7 @@ exports[`Story Snapshots > AllSizes 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -456,7 +456,7 @@ exports[`Story Snapshots > AllSizes 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -492,7 +492,7 @@ exports[`Story Snapshots > AllSizes 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -567,7 +567,7 @@ exports[`Story Snapshots > AllUnderlines 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -603,7 +603,7 @@ exports[`Story Snapshots > AllUnderlines 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -639,7 +639,7 @@ exports[`Story Snapshots > AllUnderlines 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -675,7 +675,7 @@ exports[`Story Snapshots > AllUnderlines 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -743,7 +743,7 @@ exports[`Story Snapshots > AllUnderlines 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -779,7 +779,7 @@ exports[`Story Snapshots > AllUnderlines 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -815,7 +815,7 @@ exports[`Story Snapshots > AllUnderlines 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -851,7 +851,7 @@ exports[`Story Snapshots > AllUnderlines 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -919,7 +919,7 @@ exports[`Story Snapshots > AllUnderlines 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -955,7 +955,7 @@ exports[`Story Snapshots > AllUnderlines 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -991,7 +991,7 @@ exports[`Story Snapshots > AllUnderlines 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -1027,7 +1027,7 @@ exports[`Story Snapshots > AllUnderlines 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -1095,7 +1095,7 @@ exports[`Story Snapshots > AllUnderlines 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -1131,7 +1131,7 @@ exports[`Story Snapshots > AllUnderlines 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -1167,7 +1167,7 @@ exports[`Story Snapshots > AllUnderlines 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -1203,7 +1203,7 @@ exports[`Story Snapshots > AllUnderlines 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -1271,7 +1271,7 @@ exports[`Story Snapshots > AllUnderlines 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -1307,7 +1307,7 @@ exports[`Story Snapshots > AllUnderlines 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -1343,7 +1343,7 @@ exports[`Story Snapshots > AllUnderlines 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -1379,7 +1379,7 @@ exports[`Story Snapshots > AllUnderlines 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -1454,7 +1454,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -1490,7 +1490,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -1526,7 +1526,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -1562,7 +1562,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -1630,7 +1630,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -1666,7 +1666,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -1702,7 +1702,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -1738,7 +1738,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -1806,7 +1806,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -1842,7 +1842,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -1878,7 +1878,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -1914,7 +1914,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
           </span>
           <span
             aria-hidden="true"
-            class="px-1 text-foreground/50"
+            class="px-1 rtl:rotate-180 text-foreground/50"
             data-slot="separator"
           >
             <svg
@@ -1981,7 +1981,7 @@ exports[`Story Snapshots > Default 1`] = `
         </span>
         <span
           aria-hidden="true"
-          class="px-1 text-foreground/50"
+          class="px-1 rtl:rotate-180 text-foreground/50"
           data-slot="separator"
         >
           <svg
@@ -2017,7 +2017,7 @@ exports[`Story Snapshots > Default 1`] = `
         </span>
         <span
           aria-hidden="true"
-          class="px-1 text-foreground/50"
+          class="px-1 rtl:rotate-180 text-foreground/50"
           data-slot="separator"
         >
           <svg
@@ -2053,7 +2053,7 @@ exports[`Story Snapshots > Default 1`] = `
         </span>
         <span
           aria-hidden="true"
-          class="px-1 text-foreground/50"
+          class="px-1 rtl:rotate-180 text-foreground/50"
           data-slot="separator"
         >
           <svg
@@ -2089,7 +2089,7 @@ exports[`Story Snapshots > Default 1`] = `
         </span>
         <span
           aria-hidden="true"
-          class="px-1 text-foreground/50"
+          class="px-1 rtl:rotate-180 text-foreground/50"
           data-slot="separator"
         >
           <svg
@@ -2155,7 +2155,7 @@ exports[`Story Snapshots > WithMaxItems 1`] = `
         </span>
         <span
           aria-hidden="true"
-          class="px-1 text-foreground/50"
+          class="px-1 rtl:rotate-180 text-foreground/50"
           data-slot="separator"
         >
           <svg
@@ -2222,7 +2222,7 @@ exports[`Story Snapshots > WithMaxItems 1`] = `
         </span>
         <span
           aria-hidden="true"
-          class="px-1 text-foreground/50"
+          class="px-1 rtl:rotate-180 text-foreground/50"
           data-slot="separator"
         >
           <svg
@@ -2258,7 +2258,7 @@ exports[`Story Snapshots > WithMaxItems 1`] = `
         </span>
         <span
           aria-hidden="true"
-          class="px-1 text-foreground/50"
+          class="px-1 rtl:rotate-180 text-foreground/50"
           data-slot="separator"
         >
           <svg
@@ -2324,7 +2324,7 @@ exports[`Story Snapshots > WithSeparator 1`] = `
         </span>
         <span
           aria-hidden="true"
-          class="px-1 text-foreground/50"
+          class="px-1 rtl:rotate-180 text-foreground/50"
           data-slot="separator"
         >
           /
@@ -2344,7 +2344,7 @@ exports[`Story Snapshots > WithSeparator 1`] = `
         </span>
         <span
           aria-hidden="true"
-          class="px-1 text-foreground/50"
+          class="px-1 rtl:rotate-180 text-foreground/50"
           data-slot="separator"
         >
           /
@@ -2364,7 +2364,7 @@ exports[`Story Snapshots > WithSeparator 1`] = `
         </span>
         <span
           aria-hidden="true"
-          class="px-1 text-foreground/50"
+          class="px-1 rtl:rotate-180 text-foreground/50"
           data-slot="separator"
         >
           /
@@ -2384,7 +2384,7 @@ exports[`Story Snapshots > WithSeparator 1`] = `
         </span>
         <span
           aria-hidden="true"
-          class="px-1 text-foreground/50"
+          class="px-1 rtl:rotate-180 text-foreground/50"
           data-slot="separator"
         >
           /

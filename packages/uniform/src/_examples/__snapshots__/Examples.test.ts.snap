@@ -44,7 +44,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                       style="cursor: text;"
                     >
                       <label
-                        class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 after:content-['*'] after:text-danger after:ml-0.5 rtl:after:ml-[unset] rtl:after:mr-0.5 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
+                        class="absolute pointer-events-none origin-top-left flex-shrink-0 rtl:origin-top-right subpixel-antialiased block text-foreground-500 after:content-['*'] after:text-danger after:ms-0.5 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
                         data-slot="label"
                         for="react-aria-react-useId-mock"
                         id="react-aria-react-useId-mock"
@@ -59,13 +59,14 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                           aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
                           aria-label="String Field..."
                           aria-labelledby="react-aria-react-useId-mock"
-                          aria-required="true"
                           class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small"
                           data-slot="input"
                           data-testid="stringfield"
                           id="react-aria-react-useId-mock"
                           name="stringField"
                           placeholder="String Field..."
+                          required=""
+                          title=""
                           type="text"
                           value=""
                         />
@@ -92,7 +93,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                       style="cursor: text;"
                     >
                       <label
-                        class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 after:content-['*'] after:text-danger after:ml-0.5 rtl:after:ml-[unset] rtl:after:mr-0.5 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
+                        class="absolute pointer-events-none origin-top-left flex-shrink-0 rtl:origin-top-right subpixel-antialiased block text-foreground-500 after:content-['*'] after:text-danger after:ms-0.5 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
                         data-slot="label"
                         for="react-aria-react-useId-mock"
                         id="react-aria-react-useId-mock"
@@ -107,13 +108,14 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                           aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
                           aria-label=" "
                           aria-labelledby="react-aria-react-useId-mock"
-                          aria-required="true"
                           class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small"
                           data-slot="input"
                           data-testid="numberfield"
                           id="react-aria-react-useId-mock"
                           name="numberField"
                           placeholder=" "
+                          required=""
+                          title=""
                           type="number"
                           value=""
                         />
@@ -250,7 +252,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                       style="cursor: text;"
                     >
                       <label
-                        class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 after:content-['*'] after:text-danger after:ml-0.5 rtl:after:ml-[unset] rtl:after:mr-0.5 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
+                        class="absolute pointer-events-none origin-top-left flex-shrink-0 rtl:origin-top-right subpixel-antialiased block text-foreground-500 after:content-['*'] after:text-danger after:ms-0.5 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
                         data-slot="label"
                         for="react-aria-react-useId-mock"
                         id="react-aria-react-useId-mock"
@@ -265,13 +267,14 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                           aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
                           aria-label=" "
                           aria-labelledby="react-aria-react-useId-mock"
-                          aria-required="true"
                           class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small"
                           data-slot="input"
                           data-testid="passwordfield"
                           id="react-aria-react-useId-mock"
                           name="passwordField"
                           placeholder=" "
+                          required=""
+                          title=""
                           type="password"
                           value=""
                         />
@@ -289,7 +292,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                   data-slot="base"
                 >
                   <label
-                    class="z-10 pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-small text-foreground-500 after:content-['*'] after:text-danger after:ml-0.5 rtl:after:ml-[unset] rtl:after:mr-0.5 relative will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-1.5 pe-2 max-w-full text-ellipsis overflow-hidden"
+                    class="z-10 pointer-events-none origin-top-left flex-shrink-0 rtl:origin-top-right subpixel-antialiased block text-small text-foreground-500 after:content-['*'] after:text-danger after:ms-0.5 relative will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-1.5 pe-2 max-w-full text-ellipsis overflow-hidden"
                     data-slot="label"
                     for="react-aria-react-useId-mock"
                     id="react-aria-react-useId-mock"
@@ -310,14 +313,15 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                         aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
                         aria-label=" "
                         aria-labelledby="react-aria-react-useId-mock"
-                        aria-required="true"
-                        class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small resize-none data-[hide-scroll=true]:scrollbar-hide transition-height !duration-100 motion-reduce:transition-none"
+                        class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small resize-none data-[hide-scroll=true]:scrollbar-hide transition-height !duration-100 motion-reduce:transition-none pe-0"
                         data-hide-scroll="true"
                         data-slot="input"
                         data-testid="textareafield"
                         id="react-aria-react-useId-mock"
                         name="textAreaField"
                         placeholder=" "
+                        required=""
+                        title=""
                       />
                     </div>
                   </div>
@@ -333,27 +337,24 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                     data-testid="switchfield"
                     required=""
                   >
-                    <span
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                    >
-                      <input
-                        aria-labelledby=":r0:"
-                        name="switchField"
-                        role="switch"
-                        type="checkbox"
-                        value=""
-                      />
-                    </span>
+                    <input
+                      aria-labelledby=":r0:"
+                      class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+                      name="switchField"
+                      role="switch"
+                      type="checkbox"
+                      value=""
+                    />
                     <span
                       aria-hidden="true"
-                      class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:bg-primary group-data-[selected=true]:text-primary-foreground w-12 h-7 mr-2 rtl:ml-2 rtl:mr-[unset] transition-background"
+                      class="px-1 relative inline-flex items-center justify-start flex-shrink-0 overflow-hidden bg-default-200 rounded-full outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:bg-primary group-data-[selected=true]:text-primary-foreground w-12 h-7 transition-background"
                     >
                       <span
-                        class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right w-5 h-5 text-small group-data-[selected=true]:ml-5 rtl:group-data-[selected=true]:ml-0 rtl:group-data-[selected=true]:mr-5 transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4"
+                        class="z-10 flex items-center justify-center bg-white shadow-small rounded-full origin-right pointer-events-none w-5 h-5 text-small group-data-[selected=true]:ms-5 transition-all group-data-[pressed=true]:w-6 group-data-[selected]:group-data-[pressed]:ml-4"
                       />
                     </span>
                     <span
-                      class="relative select-none text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+                      class="relative select-none ms-2 text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
                       id=":r0:"
                     >
                       Switch Field
@@ -386,26 +387,24 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                       data-invalid="false"
                       data-testid="checkboxfield_option_1"
                     >
-                      <span
-                        style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                      >
-                        <input
-                          aria-describedby="react-aria-react-useId-mock"
-                          aria-label="1"
-                          aria-labelledby=":r1:"
-                          aria-required="true"
-                          name="checkboxField"
-                          type="checkbox"
-                          value="1"
-                        />
-                      </span>
+                      <input
+                        aria-describedby="react-aria-react-useId-mock"
+                        aria-label="1"
+                        aria-labelledby=":r1:"
+                        class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+                        name="checkboxField"
+                        required=""
+                        title=""
+                        type="checkbox"
+                        value="1"
+                      />
                       <span
                         aria-hidden="true"
-                        class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:bg-primary after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none"
+                        class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:bg-primary after:text-primary-foreground text-primary-foreground w-5 h-5 me-2 rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none"
                       >
                         <svg
                           aria-hidden="true"
-                          class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
+                          class="z-10 opacity-0 group-data-[selected=true]:opacity-100 pointer-events-none w-4 h-3 transition-opacity motion-reduce:transition-none"
                           role="presentation"
                           viewBox="0 0 17 18"
                         >
@@ -433,26 +432,24 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                       data-invalid="false"
                       data-testid="checkboxfield_option_2"
                     >
-                      <span
-                        style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                      >
-                        <input
-                          aria-describedby="react-aria-react-useId-mock"
-                          aria-label="2"
-                          aria-labelledby=":r2:"
-                          aria-required="true"
-                          name="checkboxField"
-                          type="checkbox"
-                          value="2"
-                        />
-                      </span>
+                      <input
+                        aria-describedby="react-aria-react-useId-mock"
+                        aria-label="2"
+                        aria-labelledby=":r2:"
+                        class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+                        name="checkboxField"
+                        required=""
+                        title=""
+                        type="checkbox"
+                        value="2"
+                      />
                       <span
                         aria-hidden="true"
-                        class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:bg-primary after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none"
+                        class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:bg-primary after:text-primary-foreground text-primary-foreground w-5 h-5 me-2 rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none"
                       >
                         <svg
                           aria-hidden="true"
-                          class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
+                          class="z-10 opacity-0 group-data-[selected=true]:opacity-100 pointer-events-none w-4 h-3 transition-opacity motion-reduce:transition-none"
                           role="presentation"
                           viewBox="0 0 17 18"
                         >
@@ -480,26 +477,24 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                       data-invalid="false"
                       data-testid="checkboxfield_option_3"
                     >
-                      <span
-                        style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                      >
-                        <input
-                          aria-describedby="react-aria-react-useId-mock"
-                          aria-label="3"
-                          aria-labelledby=":r3:"
-                          aria-required="true"
-                          name="checkboxField"
-                          type="checkbox"
-                          value="3"
-                        />
-                      </span>
+                      <input
+                        aria-describedby="react-aria-react-useId-mock"
+                        aria-label="3"
+                        aria-labelledby=":r3:"
+                        class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+                        name="checkboxField"
+                        required=""
+                        title=""
+                        type="checkbox"
+                        value="3"
+                      />
                       <span
                         aria-hidden="true"
-                        class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:bg-primary after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none"
+                        class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:bg-primary after:text-primary-foreground text-primary-foreground w-5 h-5 me-2 rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none"
                       >
                         <svg
                           aria-hidden="true"
-                          class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
+                          class="z-10 opacity-0 group-data-[selected=true]:opacity-100 pointer-events-none w-4 h-3 transition-opacity motion-reduce:transition-none"
                           role="presentation"
                           viewBox="0 0 17 18"
                         >
@@ -553,18 +548,17 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                       class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
                       data-testid="radiofield_option_value0"
                     >
-                      <span
-                        style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                      >
-                        <input
-                          aria-describedby=":r5: react-aria-react-useId-mock"
-                          aria-labelledby=":r4:"
-                          name="radioField"
-                          tabindex="0"
-                          type="radio"
-                          value="Value0"
-                        />
-                      </span>
+                      <input
+                        aria-describedby=":r5: react-aria-react-useId-mock"
+                        aria-labelledby=":r4:"
+                        class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+                        name="radioField"
+                        required=""
+                        tabindex="0"
+                        title=""
+                        type="radio"
+                        value="Value0"
+                      />
                       <span
                         aria-hidden="true"
                         class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -574,7 +568,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                         />
                       </span>
                       <div
-                        class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+                        class="flex flex-col ml-1 ms-2"
                       >
                         <span
                           class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -589,18 +583,17 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                       class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
                       data-testid="radiofield_option_value1"
                     >
-                      <span
-                        style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                      >
-                        <input
-                          aria-describedby=":r7: react-aria-react-useId-mock"
-                          aria-labelledby=":r6:"
-                          name="radioField"
-                          tabindex="0"
-                          type="radio"
-                          value="Value1"
-                        />
-                      </span>
+                      <input
+                        aria-describedby=":r7: react-aria-react-useId-mock"
+                        aria-labelledby=":r6:"
+                        class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+                        name="radioField"
+                        required=""
+                        tabindex="0"
+                        title=""
+                        type="radio"
+                        value="Value1"
+                      />
                       <span
                         aria-hidden="true"
                         class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -610,7 +603,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                         />
                       </span>
                       <div
-                        class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+                        class="flex flex-col ml-1 ms-2"
                       >
                         <span
                           class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -625,18 +618,17 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                       class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
                       data-testid="radiofield_option_value2"
                     >
-                      <span
-                        style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-                      >
-                        <input
-                          aria-describedby=":r9: react-aria-react-useId-mock"
-                          aria-labelledby=":r8:"
-                          name="radioField"
-                          tabindex="0"
-                          type="radio"
-                          value="Value2"
-                        />
-                      </span>
+                      <input
+                        aria-describedby=":r9: react-aria-react-useId-mock"
+                        aria-labelledby=":r8:"
+                        class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+                        name="radioField"
+                        required=""
+                        tabindex="0"
+                        title=""
+                        type="radio"
+                        value="Value2"
+                      />
                       <span
                         aria-hidden="true"
                         class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -646,7 +638,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                         />
                       </span>
                       <div
-                        class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+                        class="flex flex-col ml-1 ms-2"
                       >
                         <span
                           class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -745,8 +737,11 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                         <input
                           aria-describedby=":rb: react-aria-react-useId-mock"
                           aria-labelledby=":ra:"
+                          class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
                           name="radioBoxField"
+                          required=""
                           tabindex="0"
+                          title=""
                           type="radio"
                           value="Value0"
                         />
@@ -760,7 +755,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                         />
                       </span>
                       <div
-                        class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset] grow"
+                        class="flex flex-col ml-1 ms-2 grow"
                       >
                         <span
                           class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -781,8 +776,11 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                         <input
                           aria-describedby=":rd: react-aria-react-useId-mock"
                           aria-labelledby=":rc:"
+                          class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
                           name="radioBoxField"
+                          required=""
                           tabindex="0"
+                          title=""
                           type="radio"
                           value="Value1"
                         />
@@ -796,7 +794,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                         />
                       </span>
                       <div
-                        class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset] grow"
+                        class="flex flex-col ml-1 ms-2 grow"
                       >
                         <span
                           class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -817,8 +815,11 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                         <input
                           aria-describedby=":rf: react-aria-react-useId-mock"
                           aria-labelledby=":re:"
+                          class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
                           name="radioBoxField"
+                          required=""
                           tabindex="0"
+                          title=""
                           type="radio"
                           value="Value2"
                         />
@@ -832,7 +833,7 @@ exports[`Story Snapshots > AllFieldRenderers 1`] = `
                         />
                       </span>
                       <div
-                        class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset] grow"
+                        class="flex flex-col ml-1 ms-2 grow"
                       >
                         <span
                           class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -930,7 +931,7 @@ exports[`Story Snapshots > DebugModeDisabled 1`] = `
                     style="cursor: text;"
                   >
                     <label
-                      class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 after:content-['*'] after:text-danger after:ml-0.5 rtl:after:ml-[unset] rtl:after:mr-0.5 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
+                      class="absolute pointer-events-none origin-top-left flex-shrink-0 rtl:origin-top-right subpixel-antialiased block text-foreground-500 after:content-['*'] after:text-danger after:ms-0.5 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
                       data-slot="label"
                       for="react-aria-react-useId-mock"
                       id="react-aria-react-useId-mock"
@@ -945,13 +946,14 @@ exports[`Story Snapshots > DebugModeDisabled 1`] = `
                         aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
                         aria-label="String Field..."
                         aria-labelledby="react-aria-react-useId-mock"
-                        aria-required="true"
                         class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small"
                         data-slot="input"
                         data-testid="stringfield"
                         id="react-aria-react-useId-mock"
                         name="stringField"
                         placeholder="String Field..."
+                        required=""
+                        title=""
                         type="text"
                         value=""
                       />

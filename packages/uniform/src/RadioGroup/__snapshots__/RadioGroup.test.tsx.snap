@@ -29,18 +29,16 @@ exports[`Story Snapshots > Default 1`] = `
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             data-testid="radiogroupfield_option_1"
           >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-describedby=":r1: react-aria-react-useId-mock"
-                aria-labelledby=":r0:"
-                name="radioGroupField"
-                tabindex="0"
-                type="radio"
-                value="1"
-              />
-            </span>
+            <input
+              aria-describedby=":r1: react-aria-react-useId-mock"
+              aria-labelledby=":r0:"
+              class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              name="radioGroupField"
+              tabindex="0"
+              title=""
+              type="radio"
+              value="1"
+            />
             <span
               aria-hidden="true"
               class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -50,7 +48,7 @@ exports[`Story Snapshots > Default 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+              class="flex flex-col ml-1 ms-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -64,18 +62,16 @@ exports[`Story Snapshots > Default 1`] = `
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             data-testid="radiogroupfield_option_2"
           >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-describedby=":r3: react-aria-react-useId-mock"
-                aria-labelledby=":r2:"
-                name="radioGroupField"
-                tabindex="0"
-                type="radio"
-                value="2"
-              />
-            </span>
+            <input
+              aria-describedby=":r3: react-aria-react-useId-mock"
+              aria-labelledby=":r2:"
+              class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              name="radioGroupField"
+              tabindex="0"
+              title=""
+              type="radio"
+              value="2"
+            />
             <span
               aria-hidden="true"
               class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -85,7 +81,7 @@ exports[`Story Snapshots > Default 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+              class="flex flex-col ml-1 ms-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -99,18 +95,16 @@ exports[`Story Snapshots > Default 1`] = `
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             data-testid="radiogroupfield_option_3"
           >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-describedby=":r5: react-aria-react-useId-mock"
-                aria-labelledby=":r4:"
-                name="radioGroupField"
-                tabindex="0"
-                type="radio"
-                value="3"
-              />
-            </span>
+            <input
+              aria-describedby=":r5: react-aria-react-useId-mock"
+              aria-labelledby=":r4:"
+              class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              name="radioGroupField"
+              tabindex="0"
+              title=""
+              type="radio"
+              value="3"
+            />
             <span
               aria-hidden="true"
               class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -120,7 +114,7 @@ exports[`Story Snapshots > Default 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+              class="flex flex-col ml-1 ms-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -197,18 +191,16 @@ exports[`Story Snapshots > DisabledCompletely 1`] = `
             data-disabled="true"
             data-testid="radiogroupfield_option_option_1"
           >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-describedby=":rq: react-aria-react-useId-mock"
-                aria-labelledby=":rp:"
-                disabled=""
-                name="radioGroupField"
-                type="radio"
-                value="option 1"
-              />
-            </span>
+            <input
+              aria-describedby=":rq: react-aria-react-useId-mock"
+              aria-labelledby=":rp:"
+              class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              disabled=""
+              name="radioGroupField"
+              title=""
+              type="radio"
+              value="option 1"
+            />
             <span
               aria-hidden="true"
               class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -218,7 +210,7 @@ exports[`Story Snapshots > DisabledCompletely 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+              class="flex flex-col ml-1 ms-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -233,18 +225,16 @@ exports[`Story Snapshots > DisabledCompletely 1`] = `
             data-disabled="true"
             data-testid="radiogroupfield_option_option_2"
           >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-describedby=":rs: react-aria-react-useId-mock"
-                aria-labelledby=":rr:"
-                disabled=""
-                name="radioGroupField"
-                type="radio"
-                value="option 2"
-              />
-            </span>
+            <input
+              aria-describedby=":rs: react-aria-react-useId-mock"
+              aria-labelledby=":rr:"
+              class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              disabled=""
+              name="radioGroupField"
+              title=""
+              type="radio"
+              value="option 2"
+            />
             <span
               aria-hidden="true"
               class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -254,7 +244,7 @@ exports[`Story Snapshots > DisabledCompletely 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+              class="flex flex-col ml-1 ms-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -269,18 +259,16 @@ exports[`Story Snapshots > DisabledCompletely 1`] = `
             data-disabled="true"
             data-testid="radiogroupfield_option_option_3"
           >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-describedby=":ru: react-aria-react-useId-mock"
-                aria-labelledby=":rt:"
-                disabled=""
-                name="radioGroupField"
-                type="radio"
-                value="option 3"
-              />
-            </span>
+            <input
+              aria-describedby=":ru: react-aria-react-useId-mock"
+              aria-labelledby=":rt:"
+              class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              disabled=""
+              name="radioGroupField"
+              title=""
+              type="radio"
+              value="option 3"
+            />
             <span
               aria-hidden="true"
               class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -290,7 +278,7 @@ exports[`Story Snapshots > DisabledCompletely 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+              class="flex flex-col ml-1 ms-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -366,18 +354,16 @@ exports[`Story Snapshots > DisabledOption 1`] = `
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             data-testid="radiogroupfield_option_option_1"
           >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-describedby=":r10: react-aria-react-useId-mock"
-                aria-labelledby=":rv:"
-                name="radioGroupField"
-                tabindex="0"
-                type="radio"
-                value="option 1"
-              />
-            </span>
+            <input
+              aria-describedby=":r10: react-aria-react-useId-mock"
+              aria-labelledby=":rv:"
+              class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              name="radioGroupField"
+              tabindex="0"
+              title=""
+              type="radio"
+              value="option 1"
+            />
             <span
               aria-hidden="true"
               class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -387,7 +373,7 @@ exports[`Story Snapshots > DisabledOption 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+              class="flex flex-col ml-1 ms-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -402,18 +388,16 @@ exports[`Story Snapshots > DisabledOption 1`] = `
             data-disabled="true"
             data-testid="radiogroupfield_option_disabled_option"
           >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-describedby=":r12: react-aria-react-useId-mock"
-                aria-labelledby=":r11:"
-                disabled=""
-                name="radioGroupField"
-                type="radio"
-                value="disabled option"
-              />
-            </span>
+            <input
+              aria-describedby=":r12: react-aria-react-useId-mock"
+              aria-labelledby=":r11:"
+              class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              disabled=""
+              name="radioGroupField"
+              title=""
+              type="radio"
+              value="disabled option"
+            />
             <span
               aria-hidden="true"
               class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -423,7 +407,7 @@ exports[`Story Snapshots > DisabledOption 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+              class="flex flex-col ml-1 ms-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -437,18 +421,16 @@ exports[`Story Snapshots > DisabledOption 1`] = `
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             data-testid="radiogroupfield_option_option_3"
           >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-describedby=":r14: react-aria-react-useId-mock"
-                aria-labelledby=":r13:"
-                name="radioGroupField"
-                tabindex="0"
-                type="radio"
-                value="option 3"
-              />
-            </span>
+            <input
+              aria-describedby=":r14: react-aria-react-useId-mock"
+              aria-labelledby=":r13:"
+              class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              name="radioGroupField"
+              tabindex="0"
+              title=""
+              type="radio"
+              value="option 3"
+            />
             <span
               aria-hidden="true"
               class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -458,7 +440,7 @@ exports[`Story Snapshots > DisabledOption 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+              class="flex flex-col ml-1 ms-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -534,18 +516,16 @@ exports[`Story Snapshots > Inline 1`] = `
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             data-testid="radiogroupfield_option_option_1"
           >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-describedby=":re: react-aria-react-useId-mock"
-                aria-labelledby=":rd:"
-                name="radioGroupField"
-                tabindex="0"
-                type="radio"
-                value="option 1"
-              />
-            </span>
+            <input
+              aria-describedby=":re: react-aria-react-useId-mock"
+              aria-labelledby=":rd:"
+              class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              name="radioGroupField"
+              tabindex="0"
+              title=""
+              type="radio"
+              value="option 1"
+            />
             <span
               aria-hidden="true"
               class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -555,7 +535,7 @@ exports[`Story Snapshots > Inline 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+              class="flex flex-col ml-1 ms-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -569,18 +549,16 @@ exports[`Story Snapshots > Inline 1`] = `
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             data-testid="radiogroupfield_option_option_2"
           >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-describedby=":rg: react-aria-react-useId-mock"
-                aria-labelledby=":rf:"
-                name="radioGroupField"
-                tabindex="0"
-                type="radio"
-                value="option 2"
-              />
-            </span>
+            <input
+              aria-describedby=":rg: react-aria-react-useId-mock"
+              aria-labelledby=":rf:"
+              class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              name="radioGroupField"
+              tabindex="0"
+              title=""
+              type="radio"
+              value="option 2"
+            />
             <span
               aria-hidden="true"
               class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -590,7 +568,7 @@ exports[`Story Snapshots > Inline 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+              class="flex flex-col ml-1 ms-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -604,18 +582,16 @@ exports[`Story Snapshots > Inline 1`] = `
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             data-testid="radiogroupfield_option_option_3"
           >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-describedby=":ri: react-aria-react-useId-mock"
-                aria-labelledby=":rh:"
-                name="radioGroupField"
-                tabindex="0"
-                type="radio"
-                value="option 3"
-              />
-            </span>
+            <input
+              aria-describedby=":ri: react-aria-react-useId-mock"
+              aria-labelledby=":rh:"
+              class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              name="radioGroupField"
+              tabindex="0"
+              title=""
+              type="radio"
+              value="option 3"
+            />
             <span
               aria-hidden="true"
               class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -625,7 +601,7 @@ exports[`Story Snapshots > Inline 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+              class="flex flex-col ml-1 ms-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -710,18 +686,17 @@ exports[`Story Snapshots > Invalid 1`] = `
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             data-testid="radiogroupfield_option_one"
           >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-describedby=":r1c: react-aria-react-useId-mock"
-                aria-labelledby=":r1b:"
-                name="radioGroupField"
-                tabindex="0"
-                type="radio"
-                value="one"
-              />
-            </span>
+            <input
+              aria-describedby=":r1c: react-aria-react-useId-mock"
+              aria-labelledby=":r1b:"
+              class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              name="radioGroupField"
+              required=""
+              tabindex="0"
+              title=""
+              type="radio"
+              value="one"
+            />
             <span
               aria-hidden="true"
               class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -731,7 +706,7 @@ exports[`Story Snapshots > Invalid 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+              class="flex flex-col ml-1 ms-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -746,18 +721,17 @@ exports[`Story Snapshots > Invalid 1`] = `
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             data-testid="radiogroupfield_option_two"
           >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-describedby=":r1e: react-aria-react-useId-mock"
-                aria-labelledby=":r1d:"
-                name="radioGroupField"
-                tabindex="0"
-                type="radio"
-                value="two"
-              />
-            </span>
+            <input
+              aria-describedby=":r1e: react-aria-react-useId-mock"
+              aria-labelledby=":r1d:"
+              class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              name="radioGroupField"
+              required=""
+              tabindex="0"
+              title=""
+              type="radio"
+              value="two"
+            />
             <span
               aria-hidden="true"
               class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -767,7 +741,7 @@ exports[`Story Snapshots > Invalid 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+              class="flex flex-col ml-1 ms-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -782,18 +756,17 @@ exports[`Story Snapshots > Invalid 1`] = `
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             data-testid="radiogroupfield_option_three"
           >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-describedby=":r1g: react-aria-react-useId-mock"
-                aria-labelledby=":r1f:"
-                name="radioGroupField"
-                tabindex="0"
-                type="radio"
-                value="three"
-              />
-            </span>
+            <input
+              aria-describedby=":r1g: react-aria-react-useId-mock"
+              aria-labelledby=":r1f:"
+              class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              name="radioGroupField"
+              required=""
+              tabindex="0"
+              title=""
+              type="radio"
+              value="three"
+            />
             <span
               aria-hidden="true"
               class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -803,7 +776,7 @@ exports[`Story Snapshots > Invalid 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+              class="flex flex-col ml-1 ms-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -885,8 +858,10 @@ exports[`Story Snapshots > RadioBox 1`] = `
               <input
                 aria-describedby=":r7: react-aria-react-useId-mock"
                 aria-labelledby=":r6:"
+                class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
                 name="radioGroupField"
                 tabindex="0"
+                title=""
                 type="radio"
                 value="1"
               />
@@ -914,7 +889,7 @@ exports[`Story Snapshots > RadioBox 1`] = `
               />
             </svg>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset] grow"
+              class="flex flex-col ml-1 ms-2 grow"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -939,8 +914,10 @@ exports[`Story Snapshots > RadioBox 1`] = `
               <input
                 aria-describedby=":r9: react-aria-react-useId-mock"
                 aria-labelledby=":r8:"
+                class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
                 name="radioGroupField"
                 tabindex="0"
+                title=""
                 type="radio"
                 value="2"
               />
@@ -968,7 +945,7 @@ exports[`Story Snapshots > RadioBox 1`] = `
               />
             </svg>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset] grow"
+              class="flex flex-col ml-1 ms-2 grow"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -993,8 +970,10 @@ exports[`Story Snapshots > RadioBox 1`] = `
               <input
                 aria-describedby=":rb: react-aria-react-useId-mock"
                 aria-labelledby=":ra:"
+                class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
                 name="radioGroupField"
                 tabindex="0"
+                title=""
                 type="radio"
                 value="3"
               />
@@ -1022,7 +1001,7 @@ exports[`Story Snapshots > RadioBox 1`] = `
               />
             </svg>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset] grow"
+              class="flex flex-col ml-1 ms-2 grow"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -1351,18 +1330,17 @@ exports[`Story Snapshots > Required 1`] = `
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             data-testid="radiogroupfield_option_1"
           >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-describedby=":r16: react-aria-react-useId-mock"
-                aria-labelledby=":r15:"
-                name="radioGroupField"
-                tabindex="0"
-                type="radio"
-                value="1"
-              />
-            </span>
+            <input
+              aria-describedby=":r16: react-aria-react-useId-mock"
+              aria-labelledby=":r15:"
+              class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              name="radioGroupField"
+              required=""
+              tabindex="0"
+              title=""
+              type="radio"
+              value="1"
+            />
             <span
               aria-hidden="true"
               class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -1372,7 +1350,7 @@ exports[`Story Snapshots > Required 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+              class="flex flex-col ml-1 ms-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -1387,18 +1365,17 @@ exports[`Story Snapshots > Required 1`] = `
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             data-testid="radiogroupfield_option_2"
           >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-describedby=":r18: react-aria-react-useId-mock"
-                aria-labelledby=":r17:"
-                name="radioGroupField"
-                tabindex="0"
-                type="radio"
-                value="2"
-              />
-            </span>
+            <input
+              aria-describedby=":r18: react-aria-react-useId-mock"
+              aria-labelledby=":r17:"
+              class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              name="radioGroupField"
+              required=""
+              tabindex="0"
+              title=""
+              type="radio"
+              value="2"
+            />
             <span
               aria-hidden="true"
               class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -1408,7 +1385,7 @@ exports[`Story Snapshots > Required 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+              class="flex flex-col ml-1 ms-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -1423,18 +1400,17 @@ exports[`Story Snapshots > Required 1`] = `
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             data-testid="radiogroupfield_option_3"
           >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-describedby=":r1a: react-aria-react-useId-mock"
-                aria-labelledby=":r19:"
-                name="radioGroupField"
-                tabindex="0"
-                type="radio"
-                value="3"
-              />
-            </span>
+            <input
+              aria-describedby=":r1a: react-aria-react-useId-mock"
+              aria-labelledby=":r19:"
+              class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              name="radioGroupField"
+              required=""
+              tabindex="0"
+              title=""
+              type="radio"
+              value="3"
+            />
             <span
               aria-hidden="true"
               class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -1444,7 +1420,7 @@ exports[`Story Snapshots > Required 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+              class="flex flex-col ml-1 ms-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -1520,18 +1496,16 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             data-testid="radiogroupfield_option_option_1"
           >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-describedby=":rk: react-aria-react-useId-mock"
-                aria-labelledby=":rj:"
-                name="radioGroupField"
-                tabindex="0"
-                type="radio"
-                value="option 1"
-              />
-            </span>
+            <input
+              aria-describedby=":rk: react-aria-react-useId-mock"
+              aria-labelledby=":rj:"
+              class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              name="radioGroupField"
+              tabindex="0"
+              title=""
+              type="radio"
+              value="option 1"
+            />
             <span
               aria-hidden="true"
               class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -1541,7 +1515,7 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+              class="flex flex-col ml-1 ms-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -1555,18 +1529,16 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             data-testid="radiogroupfield_option_option_2"
           >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-describedby=":rm: react-aria-react-useId-mock"
-                aria-labelledby=":rl:"
-                name="radioGroupField"
-                tabindex="0"
-                type="radio"
-                value="option 2"
-              />
-            </span>
+            <input
+              aria-describedby=":rm: react-aria-react-useId-mock"
+              aria-labelledby=":rl:"
+              class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              name="radioGroupField"
+              tabindex="0"
+              title=""
+              type="radio"
+              value="option 2"
+            />
             <span
               aria-hidden="true"
               class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -1576,7 +1548,7 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+              class="flex flex-col ml-1 ms-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -1590,18 +1562,16 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             data-testid="radiogroupfield_option_option_3"
           >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-describedby=":ro: react-aria-react-useId-mock"
-                aria-labelledby=":rn:"
-                name="radioGroupField"
-                tabindex="0"
-                type="radio"
-                value="option 3"
-              />
-            </span>
+            <input
+              aria-describedby=":ro: react-aria-react-useId-mock"
+              aria-labelledby=":rn:"
+              class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              name="radioGroupField"
+              tabindex="0"
+              title=""
+              type="radio"
+              value="option 3"
+            />
             <span
               aria-hidden="true"
               class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
@@ -1611,7 +1581,7 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+              class="flex flex-col ml-1 ms-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
