@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.14.2](https://github.com/fuf-stack/pixels/compare/uniform-v0.14.1...uniform-v0.14.2) (2024-12-10)
+
+
+### Bug Fixes
+
+* **deps:** update [@nextui](https://github.com/nextui) monorepo ([f791491](https://github.com/fuf-stack/pixels/commit/f791491ded1ef916323e4e4560b0b0ed69801021))
+* **deps:** update dependency framer-motion to v11.13.3 ([#606](https://github.com/fuf-stack/pixels/issues/606)) ([0c765d1](https://github.com/fuf-stack/pixels/commit/0c765d1bea00c0a865e59a482f874b73710c0082))
+* **deps:** update dependency framer-motion to v11.13.4 ([#610](https://github.com/fuf-stack/pixels/issues/610)) ([587e666](https://github.com/fuf-stack/pixels/commit/587e666407b0f050f16f6c80c6540bde47f5165a))
+* **deps:** update dependency framer-motion to v11.13.5 ([c43ed2f](https://github.com/fuf-stack/pixels/commit/c43ed2f1b6e5958169976b864649f02b075f5d8a))
+* **deps:** update dependency react-icons to v5.4.0 ([fc731f7](https://github.com/fuf-stack/pixels/commit/fc731f70823dd67b53454747d3017326bb50c4fd))
+* **deps:** update dependency react-icons to v5.4.0 ([576e16d](https://github.com/fuf-stack/pixels/commit/576e16d62a085496a1670ea9945ce6ea915be6b4))
+* **pixels,uniform:** add react v19 support ([5817432](https://github.com/fuf-stack/pixels/commit/581743255197ac762c301d5ff9f60562b3797ae3))
+* **pixels,uniform:** update icon snapshots ([2a48476](https://github.com/fuf-stack/pixels/commit/2a48476f9693c9e4bcfd82c74e810773b79cb398))
+* **pixels,uniform:** update nextui to latest + update snapshots ([a55a0f1](https://github.com/fuf-stack/pixels/commit/a55a0f12375a61d67a67df5833712fcdf0f89cb2))
+
 ## [0.14.1](https://github.com/fuf-stack/pixels/compare/uniform-v0.14.0...uniform-v0.14.1) (2024-12-09)
 
 
