@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.14.4](https://github.com/fuf-stack/pixels/compare/uniform-v0.14.3...uniform-v0.14.4) (2024-12-10)
+
+
+### Bug Fixes
+
+* **deps:** update [@nextui](https://github.com/nextui) monorepo ([#616](https://github.com/fuf-stack/pixels/issues/616)) ([0e52467](https://github.com/fuf-stack/pixels/commit/0e524675f0019e9cbf7db7ba3b8bbea7d994a6fd))
+
 ## [0.14.3](https://github.com/fuf-stack/pixels/compare/uniform-v0.14.2...uniform-v0.14.3) (2024-12-10)
 
 
