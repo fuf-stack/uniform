@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.14.3](https://github.com/fuf-stack/pixels/compare/uniform-v0.14.2...uniform-v0.14.3) (2024-12-10)
+
+
+### Bug Fixes
+
+* **uniform:** revert slug to v9.1.0 to support commonjs ([e58253c](https://github.com/fuf-stack/pixels/commit/e58253c2e0442994184804eb051a61f9bb57b08a))
+
 ## [0.14.2](https://github.com/fuf-stack/pixels/compare/uniform-v0.14.1...uniform-v0.14.2) (2024-12-10)
 
 
