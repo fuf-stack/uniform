@@ -136,7 +136,7 @@
     "react-icons": "5.4.0",
     "react-hook-form": "7.54.0",
     "react-select": "5.8.3",
-    "slug": "9.1.0"
+    "slug": "10.0.0"
   },
   "devDependencies": {
     "@repo/storybook-config": "workspace:*",
