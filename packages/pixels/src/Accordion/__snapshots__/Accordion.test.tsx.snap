@@ -33,7 +33,7 @@ exports[`Story Snapshots > AllDisabled 1`] = `
             class="flex-1 flex flex-col text-start"
           >
             <span
-              class="text-foreground text-large"
+              class="text-foreground text-medium"
               data-disabled="true"
             >
               1.
@@ -85,7 +85,7 @@ exports[`Story Snapshots > AllDisabled 1`] = `
             class="flex-1 flex flex-col text-start"
           >
             <span
-              class="text-foreground text-large"
+              class="text-foreground text-medium"
               data-disabled="true"
             >
               2.
@@ -137,7 +137,7 @@ exports[`Story Snapshots > AllDisabled 1`] = `
             class="flex-1 flex flex-col text-start"
           >
             <span
-              class="text-foreground text-large"
+              class="text-foreground text-medium"
               data-disabled="true"
             >
               3.
@@ -196,7 +196,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
               class="flex-1 flex flex-col text-start"
             >
               <span
-                class="text-foreground text-large"
+                class="text-foreground text-medium"
               >
                 1.
               </span>
@@ -240,7 +240,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
               class="flex-1 flex flex-col text-start"
             >
               <span
-                class="text-foreground text-large"
+                class="text-foreground text-medium"
               >
                 2.
               </span>
@@ -284,7 +284,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
               class="flex-1 flex flex-col text-start"
             >
               <span
-                class="text-foreground text-large"
+                class="text-foreground text-medium"
               >
                 3.
               </span>
@@ -333,7 +333,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
               class="flex-1 flex flex-col text-start"
             >
               <span
-                class="text-foreground text-large"
+                class="text-foreground text-medium"
               >
                 1.
               </span>
@@ -377,7 +377,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
               class="flex-1 flex flex-col text-start"
             >
               <span
-                class="text-foreground text-large"
+                class="text-foreground text-medium"
               >
                 2.
               </span>
@@ -421,7 +421,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
               class="flex-1 flex flex-col text-start"
             >
               <span
-                class="text-foreground text-large"
+                class="text-foreground text-medium"
               >
                 3.
               </span>
@@ -470,7 +470,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
               class="flex-1 flex flex-col text-start"
             >
               <span
-                class="text-foreground text-large"
+                class="text-foreground text-medium"
               >
                 1.
               </span>
@@ -514,7 +514,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
               class="flex-1 flex flex-col text-start"
             >
               <span
-                class="text-foreground text-large"
+                class="text-foreground text-medium"
               >
                 2.
               </span>
@@ -558,7 +558,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
               class="flex-1 flex flex-col text-start"
             >
               <span
-                class="text-foreground text-large"
+                class="text-foreground text-medium"
               >
                 3.
               </span>
@@ -609,7 +609,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
               class="flex-1 flex flex-col text-start"
             >
               <span
-                class="text-foreground text-large"
+                class="text-foreground text-medium"
               >
                 1.
               </span>
@@ -655,7 +655,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
               class="flex-1 flex flex-col text-start"
             >
               <span
-                class="text-foreground text-large"
+                class="text-foreground text-medium"
               >
                 2.
               </span>
@@ -701,7 +701,7 @@ exports[`Story Snapshots > AllVariants 1`] = `
               class="flex-1 flex flex-col text-start"
             >
               <span
-                class="text-foreground text-large"
+                class="text-foreground text-medium"
               >
                 3.
               </span>
@@ -904,7 +904,7 @@ exports[`Story Snapshots > Default 1`] = `
             class="flex-1 flex flex-col text-start"
           >
             <span
-              class="text-foreground text-large"
+              class="text-foreground text-medium"
             >
               1.
             </span>
@@ -948,7 +948,7 @@ exports[`Story Snapshots > Default 1`] = `
             class="flex-1 flex flex-col text-start"
           >
             <span
-              class="text-foreground text-large"
+              class="text-foreground text-medium"
             >
               2.
             </span>
@@ -992,7 +992,7 @@ exports[`Story Snapshots > Default 1`] = `
             class="flex-1 flex flex-col text-start"
           >
             <span
-              class="text-foreground text-large"
+              class="text-foreground text-medium"
             >
               3.
             </span>
@@ -1046,7 +1046,7 @@ exports[`Story Snapshots > DefaultOpen 1`] = `
             class="flex-1 flex flex-col text-start"
           >
             <span
-              class="text-foreground text-large"
+              class="text-foreground text-medium"
             >
               1.
             </span>
@@ -1095,7 +1095,7 @@ exports[`Story Snapshots > DefaultOpen 1`] = `
             class="flex-1 flex flex-col text-start"
           >
             <span
-              class="text-foreground text-large"
+              class="text-foreground text-medium"
               data-open="true"
             >
               2.
@@ -1156,7 +1156,7 @@ exports[`Story Snapshots > DefaultOpen 1`] = `
             class="flex-1 flex flex-col text-start"
           >
             <span
-              class="text-foreground text-large"
+              class="text-foreground text-medium"
             >
               3.
             </span>
@@ -1210,7 +1210,7 @@ exports[`Story Snapshots > IndicatorLeft 1`] = `
             class="flex-1 flex flex-col text-start"
           >
             <span
-              class="text-foreground text-large"
+              class="text-foreground text-medium"
             >
               1.
             </span>
@@ -1254,7 +1254,7 @@ exports[`Story Snapshots > IndicatorLeft 1`] = `
             class="flex-1 flex flex-col text-start"
           >
             <span
-              class="text-foreground text-large"
+              class="text-foreground text-medium"
             >
               2.
             </span>
@@ -1298,7 +1298,7 @@ exports[`Story Snapshots > IndicatorLeft 1`] = `
             class="flex-1 flex flex-col text-start"
           >
             <span
-              class="text-foreground text-large"
+              class="text-foreground text-medium"
             >
               3.
             </span>
@@ -1352,7 +1352,7 @@ exports[`Story Snapshots > OnlySingleSelection 1`] = `
             class="flex-1 flex flex-col text-start"
           >
             <span
-              class="text-foreground text-large"
+              class="text-foreground text-medium"
             >
               1.
             </span>
@@ -1396,7 +1396,7 @@ exports[`Story Snapshots > OnlySingleSelection 1`] = `
             class="flex-1 flex flex-col text-start"
           >
             <span
-              class="text-foreground text-large"
+              class="text-foreground text-medium"
             >
               2.
             </span>
@@ -1440,7 +1440,7 @@ exports[`Story Snapshots > OnlySingleSelection 1`] = `
             class="flex-1 flex flex-col text-start"
           >
             <span
-              class="text-foreground text-large"
+              class="text-foreground text-medium"
             >
               3.
             </span>
@@ -1501,7 +1501,7 @@ exports[`Story Snapshots > SomeDisabled 1`] = `
             class="flex-1 flex flex-col text-start"
           >
             <span
-              class="text-foreground text-large"
+              class="text-foreground text-medium"
               data-disabled="true"
             >
               1.
@@ -1553,7 +1553,7 @@ exports[`Story Snapshots > SomeDisabled 1`] = `
             class="flex-1 flex flex-col text-start"
           >
             <span
-              class="text-foreground text-large"
+              class="text-foreground text-medium"
               data-disabled="true"
             >
               2.
@@ -1599,7 +1599,7 @@ exports[`Story Snapshots > SomeDisabled 1`] = `
             class="flex-1 flex flex-col text-start"
           >
             <span
-              class="text-foreground text-large"
+              class="text-foreground text-medium"
             >
               3.
             </span>
@@ -1653,7 +1653,7 @@ exports[`Story Snapshots > WithSubtitle 1`] = `
             class="flex-1 flex flex-col text-start"
           >
             <span
-              class="text-foreground text-large"
+              class="text-foreground text-medium"
             >
               1.
             </span>
@@ -1702,7 +1702,7 @@ exports[`Story Snapshots > WithSubtitle 1`] = `
             class="flex-1 flex flex-col text-start"
           >
             <span
-              class="text-foreground text-large"
+              class="text-foreground text-medium"
             >
               2.
             </span>
@@ -1751,7 +1751,7 @@ exports[`Story Snapshots > WithSubtitle 1`] = `
             class="flex-1 flex flex-col text-start"
           >
             <span
-              class="text-foreground text-large"
+              class="text-foreground text-medium"
             >
               3.
             </span>
