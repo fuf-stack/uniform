@@ -1,4 +1,5 @@
 import type { DragEndEvent } from '@dnd-kit/core';
+import type { JSX } from 'react';
 import type {
   FieldValues,
   UseFieldArrayInsert,

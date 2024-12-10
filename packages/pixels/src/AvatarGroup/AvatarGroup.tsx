@@ -1,3 +1,4 @@
+import type { JSX } from 'react';
 import type { AvatarProps } from '../Avatar/Avatar';
 
 import { AvatarGroup as NextAvatarGroup } from '@nextui-org/avatar';
