@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable import/no-extraneous-dependencies */
 
 // see: https://storybook.js.org/docs/writing-tests/snapshot-testing#execute-tests-on-multiple-stories
 
+/* eslint-disable import/no-extraneous-dependencies */
 import type { Meta, StoryFn } from '@storybook/react';
 
 import { expect, test } from 'vitest';
@@ -9,14 +11,15 @@ import { expect, test } from 'vitest';
 import { composeStories } from '@storybook/react';
 import { render } from '@testing-library/react';
 
-type StoryFile = {
-  default: Meta;
-  [name: string]: StoryFn | Meta;
+// Make StoryFile generic to accept component props
+type StoryFile<TProps = any> = {
+  default: Meta<TProps>;
+  [name: string]: StoryFn<TProps> | Meta<TProps>;
 };
 
-const compose = (
-  entry: StoryFile,
-): ReturnType<typeof composeStories<StoryFile>> => {
+const compose = <TProps extends Record<string, any>>(
+  entry: StoryFile<TProps>,
+): ReturnType<typeof composeStories<StoryFile<TProps>>> => {
   try {
     return composeStories(entry);
   } catch (e) {
@@ -26,7 +29,9 @@ const compose = (
   }
 };
 
-export default (storyFile: StoryFile) => {
+export default <TProps extends Record<string, any>>(
+  storyFile: StoryFile<TProps>,
+) => {
   const stories = Object.entries(compose(storyFile)).map(([name, story]) => ({
     name,
     story,
@@ -40,6 +45,7 @@ export default (storyFile: StoryFile) => {
 
   stories.forEach(({ name, story }) => {
     test(name, async () => {
+      // @ts-expect-error not sure here
       const mounted = render(story());
       // Ensures a consistent snapshot by waiting for the component to render by adding a delay of 100ms before taking the snapshot.
       // eslint-disable-next-line no-promise-executor-return

@@ -15,16 +15,19 @@ describe('Coverage', () => {
     const { container } = render(<Modal />);
     expect(container.firstChild).toMatchSnapshot();
   });
+
   test('Should have correct testIds', () => {
     const { container } = render(<Modal testId="modal1" />);
     expect(container.firstChild).toMatchSnapshot();
   });
+
   test('should render with only header', () => {
     const { container } = render(
       <Modal header={<div>test</div>} footer="id" testId="testId" />,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
+
   test('should render header, body, and footer when provided', () => {
     render(
       <Modal
