@@ -5,7 +5,7 @@ import {
   useForm,
 } from 'react-hook-form';
 
-import { renderHook } from '@testing-library/react-hooks';
+import { renderHook } from '@testing-library/react';
 
 import { useFieldArray } from './useFieldArray';
 
