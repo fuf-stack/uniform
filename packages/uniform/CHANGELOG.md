@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.14.4](https://github.com/fuf-stack/pixels/compare/uniform-v0.14.3...uniform-v0.14.4) (2024-12-11)
+
+
+### Bug Fixes
+
+* **deps:** update [@nextui](https://github.com/nextui) monorepo ([#616](https://github.com/fuf-stack/pixels/issues/616)) ([0e52467](https://github.com/fuf-stack/pixels/commit/0e524675f0019e9cbf7db7ba3b8bbea7d994a6fd))
+* **uniform:** add fieldArray property to set initial value for newly created elements ([5d8bdc2](https://github.com/fuf-stack/pixels/commit/5d8bdc2809e684890598a75de7d47cb2f8e72f52))
+
 ## [0.14.3](https://github.com/fuf-stack/pixels/compare/uniform-v0.14.2...uniform-v0.14.3) (2024-12-10)
 
 
