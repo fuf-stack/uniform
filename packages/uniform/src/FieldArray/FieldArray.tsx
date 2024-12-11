@@ -48,12 +48,14 @@ export type MoveField = 'drag-drop' | 'button';
 export interface FieldArrayProps {
   /** function that renders the children with provided Properties. */
   children: FieldArrayFieldChildren;
+  /* The initial value of a filed that is created in the array */
+  elementInitialValue?: unknown;
   /** Hide a set of buttons. */
   hideButtons?: FieldArrayHideOption[];
   /** label of the FieldArray. */
   label?: React.ReactNode;
   /** stops user from deleting all items. */
-  lastNotDeletable?: boolean;
+  lastElementNotDeletable?: boolean;
   /** name the FieldArray is registered in RHF */
   name: string;
   /** ID for test purposes. */
@@ -67,9 +69,10 @@ export interface FieldArrayProps {
  */
 const FieldArray = ({
   children,
+  elementInitialValue = undefined,
   hideButtons = [],
   label: _label = undefined,
-  lastNotDeletable = true,
+  lastElementNotDeletable = true,
   name,
   testId: _testId = undefined,
   moveField = ['button'],
@@ -102,8 +105,8 @@ const FieldArray = ({
       classNames: { helperWrapper: 'block' },
     });
 
-  if (lastNotDeletable && fields.length === 0) {
-    append(undefined); // TODO: Check if this breaks something
+  if (lastElementNotDeletable && fields.length === 0) {
+    append(elementInitialValue); // TODO: Check if this breaks something
   }
 
   const sensors = useSensors(
@@ -164,7 +167,7 @@ const FieldArray = ({
                 index={index}
                 insert={insert}
                 key={field.id}
-                lastNotDeletable={lastNotDeletable}
+                lastNotDeletable={lastElementNotDeletable}
                 move={move}
                 moveField={moveField}
                 name={name}
@@ -188,7 +191,7 @@ const FieldArray = ({
             <Button
               testId={`${testId}_append`}
               size="sm"
-              onClick={() => append(undefined)} // TODO: Check if this breaks something
+              onClick={() => append(elementInitialValue)} // TODO: Check if this breaks something
             >
               Add
             </Button>
