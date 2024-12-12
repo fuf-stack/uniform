@@ -251,7 +251,7 @@ export const AllowAllDelete: Story = {
       <Input name={`${name}.name`} label={`name ${index}`} />
     ),
 
-    lastNotDeletable: false,
+    lastElementNotDeletable: false,
   },
 };
 
