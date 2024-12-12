@@ -30,7 +30,7 @@ export const Basic: Story = {
   },
 };
 
-export const Disabled: StoryObj<typeof Button> = {
+export const Disabled: Story = {
   args: {
     children: 'Button',
     disabled: true,
@@ -44,21 +44,21 @@ export const IconOnly: Story = {
   },
 };
 
-export const Loading: StoryObj<typeof Button> = {
+export const Loading: Story = {
   args: {
     children: 'Button',
     loading: true,
   },
 };
 
-export const DisabledAnimation: StoryObj<typeof Button> = {
+export const DisabledAnimation: Story = {
   args: {
     children: 'Button',
     disableAnimation: true,
   },
 };
 
-export const AllColors: StoryObj<typeof Button> = {
+export const AllColors: Story = {
   render: () => (
     <>
       {['default', 'primary', 'secondary', 'success', 'warning', 'danger'].map(
@@ -72,7 +72,7 @@ export const AllColors: StoryObj<typeof Button> = {
   ),
 };
 
-export const AllSizes: StoryObj<typeof Button> = {
+export const AllSizes: Story = {
   render: () => (
     <>
       {['sm', 'md', 'lg'].map((size) => (
@@ -84,7 +84,7 @@ export const AllSizes: StoryObj<typeof Button> = {
   ),
 };
 
-export const AllVariants: StoryObj<typeof Button> = {
+export const AllVariants: Story = {
   render: (args) => (
     <>
       {['solid', 'bordered', 'light', 'flat', 'faded', 'shadow', 'ghost'].map(

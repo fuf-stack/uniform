@@ -10,14 +10,14 @@ const meta: Meta<typeof Tooltip> = {
 export default meta;
 type Story = StoryObj<typeof Tooltip>;
 
-export const Default: StoryObj<typeof Tooltip> = {
+export const Default: Story = {
   args: {
     content: 'tooltip content',
     children: 'hover me',
   },
 };
 
-export const Delay: StoryObj<typeof Tooltip> = {
+export const Delay: Story = {
   args: {
     content: 'I took 1 second',
     children: '1000 ms delay',
@@ -25,7 +25,7 @@ export const Delay: StoryObj<typeof Tooltip> = {
   },
 };
 
-export const CloseDelay: StoryObj<typeof Tooltip> = {
+export const CloseDelay: Story = {
   args: {
     content: 'I will go in 3s',
     children: '3000 ms close delay',
