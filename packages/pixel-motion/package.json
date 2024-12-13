@@ -42,7 +42,7 @@
     "prepack": "rm -rf ./dist && pnpm build"
   },
   "dependencies": {
-    "framer-motion": "11.14.3"
+    "framer-motion": "11.14.4"
   },
   "devDependencies": {
     "@repo/tsup-config": "workspace:*"
