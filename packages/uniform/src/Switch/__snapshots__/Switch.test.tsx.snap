@@ -165,9 +165,13 @@ exports[`Story Snapshots > Invalid 1`] = `
         class="place-content-center"
       >
         <label
+          aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
           class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer touch-none tap-highlight-transparent select-none"
-          data-invalid="false"
+          data-focus="true"
+          data-hover="true"
+          data-invalid="true"
           data-required="true"
+          data-selected="true"
           data-testid="switchfield"
           required=""
         >
@@ -177,7 +181,7 @@ exports[`Story Snapshots > Invalid 1`] = `
             name="switchField"
             role="switch"
             type="checkbox"
-            value=""
+            value="true"
           />
           <span
             aria-hidden="true"
@@ -194,6 +198,26 @@ exports[`Story Snapshots > Invalid 1`] = `
             switch
           </span>
         </label>
+        <div
+          class="ml-1 mt-1"
+        >
+          <div
+            class="text-tiny text-danger"
+            data-slot="error-message"
+            id="react-aria-react-useId-mock"
+          >
+            <ul
+              aria-label="Error: I want to be switched off"
+              data-testid="i_want_to_be_switched_off"
+            >
+              <li>
+                <div>
+                  I want to be switched off
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div
         class="mt-4 flex justify-end"

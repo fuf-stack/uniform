@@ -9,7 +9,6 @@ import type { Meta, StoryFn } from '@storybook/react';
 import { expect, test } from 'vitest';
 
 import { composeStories } from '@storybook/react';
-import { render } from '@testing-library/react';
 
 // Make StoryFile generic to accept component props
 type StoryFile<TProps = any> = {
@@ -17,9 +16,9 @@ type StoryFile<TProps = any> = {
   [name: string]: StoryFn<TProps> | Meta<TProps>;
 };
 
-const compose = <TProps extends Record<string, any>>(
-  entry: StoryFile<TProps>,
-): ReturnType<typeof composeStories<StoryFile<TProps>>> => {
+const compose = (
+  entry: StoryFile,
+): ReturnType<typeof composeStories<StoryFile>> => {
   try {
     return composeStories(entry);
   } catch (e) {
@@ -45,12 +44,11 @@ export default <TProps extends Record<string, any>>(
 
   stories.forEach(({ name, story }) => {
     test(name, async () => {
-      // @ts-expect-error not sure here
-      const mounted = render(story());
-      // Ensures a consistent snapshot by waiting for the component to render by adding a delay of 100ms before taking the snapshot.
+      await story.run();
+      // Ensures a consistent snapshot by waiting for the component to render by adding a delay of 1 ms before taking the snapshot.
       // eslint-disable-next-line no-promise-executor-return
       await new Promise((resolve) => setTimeout(resolve, 100));
-      expect(mounted.container).toMatchSnapshot();
+      expect(document.body?.firstChild).toMatchSnapshot();
     });
   });
 };

@@ -597,7 +597,7 @@ exports[`Story Snapshots > Invalid 1`] = `
         aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
         aria-label=" "
         class="relative flex flex-col gap-2 group"
-        data-invalid="false"
+        data-invalid="true"
         data-testid="checkboxfield"
         id="react-aria-react-useId-mock"
         role="group"
@@ -616,23 +616,23 @@ exports[`Story Snapshots > Invalid 1`] = `
         >
           <label
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
-            data-invalid="false"
+            data-invalid="true"
             data-testid="checkboxfield_option_1"
           >
             <input
-              aria-describedby="react-aria-react-useId-mock"
+              aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
+              aria-invalid="true"
               aria-label="1"
               aria-labelledby=":rg:"
               class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
               name="checkboxField"
-              required=""
               title=""
               type="checkbox"
               value="1"
             />
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:bg-primary after:text-primary-foreground text-primary-foreground w-5 h-5 me-2 rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:bg-primary after:text-primary-foreground text-primary-foreground w-5 h-5 me-2 rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:border-danger before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none"
             >
               <svg
                 aria-hidden="true"
@@ -653,7 +653,7 @@ exports[`Story Snapshots > Invalid 1`] = `
               </svg>
             </span>
             <span
-              class="relative text-foreground select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-sm"
+              class="relative select-none text-danger transition-colors-opacity before:transition-width motion-reduce:transition-none text-sm"
               id=":rg:"
             >
               1
@@ -661,23 +661,26 @@ exports[`Story Snapshots > Invalid 1`] = `
           </label>
           <label
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
-            data-invalid="false"
+            data-focus="true"
+            data-hover="true"
+            data-invalid="true"
+            data-selected="true"
             data-testid="checkboxfield_option_2"
           >
             <input
-              aria-describedby="react-aria-react-useId-mock"
+              aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
+              aria-invalid="true"
               aria-label="2"
               aria-labelledby=":rh:"
               class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
               name="checkboxField"
-              required=""
               title=""
               type="checkbox"
               value="2"
             />
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:bg-primary after:text-primary-foreground text-primary-foreground w-5 h-5 me-2 rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:bg-primary after:text-primary-foreground text-primary-foreground w-5 h-5 me-2 rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:border-danger before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none"
             >
               <svg
                 aria-hidden="true"
@@ -690,15 +693,16 @@ exports[`Story Snapshots > Invalid 1`] = `
                   points="1 9 7 14 15 4"
                   stroke="currentColor"
                   stroke-dasharray="22"
-                  stroke-dashoffset="66"
+                  stroke-dashoffset="44"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
+                  style="transition: stroke-dashoffset 250ms linear 0.2s;"
                 />
               </svg>
             </span>
             <span
-              class="relative text-foreground select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-sm"
+              class="relative select-none text-danger transition-colors-opacity before:transition-width motion-reduce:transition-none text-sm"
               id=":rh:"
             >
               2
@@ -706,23 +710,23 @@ exports[`Story Snapshots > Invalid 1`] = `
           </label>
           <label
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
-            data-invalid="false"
+            data-invalid="true"
             data-testid="checkboxfield_option_3"
           >
             <input
-              aria-describedby="react-aria-react-useId-mock"
+              aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
+              aria-invalid="true"
               aria-label="3"
               aria-labelledby=":ri:"
               class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
               name="checkboxField"
-              required=""
               title=""
               type="checkbox"
               value="3"
             />
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:bg-primary after:text-primary-foreground text-primary-foreground w-5 h-5 me-2 rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:bg-primary after:text-primary-foreground text-primary-foreground w-5 h-5 me-2 rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:border-danger before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none"
             >
               <svg
                 aria-hidden="true"
@@ -743,12 +747,34 @@ exports[`Story Snapshots > Invalid 1`] = `
               </svg>
             </span>
             <span
-              class="relative text-foreground select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-sm"
+              class="relative select-none text-danger transition-colors-opacity before:transition-width motion-reduce:transition-none text-sm"
               id=":ri:"
             >
               3
             </span>
           </label>
+        </div>
+        <div
+          class="text-small text-danger"
+          id="react-aria-react-useId-mock"
+        >
+          <ul
+            aria-label="Error: Invalid literal value, expected "1"
+Array must contain at least 2 element(s)"
+            class="text-tiny"
+            data-testid="invalid_literal_value_expected_1array_must_contain_at_least_2_elements"
+          >
+            <li>
+              <div>
+                Invalid literal value, expected "1"
+              </div>
+            </li>
+            <li>
+              <div>
+                Array must contain at least 2 element(s)
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
       <div
@@ -799,7 +825,7 @@ exports[`Story Snapshots > InvalidOneCheckbox 1`] = `
         aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
         aria-label=" "
         class="relative flex flex-col gap-2 group"
-        data-invalid="false"
+        data-invalid="true"
         data-testid="checkboxfield"
         id="react-aria-react-useId-mock"
         role="group"
@@ -818,11 +844,15 @@ exports[`Story Snapshots > InvalidOneCheckbox 1`] = `
         >
           <label
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
-            data-invalid="false"
+            data-focus="true"
+            data-hover="true"
+            data-invalid="true"
+            data-selected="true"
             data-testid="checkboxfield_option_1"
           >
             <input
-              aria-describedby="react-aria-react-useId-mock"
+              aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
+              aria-invalid="true"
               aria-label="1"
               aria-labelledby=":rj:"
               class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
@@ -833,7 +863,7 @@ exports[`Story Snapshots > InvalidOneCheckbox 1`] = `
             />
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:bg-primary after:text-primary-foreground text-primary-foreground w-5 h-5 me-2 rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:bg-primary after:text-primary-foreground text-primary-foreground w-5 h-5 me-2 rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:border-danger before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none"
             >
               <svg
                 aria-hidden="true"
@@ -846,20 +876,37 @@ exports[`Story Snapshots > InvalidOneCheckbox 1`] = `
                   points="1 9 7 14 15 4"
                   stroke="currentColor"
                   stroke-dasharray="22"
-                  stroke-dashoffset="66"
+                  stroke-dashoffset="44"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
+                  style="transition: stroke-dashoffset 250ms linear 0.2s;"
                 />
               </svg>
             </span>
             <span
-              class="relative text-foreground select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-sm"
+              class="relative select-none text-danger transition-colors-opacity before:transition-width motion-reduce:transition-none text-sm"
               id=":rj:"
             >
               1
             </span>
           </label>
+        </div>
+        <div
+          class="text-small text-danger"
+          id="react-aria-react-useId-mock"
+        >
+          <ul
+            aria-label="Error: Invalid input"
+            class="text-tiny"
+            data-testid="invalid_input"
+          >
+            <li>
+              <div>
+                Invalid input
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
       <div

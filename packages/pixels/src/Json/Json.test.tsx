@@ -25,6 +25,7 @@ describe('Coverage', () => {
     const errorMessage = getByText('Error:');
     expect(errorMessage).toBeInTheDocument();
   });
+
   test('renders Json component error with data', () => {
     const { getByText } = render(<Json value="this is a string, not a Json" />);
 
@@ -39,6 +40,7 @@ describe('Coverage', () => {
     const errorMessage = getByText('Error:');
     expect(errorMessage).toBeInTheDocument();
   });
+
   test('Json component copy icon shows on hover and turns green on click', () => {
     const { getByTestId, getByText } = render(
       <Json value={{ some: 'data' }} />,

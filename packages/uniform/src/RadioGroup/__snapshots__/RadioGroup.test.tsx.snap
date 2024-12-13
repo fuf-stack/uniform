@@ -659,11 +659,12 @@ exports[`Story Snapshots > Invalid 1`] = `
     >
       <div
         aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
+        aria-invalid="true"
         aria-label=" "
         aria-orientation="vertical"
         aria-required="true"
         class="relative flex flex-col gap-2 group"
-        data-invalid="false"
+        data-invalid="true"
         data-required="true"
         data-testid="radiogroupfield"
         id="react-aria-react-useId-mock"
@@ -684,32 +685,35 @@ exports[`Story Snapshots > Invalid 1`] = `
           <label
             aria-required="true"
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
+            data-hover="true"
+            data-hover-unselected="true"
+            data-invalid="true"
             data-testid="radiogroupfield_option_one"
           >
             <input
-              aria-describedby=":r1c: react-aria-react-useId-mock"
+              aria-describedby=":r1c: react-aria-react-useId-mock react-aria-react-useId-mock"
               aria-labelledby=":r1b:"
               class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
               name="radioGroupField"
               required=""
-              tabindex="0"
+              tabindex="-1"
               title=""
               type="radio"
               value="one"
             />
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background w-5 h-5 border-danger group-data-[selected=true]:border-danger group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 w-2 h-2 text-danger-foreground transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
               class="flex flex-col ml-1 ms-2"
             >
               <span
-                class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
+                class="relative select-none text-danger transition-colors motion-reduce:transition-none text-sm"
                 id=":r1b:"
               >
                 one
@@ -719,10 +723,14 @@ exports[`Story Snapshots > Invalid 1`] = `
           <label
             aria-required="true"
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
+            data-focus="true"
+            data-hover="true"
+            data-invalid="true"
+            data-selected="true"
             data-testid="radiogroupfield_option_two"
           >
             <input
-              aria-describedby=":r1e: react-aria-react-useId-mock"
+              aria-describedby=":r1e: react-aria-react-useId-mock react-aria-react-useId-mock"
               aria-labelledby=":r1d:"
               class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
               name="radioGroupField"
@@ -734,17 +742,17 @@ exports[`Story Snapshots > Invalid 1`] = `
             />
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background w-5 h-5 border-danger group-data-[selected=true]:border-danger group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 w-2 h-2 text-danger-foreground transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
               class="flex flex-col ml-1 ms-2"
             >
               <span
-                class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
+                class="relative select-none text-danger transition-colors motion-reduce:transition-none text-sm"
                 id=":r1d:"
               >
                 two
@@ -754,38 +762,54 @@ exports[`Story Snapshots > Invalid 1`] = `
           <label
             aria-required="true"
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
+            data-invalid="true"
             data-testid="radiogroupfield_option_three"
           >
             <input
-              aria-describedby=":r1g: react-aria-react-useId-mock"
+              aria-describedby=":r1g: react-aria-react-useId-mock react-aria-react-useId-mock"
               aria-labelledby=":r1f:"
               class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
               name="radioGroupField"
               required=""
-              tabindex="0"
+              tabindex="-1"
               title=""
               type="radio"
               value="three"
             />
             <span
               aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background w-5 h-5 border-danger group-data-[selected=true]:border-danger group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:!border-danger [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
             >
               <span
-                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 w-2 h-2 text-danger-foreground transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
               />
             </span>
             <div
               class="flex flex-col ml-1 ms-2"
             >
               <span
-                class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
+                class="relative select-none text-danger transition-colors motion-reduce:transition-none text-sm"
                 id=":r1f:"
               >
                 three
               </span>
             </div>
           </label>
+        </div>
+        <div
+          class="text-tiny text-danger"
+          id="react-aria-react-useId-mock"
+        >
+          <ul
+            aria-label="Error: Please use another option"
+            data-testid="please_use_another_option"
+          >
+            <li>
+              <div>
+                Please use another option
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
       <div

@@ -1,4 +1,5 @@
 import type { TVClassName, TVProps } from '@fuf-stack/pixel-utils';
+import type { ModalProps as NextModalProps } from '@nextui-org/modal';
 import type { ReactNode } from 'react';
 
 import {
@@ -49,6 +50,8 @@ export interface ModalProps extends VariantProps {
   isOpen: boolean;
   /** close event handler */
   onClose: () => void;
+  /** The container element in which the overlay portal will be placed */
+  portalContainer?: NextModalProps['portalContainer'];
   /** modal size */
   size?: VariantProps['size'];
   /** HTML data-testid attribute used in e2e tests */
@@ -65,6 +68,7 @@ const Modal = ({
   header = undefined,
   isOpen,
   onClose,
+  portalContainer = undefined,
   size = 'md',
   testId = undefined,
 }: ModalProps) => {
@@ -80,6 +84,7 @@ const Modal = ({
       isOpen={isOpen}
       onClose={onClose}
       placement="center"
+      portalContainer={portalContainer}
       scrollBehavior="inside"
     >
       <NextModalContent data-testid={testId ? `modal_${testId}` : 'modal'}>
