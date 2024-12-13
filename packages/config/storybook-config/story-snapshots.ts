@@ -47,7 +47,7 @@ export default <TProps extends Record<string, any>>(
       await story.run();
       // Ensures a consistent snapshot by waiting for the component to render by adding a delay of 1 ms before taking the snapshot.
       // eslint-disable-next-line no-promise-executor-return
-      await new Promise((resolve) => setTimeout(resolve, 100));
+      await new Promise((resolve) => setTimeout(resolve, 1));
       expect(document.body?.firstChild).toMatchSnapshot();
     });
   });
