@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.14.5](https://github.com/fuf-stack/pixels/compare/uniform-v0.14.4...uniform-v0.14.5) (2024-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v11.14.1 ([#623](https://github.com/fuf-stack/pixels/issues/623)) ([44e96cb](https://github.com/fuf-stack/pixels/commit/44e96cbd0517233cc45217578e18a29041e3cbf0))
+* **deps:** update dependency framer-motion to v11.14.3 ([#626](https://github.com/fuf-stack/pixels/issues/626)) ([2a76d24](https://github.com/fuf-stack/pixels/commit/2a76d2497f57a1ac4d5e86dd1ad584e36748ed43))
+* **deps:** update dependency framer-motion to v11.14.4 ([#627](https://github.com/fuf-stack/pixels/issues/627)) ([d0eb6aa](https://github.com/fuf-stack/pixels/commit/d0eb6aa0d587ba96e550ec4ca78cd0b5880aae1c))
+* **deps:** update dependency react-hook-form to v7.54.1 ([#625](https://github.com/fuf-stack/pixels/issues/625)) ([7be8d30](https://github.com/fuf-stack/pixels/commit/7be8d30d4591082cfcb2c7a1e1ed03dd7fbb7b77))
+* **deps:** update dependency react-select to v5.9.0 ([#621](https://github.com/fuf-stack/pixels/issues/621)) ([f4efbf5](https://github.com/fuf-stack/pixels/commit/f4efbf5c6feca075e535e908bd98bfa41d5205ae))
+* **uniform:** prevent uncontrolled warning in CheckboxGroup ([e26bbc9](https://github.com/fuf-stack/pixels/commit/e26bbc972a566c60813afc2022d37742e39d9a4b))
+* **uniform:** prevent uncontrolled warning in Input ([24be41b](https://github.com/fuf-stack/pixels/commit/24be41b861f561f9bea9dc2b07b5356cd56f58c7))
+* **uniform:** prevent uncontrolled warning in TextArea ([d0faf0e](https://github.com/fuf-stack/pixels/commit/d0faf0e3e0fd954cada01e82891bb531582fc666))
+
 ## [0.14.4](https://github.com/fuf-stack/pixels/compare/uniform-v0.14.3...uniform-v0.14.4) (2024-12-11)
 
 
