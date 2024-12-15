@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.29.3](https://github.com/fuf-stack/pixels/compare/pixels-v0.29.2...pixels-v0.29.3) (2024-12-15)
+
+
+### Bug Fixes
+
+* **deps:** update [@nextui](https://github.com/nextui) monorepo ([#616](https://github.com/fuf-stack/pixels/issues/616)) ([0e52467](https://github.com/fuf-stack/pixels/commit/0e524675f0019e9cbf7db7ba3b8bbea7d994a6fd))
+* **deps:** update dependency framer-motion to v11.14.1 ([#623](https://github.com/fuf-stack/pixels/issues/623)) ([44e96cb](https://github.com/fuf-stack/pixels/commit/44e96cbd0517233cc45217578e18a29041e3cbf0))
+* **deps:** update dependency framer-motion to v11.14.3 ([#626](https://github.com/fuf-stack/pixels/issues/626)) ([2a76d24](https://github.com/fuf-stack/pixels/commit/2a76d2497f57a1ac4d5e86dd1ad584e36748ed43))
+* **deps:** update dependency framer-motion to v11.14.4 ([#627](https://github.com/fuf-stack/pixels/issues/627)) ([d0eb6aa](https://github.com/fuf-stack/pixels/commit/d0eb6aa0d587ba96e550ec4ca78cd0b5880aae1c))
+* **pixels:** fix modal stories with interactions ([9733de5](https://github.com/fuf-stack/pixels/commit/9733de57e00ea57a523af90f008771685e746a05))
+* **pixels:** fix test id attribute in ScrollShadow ([36ca94c](https://github.com/fuf-stack/pixels/commit/36ca94c25cb634b86ad1d35747224dd2581e1727))
+* **storybook-config:** fix story-storyshots types ([8b071dd](https://github.com/fuf-stack/pixels/commit/8b071ddd6388396e87601e45c1bfafbca8cb26fa))
+
 ## [0.29.2](https://github.com/fuf-stack/pixels/compare/pixels-v0.29.1...pixels-v0.29.2) (2024-12-10)
 
 
