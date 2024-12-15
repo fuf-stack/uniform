@@ -7,8 +7,8 @@ import { FaBug, FaBullseye } from 'react-icons/fa6';
 import { cn } from '@fuf-stack/pixel-utils';
 import { Button, Card, Json } from '@fuf-stack/pixels';
 
+import { removeNullishFields } from '../../helpers';
 import { useFormContext } from '../../hooks';
-import { removeNullishFields } from './FormContext';
 
 interface FormDebugViewerProps {
   /** CSS class name */

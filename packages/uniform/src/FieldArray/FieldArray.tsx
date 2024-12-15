@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-props-no-spreading */
+
 import type { DragEndEvent } from '@dnd-kit/core';
 import type { JSX } from 'react';
 import type {
@@ -25,6 +27,7 @@ import {
 } from '@dnd-kit/sortable';
 import { useInput } from '@nextui-org/input';
 
+import { cn } from '@fuf-stack/pixel-utils';
 import { Button } from '@fuf-stack/pixels';
 
 import { useFieldArray, useFormContext } from '../hooks';
@@ -69,7 +72,7 @@ export interface FieldArrayProps {
  */
 const FieldArray = ({
   children,
-  elementInitialValue = undefined,
+  elementInitialValue = null,
   hideButtons = [],
   label: _label = undefined,
   lastElementNotDeletable = true,
@@ -142,9 +145,11 @@ const FieldArray = ({
           {showLabel && (
             // eslint-disable-next-line jsx-a11y/label-has-associated-control
             <label
-              // eslint-disable-next-line react/jsx-props-no-spreading
               {...getLabelProps()}
-              className={`${getLabelProps().className} !pointer-events-auto !static !z-0 -mb-1 ml-1 !inline-block`}
+              className={cn(
+                getLabelProps().className,
+                '!pointer-events-auto !static !z-0 -mb-1 ml-1 !inline-block',
+              )}
             >
               {label}
             </label>
@@ -198,9 +203,7 @@ const FieldArray = ({
           )}
           {/* @ts-expect-error rhf incompatibility */}
           {error?._errors && (
-            // eslint-disable-next-line react/jsx-props-no-spreading
             <div {...getHelperWrapperProps()}>
-              {/* eslint-disable-next-line react/jsx-props-no-spreading */}
               <div {...getErrorMessageProps()}>
                 {/* @ts-expect-error rhf incompatibility */}
                 <FieldValidationError error={error?._errors} />

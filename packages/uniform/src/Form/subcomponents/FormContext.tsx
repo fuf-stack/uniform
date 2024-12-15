@@ -7,17 +7,7 @@ import { FormProvider as HookFormProvider, useForm } from 'react-hook-form';
 
 import { useLocalStorage } from '@fuf-stack/pixels';
 
-/**
- * recursively removes all fields that are null or undefined before
- * the form data is passed to the veto validation function
- */
-export const removeNullishFields = (obj: Record<string, unknown>) => {
-  return JSON.parse(
-    JSON.stringify(obj, (_key, value) => {
-      return value === '' || value === null ? undefined : value;
-    }),
-  );
-};
+import { removeNullishFields } from '../../helpers';
 
 type DebugMode = 'debug' | 'debug-testids' | 'off' | 'disabled';
 
