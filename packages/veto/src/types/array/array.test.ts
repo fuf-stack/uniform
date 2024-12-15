@@ -91,3 +91,26 @@ it('rejects global array errors and element errors at the same time', () => {
     },
   });
 });
+
+// INFO: this is used in forms to add new items to flat field arrays
+it('rejects null array element with field is required error message', () => {
+  const result = v({ arrayField: array(string()) }).validate({
+    arrayField: ['one', null, 'three'],
+  });
+  expect(result).toMatchObject({
+    success: false,
+    data: null,
+    errors: {
+      arrayField: {
+        '1': [
+          {
+            code: 'invalid_type',
+            message: 'Field is required',
+            expected: 'string',
+            received: 'null',
+          },
+        ],
+      },
+    },
+  });
+});

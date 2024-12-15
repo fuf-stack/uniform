@@ -1,9 +1,11 @@
+/* eslint-disable import/prefer-default-export */
+
 import type { VetoErrorMap } from './types';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { z } from 'zod';
 
-const issueCodes = z.ZodIssueCode;
+import { issueCodes } from './issueCodes';
 
 // global zod error map
 // see: https://zod.dev/ERROR_HANDLING?id=global-error-map
@@ -12,8 +14,9 @@ const exErrorMap: VetoErrorMap = (issue, ctx) => {
   This is where you override the various error codes
   */
   switch (issue.code) {
+    // set message to field is required for null and undefined fields
     case issueCodes.invalid_type:
-      if (issue.received === 'undefined') {
+      if (issue.received === 'null' || issue.received === 'undefined') {
         return { message: 'Field is required' };
       }
       return { message: ctx.defaultError };
@@ -32,4 +35,6 @@ const exErrorMap: VetoErrorMap = (issue, ctx) => {
       return { message: ctx.defaultError };
   }
 };
+
+// set custom error map
 z.setErrorMap(exErrorMap);

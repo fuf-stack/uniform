@@ -9,6 +9,8 @@ import type { ZodArray } from 'zod';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { z } from 'zod';
 
+import { issueCodes } from '../../issueCodes';
+
 // eslint-disable-next-line prefer-destructuring
 export const array: <T extends VetoTypeAny>(schema: T) => ZodArray<T> = z.array;
 
@@ -65,7 +67,7 @@ const makeElementsUnique = (options: MakeElementsUniqueOptions) => {
     // add element errors
     duplicateIndexes.forEach((i) => {
       ctx.addIssue({
-        code: z.ZodIssueCode.custom,
+        code: issueCodes.custom,
         message:
           (options !== true && options?.elementMessage) ||
           'Element already exists',
@@ -77,7 +79,7 @@ const makeElementsUnique = (options: MakeElementsUniqueOptions) => {
     // add global _error to array
     if (duplicateIndexes.length) {
       ctx.addIssue({
-        code: z.ZodIssueCode.custom,
+        code: issueCodes.custom,
         message:
           (options !== true && options?.message) ||
           'Array elements are not unique',

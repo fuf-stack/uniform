@@ -20,6 +20,8 @@ import { checkSerializedSchemaPath } from './serialize';
 // setup global errorMap
 import './errorMap';
 
+import { issueCodes } from './issueCodes';
+
 /**
  * Constants for error handling and validation
  */
@@ -29,6 +31,7 @@ const OBJECT_LIKE_TYPES = [
   'object',
   'record',
 ] as const;
+
 type ObjectLikeType = (typeof OBJECT_LIKE_TYPES)[number];
 
 /** Type guard to check if a schema type is object-like */
@@ -77,7 +80,7 @@ const formatVetoError = (zodError: any) => {
   let errorFormatted = zodError;
 
   // move params of of custom errors to top level (remove params)
-  if (zodError.code === z.ZodIssueCode.custom && zodError.params) {
+  if (zodError.code === issueCodes.custom && zodError.params) {
     const { params, ...rest } = zodError;
     errorFormatted = { ...rest, ...params };
   }

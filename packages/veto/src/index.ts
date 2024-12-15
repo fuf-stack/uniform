@@ -5,6 +5,9 @@ import { veto } from './veto';
 export type * from './types';
 export type * from './vInfer';
 
+// export veto issue codes
+export * from './issueCodes';
+
 // export veto validator types
 export * from './types/and/and';
 export * from './types/any/any';
@@ -20,6 +23,7 @@ export * from './types/record/record';
 export * from './types/string/string';
 export * from './types/vEnum/vEnum';
 
+// export veto
 export * from './veto';
 
 // also export veto as default
