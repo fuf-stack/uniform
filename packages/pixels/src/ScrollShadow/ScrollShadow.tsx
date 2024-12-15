@@ -21,7 +21,7 @@ export default ({
   className = undefined,
   testId = undefined,
 }: ScrollShadowProps) => (
-  <ScrollShadow className={cn(className)} data-testId={testId}>
+  <ScrollShadow className={cn(className)} data-testid={testId}>
     {children}
   </ScrollShadow>
 );
