@@ -94,7 +94,46 @@ const CheckboxGroup = ({
       control={control}
       name={name}
       disabled={disabled}
-      render={({ field: { onChange, value, ref, onBlur } }) => {
+      render={({ field: { onChange, value = [], ref, onBlur } }) => {
+        /**
+         * Handles the checkbox group value changes based on the number of options:
+         * 1. For single checkbox (options.length === 1):
+         *    - Converts undefined/empty array to [] for consistent controlled behavior
+         *    - Extracts single value from array for onChange
+         *
+         *    Example: undefined → []
+         *            [value] → value
+         *
+         * 2. For multiple checkboxes:
+         *    - Uses raw value array with fallback to empty array
+         *    - Passes through onChange directly
+         *
+         *    Example: undefined → []
+         *            ['value1', 'value2'] → ['value1', 'value2']
+         */
+        const getCheckboxValue = (inputValue: unknown): string[] => {
+          if (Array.isArray(inputValue)) {
+            return inputValue;
+          }
+          if (inputValue) {
+            return [inputValue as string];
+          }
+          return [];
+        };
+
+        const singleCheckboxProps = {
+          value: getCheckboxValue(value),
+          onChange: (newValue: string[]) => onChange(newValue && newValue[0]),
+        };
+
+        const multipleCheckboxProps = {
+          onChange,
+          value: getCheckboxValue(value),
+        };
+
+        const checkboxGroupProps =
+          options.length === 1 ? singleCheckboxProps : multipleCheckboxProps;
+
         return (
           <NextCheckboxGroup
             name={name}
@@ -124,18 +163,10 @@ const CheckboxGroup = ({
                 </label>
               )
             }
-            // eslint-disable-next-line react/jsx-props-no-spreading
-            {...(options.length === 1
-              ? {
-                  value: [value].filter((v) => v !== undefined),
-                  onChange: (newValue) => onChange(newValue && newValue[0]),
-                }
-              : {
-                  onChange,
-                  value,
-                })}
             onBlur={onBlur}
             ref={ref}
+            // eslint-disable-next-line react/jsx-props-no-spreading
+            {...checkboxGroupProps}
           >
             {options?.map((option) => {
               return (
