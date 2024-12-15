@@ -42,6 +42,8 @@ export interface ModalProps extends VariantProps {
   children?: ReactNode;
   /** CSS class name */
   className?: ClassName;
+  /** Disable animations completely */
+  disableAnimation?: boolean;
   /** modal footer */
   footer?: ReactNode;
   /** modal header */
@@ -64,6 +66,7 @@ export interface ModalProps extends VariantProps {
 const Modal = ({
   children = null,
   className = undefined,
+  disableAnimation = false,
   footer = undefined,
   header = undefined,
   isOpen,
@@ -81,6 +84,7 @@ const Modal = ({
       backdrop="opaque"
       classNames={classNames}
       data-testid={testId}
+      disableAnimation={disableAnimation}
       isOpen={isOpen}
       onClose={onClose}
       placement="center"

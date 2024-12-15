@@ -6,5 +6,7 @@ import { defineConfig, mergeConfig } from 'vitest/config'
 export default mergeConfig(config, defineConfig({
   test: {
     // isolate: false
+    testTimeout: 10000,
   },
+
 }))

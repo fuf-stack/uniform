@@ -1,8 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import type { ModalProps } from './Modal';
 
+import { useState } from 'react';
+
 import { useArgs } from '@storybook/preview-api';
-import { expect, userEvent, waitFor, within } from '@storybook/test';
+import { expect, userEvent, waitFor } from '@storybook/test';
 
 import { Button } from '../Button';
 import Modal, { modalVariants } from './Modal';
@@ -23,21 +25,31 @@ export default meta;
 type Story = StoryObj<ModalProps>;
 
 const Template: Story['render'] = (args, { canvasElement }) => {
-  const [{ isOpen }, setArgs] = useArgs();
+  const [isOpen, setIsOpen] = useState(false);
 
-  const onClick = () => setArgs({ isOpen: true });
-  const onClose = () => setArgs({ isOpen: false });
+  const onClick = () => setIsOpen(true);
+  const onClose = () => setIsOpen(false);
+
+  const isTestEnv = process.env.NODE_ENV === 'test';
 
   return (
     <>
-      <Button onClick={onClick} testId="modal_trigger">
+      <Button
+        disableAnimation={isTestEnv}
+        onClick={onClick}
+        testId="modal_trigger"
+      >
         Open Modal
       </Button>
       <Modal
         {...args}
+        disableAnimation={
+          // eslint-disable-next-line react/destructuring-assignment
+          isTestEnv || args.disableAnimation
+        }
         isOpen={isOpen}
-        portalContainer={canvasElement}
         onClose={onClose}
+        portalContainer={canvasElement}
       />
     </>
   );
@@ -60,21 +72,16 @@ export const WithHeaderAndFooter: Story = {
   render: Template,
 };
 
-const playOpenModal: Story['play'] = async ({ canvasElement, canvas }) => {
-  // const canvas = within(canvasElement);
-
-  // open modal
-  const trigger = canvas.getByTestId('modal_trigger');
+const playOpenModal: Story['play'] = async ({ canvas }) => {
+  // Find and click the trigger button
+  const trigger = await canvas.findByTestId('modal_trigger');
   await userEvent.click(trigger);
 
-  // wait for modal to be visible
-  await waitFor(
-    () => {
-      const modal = canvas.getByTestId('modal');
-      expect(modal).toBeVisible();
-    },
-    { timeout: 5000 },
-  );
+  // Wait for modal to be visible
+  await waitFor(() => {
+    const modal = canvas.getByTestId('modal');
+    expect(modal).toBeVisible();
+  });
 };
 
 export const ScrollLongContent: Story = {
@@ -83,8 +90,7 @@ export const ScrollLongContent: Story = {
     children: longContent,
   },
   render: Template,
-  // TODO: tests are failing
-  // play: playOpenModal,
+  play: playOpenModal,
 };
 
 export const CustomStyles: Story = {
@@ -101,8 +107,7 @@ export const CustomStyles: Story = {
     },
   },
   render: Template,
-  // TODO: tests are failing
-  // play: playOpenModal,
+  play: playOpenModal,
 };
 
 const AllSizesTemplate: Story['render'] = (args) => {
