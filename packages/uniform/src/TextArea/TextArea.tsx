@@ -50,8 +50,34 @@ const TextArea = ({
       name={name}
       disabled={disabled}
       render={({
-        field: { disabled: isDisabled, onChange, onBlur, value, ref },
+        field: { disabled: isDisabled, onChange, onBlur, value = '', ref },
       }) => {
+        /**
+         * Ensures the textarea always has a defined string value to prevent uncontrolled to
+         * controlled component warnings:
+         *
+         * 1. Warning Prevention:
+         *    - Sets default value to '' in field destructuring
+         *    - Guarantees the value prop is never undefined/null
+         *    - Prevents React warning: "A component is changing from uncontrolled to controlled"
+         *
+         * 2. Value Handling:
+         *    - Converts undefined/null to empty string
+         *    - Converts non-string values to strings
+         *    - Maintains existing string values
+         *
+         * Examples:
+         * - undefined → "" (prevents uncontrolled warning)
+         * - null → "" (prevents uncontrolled warning)
+         * - "hello" → "hello" (maintains string value)
+         * - 123 → "123" (converts to string)
+         *
+         * Without this handling, the textarea could switch between controlled/uncontrolled
+         * states when the form value changes from undefined to defined, causing React warnings
+         * and potential rendering issues.
+         */
+        const displayValue = value?.toString() ?? '';
+
         return (
           <NextTextArea
             className={cn(className)}
@@ -76,7 +102,7 @@ const TextArea = ({
             labelPlacement="outside"
             placeholder={placeholder}
             name={name}
-            value={value}
+            value={displayValue}
             onChange={onChange}
             onBlur={onBlur}
             ref={ref}
