@@ -44,6 +44,7 @@ export type FieldArrayFieldChildren = (args: {
   move: UseFieldArrayMove;
   name: string;
   remove: UseFieldArrayRemove;
+  testId: string;
 }) => JSX.Element;
 
 export type MoveField = 'drag-drop' | 'button';
@@ -187,6 +188,7 @@ const FieldArray = ({
                   move,
                   name: `${name}.${index}`,
                   remove,
+                  testId: `${testId}_${index}`,
                 })}
               </FieldArrayField>
             );

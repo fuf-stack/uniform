@@ -6,8 +6,7 @@ import type {
 } from 'react-hook-form';
 import type { FieldArrayHideOption, MoveField } from './FieldArray';
 
-// import { useEffect } from 'react';
-import { FaAngleDown, FaAngleUp, FaGripLines } from 'react-icons/fa';
+import { FaAngleDown, FaAngleUp, FaGripVertical } from 'react-icons/fa';
 
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
@@ -95,7 +94,7 @@ const FieldArrayField = ({
                 // eslint-disable-next-line react/jsx-props-no-spreading
                 {...listeners}
               >
-                <FaGripLines />
+                <FaGripVertical />
               </div>
             )}
             {moveField.includes('button') && (
@@ -164,8 +163,6 @@ const FieldArrayField = ({
         </div>
       </li>
       {error && typeof error[index] !== 'undefined' && (
-        // // @ts-expect-error rhf incompatibility
-        // error[Number(index)]?._errors && ( // TODO: was String(). Check if Number is correct. (same below in FieldValidationError)
         // eslint-disable-next-line react/jsx-props-no-spreading
         <div {...getHelperWrapperProps()}>
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}

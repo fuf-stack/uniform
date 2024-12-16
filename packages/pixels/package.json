@@ -84,6 +84,11 @@
       "import": "./dist/ScrollShadow/index.js",
       "require": "./dist/ScrollShadow/index.cjs"
     },
+    "./Table": {
+      "types": "./dist/Table/index.d.ts",
+      "import": "./dist/Table/index.js",
+      "require": "./dist/Table/index.cjs"
+    },
     "./Tabs": {
       "types": "./dist/Tabs/index.d.ts",
       "import": "./dist/Tabs/index.js",
@@ -139,6 +144,7 @@
     "@nextui-org/popover": "2.3.7",
     "@nextui-org/scroll-shadow": "2.3.3",
     "@nextui-org/system": "2.4.4",
+    "@nextui-org/table": "2.2.6",
     "@nextui-org/theme": "2.4.3",
     "@nextui-org/tabs": "2.2.5",
     "@nextui-org/tooltip": "2.2.5",
