@@ -101,7 +101,7 @@ export const EmptyContent: Story = {
 export const ManyElements: Story = {
   args: { columns, className: '' },
   render: (args) => {
-    const rows2 = Array.from({ length: 7000 }).map((_, index) => ({
+    const rows2 = Array.from({ length: 1000 }).map((_, index) => ({
       key: index + 1,
       name: `Person ${index + 1}`,
       role: `Role ${(index % 5) + 1}`,
