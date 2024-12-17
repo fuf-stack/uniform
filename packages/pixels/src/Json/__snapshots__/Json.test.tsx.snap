@@ -908,6 +908,956 @@ exports[`Story Snapshots > Collapsed 1`] = `
 </div>
 `;
 
+exports[`Story Snapshots > DayInTheLifeOfAProgrammer 1`] = `
+<div>
+  <div
+    aria-label="JSON viewer"
+    class=""
+    role="region"
+  >
+    <div
+      class="relative"
+    >
+      <div
+        class="w-json-view-container w-rjv pr-5 w-rjv-inner"
+        style="line-height: 1.4; font-family: var(--w-rjv-font-family, Menlo, monospace); font-size: 13px; --w-rjv-font-family: monospace; --w-rjv-color: #002b36; --w-rjv-key-string: #002b36; --w-rjv-background-color: #ffffff; --w-rjv-line-color: #ebebeb; --w-rjv-arrow-color: var(--w-rjv-color); --w-rjv-edit-color: var(--w-rjv-color); --w-rjv-info-color: #0000004d; --w-rjv-update-color: #ebcb8b; --w-rjv-copied-color: #002b36; --w-rjv-copied-success-color: #28a745; --w-rjv-curlybraces-color: #236a7c; --w-rjv-colon-color: #002b36; --w-rjv-brackets-color: #236a7c; --w-rjv-quotes-color: var(--w-rjv-key-string); --w-rjv-quotes-string-color: var(--w-rjv-type-string-color); --w-rjv-type-string-color: #cb4b16; --w-rjv-type-int-color: #268bd2; --w-rjv-type-float-color: #859900; --w-rjv-type-bigint-color: #268bd2; --w-rjv-type-boolean-color: #2aa198; --w-rjv-type-date-color: #586e75; --w-rjv-type-url-color: #0969da; --w-rjv-type-null-color: #d33682; --w-rjv-type-nan-color: #859900; --w-rjv-type-undefined-color: #586e75;"
+      >
+        <span
+          style="display: inline-flex; align-items: center;"
+        >
+          <span
+            class="w-rjv-arrow"
+            style="transform: rotate(0deg); transition: all 0.3s;"
+          >
+            <svg
+              fill="var(--w-rjv-arrow-color, currentColor)"
+              style="cursor: pointer; height: 1em; width: 1em; user-select: none; display: inline-flex;"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              />
+            </svg>
+          </span>
+          <span
+            class="w-rjv-curlybraces-start"
+          >
+            {
+          </span>
+          <span
+            class="w-rjv-object-size"
+            style="padding-left: 8px; font-style: italic;"
+          >
+            3 items
+          </span>
+        </span>
+        <div
+          class="w-rjv-wrap"
+          style="padding-left: 15px; margin-left: 6px;"
+        >
+          <div
+            class="w-rjv-inner"
+          >
+            <span
+              style="display: inline-flex; align-items: center;"
+            >
+              <span
+                class="w-rjv-arrow"
+                style="transform: rotate(0deg); transition: all 0.3s;"
+              >
+                <svg
+                  fill="var(--w-rjv-arrow-color, currentColor)"
+                  style="cursor: pointer; height: 1em; width: 1em; user-select: none; display: inline-flex;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                  />
+                </svg>
+              </span>
+              <span>
+                <span
+                  class="w-rjv-quotes"
+                  data-placement="left"
+                >
+                  "
+                </span>
+                <span
+                  class="w-rjv-object-key"
+                >
+                  coffee
+                </span>
+                <span
+                  class="w-rjv-quotes"
+                  data-placement="right"
+                >
+                  "
+                </span>
+              </span>
+              <span
+                class="w-rjv-colon"
+                style="margin-left: 0px; margin-right: 2px;"
+              >
+                :
+              </span>
+              <span
+                class="w-rjv-curlybraces-start"
+              >
+                {
+              </span>
+              <span
+                class="w-rjv-object-size"
+                style="padding-left: 8px; font-style: italic;"
+              >
+                4 items
+              </span>
+            </span>
+            <div
+              class="w-rjv-wrap"
+              style="padding-left: 15px; margin-left: 6px;"
+            >
+              <div
+                class="w-rjv-line"
+              >
+                <span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="left"
+                  >
+                    "
+                  </span>
+                  <span
+                    class="w-rjv-object-key"
+                  >
+                    cups
+                  </span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="right"
+                  >
+                    "
+                  </span>
+                </span>
+                <span
+                  class="w-rjv-colon"
+                  style="margin-left: 0px; margin-right: 2px;"
+                >
+                  :
+                </span>
+                <span
+                  class="w-rjv-value"
+                  data-type="int"
+                >
+                  42
+                </span>
+              </div>
+              <div
+                class="w-rjv-line"
+              >
+                <span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="left"
+                  >
+                    "
+                  </span>
+                  <span
+                    class="w-rjv-object-key"
+                  >
+                    status
+                  </span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="right"
+                  >
+                    "
+                  </span>
+                </span>
+                <span
+                  class="w-rjv-colon"
+                  style="margin-left: 0px; margin-right: 2px;"
+                >
+                  :
+                </span>
+                <span
+                  class="w-rjv-quotes"
+                >
+                  "
+                </span>
+                <span
+                  class="w-rjv-value"
+                  data-type="string"
+                  style="cursor: initial;"
+                >
+                  Not enough
+                </span>
+                <span
+                  class="w-rjv-quotes"
+                >
+                  "
+                </span>
+              </div>
+              <div
+                class="w-rjv-line"
+              >
+                <span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="left"
+                  >
+                    "
+                  </span>
+                  <span
+                    class="w-rjv-object-key"
+                  >
+                    lastBreak
+                  </span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="right"
+                  >
+                    "
+                  </span>
+                </span>
+                <span
+                  class="w-rjv-colon"
+                  style="margin-left: 0px; margin-right: 2px;"
+                >
+                  :
+                </span>
+                <span
+                  class="w-rjv-quotes"
+                >
+                  "
+                </span>
+                <span
+                  class="w-rjv-value"
+                  data-type="string"
+                  style="cursor: initial;"
+                >
+                  What's a break?
+                </span>
+                <span
+                  class="w-rjv-quotes"
+                >
+                  "
+                </span>
+              </div>
+              <div
+                class="w-rjv-line"
+              >
+                <span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="left"
+                  >
+                    "
+                  </span>
+                  <span
+                    class="w-rjv-object-key"
+                  >
+                    type
+                  </span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="right"
+                  >
+                    "
+                  </span>
+                </span>
+                <span
+                  class="w-rjv-colon"
+                  style="margin-left: 0px; margin-right: 2px;"
+                >
+                  :
+                </span>
+                <span
+                  class="w-rjv-quotes"
+                >
+                  "
+                </span>
+                <span
+                  class="w-rjv-value"
+                  data-type="string"
+                  style="cursor: initial;"
+                >
+                  Whatever's left in the pot
+                </span>
+                <span
+                  class="w-rjv-quotes"
+                >
+                  "
+                </span>
+              </div>
+            </div>
+            <div
+              style="padding-left: 4px;"
+            >
+              <span
+                class="w-rjv-curlybraces-end"
+              >
+                }
+              </span>
+            </div>
+          </div>
+          <div
+            class="w-rjv-inner"
+          >
+            <span
+              style="display: inline-flex; align-items: center;"
+            >
+              <span
+                class="w-rjv-arrow"
+                style="transform: rotate(0deg); transition: all 0.3s;"
+              >
+                <svg
+                  fill="var(--w-rjv-arrow-color, currentColor)"
+                  style="cursor: pointer; height: 1em; width: 1em; user-select: none; display: inline-flex;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                  />
+                </svg>
+              </span>
+              <span>
+                <span
+                  class="w-rjv-quotes"
+                  data-placement="left"
+                >
+                  "
+                </span>
+                <span
+                  class="w-rjv-object-key"
+                >
+                  bugs
+                </span>
+                <span
+                  class="w-rjv-quotes"
+                  data-placement="right"
+                >
+                  "
+                </span>
+              </span>
+              <span
+                class="w-rjv-colon"
+                style="margin-left: 0px; margin-right: 2px;"
+              >
+                :
+              </span>
+              <span
+                class="w-rjv-curlybraces-start"
+              >
+                {
+              </span>
+              <span
+                class="w-rjv-object-size"
+                style="padding-left: 8px; font-style: italic;"
+              >
+                4 items
+              </span>
+            </span>
+            <div
+              class="w-rjv-wrap"
+              style="padding-left: 15px; margin-left: 6px;"
+            >
+              <div
+                class="w-rjv-line"
+              >
+                <span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="left"
+                  >
+                    "
+                  </span>
+                  <span
+                    class="w-rjv-object-key"
+                  >
+                    found
+                  </span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="right"
+                  >
+                    "
+                  </span>
+                </span>
+                <span
+                  class="w-rjv-colon"
+                  style="margin-left: 0px; margin-right: 2px;"
+                >
+                  :
+                </span>
+                <span
+                  class="w-rjv-value"
+                  data-type="int"
+                >
+                  99
+                </span>
+              </div>
+              <div
+                class="w-rjv-line"
+              >
+                <span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="left"
+                  >
+                    "
+                  </span>
+                  <span
+                    class="w-rjv-object-key"
+                  >
+                    fixed
+                  </span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="right"
+                  >
+                    "
+                  </span>
+                </span>
+                <span
+                  class="w-rjv-colon"
+                  style="margin-left: 0px; margin-right: 2px;"
+                >
+                  :
+                </span>
+                <span
+                  class="w-rjv-value"
+                  data-type="int"
+                >
+                  1
+                </span>
+              </div>
+              <div
+                class="w-rjv-line"
+              >
+                <span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="left"
+                  >
+                    "
+                  </span>
+                  <span
+                    class="w-rjv-object-key"
+                  >
+                    created
+                  </span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="right"
+                  >
+                    "
+                  </span>
+                </span>
+                <span
+                  class="w-rjv-colon"
+                  style="margin-left: 0px; margin-right: 2px;"
+                >
+                  :
+                </span>
+                <span
+                  class="w-rjv-value"
+                  data-type="int"
+                >
+                  157
+                </span>
+              </div>
+              <div
+                class="w-rjv-inner"
+              >
+                <span
+                  style="display: inline-flex; align-items: center;"
+                >
+                  <span
+                    class="w-rjv-arrow"
+                    style="transform: rotate(0deg); transition: all 0.3s;"
+                  >
+                    <svg
+                      fill="var(--w-rjv-arrow-color, currentColor)"
+                      style="cursor: pointer; height: 1em; width: 1em; user-select: none; display: inline-flex;"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                      />
+                    </svg>
+                  </span>
+                  <span>
+                    <span
+                      class="w-rjv-quotes"
+                      data-placement="left"
+                    >
+                      "
+                    </span>
+                    <span
+                      class="w-rjv-object-key"
+                    >
+                      excuses
+                    </span>
+                    <span
+                      class="w-rjv-quotes"
+                      data-placement="right"
+                    >
+                      "
+                    </span>
+                  </span>
+                  <span
+                    class="w-rjv-colon"
+                    style="margin-left: 0px; margin-right: 2px;"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="w-rjv-brackets-start"
+                  >
+                    [
+                  </span>
+                  <span
+                    class="w-rjv-object-size"
+                    style="padding-left: 8px; font-style: italic;"
+                  >
+                    4 items
+                  </span>
+                </span>
+                <div
+                  class="w-rjv-wrap"
+                  style="padding-left: 15px; margin-left: 6px;"
+                >
+                  <div
+                    class="w-rjv-line"
+                  >
+                    <span>
+                      <span
+                        class="w-rjv-object-key"
+                      >
+                        0
+                      </span>
+                    </span>
+                    <span
+                      class="w-rjv-colon"
+                      style="margin-left: 0px; margin-right: 2px;"
+                    >
+                      :
+                    </span>
+                    <span
+                      class="w-rjv-quotes"
+                    >
+                      "
+                    </span>
+                    <span
+                      class="w-rjv-value"
+                      data-type="string"
+                      style="cursor: initial;"
+                    >
+                      It works on my machine
+                    </span>
+                    <span
+                      class="w-rjv-quotes"
+                    >
+                      "
+                    </span>
+                  </div>
+                  <div
+                    class="w-rjv-line"
+                  >
+                    <span>
+                      <span
+                        class="w-rjv-object-key"
+                      >
+                        1
+                      </span>
+                    </span>
+                    <span
+                      class="w-rjv-colon"
+                      style="margin-left: 0px; margin-right: 2px;"
+                    >
+                      :
+                    </span>
+                    <span
+                      class="w-rjv-quotes"
+                    >
+                      "
+                    </span>
+                    <span
+                      class="w-rjv-value"
+                      data-type="string"
+                      style="cursor: pointer;"
+                    >
+                      That's not a bug, it's a featu...
+                    </span>
+                    <span
+                      class="w-rjv-quotes"
+                    >
+                      "
+                    </span>
+                  </div>
+                  <div
+                    class="w-rjv-line"
+                  >
+                    <span>
+                      <span
+                        class="w-rjv-object-key"
+                      >
+                        2
+                      </span>
+                    </span>
+                    <span
+                      class="w-rjv-colon"
+                      style="margin-left: 0px; margin-right: 2px;"
+                    >
+                      :
+                    </span>
+                    <span
+                      class="w-rjv-quotes"
+                    >
+                      "
+                    </span>
+                    <span
+                      class="w-rjv-value"
+                      data-type="string"
+                      style="cursor: initial;"
+                    >
+                      Cannot reproduce
+                    </span>
+                    <span
+                      class="w-rjv-quotes"
+                    >
+                      "
+                    </span>
+                  </div>
+                  <div
+                    class="w-rjv-line"
+                  >
+                    <span>
+                      <span
+                        class="w-rjv-object-key"
+                      >
+                        3
+                      </span>
+                    </span>
+                    <span
+                      class="w-rjv-colon"
+                      style="margin-left: 0px; margin-right: 2px;"
+                    >
+                      :
+                    </span>
+                    <span
+                      class="rounded bg-warning-100 px-1 text-xs text-warning-700"
+                    >
+                      null
+                    </span>
+                  </div>
+                </div>
+                <div
+                  style="padding-left: 4px;"
+                >
+                  <span
+                    class="w-rjv-brackets-end"
+                  >
+                    ]
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              style="padding-left: 4px;"
+            >
+              <span
+                class="w-rjv-curlybraces-end"
+              >
+                }
+              </span>
+            </div>
+          </div>
+          <div
+            class="w-rjv-inner"
+          >
+            <span
+              style="display: inline-flex; align-items: center;"
+            >
+              <span
+                class="w-rjv-arrow"
+                style="transform: rotate(0deg); transition: all 0.3s;"
+              >
+                <svg
+                  fill="var(--w-rjv-arrow-color, currentColor)"
+                  style="cursor: pointer; height: 1em; width: 1em; user-select: none; display: inline-flex;"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                  />
+                </svg>
+              </span>
+              <span>
+                <span
+                  class="w-rjv-quotes"
+                  data-placement="left"
+                >
+                  "
+                </span>
+                <span
+                  class="w-rjv-object-key"
+                >
+                  meetings
+                </span>
+                <span
+                  class="w-rjv-quotes"
+                  data-placement="right"
+                >
+                  "
+                </span>
+              </span>
+              <span
+                class="w-rjv-colon"
+                style="margin-left: 0px; margin-right: 2px;"
+              >
+                :
+              </span>
+              <span
+                class="w-rjv-curlybraces-start"
+              >
+                {
+              </span>
+              <span
+                class="w-rjv-object-size"
+                style="padding-left: 8px; font-style: italic;"
+              >
+                5 items
+              </span>
+            </span>
+            <div
+              class="w-rjv-wrap"
+              style="padding-left: 15px; margin-left: 6px;"
+            >
+              <div
+                class="w-rjv-line"
+              >
+                <span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="left"
+                  >
+                    "
+                  </span>
+                  <span
+                    class="w-rjv-object-key"
+                  >
+                    scheduled
+                  </span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="right"
+                  >
+                    "
+                  </span>
+                </span>
+                <span
+                  class="w-rjv-colon"
+                  style="margin-left: 0px; margin-right: 2px;"
+                >
+                  :
+                </span>
+                <span
+                  class="w-rjv-value"
+                  data-type="int"
+                >
+                  8
+                </span>
+              </div>
+              <div
+                class="w-rjv-line"
+              >
+                <span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="left"
+                  >
+                    "
+                  </span>
+                  <span
+                    class="w-rjv-object-key"
+                  >
+                    necessary
+                  </span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="right"
+                  >
+                    "
+                  </span>
+                </span>
+                <span
+                  class="w-rjv-colon"
+                  style="margin-left: 0px; margin-right: 2px;"
+                >
+                  :
+                </span>
+                <span
+                  class="w-rjv-value"
+                  data-type="int"
+                >
+                  0
+                </span>
+              </div>
+              <div
+                class="w-rjv-line"
+              >
+                <span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="left"
+                  >
+                    "
+                  </span>
+                  <span
+                    class="w-rjv-object-key"
+                  >
+                    timeSpentPretendingToPayAttention
+                  </span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="right"
+                  >
+                    "
+                  </span>
+                </span>
+                <span
+                  class="w-rjv-colon"
+                  style="margin-left: 0px; margin-right: 2px;"
+                >
+                  :
+                </span>
+                <span
+                  class="w-rjv-quotes"
+                >
+                  "
+                </span>
+                <span
+                  class="w-rjv-value"
+                  data-type="string"
+                  style="cursor: initial;"
+                >
+                  3 hours
+                </span>
+                <span
+                  class="w-rjv-quotes"
+                >
+                  "
+                </span>
+              </div>
+              <div
+                class="w-rjv-line"
+              >
+                <span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="left"
+                  >
+                    "
+                  </span>
+                  <span
+                    class="w-rjv-object-key"
+                  >
+                    cameraMalfunction
+                  </span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="right"
+                  >
+                    "
+                  </span>
+                </span>
+                <span
+                  class="w-rjv-colon"
+                  style="margin-left: 0px; margin-right: 2px;"
+                >
+                  :
+                </span>
+                <span
+                  class="w-rjv-value"
+                  data-type="bool"
+                >
+                  true
+                </span>
+              </div>
+              <div
+                class="w-rjv-line"
+              >
+                <span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="left"
+                  >
+                    "
+                  </span>
+                  <span
+                    class="w-rjv-object-key"
+                  >
+                    muted
+                  </span>
+                  <span
+                    class="w-rjv-quotes"
+                    data-placement="right"
+                  >
+                    "
+                  </span>
+                </span>
+                <span
+                  class="w-rjv-colon"
+                  style="margin-left: 0px; margin-right: 2px;"
+                >
+                  :
+                </span>
+                <span
+                  class="w-rjv-quotes"
+                >
+                  "
+                </span>
+                <span
+                  class="w-rjv-value"
+                  data-type="string"
+                  style="cursor: pointer;"
+                >
+                  Definitely not talking about t...
+                </span>
+                <span
+                  class="w-rjv-quotes"
+                >
+                  "
+                </span>
+              </div>
+            </div>
+            <div
+              style="padding-left: 4px;"
+            >
+              <span
+                class="w-rjv-curlybraces-end"
+              >
+                }
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          style="padding-left: 4px;"
+        >
+          <span
+            class="w-rjv-curlybraces-end"
+          >
+            }
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Story Snapshots > Default 1`] = `
 <div>
   <div
