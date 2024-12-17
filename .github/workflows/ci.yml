@@ -6,15 +6,45 @@ on:
     branches:
       - '**'
 
+# Cancel in-progress runs when a new workflow is triggered
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test:
+    name: Test
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup-project
-      - run: pnpm test
+      - name: Run tests
+        run: pnpm test
+      - name: Upload coverage reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-report
+          path: coverage/
+
+  sonar:
+    name: SonarQube Analysis
+    needs: [test]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Required for SonarQube
+
+      - name: Download coverage report
+        uses: actions/download-artifact@v3
+        with:
+          name: coverage-report
+          path: coverage/
+
       - uses: SonarSource/sonarqube-scan-action@v4
         env:
-          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
