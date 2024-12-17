@@ -7,10 +7,9 @@ const config: StorybookConfig = {
   stories: [],
   addons: [
     '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
-    '@storybook/addon-links',
     '@storybook/addon-a11y',
     '@storybook/addon-interactions',
+    '@storybook/addon-links',
     {
       name: '@storybook/addon-coverage',
       options: {

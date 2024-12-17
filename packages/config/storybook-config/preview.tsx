@@ -70,7 +70,7 @@ const channel = addons.getChannel();
 
 let previousIsDarkMode = false;
 
-const darkModeToggleListener = (isDarkMode) => {
+const darkModeToggleListener = (isDarkMode: boolean) => {
   if (previousIsDarkMode !== isDarkMode) {
     console.log('dark mode changed, setting background...', {
       isDarkMode,
