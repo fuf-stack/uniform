@@ -15,24 +15,19 @@ const testObject = {
   anObject: { bool: true, number: 123, null: null, string: 'a string' },
 };
 
-export const Default: Story = {
-  args: {},
-};
-
-// TODO: Some weird glitching behavior in storybook.
-export const AsJsonString: Story = {
+export const WithJsonString: Story = {
   args: {
     value: JSON.stringify(testObject, null, 2),
   },
 };
 
-export const AsObject: Story = {
+export const WithJsonObject: Story = {
   args: {
     value: testObject,
   },
 };
 
-export const DefaultCollapsed: Story = {
+export const Collapsed: Story = {
   args: {
     collapsed: true,
     value: testObject,
