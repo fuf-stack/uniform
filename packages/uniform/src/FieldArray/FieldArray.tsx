@@ -25,12 +25,11 @@ import {
   SortableContext,
   verticalListSortingStrategy,
 } from '@dnd-kit/sortable';
-import { useInput } from '@nextui-org/input';
 
 import { cn } from '@fuf-stack/pixel-utils';
 import { Button } from '@fuf-stack/pixels';
 
-import { useFieldArray, useFormContext } from '../hooks';
+import { useFieldArray, useFormContext, useInput } from '../hooks';
 import { FieldCopyTestIdButton } from '../partials/FieldCopyTestIdButton';
 import { FieldValidationError } from '../partials/FieldValidationError';
 import FieldArrayField from './FieldArrayField';

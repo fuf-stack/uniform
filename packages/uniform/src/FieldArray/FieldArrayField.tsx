@@ -10,12 +10,11 @@ import { FaAngleDown, FaAngleUp, FaGripVertical } from 'react-icons/fa';
 
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-import { useInput } from '@nextui-org/input';
 
 import { Button } from '@fuf-stack/pixels';
 
 import { slugify } from '../helpers';
-import { useFormContext } from '../hooks';
+import { useFormContext, useInput } from '../hooks';
 import { FieldValidationError } from '../partials/FieldValidationError';
 
 interface FieldArrayFieldProps {

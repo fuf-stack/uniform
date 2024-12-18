@@ -1,12 +1,11 @@
 import type { TVClassName, TVProps } from '@fuf-stack/pixel-utils';
 
-import { useInput } from '@nextui-org/input';
 import { Switch as NextSwitch } from '@nextui-org/switch';
 
 import { tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
 
 import { Controller } from '../Controller';
-import { useFormContext } from '../hooks';
+import { useFormContext, useInput } from '../hooks';
 import { FieldCopyTestIdButton } from '../partials/FieldCopyTestIdButton';
 import { FieldValidationError } from '../partials/FieldValidationError';
 
