@@ -10,7 +10,7 @@ import * as vt from '@fuf-stack/veto';
 import '@testing-library/jest-dom/vitest';
 
 import { Form } from '../Form';
-import { Controller } from './Controller';
+import Controller from './Controller';
 
 const defaultOnSubmit = vi.fn();
 

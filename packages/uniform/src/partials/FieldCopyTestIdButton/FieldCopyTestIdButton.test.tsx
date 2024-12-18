@@ -1,13 +1,9 @@
-import { it } from 'vitest';
+import { describe } from 'vitest';
 
-it.todo('not working right now');
+import storySnapshots from '@repo/storybook-config/story-snapshots';
 
-// import { describe } from 'vitest';
+import * as stories from './FieldCopyTestIdButton.stories';
 
-// import storySnapshots from '@repo/storybook-config/story-snapshots';
-
-// import * as stories from './FieldCopyTestIdButton.stories';
-
-// describe('Story Snapshots', () => {
-//   storySnapshots(stories);
-// });
+describe('Story Snapshots', () => {
+  storySnapshots(stories);
+});
