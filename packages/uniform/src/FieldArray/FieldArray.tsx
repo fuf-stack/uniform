@@ -29,6 +29,7 @@ import {
 import { cn } from '@fuf-stack/pixel-utils';
 import { Button } from '@fuf-stack/pixels';
 
+import { toNullishString } from '../helpers';
 import { useFieldArray, useFormContext, useInput } from '../hooks';
 import { FieldCopyTestIdButton } from '../partials/FieldCopyTestIdButton';
 import { FieldValidationError } from '../partials/FieldValidationError';
@@ -109,7 +110,7 @@ const FieldArray = ({
     });
 
   if (lastElementNotDeletable && fields.length === 0) {
-    append(elementInitialValue); // TODO: Check if this breaks something
+    append(toNullishString(elementInitialValue));
   }
 
   const sensors = useSensors(
@@ -195,9 +196,9 @@ const FieldArray = ({
 
           {!hideButtons.includes('add') && !hideButtons.includes('all') && (
             <Button
-              testId={`${testId}_append`}
+              onClick={() => append(toNullishString(elementInitialValue))}
               size="sm"
-              onClick={() => append(elementInitialValue)} // TODO: Check if this breaks something
+              testId={`${testId}_append`}
             >
               Add
             </Button>

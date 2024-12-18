@@ -7,7 +7,7 @@ import { FaBug, FaBullseye } from 'react-icons/fa6';
 import { cn } from '@fuf-stack/pixel-utils';
 import { Button, Card, Json } from '@fuf-stack/pixels';
 
-import { removeNullishFields } from '../../helpers';
+import { toValidationState } from '../../helpers';
 import { useFormContext } from '../../hooks';
 
 interface FormDebugViewerProps {
@@ -29,21 +29,22 @@ const FormDebugViewer = ({ className = undefined }: FormDebugViewerProps) => {
     VetoError['errors'] | null
   >(null);
 
-  const formValues = removeNullishFields(watch());
+  const validationValues = toValidationState(watch());
   const debugTestIdsEnabled = debugMode === 'debug-testids';
 
   useEffect(
     () => {
       const updateValidationErrors = async () => {
         if (validation) {
-          const validateResult = await validation?.validateAsync(formValues);
+          const validateResult =
+            await validation?.validateAsync(validationValues);
           setValidationErrors(validateResult?.errors);
         }
       };
       updateValidationErrors();
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [JSON.stringify(formValues)],
+    [JSON.stringify(validationValues)],
   );
 
   if (!debugMode || debugMode === 'off') {
@@ -85,7 +86,7 @@ const FormDebugViewer = ({ className = undefined }: FormDebugViewerProps) => {
       </Button>
       <Json
         value={{
-          values: formValues,
+          values: validationValues,
           errors: validationErrors,
           dirtyFields,
           isValid,

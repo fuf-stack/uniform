@@ -1,2 +1,2 @@
-export * from './removeNullishFields/removeNullishFields';
+export * from './nullishFields/nullishFields';
 export * from './slugify/slugify';
