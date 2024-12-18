@@ -7,7 +7,7 @@ import { FaBug, FaBullseye } from 'react-icons/fa6';
 import { cn } from '@fuf-stack/pixel-utils';
 import { Button, Card, Json } from '@fuf-stack/pixels';
 
-import { toValidationState } from '../../helpers';
+import { toValidationFormat } from '../../helpers';
 import { useFormContext } from '../../hooks';
 
 interface FormDebugViewerProps {
@@ -29,7 +29,7 @@ const FormDebugViewer = ({ className = undefined }: FormDebugViewerProps) => {
     VetoError['errors'] | null
   >(null);
 
-  const validationValues = toValidationState(watch());
+  const validationValues = toValidationFormat(watch());
   const debugTestIdsEnabled = debugMode === 'debug-testids';
 
   useEffect(

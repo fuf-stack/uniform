@@ -1,5 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-
 /**
  * String markers used to preserve null, false, and 0 values during JSON processing
  */
@@ -8,12 +6,10 @@ const falseString = '__FALSE__';
 const zeroString = '__ZERO__';
 
 /**
- * Converts marker strings back to their original null/falsy values when processing arrays
+ * Converts marker strings back to their original values when processing arrays
  */
 export const fromNullishString = (value: unknown): unknown => {
-  if (typeof value !== 'string') {
-    return value;
-  }
+  if (typeof value !== 'string') return value;
 
   switch (value) {
     case nullString:
@@ -38,90 +34,101 @@ export const toNullishString = (value: unknown): unknown => {
 };
 
 /**
- * Recursively removes nullish fields (empty strings and null values) from objects while preserving arrays.
- * This function is particularly useful for cleaning up form data before validation.
+ * Converts field values to a format suitable for forms by:
+ * - Converting array values to their string markers to preserve null/falsy values
+ * - Removing empty strings and null values from objects
  *
- * @param obj - The object to clean up
- * @returns A new object with all nullish fields removed from nested objects
+ * This conversion is required because React Hook Form does not support arrays with
+ * flat values (string, number, boolean, null). Array fields must contain objects.
+ * We work around this by converting array values to string markers.
  *
  * @example
- * // Simple object
- * const form = {
+ * const fields = {
  *   name: 'John',
- *   email: '',
- *   age: 30,
- *   address: null
- * };
- * removeNullishFields(form);
- * // Result: { name: 'John', age: 30 }
- *
- * @example
- * // Nested object with arrays
- * const complexForm = {
- *   user: {
- *     name: 'John',
- *     contacts: ['', null, '555-0123'],  // Arrays are preserved as-is
- *     details: {
- *       address: null,
- *       email: ''
- *     }
+ *   scores: [0, null, 75, false],
+ *   contact: {
+ *     email: '',
+ *     phone: null,
+ *     address: '123 Main St'
  *   }
  * };
- * removeNullishFields(complexForm);
- * // Result: {
- * //   user: {
- * //     name: 'John',
- * //     contacts: ['', null, '555-0123'],
- * //     details: {}
- * //   }
- * // }
  *
- * @remarks
- * - Only removes empty strings ('') and null values
- * - Preserves other falsy values (0, false, undefined)
- * - Arrays are kept intact with their original values
- * - Only processes plain objects (not arrays, Maps, Sets, etc.)
- * - Creates a new object, does not modify the input
+ * // Result:
+ * {
+ *   name: 'John',
+ *   scores: ['__ZERO__', '__NULL__', 75, '__FALSE__'],
+ *   contact: {
+ *     address: '123 Main St'
+ *   }
+ * }
  */
-export const removeNullishFields = (obj: Record<string, unknown>) => {
+export const toFormFormat = (
+  fields: Record<string, unknown>,
+): Record<string, unknown> => {
   return JSON.parse(
-    JSON.stringify(obj, (_key, value) => {
-      // Handle arrays - convert special string values
+    JSON.stringify(fields, (_, value) => {
       if (Array.isArray(value)) {
         return value.map(toNullishString);
       }
 
-      if (
-        value !== null &&
-        typeof value === 'object' &&
-        !Array.isArray(value)
-      ) {
+      if (value && typeof value === 'object') {
         return Object.fromEntries(
-          Object.entries(value).filter(([_, v]) => v !== '' && v !== null),
+          Object.entries(value).filter(([_key, v]) => v !== '' && v !== null),
         );
       }
+
       return value;
     }),
   );
 };
 
-export const toValidationState = (obj: Record<string, unknown>) => {
+/**
+ * Converts form state to a format suitable for validation by:
+ * - Converting array string markers (__NULL__, __FALSE__, __ZERO__) back to their original values
+ * - Converting _NULL__ to null
+ * - Removing fields that contain empty strings, null, or any string markers representing null/empty values
+ *
+ * @example
+ * const formState = {
+ *   name: 'John',
+ *   scores: [75, '__ZERO__', '_NULL__', '__FALSE__'],
+ *   email: null,
+ *   phone: '__NULL__',
+ *   contact: {
+ *     address: '123 Main St',
+ *     fax: null
+ *   }
+ * };
+ *
+ * // Result:
+ * {
+ *   name: 'John',
+ *   scores: [75, 0, null, false],
+ *   contact: {
+ *     address: '123 Main St'
+ *   }
+ * }
+ */
+export const toValidationFormat = (
+  formState: Record<string, unknown>,
+): Record<string, unknown> => {
   return JSON.parse(
-    JSON.stringify(obj, (_key, value) => {
-      // Handle arrays - convert special string values back to actual values
+    JSON.stringify(formState, (_, value) => {
       if (Array.isArray(value)) {
         return value.map(fromNullishString);
       }
 
-      if (
-        value !== null &&
-        typeof value === 'object' &&
-        !Array.isArray(value)
-      ) {
+      if (value && typeof value === 'object') {
         return Object.fromEntries(
-          Object.entries(value).filter(([_, v]) => v !== '' && v !== null),
+          Object.entries(value)
+            .filter(
+              ([_key, v]) =>
+                fromNullishString(v) !== '' && fromNullishString(v) !== null,
+            )
+            .map(([k, v]) => [k, fromNullishString(v)]),
         );
       }
+
       return value;
     }),
   );

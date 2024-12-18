@@ -145,7 +145,6 @@ const Input = ({
             ref={ref}
             startContent={startContent}
             type={type}
-            // @ts-expect-error Todo
             value={displayValue}
             variant="bordered"
           />

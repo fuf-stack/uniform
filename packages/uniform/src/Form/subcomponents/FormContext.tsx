@@ -7,7 +7,7 @@ import { FormProvider as HookFormProvider, useForm } from 'react-hook-form';
 
 import { useLocalStorage } from '@fuf-stack/pixels';
 
-import { toValidationState } from '../../helpers';
+import { toValidationFormat } from '../../helpers';
 
 type DebugMode = 'debug' | 'debug-testids' | 'off' | 'disabled';
 
@@ -120,7 +120,7 @@ const FormProvider: React.FC<FormProviderProps> = ({
           mode: validationTrigger,
           resolver: async (values) => {
             const { data, errors, ...rest } = await validation.validateAsync(
-              toValidationState(values),
+              toValidationFormat(values),
             );
             // https://github.com/react-hook-form/resolvers/blob/master/zod/src/zod.ts
             return { values: data || {}, errors: errors || {}, ...rest };

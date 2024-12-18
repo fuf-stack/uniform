@@ -168,12 +168,12 @@ exports[`Story Snapshots > Invalid 1`] = `
             id="react-aria-react-useId-mock"
           >
             <ul
-              aria-label="Error: Expected boolean, received string"
-              data-testid="expected_boolean_received_string"
+              aria-label="Error: Field is required"
+              data-testid="field_is_required"
             >
               <li>
                 <div>
-                  Expected boolean, received string
+                  Field is required
                 </div>
               </li>
             </ul>

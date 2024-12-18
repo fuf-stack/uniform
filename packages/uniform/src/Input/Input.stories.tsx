@@ -134,22 +134,46 @@ export const Number: Story = {
   parameters: {
     formProps: {
       validation: veto({
-        inputField: vt.number(),
+        numberField: vt.number(),
       }),
     },
   },
   args: {
-    label: 'InvalidField',
-    name: 'inputField',
+    label: 'Number Field',
+    name: 'numberField',
     type: 'number',
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const input = canvas.getByTestId('inputfield');
+    const input = canvas.getByTestId('numberfield');
     await userEvent.type(input, '2', {
       delay: 100,
     });
 
     await expect(input.getAttribute('aria-invalid')).toBeNull();
+  },
+};
+
+export const Password: Story = {
+  parameters: {
+    formProps: {
+      validation: veto({
+        passwordField: vt.string({ min: 20 }),
+      }),
+    },
+  },
+  args: {
+    label: 'Password Field',
+    name: 'passwordField',
+    type: 'password',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const input = canvas.getByTestId('passwordfield');
+    await userEvent.type(input, 'veryS3cure!', {
+      delay: 100,
+    });
+
+    await expect(input.getAttribute('aria-invalid')).toBe('true');
   },
 };
