@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/********************************************************************
+ * light theme variables
+ ********************************************************************/
+ :root {
+
+  /* info light */
+  --theme-info: var(--theme-info-500);
+  --theme-info-foreground: #ffffff;
+  --theme-info-50: #e6f1fe;
+  --theme-info-100: #cce3fd;
+  --theme-info-200: #99c7fb;
+  --theme-info-300: #66aaf9;
+  --theme-info-400: #338ef7;
+  --theme-info-500: #006FEE;
+  --theme-info-600: #005bc4;
+  --theme-info-700: #004493;
+  --theme-info-800: #002e62;
+  --theme-info-900: #001731;
+
+}
+
+/********************************************************************
+ * dark theme variables
+ ********************************************************************/
+:root[data-theme="dark"] {
+
+  /* info dark */
+  --theme-info: var(--theme-info-400);
+  --theme-info-foreground: #ffffff;
+  --theme-info-50: #001731;
+  --theme-info-100: #002e62;
+  --theme-info-200: #004493;
+  --theme-info-300: #005bc4;
+  --theme-info-400: #006FEE;
+  --theme-info-500: #338ef7;
+  --theme-info-600: #66aaf9;
+  --theme-info-700: #99c7fb;
+  --theme-info-800: #cce3fd;
+  --theme-info-900: #e6f1fe;
+
+}

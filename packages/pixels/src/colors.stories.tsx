@@ -267,6 +267,11 @@ export const SemanticColors: Story = {
             textClassName: 'text-success-foreground',
           },
           {
+            color: 'info',
+            className: 'bg-info',
+            textClassName: 'text-info-foreground',
+          },
+          {
             color: 'warning',
             className: 'bg-warning',
             textClassName: 'text-warning-foreground',
@@ -495,6 +500,61 @@ export const SemanticColors: Story = {
             color: 'success-900',
             className: 'bg-success-900',
             textClassName: 'text-success-100',
+          },
+        ],
+      },
+      {
+        title: 'Info',
+        items: [
+          {
+            color: 'info-50',
+            className: 'bg-info-50',
+            textClassName: 'text-info-900',
+          },
+          {
+            color: 'info-100',
+            className: 'bg-info-100',
+            textClassName: 'text-info-900',
+          },
+          {
+            color: 'info-200',
+            className: 'bg-info-200',
+            textClassName: 'text-info-800',
+          },
+          {
+            color: 'info-300',
+            className: 'bg-info-300',
+            textClassName: 'text-info-800',
+          },
+          {
+            color: 'info-400',
+            className: 'bg-info-400',
+            textClassName: 'text-info-800',
+          },
+          {
+            color: 'info-500',
+            className: 'bg-info-500',
+            textClassName: 'text-info-foreground',
+          },
+          {
+            color: 'info-600',
+            className: 'bg-info-600',
+            textClassName: 'text-info-50',
+          },
+          {
+            color: 'info-700',
+            className: 'bg-info-700',
+            textClassName: 'text-info-100',
+          },
+          {
+            color: 'info-800',
+            className: 'bg-info-800',
+            textClassName: 'text-info-100',
+          },
+          {
+            color: 'info-900',
+            className: 'bg-info-900',
+            textClassName: 'text-info-100',
           },
         ],
       },
