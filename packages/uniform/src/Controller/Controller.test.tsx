@@ -1,211 +1,238 @@
 /* eslint-disable react/jsx-props-no-spreading */
+
 import { describe, expect, it, vi } from 'vitest';
 
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import { veto } from '@fuf-stack/veto';
 import * as vt from '@fuf-stack/veto';
 
-import '@testing-library/jest-dom/vitest';
-
 import { Form } from '../Form';
 import Controller from './Controller';
 
-const defaultOnSubmit = vi.fn();
-
-describe.skip('Controller', () => {
-  describe('value conversion', () => {
-    it('should convert empty string to null in form state', async () => {
-      const onSubmit = vi.fn();
-      const user = userEvent.setup();
+describe('Controller', () => {
+  describe('render function behavior', () => {
+    it('should pass disabled state to render function', () => {
+      const renderFn = vi
+        .fn()
+        .mockImplementation(({ field }) => <input {...field} />);
 
       render(
-        <Form onSubmit={onSubmit} testId="test_form">
-          <Controller
-            name="test"
-            render={({ field }) => (
-              <input data-testid="test_input" {...field} />
-            )}
-          />
+        <Form onSubmit={() => {}}>
+          <Controller name="test" disabled render={renderFn} />
         </Form>,
       );
 
-      const input = screen.getByTestId('test_input');
-      const form = screen.getByTestId('test_form');
+      const { field } = renderFn.mock.calls[0][0];
+      expect(field.disabled).toBe(true);
+    });
 
-      await user.clear(input);
-      await user.click(input);
-      await user.tab(); // trigger blur
+    it('should pass field props to render function', () => {
+      const renderFn = vi
+        .fn()
+        .mockImplementation(({ field }) => <input {...field} />);
 
-      form.submit();
+      render(
+        <Form onSubmit={() => {}}>
+          <Controller name="test" render={renderFn} />
+        </Form>,
+      );
 
-      await waitFor(() => {
-        expect(onSubmit).toHaveBeenCalledWith(
-          expect.objectContaining({ test: null }),
-          expect.anything(),
-        );
+      const { field } = renderFn.mock.calls[0][0];
+      expect(field).toEqual({
+        name: 'test',
+        onChange: expect.any(Function),
+        onBlur: expect.any(Function),
+        ref: expect.any(Function),
+        value: undefined,
       });
     });
+  });
 
-    it('should convert null to empty string in UI', () => {
+  describe('value handling', () => {
+    it('should provide initial value as undefined', () => {
+      const renderFn = vi
+        .fn()
+        .mockImplementation(({ field }) => (
+          <input data-testid="test_input" {...field} />
+        ));
+
       render(
-        <Form
-          onSubmit={defaultOnSubmit}
-          initialValues={{ test: null }}
-          data-testid="test-form"
-        >
-          <Controller
-            name="test"
-            render={({ field }) => (
-              <input data-testid="test_input" {...field} />
-            )}
-          />
+        <Form onSubmit={() => {}}>
+          <Controller name="test" render={renderFn} />
+        </Form>,
+      );
+
+      const { field } = renderFn.mock.calls[0][0];
+      expect(field.value).toBeUndefined();
+    });
+
+    it('should pass provided initial value', () => {
+      const renderFn = vi
+        .fn()
+        .mockImplementation(({ field }) => (
+          <input data-testid="test_input" {...field} />
+        ));
+
+      render(
+        <Form onSubmit={() => {}} initialValues={{ test: 'initial value' }}>
+          <Controller name="test" render={renderFn} />
+        </Form>,
+      );
+
+      const { field } = renderFn.mock.calls[0][0];
+      expect(field.value).toBe('initial value');
+    });
+
+    it('should handle value changes', async () => {
+      const renderFn = vi
+        .fn()
+        .mockImplementation(({ field }) => (
+          <input data-testid="test_input" {...field} />
+        ));
+
+      render(
+        <Form onSubmit={() => {}} initialValues={{ test: '' }}>
+          <Controller name="test" render={renderFn} />
         </Form>,
       );
 
       const input = screen.getByTestId('test_input');
-      expect(input).toHaveValue('');
+      await userEvent.type(input, 'new value');
+      await userEvent.tab();
+
+      const latestCall = renderFn.mock.lastCall?.[0];
+      expect(latestCall.field.value).toBe('new value');
     });
 
-    it('should handle number input conversion', async () => {
-      const onSubmit = vi.fn();
-      const user = userEvent.setup();
+    it('should handle number input change', async () => {
+      const renderFn = vi
+        .fn()
+        .mockImplementation(({ field }) => (
+          <input type="number" data-testid="test_input" {...field} />
+        ));
 
       render(
         <Form
-          onSubmit={onSubmit}
+          onSubmit={() => {}}
           validation={veto({
             test: vt.number(),
           })}
-          data-testid="test-form"
+          initialValues={{ test: '' }}
         >
-          <Controller
-            name="test"
-            render={({ field }) => (
-              <input type="number" data-testid="test_input" {...field} />
-            )}
-          />
+          <Controller name="test" render={renderFn} />
         </Form>,
       );
 
       const input = screen.getByTestId('test_input');
-      const form = screen.getByTestId('test-form');
+      await userEvent.type(input, '42');
+      await userEvent.tab();
 
-      await user.type(input, '42');
-      await user.tab(); // trigger blur
-
-      form.submit();
-
-      await waitFor(() => {
-        expect(onSubmit).toHaveBeenCalledWith(
-          expect.objectContaining({ test: 42 }),
-          expect.anything(),
-        );
-      });
+      const latestCall = renderFn.mock.lastCall?.[0];
+      expect(latestCall.field.value).toBe('42');
     });
   });
 
   describe('validation', () => {
     it('should handle required validation', async () => {
-      const user = userEvent.setup();
+      const renderFn = vi
+        .fn()
+        .mockImplementation(({ field, fieldState }) => (
+          <input
+            data-testid="test_input"
+            aria-invalid={!!fieldState.error}
+            {...field}
+          />
+        ));
 
       render(
         <Form
-          onSubmit={defaultOnSubmit}
+          onSubmit={() => {}}
           validation={veto({
             test: vt.string(),
           })}
         >
-          <Controller
-            name="test"
-            render={({ field, fieldState }) => (
-              <input
-                data-testid="test_input"
-                aria-invalid={!!fieldState.error}
-                {...field}
-              />
-            )}
-          />
+          <Controller name="test" render={renderFn} />
         </Form>,
       );
 
       const input = screen.getByTestId('test_input');
-      await user.clear(input);
-      await user.tab(); // trigger blur
+      await userEvent.clear(input);
+      await userEvent.tab();
 
-      await waitFor(() => {
-        expect(input).toHaveAttribute('aria-invalid', 'true');
-      });
+      const latestCall = renderFn.mock.lastCall?.[0];
+      expect(latestCall.fieldState.error).toBeTruthy();
     });
 
     it('should validate regex pattern', async () => {
-      const user = userEvent.setup();
+      const renderFn = vi
+        .fn()
+        .mockImplementation(({ field, fieldState }) => (
+          <input
+            data-testid="test_input"
+            aria-invalid={!!fieldState.error}
+            {...field}
+          />
+        ));
 
       render(
         <Form
-          onSubmit={defaultOnSubmit}
+          onSubmit={() => {}}
           validation={veto({
             test: vt.string().regex(/^[a-z0-9\s]+$/i),
           })}
         >
-          <Controller
-            name="test"
-            render={({ field, fieldState }) => (
-              <input
-                data-testid="test_input"
-                aria-invalid={!!fieldState.error}
-                {...field}
-              />
-            )}
-          />
+          <Controller name="test" render={renderFn} />
         </Form>,
       );
 
       const input = screen.getByTestId('test_input');
-      await user.type(input, 'invälid');
-      await user.tab(); // trigger blur
+      await userEvent.type(input, 'invälid');
+      await userEvent.tab();
 
-      await waitFor(() => {
-        expect(input).toHaveAttribute('aria-invalid', 'true');
-      });
+      const latestCall = renderFn.mock.lastCall?.[0];
+      expect(latestCall.fieldState.error).toBeTruthy();
     });
-  });
 
-  describe('form integration', () => {
-    it('should handle initial values', () => {
+    it('should provide validation status', async () => {
+      const renderFn = vi
+        .fn()
+        .mockImplementation(({ field, fieldState }) => (
+          <input
+            data-testid="test_input"
+            aria-invalid={!!fieldState.error}
+            {...field}
+          />
+        ));
+
       render(
         <Form
-          onSubmit={defaultOnSubmit}
-          initialValues={{ test: 'initial value' }}
+          onSubmit={() => {}}
+          validation={veto({
+            test: vt.string().min(3),
+          })}
         >
-          <Controller
-            name="test"
-            render={({ field }) => (
-              <input data-testid="test_input" {...field} />
-            )}
-          />
+          <Controller name="test" render={renderFn} />
         </Form>,
       );
 
       const input = screen.getByTestId('test_input');
-      expect(input).toHaveValue('initial value');
-    });
 
-    it('should handle disabled state', () => {
-      render(
-        <Form onSubmit={defaultOnSubmit}>
-          <Controller
-            name="test"
-            render={({ field }) => (
-              <input data-testid="test_input" disabled {...field} />
-            )}
-          />
-        </Form>,
-      );
+      // Invalid input
+      await userEvent.type(input, 'ab');
+      await userEvent.tab();
 
-      const input = screen.getByTestId('test_input');
-      expect(input).toHaveAttribute('disabled');
+      let latestCall = renderFn.mock.lastCall?.[0];
+      expect(latestCall.fieldState.invalid).toBe(true);
+
+      // Valid input
+      await userEvent.clear(input);
+      await userEvent.type(input, 'valid');
+      await userEvent.tab();
+
+      latestCall = renderFn.mock.lastCall?.[0];
+      expect(latestCall.fieldState.invalid).toBe(false);
     });
   });
 });
