@@ -9,6 +9,8 @@ import { slugify } from '../helpers';
 import FormProvider from './subcomponents/FormContext';
 import FormDebugViewer from './subcomponents/FormDebugViewer';
 
+const IS_TEST = process.env.NODE_ENV === 'test';
+
 export interface FormProps {
   /** form children */
   children: ReactNode | ReactNode[];
@@ -62,7 +64,10 @@ const Form = ({
           >
             {children}
           </form>
-          {!debug?.disable && <FormDebugViewer className="w-96 flex-shrink" />}
+          {/* render debug viewer when not in test environment and debug not disabled */}
+          {!IS_TEST && !debug?.disable && (
+            <FormDebugViewer className="w-96 flex-shrink" />
+          )}
         </div>
       )}
     </FormProvider>
