@@ -1,13 +1,8 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
 import type { DragEndEvent } from '@dnd-kit/core';
-import type { JSX } from 'react';
-import type {
-  FieldValues,
-  UseFieldArrayInsert,
-  UseFieldArrayMove,
-  UseFieldArrayRemove,
-} from 'react-hook-form';
+import type { FieldArrayElementMethods } from './subcomponents/FieldArrayElement';
+import type { FieldArrayProps } from './types';
 
 import {
   closestCenter,
@@ -26,60 +21,27 @@ import {
   verticalListSortingStrategy,
 } from '@dnd-kit/sortable';
 
-import { cn } from '@fuf-stack/pixel-utils';
 import { Button } from '@fuf-stack/pixels';
 
 import { toNullishString } from '../helpers';
 import { useFieldArray, useFormContext, useInput } from '../hooks';
-import { FieldCopyTestIdButton } from '../partials/FieldCopyTestIdButton';
 import { FieldValidationError } from '../partials/FieldValidationError';
-import FieldArrayField from './FieldArrayField';
-
-export type FieldArrayHideOption = 'add' | 'remove' | 'move' | 'insert' | 'all';
-export type FieldArrayFieldChildren = (args: {
-  duplicate: (i: number) => void;
-  index: number;
-  insert: UseFieldArrayInsert<FieldValues, string>;
-  length: number;
-  move: UseFieldArrayMove;
-  name: string;
-  remove: UseFieldArrayRemove;
-  testId: string;
-}) => JSX.Element;
-
-export type MoveField = 'drag-drop' | 'button';
-
-export interface FieldArrayProps {
-  /** function that renders the children with provided Properties. */
-  children: FieldArrayFieldChildren;
-  /* The initial value of a filed that is created in the array */
-  elementInitialValue?: unknown;
-  /** Hide a set of buttons. */
-  hideButtons?: FieldArrayHideOption[];
-  /** label of the FieldArray. */
-  label?: React.ReactNode;
-  /** stops user from deleting all items. */
-  lastElementNotDeletable?: boolean;
-  /** name the FieldArray is registered in RHF */
-  name: string;
-  /** ID for test purposes. */
-  testId?: string;
-  /* how the fields can be moved */
-  moveField?: MoveField[];
-}
+import FieldArrayElement from './subcomponents/FieldArrayElement';
+import FieldArrayLabel from './subcomponents/FieldArrayLabel';
 
 /**
- * FieldArray component using react-hook-form
+ * FieldArray component using TODO
  */
 const FieldArray = ({
   children,
-  elementInitialValue = null,
-  hideButtons = [],
+  duplicate = false,
+  elementInitialValue: _elementInitialValue = null,
+  insertAfter = false,
   label: _label = undefined,
   lastElementNotDeletable = true,
   name,
+  sortable = false,
   testId: _testId = undefined,
-  moveField = ['button'],
 }: FieldArrayProps) => {
   const {
     control,
@@ -109,8 +71,11 @@ const FieldArray = ({
       classNames: { helperWrapper: 'block' },
     });
 
+  // TODO: add info
+  const elementInitialValue = toNullishString(_elementInitialValue);
+
   if (lastElementNotDeletable && fields.length === 0) {
-    append(toNullishString(elementInitialValue));
+    append(elementInitialValue);
   }
 
   const sensors = useSensors(
@@ -144,65 +109,62 @@ const FieldArray = ({
       >
         <ul data-testid={testId} onBlur={() => trigger(`${name}`)}>
           {showLabel && (
-            // eslint-disable-next-line jsx-a11y/label-has-associated-control
-            <label
-              {...getLabelProps()}
-              className={cn(
-                getLabelProps().className,
-                '!pointer-events-auto !static !z-0 -mb-1 ml-1 !inline-block',
-              )}
-            >
-              {label}
-            </label>
+            <FieldArrayLabel
+              label={label}
+              showTestIdCopyButton={showTestIdCopyButton}
+              testId={testId}
+              getLabelProps={getLabelProps}
+            />
           )}
-          {showTestIdCopyButton && <FieldCopyTestIdButton testId={testId} />}
 
           {fields.map((field, index) => {
-            const duplicate = (i: number) => {
-              const values = getValues(name);
-              insert(i + 1, { ...values[i], id: null });
+            const methods: FieldArrayElementMethods = {
+              append: () => append(elementInitialValue),
+              duplicate: () => {
+                const values = getValues(name);
+                insert(index + 1, values[index]);
+              },
+              insert: () => insert(index + 1, elementInitialValue),
+              remove: () => remove(index),
             };
 
             return (
-              <FieldArrayField
+              <FieldArrayElement
                 className="mb-3 mt-5 flex flex-row items-center"
                 field={field}
                 fields={fields}
-                hideButtons={hideButtons}
                 id={field.id}
                 index={index}
-                insert={insert}
+                duplicate={duplicate}
+                insertAfter={insertAfter}
                 key={field.id}
                 lastNotDeletable={lastElementNotDeletable}
-                move={move}
-                moveField={moveField}
+                methods={methods}
                 name={name}
-                remove={remove}
+                sortable={sortable}
                 testId={`${testId}_${index}`}
               >
                 {children({
-                  duplicate,
                   index,
-                  insert,
                   length: fields.length,
-                  move,
+                  methods,
                   name: `${name}.${index}`,
-                  remove,
                   testId: `${testId}_${index}`,
                 })}
-              </FieldArrayField>
+              </FieldArrayElement>
             );
           })}
 
-          {!hideButtons.includes('add') && !hideButtons.includes('all') && (
-            <Button
-              onClick={() => append(toNullishString(elementInitialValue))}
-              size="sm"
-              testId={`${testId}_append`}
-            >
-              Add
-            </Button>
-          )}
+          {/* append elements */}
+          <Button
+            onClick={() => append(elementInitialValue)}
+            size="sm"
+            testId={`${testId}_append`}
+          >
+            Add
+          </Button>
+
+          {/* top level field array errors */}
           {/* @ts-expect-error rhf incompatibility */}
           {error?._errors && (
             <div {...getHelperWrapperProps()}>

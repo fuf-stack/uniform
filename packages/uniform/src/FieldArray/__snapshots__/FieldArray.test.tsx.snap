@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Story Snapshots > AllowAllDelete 1`] = `
+exports[`Story Snapshots > AllowDeleteAllElements 1`] = `
 <div>
   <div
     class="flex w-full flex-row justify-between gap-6"
@@ -10,45 +10,11 @@ exports[`Story Snapshots > AllowAllDelete 1`] = `
       data-testid=""
     >
       <ul
-        data-testid="fieldarray"
+        data-testid="arrayfield"
       >
         <li
           class="mb-3 mt-5 flex flex-row items-center"
         >
-          <div
-            class="mr-6 flex flex-row items-center"
-          >
-            <div
-              class="flex flex-col"
-            >
-              <button
-                class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-20 h-10 text-small gap-2 rounded-medium opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover flex rounded-b-none rounded-t-md border border-gray-300 px-2 py-2 shadow-sm"
-                data-disabled="true"
-                data-testid="fieldArray.0.up"
-                disabled=""
-                type="button"
-              >
-                <span
-                  data-testid="icon-FaAngleUp"
-                >
-                  FaAngleUp
-                </span>
-              </button>
-              <button
-                class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-20 h-10 text-small gap-2 rounded-medium opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover flex rounded-b-md rounded-t-none border border-gray-300 px-2 py-2 shadow-sm"
-                data-disabled="true"
-                data-testid="fieldArray.0.down"
-                disabled=""
-                type="button"
-              >
-                <span
-                  data-testid="icon-FaAngleDown"
-                >
-                  FaAngleDown
-                </span>
-              </button>
-            </div>
-          </div>
           <div
             class="w-full"
           >
@@ -57,7 +23,7 @@ exports[`Story Snapshots > AllowAllDelete 1`] = `
             >
               <div
                 class="flex-grow"
-                data-testid="fieldarray_0"
+                data-testid="arrayfield_0"
               >
                 <div
                   class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
@@ -95,9 +61,9 @@ exports[`Story Snapshots > AllowAllDelete 1`] = `
                           aria-labelledby="react-aria-react-useId-mock"
                           class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small"
                           data-slot="input"
-                          data-testid="fieldarray.0.name"
+                          data-testid="arrayfield.0.name"
                           id="react-aria-react-useId-mock"
-                          name="fieldArray.0.name"
+                          name="arrayField.0.name"
                           placeholder=" "
                           title=""
                           type="text"
@@ -109,36 +75,29 @@ exports[`Story Snapshots > AllowAllDelete 1`] = `
                 </div>
               </div>
               <button
-                class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover ml-1"
+                aria-label="remove element"
+                class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small gap-2 rounded-medium px-0 !gap-0 transition-transform-colors-opacity motion-reduce:transition-none bg-transparent text-danger data-[hover=true]:bg-danger/20 min-w-10 w-10 h-10 ml-1"
                 type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="h-4 w-4"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+                <span
+                  data-testid="icon-FaTimes"
                 >
-                  <path
-                    clip-rule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
+                  FaTimes
+                </span>
               </button>
             </div>
           </div>
         </li>
         <button
           class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-3 min-w-16 h-8 text-tiny gap-2 rounded-small [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover"
-          data-testid="fieldarray_append"
+          data-testid="arrayfield_append"
           type="button"
         >
           Add
         </button>
       </ul>
       <div
-        id="DndDescribedBy-7"
+        id="DndDescribedBy-5"
         style="display: none;"
       >
         
@@ -150,7 +109,7 @@ exports[`Story Snapshots > AllowAllDelete 1`] = `
       <div
         aria-atomic="true"
         aria-live="assertive"
-        id="DndLiveRegion-7"
+        id="DndLiveRegion-5"
         role="status"
         style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
       />
@@ -231,9 +190,9 @@ exports[`Story Snapshots > Custom 1`] = `
                           aria-labelledby="react-aria-react-useId-mock"
                           class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small"
                           data-slot="input"
-                          data-testid="fieldarray.0.name"
+                          data-testid="arrayfield.0.name"
                           id="react-aria-react-useId-mock"
-                          name="fieldArray.0.name"
+                          name="arrayField.0.name"
                           placeholder=" "
                           title=""
                           type="text"
@@ -279,9 +238,9 @@ exports[`Story Snapshots > Custom 1`] = `
                           aria-labelledby="react-aria-react-useId-mock"
                           class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small"
                           data-slot="input"
-                          data-testid="fieldarray.0.age"
+                          data-testid="arrayfield.0.age"
                           id="react-aria-react-useId-mock"
-                          name="fieldArray.0.age"
+                          name="arrayField.0.age"
                           placeholder=" "
                           title=""
                           type="text"
@@ -291,26 +250,6 @@ exports[`Story Snapshots > Custom 1`] = `
                     </div>
                   </div>
                 </div>
-                <button
-                  class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover mt-2"
-                  type="button"
-                >
-                  <span
-                    data-testid="icon-FaAngleUp"
-                  >
-                    FaAngleUp
-                  </span>
-                </button>
-                <button
-                  class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover mt-2"
-                  type="button"
-                >
-                  <span
-                    data-testid="icon-FaAngleDown"
-                  >
-                    FaAngleDown
-                  </span>
-                </button>
                 <button
                   class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover mt-2"
                   type="button"
@@ -344,7 +283,7 @@ exports[`Story Snapshots > Custom 1`] = `
         </button>
       </ul>
       <div
-        id="DndDescribedBy-8"
+        id="DndDescribedBy-6"
         style="display: none;"
       >
         
@@ -356,7 +295,7 @@ exports[`Story Snapshots > Custom 1`] = `
       <div
         aria-atomic="true"
         aria-live="assertive"
-        id="DndLiveRegion-8"
+        id="DndLiveRegion-6"
         role="status"
         style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
       />
@@ -391,40 +330,6 @@ exports[`Story Snapshots > Default 1`] = `
         <li
           class="mb-3 mt-5 flex flex-row items-center"
         >
-          <div
-            class="mr-6 flex flex-row items-center"
-          >
-            <div
-              class="flex flex-col"
-            >
-              <button
-                class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-20 h-10 text-small gap-2 rounded-medium opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover flex rounded-b-none rounded-t-md border border-gray-300 px-2 py-2 shadow-sm"
-                data-disabled="true"
-                data-testid="DefaultStory.0.up"
-                disabled=""
-                type="button"
-              >
-                <span
-                  data-testid="icon-FaAngleUp"
-                >
-                  FaAngleUp
-                </span>
-              </button>
-              <button
-                class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-20 h-10 text-small gap-2 rounded-medium opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover flex rounded-b-md rounded-t-none border border-gray-300 px-2 py-2 shadow-sm"
-                data-disabled="true"
-                data-testid="DefaultStory.0.down"
-                disabled=""
-                type="button"
-              >
-                <span
-                  data-testid="icon-FaAngleDown"
-                >
-                  FaAngleDown
-                </span>
-              </button>
-            </div>
-          </div>
           <div
             class="w-full"
           >
@@ -533,274 +438,6 @@ exports[`Story Snapshots > Default 1`] = `
 </div>
 `;
 
-exports[`Story Snapshots > Dragable 1`] = `
-<div>
-  <div
-    class="flex w-full flex-row justify-between gap-6"
-  >
-    <form
-      class="flex-grow min-w-60"
-      data-testid=""
-    >
-      <ul
-        data-testid="fieldarray"
-      >
-        <li
-          class="mb-3 mt-5 flex flex-row items-center"
-        >
-          <div
-            class="mr-6 flex flex-row items-center"
-          >
-            <div
-              aria-describedby="DndDescribedBy-10"
-              aria-disabled="false"
-              aria-roledescription="sortable"
-              class="mr-2 text-base text-xl"
-              data-testid="fieldarray_0_movebutton"
-              role="button"
-              tabindex="0"
-            >
-              <span
-                data-testid="icon-FaGripVertical"
-              >
-                FaGripVertical
-              </span>
-            </div>
-          </div>
-          <div
-            class="w-full"
-          >
-            <div
-              class="mb-2 flex items-center"
-            >
-              <div
-                class="flex-grow"
-                data-testid="fieldarray_0"
-              >
-                <div
-                  class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
-                  data-filled="true"
-                  data-filled-within="true"
-                  data-has-elements="true"
-                  data-has-label="true"
-                  data-has-value="true"
-                  data-slot="base"
-                >
-                  <div
-                    class="h-full flex flex-col"
-                    data-slot="main-wrapper"
-                  >
-                    <div
-                      class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-focus is-filled"
-                      data-slot="input-wrapper"
-                      style="cursor: text;"
-                    >
-                      <label
-                        class="absolute pointer-events-none origin-top-left flex-shrink-0 rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
-                        data-slot="label"
-                        for="react-aria-react-useId-mock"
-                        id="react-aria-react-useId-mock"
-                      >
-                        name at index 0
-                      </label>
-                      <div
-                        class="inline-flex w-full items-center h-full box-border"
-                        data-slot="inner-wrapper"
-                      >
-                        <input
-                          aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
-                          aria-label=" "
-                          aria-labelledby="react-aria-react-useId-mock"
-                          class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small is-filled"
-                          data-filled="true"
-                          data-filled-within="true"
-                          data-slot="input"
-                          data-testid="fieldarray.0.name"
-                          id="react-aria-react-useId-mock"
-                          name="fieldArray.0.name"
-                          placeholder=" "
-                          title=""
-                          type="text"
-                          value="The First"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button
-                class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover ml-1"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="h-4 w-4"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </button>
-            </div>
-            <button
-              class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover text-xs font-medium"
-              data-testid="add-harbor-button-0"
-              type="button"
-            >
-              insert
-            </button>
-          </div>
-        </li>
-        <li
-          class="mb-3 mt-5 flex flex-row items-center"
-        >
-          <div
-            class="mr-6 flex flex-row items-center"
-          >
-            <div
-              aria-describedby="DndDescribedBy-10"
-              aria-disabled="false"
-              aria-roledescription="sortable"
-              class="mr-2 text-base text-xl"
-              data-testid="fieldarray_1_movebutton"
-              role="button"
-              tabindex="0"
-            >
-              <span
-                data-testid="icon-FaGripVertical"
-              >
-                FaGripVertical
-              </span>
-            </div>
-          </div>
-          <div
-            class="w-full"
-          >
-            <div
-              class="mb-2 flex items-center"
-            >
-              <div
-                class="flex-grow"
-                data-testid="fieldarray_1"
-              >
-                <div
-                  class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
-                  data-filled="true"
-                  data-filled-within="true"
-                  data-has-elements="true"
-                  data-has-label="true"
-                  data-has-value="true"
-                  data-slot="base"
-                >
-                  <div
-                    class="h-full flex flex-col"
-                    data-slot="main-wrapper"
-                  >
-                    <div
-                      class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-focus is-filled"
-                      data-slot="input-wrapper"
-                      style="cursor: text;"
-                    >
-                      <label
-                        class="absolute pointer-events-none origin-top-left flex-shrink-0 rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
-                        data-slot="label"
-                        for="react-aria-react-useId-mock"
-                        id="react-aria-react-useId-mock"
-                      >
-                        name at index 1
-                      </label>
-                      <div
-                        class="inline-flex w-full items-center h-full box-border"
-                        data-slot="inner-wrapper"
-                      >
-                        <input
-                          aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
-                          aria-label=" "
-                          aria-labelledby="react-aria-react-useId-mock"
-                          class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small is-filled"
-                          data-filled="true"
-                          data-filled-within="true"
-                          data-slot="input"
-                          data-testid="fieldarray.1.name"
-                          id="react-aria-react-useId-mock"
-                          name="fieldArray.1.name"
-                          placeholder=" "
-                          title=""
-                          type="text"
-                          value="The Second"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button
-                class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover ml-1"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="h-4 w-4"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </li>
-        <button
-          class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-3 min-w-16 h-8 text-tiny gap-2 rounded-small [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover"
-          data-testid="fieldarray_append"
-          type="button"
-        >
-          Add
-        </button>
-      </ul>
-      <div
-        id="DndDescribedBy-10"
-        style="display: none;"
-      >
-        
-    To pick up a draggable item, press the space bar.
-    While dragging, use the arrow keys to move the item.
-    Press space again to drop the item in its new position, or press escape to cancel.
-  
-      </div>
-      <div
-        aria-atomic="true"
-        aria-live="assertive"
-        id="DndLiveRegion-10"
-        role="status"
-        style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
-      />
-      <div
-        class="mt-4 flex justify-end"
-      >
-        <button
-          class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white"
-          data-testid="form_submit_button"
-          type="submit"
-        >
-          Submit
-        </button>
-      </div>
-    </form>
-  </div>
-</div>
-`;
-
 exports[`Story Snapshots > Duplicate 1`] = `
 <div>
   <div
@@ -862,9 +499,9 @@ exports[`Story Snapshots > Duplicate 1`] = `
                           aria-labelledby="react-aria-react-useId-mock"
                           class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small"
                           data-slot="input"
-                          data-testid="fieldarray.0.name"
+                          data-testid="arrayfield.0.name"
                           id="react-aria-react-useId-mock"
-                          name="fieldArray.0.name"
+                          name="arrayField.0.name"
                           placeholder=" "
                           title=""
                           type="text"
@@ -910,9 +547,9 @@ exports[`Story Snapshots > Duplicate 1`] = `
                           aria-labelledby="react-aria-react-useId-mock"
                           class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small"
                           data-slot="input"
-                          data-testid="fieldarray.0.age"
+                          data-testid="arrayfield.0.age"
                           id="react-aria-react-useId-mock"
-                          name="fieldArray.0.age"
+                          name="arrayField.0.age"
                           placeholder=" "
                           title=""
                           type="text"
@@ -955,7 +592,7 @@ exports[`Story Snapshots > Duplicate 1`] = `
         </button>
       </ul>
       <div
-        id="DndDescribedBy-9"
+        id="DndDescribedBy-7"
         style="display: none;"
       >
         
@@ -967,7 +604,7 @@ exports[`Story Snapshots > Duplicate 1`] = `
       <div
         aria-atomic="true"
         aria-live="assertive"
-        id="DndLiveRegion-9"
+        id="DndLiveRegion-7"
         role="status"
         style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
       />
@@ -997,46 +634,12 @@ exports[`Story Snapshots > FlatArray 1`] = `
       data-testid=""
     >
       <ul
-        data-testid="fieldarray"
+        data-testid="arrayfield"
       >
         <li
           class="mb-3 mt-5 flex flex-row items-center"
           style="transition: transform 0ms linear;"
         >
-          <div
-            class="mr-6 flex flex-row items-center"
-          >
-            <div
-              class="flex flex-col"
-            >
-              <button
-                class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-20 h-10 text-small gap-2 rounded-medium opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover flex rounded-b-none rounded-t-md border border-gray-300 px-2 py-2 shadow-sm"
-                data-disabled="true"
-                data-testid="fieldArray.0.up"
-                disabled=""
-                type="button"
-              >
-                <span
-                  data-testid="icon-FaAngleUp"
-                >
-                  FaAngleUp
-                </span>
-              </button>
-              <button
-                class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-20 h-10 text-small gap-2 rounded-medium opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover flex rounded-b-md rounded-t-none border border-gray-300 px-2 py-2 shadow-sm"
-                data-disabled="true"
-                data-testid="fieldArray.0.down"
-                disabled=""
-                type="button"
-              >
-                <span
-                  data-testid="icon-FaAngleDown"
-                >
-                  FaAngleDown
-                </span>
-              </button>
-            </div>
-          </div>
           <div
             class="w-full"
           >
@@ -1045,7 +648,7 @@ exports[`Story Snapshots > FlatArray 1`] = `
             >
               <div
                 class="flex-grow"
-                data-testid="fieldarray_0"
+                data-testid="arrayfield_0"
               >
                 <div
                   class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
@@ -1083,9 +686,9 @@ exports[`Story Snapshots > FlatArray 1`] = `
                           aria-labelledby="react-aria-react-useId-mock"
                           class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small"
                           data-slot="input"
-                          data-testid="fieldarray.0"
+                          data-testid="arrayfield.0"
                           id="react-aria-react-useId-mock"
-                          name="fieldArray.0"
+                          name="arrayField.0"
                           placeholder=" "
                           required=""
                           title=""
@@ -1102,7 +705,7 @@ exports[`Story Snapshots > FlatArray 1`] = `
         </li>
         <button
           class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-3 min-w-16 h-8 text-tiny gap-2 rounded-small [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover"
-          data-testid="fieldarray_append"
+          data-testid="arrayfield_append"
           type="button"
         >
           Add
@@ -1141,7 +744,7 @@ exports[`Story Snapshots > FlatArray 1`] = `
 </div>
 `;
 
-exports[`Story Snapshots > HideAllButAdd 1`] = `
+exports[`Story Snapshots > InsertAfter 1`] = `
 <div>
   <div
     class="flex w-full flex-row justify-between gap-6"
@@ -1151,7 +754,7 @@ exports[`Story Snapshots > HideAllButAdd 1`] = `
       data-testid=""
     >
       <ul
-        data-testid="fieldarray"
+        data-testid="arrayfield"
       >
         <li
           class="mb-3 mt-5 flex flex-row items-center"
@@ -1164,10 +767,10 @@ exports[`Story Snapshots > HideAllButAdd 1`] = `
             >
               <div
                 class="flex-grow"
-                data-testid="fieldarray_0"
+                data-testid="arrayfield_0"
               >
                 <div
-                  class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+                  class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
                   data-filled="true"
                   data-filled-within="true"
                   data-has-elements="true"
@@ -1180,7 +783,7 @@ exports[`Story Snapshots > HideAllButAdd 1`] = `
                     data-slot="main-wrapper"
                   >
                     <div
-                      class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-focus"
+                      class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-focus is-filled"
                       data-slot="input-wrapper"
                       style="cursor: text;"
                     >
@@ -1200,129 +803,58 @@ exports[`Story Snapshots > HideAllButAdd 1`] = `
                           aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
                           aria-label=" "
                           aria-labelledby="react-aria-react-useId-mock"
-                          class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small"
+                          class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small is-filled"
+                          data-filled="true"
+                          data-filled-within="true"
                           data-slot="input"
-                          data-testid="fieldarray.0.name"
+                          data-testid="arrayfield.0.name"
                           id="react-aria-react-useId-mock"
-                          name="fieldArray.0.name"
+                          name="arrayField.0.name"
                           placeholder=" "
                           title=""
                           type="text"
-                          value=""
+                          value="Max"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <button
+                aria-label="remove element"
+                class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small gap-2 rounded-medium px-0 !gap-0 transition-transform-colors-opacity motion-reduce:transition-none bg-transparent text-danger data-[hover=true]:bg-danger/20 min-w-10 w-10 h-10 ml-1"
+                type="button"
+              >
+                <span
+                  data-testid="icon-FaTimes"
+                >
+                  FaTimes
+                </span>
+              </button>
             </div>
+            <button
+              class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-tiny gap-2 rounded-small px-0 !gap-0 transition-transform-colors-opacity motion-reduce:transition-none bg-transparent text-success data-[hover=true]:bg-success/20 min-w-8 w-8 h-8"
+              type="button"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"
+                />
+              </svg>
+            </button>
           </div>
         </li>
-        <button
-          class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-3 min-w-16 h-8 text-tiny gap-2 rounded-small [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover"
-          data-testid="fieldarray_append"
-          type="button"
-        >
-          Add
-        </button>
-      </ul>
-      <div
-        id="DndDescribedBy-6"
-        style="display: none;"
-      >
-        
-    To pick up a draggable item, press the space bar.
-    While dragging, use the arrow keys to move the item.
-    Press space again to drop the item in its new position, or press escape to cancel.
-  
-      </div>
-      <div
-        aria-atomic="true"
-        aria-live="assertive"
-        id="DndLiveRegion-6"
-        role="status"
-        style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
-      />
-      <div
-        class="mt-4 flex justify-end"
-      >
-        <button
-          class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white"
-          data-testid="form_submit_button"
-          type="submit"
-        >
-          Submit
-        </button>
-      </div>
-    </form>
-  </div>
-</div>
-`;
-
-exports[`Story Snapshots > HideAllButtons 1`] = `
-<div>
-  <div
-    class="flex w-full flex-row justify-between gap-6"
-  >
-    <form
-      class="flex-grow min-w-60"
-      data-testid=""
-    >
-      <ul
-        data-testid="fieldarray"
-      >
         <li
           class="mb-3 mt-5 flex flex-row items-center"
         >
-          <div
-            class="mr-6 flex flex-row items-center"
-          >
-            <div
-              aria-describedby="DndDescribedBy-5"
-              aria-disabled="false"
-              aria-roledescription="sortable"
-              class="mr-2 text-base text-xl"
-              data-testid="fieldarray_0_movebutton"
-              role="button"
-              tabindex="0"
-            >
-              <span
-                data-testid="icon-FaGripVertical"
-              >
-                FaGripVertical
-              </span>
-            </div>
-            <div
-              class="flex flex-col"
-            >
-              <button
-                class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-20 h-10 text-small gap-2 rounded-medium opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover flex rounded-b-none rounded-t-md border border-gray-300 px-2 py-2 shadow-sm"
-                data-disabled="true"
-                data-testid="fieldArray.0.up"
-                disabled=""
-                type="button"
-              >
-                <span
-                  data-testid="icon-FaAngleUp"
-                >
-                  FaAngleUp
-                </span>
-              </button>
-              <button
-                class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-20 h-10 text-small gap-2 rounded-medium opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover flex rounded-b-md rounded-t-none border border-gray-300 px-2 py-2 shadow-sm"
-                data-disabled="true"
-                data-testid="fieldArray.0.down"
-                disabled=""
-                type="button"
-              >
-                <span
-                  data-testid="icon-FaAngleDown"
-                >
-                  FaAngleDown
-                </span>
-              </button>
-            </div>
-          </div>
           <div
             class="w-full"
           >
@@ -1331,10 +863,10 @@ exports[`Story Snapshots > HideAllButtons 1`] = `
             >
               <div
                 class="flex-grow"
-                data-testid="fieldarray_0"
+                data-testid="arrayfield_1"
               >
                 <div
-                  class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+                  class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
                   data-filled="true"
                   data-filled-within="true"
                   data-has-elements="true"
@@ -1347,7 +879,7 @@ exports[`Story Snapshots > HideAllButtons 1`] = `
                     data-slot="main-wrapper"
                   >
                     <div
-                      class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-focus"
+                      class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-focus is-filled"
                       data-slot="input-wrapper"
                       style="cursor: text;"
                     >
@@ -1357,7 +889,7 @@ exports[`Story Snapshots > HideAllButtons 1`] = `
                         for="react-aria-react-useId-mock"
                         id="react-aria-react-useId-mock"
                       >
-                        name 0
+                        name 1
                       </label>
                       <div
                         class="inline-flex w-full items-center h-full box-border"
@@ -1367,34 +899,47 @@ exports[`Story Snapshots > HideAllButtons 1`] = `
                           aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
                           aria-label=" "
                           aria-labelledby="react-aria-react-useId-mock"
-                          class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small"
+                          class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small is-filled"
+                          data-filled="true"
+                          data-filled-within="true"
                           data-slot="input"
-                          data-testid="fieldarray.0.name"
+                          data-testid="arrayfield.1.name"
                           id="react-aria-react-useId-mock"
-                          name="fieldArray.0.name"
+                          name="arrayField.1.name"
                           placeholder=" "
                           title=""
                           type="text"
-                          value=""
+                          value="Maria"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <button
+                aria-label="remove element"
+                class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small gap-2 rounded-medium px-0 !gap-0 transition-transform-colors-opacity motion-reduce:transition-none bg-transparent text-danger data-[hover=true]:bg-danger/20 min-w-10 w-10 h-10 ml-1"
+                type="button"
+              >
+                <span
+                  data-testid="icon-FaTimes"
+                >
+                  FaTimes
+                </span>
+              </button>
             </div>
           </div>
         </li>
         <button
           class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-3 min-w-16 h-8 text-tiny gap-2 rounded-small [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover"
-          data-testid="fieldarray_append"
+          data-testid="arrayfield_append"
           type="button"
         >
           Add
         </button>
       </ul>
       <div
-        id="DndDescribedBy-5"
+        id="DndDescribedBy-8"
         style="display: none;"
       >
         
@@ -1406,7 +951,7 @@ exports[`Story Snapshots > HideAllButtons 1`] = `
       <div
         aria-atomic="true"
         aria-live="assertive"
-        id="DndLiveRegion-5"
+        id="DndLiveRegion-8"
         role="status"
         style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
       />
@@ -1436,7 +981,7 @@ exports[`Story Snapshots > Invalid 1`] = `
       data-testid=""
     >
       <ul
-        data-testid="fieldarray"
+        data-testid="arrayfield"
       >
         <label
           class="absolute z-10 pointer-events-none origin-top-left flex-shrink-0 rtl:origin-top-right subpixel-antialiased block cursor-text !text-danger after:content-['*'] after:text-danger after:ms-0.5 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-default-600 group-data-[filled-within=true]:pointer-events-auto group-data-[filled-within=true]:scale-85 text-small group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_6px)] pe-2 max-w-full text-ellipsis overflow-hidden !pointer-events-auto !static !z-0 -mb-1 ml-1 !inline-block"
@@ -1451,38 +996,6 @@ exports[`Story Snapshots > Invalid 1`] = `
           style="transition: transform 0ms linear;"
         >
           <div
-            class="mr-6 flex flex-row items-center"
-          >
-            <div
-              class="flex flex-col"
-            >
-              <button
-                class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-20 h-10 text-small gap-2 rounded-medium opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover flex rounded-b-none rounded-t-md border border-gray-300 px-2 py-2 shadow-sm"
-                data-disabled="true"
-                data-testid="fieldArray.0.up"
-                disabled=""
-                type="button"
-              >
-                <span
-                  data-testid="icon-FaAngleUp"
-                >
-                  FaAngleUp
-                </span>
-              </button>
-              <button
-                class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover flex rounded-b-md rounded-t-none border border-gray-300 px-2 py-2 shadow-sm"
-                data-testid="fieldArray.0.down"
-                type="button"
-              >
-                <span
-                  data-testid="icon-FaAngleDown"
-                >
-                  FaAngleDown
-                </span>
-              </button>
-            </div>
-          </div>
-          <div
             class="w-full"
           >
             <div
@@ -1490,7 +1003,7 @@ exports[`Story Snapshots > Invalid 1`] = `
             >
               <div
                 class="flex-grow"
-                data-testid="fieldarray_0"
+                data-testid="arrayfield_0"
               >
                 <div
                   class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
@@ -1536,9 +1049,9 @@ exports[`Story Snapshots > Invalid 1`] = `
                           data-filled="true"
                           data-filled-within="true"
                           data-slot="input"
-                          data-testid="fieldarray_0_name"
+                          data-testid="arrayfield_0_name"
                           id="react-aria-react-useId-mock"
-                          name="fieldArray.0.name"
+                          name="arrayField.0.name"
                           placeholder=" "
                           required=""
                           title=""
@@ -1615,9 +1128,9 @@ String must contain at least 8 character(s)"
                           aria-labelledby="react-aria-react-useId-mock"
                           class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small !placeholder:text-danger !text-danger"
                           data-slot="input"
-                          data-testid="fieldarray_0_test"
+                          data-testid="arrayfield_0_test"
                           id="react-aria-react-useId-mock"
-                          name="fieldArray.0.test"
+                          name="arrayField.0.test"
                           placeholder=" "
                           required=""
                           title=""
@@ -1651,31 +1164,17 @@ String must contain at least 8 character(s)"
                 </div>
               </div>
               <button
-                class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover ml-1"
+                aria-label="remove element"
+                class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small gap-2 rounded-medium px-0 !gap-0 transition-transform-colors-opacity motion-reduce:transition-none bg-transparent text-danger data-[hover=true]:bg-danger/20 min-w-10 w-10 h-10 ml-1"
                 type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="h-4 w-4"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+                <span
+                  data-testid="icon-FaTimes"
                 >
-                  <path
-                    clip-rule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
+                  FaTimes
+                </span>
               </button>
             </div>
-            <button
-              class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover text-xs font-medium"
-              data-testid="add-harbor-button-0"
-              type="button"
-            >
-              insert
-            </button>
           </div>
         </li>
         <div
@@ -1693,38 +1192,6 @@ String must contain at least 8 character(s)"
           style="transition: transform 0ms linear;"
         >
           <div
-            class="mr-6 flex flex-row items-center"
-          >
-            <div
-              class="flex flex-col"
-            >
-              <button
-                class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover flex rounded-b-none rounded-t-md border border-gray-300 px-2 py-2 shadow-sm"
-                data-testid="fieldArray.1.up"
-                type="button"
-              >
-                <span
-                  data-testid="icon-FaAngleUp"
-                >
-                  FaAngleUp
-                </span>
-              </button>
-              <button
-                class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-20 h-10 text-small gap-2 rounded-medium opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover flex rounded-b-md rounded-t-none border border-gray-300 px-2 py-2 shadow-sm"
-                data-disabled="true"
-                data-testid="fieldArray.1.down"
-                disabled=""
-                type="button"
-              >
-                <span
-                  data-testid="icon-FaAngleDown"
-                >
-                  FaAngleDown
-                </span>
-              </button>
-            </div>
-          </div>
-          <div
             class="w-full"
           >
             <div
@@ -1732,7 +1199,7 @@ String must contain at least 8 character(s)"
             >
               <div
                 class="flex-grow"
-                data-testid="fieldarray_1"
+                data-testid="arrayfield_1"
               >
                 <div
                   class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
@@ -1778,9 +1245,9 @@ String must contain at least 8 character(s)"
                           data-filled="true"
                           data-filled-within="true"
                           data-slot="input"
-                          data-testid="fieldarray_1_name"
+                          data-testid="arrayfield_1_name"
                           id="react-aria-react-useId-mock"
-                          name="fieldArray.1.name"
+                          name="arrayField.1.name"
                           placeholder=" "
                           required=""
                           title=""
@@ -1857,9 +1324,9 @@ String must contain at least 8 character(s)"
                           aria-labelledby="react-aria-react-useId-mock"
                           class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small !placeholder:text-danger !text-danger"
                           data-slot="input"
-                          data-testid="fieldarray_1_test"
+                          data-testid="arrayfield_1_test"
                           id="react-aria-react-useId-mock"
-                          name="fieldArray.1.test"
+                          name="arrayField.1.test"
                           placeholder=" "
                           required=""
                           title=""
@@ -1893,22 +1360,15 @@ String must contain at least 8 character(s)"
                 </div>
               </div>
               <button
-                class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover ml-1"
+                aria-label="remove element"
+                class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small gap-2 rounded-medium px-0 !gap-0 transition-transform-colors-opacity motion-reduce:transition-none bg-transparent text-danger data-[hover=true]:bg-danger/20 min-w-10 w-10 h-10 ml-1"
                 type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="h-4 w-4"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+                <span
+                  data-testid="icon-FaTimes"
                 >
-                  <path
-                    clip-rule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
+                  FaTimes
+                </span>
               </button>
             </div>
           </div>
@@ -1936,7 +1396,7 @@ String must contain at least 8 character(s)"
         </div>
         <button
           class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-3 min-w-16 h-8 text-tiny gap-2 rounded-small [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover"
-          data-testid="fieldarray_append"
+          data-testid="arrayfield_append"
           type="button"
         >
           Add
@@ -2012,45 +1472,11 @@ exports[`Story Snapshots > Required 1`] = `
       data-testid=""
     >
       <ul
-        data-testid="fieldarray"
+        data-testid="arrayfield"
       >
         <li
           class="mb-3 mt-5 flex flex-row items-center"
         >
-          <div
-            class="mr-6 flex flex-row items-center"
-          >
-            <div
-              class="flex flex-col"
-            >
-              <button
-                class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-20 h-10 text-small gap-2 rounded-medium opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover flex rounded-b-none rounded-t-md border border-gray-300 px-2 py-2 shadow-sm"
-                data-disabled="true"
-                data-testid="fieldArray.0.up"
-                disabled=""
-                type="button"
-              >
-                <span
-                  data-testid="icon-FaAngleUp"
-                >
-                  FaAngleUp
-                </span>
-              </button>
-              <button
-                class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-20 h-10 text-small gap-2 rounded-medium opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover flex rounded-b-md rounded-t-none border border-gray-300 px-2 py-2 shadow-sm"
-                data-disabled="true"
-                data-testid="fieldArray.0.down"
-                disabled=""
-                type="button"
-              >
-                <span
-                  data-testid="icon-FaAngleDown"
-                >
-                  FaAngleDown
-                </span>
-              </button>
-            </div>
-          </div>
           <div
             class="w-full"
           >
@@ -2059,7 +1485,7 @@ exports[`Story Snapshots > Required 1`] = `
             >
               <div
                 class="flex-grow"
-                data-testid="fieldarray_0"
+                data-testid="arrayfield_0"
               >
                 <div
                   class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
@@ -2098,9 +1524,9 @@ exports[`Story Snapshots > Required 1`] = `
                           aria-labelledby="react-aria-react-useId-mock"
                           class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small"
                           data-slot="input"
-                          data-testid="fieldarray.0.name"
+                          data-testid="arrayfield.0.name"
                           id="react-aria-react-useId-mock"
-                          name="fieldArray.0.name"
+                          name="arrayField.0.name"
                           placeholder=" "
                           required=""
                           title=""
@@ -2117,7 +1543,7 @@ exports[`Story Snapshots > Required 1`] = `
         </li>
         <button
           class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-3 min-w-16 h-8 text-tiny gap-2 rounded-small [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover"
-          data-testid="fieldarray_append"
+          data-testid="arrayfield_append"
           type="button"
         >
           Add
@@ -2156,7 +1582,7 @@ exports[`Story Snapshots > Required 1`] = `
 </div>
 `;
 
-exports[`Story Snapshots > WithInitialValue 1`] = `
+exports[`Story Snapshots > Sortable 1`] = `
 <div>
   <div
     class="flex w-full flex-row justify-between gap-6"
@@ -2166,7 +1592,7 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
       data-testid=""
     >
       <ul
-        data-testid="fieldarray"
+        data-testid="arrayfield"
       >
         <li
           class="mb-3 mt-5 flex flex-row items-center"
@@ -2175,32 +1601,19 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
             class="mr-6 flex flex-row items-center"
           >
             <div
-              class="flex flex-col"
+              aria-describedby="DndDescribedBy-9"
+              aria-disabled="false"
+              aria-roledescription="sortable"
+              class="mr-2 text-base text-xl"
+              data-testid="arrayfield_0_sort_drag_handle"
+              role="button"
+              tabindex="0"
             >
-              <button
-                class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-20 h-10 text-small gap-2 rounded-medium opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover flex rounded-b-none rounded-t-md border border-gray-300 px-2 py-2 shadow-sm"
-                data-disabled="true"
-                data-testid="FieldArray.0.up"
-                disabled=""
-                type="button"
+              <span
+                data-testid="icon-FaGripVertical"
               >
-                <span
-                  data-testid="icon-FaAngleUp"
-                >
-                  FaAngleUp
-                </span>
-              </button>
-              <button
-                class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover flex rounded-b-md rounded-t-none border border-gray-300 px-2 py-2 shadow-sm"
-                data-testid="FieldArray.0.down"
-                type="button"
-              >
-                <span
-                  data-testid="icon-FaAngleDown"
-                >
-                  FaAngleDown
-                </span>
-              </button>
+                FaGripVertical
+              </span>
             </div>
           </div>
           <div
@@ -2211,7 +1624,235 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
             >
               <div
                 class="flex-grow"
-                data-testid="fieldarray_0"
+                data-testid="arrayfield_0"
+              >
+                <div
+                  class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
+                  data-filled="true"
+                  data-filled-within="true"
+                  data-has-elements="true"
+                  data-has-label="true"
+                  data-has-value="true"
+                  data-slot="base"
+                >
+                  <div
+                    class="h-full flex flex-col"
+                    data-slot="main-wrapper"
+                  >
+                    <div
+                      class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-focus is-filled"
+                      data-slot="input-wrapper"
+                      style="cursor: text;"
+                    >
+                      <label
+                        class="absolute pointer-events-none origin-top-left flex-shrink-0 rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
+                        data-slot="label"
+                        for="react-aria-react-useId-mock"
+                        id="react-aria-react-useId-mock"
+                      >
+                        name at index 0
+                      </label>
+                      <div
+                        class="inline-flex w-full items-center h-full box-border"
+                        data-slot="inner-wrapper"
+                      >
+                        <input
+                          aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
+                          aria-label=" "
+                          aria-labelledby="react-aria-react-useId-mock"
+                          class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small is-filled"
+                          data-filled="true"
+                          data-filled-within="true"
+                          data-slot="input"
+                          data-testid="arrayfield.0.name"
+                          id="react-aria-react-useId-mock"
+                          name="arrayField.0.name"
+                          placeholder=" "
+                          title=""
+                          type="text"
+                          value="The First"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                aria-label="remove element"
+                class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small gap-2 rounded-medium px-0 !gap-0 transition-transform-colors-opacity motion-reduce:transition-none bg-transparent text-danger data-[hover=true]:bg-danger/20 min-w-10 w-10 h-10 ml-1"
+                type="button"
+              >
+                <span
+                  data-testid="icon-FaTimes"
+                >
+                  FaTimes
+                </span>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li
+          class="mb-3 mt-5 flex flex-row items-center"
+        >
+          <div
+            class="mr-6 flex flex-row items-center"
+          >
+            <div
+              aria-describedby="DndDescribedBy-9"
+              aria-disabled="false"
+              aria-roledescription="sortable"
+              class="mr-2 text-base text-xl"
+              data-testid="arrayfield_1_sort_drag_handle"
+              role="button"
+              tabindex="0"
+            >
+              <span
+                data-testid="icon-FaGripVertical"
+              >
+                FaGripVertical
+              </span>
+            </div>
+          </div>
+          <div
+            class="w-full"
+          >
+            <div
+              class="mb-2 flex items-center"
+            >
+              <div
+                class="flex-grow"
+                data-testid="arrayfield_1"
+              >
+                <div
+                  class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
+                  data-filled="true"
+                  data-filled-within="true"
+                  data-has-elements="true"
+                  data-has-label="true"
+                  data-has-value="true"
+                  data-slot="base"
+                >
+                  <div
+                    class="h-full flex flex-col"
+                    data-slot="main-wrapper"
+                  >
+                    <div
+                      class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 h-10 min-h-10 rounded-small transition-background !duration-150 transition-colors motion-reduce:transition-none group-data-[focus=true]:border-focus is-filled"
+                      data-slot="input-wrapper"
+                      style="cursor: text;"
+                    >
+                      <label
+                        class="absolute pointer-events-none origin-top-left flex-shrink-0 rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
+                        data-slot="label"
+                        for="react-aria-react-useId-mock"
+                        id="react-aria-react-useId-mock"
+                      >
+                        name at index 1
+                      </label>
+                      <div
+                        class="inline-flex w-full items-center h-full box-border"
+                        data-slot="inner-wrapper"
+                      >
+                        <input
+                          aria-describedby="react-aria-react-useId-mock react-aria-react-useId-mock"
+                          aria-label=" "
+                          aria-labelledby="react-aria-react-useId-mock"
+                          class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text text-small is-filled"
+                          data-filled="true"
+                          data-filled-within="true"
+                          data-slot="input"
+                          data-testid="arrayfield.1.name"
+                          id="react-aria-react-useId-mock"
+                          name="arrayField.1.name"
+                          placeholder=" "
+                          title=""
+                          type="text"
+                          value="The Second"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                aria-label="remove element"
+                class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small gap-2 rounded-medium px-0 !gap-0 transition-transform-colors-opacity motion-reduce:transition-none bg-transparent text-danger data-[hover=true]:bg-danger/20 min-w-10 w-10 h-10 ml-1"
+                type="button"
+              >
+                <span
+                  data-testid="icon-FaTimes"
+                >
+                  FaTimes
+                </span>
+              </button>
+            </div>
+          </div>
+        </li>
+        <button
+          class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-3 min-w-16 h-8 text-tiny gap-2 rounded-small [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover"
+          data-testid="arrayfield_append"
+          type="button"
+        >
+          Add
+        </button>
+      </ul>
+      <div
+        id="DndDescribedBy-9"
+        style="display: none;"
+      >
+        
+    To pick up a draggable item, press the space bar.
+    While dragging, use the arrow keys to move the item.
+    Press space again to drop the item in its new position, or press escape to cancel.
+  
+      </div>
+      <div
+        aria-atomic="true"
+        aria-live="assertive"
+        id="DndLiveRegion-9"
+        role="status"
+        style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
+      />
+      <div
+        class="mt-4 flex justify-end"
+      >
+        <button
+          class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white"
+          data-testid="form_submit_button"
+          type="submit"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`Story Snapshots > WithInitialValue 1`] = `
+<div>
+  <div
+    class="flex w-full flex-row justify-between gap-6"
+  >
+    <form
+      class="flex-grow min-w-60"
+      data-testid=""
+    >
+      <ul
+        data-testid="arrayfield"
+      >
+        <li
+          class="mb-3 mt-5 flex flex-row items-center"
+        >
+          <div
+            class="w-full"
+          >
+            <div
+              class="mb-2 flex items-center"
+            >
+              <div
+                class="flex-grow"
+                data-testid="arrayfield_0"
               >
                 <div
                   class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
@@ -2251,9 +1892,9 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
                           data-filled="true"
                           data-filled-within="true"
                           data-slot="input"
-                          data-testid="fieldarray.0.name"
+                          data-testid="arrayfield.0.name"
                           id="react-aria-react-useId-mock"
-                          name="FieldArray.0.name"
+                          name="arrayField.0.name"
                           placeholder=" "
                           title=""
                           type="text"
@@ -2265,68 +1906,22 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
                 </div>
               </div>
               <button
-                class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover ml-1"
+                aria-label="remove element"
+                class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small gap-2 rounded-medium px-0 !gap-0 transition-transform-colors-opacity motion-reduce:transition-none bg-transparent text-danger data-[hover=true]:bg-danger/20 min-w-10 w-10 h-10 ml-1"
                 type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="h-4 w-4"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+                <span
+                  data-testid="icon-FaTimes"
                 >
-                  <path
-                    clip-rule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
+                  FaTimes
+                </span>
               </button>
             </div>
-            <button
-              class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover text-xs font-medium"
-              data-testid="add-harbor-button-0"
-              type="button"
-            >
-              insert
-            </button>
           </div>
         </li>
         <li
           class="mb-3 mt-5 flex flex-row items-center"
         >
-          <div
-            class="mr-6 flex flex-row items-center"
-          >
-            <div
-              class="flex flex-col"
-            >
-              <button
-                class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover flex rounded-b-none rounded-t-md border border-gray-300 px-2 py-2 shadow-sm"
-                data-testid="FieldArray.1.up"
-                type="button"
-              >
-                <span
-                  data-testid="icon-FaAngleUp"
-                >
-                  FaAngleUp
-                </span>
-              </button>
-              <button
-                class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-20 h-10 text-small gap-2 rounded-medium opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover flex rounded-b-md rounded-t-none border border-gray-300 px-2 py-2 shadow-sm"
-                data-disabled="true"
-                data-testid="FieldArray.1.down"
-                disabled=""
-                type="button"
-              >
-                <span
-                  data-testid="icon-FaAngleDown"
-                >
-                  FaAngleDown
-                </span>
-              </button>
-            </div>
-          </div>
           <div
             class="w-full"
           >
@@ -2335,7 +1930,7 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
             >
               <div
                 class="flex-grow"
-                data-testid="fieldarray_1"
+                data-testid="arrayfield_1"
               >
                 <div
                   class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
@@ -2375,9 +1970,9 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
                           data-filled="true"
                           data-filled-within="true"
                           data-slot="input"
-                          data-testid="fieldarray.1.name"
+                          data-testid="arrayfield.1.name"
                           id="react-aria-react-useId-mock"
-                          name="FieldArray.1.name"
+                          name="arrayField.1.name"
                           placeholder=" "
                           title=""
                           type="text"
@@ -2389,29 +1984,22 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
                 </div>
               </div>
               <button
-                class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover ml-1"
+                aria-label="remove element"
+                class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small gap-2 rounded-medium px-0 !gap-0 transition-transform-colors-opacity motion-reduce:transition-none bg-transparent text-danger data-[hover=true]:bg-danger/20 min-w-10 w-10 h-10 ml-1"
                 type="button"
               >
-                <svg
-                  aria-hidden="true"
-                  class="h-4 w-4"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
+                <span
+                  data-testid="icon-FaTimes"
                 >
-                  <path
-                    clip-rule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    fill-rule="evenodd"
-                  />
-                </svg>
+                  FaTimes
+                </span>
               </button>
             </div>
           </div>
         </li>
         <button
           class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-3 min-w-16 h-8 text-tiny gap-2 rounded-small [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground data-[hover=true]:opacity-hover"
-          data-testid="fieldarray_append"
+          data-testid="arrayfield_append"
           type="button"
         >
           Add

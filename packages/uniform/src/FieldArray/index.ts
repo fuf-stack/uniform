@@ -1,10 +1,6 @@
 import FieldArray from './FieldArray';
 
-export type {
-  FieldArrayProps,
-  FieldArrayHideOption,
-  FieldArrayFieldChildren,
-} from './FieldArray';
+export type * from './types';
 
 export { FieldArray };
 

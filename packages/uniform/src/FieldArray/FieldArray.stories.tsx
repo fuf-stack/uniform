@@ -1,12 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import {
-  FaAngleDown,
-  FaAngleUp,
-  FaCopy,
-  FaPlus,
-  FaTimes,
-} from 'react-icons/fa';
+import { FaCopy, FaPlus, FaTimes } from 'react-icons/fa';
 
 import { action } from '@storybook/addon-actions';
 import { expect, userEvent, within } from '@storybook/test';
@@ -52,42 +46,42 @@ export const Default: Story = {
   },
 };
 
-const validationRequired2 = veto({
-  fieldArray: vt.array(vt.string()).min(0),
+const validationRequiredFlat = veto({
+  arrayField: vt.array(vt.string()).min(0),
 });
 
 export const FlatArray: Story = {
   parameters: {
     formProps: {
-      validation: validationRequired2,
+      validation: validationRequiredFlat,
     },
   },
   args: {
-    name: 'fieldArray',
+    name: 'arrayField',
     children: ({ name, index }) => (
       <Input name={`${name}`} label={`name ${index}`} />
     ),
-    testId: 'fieldarray',
+    testId: 'arrayfield',
   },
 };
 
 export const WithInitialValue: Story = {
   parameters: {
     formProps: {
-      initialValues: { FieldArray: [{ name: 'Max' }, { name: 'Maria' }] },
+      initialValues: { arrayField: [{ name: 'Max' }, { name: 'Maria' }] },
     },
   },
   args: {
-    name: 'FieldArray',
+    name: 'arrayField',
     children: ({ name, index }) => (
       <Input name={`${name}.name`} label={`name ${index}`} />
     ),
-    testId: 'fieldarray',
+    testId: 'arrayfield',
   },
 };
 
 const validationRequired = veto({
-  fieldArray: vt.refineArray(vt.array(vt.object({ name: vt.string() })))({
+  arrayField: vt.refineArray(vt.array(vt.object({ name: vt.string() })))({
     unique: {
       elementMessage: 'Contains duplicate name',
       mapFn: (val) => {
@@ -102,11 +96,11 @@ export const Required: Story = {
   parameters: {
     formProps: {
       validation: validationRequired,
-      initialValues: { fieldArray: [{}] },
+      initialValues: { arrayField: [{}] },
     },
   },
   args: {
-    name: 'fieldArray',
+    name: 'arrayField',
     children: ({ name, index }) => (
       <Input name={`${name}.name`} label={`name ${index}`} />
     ),
@@ -114,7 +108,7 @@ export const Required: Story = {
 };
 
 const formValidator = veto({
-  fieldArray: vt.refineArray(
+  arrayField: vt.refineArray(
     vt
       .array(
         vt.object({
@@ -136,11 +130,11 @@ export const Invalid: Story = {
   parameters: {
     formProps: {
       validation: formValidator,
-      initialValues: { fieldArray: [{}] },
+      initialValues: { arrayField: [{}] },
     },
   },
   args: {
-    name: 'fieldArray',
+    name: 'arrayField',
     label: 'FieldArray',
     children: ({ name, index, testId }) => (
       <>
@@ -156,27 +150,27 @@ export const Invalid: Story = {
         />
       </>
     ),
-    testId: 'fieldarray',
+    testId: 'arrayfield',
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
 
-    const appendButton = canvas.getByTestId('fieldarray_append');
+    const appendButton = canvas.getByTestId('arrayfield_append');
     appendButton.click();
 
-    const input = canvas.getByTestId('fieldarray_0_name');
+    const input = canvas.getByTestId('arrayfield_0_name');
     await userEvent.type(input, 'invälid', {
       delay: 100,
     });
 
-    const inputTwo = canvas.getByTestId('fieldarray_1_name');
+    const inputTwo = canvas.getByTestId('arrayfield_1_name');
     await userEvent.type(inputTwo, 'invälid', {
       delay: 100,
     });
 
-    await userEvent.click(canvas.getByTestId('fieldarray'), { delay: 100 });
+    await userEvent.click(canvas.getByTestId('arrayfield'), { delay: 100 });
 
-    // await userEvent.click(canvas.getByTestId('fieldarray'), { delay: 1000 });
+    // await userEvent.click(canvas.getByTestId('arrayfield'), { delay: 1000 });
 
     // const submitButton = canvas.getByTestId('form_submit_button');
     // await userEvent.click(submitButton, { delay: 100 });
@@ -192,7 +186,7 @@ export const Invalid: Story = {
     );
     await expect(errorGlobal).toBeInTheDocument();
 
-    const elementZero = canvas.getByTestId('fieldarray_0');
+    const elementZero = canvas.getByTestId('arrayfield_0');
     await expect(elementZero).toContainHTML(
       'Must only contain alphanumeric characters and spaces.',
     );
@@ -200,7 +194,7 @@ export const Invalid: Story = {
       'String must contain at least 8 character(s)',
     );
 
-    const elementOne = canvas.getByTestId('fieldarray_1');
+    const elementOne = canvas.getByTestId('arrayfield_1');
     await expect(elementOne).toContainHTML(
       'Must only contain alphanumeric characters and spaces.',
     );
@@ -209,57 +203,26 @@ export const Invalid: Story = {
     );
 
     // TODO: this should happen if fieldarray1_name is blurred but blurring does not seem to work by clicking somewhere else
-    await expect(canvas.getByTestId('fieldarray')).toContainHTML(
+    await expect(canvas.getByTestId('arrayfield')).toContainHTML(
       'Element already exists',
     );
-    await expect(canvas.getByTestId('fieldarray')).toContainHTML(
+    await expect(canvas.getByTestId('arrayfield')).toContainHTML(
       'Array elements are not unique',
     );
   },
 };
 
-export const HideAllButtons: Story = {
+export const AllowDeleteAllElements: Story = {
   parameters: {
     formProps: {
-      initialValues: { fieldArray: [{}] },
+      initialValues: { arrayField: [{}] },
     },
   },
   args: {
-    name: 'fieldArray',
+    name: 'arrayField',
     children: ({ name, index }) => (
       <Input name={`${name}.name`} label={`name ${index}`} />
     ),
-    // hideButtons: ['all'],
-    moveField: ['drag-drop', 'button'],
-  },
-};
-export const HideAllButAdd: Story = {
-  parameters: {
-    formProps: {
-      initialValues: { fieldArray: [{}] },
-    },
-  },
-  args: {
-    name: 'fieldArray',
-    children: ({ name, index }) => (
-      <Input name={`${name}.name`} label={`name ${index}`} />
-    ),
-    hideButtons: ['insert', 'remove', 'move'],
-  },
-};
-
-export const AllowAllDelete: Story = {
-  parameters: {
-    formProps: {
-      initialValues: { fieldArray: [{}] },
-    },
-  },
-  args: {
-    name: 'fieldArray',
-    children: ({ name, index }) => (
-      <Input name={`${name}.name`} label={`name ${index}`} />
-    ),
-
     lastElementNotDeletable: false,
   },
 };
@@ -267,35 +230,23 @@ export const AllowAllDelete: Story = {
 export const Custom: Story = {
   parameters: {
     formProps: {
-      initialValues: { fieldArray: [{}] },
+      initialValues: { arrayField: [{}] },
     },
   },
   args: {
-    name: 'fieldArray',
-    children: ({ name, index, move, insert, remove }) => (
+    name: 'arrayField',
+    children: ({ name, index, methods }) => (
       <>
         <Input name={`${name}.name`} label={`name ${index}`} />
         <Input name={`${name}.age`} label={`age ${index}`} />
-        <Button className="mt-2" onClick={() => move(index, index - 1)}>
-          <FaAngleUp />
-        </Button>
-        <Button className="mt-2" onClick={() => move(index, index + 1)}>
-          <FaAngleDown />
-        </Button>
-        <Button
-          className="mt-2"
-          onClick={() => {
-            insert(index + 1, {});
-          }}
-        >
+        <Button className="mt-2" onClick={() => methods.insert()}>
           <FaPlus />
         </Button>
-        <Button className="mt-2" onClick={() => remove(index)}>
+        <Button className="mt-2" onClick={() => methods.remove()}>
           <FaTimes />
         </Button>
       </>
     ),
-    hideButtons: ['insert', 'remove', 'move'],
     testId: 'some-test-id',
   },
 };
@@ -303,56 +254,66 @@ export const Custom: Story = {
 export const Duplicate: Story = {
   parameters: {
     formProps: {
-      initialValues: { fieldArray: [{}] },
+      initialValues: { arrayField: [{}] },
     },
   },
   args: {
-    name: 'fieldArray',
-    children: ({ name, index, remove, duplicate }) => (
+    name: 'arrayField',
+    children: ({ name, index, methods }) => (
       <>
         <Input name={`${name}.name`} label={`name ${index}`} />
         <Input name={`${name}.age`} label={`age ${index}`} />
-        <Button
-          className="mt-2"
-          onClick={() => {
-            duplicate(index);
-          }}
-        >
+        <Button className="mt-2" onClick={() => methods.duplicate()}>
           <FaCopy />
         </Button>
-        <Button className="mt-2" onClick={() => remove(index)}>
+        <Button className="mt-2" onClick={() => methods.remove()}>
           <FaTimes />
         </Button>
       </>
     ),
-    hideButtons: ['insert', 'remove', 'move'],
     testId: 'some-test-id',
   },
 };
 
-export const Dragable: Story = {
+export const InsertAfter: Story = {
+  parameters: {
+    formProps: {
+      initialValues: { arrayField: [{ name: 'Max' }, { name: 'Maria' }] },
+    },
+  },
+  args: {
+    name: 'arrayField',
+    children: ({ name, index }) => (
+      <Input name={`${name}.name`} label={`name ${index}`} />
+    ),
+    insertAfter: true,
+    testId: 'arrayfield',
+  },
+};
+
+export const Sortable: Story = {
   parameters: {
     formProps: {
       initialValues: {
-        fieldArray: [{ name: 'The First' }, { name: 'The Second' }],
+        arrayField: [{ name: 'The First' }, { name: 'The Second' }],
       },
     },
   },
   args: {
-    name: 'fieldArray',
+    name: 'arrayField',
     children: ({ name, index }) => (
       <Input name={`${name}.name`} label={`name at index ${index}`} />
     ),
-    testId: 'fieldarray',
-    moveField: ['drag-drop'],
+    testId: 'arrayfield',
+    sortable: true,
   },
 
   // TODO: test with cypress when component is actually in use. This is not working.
   // play: async ({ canvasElement }) => {
   //   const user = userEvent.setup();
   //   const canvas = within(canvasElement);
-  //   // const fieldArrayItemButton = canvas.getByTestId('fieldarray_1_movebutton');
-  //   // const fieldArray = canvas.getByTestId('fieldarray_0_movebutton');
+  //   // const fieldArrayItemButton = canvas.getByTestId('arrayfield_1_movebutton');
+  //   // const fieldArray = canvas.getByTestId('arrayfield_0_movebutton');
 
   //   // await fieldArrayItemButton.dispatchEvent(new MouseEvent('mousedown'));
   //   // await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -360,17 +321,17 @@ export const Dragable: Story = {
   //   // await new Promise((resolve) => setTimeout(resolve, 2000));
   //   // await fieldArray.dispatchEvent(new MouseEvent('mouseup'));
 
-  //   // const firstField = canvas.getByTestId('fieldarray0.name');
+  //   // const firstField = canvas.getByTestId('arrayfield0.name');
   //   // const firstFieldValue = firstField.getAttribute('value');
   //   // await expect(firstFieldValue).toBe('The Second');
   //   // await userEvent.click(fieldArrayItemButton, {
   //   //   delay: 500,
   //   // });
   //   // const canvas = within(canvasElement);
-  //   // const dropTarget = canvas.getByTestId('fieldarray_1_movebutton');
+  //   // const dropTarget = canvas.getByTestId('arrayfield_1_movebutton');
 
   //   await new Promise((resolve) => setTimeout(resolve, 2000));
-  //   const draggable = canvas.getByTestId('fieldarray_0_movebutton');
+  //   const draggable = canvas.getByTestId('arrayfield_0_movebutton');
   //   const dropTarget = canvas.getByText('Add');
 
   //   // user.
@@ -390,7 +351,7 @@ export const Dragable: Story = {
 
   //   await user.pointer({ target: dropTarget, keys: '[/MouseLeft]' });
 
-  //   const firstField = canvas.getByTestId('fieldarray0.name');
+  //   const firstField = canvas.getByTestId('arrayfield0.name');
   //   const firstFieldValue = firstField.getAttribute('value');
   //   await expect(firstFieldValue).toBe('The Second');
   //   // await user.click(draggable, {
