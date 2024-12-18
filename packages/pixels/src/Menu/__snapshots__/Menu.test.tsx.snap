@@ -10,19 +10,11 @@ exports[`Story Snapshots > Default 1`] = `
     id="react-aria-:r0:"
     type="button"
   >
-    <svg
-      fill="currentColor"
-      height="1em"
-      stroke="currentColor"
-      stroke-width="0"
-      viewBox="0 0 128 512"
-      width="1em"
-      xmlns="http://www.w3.org/2000/svg"
+    <span
+      data-testid="icon-FaEllipsisVertical"
     >
-      <path
-        d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"
-      />
-    </svg>
+      FaEllipsisVertical
+    </span>
   </button>
 </div>
 `;
@@ -39,19 +31,11 @@ exports[`Story Snapshots > Disabled 1`] = `
     id="react-aria-:rc:"
     type="button"
   >
-    <svg
-      fill="currentColor"
-      height="1em"
-      stroke="currentColor"
-      stroke-width="0"
-      viewBox="0 0 128 512"
-      width="1em"
-      xmlns="http://www.w3.org/2000/svg"
+    <span
+      data-testid="icon-FaEllipsisVertical"
     >
-      <path
-        d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"
-      />
-    </svg>
+      FaEllipsisVertical
+    </span>
   </button>
 </div>
 `;
@@ -66,19 +50,11 @@ exports[`Story Snapshots > SubMenu 1`] = `
     id="react-aria-:r9:"
     type="button"
   >
-    <svg
-      fill="currentColor"
-      height="1em"
-      stroke="currentColor"
-      stroke-width="0"
-      viewBox="0 0 128 512"
-      width="1em"
-      xmlns="http://www.w3.org/2000/svg"
+    <span
+      data-testid="icon-FaEllipsisVertical"
     >
-      <path
-        d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"
-      />
-    </svg>
+      FaEllipsisVertical
+    </span>
   </button>
 </div>
 `;
@@ -108,19 +84,11 @@ exports[`Story Snapshots > WithoutTrigger 1`] = `
     id="react-aria-:r3:"
     type="button"
   >
-    <svg
-      fill="currentColor"
-      height="1em"
-      stroke="currentColor"
-      stroke-width="0"
-      viewBox="0 0 128 512"
-      width="1em"
-      xmlns="http://www.w3.org/2000/svg"
+    <span
+      data-testid="icon-FaEllipsisVertical"
     >
-      <path
-        d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"
-      />
-    </svg>
+      FaEllipsisVertical
+    </span>
   </button>
 </div>
 `;

@@ -33,3 +33,8 @@ vi.mock('react', async (importOriginal) => {
 
   return { ...reactOrig, useId };
 });
+
+// mock react-icons
+vi.mock('react-icons/fa');
+vi.mock('react-icons/fa6');
+vi.mock('react-icons/hi');

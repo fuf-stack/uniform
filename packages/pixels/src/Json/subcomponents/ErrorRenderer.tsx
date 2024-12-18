@@ -2,7 +2,7 @@ import { FaChevronDown, FaChevronUp, FaTimesCircle } from 'react-icons/fa';
 
 import { Button } from '../../Button';
 
-interface ErrorDisplayProps {
+interface ErrorRendererProps {
   /** The error that occurred during JSON parsing or processing */
   error: unknown;
   /** The original data that caused the error */
@@ -22,12 +22,12 @@ interface ErrorDisplayProps {
  * - Original data preview
  * - Accessibility support via ARIA attributes
  */
-const ErrorDisplay = ({
+const ErrorRenderer = ({
   error,
   data,
   showDetails,
   onToggleDetails,
-}: ErrorDisplayProps) => {
+}: ErrorRendererProps) => {
   return (
     <div
       className="mb-4 flex flex-col items-center rounded-lg border border-danger bg-danger-50 p-4 text-sm text-danger"
@@ -80,4 +80,4 @@ const ErrorDisplay = ({
   );
 };
 
-export default ErrorDisplay;
+export default ErrorRenderer;

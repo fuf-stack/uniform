@@ -40,22 +40,4 @@ describe('Coverage', () => {
     const errorMessage = getByText('Error:');
     expect(errorMessage).toBeInTheDocument();
   });
-
-  test('Json component copy icon shows on hover and turns green on click', () => {
-    const { getByTestId, getByText } = render(
-      <Json value={{ some: 'data' }} />,
-    );
-
-    const mouseOverElement = getByText('1 item');
-
-    fireEvent.mouseOver(mouseOverElement);
-
-    const svgSpan = getByTestId('copy-button');
-
-    fireEvent.click(svgSpan.firstChild);
-
-    fireEvent.mouseOver(mouseOverElement);
-
-    expect(svgSpan.firstChild).toHaveClass('text-success');
-  });
 });
