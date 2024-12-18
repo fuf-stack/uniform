@@ -23,16 +23,14 @@ export interface FieldArrayFeatures {
 export interface FieldArrayProps extends FieldArrayFeatures {
   /** function that renders the children with provided Properties. */
   children: FieldArrayChildrenRenderFn;
-  /* The initial value of a filed that is created in the array */
+  /* initial value of a filed that is created in the array */
   elementInitialValue?: unknown;
-  /** Hide a set of buttons. */
-  hideButtons?: FieldArrayHideOption[];
-  /** label of the FieldArray. */
+  /** label of the field array */
   label?: React.ReactNode;
-  /** stops user from deleting all items. */
+  /** when true last element can not be deleted and will be shown even if empty */
   lastElementNotDeletable?: boolean;
-  /** name the FieldArray is registered in RHF */
+  /** form field name */
   name: string;
-  /** ID for test purposes. */
+  /** HTML data-testid attribute used in e2e tests */
   testId?: string;
 }

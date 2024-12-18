@@ -107,6 +107,11 @@ const FieldArray = ({
         items={fields.map((field) => field.id)}
         strategy={verticalListSortingStrategy}
       >
+        {/**
+         * TODO: this trigger causes the field array (not element)
+         * are shown immediately, but this will cause additional
+         * render cycles, not sure if we should do this...
+         */}
         <ul data-testid={testId} onBlur={() => trigger(`${name}`)}>
           {showLabel && (
             <FieldArrayLabel
