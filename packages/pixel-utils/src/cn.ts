@@ -19,8 +19,8 @@ import { twMerge } from 'tailwind-merge';
  * // Output: 'text-center bg-red-500 p-4'
  * ```
  */
-export const cn = (...classes: ArgumentArray): string => {
+export const cn = (...classes: ArgumentArray) => {
   // First, `classnames` merges the input class names (conditionally if needed).
   // Then, `twMerge` is used to resolve any Tailwind CSS conflicts.
-  return twMerge(classNames(...classes));
+  return twMerge(classNames(...classes)) as unknown as string;
 };

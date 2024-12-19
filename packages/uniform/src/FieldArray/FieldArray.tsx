@@ -21,19 +21,38 @@ import {
   verticalListSortingStrategy,
 } from '@dnd-kit/sortable';
 
+import { cn, tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
 import { Button } from '@fuf-stack/pixels';
 
 import { toNullishString } from '../helpers';
 import { useFieldArray, useFormContext, useInput } from '../hooks';
+import { FieldCopyTestIdButton } from '../partials/FieldCopyTestIdButton';
 import { FieldValidationError } from '../partials/FieldValidationError';
 import FieldArrayElement from './subcomponents/FieldArrayElement';
-import FieldArrayLabel from './subcomponents/FieldArrayLabel';
+
+export const fieldArrayVariants = tv({
+  slots: {
+    appendButton: '',
+    content: 'flex-grow',
+    contentInner: 'mb-2 flex items-center',
+    contentWrapper: 'w-full',
+    sortDragHandle: 'mr-2 text-base text-xl',
+    element: 'mb-3 mt-5 flex flex-row items-center',
+    errorWrapper: 'block',
+    insertAfterButton: 'text-xs font-medium',
+    label: '!pointer-events-auto !static !z-0 -mb-1 ml-1 !inline-block',
+    list: 'm-0 w-full list-none p-0',
+    removeButton: 'ml-1',
+    wrapper: 'flex w-full flex-col gap-2',
+  },
+});
 
 /**
  * FieldArray component using TODO
  */
 const FieldArray = ({
   children,
+  className: _className = undefined,
   duplicate = false,
   elementInitialValue: _elementInitialValue = null,
   insertAfter = false,
@@ -43,6 +62,10 @@ const FieldArray = ({
   sortable = false,
   testId: _testId = undefined,
 }: FieldArrayProps) => {
+  // className from slots
+  const variants = fieldArrayVariants();
+  const className = variantsToClassNames(variants, _className, 'list');
+
   const {
     control,
     debugMode,
@@ -98,31 +121,45 @@ const FieldArray = ({
 
   return (
     <DndContext
-      sensors={sensors}
       collisionDetection={closestCenter}
-      onDragEnd={handleDragEnd}
       modifiers={[restrictToVerticalAxis, restrictToWindowEdges]}
+      onDragEnd={handleDragEnd}
+      sensors={sensors}
     >
       <SortableContext
         items={fields.map((field) => field.id)}
         strategy={verticalListSortingStrategy}
       >
-        {/**
-         * TODO: this trigger causes the field array (not element)
-         * are shown immediately, but this will cause additional
-         * render cycles, not sure if we should do this...
-         */}
-        <ul data-testid={testId} onBlur={() => trigger(`${name}`)}>
+        <ul
+          className={className.list}
+          data-testid={testId}
+          /**
+           * TODO: this trigger causes the field array (not element)
+           * are shown immediately, but this will cause additional
+           * render cycles, not sure if we should do this...
+           */
+          onBlur={() => trigger(`${name}`)}
+        >
+          {/* field array label */}
           {showLabel && (
-            <FieldArrayLabel
-              label={label}
-              showTestIdCopyButton={showTestIdCopyButton}
-              testId={testId}
-              getLabelProps={getLabelProps}
-            />
+            <>
+              {label && (
+                // eslint-disable-next-line jsx-a11y/label-has-associated-control
+                <label
+                  {...getLabelProps()}
+                  className={cn(getLabelProps()?.className, className.label)}
+                >
+                  {label}
+                </label>
+              )}
+              {showTestIdCopyButton && (
+                <FieldCopyTestIdButton testId={testId} />
+              )}
+            </>
           )}
 
           {fields.map((field, index) => {
+            // create methods for element
             const methods: FieldArrayElementMethods = {
               append: () => append(elementInitialValue),
               duplicate: () => {
@@ -135,7 +172,7 @@ const FieldArray = ({
 
             return (
               <FieldArrayElement
-                className="mb-3 mt-5 flex flex-row items-center"
+                className={className}
                 field={field}
                 fields={fields}
                 id={field.id}
@@ -162,6 +199,7 @@ const FieldArray = ({
 
           {/* append elements */}
           <Button
+            className={className.appendButton}
             onClick={() => append(elementInitialValue)}
             size="sm"
             testId={`${testId}_append`}

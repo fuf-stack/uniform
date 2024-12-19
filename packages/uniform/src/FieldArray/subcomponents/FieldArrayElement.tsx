@@ -1,15 +1,18 @@
-/* eslint-disable react/jsx-props-no-spreading */
-
-import type { FieldArrayFeatures, FieldArrayHideOption } from '../types';
+import type { ClassValue } from '@fuf-stack/pixel-utils';
+import type { FieldArrayFeatures } from '../types';
 
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
+
+import { cn } from '@fuf-stack/pixel-utils';
 
 import { useFormContext, useInput } from '../../hooks';
 import { FieldValidationError } from '../../partials/FieldValidationError';
 import FieldArrayInsertButton from './FieldArrayInsertButton';
 import FieldArrayRemoveButton from './FieldArrayRemoveButton';
 import FieldArraySortDragHandle from './FieldArraySortDragHandle';
+
+/* eslint-disable react/jsx-props-no-spreading */
 
 export type FieldArrayElementMethods = {
   append: () => void;
@@ -20,10 +23,15 @@ export type FieldArrayElementMethods = {
 
 interface FieldArrayElementProps extends FieldArrayFeatures {
   children: React.ReactNode;
-  className?: string;
+  /** CSS class name */
+  className: {
+    element?: ClassValue;
+    insertAfterButton?: ClassValue;
+    removeButton?: ClassValue;
+    sortDragHandle?: ClassValue;
+  };
   field: Record<'id', string>;
   fields: Record<'id', string>[];
-  hideButtons?: FieldArrayHideOption[];
   id: string | number;
   index: number;
   lastNotDeletable?: boolean;
@@ -37,7 +45,7 @@ interface FieldArrayElementProps extends FieldArrayFeatures {
  */
 const FieldArrayElement = ({
   children,
-  className = undefined,
+  className,
   field,
   fields,
   id,
@@ -71,12 +79,17 @@ const FieldArrayElement = ({
 
   return (
     <>
-      <li className={className} ref={setNodeRef} style={sortingStyle}>
+      <li
+        className={cn(className.element)}
+        ref={setNodeRef}
+        style={sortingStyle}
+      >
         {/** sorting feature */}
         {sortable && (
           <div className="mr-6 flex flex-row items-center">
             {sortable && (
               <FieldArraySortDragHandle
+                className={className.sortDragHandle}
                 name={name}
                 index={index}
                 attributes={attributes}
@@ -95,13 +108,19 @@ const FieldArrayElement = ({
 
             {/** remove element */}
             {lastNotDeletable && fields.length === 1 ? null : (
-              <FieldArrayRemoveButton onClick={() => methods.remove()} />
+              <FieldArrayRemoveButton
+                className={className.removeButton}
+                onClick={() => methods.remove()}
+              />
             )}
           </div>
 
           {/** insertAfter feature when not last element */}
           {insertAfter && index !== fields.length - 1 && (
-            <FieldArrayInsertButton onClick={() => methods.insert()} />
+            <FieldArrayInsertButton
+              className={className.insertAfterButton}
+              onClick={() => methods.insert()}
+            />
           )}
         </div>
       </li>

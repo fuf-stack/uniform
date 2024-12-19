@@ -1,19 +1,29 @@
+import type { ClassValue } from '@fuf-stack/pixel-utils';
+
 import { FaPlus } from 'react-icons/fa6';
 
+import { cn } from '@fuf-stack/pixel-utils';
 import { Button } from '@fuf-stack/pixels';
 
 interface FieldArrayInsertButtonProps {
+  /** CSS class name */
+  className?: ClassValue;
+  /** click handler */
   onClick: () => void;
 }
 
-const FieldArrayInsertButton = ({ onClick }: FieldArrayInsertButtonProps) => {
+const FieldArrayInsertButton = ({
+  className = undefined,
+  onClick,
+}: FieldArrayInsertButtonProps) => {
   return (
     <Button
-      onClick={onClick}
-      icon={<FaPlus />}
+      className={cn(className)}
       color="success"
-      variant="light"
+      icon={<FaPlus />}
+      onClick={onClick}
       size="sm"
+      variant="light"
     />
   );
 };

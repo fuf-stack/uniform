@@ -10,6 +10,7 @@ exports[`Story Snapshots > AllowDeleteAllElements 1`] = `
       data-testid=""
     >
       <ul
+        class="m-0 w-full list-none p-0"
         data-testid="arrayfield"
       >
         <li
@@ -139,6 +140,7 @@ exports[`Story Snapshots > Custom 1`] = `
       data-testid=""
     >
       <ul
+        class="m-0 w-full list-none p-0"
         data-testid="some_test_id"
       >
         <li
@@ -325,6 +327,7 @@ exports[`Story Snapshots > Default 1`] = `
       data-testid=""
     >
       <ul
+        class="m-0 w-full list-none p-0"
         data-testid="some_test_id"
       >
         <li
@@ -448,6 +451,7 @@ exports[`Story Snapshots > Duplicate 1`] = `
       data-testid=""
     >
       <ul
+        class="m-0 w-full list-none p-0"
         data-testid="some_test_id"
       >
         <li
@@ -634,6 +638,7 @@ exports[`Story Snapshots > FlatArray 1`] = `
       data-testid=""
     >
       <ul
+        class="m-0 w-full list-none p-0"
         data-testid="arrayfield"
       >
         <li
@@ -754,6 +759,7 @@ exports[`Story Snapshots > InsertAfter 1`] = `
       data-testid=""
     >
       <ul
+        class="m-0 w-full list-none p-0"
         data-testid="arrayfield"
       >
         <li
@@ -833,7 +839,7 @@ exports[`Story Snapshots > InsertAfter 1`] = `
               </button>
             </div>
             <button
-              class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-tiny gap-2 rounded-small px-0 !gap-0 transition-transform-colors-opacity motion-reduce:transition-none bg-transparent text-success data-[hover=true]:bg-success/20 min-w-8 w-8 h-8"
+              class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 gap-2 rounded-small px-0 !gap-0 transition-transform-colors-opacity motion-reduce:transition-none bg-transparent text-success data-[hover=true]:bg-success/20 min-w-8 w-8 h-8 text-xs font-medium"
               type="button"
             >
               <svg
@@ -981,6 +987,7 @@ exports[`Story Snapshots > Invalid 1`] = `
       data-testid=""
     >
       <ul
+        class="m-0 w-full list-none p-0"
         data-testid="arrayfield"
       >
         <label
@@ -1472,6 +1479,7 @@ exports[`Story Snapshots > Required 1`] = `
       data-testid=""
     >
       <ul
+        class="m-0 w-full list-none p-0"
         data-testid="arrayfield"
       >
         <li
@@ -1592,6 +1600,7 @@ exports[`Story Snapshots > Sortable 1`] = `
       data-testid=""
     >
       <ul
+        class="m-0 w-full list-none p-0"
         data-testid="arrayfield"
       >
         <li
@@ -1604,7 +1613,7 @@ exports[`Story Snapshots > Sortable 1`] = `
               aria-describedby="DndDescribedBy-9"
               aria-disabled="false"
               aria-roledescription="sortable"
-              class="mr-2 text-base text-xl"
+              class="mr-2 text-xl"
               data-testid="arrayfield_0_sort_drag_handle"
               role="button"
               tabindex="0"
@@ -1701,7 +1710,7 @@ exports[`Story Snapshots > Sortable 1`] = `
               aria-describedby="DndDescribedBy-9"
               aria-disabled="false"
               aria-roledescription="sortable"
-              class="mr-2 text-base text-xl"
+              class="mr-2 text-xl"
               data-testid="arrayfield_1_sort_drag_handle"
               role="button"
               tabindex="0"
@@ -1839,6 +1848,7 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
       data-testid=""
     >
       <ul
+        class="m-0 w-full list-none p-0"
         data-testid="arrayfield"
       >
         <li

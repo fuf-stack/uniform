@@ -1,18 +1,24 @@
 import type { DraggableAttributes } from '@dnd-kit/core';
 import type { SyntheticListenerMap } from '@dnd-kit/core/dist/hooks/utilities';
+import type { ClassValue } from '@fuf-stack/pixel-utils';
 
 import { FaGripVertical } from 'react-icons/fa';
+
+import { cn } from '@nextui-org/theme';
 
 import { slugify } from '../../helpers';
 
 interface FieldArraySortDragHandleProps {
   attributes: DraggableAttributes;
+  /** CSS class name */
+  className?: ClassValue;
   index: number;
   listeners?: SyntheticListenerMap;
   name: string;
 }
 
 const FieldArraySortDragHandle = ({
+  className = undefined,
   name,
   index,
   attributes,
@@ -20,7 +26,7 @@ const FieldArraySortDragHandle = ({
 }: FieldArraySortDragHandleProps) => {
   return (
     <div
-      className="mr-2 text-base text-xl"
+      className={cn(className)}
       data-testid={slugify(`${name}_${index}_sort_drag_handle`)}
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...attributes}

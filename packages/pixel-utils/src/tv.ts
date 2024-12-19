@@ -1,5 +1,5 @@
 import type { VariantProps } from '@nextui-org/theme';
-import type { ClassProp } from 'tailwind-variants';
+import type { ClassProp, TV } from 'tailwind-variants';
 
 import { tv as tailwindVariants } from 'tailwind-variants';
 
@@ -7,7 +7,7 @@ import { tv as tailwindVariants } from 'tailwind-variants';
  * Represents a class value which can be either a string or an array of strings
  * Used for handling both single class names and multiple class names
  */
-type ClassValue = string | string[];
+export type ClassValue = string | string[];
 
 /**
  * Props accepted by tailwind-variants slot functions
@@ -36,7 +36,7 @@ type TVRecord = Record<string, TVFunction>;
  * Re-export of tailwind-variants tv function
  * Used to create variant definitions with slots and variants
  */
-export const tv = tailwindVariants;
+export const tv: TV = tailwindVariants;
 
 /**
  * Extracts variant props from a tailwind-variants component

@@ -1,7 +1,10 @@
+import type { TVClassName, TVProps } from '@fuf-stack/pixel-utils';
 import type { JSX } from 'react';
+import type { fieldArrayVariants } from './FieldArray';
 import type { FieldArrayElementMethods } from './subcomponents/FieldArrayElement';
 
-export type FieldArrayHideOption = 'add' | 'insert' | 'remove' | 'sort' | 'all';
+type VariantProps = TVProps<typeof fieldArrayVariants>;
+type ClassName = TVClassName<typeof fieldArrayVariants>;
 
 export type FieldArrayChildrenRenderFn = (args: {
   index: number;
@@ -20,9 +23,11 @@ export interface FieldArrayFeatures {
   sortable?: boolean;
 }
 
-export interface FieldArrayProps extends FieldArrayFeatures {
+export interface FieldArrayProps extends FieldArrayFeatures, VariantProps {
   /** function that renders the children with provided Properties. */
   children: FieldArrayChildrenRenderFn;
+  /** CSS class name */
+  className?: ClassName;
   /* initial value of a filed that is created in the array */
   elementInitialValue?: unknown;
   /** label of the field array */
