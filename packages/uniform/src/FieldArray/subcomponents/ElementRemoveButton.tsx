@@ -5,17 +5,17 @@ import { FaTimes } from 'react-icons/fa';
 import { cn } from '@fuf-stack/pixel-utils';
 import { Button } from '@fuf-stack/pixels';
 
-interface FieldArrayRemoveButtonProps {
+interface ElementRemoveButtonProps {
   /** CSS class name */
   className?: ClassValue;
   /** click handler */
   onClick: () => void;
 }
 
-const FieldArrayRemoveButton = ({
+const ElementRemoveButton = ({
   className = undefined,
   onClick,
-}: FieldArrayRemoveButtonProps) => {
+}: ElementRemoveButtonProps) => {
   return (
     <Button
       ariaLabel="remove element"
@@ -28,4 +28,4 @@ const FieldArrayRemoveButton = ({
   );
 };
 
-export default FieldArrayRemoveButton;
+export default ElementRemoveButton;

@@ -1,25 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
-import type { DragEndEvent } from '@dnd-kit/core';
 import type { FieldArrayElementMethods } from './subcomponents/FieldArrayElement';
 import type { FieldArrayProps } from './types';
-
-import {
-  closestCenter,
-  DndContext,
-  KeyboardSensor,
-  PointerSensor,
-  useSensor,
-  useSensors,
-} from '@dnd-kit/core';
-import {
-  restrictToVerticalAxis,
-  restrictToWindowEdges,
-} from '@dnd-kit/modifiers';
-import {
-  SortableContext,
-  verticalListSortingStrategy,
-} from '@dnd-kit/sortable';
 
 import { cn, tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
 import { Button } from '@fuf-stack/pixels';
@@ -29,6 +11,7 @@ import { useFieldArray, useFormContext, useInput } from '../hooks';
 import { FieldCopyTestIdButton } from '../partials/FieldCopyTestIdButton';
 import { FieldValidationError } from '../partials/FieldValidationError';
 import FieldArrayElement from './subcomponents/FieldArrayElement';
+import SortContext from './subcomponents/SortContext';
 
 export const fieldArrayVariants = tv({
   slots: {
@@ -101,125 +84,98 @@ const FieldArray = ({
     append(elementInitialValue);
   }
 
-  const sensors = useSensors(
-    useSensor(PointerSensor),
-    useSensor(KeyboardSensor),
-  );
-
-  const handleDragEnd = (event: DragEndEvent) => {
-    const { active, over } = event;
-
-    if (active.id !== over?.id) {
-      const oldIndex = fields.findIndex((field) => field.id === active.id);
-      const newIndex = fields.findIndex((field) => field.id === over?.id);
-      move(oldIndex, newIndex);
-    }
-  };
-
   const showTestIdCopyButton = debugMode === 'debug-testids';
   const showLabel = label || showTestIdCopyButton;
 
   return (
-    <DndContext
-      collisionDetection={closestCenter}
-      modifiers={[restrictToVerticalAxis, restrictToWindowEdges]}
-      onDragEnd={handleDragEnd}
-      sensors={sensors}
-    >
-      <SortableContext
-        items={fields.map((field) => field.id)}
-        strategy={verticalListSortingStrategy}
+    <SortContext sortable={sortable} move={move} fields={fields}>
+      <ul
+        className={className.list}
+        data-testid={testId}
+        /**
+         * TODO: this trigger causes the field array (not element)
+         * are shown immediately, but this will cause additional
+         * render cycles, not sure if we should do this...
+         */
+        onBlur={() => trigger(`${name}`)}
       >
-        <ul
-          className={className.list}
-          data-testid={testId}
-          /**
-           * TODO: this trigger causes the field array (not element)
-           * are shown immediately, but this will cause additional
-           * render cycles, not sure if we should do this...
-           */
-          onBlur={() => trigger(`${name}`)}
-        >
-          {/* field array label */}
-          {showLabel && (
-            <>
-              {label && (
-                // eslint-disable-next-line jsx-a11y/label-has-associated-control
-                <label
-                  {...getLabelProps()}
-                  className={cn(getLabelProps()?.className, className.label)}
-                >
-                  {label}
-                </label>
-              )}
-              {showTestIdCopyButton && (
-                <FieldCopyTestIdButton testId={testId} />
-              )}
-            </>
-          )}
-
-          {fields.map((field, index) => {
-            // create methods for element
-            const methods: FieldArrayElementMethods = {
-              append: () => append(elementInitialValue),
-              duplicate: () => {
-                const values = getValues(name);
-                insert(index + 1, values[index]);
-              },
-              insert: () => insert(index + 1, elementInitialValue),
-              remove: () => remove(index),
-            };
-
-            return (
-              <FieldArrayElement
-                className={className}
-                field={field}
-                fields={fields}
-                id={field.id}
-                index={index}
-                duplicate={duplicate}
-                insertAfter={insertAfter}
-                key={field.id}
-                lastNotDeletable={lastElementNotDeletable}
-                methods={methods}
-                name={name}
-                sortable={sortable}
-                testId={`${testId}_${index}`}
+        {/* field array label */}
+        {showLabel && (
+          <>
+            {label && (
+              // eslint-disable-next-line jsx-a11y/label-has-associated-control
+              <label
+                {...getLabelProps()}
+                className={cn(getLabelProps()?.className, className.label)}
               >
-                {children({
-                  index,
-                  length: fields.length,
-                  methods,
-                  name: `${name}.${index}`,
-                  testId: `${testId}_${index}`,
-                })}
-              </FieldArrayElement>
-            );
-          })}
+                {label}
+              </label>
+            )}
+            {showTestIdCopyButton && <FieldCopyTestIdButton testId={testId} />}
+          </>
+        )}
 
-          {/* append elements */}
-          <Button
-            className={className.appendButton}
-            onClick={() => append(elementInitialValue)}
-            size="sm"
-            testId={`${testId}_append`}
-          >
-            Add
-          </Button>
+        {fields.map((field, index) => {
+          // create methods for element
+          const methods: FieldArrayElementMethods = {
+            append: () => append(elementInitialValue),
+            duplicate: () => {
+              const values = getValues(name);
+              insert(index + 1, values[index]);
+            },
+            insert: () => insert(index + 1, elementInitialValue),
+            remove: () => remove(index),
+          };
 
-          {/* top level field array errors */}
-          {/* @ts-expect-error rhf incompatibility */}
-          {error?._errors && (
-            <div {...getHelperWrapperProps()}>
-              <div {...getErrorMessageProps()}>
-                {/* @ts-expect-error rhf incompatibility */}
-                <FieldValidationError error={error?._errors} />
-              </div>
+          return (
+            <FieldArrayElement
+              className={className}
+              field={field}
+              fields={fields}
+              id={field.id}
+              index={index}
+              duplicate={duplicate}
+              insertAfter={insertAfter}
+              key={field.id}
+              lastNotDeletable={lastElementNotDeletable}
+              methods={methods}
+              name={name}
+              sortable={sortable}
+              testId={`${testId}_${index}`}
+            >
+              {children({
+                index,
+                length: fields.length,
+                methods,
+                name: `${name}.${index}`,
+                testId: `${testId}_${index}`,
+              })}
+            </FieldArrayElement>
+          );
+        })}
+
+        {/* append elements */}
+        <Button
+          className={className.appendButton}
+          onClick={() => append(elementInitialValue)}
+          size="sm"
+          testId={`${testId}_append`}
+        >
+          Add
+        </Button>
+
+        {/* top level field array errors */}
+        {/* @ts-expect-error rhf incompatibility */}
+        {error?._errors && (
+          <div {...getHelperWrapperProps()}>
+            <div {...getErrorMessageProps()}>
+              {/* @ts-expect-error rhf incompatibility */}
+              <FieldValidationError error={error?._errors} />
             </div>
-          )}
-        </ul>
-      </SortableContext>
-    </DndContext>
+          </div>
+        )}
+      </ul>
+    </SortContext>
   );
 };
 

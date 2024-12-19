@@ -98,23 +98,6 @@ exports[`Story Snapshots > AllowDeleteAllElements 1`] = `
         </button>
       </ul>
       <div
-        id="DndDescribedBy-5"
-        style="display: none;"
-      >
-        
-    To pick up a draggable item, press the space bar.
-    While dragging, use the arrow keys to move the item.
-    Press space again to drop the item in its new position, or press escape to cancel.
-  
-      </div>
-      <div
-        aria-atomic="true"
-        aria-live="assertive"
-        id="DndLiveRegion-5"
-        role="status"
-        style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
-      />
-      <div
         class="mt-4 flex justify-end"
       >
         <button
@@ -285,23 +268,6 @@ exports[`Story Snapshots > Custom 1`] = `
         </button>
       </ul>
       <div
-        id="DndDescribedBy-6"
-        style="display: none;"
-      >
-        
-    To pick up a draggable item, press the space bar.
-    While dragging, use the arrow keys to move the item.
-    Press space again to drop the item in its new position, or press escape to cancel.
-  
-      </div>
-      <div
-        aria-atomic="true"
-        aria-live="assertive"
-        id="DndLiveRegion-6"
-        role="status"
-        style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
-      />
-      <div
         class="mt-4 flex justify-end"
       >
         <button
@@ -408,23 +374,6 @@ exports[`Story Snapshots > Default 1`] = `
           Add
         </button>
       </ul>
-      <div
-        id="DndDescribedBy-0"
-        style="display: none;"
-      >
-        
-    To pick up a draggable item, press the space bar.
-    While dragging, use the arrow keys to move the item.
-    Press space again to drop the item in its new position, or press escape to cancel.
-  
-      </div>
-      <div
-        aria-atomic="true"
-        aria-live="assertive"
-        id="DndLiveRegion-0"
-        role="status"
-        style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
-      />
       <div
         class="mt-4 flex justify-end"
       >
@@ -596,23 +545,6 @@ exports[`Story Snapshots > Duplicate 1`] = `
         </button>
       </ul>
       <div
-        id="DndDescribedBy-7"
-        style="display: none;"
-      >
-        
-    To pick up a draggable item, press the space bar.
-    While dragging, use the arrow keys to move the item.
-    Press space again to drop the item in its new position, or press escape to cancel.
-  
-      </div>
-      <div
-        aria-atomic="true"
-        aria-live="assertive"
-        id="DndLiveRegion-7"
-        role="status"
-        style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
-      />
-      <div
         class="mt-4 flex justify-end"
       >
         <button
@@ -643,7 +575,6 @@ exports[`Story Snapshots > FlatArray 1`] = `
       >
         <li
           class="mb-3 mt-5 flex flex-row items-center"
-          style="transition: transform 0ms linear;"
         >
           <div
             class="w-full"
@@ -716,23 +647,6 @@ exports[`Story Snapshots > FlatArray 1`] = `
           Add
         </button>
       </ul>
-      <div
-        id="DndDescribedBy-1"
-        style="display: none;"
-      >
-        
-    To pick up a draggable item, press the space bar.
-    While dragging, use the arrow keys to move the item.
-    Press space again to drop the item in its new position, or press escape to cancel.
-  
-      </div>
-      <div
-        aria-atomic="true"
-        aria-live="assertive"
-        id="DndLiveRegion-1"
-        role="status"
-        style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
-      />
       <div
         class="mt-4 flex justify-end"
       >
@@ -945,23 +859,6 @@ exports[`Story Snapshots > InsertAfter 1`] = `
         </button>
       </ul>
       <div
-        id="DndDescribedBy-8"
-        style="display: none;"
-      >
-        
-    To pick up a draggable item, press the space bar.
-    While dragging, use the arrow keys to move the item.
-    Press space again to drop the item in its new position, or press escape to cancel.
-  
-      </div>
-      <div
-        aria-atomic="true"
-        aria-live="assertive"
-        id="DndLiveRegion-8"
-        role="status"
-        style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
-      />
-      <div
         class="mt-4 flex justify-end"
       >
         <button
@@ -1000,7 +897,6 @@ exports[`Story Snapshots > Invalid 1`] = `
         </label>
         <li
           class="mb-3 mt-5 flex flex-row items-center"
-          style="transition: transform 0ms linear;"
         >
           <div
             class="w-full"
@@ -1196,7 +1092,6 @@ String must contain at least 8 character(s)"
         </div>
         <li
           class="mb-3 mt-5 flex flex-row items-center"
-          style="transition: transform 0ms linear;"
         >
           <div
             class="w-full"
@@ -1437,23 +1332,6 @@ Array must contain at least 3 element(s)"
         </div>
       </ul>
       <div
-        id="DndDescribedBy-4"
-        style="display: none;"
-      >
-        
-    To pick up a draggable item, press the space bar.
-    While dragging, use the arrow keys to move the item.
-    Press space again to drop the item in its new position, or press escape to cancel.
-  
-      </div>
-      <div
-        aria-atomic="true"
-        aria-live="assertive"
-        id="DndLiveRegion-4"
-        role="status"
-        style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
-      />
-      <div
         class="mt-4 flex justify-end"
       >
         <button
@@ -1558,23 +1436,6 @@ exports[`Story Snapshots > Required 1`] = `
         </button>
       </ul>
       <div
-        id="DndDescribedBy-3"
-        style="display: none;"
-      >
-        
-    To pick up a draggable item, press the space bar.
-    While dragging, use the arrow keys to move the item.
-    Press space again to drop the item in its new position, or press escape to cancel.
-  
-      </div>
-      <div
-        aria-atomic="true"
-        aria-live="assertive"
-        id="DndLiveRegion-3"
-        role="status"
-        style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
-      />
-      <div
         class="mt-4 flex justify-end"
       >
         <button
@@ -1610,7 +1471,7 @@ exports[`Story Snapshots > Sortable 1`] = `
             class="mr-6 flex flex-row items-center"
           >
             <div
-              aria-describedby="DndDescribedBy-9"
+              aria-describedby="DndDescribedBy-0"
               aria-disabled="false"
               aria-roledescription="sortable"
               class="mr-2 text-xl"
@@ -1707,7 +1568,7 @@ exports[`Story Snapshots > Sortable 1`] = `
             class="mr-6 flex flex-row items-center"
           >
             <div
-              aria-describedby="DndDescribedBy-9"
+              aria-describedby="DndDescribedBy-0"
               aria-disabled="false"
               aria-roledescription="sortable"
               class="mr-2 text-xl"
@@ -1806,7 +1667,7 @@ exports[`Story Snapshots > Sortable 1`] = `
         </button>
       </ul>
       <div
-        id="DndDescribedBy-9"
+        id="DndDescribedBy-0"
         style="display: none;"
       >
         
@@ -1818,7 +1679,7 @@ exports[`Story Snapshots > Sortable 1`] = `
       <div
         aria-atomic="true"
         aria-live="assertive"
-        id="DndLiveRegion-9"
+        id="DndLiveRegion-0"
         role="status"
         style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
       />
@@ -2015,23 +1876,6 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
           Add
         </button>
       </ul>
-      <div
-        id="DndDescribedBy-2"
-        style="display: none;"
-      >
-        
-    To pick up a draggable item, press the space bar.
-    While dragging, use the arrow keys to move the item.
-    Press space again to drop the item in its new position, or press escape to cancel.
-  
-      </div>
-      <div
-        aria-atomic="true"
-        aria-live="assertive"
-        id="DndLiveRegion-2"
-        role="status"
-        style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;"
-      />
       <div
         class="mt-4 flex justify-end"
       >

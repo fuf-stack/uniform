@@ -5,17 +5,17 @@ import { FaPlus } from 'react-icons/fa6';
 import { cn } from '@fuf-stack/pixel-utils';
 import { Button } from '@fuf-stack/pixels';
 
-interface FieldArrayInsertButtonProps {
+interface ElementInsertAfterButtonProps {
   /** CSS class name */
   className?: ClassValue;
   /** click handler */
   onClick: () => void;
 }
 
-const FieldArrayInsertButton = ({
+const ElementInsertAfterButton = ({
   className = undefined,
   onClick,
-}: FieldArrayInsertButtonProps) => {
+}: ElementInsertAfterButtonProps) => {
   return (
     <Button
       className={cn(className)}
@@ -28,4 +28,4 @@ const FieldArrayInsertButton = ({
   );
 };
 
-export default FieldArrayInsertButton;
+export default ElementInsertAfterButton;
