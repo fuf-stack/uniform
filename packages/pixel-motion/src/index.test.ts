@@ -6,8 +6,8 @@ import * as FramerMotionReexport from './index';
 
 describe('Framer Motion Re-exports', () => {
   it('should re-export all items from framer-motion', () => {
-    const reexportKeys = Object.keys(FramerMotionReexport).sort();
-    const originalKeys = Object.keys(OriginalFramerMotion).sort();
+    const reexportKeys = Object.keys(FramerMotionReexport);
+    const originalKeys = Object.keys(OriginalFramerMotion);
 
     expect(reexportKeys).toEqual(originalKeys);
   });
