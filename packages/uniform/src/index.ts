@@ -1,3 +1,5 @@
+/* v8 ignore start */
+
 export * from './Controller';
 export * from './CheckboxGroup';
 export * from './FieldArray';
@@ -13,3 +15,5 @@ export * from './Select';
 export * from './SubmitButton';
 export * from './Switch';
 export * from './TextArea';
+
+/* v8 ignore stop */

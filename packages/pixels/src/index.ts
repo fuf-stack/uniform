@@ -1,3 +1,5 @@
+/* v8 ignore start */
+
 // components
 export * from './Accordion';
 export * from './Avatar';
@@ -16,3 +18,5 @@ export * from './Tooltip';
 
 // hooks
 export * from './hooks';
+
+/* v8 ignore stop */
