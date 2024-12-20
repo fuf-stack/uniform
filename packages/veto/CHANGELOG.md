@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.1](https://github.com/fuf-stack/pixels/compare/veto-v0.8.0...veto-v0.8.1) (2024-12-20)
+
+
+### Bug Fixes
+
+* **veto:** adjust error message of null fields ([22d6090](https://github.com/fuf-stack/pixels/commit/22d6090c4586c63039ac10f6b750146bfb3683f2))
+
 ## [0.8.0](https://github.com/fuf-stack/pixels/compare/veto-v0.7.2...veto-v0.8.0) (2024-12-09)
 
 
