@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.3](https://github.com/fuf-stack/pixels/compare/pixel-utils-v0.4.2...pixel-utils-v0.4.3) (2024-12-21)
+
+
+### Bug Fixes
+
+* **uniform:** some tailwind variants refactoring of FieldArray ([96a135b](https://github.com/fuf-stack/pixels/commit/96a135bc5a6d169a4d0da2421fb8b2b4987f698b))
+
 ## [0.4.2](https://github.com/fuf-stack/pixels/compare/pixel-utils-v0.4.1...pixel-utils-v0.4.2) (2024-12-10)
 
 
