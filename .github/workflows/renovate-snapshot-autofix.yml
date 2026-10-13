@@ -59,7 +59,7 @@ jobs:
       - name: Resolve PR head branch for issue comment trigger
         id: pr-head
         if: github.event_name == 'issue_comment'
-        uses: actions/github-script@v9
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
         with:
           script: |
             const { owner, repo } = context.repo;
@@ -84,7 +84,7 @@ jobs:
             core.setOutput('ref', pr.head.ref);
             core.setOutput('repository', pr.head.repo.full_name);
 
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
@@ -154,7 +154,7 @@ jobs:
 
       - name: Run CI for the snapshot commit
         if: steps.snapshot-commit.outputs.pushed == 'true'
-        uses: actions/github-script@v9
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
         env:
           HEAD_REF: ${{ github.event_name == 'pull_request_target' && github.event.pull_request.head.ref || github.event_name == 'issue_comment' && steps.pr-head.outputs.ref || github.event.inputs.branch }}
         with:

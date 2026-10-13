@@ -38,6 +38,11 @@ direct and transitive dependencies. Keep `minimumReleaseAge` aligned in
 Existing non-exempt lockfile entries that are too new remain blocked until they
 mature or are replaced with compatible older versions.
 
+Pin external GitHub Actions to full commit SHAs, including actions used inside
+local composite actions. Keep the version tag in a trailing comment so Renovate
+can track updates through `helpers:pinGitHubActionDigests`. Resolve pins from
+the official upstream repository; local `./` action references stay unchanged.
+
 Let Renovate update exact pins and the lockfile. Review release notes for API,
 type, browser, and peer-range changes; inspect every workspace consumer; and do
 not add an override without documenting why one version must be forced. Run

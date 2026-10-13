@@ -25,7 +25,7 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - uses: ./.github/actions/setup-project
       - name: Validate dependency boundaries
         run: pnpm check:boundaries
@@ -38,12 +38,12 @@ jobs:
     timeout-minutes: 15
 
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - uses: ./.github/actions/setup-project
       - name: Run unit tests with coverage
         run: pnpm test
       - name: Upload coverage reports
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
           name: coverage-report
           path: coverage/
@@ -54,7 +54,7 @@ jobs:
     timeout-minutes: 15
 
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - uses: ./.github/actions/setup-project
       - name: Install Playwright browser
         run: pnpm exec playwright install --with-deps chromium
@@ -67,7 +67,7 @@ jobs:
     timeout-minutes: 15
 
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       # Package verification consumes the built publishable artifacts.
       - uses: ./.github/actions/setup-project
       - name: Verify package tarballs and consumer installation
@@ -83,19 +83,19 @@ jobs:
 
     steps:
       # Full history clone — Sonarqube needs it for blame / new-code detection.
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 0 # Required for Sonarqube
 
       # Pull the coverage artifact produced by the test job.
       - name: Download coverage report
-        uses: actions/download-artifact@v8
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8
         with:
           name: coverage-report
           path: coverage/
 
       # Upload coverage + project metadata to SonarQube.
       - name: Run SonarQube analysis
-        uses: SonarSource/sonarqube-scan-action@v8
+        uses: SonarSource/sonarqube-scan-action@d209202bc7d53ff1cc128f7f907dac145c9d6ae9 # v8
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
