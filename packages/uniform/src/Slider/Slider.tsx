@@ -32,7 +32,13 @@ export const sliderVariants = tv({
     mark: '',
     startContent: '',
     step: '',
-    thumb: '',
+    // Validation focuses the input after a mouse submission. HeroUI's keyboard
+    // focus-visible state stays false, so expose that focus while invalid too.
+    thumb: [
+      'group-data-[invalid=true]:data-[focused=true]:outline-2',
+      'group-data-[invalid=true]:data-[focused=true]:outline-focus',
+      'group-data-[invalid=true]:data-[focused=true]:outline-offset-2',
+    ],
     track: '',
     trackWrapper: '',
     value: '',
@@ -127,6 +133,15 @@ const Slider = ({
 
   // Ref for the visual slider to forward focus
   const visualSliderRef = useRef<HTMLDivElement>(null);
+  const focusSliderInput = () => {
+    if (!disabled) {
+      visualSliderRef.current
+        ?.querySelector<HTMLInputElement>(
+          '[data-slot="thumb"] input[type="range"]:not(:disabled)',
+        )
+        ?.focus();
+    }
+  };
 
   // classNames from slots
   const variants = sliderVariants();
@@ -141,6 +156,13 @@ const Slider = ({
       data-invalid={invalid}
       data-required={required}
       data-testid={testId}
+      onFocus={(event) => {
+        // Descendant focus events bubble here too; leave those alone.
+        if (event.target === event.currentTarget) {
+          focusSliderInput();
+        }
+      }}
+      tabIndex={disabled ? undefined : -1}
     >
       {/* Visually hidden input for form accessibility and focus management */}
       <VisuallyHidden>
@@ -155,11 +177,8 @@ const Slider = ({
           onChange={(e) => {
             onChange(Number(e.target.value));
           }}
-          onFocus={() => {
-            // When RHF focuses this hidden input (e.g., on validation error),
-            // forward focus to the visual slider to show focus ring
-            visualSliderRef.current?.focus();
-          }}
+          // RHF error focus must reach the interactive input as well.
+          onFocus={focusSliderInput}
           step={step}
           tabIndex={-1}
           type="range"

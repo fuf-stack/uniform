@@ -1475,6 +1475,7 @@ exports[`Story Snapshots > InputsWithInitialValues 1`] = `
               data-invalid="false"
               data-required="false"
               data-testid="volume"
+              tabindex="-1"
             >
               <div
                 style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -1540,7 +1541,7 @@ exports[`Story Snapshots > InputsWithInitialValues 1`] = `
                     />
                     <div
                       aria-label="Slider thumb 1"
-                      class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small"
+                      class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small group-data-[invalid=true]:data-[focused=true]:outline-2 group-data-[invalid=true]:data-[focused=true]:outline-focus group-data-[invalid=true]:data-[focused=true]:outline-offset-2"
                       data-react-aria-pressable="true"
                       data-slot="thumb"
                       index="0"
@@ -1733,6 +1734,7 @@ exports[`Story Snapshots > InputsWithoutInitialValues 1`] = `
               data-invalid="false"
               data-required="false"
               data-testid="volume"
+              tabindex="-1"
             >
               <div
                 style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -1798,7 +1800,7 @@ exports[`Story Snapshots > InputsWithoutInitialValues 1`] = `
                     />
                     <div
                       aria-label="Slider thumb 1"
-                      class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small"
+                      class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small group-data-[invalid=true]:data-[focused=true]:outline-2 group-data-[invalid=true]:data-[focused=true]:outline-focus group-data-[invalid=true]:data-[focused=true]:outline-offset-2"
                       data-react-aria-pressable="true"
                       data-slot="thumb"
                       index="0"
