@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { FaVolumeDown, FaVolumeUp } from 'react-icons/fa';
 
 import { action } from 'storybook/actions';
-import { expect, userEvent, waitFor, within } from 'storybook/test';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { number, veto } from '@fuf-stack/veto';
 
@@ -55,6 +55,18 @@ export const WithInitialValue: Story = {
   args: {
     name: 'sliderField',
     label: 'Brightness',
+  },
+};
+
+export const AllSizes: Story = {
+  render: () => {
+    return (
+      <div className="flex flex-col gap-8">
+        <Slider label="Small Size" name="smallSlider" size="sm" />
+        <Slider label="Medium Size" name="mediumSlider" size="md" />
+        <Slider label="Large Size" name="largeSlider" size="lg" />
+      </div>
+    );
   },
 };
 
@@ -169,15 +181,51 @@ export const WithSteps: Story = {
   },
 };
 
-export const AllSizes: Story = {
-  render: () => {
-    return (
-      <div className="flex flex-col gap-8">
-        <Slider label="Small Size" name="smallSlider" size="sm" />
-        <Slider label="Medium Size" name="mediumSlider" size="md" />
-        <Slider label="Large Size" name="largeSlider" size="lg" />
-      </div>
-    );
+export const WithValueTransform: Story = {
+  parameters: {
+    formProps: {
+      initialValues: { sliderField: 0.5 },
+      onSubmit: fn(),
+      validation: veto({ sliderField: number().min(0).max(1) }),
+    },
+  },
+  args: {
+    name: 'sliderField',
+    label: 'Volume (%)',
+    step: 10,
+    transform: {
+      toDisplayValue: (value) => {
+        return Number(value) * 100;
+      },
+      toFormValue: (value) => {
+        return value / 100;
+      },
+    },
+  },
+  play: async ({ canvasElement, parameters }) => {
+    const canvas = within(canvasElement);
+    const { onSubmit } = parameters.formProps;
+    onSubmit.mockClear();
+    const thumb = canvas
+      .getByTestId('sliderfield')
+      .querySelector('[data-slot="thumb"]');
+    if (!thumb) {
+      throw new Error('Slider thumb not found');
+    }
+
+    // Stored fraction is displayed as a percentage.
+    const input = canvasElement.querySelector('input[name="sliderField"]');
+    await expect(input).toHaveValue('50');
+    await userEvent.click(thumb);
+    await userEvent.keyboard('{ArrowUp}');
+    await expect(input).toHaveValue('60');
+
+    // Submission and validation receive the fraction, not the percentage.
+    await userEvent.click(canvas.getByRole('button', { name: /submit/i }));
+    await waitFor(() => {
+      expect(onSubmit).toHaveBeenCalled();
+      expect(onSubmit.mock.calls[0][0]).toEqual({ sliderField: 0.6 });
+    });
   },
 };
 

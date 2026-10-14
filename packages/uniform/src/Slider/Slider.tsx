@@ -1,5 +1,6 @@
 import type { TVClassName, TVProps } from '@fuf-stack/pixel-utils';
 import type { ReactNode } from 'react';
+import type { InputValueTransform } from '../hooks/useInputValueTransform';
 
 import { useRef } from 'react';
 
@@ -57,6 +58,16 @@ export interface SliderProps extends VariantProps {
   /** form field name */
   name: string;
   /**
+   * The maximum value of the slider
+   * @default 100
+   */
+  maxValue?: number;
+  /**
+   * The minimum value of the slider
+   * @default 0
+   */
+  minValue?: number;
+  /**
    * Whether to show step dots on the slider
    * @default false
    */
@@ -75,16 +86,8 @@ export interface SliderProps extends VariantProps {
   step?: number;
   /** HTML data-testid attribute used in e2e tests */
   testId?: string;
-  /**
-   * The minimum value of the slider
-   * @default 0
-   */
-  minValue?: number;
-  /**
-   * The maximum value of the slider
-   * @default 100
-   */
-  maxValue?: number;
+  /** Transform between stored form values and numeric slider values. Range and step use display units. */
+  transform?: InputValueTransform<number>;
 }
 
 /**
@@ -94,13 +97,13 @@ const Slider = ({
   className = undefined,
   endContent = undefined,
   fillOffset = undefined,
+  maxValue = 100,
+  minValue = 0,
   name,
   showSteps = false,
   size = 'md',
   startContent = undefined,
   step = 1,
-  minValue = 0,
-  maxValue = 100,
   ...uniformFieldProps
 }: SliderProps) => {
   const {
