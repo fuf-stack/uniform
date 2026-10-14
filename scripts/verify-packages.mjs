@@ -152,11 +152,23 @@ function installAndTestConsumer(tarballs) {
         private: true,
         type: 'module',
         dependencies,
-        pnpm: { overrides: dependencies },
       },
       null,
       2,
     )}\n`,
+  );
+
+  // pnpm reads overrides from pnpm-workspace.yaml, not package.json.
+  // Resolve transitive workspace dependencies to these same local tarballs,
+  // including release versions that have not been published to npm yet.
+  writeFileSync(
+    path.join(fixtureDirectory, 'pnpm-workspace.yaml'),
+    `overrides:\n${Object.entries(dependencies)
+      .map(
+        ([name, tarball]) =>
+          `  ${JSON.stringify(name)}: ${JSON.stringify(tarball)}`,
+      )
+      .join('\n')}\n`,
   );
 
   const imports = [];

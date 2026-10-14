@@ -40,6 +40,12 @@ unresolved `workspace:` ranges, installs all tarballs into a clean consumer
 fixture, and type-checks every public JavaScript entry point through the package
 resolver.
 
+The temporary consumer writes local tarball overrides to `pnpm-workspace.yaml`
+so dependencies between workspace packages use the artifacts under test, even
+when a release PR contains versions that are not published yet. Do not move
+these overrides into `package.json#pnpm`: current pnpm versions ignore that
+configuration.
+
 If no release is created, the publish steps are skipped.
 
 ## Why we publish with Lerna
