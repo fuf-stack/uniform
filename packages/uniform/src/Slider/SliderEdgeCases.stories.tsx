@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
+import edgeCaseDecorator from '@repo/storybook-config/edge-case-decorator';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { number, veto } from '@fuf-stack/veto';
@@ -11,23 +12,7 @@ import meta from './Slider.stories';
 const edgeCaseMeta: Meta<typeof Slider> = {
   ...meta,
   title: 'uniform/Slider/Edge Cases',
-  decorators: [
-    ...(meta.decorators ?? []),
-    (Story, { parameters }) => {
-      return (
-        <div className="flex flex-col gap-6">
-          <aside
-            aria-label="What this checks"
-            className="w-80 max-w-full rounded-lg border border-default-200 bg-default-100 p-3 text-sm text-foreground"
-          >
-            <p className="mb-1 font-semibold">What this checks</p>
-            <p>{parameters.edgeCaseDescription}</p>
-          </aside>
-          <Story />
-        </div>
-      );
-    },
-  ],
+  decorators: [...(meta.decorators ?? []), edgeCaseDecorator],
 };
 
 export default edgeCaseMeta;

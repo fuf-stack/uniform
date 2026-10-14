@@ -28,6 +28,34 @@ important loading/error/empty states. Run the package's focused Vitest command,
 `pnpm test:storybook`, and then `pnpm check`. Attach before/after evidence for
 visual changes.
 
+## Storybook edge cases
+
+Keep normal usage and variant examples in `<Component>.stories.tsx`. Put edge
+cases and focused regression scenarios in a sibling
+`<Component>EdgeCases.stories.tsx`, following the Slider examples. Give that file
+the title `<existing component title>/Edge Cases` so Storybook groups these
+scenarios under the component rather than mixing them into its regular examples.
+Use short story names without repeating "Edge Case" in the sidebar.
+
+Reuse the component's default story metadata (including decorators and args)
+and append `@repo/storybook-config/edge-case-decorator` to its decorators. Each
+edge-case story must set `parameters.edgeCaseDescription` to a short explanation
+of the trigger and expected behavior. The shared decorator renders this in a
+"What this checks" box above the example. Keep the outer layout unconstrained;
+only the explanation box should have a fixed width, so form debug panels and
+portals still have room.
+
+Move scenario-only fixtures and helpers with their stories. Preserve their
+`play` functions, assertions, setup, and cleanup. Update the component's snapshot
+test to call `storySnapshots` for both story modules, retaining any documented
+environment-specific exclusions. Browser Storybook tests discover both files
+automatically. Keep export names when moving existing stories to preserve
+snapshot keys; the new title changes their Storybook URLs, so update any links.
+
+Ordinary disabled, empty, loading, and error variants can remain with the normal
+examples. Separate stories that exercise unusual combinations, boundary
+conditions, or a specific regression.
+
 ## Dependency upgrade
 
 Renovate and pnpm use a 14-day minimum release age for registry packages.

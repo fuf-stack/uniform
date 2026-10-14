@@ -8,9 +8,11 @@ import {
   hasVisibleChildErrors,
 } from './FieldCard';
 import * as stories from './FieldCard.stories';
+import * as edgeCaseStories from './FieldCardEdgeCases.stories';
 
 describe('Story Snapshots', () => {
   storySnapshots(stories);
+  storySnapshots(edgeCaseStories);
 });
 
 describe('hasVisibleChildErrors', () => {

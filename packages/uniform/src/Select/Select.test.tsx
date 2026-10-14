@@ -12,13 +12,15 @@ import { array, object, refineObject, string, veto } from '@fuf-stack/veto';
 import { default as Form } from '../Form';
 import Select from './Select';
 import * as stories from './Select.stories';
+import * as edgeCaseStories from './SelectEdgeCases.stories';
 
 // EdgeCaseFetchFallbackOutside causes DOM errors in snapshot tests due to
 // react-select + React 19 incompatibility when rendering values not in options.
 // The functionality is covered by the unit tests below instead.
-const { EdgeCaseFetchFallbackOutside: _, ...snapshotStories } = stories;
+const { EdgeCaseFetchFallbackOutside: _, ...snapshotStories } = edgeCaseStories;
 
 describe('Story Snapshots', () => {
+  storySnapshots(stories);
   storySnapshots(snapshotStories);
 });
 

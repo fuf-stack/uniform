@@ -6,6 +6,7 @@ import { act } from '@testing-library/react';
 import { modal } from '@fuf-stack/pixels/Modal';
 
 import * as stories from './notification.stories';
+import * as edgeCaseStories from './NotificationEdgeCases.stories';
 
 // The notification stories open modals via the global modal store, which
 // renders into a document.body portal. Hard-reset the store after each test —
@@ -21,4 +22,5 @@ afterEach(() => {
 
 describe('Story Snapshots', () => {
   storySnapshots(stories);
+  storySnapshots(edgeCaseStories);
 });
