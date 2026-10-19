@@ -831,6 +831,7 @@ exports[`Story Snapshots > Password 1`] = `
                 class="w-full font-normal bg-transparent !outline-solid placeholder:text-foreground-500 focus-visible:outline-solid outline-transparent data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 data-[type=color]:rounded-none file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text dark:autofill:[-webkit-text-fill-color:hsl(var(--heroui-foreground))] text-small !placeholder:text-danger !text-danger is-filled [&::-ms-reveal]:hidden"
                 data-filled="true"
                 data-filled-within="true"
+                data-has-end-content="true"
                 data-slot="input"
                 data-testid="passwordfield"
                 data-type="password"
@@ -843,6 +844,33 @@ exports[`Story Snapshots > Password 1`] = `
                 type="password"
                 value="veryS3cure!"
               />
+              <span
+                class="inline-flex shrink-0 items-center gap-2"
+              >
+                <button
+                  aria-controls="passwordfield"
+                  aria-label="Show password"
+                  aria-pressed="false"
+                  class="rounded-sm p-1 text-default-400 outline-none focus-visible:ring-2 focus-visible:ring-focus"
+                  data-testid="passwordfield_password_toggle"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 576 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"
+                    />
+                  </svg>
+                </button>
+              </span>
             </div>
           </div>
           <div
@@ -868,6 +896,433 @@ exports[`Story Snapshots > Password 1`] = `
                   </div>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mt-4 flex justify-end"
+      >
+        <button
+          aria-label="Submit form"
+          class="group tap-highlight-transparent data-[hover=true]:opacity-hover z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white"
+          data-react-aria-pressable="true"
+          data-testid="form_submit_button"
+          tabindex="0"
+          type="submit"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`Story Snapshots > PasswordClearable 1`] = `
+<div>
+  <div
+    class="flex w-full flex-row justify-between gap-6"
+  >
+    <form
+      class="grow min-w-60"
+      data-form-is-valid="true"
+      data-testid=""
+      novalidate=""
+    >
+      <div
+        class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(var(--heroui-font-size-small)_+_10px)]"
+        data-filled="true"
+        data-filled-within="true"
+        data-has-elements="true"
+        data-has-helper="true"
+        data-has-label="true"
+        data-hover="true"
+        data-slot="base"
+      >
+        <div
+          class="h-full flex flex-col"
+          data-slot="main-wrapper"
+        >
+          <div
+            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-xs px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 group-data-[focus=true]:data-[hover=true]:border-default-foreground h-10 min-h-10 rounded-small !duration-150 transition-colors motion-reduce:transition-none bg-content1 group-data-[focus=true]:border-focus"
+            data-hover="true"
+            data-slot="input-wrapper"
+            style="cursor: text;"
+          >
+            <label
+              class="absolute pointer-events-none origin-top-left shrink-0 rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity,translate,scale] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_var(--heroui-font-size-small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
+              data-slot="label"
+              for="password"
+              id="react-aria-«replaced-aria-id»"
+            >
+              Password
+            </label>
+            <div
+              class="inline-flex w-full items-center h-full box-border"
+              data-slot="inner-wrapper"
+            >
+              <input
+                aria-label="Password"
+                aria-labelledby="password react-aria-«replaced-aria-id»"
+                autocomplete="off"
+                class="w-full font-normal bg-transparent !outline-solid placeholder:text-foreground-500 focus-visible:outline-solid outline-transparent data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 data-[type=color]:rounded-none file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text dark:autofill:[-webkit-text-fill-color:hsl(var(--heroui-foreground))] text-small [&::-ms-reveal]:hidden"
+                data-has-end-content="true"
+                data-slot="input"
+                data-testid="password"
+                data-type="password"
+                id="password"
+                name="password"
+                placeholder=" "
+                tabindex="0"
+                title=""
+                type="password"
+                value=""
+              />
+              <span
+                class="inline-flex shrink-0 items-center gap-2"
+              >
+                <svg
+                  aria-hidden="true"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M512 176.001C512 273.203 433.202 352 336 352c-11.22 0-22.19-1.062-32.827-3.069l-24.012 27.014A23.999 23.999 0 0 1 261.223 384H224v40c0 13.255-10.745 24-24 24h-40v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24v-78.059c0-6.365 2.529-12.47 7.029-16.971l161.802-161.802C163.108 213.814 160 195.271 160 176 160 78.798 238.797.001 335.999 0 433.488-.001 512 78.511 512 176.001zM336 128c0 26.51 21.49 48 48 48s48-21.49 48-48-21.49-48-48-48-48 21.49-48 48z"
+                  />
+                </svg>
+                <button
+                  aria-controls="password"
+                  aria-label="Show password"
+                  aria-pressed="false"
+                  class="rounded-sm p-1 text-default-400 outline-none focus-visible:ring-2 focus-visible:ring-focus"
+                  data-testid="password_password_toggle"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 576 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mt-4 flex justify-end"
+      >
+        <button
+          aria-label="Submit form"
+          class="group tap-highlight-transparent data-[hover=true]:opacity-hover z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white"
+          data-react-aria-pressable="true"
+          data-testid="form_submit_button"
+          tabindex="0"
+          type="submit"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`Story Snapshots > PasswordDisabled 1`] = `
+<div>
+  <div
+    class="flex w-full flex-row justify-between gap-6"
+  >
+    <form
+      class="grow min-w-60"
+      data-form-is-valid="true"
+      data-testid=""
+      novalidate=""
+    >
+      <div
+        class="group flex flex-col data-[hidden=true]:hidden w-full opacity-disabled pointer-events-none relative justify-end data-[has-label=true]:mt-[calc(var(--heroui-font-size-small)_+_10px)]"
+        data-disabled="true"
+        data-filled="true"
+        data-filled-within="true"
+        data-has-elements="true"
+        data-has-helper="true"
+        data-has-label="true"
+        data-slot="base"
+      >
+        <div
+          class="h-full flex flex-col"
+          data-slot="main-wrapper"
+        >
+          <div
+            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-xs px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 group-data-[focus=true]:data-[hover=true]:border-default-foreground h-10 min-h-10 rounded-small pointer-events-none !duration-150 transition-colors motion-reduce:transition-none bg-content1 group-data-[focus=true]:border-focus"
+            data-slot="input-wrapper"
+            style="cursor: text;"
+          >
+            <label
+              class="absolute origin-top-left shrink-0 rtl:origin-top-right subpixel-antialiased block text-foreground-500 pointer-events-none will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity,translate,scale] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_var(--heroui-font-size-small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
+              data-slot="label"
+              for="password"
+              id="react-aria-«replaced-aria-id»"
+            >
+              Password
+            </label>
+            <div
+              class="inline-flex w-full items-center h-full box-border"
+              data-slot="inner-wrapper"
+            >
+              <input
+                aria-label="Password"
+                aria-labelledby="password react-aria-«replaced-aria-id»"
+                autocomplete="off"
+                class="w-full font-normal bg-transparent !outline-solid placeholder:text-foreground-500 focus-visible:outline-solid outline-transparent data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 data-[type=color]:rounded-none file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text dark:autofill:[-webkit-text-fill-color:hsl(var(--heroui-foreground))] text-small [&::-ms-reveal]:hidden"
+                data-has-end-content="true"
+                data-slot="input"
+                data-testid="password"
+                data-type="password"
+                disabled=""
+                id="password"
+                name="password"
+                placeholder=" "
+                type="password"
+                value=""
+              />
+              <span
+                class="inline-flex shrink-0 items-center gap-2"
+              >
+                <button
+                  aria-controls="password"
+                  aria-label="Show password"
+                  aria-pressed="false"
+                  class="rounded-sm p-1 text-default-400 outline-none focus-visible:ring-2 focus-visible:ring-focus"
+                  data-testid="password_password_toggle"
+                  disabled=""
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 576 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mt-4 flex justify-end"
+      >
+        <button
+          aria-label="Submit form"
+          class="group tap-highlight-transparent data-[hover=true]:opacity-hover z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white"
+          data-react-aria-pressable="true"
+          data-testid="form_submit_button"
+          tabindex="0"
+          type="submit"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`Story Snapshots > PasswordVisibility 1`] = `
+<div>
+  <div
+    class="flex w-full flex-row justify-between gap-6"
+  >
+    <form
+      class="grow min-w-60"
+      data-form-is-valid="true"
+      data-testid=""
+      novalidate=""
+    >
+      <div
+        class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(var(--heroui-font-size-small)_+_10px)] is-filled"
+        data-filled="true"
+        data-filled-within="true"
+        data-focus-within="true"
+        data-has-elements="true"
+        data-has-helper="true"
+        data-has-label="true"
+        data-has-value="true"
+        data-hover="true"
+        data-slot="base"
+      >
+        <div
+          class="h-full flex flex-col"
+          data-slot="main-wrapper"
+        >
+          <div
+            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-xs px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 group-data-[focus=true]:data-[hover=true]:border-default-foreground h-10 min-h-10 rounded-small !duration-150 transition-colors motion-reduce:transition-none bg-content1 group-data-[focus=true]:border-focus is-filled"
+            data-hover="true"
+            data-slot="input-wrapper"
+            style="cursor: text;"
+          >
+            <label
+              class="absolute pointer-events-none origin-top-left shrink-0 rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity,translate,scale] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_var(--heroui-font-size-small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
+              data-slot="label"
+              for="password"
+              id="react-aria-«replaced-aria-id»"
+            >
+              Password
+            </label>
+            <div
+              class="inline-flex w-full items-center h-full box-border"
+              data-slot="inner-wrapper"
+            >
+              <input
+                aria-label="Password"
+                aria-labelledby="password react-aria-«replaced-aria-id»"
+                autocomplete="off"
+                class="w-full font-normal bg-transparent !outline-solid placeholder:text-foreground-500 focus-visible:outline-solid outline-transparent data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 data-[type=color]:rounded-none file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text dark:autofill:[-webkit-text-fill-color:hsl(var(--heroui-foreground))] text-small is-filled [&::-ms-reveal]:hidden"
+                data-filled="true"
+                data-filled-within="true"
+                data-has-end-content="true"
+                data-slot="input"
+                data-testid="password"
+                data-type="password"
+                id="password"
+                name="password"
+                placeholder=" "
+                tabindex="0"
+                title=""
+                type="password"
+                value="Example_123"
+              />
+              <span
+                class="inline-flex shrink-0 items-center gap-2"
+              >
+                <button
+                  aria-controls="password"
+                  aria-label="Show password"
+                  aria-pressed="false"
+                  class="rounded-sm p-1 text-default-400 outline-none focus-visible:ring-2 focus-visible:ring-focus"
+                  data-testid="password_password_toggle"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 576 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mt-4 flex justify-end"
+      >
+        <button
+          aria-label="Submit form"
+          class="group tap-highlight-transparent data-[hover=true]:opacity-hover z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white"
+          data-react-aria-pressable="true"
+          data-testid="form_submit_button"
+          tabindex="0"
+          type="submit"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`Story Snapshots > PasswordWithoutToggle 1`] = `
+<div>
+  <div
+    class="flex w-full flex-row justify-between gap-6"
+  >
+    <form
+      class="grow min-w-60"
+      data-form-is-valid="true"
+      data-testid=""
+      novalidate=""
+    >
+      <div
+        class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(var(--heroui-font-size-small)_+_10px)]"
+        data-filled="true"
+        data-filled-within="true"
+        data-has-elements="true"
+        data-has-helper="true"
+        data-has-label="true"
+        data-slot="base"
+      >
+        <div
+          class="h-full flex flex-col"
+          data-slot="main-wrapper"
+        >
+          <div
+            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-xs px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 group-data-[focus=true]:data-[hover=true]:border-default-foreground h-10 min-h-10 rounded-small !duration-150 transition-colors motion-reduce:transition-none bg-content1 group-data-[focus=true]:border-focus"
+            data-slot="input-wrapper"
+            style="cursor: text;"
+          >
+            <label
+              class="absolute pointer-events-none origin-top-left shrink-0 rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity,translate,scale] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_var(--heroui-font-size-small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
+              data-slot="label"
+              for="password"
+              id="react-aria-«replaced-aria-id»"
+            >
+              Password
+            </label>
+            <div
+              class="inline-flex w-full items-center h-full box-border"
+              data-slot="inner-wrapper"
+            >
+              <input
+                aria-label="Password"
+                aria-labelledby="password react-aria-«replaced-aria-id»"
+                autocomplete="off"
+                class="w-full font-normal bg-transparent !outline-solid placeholder:text-foreground-500 focus-visible:outline-solid outline-transparent data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 data-[type=color]:rounded-none file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text dark:autofill:[-webkit-text-fill-color:hsl(var(--heroui-foreground))] text-small [&::-ms-reveal]:hidden"
+                data-slot="input"
+                data-testid="password"
+                data-type="password"
+                id="password"
+                name="password"
+                placeholder=" "
+                tabindex="0"
+                title=""
+                type="password"
+                value=""
+              />
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { FaEnvelope } from 'react-icons/fa';
+import { FaEnvelope, FaKey } from 'react-icons/fa';
 
 import { action } from 'storybook/actions';
 import { expect, userEvent, waitFor, within } from 'storybook/test';
@@ -178,34 +178,6 @@ export const Number: Story = {
   },
 };
 
-export const Password: Story = {
-  parameters: {
-    formProps: {
-      validation: veto({
-        passwordField: string({ min: 20 }),
-      }),
-    },
-  },
-  args: {
-    label: 'Password Field',
-    name: 'passwordField',
-    type: 'password',
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const input = canvas.getByTestId('passwordfield');
-    await userEvent.type(input, 'veryS3cure!', {
-      delay: 100,
-    });
-    input.blur();
-
-    // Wait because of value debounce
-    await waitFor(() => {
-      expect(input.getAttribute('aria-invalid')).toBe('true');
-    });
-  },
-};
-
 export const CustomStyles: Story = {
   parameters: {
     formProps: { initialValues: { partySearch: 'Something fun!' } },
@@ -347,4 +319,103 @@ const renderAllSizes = () => {
 export const AllSizes: Story = {
   // @ts-expect-error this is ok
   render: renderAllSizes,
+};
+
+export const Password: Story = {
+  parameters: {
+    formProps: {
+      validation: veto({
+        passwordField: string({ min: 20 }),
+      }),
+    },
+  },
+  args: {
+    label: 'Password Field',
+    name: 'passwordField',
+    type: 'password',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const input = canvas.getByTestId('passwordfield');
+    await userEvent.type(input, 'veryS3cure!', {
+      delay: 100,
+    });
+    input.blur();
+
+    // Wait because of value debounce
+    await waitFor(() => {
+      expect(input.getAttribute('aria-invalid')).toBe('true');
+    });
+  },
+};
+
+export const PasswordVisibility: Story = {
+  args: {
+    name: 'password',
+    label: 'Password',
+    type: 'password',
+  },
+  parameters: { formProps: { initialValues: { password: 'Example_123' } } },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const input = canvas.getByTestId('password');
+    const toggle = canvas.getByRole('button', { name: 'Show password' });
+    await userEvent.click(input);
+    await userEvent.tab();
+    await expect(toggle).toHaveFocus();
+    await userEvent.keyboard(' ');
+    await expect(input).toHaveAttribute('type', 'text');
+    await expect(input).toHaveValue('Example_123');
+    await expect(toggle).toHaveAccessibleName('Hide password');
+    await userEvent.keyboard('{Enter}');
+    await expect(input).toHaveAttribute('type', 'password');
+  },
+};
+
+export const PasswordWithoutToggle: Story = {
+  args: {
+    name: 'password',
+    label: 'Password',
+    type: 'password',
+    hidePasswordToggle: true,
+  },
+};
+
+export const PasswordDisabled: Story = {
+  args: {
+    name: 'password',
+    label: 'Password',
+    type: 'password',
+    disabled: true,
+  },
+};
+
+export const PasswordClearable: Story = {
+  args: {
+    name: 'password',
+    label: 'Password',
+    type: 'password',
+    clearable: true,
+    endContent: <FaKey aria-hidden="true" />,
+  },
+  parameters: { formProps: { initialValues: { password: 'Example_123' } } },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await userEvent.click(
+      canvas.getByRole('button', { name: 'Show password' }),
+    );
+    await expect(canvas.getByTestId('password')).toHaveAttribute(
+      'type',
+      'text',
+    );
+    await userEvent.click(canvas.getByRole('button', { name: 'clear input' }));
+    await expect(canvas.getByTestId('password')).toHaveValue('');
+    await expect(canvas.getByTestId('password')).toHaveAttribute(
+      'type',
+      'password',
+    );
+    await expect(
+      canvas.getByRole('button', { name: 'Show password' }),
+    ).toBeVisible();
+  },
 };

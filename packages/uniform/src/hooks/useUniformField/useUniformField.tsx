@@ -6,6 +6,7 @@ import React from 'react';
 
 import { useDebounce } from '@fuf-stack/pixels';
 
+import { useSensitiveField } from '../../Form/subcomponents/SensitiveFields';
 import { flattenFieldErrors, isValueEmpty } from '../../helpers';
 import FieldCopyTestIdButton from '../../partials/FieldCopyTestIdButton';
 import FieldValidationError from '../../partials/FieldValidationError';
@@ -28,6 +29,8 @@ export interface UseUniformFieldParams<
   isArrayValue?: boolean;
   /** Optional label content */
   label?: ReactNode;
+  /** Redacts the field value from Uniform debug output */
+  sensitive?: boolean;
   /** Optional explicit test id used to build stable test ids */
   testId?: string;
   /** Optional value transformation between form and display values */
@@ -120,11 +123,15 @@ export const useUniformField = <
     ariaLabel: customAriaLabel,
     disabled = false,
     isArrayValue = false,
+    sensitive = false,
     testId: explicitTestId,
     label,
     type,
     transform,
   } = params;
+
+  // Use the declared type, so revealing a password never disables redaction.
+  useSensitiveField(name, type === 'password' || sensitive);
 
   const {
     control,

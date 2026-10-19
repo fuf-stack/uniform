@@ -15,6 +15,10 @@ import { useLocalStorage } from '@fuf-stack/pixels';
 
 import { toFormFormat, toSubmitFormat } from '../../helpers';
 import { useExtendedValidation, useFormResolver } from './FormResolver';
+import {
+  createSensitiveFields,
+  SensitiveFieldsProvider,
+} from './SensitiveFields';
 
 const debug = createDebug('uniform:FormContext');
 
@@ -252,6 +256,10 @@ const FormProvider: React.FC<FormProviderProps> = ({
   validation: baseValidation = undefined,
   validationTrigger,
 }) => {
+  const sensitiveFields = useMemo(() => {
+    return createSensitiveFields();
+  }, []);
+
   // Form Debug mode state is handled in the form context
   const [debugMode, setDebugMode] = useLocalStorage<DebugMode>(
     debugModeSettings?.localStorageKey ?? DEBUG_MODE_LOCAL_STORAGE_KEY_DEFAULT,
@@ -334,9 +342,9 @@ const FormProvider: React.FC<FormProviderProps> = ({
     debug('handleSubmit called', {
       preventSubmit,
       formStateIsValid: methods.formState.isValid,
-      validationErrors: methods.formState.errors,
+      validationErrors: sensitiveFields.redact(methods.formState.errors),
       validationTrigger,
-      formValues: methods.getValues(),
+      formValues: sensitiveFields.redact(methods.getValues()),
     });
 
     // only prevent submit when form state is valid, because otherwise
@@ -366,7 +374,9 @@ const FormProvider: React.FC<FormProviderProps> = ({
     // - Remove empty strings, nulls, empty arrays, and empty objects
     const wrappedOnSubmit = (data: FieldValues, event?: BaseSyntheticEvent) => {
       const submitData = toSubmitFormat(data) ?? {};
-      debug('onSubmit callback called', { submitData });
+      debug('onSubmit callback called', {
+        submitData: sensitiveFields.redact(submitData),
+      });
       return onSubmit(submitData, event);
     };
 
@@ -388,7 +398,7 @@ const FormProvider: React.FC<FormProviderProps> = ({
             previousValue: preventSubmit,
             newValue: prevent,
             formStateIsValid: methods.formState.isValid,
-            validationErrors: methods.formState.errors,
+            validationErrors: sensitiveFields.redact(methods.formState.errors),
           });
           setPreventSubmit(prevent);
         },
@@ -416,12 +426,14 @@ const FormProvider: React.FC<FormProviderProps> = ({
   );
 
   return (
-    <UniformContext.Provider value={contextValue}>
-      {/* Spread all hook form props into HookFormProvider */}
-      <HookFormProvider {...methods}>
-        {children({ handleSubmit, isValid })}
-      </HookFormProvider>
-    </UniformContext.Provider>
+    <SensitiveFieldsProvider registry={sensitiveFields}>
+      <UniformContext.Provider value={contextValue}>
+        {/* Spread all hook form props into HookFormProvider */}
+        <HookFormProvider {...methods}>
+          {children({ handleSubmit, isValid })}
+        </HookFormProvider>
+      </UniformContext.Provider>
+    </SensitiveFieldsProvider>
   );
 };
 
