@@ -27,6 +27,11 @@
   rebaseWhen: 'conflicted',
   // https://docs.renovatebot.com/configuration-options/#stopupdatinglabel
   stopUpdatingLabel: 'renovate | stop update',
+  // Mend jobs have 3 GiB total; leave room for Renovate alongside pnpm.
+  // https://docs.renovatebot.com/mend-hosted/faq/#im-hitting-a-timeout-kernel-out-of-memory-limit-with-a-pnpmyarn-project
+  toolSettings: {
+    nodeMaxMemory: 1536,
+  },
   packageRules: [
     // @dnd-kit monorepo
     {

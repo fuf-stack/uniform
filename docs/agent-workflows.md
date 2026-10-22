@@ -89,6 +89,20 @@ out of date, comment `/autofix-snapshots` on the pull request or add the
 update mode, refuses to commit non-snapshot changes, verifies the updated suite,
 pushes the snapshot commit to the Renovate branch, and dispatches CI for it.
 
+## Renovate memory failures
+
+Mend-hosted jobs have a 3 GiB memory limit. `renovate.json5` caps Node child
+processes used for package-manager commands at 1536 MiB with
+`toolSettings.nodeMaxMemory`, leaving room for Renovate and other processes.
+This limits the Node heap; it does not increase the hosted job limit or cap
+the total memory of every process.
+
+If a job still fails with `kernel-out-of-memory`, inspect the end of its debug
+log to identify the active operation before adjusting the cap. A Node heap
+error in pnpm may require a higher cap; continued total job exhaustion may
+require a higher Mend resource tier or a self-hosted runner. See the
+[Mend-hosted FAQ](https://docs.renovatebot.com/mend-hosted/faq/#im-hitting-a-timeout-kernel-out-of-memory-limit-with-a-pnpmyarn-project).
+
 ## Visual and accessibility verification
 
 Use Storybook to cover meaningful states, themes, responsive behavior, and
