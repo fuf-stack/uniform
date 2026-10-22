@@ -89,10 +89,23 @@ out of date, comment `/autofix-snapshots` on the pull request or add the
 update mode, refuses to commit non-snapshot changes, verifies the updated suite,
 pushes the snapshot commit to the Renovate branch, and dispatches CI for it.
 
+## SonarQube coverage
+
+The unit-test CI command selects projects to exclude Storybook. With Vitest 5,
+coverage include globs are relative to the selected package roots, so this
+command also sets `--coverage.include='src/**/*.{js,jsx,ts,tsx}'`. The shared
+workspace preset uses workspace-relative globs for unfiltered test runs.
+Using those globs with `--project` produces an empty report even when all
+tests pass.
+
+CI verifies that `coverage/lcov.info` contains source records and measured
+lines before uploading it and again after downloading it for SonarQube. An
+empty report must fail CI rather than silently report 0% coverage.
+
 ## Renovate memory failures
 
 Mend-hosted jobs have a 3 GiB memory limit. `renovate.json5` caps Node child
-processes used for package-manager commands at 1536 MiB with
+processes used for package-manager commands at 1024 MiB with
 `toolSettings.nodeMaxMemory`, leaving room for Renovate and other processes.
 This limits the Node heap; it does not increase the hosted job limit or cap
 the total memory of every process.
