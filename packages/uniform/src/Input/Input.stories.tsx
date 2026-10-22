@@ -248,8 +248,8 @@ export const WithValueTransform: Story = {
 };
 
 interface Superhero {
-  name: string;
   emoji: string;
+  name: string;
   power: string;
 }
 

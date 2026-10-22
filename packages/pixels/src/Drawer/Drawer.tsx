@@ -66,10 +66,10 @@ export interface DrawerProps extends VariantProps {
   header?: ReactNode;
   /** Whether to hide the drawer close button. */
   hideCloseButton?: boolean;
-  /** Whether the drawer is open by default (controlled). */
-  isOpen?: boolean;
   /** Whether the drawer can be closed by clicking on the overlay or pressing the Esc key. */
   isDismissable?: boolean;
+  /** Whether the drawer is open by default (controlled). */
+  isOpen?: boolean;
   /** Handler that is called when the drawer is closed. */
   onClose?: () => void;
   /** Handler that is called when the drawer's open state changes. */

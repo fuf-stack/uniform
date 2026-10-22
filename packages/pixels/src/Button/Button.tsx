@@ -97,21 +97,21 @@ export interface ButtonProps extends VariantProps {
   children?: ReactNode;
   /** CSS class name */
   className?: string;
-  /** Slot name for styling/debugging hooks */
-  dataSlot?: string;
   /** color of the button */
   color?: VariantProps['color'];
-  /** disables the button */
-  disabled?: boolean;
+  /** Slot name for styling/debugging hooks */
+  dataSlot?: string;
   /** disables all animations */
   disableAnimation?: boolean;
+  /** disables the button */
+  disabled?: boolean;
   /** associates the button with a form by the form's id (HTML `form` attribute),
    * so the button can submit a form it is not a DOM descendant of */
   form?: string;
-  /** shows loading animation */
-  loading?: boolean;
   /** optional icon */
   icon?: ReactNode;
+  /** shows loading animation */
+  loading?: boolean;
   /** blur event handler */
   onBlur?: HeroButtonProps['onBlur'];
   /** click event handler */

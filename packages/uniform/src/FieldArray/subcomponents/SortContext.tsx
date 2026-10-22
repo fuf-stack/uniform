@@ -26,10 +26,10 @@ interface SortContextProps {
   children: ReactNode;
   /** Array of objects containing unique IDs for sortable items */
   fields: Record<'id', string>[];
-  /** name of the field array */
-  name: string;
   /** react-hook-form's move function to update field array indices */
   move: UseFieldArrayMove;
+  /** name of the field array */
+  name: string;
   /** enable/disable sorting functionality */
   sortable: boolean;
 }

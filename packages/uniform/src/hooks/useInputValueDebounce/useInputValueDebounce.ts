@@ -17,11 +17,11 @@ export interface UseInputValueDebounceOptions<TValue = unknown> {
 }
 
 export interface UseInputValueDebounceReturn<TValue = unknown> {
+  /** Enhanced onBlur function that flushes current value immediately */
+  onBlur: () => void;
   /** Enhanced onChange function with debouncing */
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onChange: (...event: any[]) => void;
-  /** Enhanced onBlur function that flushes current value immediately */
-  onBlur: () => void;
   /** The field value that is displayed - updates immediately */
   value: TValue;
 }

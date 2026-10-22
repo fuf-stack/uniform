@@ -69,12 +69,12 @@ export interface AlertProps extends Omit<VariantProps, 'hasTitleAndChildren'> {
   children?: ReactNode;
   /** CSS class name */
   className?: ClassName;
+  /** Whether the Alert can be closed */
+  closable?: boolean;
   /** Content displayed at the end of the Alert */
   endContent?: ReactNode;
   /** Icon displayed at the start of the Alert */
   icon?: ReactNode;
-  /** Whether the Alert can be closed */
-  closable?: boolean;
   /** Callback fired when the close button is clicked */
   onClose?: () => void;
   /** HTML data-testid attribute used in e2e tests */

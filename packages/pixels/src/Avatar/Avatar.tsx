@@ -21,14 +21,14 @@ type ClassName = TVClassName<typeof avatarVariants>;
 export interface AvatarProps extends VariantProps {
   /* Display a border ring around the Avatar */
   bordered?: boolean;
-  /* Roundness of the border around the Avatar */
-  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full';
   /** CSS class name */
   className?: ClassName;
   /* Disables the Avatar */
   disabled?: boolean;
   /* Fallback content to display if the image fails to load or is not provided */
   fallback?: React.ReactNode;
+  /* Roundness of the border around the Avatar */
+  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full';
   /* Size of the Avatar */
   size?: 'sm' | 'md' | 'lg';
   /* Image source */

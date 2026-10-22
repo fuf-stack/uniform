@@ -22,10 +22,10 @@ export interface BadgeProps extends VariantProps {
   children: HeroBadgeProps['children'];
   /** CSS class name */
   className?: ClassName;
-  /** badge content */
-  content?: HeroBadgeProps['content'];
   /** color of the badge */
   color?: HeroBadgeProps['color'];
+  /** badge content */
+  content?: HeroBadgeProps['content'];
   /** if set the badge have the same height and width */
   isOneChar?: HeroBadgeProps['isOneChar'];
   /** removes the badge outline */

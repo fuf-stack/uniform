@@ -99,10 +99,10 @@ export interface SelectProps extends VariantProps {
   className?: ClassName; // string;
   /** Determine if the  */
   clearable?: boolean;
-  /** Set the select to disabled state. */
-  disabled?: boolean;
   /** Force menu open for debugging or visual testing. */
   debugMenuOpen?: boolean;
+  /** Set the select to disabled state. */
+  disabled?: boolean;
   /** Filter Select Options */
   filterOption?:
     | undefined
@@ -117,12 +117,12 @@ export interface SelectProps extends VariantProps {
   multiSelect?: boolean;
   /** The name for the Select component, used by react-hook-form */
   name: string;
-  /** Placeholder that is displayed when nothing is selected */
-  placeholder?: string;
   /** Handle change events on the input */
   onInputChange?: Props['onInputChange'];
   /** The options for the Select component */
   options: SelectOption[];
+  /** Placeholder that is displayed when nothing is selected */
+  placeholder?: string;
   /** Render custom content when no options match the current search input. */
   renderEmptyOptions?: Props['noOptionsMessage'];
   /** Format the label of the option */

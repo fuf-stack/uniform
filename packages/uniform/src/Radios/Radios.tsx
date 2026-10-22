@@ -42,10 +42,10 @@ type ClassName = TVClassName<typeof radiosVariants>;
 export interface RadioOption {
   /** disables the option */
   disabled?: boolean;
-  /** option label */
-  label?: ReactNode;
   /** option icon */
   icon?: ReactNode;
+  /** option label */
+  label?: ReactNode;
   /** Arbitrary option metadata for custom render logic. */
   meta?: Record<string, unknown>;
   /** HTML data-testid attribute of the option */
@@ -55,10 +55,10 @@ export interface RadioOption {
 }
 
 export interface RadioRenderedOption {
-  /** Prebuilt radio element so consumers don't need to recreate HeroRadio */
-  radio: ReactNode;
   /** Option data as provided in `options` */
   option: RadioOption;
+  /** Prebuilt radio element so consumers don't need to recreate HeroRadio */
+  radio: ReactNode;
   /** Render-state flags for this option */
   state: {
     /** Whether this option is currently selected */

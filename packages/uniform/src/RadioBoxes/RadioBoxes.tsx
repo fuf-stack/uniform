@@ -42,10 +42,10 @@ export interface RadioBoxOption {
   description?: ReactNode;
   /** disables the option */
   disabled?: boolean;
-  /** option label */
-  label?: ReactNode;
   /** option icon */
   icon?: ReactNode;
+  /** option label */
+  label?: ReactNode;
   /** HTML data-testid attribute of the option */
   testId?: string;
   /** option value */

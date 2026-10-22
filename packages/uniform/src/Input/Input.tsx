@@ -42,6 +42,8 @@ export interface InputProps extends VariantProps {
   disabled?: boolean;
   /** Displays content at the end of the input */
   endContent?: ReactNode;
+  /** Hides the visibility toggle for password inputs (default: false) */
+  hidePasswordToggle?: boolean;
   /** Sets the field label */
   label?: ReactNode;
   /** Identifies the field in form state */
@@ -52,8 +54,6 @@ export interface InputProps extends VariantProps {
   placeholder?: string;
   /** Redacts the value from Uniform debug output; password inputs are always redacted */
   sensitive?: boolean;
-  /** Hides the visibility toggle for password inputs (default: false) */
-  hidePasswordToggle?: boolean;
   /** Sets the input size */
   size?: 'sm' | 'md' | 'lg';
   /** Displays content at the start of the input */

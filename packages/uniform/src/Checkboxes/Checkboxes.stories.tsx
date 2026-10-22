@@ -272,10 +272,10 @@ export const WithTransformSingleValue: Story = {
 };
 
 interface FoodData {
+  calories: number;
   id: string;
   name: string;
   score: number;
-  calories: number;
 }
 
 const foodData: Record<string, FoodData> = {

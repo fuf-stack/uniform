@@ -64,18 +64,18 @@ type VariantProps = TVProps<typeof checkboxesVariants>;
 type ClassName = TVClassName<typeof checkboxesVariants>;
 
 export interface CheckboxOption {
+  /** disables the option */
+  disabled?: boolean;
   /** option label */
   label?: ReactNode;
   /** subline displayed below the label */
   labelSubline?: ReactNode;
   /** Arbitrary option metadata for custom render logic. */
   meta?: Record<string, unknown>;
-  /** option value */
-  value: string;
-  /** disables the option */
-  disabled?: boolean;
   /** HTML data-testid attribute of the option */
   testId?: string;
+  /** option value */
+  value: string;
 }
 
 interface ChildRenderOption {

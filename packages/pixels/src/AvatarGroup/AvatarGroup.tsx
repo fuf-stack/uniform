@@ -6,18 +6,6 @@ import { AvatarGroup as HeroAvatarGroup } from '@heroui/avatar';
 import { Avatar } from '../Avatar';
 
 export interface AvatarGroupProps {
-  /* Display a border ring around the Avatar */
-  bordered?: boolean;
-  /* Roundness of the border around the Avatar */
-  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full';
-  /** CSS class name */
-  className?: string;
-  /* Disables the Avatar */
-  disabled?: boolean;
-  /* Size of the Avatar */
-  size?: 'sm' | 'md' | 'lg';
-  /* Maximum number of avatars to display before +X is displayed */
-  max?: number;
   /* Array of avatarProps */
   avatars?: (Omit<AvatarProps, 'size' | 'rounded' | 'bordered'> & {
     /* Custom wrapperProps for each avatarWrapper */
@@ -25,6 +13,18 @@ export interface AvatarGroupProps {
   })[];
   /* Custom wrapper for each avatar */
   avatarWrapper?: JSX.ElementType;
+  /* Display a border ring around the Avatar */
+  bordered?: boolean;
+  /** CSS class name */
+  className?: string;
+  /* Disables the Avatar */
+  disabled?: boolean;
+  /* Maximum number of avatars to display before +X is displayed */
+  max?: number;
+  /* Roundness of the border around the Avatar */
+  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full';
+  /* Size of the Avatar */
+  size?: 'sm' | 'md' | 'lg';
 }
 
 /**

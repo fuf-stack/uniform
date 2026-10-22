@@ -25,8 +25,6 @@ import VerticalDotsIcon from './VerticalDotsIcon';
  * Menu component based on [HeroUI Dropdown](https://www.heroui.com//docs/components/dropdown)
  */
 export interface MenuItem {
-  /** unique identifier */
-  key: string;
   /** CSS class name */
   className?: string;
   /** Slot name for styling/debugging hooks */
@@ -37,6 +35,8 @@ export interface MenuItem {
   disabled?: boolean;
   /** menu item icon  */
   icon?: ReactNode;
+  /** unique identifier */
+  key: string;
   /** menu item name */
   label: ReactNode;
   /** click event handler */
@@ -51,12 +51,12 @@ export interface MenuItem {
  * Menu section type
  */
 export interface MenuSection {
+  /** section items (array of MenuItem) */
+  items: MenuItem[];
   /** unique identifier */
   key: string;
   /** section label */
   label: ReactNode;
-  /** section items (array of MenuItem) */
-  items: MenuItem[];
 }
 
 // menu styling variants
@@ -79,16 +79,16 @@ export interface MenuProps extends VariantProps {
   className?: ClassName;
   /** disables the open/close popover animation (also auto-disabled when the user prefers reduced motion) */
   disableAnimation?: boolean;
-  /** menu item structure */
-  items: (MenuSection | MenuItem)[];
   /** disable menu trigger */
   isDisabled?: boolean;
+  /** menu item structure */
+  items: (MenuSection | MenuItem)[];
+  /** called if item is selected */
+  onAction?: (key: Key) => void;
   /** placement of the menu */
   placement?: HeroDropdownProps['placement'];
   /** container the popover portal is rendered into (defaults to document.body) */
   portalContainer?: HeroDropdownProps['portalContainer'];
-  /** called if item is selected */
-  onAction?: (key: Key) => void;
   /** HTML data-testid attribute used in e2e tests */
   testId?: string;
   /** When defined a Button will be rendered as trigger (with provided props) instead of unstyled html button */

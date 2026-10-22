@@ -20,22 +20,22 @@ type ScrollShadowVisibility =
 export interface ScrollShadowProps {
   /** child components */
   children?: ReactNode;
-  /** Slot name for styling/debugging hooks */
-  dataSlot?: string;
   /** CSS class name */
   className?: string | string[];
+  /** Slot name for styling/debugging hooks */
+  dataSlot?: string;
   /** Hides the scrollbar */
   hideScrollBar?: boolean;
   /** Orientation of the scroll shadow */
   orientation?: 'horizontal' | 'vertical';
-  /** Inline style overrides for the root scroll container. */
-  style?: CSSProperties;
-  /** Visibility mode for scroll shadows */
-  visibility?: ScrollShadowVisibility;
   /** Shadow size in pixels */
   size?: number;
+  /** Inline style overrides for the root scroll container. */
+  style?: CSSProperties;
   /** HTML data-testid attribute used in e2e tests */
   testId?: string;
+  /** Visibility mode for scroll shadows */
+  visibility?: ScrollShadowVisibility;
 }
 
 /**

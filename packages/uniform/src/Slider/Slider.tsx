@@ -61,8 +61,6 @@ export interface SliderProps extends VariantProps {
   fillOffset?: number;
   /** form field label */
   label?: string;
-  /** form field name */
-  name: string;
   /**
    * The maximum value of the slider
    * @default 100
@@ -73,6 +71,8 @@ export interface SliderProps extends VariantProps {
    * @default 0
    */
   minValue?: number;
+  /** form field name */
+  name: string;
   /**
    * Whether to show step dots on the slider
    * @default false

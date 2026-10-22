@@ -61,14 +61,14 @@ export interface DatePickerProps extends VariantProps {
   className?: ClassName;
   /** date picker is disabled */
   disabled?: boolean;
+  /** hide timezone abbreviation for zoned values */
+  hideTimeZone?: boolean;
   /**
    * Optional hour cycle override.
    *
    * When omitted, the picker uses the user's locale default (12-hour or 24-hour).
    */
   hourCycle?: 12 | 24;
-  /** hide timezone abbreviation for zoned values */
-  hideTimeZone?: boolean;
   /** form field label */
   label?: ReactNode;
   /** latest selectable value as ISO string */
@@ -86,6 +86,8 @@ export interface DatePickerProps extends VariantProps {
    * `withTime` is enabled.
    */
   timeZone?: string;
+  /** value format stored in form state (`string` stores UTC ISO values) */
+  valueType?: 'dateValue' | 'string';
   /**
    * Enables date-time mode.
    *
@@ -93,8 +95,6 @@ export interface DatePickerProps extends VariantProps {
    * - `true`: includes time segments (`minute` granularity)
    */
   withTime?: boolean;
-  /** value format stored in form state (`string` stores UTC ISO values) */
-  valueType?: 'dateValue' | 'string';
 }
 
 /**

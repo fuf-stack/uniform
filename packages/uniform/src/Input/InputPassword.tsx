@@ -14,9 +14,9 @@ interface InputPasswordProps extends Omit<
   'type' | 'value' | 'name' | 'isClearable' | 'onClear'
 > {
   clearable: boolean;
+  hidePasswordToggle: boolean;
   name: string;
   onClear: () => void;
-  hidePasswordToggle: boolean;
   testId: string;
   value: string;
 }

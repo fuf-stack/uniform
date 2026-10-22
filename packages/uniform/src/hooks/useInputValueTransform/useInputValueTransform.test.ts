@@ -356,9 +356,9 @@ describe('useInputValueTransform', () => {
 
   describe('Generic type support - Complex structures', () => {
     interface TodoItem {
+      completed: boolean;
       id: string;
       text: string;
-      completed: boolean;
     }
 
     it('should handle array of objects transforms', () => {
@@ -395,13 +395,13 @@ describe('useInputValueTransform', () => {
 
     it('should handle nested object transforms', () => {
       interface Address {
-        street: string;
         city: string;
+        street: string;
       }
 
       interface PersonForm {
-        name: string;
         address: Address;
+        name: string;
       }
 
       interface PersonDisplay {
@@ -522,8 +522,8 @@ describe('useInputValueTransform', () => {
 
     it('should handle JSON stringify/parse scenario', () => {
       interface Config {
-        theme: string;
         locale: string;
+        theme: string;
       }
 
       const jsonTransform = {

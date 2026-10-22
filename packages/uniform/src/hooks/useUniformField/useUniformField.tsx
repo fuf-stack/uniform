@@ -19,8 +19,6 @@ export interface UseUniformFieldParams<
   TFieldValues extends FieldValues = FieldValues,
   TDisplay = unknown,
 > {
-  /** Form field name */
-  name: Path<TFieldValues> & string;
   /** Custom aria-label for accessibility. If not provided, falls back to field name when no visible label exists */
   ariaLabel?: string;
   /** Disable the field */
@@ -29,6 +27,8 @@ export interface UseUniformFieldParams<
   isArrayValue?: boolean;
   /** Optional label content */
   label?: ReactNode;
+  /** Form field name */
+  name: Path<TFieldValues> & string;
   /** Redacts the field value from Uniform debug output */
   sensitive?: boolean;
   /** Optional explicit test id used to build stable test ids */
