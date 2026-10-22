@@ -30,6 +30,11 @@ visual changes.
 
 ## Storybook edge cases
 
+Run `pnpm test:storybook` from the root to delegate to the shared Storybook
+package's `test:storybook` script. That package owns the browser test command.
+The CI unit-test job uses `pnpm test --project='!storybook*'` to exclude browser
+projects; the separate Storybook job installs Chromium and runs those tests.
+
 Keep normal usage and variant examples in `<Component>.stories.tsx`. Put edge
 cases and focused regression scenarios in a sibling
 `<Component>EdgeCases.stories.tsx`, following the Slider examples. Give that file

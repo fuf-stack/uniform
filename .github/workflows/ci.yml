@@ -41,7 +41,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - uses: ./.github/actions/setup-project
       - name: Run unit tests with coverage
-        run: pnpm test
+        run: pnpm test --project='!storybook*'
       - name: Upload coverage reports
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
@@ -57,7 +57,9 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - uses: ./.github/actions/setup-project
       - name: Install Playwright browser
-        run: pnpm exec playwright install --with-deps chromium
+        # Use Storybook's Playwright version to install its matching Chromium
+        # binary and Linux system dependencies before running the browser tests.
+        run: pnpm --filter @repo/storybook-config exec playwright install --with-deps chromium
       - name: Run Storybook browser tests
         run: pnpm test:storybook
 
