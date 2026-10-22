@@ -6,7 +6,8 @@
   "main": "./main.ts",
   "scripts": {
     "storybook": "STORYBOOK_DISABLE_TELEMETRY=true storybook dev -p 6006",
-    "storybook:build": "STORYBOOK_DISABLE_TELEMETRY=true storybook build --quiet"
+    "storybook:build": "STORYBOOK_DISABLE_TELEMETRY=true storybook build --quiet",
+    "test:storybook": "vitest run --config vitest.config.ts --project=storybook --maxWorkers=4"
   },
   "devDependencies": {
     "@repo/tailwind-config": "workspace:*",

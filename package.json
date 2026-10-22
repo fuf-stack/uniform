@@ -11,7 +11,7 @@
     "lint": "eslint ./packages",
     "lint:debug": "eslint --debug ./packages",
     "test": "FORCE_COLOR=1 vitest run --coverage $VITEST_EXTRA_OPTS",
-    "test:storybook": "vitest run --config packages/config/storybook-config/vitest.config.ts --project=storybook --maxWorkers=4",
+    "test:storybook": "pnpm --filter @repo/storybook-config test:storybook",
     "typecheck": "pnpm build",
     "turbo": "TURBO_TELEMETRY_DISABLED=1 FORCE_COLOR=1 turbo --cache-dir ./.turbo-cache --color",
     "verify:packages": "node scripts/verify-packages.mjs"
