@@ -24,7 +24,7 @@
     "@vitest/browser-playwright": "5.0.3",
     "@vueless/storybook-dark-mode": "10.0.8",
     "playwright": "1.63.0",
-    "storybook": "10.6.1"
+    "storybook": "10.6.2"
   },
   "peerDependencies": {
     "react": "19.2.8",
