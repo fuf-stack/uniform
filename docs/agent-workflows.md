@@ -14,9 +14,8 @@ migration document and explicit release sequencing.
 
 ## Pre-commit checks
 
-`pnpm lint-staged` batches staged files from Atelier, Megapixels, Pixels,
-Uniform, and Veto into one `vitest related --run` invocation, then lints those
-files. Related tests exclude `@repo/storybook-config*`, matching the unit-test
+`pnpm lint-staged` batches staged files from all seven runtime packages into
+one `vitest related --run` invocation, then lints those files. Related tests exclude `@repo/storybook-config*`, matching the unit-test
 CI job; Storybook browser tests run through `pnpm test:storybook`. This keeps
 browser-only CSS transforms out of related unit-test discovery and avoids
 scanning the workspace separately for each affected package.
