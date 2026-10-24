@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.0-next.1](https://github.com/fuf-stack/pixels/compare/veto-v2.0.0-next.0...veto-v2.0.0-next.1) (2026-10-24)
+
+
+### Bug Fixes
+
+* **release:** merge main into next and repair prerelease bootstrap ([3bb219d](https://github.com/fuf-stack/pixels/commit/3bb219d42bbba9bdff8612e27209d142ff26ca63))
+
 ## [1.11.0](https://github.com/fuf-stack/pixels/compare/veto-v1.10.0...veto-v1.11.0) (2026-10-14)
 
 

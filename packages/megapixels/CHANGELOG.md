@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.0.0-next.1](https://github.com/fuf-stack/pixels/compare/megapixels-v1.0.0-next.0...megapixels-v1.0.0-next.1) (2026-10-24)
+
+
+### Bug Fixes
+
+* **release:** merge main into next and repair prerelease bootstrap ([3bb219d](https://github.com/fuf-stack/pixels/commit/3bb219d42bbba9bdff8612e27209d142ff26ca63))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 2.0.0-next.1
+    * @fuf-stack/pixel-utils bumped to 2.0.0-next.1
+    * @fuf-stack/pixels bumped to 2.0.0-next.1
+    * @fuf-stack/uniform bumped to 2.0.0-next.1
+    * @fuf-stack/veto bumped to 2.0.0-next.1
+
 ## [0.17.1](https://github.com/fuf-stack/pixels/compare/megapixels-v0.17.0...megapixels-v0.17.1) (2026-10-19)
 
 
