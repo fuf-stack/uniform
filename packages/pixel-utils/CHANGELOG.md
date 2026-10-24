@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.0-next.1](https://github.com/fuf-stack/pixels/compare/pixel-utils-v2.0.0-next.0...pixel-utils-v2.0.0-next.1) (2026-10-24)
+
+
+### Bug Fixes
+
+* **release:** merge main into next and repair prerelease bootstrap ([3bb219d](https://github.com/fuf-stack/pixels/commit/3bb219d42bbba9bdff8612e27209d142ff26ca63))
+
 ## [1.4.1](https://github.com/fuf-stack/pixels/compare/pixel-utils-v1.4.0...pixel-utils-v1.4.1) (2026-10-19)
 
 
