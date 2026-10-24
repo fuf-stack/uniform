@@ -55,8 +55,13 @@ jq --arg sha "$BOOTSTRAP_SHA" '
   ."bootstrap-sha" = (."bootstrap-sha" // ."last-release-sha" // $sha) |
   del(."last-release-sha")
 ' "$NEXT_CONFIG_FILE" > "$TEMP_CONFIG"
-mv "$TEMP_MANIFEST" "$NEXT_MANIFEST_FILE"
-mv "$TEMP_CONFIG" "$NEXT_CONFIG_FILE"
+# Ignore formatting differences so a rerun does not create a release commit.
+if [[ "$(jq -Sc . "$TEMP_MANIFEST")" != "$(jq -Sc . "$NEXT_MANIFEST_FILE")" ]]; then
+  mv "$TEMP_MANIFEST" "$NEXT_MANIFEST_FILE"
+fi
+if [[ "$(jq -Sc . "$TEMP_CONFIG")" != "$(jq -Sc . "$NEXT_CONFIG_FILE")" ]]; then
+  mv "$TEMP_CONFIG" "$NEXT_CONFIG_FILE"
+fi
 
 git add "$NEXT_MANIFEST_FILE" "$NEXT_CONFIG_FILE"
 if ! git diff --cached --quiet; then

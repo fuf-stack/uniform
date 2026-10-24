@@ -81,6 +81,17 @@ test('bootstrap creates, resumes, and advances next without resetting active cou
     bootstrap();
     assert.equal(git('rev-parse', 'HEAD'), first, 'reruns must be idempotent');
 
+    // Repository formatters may use different JSON whitespace from jq.
+    writeFileSync(
+      join(repo, configFile),
+      JSON.stringify(read(configFile)) + '\n',
+    );
+    writeFileSync(join(repo, manifest), JSON.stringify(read(manifest)) + '\n');
+    commit();
+    const formatted = git('rev-parse', 'HEAD');
+    bootstrap();
+    assert.equal(git('rev-parse', 'HEAD'), formatted, 'ignore JSON whitespace');
+
     write(manifest, {
       'packages/a': '2.0.0-next.7',
       'packages/b': '1.0.0-next.3',
