@@ -1,103 +1,45 @@
+import type { VRecordSchema } from '../record/record';
+
 import { z } from 'zod';
 
 /**
- * Base JSON Schema following JSON specification
- * @see https://zod.dev/?id=json-type
- * @see https://www.json.org/json-en.html
+ * Recursive type representing any valid JSON value.
  */
-const literalSchema = z.union([z.string(), z.number(), z.boolean(), z.null()]);
+export type JsonAll = string | number | boolean | null | JsonObject | JsonAll[];
 
 /**
- * Type representing JSON primitive values (string, number, boolean, null)
- */
-type Literal = z.infer<typeof literalSchema>;
-
-/**
- * Type representing a JSON object with string keys and any valid JSON value
- * Keys must be strings as per JSON specification
+ * Type representing a JSON object with string keys and JSON values.
  */
 export interface JsonObject {
   [key: string]: JsonAll;
 }
 
 /**
- * Recursive type representing any valid JSON value:
- * - Primitive values (string, number, boolean, null)
- * - Objects with string keys and JSON values
- * - Arrays of JSON values
- */
-export type JsonAll = Literal | JsonObject | JsonAll[];
-
-// Use z.ZodType for recursive schemas in Zod v4
-type JsonSchema = z.ZodType<JsonAll>;
-
-/**
- * Creates a schema validator for nested JSON structures
- * @param levels - Maximum number of nesting levels to validate (default: 10)
- * @returns A veto schema that can validate JSON with the specified nesting depth
- *
- * @example
- * ```typescript
- * const schema = createDeepJsonSchema(3);
- * const validData = {
- *   a: [1, { b: [true, null] }],
- *   c: { d: "test" }
- * };
- * const result = schema.parse(validData);
- * ```
- */
-const createDeepJsonSchema = (levels: number): JsonSchema => {
-  // Start with literals as base case
-  let currentSchema: JsonSchema = literalSchema;
-
-  for (let i = 0; i < levels; i += 1) {
-    const prevSchema = currentSchema;
-    currentSchema = z.union([
-      literalSchema,
-      z.array(
-        z.lazy(() => {
-          return prevSchema;
-        }),
-      ),
-      z.record(
-        z.string(),
-        z.lazy(() => {
-          return prevSchema;
-        }),
-      ),
-    ]) as JsonSchema;
-  }
-
-  return currentSchema;
-};
-
-/**
- * Creates a validator for any JSON value with specified nesting depth
- * @param levels - Maximum number of nesting levels to validate (default: 10)
+ * Creates a validator for any JSON value.
  * @returns veto schema for validating any JSON value
  *
  * @example
  * ```typescript
  * const validator = json();
  * const data = { foo: [1, "bar", { baz: true }] };
- * const result = validator(levels).parse(data);
+ * const result = validator.parse(data);
  * ```
  */
-export const json = (levels = 10) => {
-  return createDeepJsonSchema(levels);
+export const json = (): VJsonSchema => {
+  return z.json();
 };
 
 /**
  * Type representing the JSON validator function
  */
 export type VJson = typeof json;
+export type VJsonSchema = ReturnType<typeof z.json>;
 
 /**
  * Creates a validator specifically for JSON objects
  * Ensures the input is an object (not an array or primitive)
  * @see https://www.w3schools.com/js/js_json_objects.asp
  *
- * @param levels - Maximum number of nesting levels to validate (default: 10)
  * @returns veto schema for validating JSON objects
  *
  * @example
@@ -108,17 +50,29 @@ export type VJson = typeof json;
  * // Will fail for non-objects: arrays, primitives, etc.
  * ```
  */
-export const jsonObject = (levels = 10) => {
-  return z.record(z.string(), json(levels));
+export const jsonObject = (): VJsonObjectSchema => {
+  return z.record(z.string(), json(), {
+    error: (issue) => {
+      if (issue.input === undefined) {
+        return 'Field is required';
+      }
+      if (issue.code === 'invalid_type') {
+        return 'Invalid json object';
+      }
+      return undefined;
+    },
+  });
 };
 
 /**
  * Type representing the JSON object validator function
  */
 export type VJsonObject = typeof jsonObject;
+export type VJsonObjectSchema = VRecordSchema<VJsonSchema>;
 
 /**
- * Transforms a JSON string into its parsed JavaScript value
+ * Transforms a JSON string into its parsed JavaScript value.
+ * Already-parsed JSON values (objects, arrays, primitives) pass through as-is.
  *
  * Handles standard JSON types (strings, numbers, booleans, null, objects, arrays)
  * and rejects malformed JSON, JavaScript-specific values (undefined, BigInt),
@@ -127,20 +81,26 @@ export type VJsonObject = typeof jsonObject;
  * @returns veto schema that parses JSON strings into JavaScript values
  *
  * @example
- * // Basic usage
+ * // From a JSON string
  * const result = stringToJSON().parse('{"name":"John","age":30}');
+ *
+ * // Already parsed — parsing is skipped
+ * const same = stringToJSON().parse({ name: 'John', age: 30 });
  *
  * // With additional validation using pipe
  * const userSchema = stringToJSON().pipe(z.object({ name: z.string() }));
  * const user = userSchema.parse('{"name":"Alice"}');
  */
 export const stringToJSON = () => {
-  return z.string().transform((str, ctx): JsonAll => {
+  return z.preprocess((data, ctx) => {
+    if (typeof data !== 'string') {
+      return data;
+    }
     try {
-      return JSON.parse(str);
-    } catch (e) {
+      return JSON.parse(data) as JsonAll;
+    } catch {
       ctx.addIssue({ code: 'custom', message: 'Invalid JSON' });
       return z.NEVER;
     }
-  });
+  }, json());
 };

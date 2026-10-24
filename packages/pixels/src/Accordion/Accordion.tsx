@@ -51,10 +51,10 @@ export interface AccordionItemProps {
   children: ReactNode;
   /** Disables the accordion item */
   disabled?: boolean;
-  /** Accordion item title */
-  title: ReactNode;
   /** Accordion item subtitle */
   subtitle?: ReactNode;
+  /** Accordion item title */
+  title: ReactNode;
 }
 
 type VariantProps = TVProps<typeof accordionVariants>;

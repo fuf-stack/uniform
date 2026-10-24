@@ -2,25 +2,29 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { useState } from 'react';
 
+import { expect, waitFor, within } from 'storybook/test';
+
 import { Button, Card, Modal } from '@fuf-stack/pixels';
 import { veto } from '@fuf-stack/veto';
 import * as vt from '@fuf-stack/veto';
 
-import { Checkboxes } from '../Checkboxes';
-import { FieldArray } from '../FieldArray';
-import { FieldCard } from '../FieldCard';
-import { Form } from '../Form';
-import { Grid } from '../Grid';
-import { Input } from '../Input';
-import { RadioBoxes } from '../RadioBoxes';
-import { Radios } from '../Radios';
-import { RadioTabs } from '../RadioTabs';
-import { Select } from '../Select';
-import { Slider } from '../Slider';
-import { SubmitButton } from '../SubmitButton';
-import { Switch } from '../Switch';
-import { SwitchBox } from '../SwitchBox';
-import { TextArea } from '../TextArea';
+import Checkboxes from '../Checkboxes';
+import DatePicker from '../DatePicker';
+import FieldArray from '../FieldArray';
+import FieldCard from '../FieldCard';
+import Form from '../Form';
+import Grid from '../Grid';
+import Input from '../Input';
+import RadioBoxes from '../RadioBoxes';
+import Radios from '../Radios';
+import RadioTabs from '../RadioTabs';
+import Select from '../Select';
+import Slider from '../Slider';
+import SubmitButton from '../SubmitButton';
+import Switch from '../Switch';
+import SwitchBox from '../SwitchBox';
+import TextArea from '../TextArea';
+import Time from '../Time';
 
 const meta: Meta<typeof Form> = {
   title: 'uniform/Examples',
@@ -51,6 +55,7 @@ const selectSchema = vt.vEnum(['Value0', 'Value1', 'Value2']);
 
 const validation = veto({
   checkboxField: vt.array(checkboxSchema),
+  dateField: vt.string(),
   fieldArrayField: vt.array(vt.object({ name: vt.string() })),
   fieldArrayFlatField: vt.array(vt.string()),
   numberField: vt.number(),
@@ -64,11 +69,11 @@ const validation = veto({
       const fieldA = (data.fieldA as string | undefined) ?? '';
       const fieldB = (data.fieldB as string | undefined) ?? '';
 
-      // Object-level validation: all fields are required
-      if (!fieldA && !fieldB) {
+      // Object-level validation: both fields must be provided
+      if (!fieldA || !fieldB) {
         ctx.addIssue({
           code: 'custom',
-          message: 'All fields are required',
+          message: 'Both Field A and Field B are required',
         });
       }
     },
@@ -85,6 +90,7 @@ const validation = veto({
   switchBoxField: vt.boolean(),
   switchField: vt.boolean(),
   textAreaField: vt.string(),
+  timeField: vt.string(),
 });
 
 const checkboxOptions: {
@@ -135,6 +141,8 @@ export const AllFieldRenderers: Story = {
             options={selectOptions}
           />
           <Input label="Password Field" name="passwordField" type="password" />
+          <DatePicker label="Date Field" name="dateField" />
+          <Time label="Time Field" name="timeField" />
           <TextArea
             className="md:col-span-2"
             label="Text Area"
@@ -214,11 +222,11 @@ export const AllFieldRenderers: Story = {
             }}
           </FieldArray>
           <FieldArray
-            flat
-            lastElementNotRemovable
             appendButtonText="Add Element"
             className="md:col-span-2"
+            flat
             label="Field Array (Flat)"
+            lastElementNotRemovable
             name="fieldArrayFlatField"
           >
             {({ name }) => {
@@ -244,6 +252,26 @@ export const AllFieldRenderers: Story = {
         </Grid>
       </Card>
     ),
+  },
+  play: async ({ canvasElement }: { canvasElement: HTMLElement }) => {
+    const canvas = within(canvasElement);
+
+    // Verify the object-level error is shown
+    // INFO:  we do this so that snapshot is stable
+    await waitFor(() => {
+      expect(canvas.getByTestId('objectcardfield_error')).toBeInTheDocument();
+    });
+
+    // Verify the error message text
+    expect(
+      canvas.getByText('Both Field A and Field B are required'),
+    ).toBeInTheDocument();
+
+    // Verify the FieldCard header is not danger (not touched yet)
+    const fieldCardLabel = canvas.getByRole('heading', {
+      name: /field card/i,
+    });
+    expect(fieldCardLabel).not.toHaveClass('text-danger');
   },
 };
 
@@ -274,10 +302,10 @@ export const FormFieldsInModal: Story = {
     return (
       <div className="fixed inset-0 flex items-center justify-center bg-black/50">
         <Button
-          testId="modal_trigger"
           onClick={() => {
             setIsOpen(true);
           }}
+          testId="modal_trigger"
         >
           Open Modal
         </Button>

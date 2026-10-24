@@ -13,8 +13,12 @@ import createDebug from 'debug';
 
 import { useLocalStorage } from '@fuf-stack/pixels';
 
-import { toFormFormat, toValidationFormat } from '../../helpers';
+import { toFormFormat, toSubmitFormat } from '../../helpers';
 import { useExtendedValidation, useFormResolver } from './FormResolver';
+import {
+  createSensitiveFields,
+  SensitiveFieldsProvider,
+} from './SensitiveFields';
 
 const debug = createDebug('uniform:FormContext');
 
@@ -26,6 +30,9 @@ export interface DebugModeSettings {
   /** custom localStorage key to save debug mode state */
   localStorageKey?: string;
 }
+
+/** Listener function that gets called when a form reset is triggered */
+export type FormResetListener = () => void;
 
 /**
  * Listener function that gets called when a field changes due to user input
@@ -52,6 +59,9 @@ const DEBUG_MODE_LOCAL_STORAGE_KEY_DEFAULT = 'uniform:debug-mode';
  *    user-initiated field changes (typing, clicking, selecting) - NOT programmatic changes like
  *    form.reset() or form.setValue(). Used by the `useWatchUserChange` hook to enable reactive
  *    field dependencies.
+ * 5. **Form Reset Tracking**: The `formReset` property provides a pub/sub system for tracking
+ *    programmatic form resets triggered via the wrapped `reset()` from `useFormContext`.
+ *    Used by hooks like `useWatchFormReset` to run reset-specific normalization logic.
  *
  * This context is useful for components that need to interact with or control the form submission state,
  * or access the validation schema for managing form validation logic.
@@ -95,8 +105,21 @@ const DEBUG_MODE_LOCAL_STORAGE_KEY_DEFAULT = 'uniform:debug-mode';
 interface UniformContextType {
   /** Form debug mode enabled or not */
   debugMode: DebugMode;
-  /** settings for from debug mode */
+  /** settings for form debug mode */
   debugModeSettings?: DebugModeSettings;
+  /** Form reset tracking (programmatic reset calls) */
+  formReset: {
+    /**
+     * Subscribe to programmatic form resets.
+     * Returns an unsubscribe function.
+     */
+    subscribe: (listener: FormResetListener) => () => void;
+    /**
+     * Notify all subscribers about a programmatic form reset.
+     * Called from useFormContext when reset() is invoked.
+     */
+    notify: () => void;
+  };
   /** Function to update if the form can currently be submitted */
   preventSubmit: (prevent: boolean) => void;
   /** Setter to enable or disable form debug mode */
@@ -138,6 +161,16 @@ if (!(window as any).__UNIFORM_CONTEXT__) {
   (window as any).__UNIFORM_CONTEXT__ = React.createContext<UniformContextType>(
     {
       debugMode: 'off',
+      formReset: {
+        subscribe: () => {
+          return () => {
+            return undefined;
+          };
+        },
+        notify: () => {
+          return undefined;
+        },
+      },
       preventSubmit: () => {
         return undefined;
       },
@@ -185,14 +218,14 @@ debug('UniformContext exported', {
   contextsMatch: UniformContext === (window as any).__UNIFORM_CONTEXT__,
 });
 
-// Define props for the FormProvider component, extending HookForm's props
+// Define props for the internal FormProvider component
 interface FormProviderProps {
   /** children form render function */
   children: (childProps: {
     handleSubmit: (e?: BaseSyntheticEvent) => Promise<void>;
     isValid: boolean;
   }) => ReactNode;
-  /** settings for from debug mode */
+  /** settings for form debug mode */
   debugModeSettings?: DebugModeSettings;
   /** initial form values */
   initialValues?: FieldValues;
@@ -207,9 +240,12 @@ interface FormProviderProps {
 /**
  * FormProvider component provides:
  * - Veto validation schema context
+ * - Resolver-backed validation error state
  * - Client validation schema management
  * - Submit handler with automatic data conversion and submission control with preventSubmit
  * - Form Debug Mode state
+ * - Form reset pub/sub notifications (`formReset`)
+ * - User change pub/sub notifications (`userChange`)
  * - React Hook Form context
  */
 const FormProvider: React.FC<FormProviderProps> = ({
@@ -220,6 +256,10 @@ const FormProvider: React.FC<FormProviderProps> = ({
   validation: baseValidation = undefined,
   validationTrigger,
 }) => {
+  const sensitiveFields = useMemo(() => {
+    return createSensitiveFields();
+  }, []);
+
   // Form Debug mode state is handled in the form context
   const [debugMode, setDebugMode] = useLocalStorage<DebugMode>(
     debugModeSettings?.localStorageKey ?? DEBUG_MODE_LOCAL_STORAGE_KEY_DEFAULT,
@@ -230,7 +270,7 @@ const FormProvider: React.FC<FormProviderProps> = ({
   const { extendedValidation, setClientValidationSchema } =
     useExtendedValidation(baseValidation);
 
-  // Create resolver from extended validation + get current validation errors
+  // Create resolver from extended validation + reactive validation error state
   const { resolver, validationErrors, validationErrorsHash } =
     useFormResolver(extendedValidation);
 
@@ -248,6 +288,27 @@ const FormProvider: React.FC<FormProviderProps> = ({
 
   // Control if the form can currently be submitted
   const [preventSubmit, setPreventSubmit] = useState(false);
+
+  // Form reset listener registry (stored in ref to avoid re-renders)
+  const formResetListenersRef = useRef<Set<FormResetListener>>(new Set());
+
+  // Subscribe to form reset notifications
+  const subscribeFormReset = useCallback(
+    (listener: FormResetListener): (() => void) => {
+      formResetListenersRef.current.add(listener);
+      return () => {
+        formResetListenersRef.current.delete(listener);
+      };
+    },
+    [],
+  );
+
+  // Notify all subscribers about a programmatic form reset
+  const notifyFormReset = useCallback((): void => {
+    formResetListenersRef.current.forEach((listener) => {
+      listener();
+    });
+  }, []);
 
   // User change listener registry (stored in ref to avoid re-renders)
   const userChangeListenersRef = useRef<Set<UserChangeListener>>(new Set());
@@ -281,9 +342,9 @@ const FormProvider: React.FC<FormProviderProps> = ({
     debug('handleSubmit called', {
       preventSubmit,
       formStateIsValid: methods.formState.isValid,
-      validationErrors: methods.formState.errors,
+      validationErrors: sensitiveFields.redact(methods.formState.errors),
       validationTrigger,
-      formValues: methods.getValues(),
+      formValues: sensitiveFields.redact(methods.getValues()),
     });
 
     // only prevent submit when form state is valid, because otherwise
@@ -308,10 +369,14 @@ const FormProvider: React.FC<FormProviderProps> = ({
         : 'Form is valid and preventSubmit is false',
     });
 
-    // Convert nullish strings and filter out empty values before submission
+    // Convert form data to submission format:
+    // - Unwrap flat array wrappers and convert markers
+    // - Remove empty strings, nulls, empty arrays, and empty objects
     const wrappedOnSubmit = (data: FieldValues, event?: BaseSyntheticEvent) => {
-      const submitData = toValidationFormat(data) ?? {};
-      debug('onSubmit callback called', { submitData });
+      const submitData = toSubmitFormat(data) ?? {};
+      debug('onSubmit callback called', {
+        submitData: sensitiveFields.redact(submitData),
+      });
       return onSubmit(submitData, event);
     };
 
@@ -320,7 +385,8 @@ const FormProvider: React.FC<FormProviderProps> = ({
     debug('handleSubmit completed');
   };
 
-  // Memoize the context value to prevent re-renders
+  // Memoize the context value so consumers only re-render when context-relevant
+  // state changes, including resolver-backed validation errors.
   const contextValue = useMemo(
     () => {
       return {
@@ -332,13 +398,17 @@ const FormProvider: React.FC<FormProviderProps> = ({
             previousValue: preventSubmit,
             newValue: prevent,
             formStateIsValid: methods.formState.isValid,
-            validationErrors: methods.formState.errors,
+            validationErrors: sensitiveFields.redact(methods.formState.errors),
           });
           setPreventSubmit(prevent);
         },
         setClientValidationSchema,
         setDebugMode,
         triggerSubmit: handleSubmit,
+        formReset: {
+          subscribe: subscribeFormReset,
+          notify: notifyFormReset,
+        },
         userChange: {
           subscribe: subscribeUserChange,
           notify: notifyUserChange,
@@ -356,12 +426,14 @@ const FormProvider: React.FC<FormProviderProps> = ({
   );
 
   return (
-    <UniformContext.Provider value={contextValue}>
-      {/* Spread all hook form props into HookFormProvider */}
-      <HookFormProvider {...methods}>
-        {children({ handleSubmit, isValid })}
-      </HookFormProvider>
-    </UniformContext.Provider>
+    <SensitiveFieldsProvider registry={sensitiveFields}>
+      <UniformContext.Provider value={contextValue}>
+        {/* Spread all hook form props into HookFormProvider */}
+        <HookFormProvider {...methods}>
+          {children({ handleSubmit, isValid })}
+        </HookFormProvider>
+      </UniformContext.Provider>
+    </SensitiveFieldsProvider>
   );
 };
 

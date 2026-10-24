@@ -1,6 +1,8 @@
-import { expect, it } from 'vitest';
+/* eslint-disable vitest/expect-expect */
 
-import v, {
+import { expect, expectTypeOf, it } from 'vitest';
+
+import veto, {
   and,
   discriminatedUnion,
   literal,
@@ -10,15 +12,56 @@ import v, {
   vEnum,
 } from 'src';
 
+it('exposes intersection typing', () => {
+  const schema = and(
+    objectLoose({ baseField: string() }),
+    objectLoose({ mode: literal('TYPE') }),
+  );
+
+  const parsed = schema.parse({ baseField: 'x', mode: 'TYPE' });
+  const typedParsed: {
+    baseField: string;
+    mode: 'TYPE';
+  } = parsed;
+  expectTypeOf(typedParsed).toEqualTypeOf<{
+    baseField: string;
+    mode: 'TYPE';
+  }>();
+});
+
+it('exposes intersection typing for multiple schemas', () => {
+  const schema = and(
+    objectLoose({ baseField: string() }),
+    objectLoose({ mode: literal('TYPE') }),
+    objectLoose({ isEnabled: literal(true) }),
+  );
+
+  const parsed = schema.parse({
+    baseField: 'x',
+    mode: 'TYPE',
+    isEnabled: true,
+  });
+  const typedParsed: {
+    baseField: string;
+    mode: 'TYPE';
+    isEnabled: true;
+  } = parsed;
+  expectTypeOf(typedParsed).toEqualTypeOf<{
+    baseField: string;
+    mode: 'TYPE';
+    isEnabled: true;
+  }>();
+});
+
 it('combines multiple string schema validations correctly', () => {
   const schema = { andField: and(string(), string().min(4)) };
-  const result = v(schema).validate({ andField: 'thisString' });
+  const result = veto(schema).validate({ andField: 'thisString' });
   expect(result).toMatchObject({
     success: true,
     errors: null,
   });
 
-  const result2 = v(schema).validate({ andField: 'the' });
+  const result2 = veto(schema).validate({ andField: 'the' });
   expect(result2).toMatchObject({
     data: null,
     errors: {
@@ -26,8 +69,9 @@ it('combines multiple string schema validations correctly', () => {
         {
           code: 'too_small',
           inclusive: true,
-          message: 'Too small: expected string to have >=4 characters',
+          message: 'String must contain at least 4 character(s)',
           minimum: 4,
+          type: 'string',
         },
       ],
     },
@@ -42,20 +86,38 @@ it('combines enum string schema validations correctly', () => {
       vEnum(['2', '1', '0']),
     ),
   };
-  const result1 = v(schema).validate({ andField: '2' });
+  const result1 = veto(schema).validate({ andField: '2' });
   expect(result1).toMatchObject({
     success: true,
     errors: null,
   });
 
-  const result2 = v(schema).validate({ andField: '4' });
+  const result2 = veto(schema).validate({ andField: '4' });
   expect(result2).toMatchObject({
     success: false,
   });
 
-  const result3 = v(schema).validate({ andField: '10' });
+  const result3 = veto(schema).validate({ andField: '10' });
   expect(result3).toMatchObject({
     success: false,
+  });
+});
+
+it('supports more than two schemas at runtime', () => {
+  const schema = {
+    andField: and(string(), string().min(3), string().regex(/^A/)),
+  };
+
+  const successResult = veto(schema).validate({ andField: 'Abc' });
+  expect(successResult).toMatchObject({
+    success: true,
+    errors: null,
+  });
+
+  const failResult = veto(schema).validate({ andField: 'bc' });
+  expect(failResult).toMatchObject({
+    success: false,
+    data: null,
   });
 });
 
@@ -75,7 +137,7 @@ it('combines loose object and discriminatedUnion schemas as expected', () => {
     type: 'typeB',
     bField: 'some b field data',
   };
-  const result = v(combinedSchema).validate(data);
+  const result = veto(combinedSchema).validate(data);
   expect(result).toMatchObject({
     success: true,
     data,
@@ -95,7 +157,7 @@ it('throws expected errors for loose object and discriminatedUnion schemas', () 
   const combinedSchema = and(baseSchema, discriminatedUnionSchema);
 
   const data = { type: 'typeB', invalidField: false };
-  const result = v(combinedSchema).validate(data);
+  const result = veto(combinedSchema).validate(data);
   expect(result).toMatchObject({
     success: false,
     data: null,

@@ -5,6 +5,65 @@ import { beforeEach, vi } from 'vitest';
 
 import { cleanup } from '@testing-library/react';
 
+// HeroUI Tabs (and other UI primitives) rely on ResizeObserver in passive effects.
+// In Vitest's jsdom environment, ResizeObserver may be missing depending on jsdom
+// version/runtime, which causes story snapshot tests to fail with:
+//   "ReferenceError: ResizeObserver is not defined"
+//
+// This test-only polyfill provides the minimum observer surface used by components
+// under test. It intentionally performs no real resize tracking because snapshots
+// only need components to mount without throwing.
+//
+// Remove this once our test environment guarantees a native ResizeObserver.
+if (globalThis.ResizeObserver === undefined) {
+  class ResizeObserverMock implements ResizeObserver {
+    // no-op: tests do not assert resize callbacks today
+    // eslint-disable-next-line class-methods-use-this
+    observe() {}
+
+    // no-op: included for interface completeness
+    // eslint-disable-next-line class-methods-use-this
+    unobserve() {}
+
+    // no-op: included for interface completeness
+    // eslint-disable-next-line class-methods-use-this
+    disconnect() {}
+  }
+
+  Object.defineProperty(globalThis, 'ResizeObserver', {
+    configurable: true,
+    writable: true,
+    value: ResizeObserverMock,
+  });
+}
+
+// sonner's swipe-to-dismiss handler expects pointer capture APIs to exist.
+// jsdom does not currently implement them, so provide a minimal test shim.
+if (
+  globalThis.HTMLElement !== undefined &&
+  globalThis.HTMLElement.prototype.setPointerCapture === undefined
+) {
+  Object.defineProperties(globalThis.HTMLElement.prototype, {
+    setPointerCapture: {
+      configurable: true,
+      writable: true,
+      value() {},
+    },
+    releasePointerCapture: {
+      configurable: true,
+      writable: true,
+      value() {},
+    },
+    hasPointerCapture: {
+      configurable: true,
+      writable: true,
+      value() {
+        return false;
+      },
+    },
+  });
+}
+
 // Force cleanup and reset DOM state between each test to prevent cross-test contamination
 beforeEach(() => {
   // cleanup() from React Testing Library unmounts any React components and removes

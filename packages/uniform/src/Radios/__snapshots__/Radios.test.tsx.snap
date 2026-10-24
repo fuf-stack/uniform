@@ -1,5 +1,204 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Story Snapshots > CustomOptionsRendering 1`] = `
+<div>
+  <div
+    class="flex w-full flex-row justify-between gap-6"
+  >
+    <form
+      class="grow min-w-60"
+      data-form-is-valid="false"
+      data-testid=""
+      novalidate=""
+    >
+      <div
+        aria-describedby="react-aria-«replaced-aria-id»"
+        aria-invalid="true"
+        aria-label="Pick one side quest"
+        aria-orientation="vertical"
+        aria-required="true"
+        class="relative gap-2 group flex w-full flex-col gap-y-1.5"
+        data-invalid="true"
+        data-required="true"
+        data-testid="radiosfield"
+        id="react-aria-«replaced-aria-id»"
+        role="radiogroup"
+      >
+        <span
+          class="relative after:content-['*'] after:text-danger after:ml-0.5 mb-2 inline-flex cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:text-danger"
+        >
+          <legend>
+            Pick one side quest
+          </legend>
+        </span>
+        <div
+          class="flex flex-col flex-wrap gap-2 data-[orientation=horizontal]:flex-row rounded-lg border border-divider bg-content1"
+          data-orientation="vertical"
+          role="presentation"
+        >
+          <div
+            class="divide-y divide-default-200"
+          >
+            <div>
+              <label
+                aria-required="true"
+                class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 select-none m-2 w-full"
+                data-invalid="true"
+                data-testid="radiosfield_option_treasure_hunt"
+              >
+                <input
+                  aria-describedby="«replaced-aria-id»"
+                  aria-labelledby="«replaced-aria-id»"
+                  class="font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 w-full h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+                  data-react-aria-pressable="true"
+                  name="radiosField"
+                  required=""
+                  tabindex="-1"
+                  title=""
+                  type="radio"
+                  value="treasure-hunt"
+                />
+                <span
+                  aria-hidden="true"
+                  class="relative inline-flex items-center justify-center shrink-0 overflow-hidden border-solid border-medium box-border rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-solid outline-transparent group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background w-5 h-5 border-danger group-data-[selected=true]:border-danger group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:border-danger! [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
+                >
+                  <span
+                    class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 w-2 h-2 text-danger-foreground transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
+                  />
+                </span>
+                <div
+                  class="flex flex-col ms-2 ml-2"
+                >
+                  <span
+                    class="relative select-none text-danger transition-colors motion-reduce:transition-none text-sm"
+                    id="«replaced-aria-id»"
+                  >
+                    Treasure Hunt 🗺️
+                  </span>
+                </div>
+              </label>
+            </div>
+            <div>
+              <label
+                aria-required="true"
+                class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 select-none m-2 w-full"
+                data-invalid="true"
+                data-testid="radiosfield_option_potion_brewing"
+              >
+                <input
+                  aria-describedby="«replaced-aria-id»"
+                  aria-labelledby="«replaced-aria-id»"
+                  class="font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 w-full h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+                  data-react-aria-pressable="true"
+                  name="radiosField"
+                  required=""
+                  tabindex="-1"
+                  title=""
+                  type="radio"
+                  value="potion-brewing"
+                />
+                <span
+                  aria-hidden="true"
+                  class="relative inline-flex items-center justify-center shrink-0 overflow-hidden border-solid border-medium box-border rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-solid outline-transparent group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background w-5 h-5 border-danger group-data-[selected=true]:border-danger group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:border-danger! [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
+                >
+                  <span
+                    class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 w-2 h-2 text-danger-foreground transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
+                  />
+                </span>
+                <div
+                  class="flex flex-col ms-2 ml-2"
+                >
+                  <span
+                    class="relative select-none text-danger transition-colors motion-reduce:transition-none text-sm"
+                    id="«replaced-aria-id»"
+                  >
+                    Potion Brewing 🧪
+                  </span>
+                </div>
+              </label>
+            </div>
+            <div>
+              <label
+                aria-required="true"
+                class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 select-none m-2 w-full"
+                data-invalid="true"
+                data-testid="radiosfield_option_dragon_negotiation"
+              >
+                <input
+                  aria-describedby="«replaced-aria-id»"
+                  aria-labelledby="«replaced-aria-id»"
+                  class="font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 w-full h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+                  data-react-aria-pressable="true"
+                  name="radiosField"
+                  required=""
+                  tabindex="-1"
+                  title=""
+                  type="radio"
+                  value="dragon-negotiation"
+                />
+                <span
+                  aria-hidden="true"
+                  class="relative inline-flex items-center justify-center shrink-0 overflow-hidden border-solid border-medium box-border rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-solid outline-transparent group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background w-5 h-5 border-danger group-data-[selected=true]:border-danger group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:border-danger! [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
+                >
+                  <span
+                    class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 w-2 h-2 text-danger-foreground transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
+                  />
+                </span>
+                <div
+                  class="flex flex-col ms-2 ml-2"
+                >
+                  <span
+                    class="relative select-none text-danger transition-colors motion-reduce:transition-none text-sm"
+                    id="«replaced-aria-id»"
+                  >
+                    Dragon Negotiation 🐉
+                  </span>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div
+          class="text-tiny text-danger"
+          id="react-aria-«replaced-aria-id»"
+        >
+          <ul
+            aria-label="Validation errors of field radiosfield"
+            data-testid="radiosfield_error"
+          >
+            <li
+              style="overflow: hidden;"
+            >
+              <div
+                class="px-1 pt-1"
+              >
+                Field is required
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="mt-4 flex justify-end"
+      >
+        <button
+          aria-label="Submit form"
+          class="group tap-highlight-transparent data-[hover=true]:opacity-hover z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white"
+          data-focus="true"
+          data-hover="true"
+          data-react-aria-pressable="true"
+          data-testid="form_submit_button"
+          tabindex="0"
+          type="submit"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;
+
 exports[`Story Snapshots > Default 1`] = `
 <div>
   <div
@@ -9,11 +208,12 @@ exports[`Story Snapshots > Default 1`] = `
       class="grow min-w-60"
       data-form-is-valid="true"
       data-testid=""
+      novalidate=""
     >
       <div
         aria-label="radiosField"
         aria-orientation="vertical"
-        class="relative flex flex-col group gap-0"
+        class="relative gap-2 group flex w-full flex-col gap-y-1.5"
         data-invalid="false"
         data-required="false"
         data-testid="radiosfield"
@@ -35,7 +235,7 @@ exports[`Story Snapshots > Default 1`] = `
               class="font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 w-full h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
               data-react-aria-pressable="true"
               name="radiosField"
-              tabindex="0"
+              tabindex="-1"
               title=""
               type="radio"
               value="1"
@@ -49,7 +249,7 @@ exports[`Story Snapshots > Default 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-1 ms-2"
+              class="flex flex-col ms-2 ml-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -69,7 +269,7 @@ exports[`Story Snapshots > Default 1`] = `
               class="font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 w-full h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
               data-react-aria-pressable="true"
               name="radiosField"
-              tabindex="0"
+              tabindex="-1"
               title=""
               type="radio"
               value="2"
@@ -83,7 +283,7 @@ exports[`Story Snapshots > Default 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-1 ms-2"
+              class="flex flex-col ms-2 ml-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -103,7 +303,7 @@ exports[`Story Snapshots > Default 1`] = `
               class="font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 w-full h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
               data-react-aria-pressable="true"
               name="radiosField"
-              tabindex="0"
+              tabindex="-1"
               title=""
               type="radio"
               value="3"
@@ -117,7 +317,7 @@ exports[`Story Snapshots > Default 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-1 ms-2"
+              class="flex flex-col ms-2 ml-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -157,11 +357,12 @@ exports[`Story Snapshots > DisabledCompletely 1`] = `
       class="grow min-w-60"
       data-form-is-valid="true"
       data-testid=""
+      novalidate=""
     >
       <div
         aria-label="radiosField"
         aria-orientation="vertical"
-        class="relative flex flex-col group gap-0"
+        class="relative gap-2 group flex w-full flex-col gap-y-1.5"
         data-invalid="false"
         data-required="false"
         data-testid="radiosfield"
@@ -197,7 +398,7 @@ exports[`Story Snapshots > DisabledCompletely 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-1 ms-2"
+              class="flex flex-col ms-2 ml-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -231,7 +432,7 @@ exports[`Story Snapshots > DisabledCompletely 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-1 ms-2"
+              class="flex flex-col ms-2 ml-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -265,7 +466,7 @@ exports[`Story Snapshots > DisabledCompletely 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-1 ms-2"
+              class="flex flex-col ms-2 ml-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -305,11 +506,12 @@ exports[`Story Snapshots > DisabledOption 1`] = `
       class="grow min-w-60"
       data-form-is-valid="true"
       data-testid=""
+      novalidate=""
     >
       <div
         aria-label="radiosField"
         aria-orientation="vertical"
-        class="relative flex flex-col group gap-0"
+        class="relative gap-2 group flex w-full flex-col gap-y-1.5"
         data-invalid="false"
         data-required="false"
         data-testid="radiosfield"
@@ -331,7 +533,7 @@ exports[`Story Snapshots > DisabledOption 1`] = `
               class="font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 w-full h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
               data-react-aria-pressable="true"
               name="radiosField"
-              tabindex="0"
+              tabindex="-1"
               title=""
               type="radio"
               value="option 1"
@@ -345,7 +547,7 @@ exports[`Story Snapshots > DisabledOption 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-1 ms-2"
+              class="flex flex-col ms-2 ml-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -379,7 +581,7 @@ exports[`Story Snapshots > DisabledOption 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-1 ms-2"
+              class="flex flex-col ms-2 ml-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -399,7 +601,7 @@ exports[`Story Snapshots > DisabledOption 1`] = `
               class="font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 w-full h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
               data-react-aria-pressable="true"
               name="radiosField"
-              tabindex="0"
+              tabindex="-1"
               title=""
               type="radio"
               value="option 3"
@@ -413,7 +615,7 @@ exports[`Story Snapshots > DisabledOption 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-1 ms-2"
+              class="flex flex-col ms-2 ml-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -453,11 +655,12 @@ exports[`Story Snapshots > Inline 1`] = `
       class="grow min-w-60"
       data-form-is-valid="true"
       data-testid=""
+      novalidate=""
     >
       <div
         aria-label="radiosField"
         aria-orientation="horizontal"
-        class="relative flex flex-col group gap-0"
+        class="relative gap-2 group flex w-full flex-col gap-y-1.5"
         data-invalid="false"
         data-required="false"
         data-testid="radiosfield"
@@ -479,7 +682,7 @@ exports[`Story Snapshots > Inline 1`] = `
               class="font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 w-full h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
               data-react-aria-pressable="true"
               name="radiosField"
-              tabindex="0"
+              tabindex="-1"
               title=""
               type="radio"
               value="option 1"
@@ -493,7 +696,7 @@ exports[`Story Snapshots > Inline 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-1 ms-2"
+              class="flex flex-col ms-2 ml-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -513,7 +716,7 @@ exports[`Story Snapshots > Inline 1`] = `
               class="font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 w-full h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
               data-react-aria-pressable="true"
               name="radiosField"
-              tabindex="0"
+              tabindex="-1"
               title=""
               type="radio"
               value="option 2"
@@ -527,7 +730,7 @@ exports[`Story Snapshots > Inline 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-1 ms-2"
+              class="flex flex-col ms-2 ml-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -547,7 +750,7 @@ exports[`Story Snapshots > Inline 1`] = `
               class="font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 w-full h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
               data-react-aria-pressable="true"
               name="radiosField"
-              tabindex="0"
+              tabindex="-1"
               title=""
               type="radio"
               value="option 3"
@@ -561,7 +764,7 @@ exports[`Story Snapshots > Inline 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-1 ms-2"
+              class="flex flex-col ms-2 ml-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -601,6 +804,7 @@ exports[`Story Snapshots > Invalid 1`] = `
       class="grow min-w-60"
       data-form-is-valid="false"
       data-testid=""
+      novalidate=""
     >
       <div
         aria-describedby="react-aria-«replaced-aria-id»"
@@ -608,7 +812,7 @@ exports[`Story Snapshots > Invalid 1`] = `
         aria-label="radiosField"
         aria-orientation="vertical"
         aria-required="true"
-        class="relative flex flex-col group gap-0"
+        class="relative gap-2 group flex w-full flex-col gap-y-1.5"
         data-invalid="true"
         data-required="true"
         data-testid="radiosfield"
@@ -616,7 +820,7 @@ exports[`Story Snapshots > Invalid 1`] = `
         role="radiogroup"
       >
         <span
-          class="relative after:content-['*'] after:text-danger after:ml-0.5 mb-2 inline-flex text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:text-danger"
+          class="relative after:content-['*'] after:text-danger after:ml-0.5 mb-2 inline-flex cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:text-danger"
         >
           <legend>
             radiosField
@@ -654,7 +858,7 @@ exports[`Story Snapshots > Invalid 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-1 ms-2"
+              class="flex flex-col ms-2 ml-2"
             >
               <span
                 class="relative select-none text-danger transition-colors motion-reduce:transition-none text-sm"
@@ -694,7 +898,7 @@ exports[`Story Snapshots > Invalid 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-1 ms-2"
+              class="flex flex-col ms-2 ml-2"
             >
               <span
                 class="relative select-none text-danger transition-colors motion-reduce:transition-none text-sm"
@@ -731,7 +935,7 @@ exports[`Story Snapshots > Invalid 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-1 ms-2"
+              class="flex flex-col ms-2 ml-2"
             >
               <span
                 class="relative select-none text-danger transition-colors motion-reduce:transition-none text-sm"
@@ -781,6 +985,155 @@ exports[`Story Snapshots > Invalid 1`] = `
 </div>
 `;
 
+exports[`Story Snapshots > NumberValues 1`] = `
+<div>
+  <div
+    class="flex w-full flex-row justify-between gap-6"
+  >
+    <form
+      class="grow min-w-60"
+      data-form-is-valid="true"
+      data-testid=""
+      novalidate=""
+    >
+      <div
+        aria-label="radiosField"
+        aria-orientation="vertical"
+        class="relative gap-2 group flex w-full flex-col gap-y-1.5"
+        data-invalid="false"
+        data-required="false"
+        data-testid="radiosfield"
+        id="react-aria-«replaced-aria-id»"
+        role="radiogroup"
+      >
+        <div
+          class="flex flex-col flex-wrap gap-2 data-[orientation=horizontal]:flex-row"
+          data-orientation="vertical"
+          role="presentation"
+        >
+          <label
+            class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
+            data-testid="radiosfield_option_1"
+          >
+            <input
+              aria-describedby="«replaced-aria-id» react-aria-«replaced-aria-id»"
+              aria-labelledby="«replaced-aria-id»"
+              class="font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 w-full h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              data-react-aria-pressable="true"
+              name="radiosField"
+              tabindex="-1"
+              title=""
+              type="radio"
+              value="1"
+            />
+            <span
+              aria-hidden="true"
+              class="relative inline-flex items-center justify-center shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-solid outline-transparent group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:border-danger! [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
+            >
+              <span
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
+              />
+            </span>
+            <div
+              class="flex flex-col ms-2 ml-2"
+            >
+              <span
+                class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
+                id="«replaced-aria-id»"
+              >
+                One
+              </span>
+            </div>
+          </label>
+          <label
+            class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
+            data-testid="radiosfield_option_2"
+          >
+            <input
+              aria-describedby="«replaced-aria-id» react-aria-«replaced-aria-id»"
+              aria-labelledby="«replaced-aria-id»"
+              class="font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 w-full h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              data-react-aria-pressable="true"
+              name="radiosField"
+              tabindex="-1"
+              title=""
+              type="radio"
+              value="2"
+            />
+            <span
+              aria-hidden="true"
+              class="relative inline-flex items-center justify-center shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-solid outline-transparent group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:border-danger! [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
+            >
+              <span
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
+              />
+            </span>
+            <div
+              class="flex flex-col ms-2 ml-2"
+            >
+              <span
+                class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
+                id="«replaced-aria-id»"
+              >
+                Two
+              </span>
+            </div>
+          </label>
+          <label
+            class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
+            data-testid="radiosfield_option_3"
+          >
+            <input
+              aria-describedby="«replaced-aria-id» react-aria-«replaced-aria-id»"
+              aria-labelledby="«replaced-aria-id»"
+              class="font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 w-full h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              data-react-aria-pressable="true"
+              name="radiosField"
+              tabindex="-1"
+              title=""
+              type="radio"
+              value="3"
+            />
+            <span
+              aria-hidden="true"
+              class="relative inline-flex items-center justify-center shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-solid outline-transparent group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-primary w-5 h-5 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[invalid=true]:border-danger! [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus"
+            >
+              <span
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground w-2 h-2 transition-transform-opacity motion-reduce:transition-none bg-focus group-data-[invalid=true]:bg-danger"
+              />
+            </span>
+            <div
+              class="flex flex-col ms-2 ml-2"
+            >
+              <span
+                class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
+                id="«replaced-aria-id»"
+              >
+                Three
+              </span>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div
+        class="mt-4 flex justify-end"
+      >
+        <button
+          aria-label="Submit form"
+          class="group tap-highlight-transparent data-[hover=true]:opacity-hover z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white"
+          data-react-aria-pressable="true"
+          data-testid="form_submit_button"
+          tabindex="0"
+          type="submit"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;
+
 exports[`Story Snapshots > Required 1`] = `
 <div>
   <div
@@ -790,12 +1143,13 @@ exports[`Story Snapshots > Required 1`] = `
       class="grow min-w-60"
       data-form-is-valid="false"
       data-testid=""
+      novalidate=""
     >
       <div
         aria-label="radiosField"
         aria-orientation="vertical"
         aria-required="true"
-        class="relative flex flex-col group gap-0"
+        class="relative gap-2 group flex w-full flex-col gap-y-1.5"
         data-invalid="false"
         data-required="true"
         data-testid="radiosfield"
@@ -803,7 +1157,7 @@ exports[`Story Snapshots > Required 1`] = `
         role="radiogroup"
       >
         <span
-          class="relative after:content-['*'] after:text-danger after:ml-0.5 mb-2 inline-flex text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:text-danger"
+          class="relative after:content-['*'] after:text-danger after:ml-0.5 mb-2 inline-flex cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:text-danger"
         >
           <legend>
             radiosField
@@ -826,7 +1180,7 @@ exports[`Story Snapshots > Required 1`] = `
               data-react-aria-pressable="true"
               name="radiosField"
               required=""
-              tabindex="0"
+              tabindex="-1"
               title=""
               type="radio"
               value="1"
@@ -840,7 +1194,7 @@ exports[`Story Snapshots > Required 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-1 ms-2"
+              class="flex flex-col ms-2 ml-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -862,7 +1216,7 @@ exports[`Story Snapshots > Required 1`] = `
               data-react-aria-pressable="true"
               name="radiosField"
               required=""
-              tabindex="0"
+              tabindex="-1"
               title=""
               type="radio"
               value="2"
@@ -876,7 +1230,7 @@ exports[`Story Snapshots > Required 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-1 ms-2"
+              class="flex flex-col ms-2 ml-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -898,7 +1252,7 @@ exports[`Story Snapshots > Required 1`] = `
               data-react-aria-pressable="true"
               name="radiosField"
               required=""
-              tabindex="0"
+              tabindex="-1"
               title=""
               type="radio"
               value="3"
@@ -912,7 +1266,7 @@ exports[`Story Snapshots > Required 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-1 ms-2"
+              class="flex flex-col ms-2 ml-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -952,11 +1306,12 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
       class="grow min-w-60"
       data-form-is-valid="true"
       data-testid=""
+      novalidate=""
     >
       <div
         aria-label="radiosField"
         aria-orientation="vertical"
-        class="relative flex flex-col group gap-0"
+        class="relative gap-2 group flex w-full flex-col gap-y-1.5"
         data-invalid="false"
         data-required="false"
         data-testid="radiosfield"
@@ -992,7 +1347,7 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-1 ms-2"
+              class="flex flex-col ms-2 ml-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -1028,7 +1383,7 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-1 ms-2"
+              class="flex flex-col ms-2 ml-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"
@@ -1062,7 +1417,7 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-1 ms-2"
+              class="flex flex-col ms-2 ml-2"
             >
               <span
                 class="relative text-foreground select-none transition-colors motion-reduce:transition-none text-sm"

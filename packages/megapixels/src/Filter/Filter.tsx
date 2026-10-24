@@ -55,8 +55,8 @@ export const filterVariants = tv({
 type ClassName = TVClassName<typeof filterVariants>;
 
 export interface FilterValues {
-  search?: string;
   filter?: string | Record<string, unknown> | null;
+  search?: string;
 }
 
 export type FilterChildRenderFn = (values: {
@@ -96,10 +96,18 @@ export interface FilterProps {
     /** Optional configuration for search field */
     search?: SearchConfiguration;
   };
+  /** Disables the add-filter menu and modal open/close animations */
+  disableAnimation?: boolean;
   /** ex-forms form instance name. Defaults to "filterComponentForm". */
   formName?: string;
   /** Controlled setter invoked on submit with the next canonical values */
   onChange: (nextValues: FilterValues) => void;
+  /**
+   * Container the add-filter menu and filter modal portals render into.
+   * Defaults to document.body; set this to keep portals scoped to a parent
+   * (e.g. for embedding or deterministic snapshot tests).
+   */
+  portalContainer?: HTMLElement;
   /** Controlled committed state: the canonical `search` and `filter` values */
   values: FilterValues;
 }
@@ -113,14 +121,16 @@ const Filter = ({
   children = undefined,
   className = undefined,
   config,
+  disableAnimation = false,
   formName = 'filterComponentForm',
   onChange,
+  portalContainer = undefined,
   values,
 }: FilterProps) => {
   // Submit handler: map form state back into the controlled `values` shape
   const handleSubmit = (nextValues: Record<string, unknown>) => {
     debug('handleSubmit', { nextValues });
-    onChange(nextValues as FilterValues);
+    onChange(nextValues);
   };
 
   // Build validation schema for all configured filters (and optional search)
@@ -154,18 +164,21 @@ const Filter = ({
         - onSubmit maps form values back into values/onChange
       */}
       <Form
-        className={classNames.form}
+        className={{ form: classNames.form }}
         // disable debug mode for now
         debug={{ disable: true }}
         initialValues={valuesValidated ?? {}}
         name={formName}
         onSubmit={handleSubmit}
+        // the FilterModal footer's SubmitButton is portalled OUTSIDE this form's
+        // DOM subtree, so it associates with the form via the native `form`
+        // attribute (SubmitButton `remoteFormId`) instead of DOM descent
+        remoteFormId={formName}
         validation={validation}
       >
         {/* Render search if search config is provided */}
         {config.search ? (
           <SearchInput
-            config={config.search}
             classNames={{
               searchInput: classNames.searchInput,
               searchInputWrapper: classNames.searchInputWrapper,
@@ -174,6 +187,7 @@ const Filter = ({
               searchSubmitButton: classNames.searchSubmitButton,
               searchWrapper: classNames.searchWrapper,
             }}
+            config={config.search}
           />
         ) : null}
         {/*
@@ -189,6 +203,8 @@ const Filter = ({
               addFilterMenuButton: classNames.addFilterMenuButton,
               addFilterMenuItem: classNames.addFilterMenuItem,
             }}
+            disableAnimation={disableAnimation}
+            portalContainer={portalContainer}
           />
           <FilterModal
             classNames={{
@@ -196,6 +212,9 @@ const Filter = ({
               footer: classNames.filterModalFooter,
               header: classNames.filterModalHeader,
             }}
+            disableAnimation={disableAnimation}
+            portalContainer={portalContainer}
+            remoteFormId={formName}
           />
         </FiltersContextProvider>
       </Form>

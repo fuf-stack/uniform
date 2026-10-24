@@ -3,12 +3,12 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { FaVolumeDown, FaVolumeUp } from 'react-icons/fa';
 
 import { action } from 'storybook/actions';
-import { expect, userEvent, waitFor, within } from 'storybook/test';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
-import { SubmitButton } from '@fuf-stack/uniform';
 import { number, veto } from '@fuf-stack/veto';
 
-import { Form } from '../Form';
+import Form from '../Form';
+import SubmitButton from '../SubmitButton';
 import Slider from './Slider';
 
 const meta: Meta<typeof Slider> = {
@@ -18,7 +18,7 @@ const meta: Meta<typeof Slider> = {
     (Story, { parameters }) => {
       return (
         <Form
-          className="min-w-60"
+          className={{ form: 'min-w-60' }}
           onSubmit={action('onSubmit')}
           {...(parameters?.formProps ?? {})}
         >
@@ -55,6 +55,18 @@ export const WithInitialValue: Story = {
   args: {
     name: 'sliderField',
     label: 'Brightness',
+  },
+};
+
+export const AllSizes: Story = {
+  render: () => {
+    return (
+      <div className="flex flex-col gap-8">
+        <Slider label="Small Size" name="smallSlider" size="sm" />
+        <Slider label="Medium Size" name="mediumSlider" size="md" />
+        <Slider label="Large Size" name="largeSlider" size="lg" />
+      </div>
+    );
   },
 };
 
@@ -169,53 +181,50 @@ export const WithSteps: Story = {
   },
 };
 
-export const AllSizes: Story = {
-  render: () => {
-    return (
-      <div className="flex flex-col gap-8">
-        <Slider label="Small Size" name="smallSlider" size="sm" />
-        <Slider label="Medium Size" name="mediumSlider" size="md" />
-        <Slider label="Large Size" name="largeSlider" size="lg" />
-      </div>
-    );
+export const WithValueTransform: Story = {
+  parameters: {
+    formProps: {
+      initialValues: { sliderField: 0.5 },
+      onSubmit: fn(),
+      validation: veto({ sliderField: number().min(0).max(1) }),
+    },
   },
-};
-
-/**
- * Edge case: Required slider should NOT show validation errors on initial render,
- * but SHOULD show them after being touched (e.g., tabbing through without changing value).
- * This tests that the slider correctly handles blur events only after user interaction,
- * preventing premature touched state during initialization.
- */
-export const EdgeCaseRequiredTouchedViaTab: Story = {
-  parameters: { formProps: { validation: requiredValidation } },
   args: {
-    label: 'Required Slider (Tab Test)',
     name: 'sliderField',
+    label: 'Volume (%)',
+    step: 10,
+    transform: {
+      toDisplayValue: (value) => {
+        return Number(value) * 100;
+      },
+      toFormValue: (value) => {
+        return value / 100;
+      },
+    },
   },
-  play: async ({ canvasElement }) => {
+  play: async ({ canvasElement, parameters }) => {
     const canvas = within(canvasElement);
+    const { onSubmit } = parameters.formProps;
+    onSubmit.mockClear();
+    const thumb = canvas
+      .getByTestId('sliderfield')
+      .querySelector('[data-slot="thumb"]');
+    if (!thumb) {
+      throw new Error('Slider thumb not found');
+    }
 
-    // // Initially, no error should be visible (field not touched yet)
-    // const errorElement = canvas.getByTestId('sliderfield_error');
-    // expect(errorElement).not.toBeVisible();
+    // Stored fraction is displayed as a percentage.
+    const input = canvasElement.querySelector('input[name="sliderField"]');
+    await expect(input).toHaveValue('50');
+    await userEvent.click(thumb);
+    await userEvent.keyboard('{ArrowUp}');
+    await expect(input).toHaveValue('60');
 
-    // Simulate tabbing to the slider
-    await userEvent.tab();
-
-    // Wait for the 100ms delay that prevents premature blur during initialization
-    await new Promise((resolve) => {
-      setTimeout(resolve, 150);
-    });
-
-    // Tab away from the slider
-    await userEvent.tab();
-
-    // After tabbing away, validation error should appear
+    // Submission and validation receive the fraction, not the percentage.
+    await userEvent.click(canvas.getByRole('button', { name: /submit/i }));
     await waitFor(() => {
-      const errorElement = canvas.getByTestId('sliderfield_error');
-      expect(errorElement).not.toBeEmptyDOMElement();
-      expect(errorElement).toHaveTextContent('Field is required');
+      expect(onSubmit).toHaveBeenCalled();
+      expect(onSubmit.mock.calls[0][0]).toEqual({ sliderField: 0.6 });
     });
   },
 };

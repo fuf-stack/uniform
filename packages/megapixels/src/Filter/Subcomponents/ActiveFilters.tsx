@@ -1,4 +1,4 @@
-import Label from '@fuf-stack/pixels/Label';
+import { Label } from '@fuf-stack/pixels/Label';
 
 import { useFilters } from './FiltersContext';
 
@@ -35,18 +35,18 @@ const ActiveFilters = ({ className = undefined }: ActiveFiltersProps) => {
           <button
             key={name}
             aria-label={`Open ${name} filter`}
-            type="button"
             onClick={() => {
               showFilterModal(name);
             }}
+            type="button"
           >
             <Label
               className={className}
               color={hasError(name) ? 'danger' : 'primary'}
-              variant="flat"
               onClose={() => {
                 removeFilter(name);
               }}
+              variant="flat"
             >
               {instance.icon}
               <DisplayComponent config={instance.config} value={value} />

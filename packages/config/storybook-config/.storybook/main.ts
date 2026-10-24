@@ -1,14 +1,16 @@
 import type { StorybookConfig } from '../main';
 
-// eslint-disable-next-line import-x/no-rename-default
-import sharedConfig from '../main';
+// @ts-expect-error fixes storybook error: One or more extensionless imports detected
+// eslint-disable-next-line import-x/extensions
+import sharedConfig from '../main.ts';
 
 const config: StorybookConfig = {
   ...sharedConfig,
   stories: [
-    '../../../megapixels/src/**/*.stories.@(ts|tsx)',
-    '../../../pixels/src/**/*.stories.@(ts|tsx)',
-    '../../../uniform/src/**/*.stories.@(ts|tsx)',
+    '../../../atelier/src/**/*.stories.tsx',
+    '../../../megapixels/src/**/*.stories.tsx',
+    '../../../pixels/src/**/*.stories.tsx',
+    '../../../uniform/src/**/*.stories.tsx',
   ],
 };
 

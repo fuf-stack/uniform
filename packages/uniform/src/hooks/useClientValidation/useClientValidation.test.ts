@@ -43,6 +43,27 @@ interface TestData {
   existingUsernames: string[];
 }
 
+const getObjectShape = (schema: unknown): Record<string, unknown> => {
+  if (
+    !schema ||
+    typeof schema !== 'object' ||
+    !('shape' in schema) ||
+    !schema.shape ||
+    typeof schema.shape !== 'object'
+  ) {
+    throw new TypeError('Expected object-like schema with shape');
+  }
+  return schema.shape as Record<string, unknown>;
+};
+
+interface OptionalArrayLike {
+  isOptional: () => boolean;
+  unwrap: () => {
+    type?: string;
+    element?: unknown;
+  };
+}
+
 describe('useClientValidation', () => {
   beforeEach(() => {
     vi.clearAllMocks();
@@ -140,7 +161,7 @@ describe('useClientValidation', () => {
         ({ data }: { data: TestData | null }) =>
           useClientValidation(data, schemaFactory),
         {
-          initialProps: { data: initialData as TestData | null },
+          initialProps: { data: initialData },
         },
       );
 
@@ -400,13 +421,12 @@ describe('clientValidationSchemaByName helper', () => {
       const fieldSchema = string().min(3);
       const result = clientValidationSchemaByName('username', fieldSchema);
 
-      // Verify it's an object schema by checking the type (zod v4 uses .type)
+      // Verify it's object-like by checking public schema surface + behavior.
       expect(result).toBeDefined();
-      expect(result.type).toBe('object');
+      const shape = getObjectShape(result);
+      expect(shape).toBeDefined();
 
       // Verify it contains the field with the correct schema
-      // In zod v4, shape is a property in .def, not a method
-      const shape = result.def?.shape ?? result._def?.shape?.();
       expect(shape.username).toBe(fieldSchema);
     });
 
@@ -663,18 +683,24 @@ describe('clientValidationSchemaByName helper', () => {
       );
 
       // The schema should be: objectLoose({ tags: array(string()).optional() })
-      // Verify it's an object schema (zod v4 uses .type)
-      expect(schema.type).toBe('object');
+      // Not: objectLoose({ tags: array(objectLoose({ __FLAT__: string() })).optional() })
+      const shape = getObjectShape(schema);
+      expect(shape).toBeDefined();
 
-      // Verify the schema validates flat arrays correctly
-      // Valid array of strings
-      expect(schema.safeParse({ tags: ['valid'] }).success).toBe(true);
+      // Get the tags field schema
+      expect(shape.tags).toBeDefined();
 
-      // Empty array should pass
-      expect(schema.safeParse({ tags: [] }).success).toBe(true);
+      // It should be an optional array
+      const tagsSchema = shape.tags as OptionalArrayLike;
+      expect(tagsSchema.isOptional()).toBe(true);
 
-      // Missing array should pass (optional)
-      expect(schema.safeParse({}).success).toBe(true);
+      // The inner type should be an array
+      const innerArray = tagsSchema.unwrap();
+      expect(innerArray.type).toBe('array');
+
+      // The array element should be the string schema directly, not wrapped in an object
+      const arrayElement = innerArray.element;
+      expect(arrayElement).toBe(fieldSchema);
     });
 
     it('should allow missing flat arrays (optional)', () => {
@@ -757,12 +783,17 @@ describe('clientValidationSchemaByName helper', () => {
 
       renderHook(() => useClientValidation(data, schemaFactory));
 
+      const receivedSchema = mockSetClientValidationSchema.mock
+        .calls[0]?.[1] as
+        | ReturnType<typeof clientValidationSchemaByName>
+        | undefined;
+
       expect(mockSetClientValidationSchema).toHaveBeenCalledWith(
         'test-id',
-        expect.objectContaining({
-          type: 'object',
-        }),
+        expect.anything(),
       );
+      expect(receivedSchema).toBeDefined();
+      expect(receivedSchema && getObjectShape(receivedSchema)).toBeDefined();
     });
 
     it('should work with nested paths in useClientValidation', () => {
@@ -787,9 +818,9 @@ describe('clientValidationSchemaByName helper', () => {
       const stringSchema = clientValidationSchemaByName('username', string());
       const numberSchema = clientValidationSchemaByName('age', string());
 
-      // Verify schemas maintain their structure (zod v4 uses .type)
-      expect(stringSchema.type).toBe('object');
-      expect(numberSchema.type).toBe('object');
+      // Verify schemas maintain object-like behavior
+      expect(getObjectShape(stringSchema)).toBeDefined();
+      expect(getObjectShape(numberSchema)).toBeDefined();
     });
   });
 });

@@ -1,7 +1,7 @@
 import Select from './Select';
 
-export type { SelectProps } from './Select';
+export type { SelectProps, SelectOption } from './Select';
 
-export { Select };
+export { selectVariants } from './Select';
 
 export default Select;

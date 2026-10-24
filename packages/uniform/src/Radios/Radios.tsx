@@ -8,22 +8,30 @@ import {
 
 import { slugify, tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
 
+import { createOptionValueConverter } from '../helpers';
 import { useUniformField } from '../hooks/useUniformField';
 
 export const radiosVariants = tv({
   slots: {
-    // Needs group for group-data condition
-    base: 'group gap-0',
+    base: [
+      // Needs group for group-data condition.
+      'group',
+      // Match shared field wrapper layout.
+      'flex w-full flex-col',
+      // Keep spacing between label/group consistent.
+      'gap-y-1.5',
+    ],
+    errorMessage: '',
     itemBase: '',
     itemControl: 'bg-focus group-data-[invalid=true]:bg-danger',
     itemDescription: '',
     itemLabel: 'text-sm',
-    itemLabelWrapper: '',
+    itemLabelWrapper: 'ml-2',
     itemWrapper:
       'group-data-[invalid=true]:border-danger! [&:not(group-data-[invalid="true"]):not(group-data-[selected="false"])]:border-focus',
     // e.g.: https://github.com/heroui-inc/heroui/blob/main/packages/core/theme/src/components/select.ts
     label:
-      'mb-2 inline-flex text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:text-danger',
+      'mb-2 inline-flex cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:text-danger',
     wrapper: '',
   },
 });
@@ -34,19 +42,39 @@ type ClassName = TVClassName<typeof radiosVariants>;
 export interface RadioOption {
   /** disables the option */
   disabled?: boolean;
-  /** option label */
-  label?: ReactNode;
   /** option icon */
   icon?: ReactNode;
+  /** option label */
+  label?: ReactNode;
+  /** Arbitrary option metadata for custom render logic. */
+  meta?: Record<string, unknown>;
   /** HTML data-testid attribute of the option */
   testId?: string;
   /** option value */
-  value: string;
+  value: string | number;
+}
+
+export interface RadioRenderedOption {
+  /** Option data as provided in `options` */
+  option: RadioOption;
+  /** Prebuilt radio element so consumers don't need to recreate HeroRadio */
+  radio: ReactNode;
+  /** Render-state flags for this option */
+  state: {
+    /** Whether this option is currently selected */
+    selected: boolean;
+    /** Whether this option is disabled */
+    disabled: boolean;
+    /** Whether the radio group is invalid */
+    invalid: boolean;
+  };
 }
 
 export interface RadiosProps extends VariantProps {
   /** Custom aria-label for accessibility. If not provided, falls back to field name when no visible label exists */
   ariaLabel?: string;
+  /** Optional child render function for custom full-list layout rendering. */
+  children?: (options: RadioRenderedOption[]) => ReactNode;
   /** CSS class name */
   className?: ClassName;
   /** Determines if the Buttons are disabled or not. */
@@ -67,6 +95,7 @@ export interface RadiosProps extends VariantProps {
  * Radios component based on [HeroUI RadioGroup](https://www.heroui.com//docs/components/radio-group)
  */
 const Radios = ({
+  children = undefined,
   className = undefined,
   inline = false,
   name,
@@ -77,16 +106,18 @@ const Radios = ({
     ariaLabel,
     disabled,
     errorMessage,
-    field: { onBlur, onChange, ref },
+    field: { onBlur, onChange, ref, value },
     invalid,
     label,
     required,
-    defaultValue,
     testId,
   } = useUniformField({
     name,
     ...uniformFieldProps,
   });
+
+  // Create converter to preserve number types for option values
+  const { convertToOriginalType } = createOptionValueConverter(options);
 
   // classNames from slots
   const variants = radiosVariants();
@@ -101,6 +132,39 @@ const Radios = ({
     wrapper: classNames.itemWrapper,
   };
 
+  const selectedValue = value != null ? String(value) : '';
+
+  // Build option descriptors once so default and custom layouts share the same radio nodes/state.
+  const renderedOptions = options.map((option) => {
+    const optionTestId = slugify(
+      `${testId}_option_${option.testId ?? option.value}`,
+      { replaceDots: true },
+    );
+    const optionIsDisabled = !!disabled || !!option.disabled;
+    const optionValue = String(option.value);
+    const radio = (
+      <HeroRadio
+        key={optionValue}
+        classNames={itemClassNames}
+        data-testid={optionTestId}
+        isDisabled={optionIsDisabled}
+        value={optionValue}
+      >
+        {option.label ?? option.value}
+      </HeroRadio>
+    );
+
+    return {
+      option,
+      radio,
+      state: {
+        selected: selectedValue === optionValue,
+        disabled: optionIsDisabled,
+        invalid: !!invalid,
+      },
+    };
+  });
+
   return (
     <HeroRadioGroup
       ref={ref}
@@ -111,7 +175,6 @@ const Radios = ({
       data-invalid={invalid}
       data-required={required}
       data-testid={testId}
-      defaultValue={defaultValue as string | undefined}
       errorMessage={errorMessage}
       isDisabled={disabled}
       isInvalid={invalid}
@@ -119,29 +182,18 @@ const Radios = ({
       label={label ? <legend>{label}</legend> : null}
       name={name}
       onBlur={onBlur}
+      onValueChange={(newValue) => {
+        onChange(convertToOriginalType(newValue));
+      }}
       orientation={inline ? 'horizontal' : 'vertical'}
+      value={selectedValue}
     >
-      {options.map((option) => {
-        if ('value' in option) {
-          const optionTestId = slugify(
-            `${testId}_option_${option.testId ?? option.value}`,
-            { replaceDots: true },
-          );
-          return (
-            <HeroRadio
-              key={option.value}
-              classNames={itemClassNames}
-              data-testid={optionTestId}
-              isDisabled={!!disabled || option.disabled}
-              onChange={onChange}
-              value={option.value}
-            >
-              {option.label ?? option.value}
-            </HeroRadio>
-          );
-        }
-        return null;
-      })}
+      {/* Child render function can fully control list layout; fallback keeps default rendering. */}
+      {children
+        ? children(renderedOptions)
+        : renderedOptions.map(({ radio }) => {
+            return radio;
+          })}
     </HeroRadioGroup>
   );
 };

@@ -1,30 +1,58 @@
 import type { z } from 'zod';
-import type { VetoRawShape, VetoSchema, VetoTypeAny } from './types';
+import type { VetoTypeAny } from './types';
 
 /**
- * This TypeScript type alias vInfer defines a conditional type that
- * takes in a generic type parameter T, which can either be a schema
- * definition from the VetoSchema interface or a schema
- * instance from the VetoTypeAny interface.
+ * Infers one property value in a raw veto shape.
  *
- * If T is a schema definition from VetoSchema, it is
- * converted into a ZodObject and its inferred type is returned
- * using the z.infer method. If T is already a VetoTypeAny schema
- * instance, then the inferred type is simply returned
- * using the z.infer method.
+ * - schema nodes (`VetoTypeAny`) are inferred via `z.infer`
+ * - nested raw objects recurse into {@link InferRawShape}
+ * - non-schema leaf values resolve to `never`
+ */
+type InferRawValue<T> = T extends VetoTypeAny
+  ? z.infer<T>
+  : T extends Record<string, unknown>
+    ? InferRawShape<T>
+    : never;
+
+/**
+ * Flattens mapped/intersection helper types for cleaner IDE display and
+ * more stable type comparisons in tests.
+ */
+type Simplify<T> = { [K in keyof T]: T[K] };
+
+/**
+ * Infers a full raw veto shape object, preserving optional properties.
  *
- * The resulting inferred type returned by vInfer is a
- * TypeScript type that represents the expected shape of data
- * validated by the given schema. This ensures type safety when
- * working with veto data.
+ * Keys whose inferred value includes `undefined` are emitted as optional;
+ * all other keys are emitted as required.
+ */
+type InferRawShape<T extends Record<string, unknown>> = Simplify<
+  {
+    [K in keyof T as undefined extends InferRawValue<T[K]>
+      ? never
+      : K]: InferRawValue<T[K]>;
+  } & {
+    [K in keyof T as undefined extends InferRawValue<T[K]>
+      ? K
+      : never]?: InferRawValue<T[K]>;
+  }
+>;
+
+/**
+ * This TypeScript type alias `vInfer` defines a conditional type that takes
+ * a generic type parameter `T` and infers the validated output shape.
+ *
+ * Supported inputs:
+ * - a schema instance (`VetoTypeAny`)
+ * - a raw veto shape (record of schemas / nested raw shapes)
+ *
+ * The resulting type represents the expected data shape after validation,
+ * preserving type safety for veto consumers.
  *
  * @see https://zod.dev/?id=type-inference
  */
-export type vInfer<T extends VetoSchema> =
-  // wrap raw shapes with ZodObject
-  T extends VetoRawShape
-    ? z.infer<z.ZodObject<T>>
-    : // just infer type when already veto object
-      T extends VetoTypeAny
-      ? z.infer<T>
-      : never;
+export type vInfer<T> = T extends VetoTypeAny
+  ? z.infer<T>
+  : T extends Record<string, unknown>
+    ? InferRawShape<T>
+    : never;

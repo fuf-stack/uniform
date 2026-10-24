@@ -1,3 +1,4 @@
+/* eslint-disable max-classes-per-file */
 /* eslint-disable import-x/prefer-default-export */
 /* eslint-disable import-x/no-extraneous-dependencies */
 
@@ -6,6 +7,145 @@ import '@testing-library/jest-dom/vitest';
 import { beforeEach, vi } from 'vitest';
 
 import { cleanup } from '@testing-library/react';
+
+// Workaround: Storybook >=10.2.10 + jsdom 27 PointerEvent/MouseEvent crash
+//
+// Storybook's bundled @testing-library/user-event clones events by passing the
+// original event object as the init dict: `new event.constructor(type, event)`.
+// jsdom 27 rejects this because `event.view` is a Window reference from a
+// different internal realm, failing its strict type check with:
+//   "Failed to construct 'PointerEvent': member view is not of type Window."
+//
+// We patch both constructors to extract only the plain init properties and drop
+// `view`. This can be removed once Storybook or jsdom fixes the incompatibility.
+//
+// TODO: LATER remove the block below and run the tests. If they pass, delete it.
+// Or keep the block — it will log a notice when the fix lands upstream.
+if (globalThis.window !== undefined) {
+  try {
+    const probe = new MouseEvent('click', { view: globalThis.window });
+    new PointerEvent('click', probe);
+    console.info(
+      '[FUF][vitest.setup] jsdom event cloning works natively now — ' +
+        'the MouseEvent/PointerEvent workaround below can be removed.',
+    );
+  } catch {
+    // still broken — keep the workaround
+  }
+  const eventLikeToMouseInit = (
+    init: MouseEventInit | Event | undefined,
+  ): MouseEventInit => {
+    if (!(init instanceof Event)) {
+      return init ?? {};
+    }
+    const event = init as MouseEvent;
+    return {
+      bubbles: event.bubbles,
+      cancelable: event.cancelable,
+      composed: event.composed,
+      detail: (event as UIEvent).detail,
+      screenX: event.screenX,
+      screenY: event.screenY,
+      clientX: event.clientX,
+      clientY: event.clientY,
+      ctrlKey: event.ctrlKey,
+      shiftKey: event.shiftKey,
+      altKey: event.altKey,
+      metaKey: event.metaKey,
+      button: event.button,
+      buttons: event.buttons,
+      relatedTarget: event.relatedTarget,
+      view: undefined,
+    };
+  };
+
+  const NativeMouseEvent = globalThis.window.MouseEvent;
+  class PatchedMouseEvent extends NativeMouseEvent {
+    constructor(type: string, init: MouseEventInit | Event = {}) {
+      super(type, eventLikeToMouseInit(init));
+    }
+  }
+  Object.defineProperty(globalThis.window, 'MouseEvent', {
+    configurable: true,
+    writable: true,
+    value: PatchedMouseEvent,
+  });
+  Object.defineProperty(globalThis, 'MouseEvent', {
+    configurable: true,
+    writable: true,
+    value: PatchedMouseEvent,
+  });
+
+  if (globalThis.window.PointerEvent !== undefined) {
+    const NativePointerEvent = globalThis.window.PointerEvent;
+    class PatchedPointerEvent extends NativePointerEvent {
+      constructor(type: string, init: PointerEventInit | Event = {}) {
+        const mouseInit = eventLikeToMouseInit(init);
+        if (!(init instanceof Event)) {
+          super(type, { ...init, view: undefined });
+          return;
+        }
+        const event = init as PointerEvent;
+        super(type, {
+          ...mouseInit,
+          pointerId: event.pointerId,
+          width: event.width,
+          height: event.height,
+          pressure: event.pressure,
+          tangentialPressure: event.tangentialPressure,
+          tiltX: event.tiltX,
+          tiltY: event.tiltY,
+          twist: event.twist,
+          pointerType: event.pointerType,
+          isPrimary: event.isPrimary,
+          view: undefined,
+        });
+      }
+    }
+    Object.defineProperty(globalThis.window, 'PointerEvent', {
+      configurable: true,
+      writable: true,
+      value: PatchedPointerEvent,
+    });
+    Object.defineProperty(globalThis, 'PointerEvent', {
+      configurable: true,
+      writable: true,
+      value: PatchedPointerEvent,
+    });
+  }
+}
+
+// HeroUI Tabs (and other UI primitives) rely on ResizeObserver in passive effects.
+// In Vitest's jsdom environment, ResizeObserver may be missing depending on jsdom
+// version/runtime, which causes story snapshot tests to fail with:
+//   "ReferenceError: ResizeObserver is not defined"
+//
+// This test-only polyfill provides the minimum observer surface used by components
+// under test. It intentionally performs no real resize tracking because snapshots
+// only need components to mount without throwing.
+//
+// Remove this once our test environment guarantees a native ResizeObserver.
+if (globalThis.ResizeObserver === undefined) {
+  class ResizeObserverMock implements ResizeObserver {
+    // no-op: tests do not assert resize callbacks today
+    // eslint-disable-next-line class-methods-use-this
+    observe() {}
+
+    // no-op: included for interface completeness
+    // eslint-disable-next-line class-methods-use-this
+    unobserve() {}
+
+    // no-op: included for interface completeness
+    // eslint-disable-next-line class-methods-use-this
+    disconnect() {}
+  }
+
+  Object.defineProperty(globalThis, 'ResizeObserver', {
+    configurable: true,
+    writable: true,
+    value: ResizeObserverMock,
+  });
+}
 
 /**
  * Test log suppression patterns.

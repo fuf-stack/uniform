@@ -22,10 +22,10 @@ interface FiltersContextValue {
   closeFilterModal: () => void;
   /** Build fully-qualified form field path for a filter name */
   getFilterFormFieldName: (name: string) => string;
-  /** Get current form value for a given filter name */
-  getFilterValueByName: (name: string) => unknown;
   /** Get filter instance by name */
   getFilterInstanceByName: (name: string) => FilterInstance<unknown, unknown>;
+  /** Get current form value for a given filter name */
+  getFilterValueByName: (name: string) => unknown;
   /** Validation helper for a specific filter field. */
   hasError: (name: string) => boolean;
   /** Name of the current filter that has its modal open */
@@ -192,7 +192,10 @@ export const FiltersContextProvider = ({
   const activeFilters = useMemo(() => {
     return config
       .filter((f) => {
-        return Object.hasOwn(filterValue ?? {}, f.name);
+        // Keep compatibility with the shared Node 16.0 lint target, which
+        // predates Object.hasOwn.
+        // eslint-disable-next-line prefer-object-has-own
+        return Object.prototype.hasOwnProperty.call(filterValue ?? {}, f.name);
       })
       .map((f) => {
         return f.name;
@@ -208,7 +211,8 @@ export const FiltersContextProvider = ({
   const unusedFilters = useMemo(() => {
     return config
       .filter((f) => {
-        return !Object.hasOwn(filterValue ?? {}, f.name);
+        // eslint-disable-next-line prefer-object-has-own
+        return !Object.prototype.hasOwnProperty.call(filterValue ?? {}, f.name);
       })
       .map((f) => {
         return f.name;

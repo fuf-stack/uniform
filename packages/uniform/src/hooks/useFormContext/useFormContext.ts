@@ -20,16 +20,8 @@ export const checkFieldIsRequired = (
     path[path.length - 1] === flatArrayKey ? path.slice(0, -1) : path;
 
   const checkRequired = (schema: any) => {
-    // Helper to check if type includes 'array'
-    // Handles: "array", ["array", "null"], and anyOf unions containing array
-    const isArraySchema =
-      schema.type === 'array' ||
-      (Array.isArray(schema.type) && schema.type.includes('array')) ||
-      (Array.isArray(schema.anyOf) &&
-        schema.anyOf.some((opt: any) => opt.type === 'array'));
-
     // arrays ...
-    if (isArraySchema) {
+    if (schema.type === 'array') {
       // ... if array is optional or nullable it is not required
       if (schema.isOptional || schema.isNullable) {
         return false;
@@ -66,7 +58,7 @@ const getValidationErrorsByName = (
   const keys = name.split('.').filter((k) => {
     return k !== flatArrayKey;
   });
-  let current: unknown = errors as unknown;
+  let current: unknown = errors;
   keys.forEach((key) => {
     if (current && typeof current === 'object') {
       current = (current as Record<string, unknown>)[key];
@@ -99,11 +91,23 @@ export const useFormContext = <
     getValues: getValuesOrig,
     watch: watchOrig,
     subscribe: subscribeOrig,
+    reset: resetOrig,
     // the rest of the methods pass through unchanged
     ...otherMethods
   } = useHookFormContext<TFieldValues, TContext, TTransformedValues>();
 
   const uniformContext = useContext(UniformContext);
+
+  /**
+   * Wrap react-hook-form's `reset` so the uniform context is notified about
+   * programmatic resets. Field components (e.g. FieldArray) use this signal to
+   * normalize their state on reset instead of inferring it from field contents.
+   */
+  const notifyReset = uniformContext?.formReset?.notify;
+  const reset = ((...args: Parameters<typeof resetOrig>) => {
+    resetOrig(...args);
+    notifyReset?.();
+  }) as typeof resetOrig;
 
   /**
    * Updated getFieldState method which returns:
@@ -132,7 +136,7 @@ export const useFormContext = <
     const error = getValidationErrorsByName(
       uniformContext?.validation.errors ?? {},
       name,
-    ) as unknown as FieldError[] | undefined;
+    );
 
     // Get everything but the error from the original field state
     const fieldState = getFieldStateOrig(name, formState);
@@ -198,6 +202,7 @@ export const useFormContext = <
     formState,
     getFieldState,
     getValues,
+    reset,
     subscribe,
     watch,
   };

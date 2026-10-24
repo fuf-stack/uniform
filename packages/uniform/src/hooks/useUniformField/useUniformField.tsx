@@ -4,53 +4,33 @@ import type { InputValueTransform } from '../useInputValueTransform/useInputValu
 
 import React from 'react';
 
-import { isTestEnvironment } from '@fuf-stack/pixel-utils';
 import { useDebounce } from '@fuf-stack/pixels';
 
-import { FieldCopyTestIdButton } from '../../partials/FieldCopyTestIdButton';
-import { FieldValidationError } from '../../partials/FieldValidationError';
+import { useSensitiveField } from '../../Form/subcomponents/SensitiveFields';
+import { flattenFieldErrors, isValueEmpty } from '../../helpers';
+import FieldCopyTestIdButton from '../../partials/FieldCopyTestIdButton';
+import FieldValidationError from '../../partials/FieldValidationError';
 import { useController } from '../useController/useController';
 import { useFormContext } from '../useFormContext/useFormContext';
 import { useInput } from '../useInput/useInput';
 import { useInputValueTransform } from '../useInputValueTransform/useInputValueTransform';
 
-/**
- * Debounce invalid state changes to prevent UI flicker on rapid changes.
- *
- * Primary purpose: Reduce UI flicker when validation state changes rapidly
- * (e.g., during fast typing). Without debouncing, error messages would flash
- * in/out rapidly, creating a poor UX.
- *
- * Secondary benefit: When animations are enabled (default), gives time for
- * enter/exit animations to complete smoothly.
- *
- * Behavior:
- * - Debounces both true → false and false → true transitions by `delayMs`
- * - Disabled in test environments for immediate snapshots
- */
-const useDebouncedInvalid = (invalid: boolean, delayMs: number) => {
-  const debouncedInvalid = useDebounce(invalid, delayMs);
-
-  // Disable debouncing in test environments for immediate snapshots
-  if (isTestEnvironment()) {
-    return invalid;
-  }
-
-  return debouncedInvalid;
-};
-
 export interface UseUniformFieldParams<
   TFieldValues extends FieldValues = FieldValues,
   TDisplay = unknown,
 > {
-  /** Form field name */
-  name: Path<TFieldValues> & string;
   /** Custom aria-label for accessibility. If not provided, falls back to field name when no visible label exists */
   ariaLabel?: string;
   /** Disable the field */
   disabled?: boolean;
+  /** Normalize nested RHF errors into a flat array for array-like fields */
+  isArrayValue?: boolean;
   /** Optional label content */
   label?: ReactNode;
+  /** Form field name */
+  name: Path<TFieldValues> & string;
+  /** Redacts the field value from Uniform debug output */
+  sensitive?: boolean;
   /** Optional explicit test id used to build stable test ids */
   testId?: string;
   /** Optional value transformation between form and display values */
@@ -72,7 +52,7 @@ export interface UseUniformFieldReturn<
   defaultValue: unknown;
   /** Whether the field is currently disabled (from RHF) */
   disabled: boolean | undefined;
-  /** Validation error(s) for the field */
+  /** Validation errors from form state; flattened only when `isArrayValue` is enabled */
   error: FieldError[] | undefined;
   /** Pre-built errorMessage node to plug into components */
   errorMessage: ReactNode | null;
@@ -124,7 +104,7 @@ export interface UseUniformFieldReturn<
  *   • Shows errors when field is dirty OR touched OR form has been submitted
  *   • Prevents showing errors on pristine/untouched fields for better UX
  *   • Works well for all field types (text inputs, checkboxes, radios, arrays)
- * - Prebuilt `errorMessage` React node using `FieldValidationError`
+ * - Prebuilt `errorMessage` React node (with optional array-error normalization via `isArrayValue`)
  * - Computed `label` node which appends a `FieldCopyTestIdButton` in
  *   `debug-testids` mode
  * - `defaultValue` for uncontrolled defaults and all usual field handlers
@@ -142,11 +122,16 @@ export const useUniformField = <
     name,
     ariaLabel: customAriaLabel,
     disabled = false,
+    isArrayValue = false,
+    sensitive = false,
     testId: explicitTestId,
     label,
     type,
     transform,
   } = params;
+
+  // Use the declared type, so revealing a password never disables redaction.
+  useSensitiveField(name, type === 'password' || sensitive);
 
   const {
     control,
@@ -158,7 +143,7 @@ export const useUniformField = <
   } = useFormContext<TFieldValues>();
 
   const {
-    error,
+    error: rawError,
     invalid: rawInvalid,
     isDirty,
     isTouched,
@@ -194,7 +179,7 @@ export const useUniformField = <
       (eventOrValue as React.ChangeEvent<HTMLInputElement>)?.target?.value ??
       eventOrValue;
     const formValue = toFormValue(displayValue as TDisplay);
-    fieldOnChange(formValue as typeof fieldValue);
+    fieldOnChange(formValue);
   };
 
   const defaultValue = (getValues() as Record<string, unknown>)?.[
@@ -205,22 +190,33 @@ export const useUniformField = <
    * Determine when to show the invalid state to the user.
    *
    * Show errors when the field is invalid AND any of these conditions are met:
-   *   - Field is dirty (value changed from initial) - good for checkboxes/radios/arrays
+   *   - Field has a user-entered value (show validation errors like format/length while typing)
    *   - Field is touched (focused and blurred) - good for text inputs
    *   - Form has been submitted - shows all errors after submit attempt
    *
-   * This prevents showing errors on pristine/untouched fields for better UX.
+   * Note: `hasValue` is gated by `isDirty` so invalid initial values do not
+   * show errors just because resolver-backed validation state is available.
+   * Newly added empty array elements can be dirty, but stay hidden until blur
+   * because they do not have a value yet.
+   *
+   * This prevents showing errors on pristine/untouched/empty fields for better UX.
    * Examples:
    *   - Text input: User loads form with empty required field → no error shown yet
-   *   - Text input: User focuses and blurs → error shows (via isTouched)
-   *   - Checkbox group: User clicks first checkbox → error shows immediately (via isDirty)
+   *   - Text input: User types invalid content → error shows immediately (has value)
+   *   - Text input: User focuses and blurs without typing → error shows (via isTouched)
+   *   - Checkbox/radio: User selects option → error shows immediately (has value)
+   *   - Field array: User adds element → no error yet; after blur → error shows
    *   - Any field: User submits form → all errors show (via submitCount)
    *
-   * The entire condition is debounced to prevent flickering and allow smooth animations
-   * when any of the states (invalid, isDirty, isTouched, submitCount) change.
+   * The entire condition is debounced to prevent flickering and allow smooth animations.
    */
-  const showInvalid = rawInvalid && (isDirty || isTouched || submitCount > 0);
-  const invalid = useDebouncedInvalid(showInvalid, 200);
+
+  // isValueEmpty handles marker strings, flat array wrappers, empty arrays, and empty objects
+  const hasValue = !isValueEmpty(fieldValue);
+  const showInvalid =
+    rawInvalid && ((isDirty && hasValue) || isTouched || submitCount > 0);
+  // Debounce to prevent flickering during rapid state changes
+  const invalid = useDebounce(showInvalid, 200);
 
   // Build a label node that:
   // - shows the provided label (unless explicitly set to false)
@@ -237,9 +233,17 @@ export const useUniformField = <
       </>
     ) : null;
 
+  // Array-like fields can receive nested RHF error objects (index keys, _errors).
+  // Opt-in flattening keeps backward compatibility for components that rely on
+  // object-shaped errors (e.g. FieldCard/FieldArray).
+  const error = isArrayValue ? flattenFieldErrors(rawError) : rawError;
+  const normalizedError = flattenFieldErrors(rawError);
+
   // Ready-to-render error message; consumers can drop this into their
   // component `errorMessage` prop without repeating mapping/markup
-  const errorMessage = <FieldValidationError error={error} testId={testId} />;
+  const errorMessage = (
+    <FieldValidationError error={normalizedError} testId={testId} />
+  );
 
   // Generate standardized props for label, helper wrapper and error message
   // so consumers can spread them directly into UI components (e.g. HeroUI),

@@ -3,10 +3,10 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { action } from 'storybook/actions';
 import { expect, userEvent, waitFor, within } from 'storybook/test';
 
-import { SubmitButton } from '@fuf-stack/uniform';
 import { array, literal, string, veto } from '@fuf-stack/veto';
 
-import { Form } from '../Form';
+import Form from '../Form';
+import SubmitButton from '../SubmitButton';
 import Checkboxes from './Checkboxes';
 
 const meta: Meta<typeof Checkboxes> = {
@@ -16,7 +16,7 @@ const meta: Meta<typeof Checkboxes> = {
     (Story, { parameters }) => {
       return (
         <Form
-          className="min-w-60"
+          className={{ form: 'min-w-60' }}
           onSubmit={action('onSubmit')}
           {...(parameters?.formProps ?? {})}
         >
@@ -272,10 +272,10 @@ export const WithTransformSingleValue: Story = {
 };
 
 interface FoodData {
+  calories: number;
   id: string;
   name: string;
   score: number;
-  calories: number;
 }
 
 const foodData: Record<string, FoodData> = {
@@ -322,5 +322,63 @@ export const WithTransformComplexObjects: Story = {
         });
       },
     },
+  },
+};
+
+const customOptionsRenderingValidation = veto({
+  checkboxField: array(string()).min(1),
+});
+
+export const CustomOptionsRendering: Story = {
+  parameters: {
+    formProps: { validation: customOptionsRenderingValidation },
+  },
+  args: {
+    label: 'Pick your side quest',
+    name: 'checkboxField',
+    className: {
+      wrapper: 'rounded-lg border border-divider bg-content1',
+      optionBase: 'my-0 mx-2 w-full',
+    },
+    options: [
+      {
+        label: 'Treasure Hunt 🗺️',
+        labelSubline: 'Follow questionable map directions',
+        value: 'treasure-hunt',
+      },
+      {
+        label: 'Potion Brewing 🧪',
+        labelSubline: 'Probably safe at room temperature',
+        value: 'potion-brewing',
+      },
+      {
+        label: 'Dragon Negotiation 🐉',
+        labelSubline: 'Bring snacks and stay polite',
+        value: 'dragon-negotiation',
+      },
+    ],
+  },
+  render: (renderArgs) => {
+    return (
+      <Checkboxes {...renderArgs}>
+        {(options) => {
+          return (
+            <div className="divide-y divide-default-200">
+              {options.map(({ option, checkbox }) => {
+                return <div key={option.value}>{checkbox}</div>;
+              })}
+            </div>
+          );
+        }}
+      </Checkboxes>
+    );
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    await userEvent.click(canvas.getByText('Submit'));
+    await waitFor(() => {
+      expect(canvas.getByTestId('checkboxfield_error')).toBeVisible();
+    });
   },
 };

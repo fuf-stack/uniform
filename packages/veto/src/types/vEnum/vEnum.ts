@@ -1,6 +1,17 @@
 import { z } from 'zod';
 
-export const vEnum = z.enum;
+type VEnumValues = readonly [string, ...string[]];
+
+/**
+ * Creates a string enum schema from literal values.
+ *
+ * @example
+ * const schema = vEnum(['ONE', 'TWO'] as const);
+ * schema.parse('ONE');
+ */
+export const vEnum = <T extends VEnumValues>(values: T) => {
+  return z.enum(values);
+};
 
 export type VEnum = typeof vEnum;
-// VEnumSchema type removed - use ReturnType<typeof vEnum<T>> directly if needed
+export type VEnumSchema = ReturnType<VEnum>;

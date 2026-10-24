@@ -11,7 +11,10 @@ import { tv } from '@fuf-stack/pixel-utils';
 
 import LoadingSpinner from './subcomponents/LoadingSpinner';
 
-export const buttonVariants = tv({
+// TODO: `tv(...)` inference here triggers TS2742/TS2883 during declaration emit
+// (non-portable `tailwind-variants` type path). Keep this explicit annotation
+// until we have a portable `tv` return type strategy.
+export const buttonVariants: ReturnType<typeof tv> = tv({
   extend: heroButtonVariants,
   variants: {
     color: {
@@ -96,14 +99,19 @@ export interface ButtonProps extends VariantProps {
   className?: string;
   /** color of the button */
   color?: VariantProps['color'];
-  /** disables the button */
-  disabled?: boolean;
+  /** Slot name for styling/debugging hooks */
+  dataSlot?: string;
   /** disables all animations */
   disableAnimation?: boolean;
-  /** shows loading animation */
-  loading?: boolean;
+  /** disables the button */
+  disabled?: boolean;
+  /** associates the button with a form by the form's id (HTML `form` attribute),
+   * so the button can submit a form it is not a DOM descendant of */
+  form?: string;
   /** optional icon */
   icon?: ReactNode;
+  /** shows loading animation */
+  loading?: boolean;
   /** blur event handler */
   onBlur?: HeroButtonProps['onBlur'];
   /** click event handler */
@@ -134,9 +142,11 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       ariaLabel = undefined,
       children = undefined,
       className: _className = undefined,
+      dataSlot = undefined,
       color = 'default',
       disableAnimation = false,
       disabled = false,
+      form = undefined,
       icon = undefined,
       loading = false,
       onBlur = undefined,
@@ -161,14 +171,17 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       isIconOnly: !!(icon && !children),
       radius,
     });
+    const shouldDisableRipple = disableAnimation ? true : !ripple;
 
     return (
       <HeroButton
         ref={ref}
         aria-label={ariaLabel}
         className={className}
+        data-slot={dataSlot}
         data-testid={testId}
-        disableRipple={disableAnimation || !ripple}
+        disableRipple={shouldDisableRipple}
+        form={form}
         isDisabled={disabled}
         isLoading={loading}
         onBlur={onBlur}

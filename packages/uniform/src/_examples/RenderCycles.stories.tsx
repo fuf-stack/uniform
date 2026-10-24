@@ -3,10 +3,10 @@ import type { FieldValues } from 'react-hook-form';
 
 import { number, string, veto } from '@fuf-stack/veto';
 
-import { Form } from '../Form';
-import { Grid } from '../Grid';
-import { Input } from '../Input';
-import { SubmitButton } from '../SubmitButton';
+import Form from '../Form';
+import Grid from '../Grid';
+import Input from '../Input';
+import SubmitButton from '../SubmitButton';
 
 const meta: Meta<typeof Form> = {
   title: 'uniform/_examples/RenderCycles',
@@ -44,7 +44,7 @@ export const TwoInputsDebug: Story = {
         </p>
 
         <Form
-          className="max-w-md space-y-4"
+          className={{ form: 'max-w-md space-y-4' }}
           onSubmit={handleSubmit}
           validation={schema}
         >
@@ -93,7 +93,7 @@ export const MultipleFieldTypes: Story = {
         </p>
 
         <Form
-          className="max-w-md space-y-4"
+          className={{ form: 'max-w-md space-y-4' }}
           onSubmit={handleSubmit}
           validation={complexSchema}
         >
@@ -154,7 +154,7 @@ export const PerformanceComparison: Story = {
         </p>
 
         <Form
-          className="max-w-md space-y-4"
+          className={{ form: 'max-w-md space-y-4' }}
           onSubmit={handleSubmit}
           validation={manyFieldsSchema}
         >

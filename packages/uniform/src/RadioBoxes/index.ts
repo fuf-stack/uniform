@@ -1,8 +1,7 @@
 import RadioBoxes from './RadioBoxes';
 
-export type { RadioBoxesProps } from './RadioBoxes';
-export { radioBoxVariants } from './RadioBox';
+export type { RadioBoxesProps, RadioBoxOption } from './RadioBoxes';
 
-export { RadioBoxes };
+export { radioBoxVariants } from './RadioBox';
 
 export default RadioBoxes;

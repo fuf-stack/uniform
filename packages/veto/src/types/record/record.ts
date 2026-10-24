@@ -1,23 +1,31 @@
-import type { ZodTypeAny } from 'zod';
+import type { VetoTypeAny } from 'src/types';
+import type { ZodRecord, ZodType } from 'zod';
 
 import { z } from 'zod';
 
 /**
- * Creates a record schema with string keys and the specified value type.
- * In Zod v4, z.record requires explicit key and value types.
- * This wrapper maintains backwards compatibility with v3's single-argument API.
- *
- * @param valueType - The Zod schema for record values
- * @returns A record schema with string keys
+ * Creates a record schema with explicit key and value schemas (Zod v4 style).
  *
  * @example
- * ```ts
- * const schema = record(string());
- * // Creates Record<string, string>
- * ```
+ * const schema = record(z.string(), z.number());
+ * schema.parse({ apples: 3, pears: 2 });
+ *
+ * @example
+ * const schema = record(z.enum(['a', 'b']), z.string());
+ * schema.parse({ a: 'x', b: 'y' });
  */
-export const record = <T extends ZodTypeAny>(valueType: T) => {
-  return z.record(z.string(), valueType);
+export const record = <
+  TKey extends ZodType<PropertyKey>,
+  TValue extends VetoTypeAny,
+>(
+  keySchema: TKey,
+  valueSchema: TValue,
+): VRecordSchema<TKey, TValue> => {
+  return z.record(keySchema, valueSchema);
 };
 
 export type VRecord = typeof record;
+export type VRecordSchema<
+  TKey extends ZodType<PropertyKey>,
+  TValue extends VetoTypeAny,
+> = ZodRecord<TKey, TValue>;

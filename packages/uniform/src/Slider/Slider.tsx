@@ -1,5 +1,6 @@
 import type { TVClassName, TVProps } from '@fuf-stack/pixel-utils';
 import type { ReactNode } from 'react';
+import type { InputValueTransform } from '../hooks/useInputValueTransform';
 
 import { useRef } from 'react';
 
@@ -12,19 +13,32 @@ import { useUniformField } from '../hooks/useUniformField';
 
 export const sliderVariants = tv({
   slots: {
-    base: 'group',
+    base: [
+      // Enables group-data selectors used by slider slots.
+      'group',
+      // Match shared field wrapper layout.
+      'flex w-full flex-col',
+      // Keep spacing between label/track consistent.
+      'gap-y-1.5',
+    ],
     endContent: '',
     errorMessage: 'ml-1 mt-1',
     filler: '',
     // see HeroUI styles for group-data condition,
     // e.g.: https://github.com/heroui-inc/heroui/blob/main/packages/core/theme/src/components/select.ts
     label:
-      'text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]',
-    labelWrapper: '',
+      'cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]',
+    labelWrapper: 'mb-1',
     mark: '',
     startContent: '',
     step: '',
-    thumb: '',
+    // Validation focuses the input after a mouse submission. HeroUI's keyboard
+    // focus-visible state stays false, so expose that focus while invalid too.
+    thumb: [
+      'group-data-[invalid=true]:data-[focused=true]:outline-2',
+      'group-data-[invalid=true]:data-[focused=true]:outline-focus',
+      'group-data-[invalid=true]:data-[focused=true]:outline-offset-2',
+    ],
     track: '',
     trackWrapper: '',
     value: '',
@@ -47,6 +61,16 @@ export interface SliderProps extends VariantProps {
   fillOffset?: number;
   /** form field label */
   label?: string;
+  /**
+   * The maximum value of the slider
+   * @default 100
+   */
+  maxValue?: number;
+  /**
+   * The minimum value of the slider
+   * @default 0
+   */
+  minValue?: number;
   /** form field name */
   name: string;
   /**
@@ -68,16 +92,8 @@ export interface SliderProps extends VariantProps {
   step?: number;
   /** HTML data-testid attribute used in e2e tests */
   testId?: string;
-  /**
-   * The minimum value of the slider
-   * @default 0
-   */
-  minValue?: number;
-  /**
-   * The maximum value of the slider
-   * @default 100
-   */
-  maxValue?: number;
+  /** Transform between stored form values and numeric slider values. Range and step use display units. */
+  transform?: InputValueTransform<number>;
 }
 
 /**
@@ -87,13 +103,13 @@ const Slider = ({
   className = undefined,
   endContent = undefined,
   fillOffset = undefined,
+  maxValue = 100,
+  minValue = 0,
   name,
   showSteps = false,
   size = 'md',
   startContent = undefined,
   step = 1,
-  minValue = 0,
-  maxValue = 100,
   ...uniformFieldProps
 }: SliderProps) => {
   const {
@@ -117,6 +133,15 @@ const Slider = ({
 
   // Ref for the visual slider to forward focus
   const visualSliderRef = useRef<HTMLDivElement>(null);
+  const focusSliderInput = () => {
+    if (!disabled) {
+      visualSliderRef.current
+        ?.querySelector<HTMLInputElement>(
+          '[data-slot="thumb"] input[type="range"]:not(:disabled)',
+        )
+        ?.focus();
+    }
+  };
 
   // classNames from slots
   const variants = sliderVariants();
@@ -131,6 +156,13 @@ const Slider = ({
       data-invalid={invalid}
       data-required={required}
       data-testid={testId}
+      onFocus={(event) => {
+        // Descendant focus events bubble here too; leave those alone.
+        if (event.target === event.currentTarget) {
+          focusSliderInput();
+        }
+      }}
+      tabIndex={disabled ? undefined : -1}
     >
       {/* Visually hidden input for form accessibility and focus management */}
       <VisuallyHidden>
@@ -142,24 +174,34 @@ const Slider = ({
           min={minValue}
           name={name}
           onBlur={onBlur}
+          onChange={(e) => {
+            onChange(Number(e.target.value));
+          }}
+          // RHF error focus must reach the interactive input as well.
+          onFocus={focusSliderInput}
           step={step}
           tabIndex={-1}
           type="range"
           value={currentValue}
-          onChange={(e) => {
-            onChange(Number(e.target.value));
-          }}
-          onFocus={() => {
-            // When RHF focuses this hidden input (e.g., on validation error),
-            // forward focus to the visual slider to show focus ring
-            visualSliderRef.current?.focus();
-          }}
         />
       </VisuallyHidden>
       {/* Visual HeroUISlider component */}
       <HeroUISlider
         ref={visualSliderRef}
         aria-label={ariaLabel}
+        classNames={{
+          endContent: classNames.endContent,
+          filler: classNames.filler,
+          label: classNames.label,
+          labelWrapper: classNames.labelWrapper,
+          mark: classNames.mark,
+          startContent: classNames.startContent,
+          step: classNames.step,
+          thumb: classNames.thumb,
+          track: classNames.track,
+          trackWrapper: classNames.trackWrapper,
+          value: classNames.value,
+        }}
         color={invalid ? 'danger' : 'primary'}
         endContent={endContent}
         fillOffset={fillOffset}
@@ -175,19 +217,6 @@ const Slider = ({
         startContent={startContent}
         step={step}
         value={currentValue}
-        classNames={{
-          endContent: classNames.endContent,
-          filler: classNames.filler,
-          label: classNames.label,
-          labelWrapper: classNames.labelWrapper,
-          mark: classNames.mark,
-          startContent: classNames.startContent,
-          step: classNames.step,
-          thumb: classNames.thumb,
-          track: classNames.track,
-          trackWrapper: classNames.trackWrapper,
-          value: classNames.value,
-        }}
       />
       {invalid ? (
         <div

@@ -7,8 +7,10 @@ import { useContext } from 'react';
 
 import { act, renderHook, waitFor } from '@testing-library/react';
 
-import { string, veto } from '@fuf-stack/veto';
+import { object, refineObject, string, veto } from '@fuf-stack/veto';
 
+import { useController } from '../../hooks/useController/useController';
+import { useFormContext } from '../../hooks/useFormContext/useFormContext';
 import FormProvider, { UniformContext } from './FormContext';
 
 describe('FormContext', () => {
@@ -39,6 +41,9 @@ describe('FormContext', () => {
       const { result } = renderHook(() => useContext(UniformContext));
 
       expect(result.current.debugMode).toBe('off');
+      expect(result.current.formReset).toBeDefined();
+      expect(typeof result.current.formReset.subscribe).toBe('function');
+      expect(typeof result.current.formReset.notify).toBe('function');
       expect(typeof result.current.preventSubmit).toBe('function');
       expect(typeof result.current.setDebugMode).toBe('function');
       expect(typeof result.current.triggerSubmit).toBe('function');
@@ -204,6 +209,40 @@ describe('FormContext', () => {
       });
     });
 
+    it('provides formReset pub/sub notifications', () => {
+      const onSubmit = vi.fn();
+
+      const wrapper = ({ children }: { children: ReactNode }) => (
+        <FormProvider onSubmit={onSubmit} validationTrigger="onChange">
+          {() => <>{children}</>}
+        </FormProvider>
+      );
+
+      const { result } = renderHook(() => useContext(UniformContext), {
+        wrapper,
+      });
+
+      const listener = vi.fn();
+
+      let unsubscribe: () => void = () => undefined;
+      act(() => {
+        unsubscribe = result.current.formReset.subscribe(listener);
+      });
+
+      act(() => {
+        result.current.formReset.notify();
+      });
+      expect(listener).toHaveBeenCalledTimes(1);
+
+      act(() => {
+        unsubscribe();
+      });
+      act(() => {
+        result.current.formReset.notify();
+      });
+      expect(listener).toHaveBeenCalledTimes(1);
+    });
+
     it('passes initialValues to form', () => {
       const onSubmit = vi.fn();
       const initialValues = { name: 'John', email: 'john@example.com' };
@@ -251,6 +290,89 @@ describe('FormContext', () => {
       // Initially errors might not be set yet, but context should provide the structure
       expect(result.current.validation).toBeDefined();
       expect(result.current.validation.instance).toBe(validationSchema);
+    });
+
+    it('refreshes validation errors after a user-driven cross-field change', async () => {
+      const onSubmit = vi.fn();
+      const validationSchema = veto(
+        refineObject(
+          object({
+            primary: string(),
+            secondary: string(),
+          }),
+        )({
+          custom: (data, ctx) => {
+            if (
+              typeof data.primary === 'string' &&
+              typeof data.secondary === 'string' &&
+              data.primary === data.secondary
+            ) {
+              ctx.addIssue({
+                code: 'custom',
+                message: 'Secondary must differ from primary',
+                path: ['secondary'],
+              });
+            }
+          },
+        }),
+      );
+
+      const wrapper = ({ children }: { children: ReactNode }) => (
+        <FormProvider
+          initialValues={{ primary: 'alpha', secondary: 'beta' }}
+          onSubmit={onSubmit}
+          validation={validationSchema}
+          validationTrigger="onChange"
+        >
+          {() => <>{children}</>}
+        </FormProvider>
+      );
+
+      const { result } = renderHook(
+        () => {
+          const { control, getFieldState, validation } = useFormContext();
+          const primary = useController({ control, name: 'primary' }).field;
+          const secondaryError = getFieldState('secondary').error?.[0]?.message;
+          const contextSecondaryError =
+            validation.errors?.secondary?.[0]?.message;
+
+          return {
+            contextSecondaryError,
+            primary,
+            secondaryError,
+          };
+        },
+        { wrapper },
+      );
+
+      expect(result.current.secondaryError).toBeUndefined();
+      expect(result.current.contextSecondaryError).toBeUndefined();
+
+      // Changing primary creates an error on secondary. This verifies that
+      // resolver error state is propagated to context consumers even when the
+      // displayed error belongs to a different field than the one changed by the
+      // user.
+      act(() => {
+        result.current.primary.onChange('beta');
+      });
+
+      await waitFor(() => {
+        expect(result.current.secondaryError).toBe(
+          'Secondary must differ from primary',
+        );
+        expect(result.current.contextSecondaryError).toBe(
+          'Secondary must differ from primary',
+        );
+      });
+
+      act(() => {
+        result.current.primary.onChange('gamma');
+      });
+
+      await waitFor(() => {
+        expect(result.current.secondaryError).toBeUndefined();
+        expect(result.current.contextSecondaryError).toBeUndefined();
+      });
     });
 
     it('exposes both baseInstance and instance in validation context', () => {

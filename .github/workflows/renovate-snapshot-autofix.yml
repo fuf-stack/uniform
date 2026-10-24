@@ -1,0 +1,166 @@
+# This workflow lets maintainers explicitly request snapshot autofixes on Renovate PRs.
+# It runs tests, updates snapshots only when failures are snapshot-related, and pushes
+# the snapshot commit back to the Renovate branch while blocking non-snapshot changes.
+name: renovate-snapshot-autofix
+
+on:
+  # Request-driven mode on Renovate PRs.
+  # We include synchronize/reopened so reruns happen automatically after updates
+  # when the label is still present.
+  pull_request_target:
+    types:
+      - labeled
+      - synchronize
+      - reopened
+  # Alternative request mode: comment `/autofix-snapshots` on a Renovate PR.
+  issue_comment:
+    types:
+      - created
+  # Fallback manual trigger from Actions UI for a specific branch.
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Renovate branch to update snapshots for (e.g. renovate/pkg-1.x)'
+        required: true
+        type: string
+
+permissions:
+  # Needed to dispatch CI after the GITHUB_TOKEN-backed push. Such pushes do not
+  # emit another pull_request event themselves.
+  actions: write
+  # Needed to push snapshot updates back to the Renovate branch.
+  contents: write
+  # Needed to read PR metadata (label + head branch).
+  pull-requests: read
+
+jobs:
+  autofix-snapshots:
+    name: Autofix Snapshot Updates
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    # Run when:
+    # 1) a Renovate PR has the opt-in label,
+    # 2) a maintainer comments `/autofix-snapshots` on a PR, or
+    # 3) the workflow is manually dispatched.
+    if: >-
+      ${{
+        (github.event_name == 'pull_request_target' &&
+         contains(github.event.pull_request.labels.*.name, 'autofix:snapshots') &&
+         github.event.pull_request.head.repo.full_name == github.repository &&
+         startsWith(github.event.pull_request.head.ref, 'renovate/')) ||
+        (github.event_name == 'issue_comment' &&
+         github.event.issue.pull_request &&
+         github.event.comment.body == '/autofix-snapshots' &&
+         contains(fromJSON('["OWNER", "MEMBER", "COLLABORATOR"]'), github.event.comment.author_association)) ||
+        github.event_name == 'workflow_dispatch'
+      }}
+
+    steps:
+      - name: Resolve PR head branch for issue comment trigger
+        id: pr-head
+        if: github.event_name == 'issue_comment'
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const issueNumber = context.payload.issue.number;
+            const { data: pr } = await github.rest.pulls.get({
+              owner,
+              repo,
+              pull_number: issueNumber,
+            });
+
+            if (!pr.head.ref.startsWith('renovate/')) {
+              core.setFailed(`PR head '${pr.head.ref}' is not a renovate branch.`);
+              return;
+            }
+            if (pr.head.repo.full_name !== `${owner}/${repo}`) {
+              core.setFailed(
+                `Refusing to push to external repo '${pr.head.repo.full_name}'.`,
+              );
+              return;
+            }
+
+            core.setOutput('ref', pr.head.ref);
+            core.setOutput('repository', pr.head.repo.full_name);
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+          # For label-triggered runs, check out the Renovate PR head branch.
+          # For issue comments, resolve PR head via API first.
+          # For manual runs, use the branch provided as workflow input.
+          ref: ${{ github.event_name == 'pull_request_target' && github.event.pull_request.head.ref || github.event_name == 'issue_comment' && steps.pr-head.outputs.ref || github.event.inputs.branch }}
+          # For Renovate PRs this can point to a fork; for manual runs use current repo.
+          repository: ${{ github.event_name == 'pull_request_target' && github.event.pull_request.head.repo.full_name || github.event_name == 'issue_comment' && steps.pr-head.outputs.repository || github.repository }}
+
+      - name: Setup project
+        uses: ./.github/actions/setup-project
+
+      - name: Run tests
+        id: test-run
+        shell: bash
+        run: |
+          set +e
+          pnpm test
+          test_exit=$?
+          set -e
+
+          if [ "$test_exit" -eq 0 ]; then
+            echo "status=passed" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "status=failed" >> "$GITHUB_OUTPUT"
+
+      - name: Update snapshots
+        if: steps.test-run.outputs.status == 'failed'
+        run: pnpm test -u
+
+      - name: Ensure only snapshot files changed
+        if: steps.test-run.outputs.status == 'failed'
+        shell: bash
+        run: |
+          changed_files="$(git status --porcelain=v1 --untracked-files=all | cut -c4-)"
+          if [ -z "$changed_files" ]; then
+            echo "Tests failed, but updating snapshots produced no changes."
+            exit 1
+          fi
+
+          # Safety gate: only allow known snapshot file patterns.
+          non_snapshot_files="$(printf '%s\n' "$changed_files" | rg -v '(^|/)__snapshots__/|\.snap$|(\.|/)(test|spec)\.(ts|tsx|js|jsx|mjs|cjs)$' || true)"
+          if [ -n "$non_snapshot_files" ]; then
+            echo "Found non-snapshot changes after update:"
+            printf '%s\n' "$non_snapshot_files"
+            exit 1
+          fi
+
+      - name: Verify tests pass with updated snapshots
+        if: steps.test-run.outputs.status == 'failed'
+        run: pnpm test
+
+      - name: Commit and push snapshot updates
+        id: snapshot-commit
+        if: steps.test-run.outputs.status == 'failed'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "test: update snapshots"
+          git push
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Run CI for the snapshot commit
+        if: steps.snapshot-commit.outputs.pushed == 'true'
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
+        env:
+          HEAD_REF: ${{ github.event_name == 'pull_request_target' && github.event.pull_request.head.ref || github.event_name == 'issue_comment' && steps.pr-head.outputs.ref || github.event.inputs.branch }}
+        with:
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              ...context.repo,
+              workflow_id: 'ci.yml',
+              ref: process.env.HEAD_REF,
+            });

@@ -3,10 +3,10 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { action } from 'storybook/actions';
 import { expect, userEvent, waitFor, within } from 'storybook/test';
 
-import { SubmitButton } from '@fuf-stack/uniform';
 import { string, veto } from '@fuf-stack/veto';
 
-import { Form } from '../Form';
+import Form from '../Form';
+import SubmitButton from '../SubmitButton';
 import Radios from './Radios';
 
 const meta: Meta<typeof Radios> = {
@@ -16,7 +16,7 @@ const meta: Meta<typeof Radios> = {
     (Story, { parameters }) => {
       return (
         <Form
-          className="min-w-60"
+          className={{ form: 'min-w-60' }}
           onSubmit={action('onSubmit')}
           {...(parameters?.formProps ?? {})}
         >
@@ -40,6 +40,17 @@ export const Default: Story = {
       { value: '1', label: 'option 1' },
       { value: '2', label: 'option 2' },
       { value: '3', label: 'option 3' },
+    ],
+  },
+};
+
+export const NumberValues: Story = {
+  args: {
+    name: 'radiosField',
+    options: [
+      { value: 1, label: 'One' },
+      { value: 2, label: 'Two' },
+      { value: 3, label: 'Three' },
     ],
   },
 };
@@ -137,6 +148,66 @@ export const Invalid: Story = {
     });
 
     // Wait for validation to complete and error message to appear
+    await waitFor(() => {
+      expect(canvas.getByTestId('radiosfield_error')).toBeVisible();
+    });
+  },
+};
+
+const cardValidation = veto({
+  radiosField: string().refine((value) => {
+    return typeof value === 'string' && value.length > 0;
+  }, 'Please pick one quest'),
+});
+
+export const CustomOptionsRendering: Story = {
+  parameters: {
+    formProps: { validation: cardValidation },
+  },
+  args: {
+    label: 'Pick one side quest',
+    name: 'radiosField',
+    className: {
+      wrapper: 'rounded-lg border border-divider bg-content1',
+      itemBase: 'm-2 w-full',
+    },
+    options: [
+      {
+        label: 'Treasure Hunt 🗺️',
+        value: 'treasure-hunt',
+        meta: { danger: 'low' },
+      },
+      {
+        label: 'Potion Brewing 🧪',
+        value: 'potion-brewing',
+        meta: { danger: 'medium' },
+      },
+      {
+        label: 'Dragon Negotiation 🐉',
+        value: 'dragon-negotiation',
+        meta: { danger: 'high' },
+      },
+    ],
+  },
+  render: (renderArgs) => {
+    return (
+      <Radios {...renderArgs}>
+        {(options) => {
+          return (
+            <div className="divide-y divide-default-200">
+              {options.map(({ option, radio }) => {
+                return <div key={option.value}>{radio}</div>;
+              })}
+            </div>
+          );
+        }}
+      </Radios>
+    );
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    await userEvent.click(canvas.getByText('Submit'));
     await waitFor(() => {
       expect(canvas.getByTestId('radiosfield_error')).toBeVisible();
     });

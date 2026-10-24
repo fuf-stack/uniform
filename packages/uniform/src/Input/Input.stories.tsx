@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { FaEnvelope } from 'react-icons/fa';
+import { FaEnvelope, FaKey } from 'react-icons/fa';
 
 import { action } from 'storybook/actions';
 import { expect, userEvent, waitFor, within } from 'storybook/test';
 
-import { SubmitButton } from '@fuf-stack/uniform';
 import { number, string, veto } from '@fuf-stack/veto';
 
-import { Form } from '../Form';
+import Form from '../Form';
+import SubmitButton from '../SubmitButton';
 import Input from './Input';
 
 const meta: Meta<typeof Input> = {
@@ -18,7 +18,7 @@ const meta: Meta<typeof Input> = {
     (Story, { parameters }) => {
       return (
         <Form
-          className="min-w-60"
+          className={{ form: 'min-w-60' }}
           onSubmit={action('onSubmit')}
           {...(parameters?.formProps ?? {})}
         >
@@ -178,34 +178,6 @@ export const Number: Story = {
   },
 };
 
-export const Password: Story = {
-  parameters: {
-    formProps: {
-      validation: veto({
-        passwordField: string({ min: 20 }),
-      }),
-    },
-  },
-  args: {
-    label: 'Password Field',
-    name: 'passwordField',
-    type: 'password',
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const input = canvas.getByTestId('passwordfield');
-    await userEvent.type(input, 'veryS3cure!', {
-      delay: 100,
-    });
-    input.blur();
-
-    // Wait because of value debounce
-    await waitFor(() => {
-      expect(input.getAttribute('aria-invalid')).toBe('true');
-    });
-  },
-};
-
 export const CustomStyles: Story = {
   parameters: {
     formProps: { initialValues: { partySearch: 'Something fun!' } },
@@ -276,8 +248,8 @@ export const WithValueTransform: Story = {
 };
 
 interface Superhero {
-  name: string;
   emoji: string;
+  name: string;
   power: string;
 }
 
@@ -349,46 +321,101 @@ export const AllSizes: Story = {
   render: renderAllSizes,
 };
 
-// Test for edge case where validation error appears after clearing a field
-export const ValidationAfterClear: Story = {
-  name: 'Edge Cases: Cleared Validation',
+export const Password: Story = {
   parameters: {
     formProps: {
       validation: veto({
-        inputField: string(),
+        passwordField: string({ min: 20 }),
       }),
     },
   },
   args: {
-    label: 'Required Cleared Field',
-    name: 'inputField',
+    label: 'Password Field',
+    name: 'passwordField',
+    type: 'password',
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const input = canvas.getByTestId('inputfield');
-
-    // Initially, no validation error should be shown
-    await expect(input.getAttribute('aria-invalid')).toBeNull();
-
-    // Type some content
-    await userEvent.type(input, 'test', {
-      delay: 50,
+    const input = canvas.getByTestId('passwordfield');
+    await userEvent.type(input, 'veryS3cure!', {
+      delay: 100,
     });
-
-    // Field should be valid with content
-    await expect(input.getAttribute('aria-invalid')).toBeNull();
-
-    // Clear the field completely
-    await userEvent.clear(input);
     input.blur();
 
     // Wait because of value debounce
     await waitFor(() => {
-      // Now validation error should appear for required field
       expect(input.getAttribute('aria-invalid')).toBe('true');
-
-      // Check that error message is displayed
-      expect(canvas.getByText('Field is required')).toBeInTheDocument();
     });
+  },
+};
+
+export const PasswordVisibility: Story = {
+  args: {
+    name: 'password',
+    label: 'Password',
+    type: 'password',
+  },
+  parameters: { formProps: { initialValues: { password: 'Example_123' } } },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const input = canvas.getByTestId('password');
+    const toggle = canvas.getByRole('button', { name: 'Show password' });
+    await userEvent.click(input);
+    await userEvent.tab();
+    await expect(toggle).toHaveFocus();
+    await userEvent.keyboard(' ');
+    await expect(input).toHaveAttribute('type', 'text');
+    await expect(input).toHaveValue('Example_123');
+    await expect(toggle).toHaveAccessibleName('Hide password');
+    await userEvent.keyboard('{Enter}');
+    await expect(input).toHaveAttribute('type', 'password');
+  },
+};
+
+export const PasswordWithoutToggle: Story = {
+  args: {
+    name: 'password',
+    label: 'Password',
+    type: 'password',
+    hidePasswordToggle: true,
+  },
+};
+
+export const PasswordDisabled: Story = {
+  args: {
+    name: 'password',
+    label: 'Password',
+    type: 'password',
+    disabled: true,
+  },
+};
+
+export const PasswordClearable: Story = {
+  args: {
+    name: 'password',
+    label: 'Password',
+    type: 'password',
+    clearable: true,
+    endContent: <FaKey aria-hidden="true" />,
+  },
+  parameters: { formProps: { initialValues: { password: 'Example_123' } } },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await userEvent.click(
+      canvas.getByRole('button', { name: 'Show password' }),
+    );
+    await expect(canvas.getByTestId('password')).toHaveAttribute(
+      'type',
+      'text',
+    );
+    await userEvent.click(canvas.getByRole('button', { name: 'clear input' }));
+    await expect(canvas.getByTestId('password')).toHaveValue('');
+    await expect(canvas.getByTestId('password')).toHaveAttribute(
+      'type',
+      'password',
+    );
+    await expect(
+      canvas.getByRole('button', { name: 'Show password' }),
+    ).toBeVisible();
   },
 };

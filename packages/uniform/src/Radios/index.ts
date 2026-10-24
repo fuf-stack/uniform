@@ -1,7 +1,7 @@
 import Radios from './Radios';
 
-export type { RadiosProps } from './Radios';
+export type { RadiosProps, RadioOption } from './Radios';
 
-export { Radios };
+export { radiosVariants } from './Radios';
 
 export default Radios;

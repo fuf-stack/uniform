@@ -1,5 +1,858 @@
 # Changelog
 
+## [0.17.1](https://github.com/fuf-stack/pixels/compare/megapixels-v0.17.0...megapixels-v0.17.1) (2026-10-19)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-utils bumped to 1.4.1
+    * @fuf-stack/pixels bumped to 1.14.1
+    * @fuf-stack/uniform bumped to 1.28.0
+
+## [0.17.0](https://github.com/fuf-stack/pixels/compare/megapixels-v0.16.1...megapixels-v0.17.0) (2026-10-14)
+
+
+### Features
+
+* expand verification and contribution tooling ([cf200f0](https://github.com/fuf-stack/pixels/commit/cf200f0f6985e010b34b81eed494356c27099d55))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @base-ui/react to v1.8.0 ([d8e688f](https://github.com/fuf-stack/pixels/commit/d8e688fc84feefbee830d5b9ac84e77ad80b7f8d))
+* **deps:** update dependency @base-ui/react to v1.8.0 ([59a5006](https://github.com/fuf-stack/pixels/commit/59a50068319ef29cf2313f38abe9eeeaa44d817b))
+* **deps:** update dependency @tanstack/react-virtual to v3.14.10 ([#1852](https://github.com/fuf-stack/pixels/issues/1852)) ([b47c480](https://github.com/fuf-stack/pixels/commit/b47c480428d8d987981a92b6daea5b3edb5bc057))
+* **deps:** update dependency @tanstack/react-virtual to v3.14.13 ([#1890](https://github.com/fuf-stack/pixels/issues/1890)) ([32fb151](https://github.com/fuf-stack/pixels/commit/32fb151cbfee0d5c53a7eaf61a434b412a8e2660))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.4.0
+    * @fuf-stack/pixels bumped to 1.14.0
+    * @fuf-stack/uniform bumped to 1.27.0
+    * @fuf-stack/veto bumped to 1.11.0
+
+## [0.16.1](https://github.com/fuf-stack/pixels/compare/megapixels-v0.16.0...megapixels-v0.16.1) (2026-08-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @base-ui/react to v1.7.0 ([#1838](https://github.com/fuf-stack/pixels/issues/1838)) ([09842f7](https://github.com/fuf-stack/pixels/commit/09842f74c0181856c4f8552ff777e5114428a05d))
+* **deps:** update dependency @tanstack/react-virtual to v3.14.9 ([#1822](https://github.com/fuf-stack/pixels/issues/1822)) ([508afad](https://github.com/fuf-stack/pixels/commit/508afad6c63c307c9308491081912af980c2b8a1))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.3.2
+    * @fuf-stack/pixels bumped to 1.13.2
+    * @fuf-stack/uniform bumped to 1.26.1
+    * @fuf-stack/veto bumped to 1.10.0
+
+## [0.16.0](https://github.com/fuf-stack/pixels/compare/megapixels-v0.15.0...megapixels-v0.16.0) (2026-07-29)
+
+
+### Features
+
+* **uniform,megapixels:** add className slots to Form and FormDebugViewer ([2fed04a](https://github.com/fuf-stack/pixels/commit/2fed04a1caf0e4a080071463b3f53e8d282f20a0))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @tanstack/react-virtual to v3.14.6 ([#1784](https://github.com/fuf-stack/pixels/issues/1784)) ([58b739b](https://github.com/fuf-stack/pixels/commit/58b739b19e94be97a658112fec99d56dd7486ffe))
+* **deps:** update dependency @tanstack/react-virtual to v3.14.7 ([#1805](https://github.com/fuf-stack/pixels/issues/1805)) ([4d87f94](https://github.com/fuf-stack/pixels/commit/4d87f945d2026c3a11b81e3e50a74f15646dc8f5))
+* **deps:** update dependency @tanstack/react-virtual to v3.14.8 ([#1811](https://github.com/fuf-stack/pixels/issues/1811)) ([3ecef48](https://github.com/fuf-stack/pixels/commit/3ecef4802e0e3db8e0ba169a08b4260e3fcaa740))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.3.1
+    * @fuf-stack/pixels bumped to 1.13.1
+    * @fuf-stack/uniform bumped to 1.26.0
+
+## [0.15.0](https://github.com/fuf-stack/pixels/compare/megapixels-v0.14.4...megapixels-v0.15.0) (2026-07-17)
+
+
+### Features
+
+* build esm only, no cjs anymore ([7856711](https://github.com/fuf-stack/pixels/commit/78567111820395bb9b0017c04820e0c8efea0e9f))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @tanstack/react-virtual to v3.14.5 ([62eb634](https://github.com/fuf-stack/pixels/commit/62eb63491e833221d68e633dbd28d3ef491ea257))
+* **deps:** update dependency react-icons to v5.7.0 ([#1769](https://github.com/fuf-stack/pixels/issues/1769)) ([22db442](https://github.com/fuf-stack/pixels/commit/22db442b51cb3de20cf9962a619c7872019a842d))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.3.0
+    * @fuf-stack/pixel-utils bumped to 1.4.0
+    * @fuf-stack/pixels bumped to 1.13.0
+    * @fuf-stack/uniform bumped to 1.25.0
+    * @fuf-stack/veto bumped to 1.9.0
+
+## [0.14.4](https://github.com/fuf-stack/pixels/compare/megapixels-v0.14.3...megapixels-v0.14.4) (2026-07-16)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.24.12
+
+## [0.14.3](https://github.com/fuf-stack/pixels/compare/megapixels-v0.14.2...megapixels-v0.14.3) (2026-07-16)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixels bumped to 1.12.1
+    * @fuf-stack/uniform bumped to 1.24.11
+
+## [0.14.2](https://github.com/fuf-stack/pixels/compare/megapixels-v0.14.1...megapixels-v0.14.2) (2026-07-11)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.24.10
+    * @fuf-stack/veto bumped to 1.8.0
+
+## [0.14.1](https://github.com/fuf-stack/pixels/compare/megapixels-v0.14.0...megapixels-v0.14.1) (2026-07-05)
+
+
+### Bug Fixes
+
+* **megapixels:** fix some imports for cjs compatibility ([fc9ad2a](https://github.com/fuf-stack/pixels/commit/fc9ad2af1bd3db39476b65162b03dda499cf3b4e))
+
+## [0.14.0](https://github.com/fuf-stack/pixels/compare/megapixels-v0.13.5...megapixels-v0.14.0) (2026-07-05)
+
+
+### Features
+
+* **megapixels,pixels:** add DataTable component ([e3077cb](https://github.com/fuf-stack/pixels/commit/e3077cb907a9776f76c5cf398d5067fdfacceb3f))
+* **megapixels:** add expandable DataTable rows ([ee5f1f6](https://github.com/fuf-stack/pixels/commit/ee5f1f6853dabc17ae1b2c38a24c2b0d7c8d0b18))
+* **megapixels:** add infinite scroll and virtualization to DataTable, add VirtualList component ([14940d6](https://github.com/fuf-stack/pixels/commit/14940d619b29874e4ffb4412d421ce82a41ad83e))
+* **megapixels:** support expandable sub DataTable rows ([98f082f](https://github.com/fuf-stack/pixels/commit/98f082fce3897771b362050ff219244650290ddf))
+* **pixels,megapixels:** integrate ScrollShadow with virtualized infinite scroll ([2618186](https://github.com/fuf-stack/pixels/commit/26181865a55c33e212af123c7b0aefc6f5dd940d))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixels bumped to 1.12.0
+    * @fuf-stack/uniform bumped to 1.24.9
+
+## [0.13.5](https://github.com/fuf-stack/pixels/compare/megapixels-v0.13.4...megapixels-v0.13.5) (2026-07-02)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.24.8
+    * @fuf-stack/veto bumped to 1.7.4
+
+## [0.13.4](https://github.com/fuf-stack/pixels/compare/megapixels-v0.13.3...megapixels-v0.13.4) (2026-06-30)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.24.7
+
+## [0.13.3](https://github.com/fuf-stack/pixels/compare/megapixels-v0.13.2...megapixels-v0.13.3) (2026-06-30)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixels bumped to 1.11.8
+    * @fuf-stack/uniform bumped to 1.24.6
+
+## [0.13.2](https://github.com/fuf-stack/pixels/compare/megapixels-v0.13.1...megapixels-v0.13.2) (2026-06-26)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixels bumped to 1.11.7
+    * @fuf-stack/uniform bumped to 1.24.5
+
+## [0.13.1](https://github.com/fuf-stack/pixels/compare/megapixels-v0.13.0...megapixels-v0.13.1) (2026-06-26)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixels bumped to 1.11.6
+    * @fuf-stack/uniform bumped to 1.24.4
+
+## [0.13.0](https://github.com/fuf-stack/pixels/compare/megapixels-v0.12.0...megapixels-v0.13.0) (2026-06-25)
+
+
+### Features
+
+* **atelier:** add customizable app frame package with core APIs and story/test coverage ([ecdcabd](https://github.com/fuf-stack/pixels/commit/ecdcabde04430d952011c35db97231f84fee59e9))
+* **pixels:** add closeNotification to NotificationRenderProps ([d991d7b](https://github.com/fuf-stack/pixels/commit/d991d7bd5f237d2a12e213a42532d44802165759))
+
+
+### Bug Fixes
+
+* **pixels:** mark Toaster as react-aria top layer so toasts work over modals ([4c76058](https://github.com/fuf-stack/pixels/commit/4c76058c9f0f7fe928f39a79b67e116520ab0fd3))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixels bumped to 1.11.5
+    * @fuf-stack/uniform bumped to 1.24.3
+
+## [0.12.0](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.36...megapixels-v0.12.0) (2026-06-17)
+
+
+### Features
+
+* **megapixels:** added notification Toast over Modal stacked ([da0140a](https://github.com/fuf-stack/pixels/commit/da0140a6bdc37b8a6400db5cda76dd3ea2804adc))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.24.2
+
+## [0.11.36](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.35...megapixels-v0.11.36) (2026-06-07)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.24.1
+
+## [0.11.35](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.34...megapixels-v0.11.35) (2026-06-07)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.24.0
+
+## [0.11.34](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.33...megapixels-v0.11.34) (2026-06-06)
+
+
+### Bug Fixes
+
+* **pixels:** some Alert and Toast style fixes ([26f8115](https://github.com/fuf-stack/pixels/commit/26f81157d3a535442504a2ffd749fbb2b6a02e46))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixels bumped to 1.11.4
+    * @fuf-stack/uniform bumped to 1.23.2
+
+## [0.11.33](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.32...megapixels-v0.11.33) (2026-06-06)
+
+
+### Bug Fixes
+
+* **pixels:** fix Alert default style ([2028f43](https://github.com/fuf-stack/pixels/commit/2028f43b85ed4cdde979cecb9c7d3719a9b4d770))
+* **pixels:** improve Alert styles and stories ([d0aec48](https://github.com/fuf-stack/pixels/commit/d0aec4811477fd1852da3d7226dd88b324214b39))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixels bumped to 1.11.3
+    * @fuf-stack/uniform bumped to 1.23.1
+
+## [0.11.32](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.31...megapixels-v0.11.32) (2026-06-05)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.23.0
+
+## [0.11.31](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.30...megapixels-v0.11.31) (2026-06-05)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.22.11
+
+## [0.11.30](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.29...megapixels-v0.11.30) (2026-06-04)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.22.10
+
+## [0.11.29](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.28...megapixels-v0.11.29) (2026-06-04)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.22.9
+
+## [0.11.28](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.27...megapixels-v0.11.28) (2026-06-04)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.22.8
+
+## [0.11.27](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.26...megapixels-v0.11.27) (2026-06-04)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.22.7
+
+## [0.11.26](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.25...megapixels-v0.11.26) (2026-06-04)
+
+
+### Bug Fixes
+
+* reformat some code ([f40f4b0](https://github.com/fuf-stack/pixels/commit/f40f4b05a9eb03baf0b1dc972425e79a4cfe0db2))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-utils bumped to 1.3.2
+    * @fuf-stack/pixels bumped to 1.11.2
+    * @fuf-stack/uniform bumped to 1.22.6
+    * @fuf-stack/veto bumped to 1.7.3
+
+## [0.11.25](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.24...megapixels-v0.11.25) (2026-06-04)
+
+
+### Bug Fixes
+
+* add shared dep-bundled dts config and annotate buttonVariants for portable types ([ab3e5d6](https://github.com/fuf-stack/pixels/commit/ab3e5d66fbf84324dd20ecc4db0b097ed1a80e44))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.2.2
+    * @fuf-stack/pixel-utils bumped to 1.3.1
+    * @fuf-stack/pixels bumped to 1.11.1
+    * @fuf-stack/uniform bumped to 1.22.5
+    * @fuf-stack/veto bumped to 1.7.2
+
+## [0.11.24](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.23...megapixels-v0.11.24) (2026-06-03)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.22.4
+
+## [0.11.23](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.22...megapixels-v0.11.23) (2026-06-03)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.22.3
+
+## [0.11.22](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.21...megapixels-v0.11.22) (2026-06-03)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixels bumped to 1.11.0
+    * @fuf-stack/uniform bumped to 1.22.2
+
+## [0.11.21](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.20...megapixels-v0.11.21) (2026-06-02)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.22.1
+
+## [0.11.20](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.19...megapixels-v0.11.20) (2026-06-02)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.22.0
+
+## [0.11.19](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.18...megapixels-v0.11.19) (2026-06-02)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.21.0
+
+## [0.11.18](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.17...megapixels-v0.11.18) (2026-06-01)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.20.18
+
+## [0.11.17](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.16...megapixels-v0.11.17) (2026-06-01)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.2.1
+    * @fuf-stack/pixels bumped to 1.10.2
+    * @fuf-stack/uniform bumped to 1.20.17
+
+## [0.11.16](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.15...megapixels-v0.11.16) (2026-06-01)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.20.16
+
+## [0.11.15](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.14...megapixels-v0.11.15) (2026-05-27)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.20.15
+    * @fuf-stack/veto bumped to 1.7.1
+
+## [0.11.14](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.13...megapixels-v0.11.14) (2026-05-27)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.20.14
+    * @fuf-stack/veto bumped to 1.7.0
+
+## [0.11.13](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.12...megapixels-v0.11.13) (2026-05-27)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.20.13
+    * @fuf-stack/veto bumped to 1.6.0
+
+## [0.11.12](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.11...megapixels-v0.11.12) (2026-05-26)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.20.12
+    * @fuf-stack/veto bumped to 1.5.6
+
+## [0.11.11](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.10...megapixels-v0.11.11) (2026-05-26)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixels bumped to 1.10.1
+    * @fuf-stack/uniform bumped to 1.20.11
+    * @fuf-stack/veto bumped to 1.5.5
+
+## [0.11.10](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.9...megapixels-v0.11.10) (2026-05-23)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.20.10
+    * @fuf-stack/veto bumped to 1.5.4
+
+## [0.11.9](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.8...megapixels-v0.11.9) (2026-05-22)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.20.9
+    * @fuf-stack/veto bumped to 1.5.3
+
+## [0.11.8](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.7...megapixels-v0.11.8) (2026-05-22)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.20.8
+    * @fuf-stack/veto bumped to 1.5.2
+
+## [0.11.7](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.6...megapixels-v0.11.7) (2026-05-22)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.20.7
+    * @fuf-stack/veto bumped to 1.5.1
+
+## [0.11.6](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.5...megapixels-v0.11.6) (2026-05-22)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.20.6
+    * @fuf-stack/veto bumped to 1.5.0
+
+## [0.11.5](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.4...megapixels-v0.11.5) (2026-05-22)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.20.5
+    * @fuf-stack/veto bumped to 1.4.1
+
+## [0.11.4](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.3...megapixels-v0.11.4) (2026-05-22)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.20.4
+    * @fuf-stack/veto bumped to 1.4.0
+
+## [0.11.3](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.2...megapixels-v0.11.3) (2026-05-21)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.20.3
+    * @fuf-stack/veto bumped to 1.3.0
+
+## [0.11.2](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.1...megapixels-v0.11.2) (2026-05-21)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.20.2
+    * @fuf-stack/veto bumped to 1.2.1
+
+## [0.11.1](https://github.com/fuf-stack/pixels/compare/megapixels-v0.11.0...megapixels-v0.11.1) (2026-05-21)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.20.1
+    * @fuf-stack/veto bumped to 1.2.0
+
+## [0.11.0](https://github.com/fuf-stack/pixels/compare/megapixels-v0.10.5...megapixels-v0.11.0) (2026-05-21)
+
+
+### Features
+
+* upgrade to typescript v6 ([ca06ae3](https://github.com/fuf-stack/pixels/commit/ca06ae3de100d5521c693ffbc669b88f964e568e))
+
+
+### Bug Fixes
+
+* **deps:** update [@heroui](https://github.com/heroui) monorepo ([f323f7b](https://github.com/fuf-stack/pixels/commit/f323f7b28e35084f6812c6cd93c77efb76faa912))
+* **deps:** update dependency zod to v4.4.3 ([9d77b75](https://github.com/fuf-stack/pixels/commit/9d77b75d26db36d0a4dd7221ee7c86a648c66bda))
+* **pixel-utils:** fix version tv conflict in repo with overrides ([580ea8b](https://github.com/fuf-stack/pixels/commit/580ea8b2159a450c7b0759326cfedf6a0fb34db5))
+* **pixels,uniform:** update all snaps after new hero version ([7fd3ecb](https://github.com/fuf-stack/pixels/commit/7fd3ecb745ad17a636b62bcdfbcd6e9b000feb1d))
+* **veto:** preserve optional refined schemas across Zod 4.4 intersections ([46c9846](https://github.com/fuf-stack/pixels/commit/46c9846cba5ec2553df90d1f932ffa98d389b7ef))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-utils bumped to 1.3.0
+    * @fuf-stack/pixels bumped to 1.10.0
+    * @fuf-stack/uniform bumped to 1.20.0
+    * @fuf-stack/veto bumped to 1.1.0
+
+## [0.10.5](https://github.com/fuf-stack/pixels/compare/megapixels-v0.10.4...megapixels-v0.10.5) (2026-04-30)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.19.5
+    * @fuf-stack/veto bumped to 1.0.4
+
+## [0.10.4](https://github.com/fuf-stack/pixels/compare/megapixels-v0.10.3...megapixels-v0.10.4) (2026-04-30)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.19.4
+    * @fuf-stack/veto bumped to 1.0.3
+
+## [0.10.3](https://github.com/fuf-stack/pixels/compare/megapixels-v0.10.2...megapixels-v0.10.3) (2026-04-30)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.19.3
+    * @fuf-stack/veto bumped to 1.0.2
+
+## [0.10.2](https://github.com/fuf-stack/pixels/compare/megapixels-v0.10.1...megapixels-v0.10.2) (2026-04-29)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.19.2
+    * @fuf-stack/veto bumped to 1.0.1
+
+## [0.10.1](https://github.com/fuf-stack/pixels/compare/megapixels-v0.10.0...megapixels-v0.10.1) (2026-04-22)
+
+
+### Bug Fixes
+
+* **veto,uniform:** restore v4 compatibility for requiredness and error formatting ([77f492f](https://github.com/fuf-stack/pixels/commit/77f492f2b4d7c3932509423b1b5342b15e68a887))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.19.1
+    * @fuf-stack/veto bumped to 1.0.0
+
+## [0.10.0](https://github.com/fuf-stack/pixels/compare/megapixels-v0.9.15...megapixels-v0.10.0) (2026-04-13)
+
+
+### Features
+
+* **pixels:** replace color prop with unified variant prop ([a4fa20a](https://github.com/fuf-stack/pixels/commit/a4fa20a9a3f1ea1910a410bbc976894d839520f6))
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-icons to v5.6.0 ([#1559](https://github.com/fuf-stack/pixels/issues/1559)) ([f04d739](https://github.com/fuf-stack/pixels/commit/f04d739320b47aa7226be463f4d29df5e56b6445))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.2.0
+    * @fuf-stack/pixel-utils bumped to 1.2.0
+    * @fuf-stack/pixels bumped to 1.9.0
+    * @fuf-stack/uniform bumped to 1.19.0
+
+## [0.9.15](https://github.com/fuf-stack/pixels/compare/megapixels-v0.9.14...megapixels-v0.9.15) (2026-02-06)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.18.3
+
+## [0.9.14](https://github.com/fuf-stack/pixels/compare/megapixels-v0.9.13...megapixels-v0.9.14) (2026-02-06)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.18.2
+
+## [0.9.13](https://github.com/fuf-stack/pixels/compare/megapixels-v0.9.12...megapixels-v0.9.13) (2026-02-06)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixels bumped to 1.8.0
+    * @fuf-stack/uniform bumped to 1.18.1
+
+## [0.9.12](https://github.com/fuf-stack/pixels/compare/megapixels-v0.9.11...megapixels-v0.9.12) (2026-02-04)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.1.4
+    * @fuf-stack/pixels bumped to 1.7.4
+    * @fuf-stack/uniform bumped to 1.18.0
+
+## [0.9.11](https://github.com/fuf-stack/pixels/compare/megapixels-v0.9.10...megapixels-v0.9.11) (2026-01-29)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.17.1
+
+## [0.9.10](https://github.com/fuf-stack/pixels/compare/megapixels-v0.9.9...megapixels-v0.9.10) (2026-01-29)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.17.0
+
+## [0.9.9](https://github.com/fuf-stack/pixels/compare/megapixels-v0.9.8...megapixels-v0.9.9) (2026-01-29)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.16.1
+
+## [0.9.8](https://github.com/fuf-stack/pixels/compare/megapixels-v0.9.7...megapixels-v0.9.8) (2026-01-29)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.16.0
+
+## [0.9.7](https://github.com/fuf-stack/pixels/compare/megapixels-v0.9.6...megapixels-v0.9.7) (2026-01-28)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.15.0
+
+## [0.9.6](https://github.com/fuf-stack/pixels/compare/megapixels-v0.9.5...megapixels-v0.9.6) (2026-01-27)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.1.3
+    * @fuf-stack/pixels bumped to 1.7.3
+    * @fuf-stack/uniform bumped to 1.14.0
+
+## [0.9.5](https://github.com/fuf-stack/pixels/compare/megapixels-v0.9.4...megapixels-v0.9.5) (2026-01-27)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.1.2
+    * @fuf-stack/pixels bumped to 1.7.2
+    * @fuf-stack/uniform bumped to 1.13.0
+
+## [0.9.4](https://github.com/fuf-stack/pixels/compare/megapixels-v0.9.3...megapixels-v0.9.4) (2026-01-26)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.12.0
+
+## [0.9.3](https://github.com/fuf-stack/pixels/compare/megapixels-v0.9.2...megapixels-v0.9.3) (2026-01-21)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/uniform bumped to 1.11.3
+
+## [0.9.2](https://github.com/fuf-stack/pixels/compare/megapixels-v0.9.1...megapixels-v0.9.2) (2026-01-20)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.1.1
+    * @fuf-stack/pixel-utils bumped to 1.1.1
+    * @fuf-stack/pixels bumped to 1.7.1
+    * @fuf-stack/uniform bumped to 1.11.2
+    * @fuf-stack/veto bumped to 0.13.2
+
 ## [0.9.1](https://github.com/fuf-stack/pixels/compare/megapixels-v0.9.0...megapixels-v0.9.1) (2025-12-16)
 
 

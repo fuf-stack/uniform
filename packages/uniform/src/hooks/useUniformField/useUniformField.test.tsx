@@ -8,7 +8,7 @@ import { useUniformField } from './useUniformField';
 
 // ------- Mocks -------
 interface MockGetFieldStateReturn {
-  error?: FieldError[];
+  error?: unknown;
   invalid: boolean;
   isDirty?: boolean;
   isTouched?: boolean;
@@ -20,7 +20,7 @@ interface MockUseFormContextReturn {
   control: object;
   debugMode?: string;
   formState?: { submitCount: number };
-  getFieldState: (name: string) => MockGetFieldStateReturn;
+  getFieldState: (name: string, testId?: string) => MockGetFieldStateReturn;
   getValues: () => Record<string, unknown>;
 }
 
@@ -29,6 +29,7 @@ interface MockField {
   onBlur: () => void;
   onChange: (...args: unknown[]) => void;
   ref: () => void;
+  value?: unknown;
 }
 
 let mockContext: MockUseFormContextReturn;
@@ -46,17 +47,27 @@ vi.mock('../useController/useController', () => ({
   }),
 }));
 
-vi.mock('../../partials/FieldCopyTestIdButton', () => ({
-  FieldCopyTestIdButton: ({ testId }: { testId: string }) => (
+vi.mock('../../partials/FieldCopyTestIdButton', () => {
+  const MockFieldCopyTestIdButton = ({ testId }: { testId: string }) => (
     <span data-testid={`copy-${testId}`}>copy</span>
-  ),
-}));
+  );
 
-vi.mock('../../partials/FieldValidationError', () => ({
-  FieldValidationError: ({ testId }: { testId: string }) => (
+  return {
+    default: MockFieldCopyTestIdButton,
+    FieldCopyTestIdButton: MockFieldCopyTestIdButton,
+  };
+});
+
+vi.mock('../../partials/FieldValidationError', () => {
+  const MockFieldValidationError = ({ testId }: { testId: string }) => (
     <span data-testid={`error-${testId}`}>error</span>
-  ),
-}));
+  );
+
+  return {
+    default: MockFieldValidationError,
+    FieldValidationError: MockFieldValidationError,
+  };
+});
 
 describe('useUniformField', () => {
   beforeEach(() => {
@@ -67,6 +78,7 @@ describe('useUniformField', () => {
       onBlur: vi.fn(),
       onChange: vi.fn(),
       ref: vi.fn(),
+      value: undefined, // Default to undefined (empty)
     };
     mockContext = {
       control: {},
@@ -75,7 +87,6 @@ describe('useUniformField', () => {
       getFieldState: vi.fn((name: string) => ({
         error: undefined as FieldError[] | undefined,
         invalid: false,
-        isDirty: false,
         isTouched: false,
         required: false,
         testId: `${name}-tid`,
@@ -93,8 +104,7 @@ describe('useUniformField', () => {
       let fieldState = {
         error: undefined as FieldError[] | undefined,
         invalid: false,
-        isDirty: false,
-        isTouched: false,
+        isTouched: true, // Field is touched to trigger showInvalid
         required: false,
         testId: 'f-tid',
       };
@@ -110,10 +120,9 @@ describe('useUniformField', () => {
 
       // Change to invalid
       fieldState = {
-        error: [{ message: 'Error' }] as unknown as FieldError[],
+        error: [{ message: 'Error' }] as FieldError[],
         invalid: true,
-        isDirty: true,
-        isTouched: false,
+        isTouched: true, // Field is touched
         required: false,
         testId: 'f-tid',
       };
@@ -136,8 +145,7 @@ describe('useUniformField', () => {
         let fieldState = {
           error: undefined as FieldError[] | undefined,
           invalid: false,
-          isDirty: false,
-          isTouched: false,
+          isTouched: true, // Field is touched to trigger showInvalid
           required: false,
           testId: 'f-tid',
         };
@@ -153,10 +161,9 @@ describe('useUniformField', () => {
 
         // Change to invalid
         fieldState = {
-          error: [{ message: 'Error' }] as unknown as FieldError[],
+          error: [{ message: 'Error' }] as FieldError[],
           invalid: true,
-          isDirty: true,
-          isTouched: false,
+          isTouched: true, // Field is touched
           required: false,
           testId: 'f-tid',
         };
@@ -183,8 +190,7 @@ describe('useUniformField', () => {
         let fieldState = {
           error: undefined as FieldError[] | undefined,
           invalid: false,
-          isDirty: false,
-          isTouched: false,
+          isTouched: true, // Field is touched to trigger showInvalid
           required: false,
           testId: 'f-tid',
         };
@@ -197,10 +203,9 @@ describe('useUniformField', () => {
 
         // Change to invalid
         fieldState = {
-          error: [{ message: 'Error' }] as unknown as FieldError[],
+          error: [{ message: 'Error' }] as FieldError[],
           invalid: true,
-          isDirty: true,
-          isTouched: false,
+          isTouched: true, // Field is touched
           required: false,
           testId: 'f-tid',
         };
@@ -213,8 +218,7 @@ describe('useUniformField', () => {
         fieldState = {
           error: undefined,
           invalid: false,
-          isDirty: true,
-          isTouched: false,
+          isTouched: true, // Still touched
           required: false,
           testId: 'f-tid',
         };
@@ -255,7 +259,7 @@ describe('useUniformField', () => {
   });
 
   it('builds errorMessage when errors exist', () => {
-    const errors = [{ message: 'Required' }] as unknown as FieldError[];
+    const errors = [{ message: 'Required' }] as FieldError[];
     mockContext.getFieldState = vi.fn((name: string) => ({
       error: errors,
       invalid: true,
@@ -265,6 +269,59 @@ describe('useUniformField', () => {
 
     const { result } = renderHook(() => useUniformField({ name: 'field' }));
     expect(result.current.errorMessage).not.toBeNull();
+  });
+
+  it('keeps nested object-shaped errors by default', () => {
+    const indexedError: FieldError = {
+      message: 'Invalid option at index',
+      type: 'custom',
+    };
+    const arrayLevelError: FieldError = {
+      message: 'At least one option is required',
+      type: 'custom',
+    };
+
+    mockContext.getFieldState = vi.fn((name: string) => ({
+      error: {
+        0: [indexedError],
+        _errors: [arrayLevelError],
+      },
+      invalid: true,
+      required: true,
+      testId: `${name}-tid`,
+    }));
+
+    const { result } = renderHook(() => useUniformField({ name: 'field' }));
+    expect(result.current.error).toEqual({
+      0: [indexedError],
+      _errors: [arrayLevelError],
+    });
+  });
+
+  it('normalizes nested object-shaped errors when isArrayValue is true', () => {
+    const indexedError: FieldError = {
+      message: 'Invalid option at index',
+      type: 'custom',
+    };
+    const arrayLevelError: FieldError = {
+      message: 'At least one option is required',
+      type: 'custom',
+    };
+
+    mockContext.getFieldState = vi.fn((name: string) => ({
+      error: {
+        0: [indexedError],
+        _errors: [arrayLevelError],
+      },
+      invalid: true,
+      required: true,
+      testId: `${name}-tid`,
+    }));
+
+    const { result } = renderHook(() =>
+      useUniformField({ isArrayValue: true, name: 'field' }),
+    );
+    expect(result.current.error).toEqual([indexedError, arrayLevelError]);
   });
 
   // Note: These tests verify the debouncing behavior exists but are implementation-aware
@@ -367,27 +424,48 @@ describe('useUniformField', () => {
   });
 
   describe('showInvalid behavior', () => {
-    it('hides errors when field is not dirty, not touched, and form not submitted', () => {
+    it('hides errors when field is empty, not touched, and form not submitted', () => {
       mockContext.getFieldState = vi.fn(() => ({
-        error: [{ message: 'Required' }] as unknown as FieldError[],
-        invalid: false,
-        isDirty: false,
+        error: [{ message: 'Required' }] as FieldError[],
+        invalid: true,
         isTouched: false,
         required: true,
         testId: 'f-tid',
       }));
       mockFormState.submitCount = 0;
+      // Field value is empty (null)
+      mockField = { ...mockField, value: null };
 
       const { result } = renderHook(() => useUniformField({ name: 'f' }));
 
-      // Field has errors but not dirty/touched and no submit attempt -> should not show
+      // Field has errors but empty, not touched, and no submit attempt -> should not show
       expect(result.current.invalid).toBe(false);
       expect(result.current.errorMessage).not.toBeNull();
     });
 
-    it('shows errors when field is dirty (even if not touched)', () => {
+    it('hides errors when field has an initial value but is not dirty', () => {
       mockContext.getFieldState = vi.fn(() => ({
-        error: [{ message: 'Select at least 2' }] as unknown as FieldError[],
+        error: [{ message: 'Too short' }] as FieldError[],
+        invalid: true,
+        isDirty: false,
+        isTouched: false,
+        required: false,
+        testId: 'f-tid',
+      }));
+      mockFormState.submitCount = 0;
+      // Field has an initial value, but the user has not changed it.
+      mockField = { ...mockField, value: 'ab' };
+
+      const { result } = renderHook(() => useUniformField({ name: 'f' }));
+
+      // Invalid initial values stay quiet until the user edits, blurs, or submits.
+      expect(result.current.invalid).toBe(false);
+      expect(result.current.errorMessage).not.toBeNull();
+    });
+
+    it('shows errors when a dirty field has a value (even if not touched)', () => {
+      mockContext.getFieldState = vi.fn(() => ({
+        error: [{ message: 'Too short' }] as FieldError[],
         invalid: true,
         isDirty: true,
         isTouched: false,
@@ -395,24 +473,27 @@ describe('useUniformField', () => {
         testId: 'f-tid',
       }));
       mockFormState.submitCount = 0;
+      // Field has a user-entered value.
+      mockField = { ...mockField, value: 'ab' };
 
       const { result } = renderHook(() => useUniformField({ name: 'f' }));
 
-      // Field is invalid and dirty -> should show error
+      // Dirty field with value -> should show error (format errors while typing)
       expect(result.current.invalid).toBe(true);
       expect(result.current.errorMessage).not.toBeNull();
     });
 
-    it('shows errors when field is touched (even if not dirty)', () => {
+    it('shows errors when field is touched (even if empty)', () => {
       mockContext.getFieldState = vi.fn(() => ({
-        error: [{ message: 'Required' }] as unknown as FieldError[],
+        error: [{ message: 'Required' }] as FieldError[],
         invalid: true,
-        isDirty: false,
         isTouched: true,
         required: true,
         testId: 'f-tid',
       }));
       mockFormState.submitCount = 0;
+      // Field value is empty
+      mockField = { ...mockField, value: '' };
 
       const { result } = renderHook(() => useUniformField({ name: 'f' }));
 
@@ -423,36 +504,38 @@ describe('useUniformField', () => {
 
     it('shows errors after form submit attempt', () => {
       mockContext.getFieldState = vi.fn(() => ({
-        error: [{ message: 'Required' }] as unknown as FieldError[],
+        error: [{ message: 'Required' }] as FieldError[],
         invalid: true,
-        isDirty: false,
         isTouched: false,
         required: true,
         testId: 'f-tid',
       }));
       mockFormState.submitCount = 1;
+      // Field value is empty
+      mockField = { ...mockField, value: null };
 
       const { result } = renderHook(() => useUniformField({ name: 'f' }));
 
-      // Not dirty/touched but form submitted -> should show errors
+      // Empty, not touched, but form submitted -> should show errors
       expect(result.current.invalid).toBe(true);
       expect(result.current.errorMessage).not.toBeNull();
     });
 
-    it('does not show errors when field is invalid but not dirty/touched/submitted', () => {
+    it('does not show errors when field is invalid but empty/not touched/not submitted', () => {
       mockContext.getFieldState = vi.fn(() => ({
-        error: [{ message: 'Select at least 2' }] as unknown as FieldError[],
+        error: [{ message: 'Required' }] as FieldError[],
         invalid: true,
-        isDirty: false,
         isTouched: false,
-        required: false,
+        required: true,
         testId: 'f-tid',
       }));
       mockFormState.submitCount = 0;
+      // Field value is empty
+      mockField = { ...mockField, value: '' };
 
       const { result } = renderHook(() => useUniformField({ name: 'f' }));
 
-      // Field is invalid but NOT dirty/touched/submitted -> should NOT show error
+      // Field is invalid but empty/not touched/not submitted -> should NOT show error
       expect(result.current.invalid).toBe(false);
       expect(result.current.errorMessage).not.toBeNull();
     });
@@ -461,7 +544,6 @@ describe('useUniformField', () => {
       mockContext.getFieldState = vi.fn(() => ({
         error: undefined,
         invalid: false,
-        isDirty: false,
         isTouched: false,
         required: false,
         testId: 'f-tid',
@@ -474,6 +556,110 @@ describe('useUniformField', () => {
       expect(result.current.invalid).toBe(false);
       // errorMessage is always a React element, FieldValidationError handles null errors
       expect(result.current.errorMessage).not.toBeNull();
+    });
+
+    it('handles flat array wrapper with empty value', () => {
+      mockContext.getFieldState = vi.fn(() => ({
+        error: [{ message: 'Required' }] as FieldError[],
+        invalid: true,
+        isTouched: false,
+        required: true,
+        testId: 'f-tid',
+      }));
+      mockFormState.submitCount = 0;
+      // Field value is flat array wrapper with empty inner value
+      mockField = {
+        ...mockField,
+        value: { __FLAT__: null },
+      };
+
+      const { result } = renderHook(() => useUniformField({ name: 'f' }));
+
+      // Flat wrapper with empty value, not touched, not submitted -> should NOT show error
+      expect(result.current.invalid).toBe(false);
+    });
+
+    it('hides errors for flat array wrapper with initial value but not dirty', () => {
+      mockContext.getFieldState = vi.fn(() => ({
+        error: [{ message: 'Too short' }] as FieldError[],
+        invalid: true,
+        isDirty: false,
+        isTouched: false,
+        required: false,
+        testId: 'f-tid',
+      }));
+      mockFormState.submitCount = 0;
+      // Flat wrapper has an initial value, but the user has not changed it.
+      mockField = {
+        ...mockField,
+        value: { __FLAT__: 'ab' },
+      };
+
+      const { result } = renderHook(() => useUniformField({ name: 'f' }));
+
+      // Invalid initial flat values stay quiet until user interaction.
+      expect(result.current.invalid).toBe(false);
+    });
+
+    it('shows errors for dirty flat array wrapper with value', () => {
+      mockContext.getFieldState = vi.fn(() => ({
+        error: [{ message: 'Too short' }] as FieldError[],
+        invalid: true,
+        isDirty: true,
+        isTouched: false,
+        required: false,
+        testId: 'f-tid',
+      }));
+      mockFormState.submitCount = 0;
+      // Field value is flat array wrapper with value
+      mockField = {
+        ...mockField,
+        value: { __FLAT__: 'ab' },
+      };
+
+      const { result } = renderHook(() => useUniformField({ name: 'f' }));
+
+      // Dirty flat wrapper with value -> should show error.
+      expect(result.current.invalid).toBe(true);
+    });
+
+    it('hides errors for empty array (FieldArray)', () => {
+      mockContext.getFieldState = vi.fn(() => ({
+        error: [{ message: 'At least 1 item required' }] as FieldError[],
+        invalid: true,
+        isTouched: false,
+        required: true,
+        testId: 'f-tid',
+      }));
+      mockFormState.submitCount = 0;
+      // Field value is empty array
+      mockField = { ...mockField, value: [] };
+
+      const { result } = renderHook(() => useUniformField({ name: 'f' }));
+
+      // Empty array, not touched, not submitted -> should NOT show error
+      expect(result.current.invalid).toBe(false);
+    });
+
+    it('hides errors for object with all empty values (FieldCard)', () => {
+      mockContext.getFieldState = vi.fn(() => ({
+        error: [{ message: 'All fields required' }] as FieldError[],
+        invalid: true,
+        isTouched: false,
+        required: true,
+        testId: 'f-tid',
+      }));
+      mockFormState.submitCount = 0;
+      // Field value is object with all null values
+      mockField = {
+        ...mockField,
+        value: { a: null, b: '' },
+      };
+
+      const { result } = renderHook(() => useUniformField({ name: 'f' }));
+
+      // Object with all empty values, not touched, not submitted -> should NOT show error
+      expect(result.current.invalid).toBe(false);
     });
   });
 });

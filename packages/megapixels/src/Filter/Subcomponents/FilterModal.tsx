@@ -13,9 +13,22 @@ interface FilterModalProps {
     footer: string;
     body: string;
   }>;
+  /** disables the modal open/close animation */
+  disableAnimation?: boolean;
+  /** container the modal portal is rendered into (defaults to document.body) */
+  portalContainer?: HTMLElement;
+  /** id of the Form this modal's SubmitButton belongs to. The footer is
+   * portalled OUTSIDE the form's DOM subtree, so the button associates with the
+   * form via the native `form` attribute (see SubmitButton `remoteFormId`). */
+  remoteFormId?: string;
 }
 
-const FilterModal = ({ classNames = {} }: FilterModalProps) => {
+const FilterModal = ({
+  classNames = {},
+  disableAnimation = false,
+  portalContainer = undefined,
+  remoteFormId = undefined,
+}: FilterModalProps) => {
   const {
     closeFilterModal,
     getFilterFormFieldName,
@@ -37,27 +50,30 @@ const FilterModal = ({ classNames = {} }: FilterModalProps) => {
 
   return (
     <Modal
-      isOpen
-      onClose={closeFilterModal}
       className={{
         body: classNames.body,
         footer: classNames.footer,
         header: classNames.header,
       }}
+      disableAnimation={disableAnimation}
       footer={
         <>
           <Button
             ariaLabel="Remove filter"
             color="danger"
-            testId="remove_filter_button"
-            variant="flat"
             onClick={() => {
               removeFilter(modalFilterName);
             }}
+            testId="remove_filter_button"
+            variant="flat"
           >
             Remove
           </Button>
-          <SubmitButton ariaLabel="Apply filter" testId="apply_filter_button">
+          <SubmitButton
+            ariaLabel="Apply filter"
+            remoteFormId={remoteFormId}
+            testId="apply_filter_button"
+          >
             Apply Filter
           </SubmitButton>
         </>
@@ -68,6 +84,9 @@ const FilterModal = ({ classNames = {} }: FilterModalProps) => {
           <div>{`${config?.text ?? modalFilterName} Filter`}</div>
         </>
       }
+      isOpen
+      onClose={closeFilterModal}
+      portalContainer={portalContainer}
     >
       <Suspense>
         <FormComponent

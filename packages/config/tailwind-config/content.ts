@@ -1,8 +1,9 @@
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-
 import type { Config } from 'tailwindcss';
 
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const currentDirectory = path.dirname(fileURLToPath(import.meta.url));
 
 /**
  * heroui used components
@@ -19,9 +20,12 @@ const HEROUI_THEME_USED_COMPONENT_PATHS = [
   'badge',
   'breadcrumbs',
   'button',
+  'calendar',
   'card',
   'checkbox',
   'chip',
+  'date-input',
+  'date-picker',
   'divider',
   'drawer',
   'dropdown',
@@ -42,7 +46,7 @@ const HEROUI_THEME_USED_COMPONENT_PATHS = [
   // theme is not required
 ].map((c) => {
   return path.resolve(
-    __dirname,
+    currentDirectory,
     `./node_modules/@heroui/theme/dist/components/${c}.js`,
   );
 });
@@ -53,9 +57,9 @@ const content: Config['content'] = [
   'src/**/*.{js,ts,jsx,tsx}',
 
   // workspace component package paths
-  path.resolve(__dirname, '../../megapixels/src/**/*.tsx'),
-  path.resolve(__dirname, '../../pixels/src/**/*.tsx'),
-  path.resolve(__dirname, '../../uniform/src/**/*.tsx'),
+  path.resolve(currentDirectory, '../../megapixels/src/**/*.tsx'),
+  path.resolve(currentDirectory, '../../pixels/src/**/*.tsx'),
+  path.resolve(currentDirectory, '../../uniform/src/**/*.tsx'),
 
   // heroui theme component paths
   ...HEROUI_THEME_USED_COMPONENT_PATHS,

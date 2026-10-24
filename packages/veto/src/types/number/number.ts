@@ -1,13 +1,17 @@
-import type { VetoEffects } from 'src/types';
+import type { ZodNumber } from 'zod';
 
 import { z } from 'zod';
 
-export const { number } = z;
+/**
+ * Creates a number schema.
+ *
+ * @example
+ * const schema = number().int().min(1);
+ * schema.parse(3);
+ */
+export const number = (): VNumberSchema => {
+  return z.number();
+};
 
 export type VNumber = typeof number;
-export type VVNumberSchema = ReturnType<VNumber>;
-
-/** when used with refine or superRefine */
-export type VNumberRefined<Options = undefined> = (
-  options?: Options,
-) => VetoEffects<VVNumberSchema>;
+export type VNumberSchema = ZodNumber;

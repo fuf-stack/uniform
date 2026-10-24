@@ -2,6 +2,6 @@ import FieldArray from './FieldArray';
 
 export type * from './types';
 
-export { FieldArray };
+export { fieldArrayVariants } from './FieldArray';
 
 export default FieldArray;

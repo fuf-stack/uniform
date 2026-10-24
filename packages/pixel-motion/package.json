@@ -2,17 +2,12 @@
   "name": "@fuf-stack/pixel-motion",
   "description": "fuf pixel motion with framer motion",
   "author": "Fröhlich ∧ Frei",
-  "version": "1.1.0",
+  "version": "1.4.0",
   "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.cts",
+  "types": "./dist/index.d.mts",
   "sideEffects": false,
   "exports": {
-    ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js"
-    },
+    ".": "./dist/index.mjs",
     "./package.json": "./package.json"
   },
   "files": [
@@ -42,6 +37,6 @@
     "prepack": "pnpm build"
   },
   "dependencies": {
-    "framer-motion": "12.23.26"
+    "framer-motion": "12.43.0"
   }
 }

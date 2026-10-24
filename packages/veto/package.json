@@ -2,20 +2,15 @@
   "name": "@fuf-stack/veto",
   "description": "fuf schema validation library",
   "author": "Fröhlich ∧ Frei",
-  "version": "0.13.1",
+  "version": "1.11.0",
   "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.cts",
-  "sideEffects": [
-    "./src/errorMap.ts",
-    "./dist/index.js",
-    "./dist/index.cjs"
-  ],
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
   "exports": {
     ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js"
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
     },
     "./package.json": "./package.json"
   },
@@ -40,14 +35,16 @@
     "url": "https://github.com/fuf-stack/pixels/issues"
   },
   "scripts": {
-    "build": "tsdown",
+    "build": "pnpm build:zod && tsdown",
+    "build:zod": "tsx scripts/generate-zod-type-exports.ts",
+    "codemod:v1": "tsx codemods/v1-upgrade/run.ts",
+    "dev": "tsdown --watch",
     "prepack": "pnpm build",
-    "test": "vitest ./src"
+    "test": "vitest ./src",
+    "test:codemod": "vitest ./codemods",
+    "test:dts": "bash scripts/test-dts-smoke.sh"
   },
-  "peerDependencies": {
-    "zod": ">=4.0.0"
-  },
-  "devDependencies": {
-    "zod": "4.2.0"
+  "dependencies": {
+    "zod": "4.6.6"
   }
 }

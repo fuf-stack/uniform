@@ -1,0 +1,157 @@
+import type { ReactElement, ReactNode } from 'react';
+import type { ExternalToast } from 'sonner';
+import type { AlertProps } from '../Alert';
+
+import { toast as sonnerToast } from 'sonner';
+
+import { cn } from '@fuf-stack/pixel-utils';
+
+import { Alert } from '../Alert';
+
+type AlertVariant = NonNullable<AlertProps['variant']>;
+
+/** Props passed to a custom render function */
+export interface ToastRenderProps {
+  /** Whether the toast can be closed by the user */
+  closable?: boolean;
+  /** Function to close the toast */
+  close: () => void;
+  /** Content displayed at the end of the toast */
+  endContent?: ReactNode;
+  /** Icon displayed at the start of the toast */
+  icon?: ReactNode;
+  /** The toast message */
+  message: ReactNode;
+  /** Title displayed above the toast message */
+  title?: ReactNode;
+  /** The color/severity of the toast */
+  variant: AlertVariant;
+}
+
+/** Options passed to each toast method */
+export interface ToastOptions {
+  /** Whether the toast can be closed by the user */
+  closable?: boolean;
+  /** Duration in milliseconds before the toast auto-closes */
+  duration?: number;
+  /** Content displayed at the end of the toast */
+  endContent?: ReactNode;
+  /** Icon displayed at the start of the toast */
+  icon?: ReactNode;
+  /** Callback fired when the toast auto-closes */
+  onAutoClose?: ExternalToast['onAutoClose'];
+  /** Callback fired when the toast is closed */
+  onClose?: ExternalToast['onDismiss'];
+  /** Position of the toast on the screen */
+  position?: ExternalToast['position'];
+  /** Custom render function to override the default Alert */
+  render?: (props: ToastRenderProps) => ReactElement;
+  /** Title of the toast message */
+  title?: string;
+}
+
+const showToast = (
+  message: ReactNode,
+  variant: AlertVariant,
+  options?: ToastOptions,
+) => {
+  // Map custom ToastOptions to Sonner's ExternalToast format:
+  // - onClose is mapped to Sonner's onDismiss
+  // - closable is handled separately (not a Sonner option)
+  // - position defaults to 'top-center'
+  const { onClose, closable, title, endContent, icon, render, ...rest } =
+    options ?? {};
+  const sonnerOptions: ExternalToast = {
+    position: 'top-center' as const,
+    onDismiss: onClose,
+    ...rest,
+  };
+  return sonnerToast.custom((id) => {
+    // Close function passed to custom render or Alert
+    const close = () => {
+      return sonnerToast.dismiss(id);
+    };
+
+    // Allow custom rendering via render prop
+    if (render) {
+      return render({
+        closable,
+        close,
+        endContent,
+        icon,
+        message,
+        title,
+        variant,
+      });
+    }
+
+    // Default: render Alert
+    return (
+      <Alert
+        // default toast in light mode is white, in dark mode is background
+        className={cn({ 'bg-white dark:bg-background': variant === 'default' })}
+        closable={closable}
+        endContent={endContent}
+        icon={icon}
+        onClose={closable ? close : undefined}
+        title={title}
+        variant={variant}
+      >
+        {message}
+      </Alert>
+    );
+  }, sonnerOptions);
+};
+
+/** Toast object with convenience methods for different severity levels */
+const toast = {
+  /**
+   * Show a default toast.
+   * @returns The toast id which can be passed to `toast.close()`
+   */
+  default: (message: ReactNode, options?: ToastOptions) => {
+    return showToast(message, 'default', options);
+  },
+  /**
+   * Show an info toast.
+   * @returns The toast id which can be passed to `toast.close()`
+   */
+  info: (message: ReactNode, options?: ToastOptions) => {
+    return showToast(message, 'info', options);
+  },
+  /**
+   * Show a warning toast.
+   * @returns The toast id which can be passed to `toast.close()`
+   */
+  warn: (message: ReactNode, options?: ToastOptions) => {
+    return showToast(message, 'warning', {
+      duration: 60000,
+      closable: true,
+      ...options,
+    });
+  },
+  /**
+   * Show a success toast.
+   * @returns The toast id which can be passed to `toast.close()`
+   */
+  success: (message: ReactNode, options?: ToastOptions) => {
+    return showToast(message, 'success', options);
+  },
+  /**
+   * Show an error toast.
+   * @returns The toast id which can be passed to `toast.close()`
+   */
+  error: (message: ReactNode, options?: ToastOptions) => {
+    return showToast(message, 'danger', {
+      duration: 60000,
+      closable: true,
+      ...options,
+    });
+  },
+  /** Close a toast by its id */
+  close: (toastId: string | number) => {
+    sonnerToast.dismiss(toastId);
+  },
+};
+
+export default toast;

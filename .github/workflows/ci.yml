@@ -1,10 +1,17 @@
-name: ci
+name: CI
 
-# only on push in branches
 on:
   push:
     branches:
-      - '**'
+      - main
+      - next
+  pull_request:
+  # Snapshot autofix commits are pushed with GITHUB_TOKEN, which deliberately
+  # does not emit another pull_request event. The autofix workflow dispatches CI.
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 # Cancel in-progress runs when a new workflow is triggered
 concurrency:
@@ -12,41 +19,101 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
-    name: Test
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-
-    steps:
-      - uses: actions/checkout@v6
-      - uses: ./.github/actions/setup-project
-      - name: Run tests
-        run: pnpm test
-      - name: Upload coverage reports
-        uses: actions/upload-artifact@v5
-        with:
-          name: coverage-report
-          path: coverage/
-
-  sonar:
-    name: Sonarqube Analysis
-    # Only run sonar if we're not on a renovate or release-please branch
-    if: ${{ !startsWith(github.ref, 'refs/heads/renovate/') && !startsWith(github.ref, 'refs/heads/release-please') }}
-    needs: [test]
+  lint:
+    name: Lint and dependency boundaries
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: ./.github/actions/setup-project
+      - name: Validate dependency boundaries
+        run: pnpm check:boundaries
+      - name: Verify release bootstrap
+        run: pnpm test:release
+      - name: Lint packages
+        run: pnpm lint
+
+  unit-tests:
+    name: Unit tests and coverage
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: ./.github/actions/setup-project
+      - name: Run unit tests with coverage
+        # Nested project names begin with the config package, not "storybook".
+        # Vitest 5 resolves coverage globs relative to each selected package.
+        run: pnpm test --project='!@repo/storybook-config*' --coverage.include='src/**/*.{js,jsx,ts,tsx}'
+      - name: Verify coverage report
+        run: |
+          test -s coverage/lcov.info
+          grep -q '^SF:' coverage/lcov.info
+          grep -q '^DA:' coverage/lcov.info
+      - name: Upload coverage reports
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: coverage-report
+          path: coverage/
+          if-no-files-found: error
+
+  storybook:
+    name: Storybook tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: ./.github/actions/setup-project
+      - name: Install Playwright browser
+        # Use Storybook's Playwright version to install its matching Chromium
+        # binary and Linux system dependencies before running the browser tests.
+        run: pnpm --filter @repo/storybook-config exec playwright install --with-deps chromium
+      - name: Run Storybook browser tests
+        run: pnpm test:storybook
+
+  package-smoke:
+    name: Package smoke tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      # Package verification consumes the built publishable artifacts.
+      - uses: ./.github/actions/setup-project
+      - name: Verify package tarballs and consumer installation
+        run: pnpm verify:packages
+
+  sonar:
+    name: SonarQube analysis
+    # SONAR_TOKEN is unavailable to fork PRs, so analysis remains push-only.
+    if: ${{ github.event_name == 'push' && !startsWith(github.ref, 'refs/heads/renovate/') && !startsWith(github.ref, 'refs/heads/release-please') }}
+    needs: [unit-tests]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      # Full history clone — Sonarqube needs it for blame / new-code detection.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 0 # Required for Sonarqube
 
+      # Pull the coverage artifact produced by the test job.
       - name: Download coverage report
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8
         with:
           name: coverage-report
           path: coverage/
 
-      - uses: SonarSource/sonarqube-scan-action@v7
+      - name: Verify downloaded coverage report
+        run: |
+          test -s coverage/lcov.info
+          grep -q '^SF:' coverage/lcov.info
+          grep -q '^DA:' coverage/lcov.info
+
+      # Upload coverage + project metadata to SonarQube.
+      - name: Run SonarQube analysis
+        uses: SonarSource/sonarqube-scan-action@d209202bc7d53ff1cc128f7f907dac145c9d6ae9 # v8
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

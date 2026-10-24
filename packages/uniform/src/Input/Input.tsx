@@ -10,6 +10,7 @@ import { tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
 
 import { useInputValueDebounce } from '../hooks/useInputValueDebounce';
 import { useUniformField } from '../hooks/useUniformField';
+import InputPassword from './InputPassword';
 
 // input variants
 export const inputVariants = tv({
@@ -29,35 +30,39 @@ type VariantProps = TVProps<typeof inputVariants>;
 type ClassName = TVClassName<typeof inputVariants>;
 
 export interface InputProps extends VariantProps {
-  /** Custom aria-label for accessibility. If not provided, falls back to field name when no visible label exists */
+  /** Overrides the accessible name, otherwise derived from the field name when no visible label exists */
   ariaLabel?: string;
-  /** CSS class name */
+  /** Applies CSS classes to the input slots */
   className?: ClassName;
-  /** shows clear button when input has value */
+  /** Shows a clear button when the input has a value */
   clearable?: boolean;
-  /** debounce delay in milliseconds for form state updates (default: 300ms) */
+  /** Sets the delay in milliseconds before updating form state (default: 300) */
   debounceDelay?: number;
-  /** input field is disabled */
+  /** Disables the input */
   disabled?: boolean;
-  /** added content to the end of the input Field. */
+  /** Displays content at the end of the input */
   endContent?: ReactNode;
-  /** form field label */
+  /** Hides the visibility toggle for password inputs (default: false) */
+  hidePasswordToggle?: boolean;
+  /** Sets the field label */
   label?: ReactNode;
-  /** form field name */
+  /** Identifies the field in form state */
   name: string;
-  /** callback that is fired when the value is cleared */
+  /** Callback invoked when the input value is cleared */
   onClear?: () => void;
-  /** form field placeholder */
+  /** Sets the placeholder text */
   placeholder?: string;
-  /** size of the input */
+  /** Redacts the value from Uniform debug output; password inputs are always redacted */
+  sensitive?: boolean;
+  /** Sets the input size */
   size?: 'sm' | 'md' | 'lg';
-  /** content added to the start of the input field */
+  /** Displays content at the start of the input */
   startContent?: ReactNode;
-  /** HTML data-testid attribute used in e2e tests */
+  /** Sets the HTML data-testid attribute for e2e tests */
   testId?: string;
-  /** allows disentangled display and form values for a field */
+  /** Converts between display and form values */
   transform?: InputValueTransform<string>;
-  /** input type */
+  /** Sets the input type */
   type?: 'number' | 'password';
 }
 
@@ -72,6 +77,7 @@ const Input = ({
   name,
   onClear = undefined,
   placeholder = ' ',
+  hidePasswordToggle = false,
   size = undefined,
   startContent = undefined,
   type = undefined,
@@ -97,29 +103,21 @@ const Input = ({
   // Use hook that provides debounced onChange and enhanced blur handling
   const { onChange, onBlur, value } = useInputValueDebounce({
     debounceDelay,
+    name,
     onBlur: fieldOnBlur,
     onChange: fieldOnChange,
     value: fieldValue,
   });
 
-  // If input is clearable add props for clearing input value
-  const clearableProps: Pick<HeroInputProps, 'isClearable' | 'onClear'> =
-    clearable
-      ? {
-          isClearable: true,
-          onClear: () => {
-            // if field had initial value we do not reset it
-            // to that value, but clear it instead
-            resetField(name, { defaultValue: null });
-            // if onClear cb provided we call it
-            if (onClear) {
-              onClear();
-            }
-          },
-        }
-      : {};
+  const clearValue = () => {
+    // Clear initial values too, rather than restoring the default value.
+    resetField(name, { defaultValue: null });
+    onClear?.();
+  };
 
-  // classNames from slots
+  const clearableProps: Pick<HeroInputProps, 'isClearable' | 'onClear'> =
+    clearable ? { isClearable: true, onClear: clearValue } : {};
+
   const variants = inputVariants();
   const classNames = variantsToClassNames(variants, _className, 'base');
 
@@ -155,7 +153,6 @@ const Input = ({
     size,
     startContent,
     variant: 'bordered' as const,
-    ...clearableProps,
   };
 
   // Render NumberInput for number type
@@ -169,9 +166,7 @@ const Input = ({
     return (
       <HeroNumberInput
         {...commonProps}
-        // @ts-expect-error - HeroUI NumberInput type is not compatible with null,
-        // but it needs to be for empty/cleared state to be controlled
-        value={numberValue}
+        {...clearableProps}
         // Disable thousands separator to avoid parsing issues
         formatOptions={{
           useGrouping: false,
@@ -182,19 +177,41 @@ const Input = ({
             // Convert number to synthetic event and pass through debounced onChange
             onChange({
               target: { value: String(e) },
-            } as React.ChangeEvent<HTMLInputElement>);
+            });
           } else {
             // Pass event through debounced onChange
             onChange(e);
           }
         }}
+        // @ts-expect-error - HeroUI NumberInput type is not compatible with null,
+        // but it needs to be for empty/cleared state to be controlled
+        value={numberValue}
       />
     );
   }
 
-  // Render regular Input for text/password
+  if (type === 'password') {
+    return (
+      <InputPassword
+        {...commonProps}
+        clearable={clearable}
+        hidePasswordToggle={hidePasswordToggle}
+        onChange={onChange}
+        onClear={clearValue}
+        testId={testId}
+        value={value}
+      />
+    );
+  }
+
   return (
-    <HeroInput {...commonProps} onChange={onChange} type={type} value={value} />
+    <HeroInput
+      {...commonProps}
+      {...clearableProps}
+      onChange={onChange}
+      type={type}
+      value={value}
+    />
   );
 };
 

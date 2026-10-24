@@ -1,19 +1,28 @@
-import { expect, it } from 'vitest';
+/* eslint-disable vitest/expect-expect */
 
-import v, { vEnum } from 'src';
+import { expect, expectTypeOf, it } from 'vitest';
+
+import veto, { vEnum } from 'src';
+
+it('exposes enum schema typing', () => {
+  const schema = vEnum(['ONE', 'TWO'] as const);
+  expectTypeOf(schema.parse('ONE')).toEqualTypeOf<'ONE' | 'TWO'>();
+});
 
 it('rejects invalid enum value', () => {
   const schema = { enumField: vEnum(['ONE', 'TWO']) };
-  const result = v(schema).validate({ enumField: 'THREE' });
+  const result = veto(schema).validate({ enumField: 'THREE' });
   expect(result).toStrictEqual({
     success: false,
     data: null,
     errors: {
       enumField: [
         {
-          code: 'invalid_value',
-          message: 'Invalid option: expected one of "ONE"|"TWO"',
-          values: ['ONE', 'TWO'],
+          code: 'invalid_enum_value',
+          message:
+            "Invalid enum value. Expected 'ONE' | 'TWO', received 'THREE'",
+          options: ['ONE', 'TWO'],
+          received: 'THREE',
         },
       ],
     },
@@ -22,13 +31,13 @@ it('rejects invalid enum value', () => {
 
 it('reject undefined enum value with empty error', () => {
   const schema = { enumField: vEnum(['ONE', 'TWO']) };
-  const result = v(schema).validate({ enumField: undefined });
+  const result = veto(schema).validate({ enumField: undefined });
   expect(result).toMatchObject({
     success: false,
     errors: {
       enumField: [
         {
-          code: 'invalid_value',
+          code: 'invalid_enum_value',
           message: 'Field is required',
         },
       ],
@@ -38,14 +47,14 @@ it('reject undefined enum value with empty error', () => {
 
 it('reject empty string enum value with empty error', () => {
   const schema = { enumField: vEnum(['ONE', 'TWO']) };
-  const result = v(schema).validate({ enumField: '' });
+  const result = veto(schema).validate({ enumField: '' });
   expect(result).toMatchObject({
     success: false,
     errors: {
       enumField: [
         {
-          code: 'invalid_value',
-          message: 'Field is required',
+          code: 'invalid_enum_value',
+          message: "Invalid enum value. Expected 'ONE' | 'TWO', received ''",
         },
       ],
     },
@@ -54,7 +63,7 @@ it('reject empty string enum value with empty error', () => {
 
 it('accepts valid enum value', () => {
   const schema = { enumField: vEnum(['ONE', 'TWO']) };
-  const result = v(schema).validate({ enumField: 'TWO' });
+  const result = veto(schema).validate({ enumField: 'TWO' });
   expect(result).toStrictEqual({
     success: true,
     data: {
@@ -62,4 +71,21 @@ it('accepts valid enum value', () => {
     },
     errors: null,
   });
+});
+
+it('exposes enum options metadata', () => {
+  const schema = vEnum(['ONE', 'TWO'] as const);
+  expect(schema.options).toStrictEqual(['ONE', 'TWO']);
+});
+
+it('supports extract and exclude helpers', () => {
+  const schema = vEnum(['ONE', 'TWO'] as const);
+  const onlyOne = schema.extract(['ONE']);
+  const withoutOne = schema.exclude(['ONE']);
+
+  expectTypeOf(onlyOne.parse('ONE')).toEqualTypeOf<'ONE'>();
+  expectTypeOf(withoutOne.parse('TWO')).toEqualTypeOf<'TWO'>();
+
+  expect(onlyOne.safeParse('TWO').success).toBe(false);
+  expect(withoutOne.safeParse('ONE').success).toBe(false);
 });

@@ -1,5 +1,322 @@
 # Changelog
 
+## [1.14.1](https://github.com/fuf-stack/pixels/compare/pixels-v1.14.0...pixels-v1.14.1) (2026-10-19)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-utils bumped to 1.4.1
+
+## [1.14.0](https://github.com/fuf-stack/pixels/compare/pixels-v1.13.2...pixels-v1.14.0) (2026-10-14)
+
+
+### Features
+
+* expand verification and contribution tooling ([cf200f0](https://github.com/fuf-stack/pixels/commit/cf200f0f6985e010b34b81eed494356c27099d55))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.4.0
+
+## [1.13.2](https://github.com/fuf-stack/pixels/compare/pixels-v1.13.1...pixels-v1.13.2) (2026-08-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v12.43.0 ([#1833](https://github.com/fuf-stack/pixels/issues/1833)) ([ab240cf](https://github.com/fuf-stack/pixels/commit/ab240cf6e906f7d7fb4d868372144cbfef92478f))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.3.2
+
+## [1.13.1](https://github.com/fuf-stack/pixels/compare/pixels-v1.13.0...pixels-v1.13.1) (2026-07-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v12.42.2 ([#1785](https://github.com/fuf-stack/pixels/issues/1785)) ([24c1f81](https://github.com/fuf-stack/pixels/commit/24c1f814c54aa84e470c096bd89574c977242632))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.3.1
+
+## [1.13.0](https://github.com/fuf-stack/pixels/compare/pixels-v1.12.1...pixels-v1.13.0) (2026-07-17)
+
+
+### Features
+
+* build esm only, no cjs anymore ([7856711](https://github.com/fuf-stack/pixels/commit/78567111820395bb9b0017c04820e0c8efea0e9f))
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-icons to v5.7.0 ([#1769](https://github.com/fuf-stack/pixels/issues/1769)) ([22db442](https://github.com/fuf-stack/pixels/commit/22db442b51cb3de20cf9962a619c7872019a842d))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.3.0
+    * @fuf-stack/pixel-utils bumped to 1.4.0
+
+## [1.12.1](https://github.com/fuf-stack/pixels/compare/pixels-v1.12.0...pixels-v1.12.1) (2026-07-16)
+
+
+### Bug Fixes
+
+* **pixels:** ship Json CSS as Json.styles.css ([bbd1c63](https://github.com/fuf-stack/pixels/commit/bbd1c63f7d6e15e61e21e8982b57666a1042484a))
+
+## [1.12.0](https://github.com/fuf-stack/pixels/compare/pixels-v1.11.8...pixels-v1.12.0) (2026-07-05)
+
+
+### Features
+
+* **megapixels,pixels:** add DataTable component ([e3077cb](https://github.com/fuf-stack/pixels/commit/e3077cb907a9776f76c5cf398d5067fdfacceb3f))
+* **pixels,megapixels:** integrate ScrollShadow with virtualized infinite scroll ([2618186](https://github.com/fuf-stack/pixels/commit/26181865a55c33e212af123c7b0aefc6f5dd940d))
+
+## [1.11.8](https://github.com/fuf-stack/pixels/compare/pixels-v1.11.7...pixels-v1.11.8) (2026-06-30)
+
+
+### Bug Fixes
+
+* **pixels:** bump version ([f93a820](https://github.com/fuf-stack/pixels/commit/f93a8204ba2902d0a4aa5ae6b07fbcaf8c8a8211))
+
+## [1.11.7](https://github.com/fuf-stack/pixels/compare/pixels-v1.11.6...pixels-v1.11.7) (2026-06-26)
+
+
+### Bug Fixes
+
+* **pixels:** bump versions ([c566f19](https://github.com/fuf-stack/pixels/commit/c566f19b79eab90a4f48274fed6fe4a5dbfd7621))
+
+## [1.11.6](https://github.com/fuf-stack/pixels/compare/pixels-v1.11.5...pixels-v1.11.6) (2026-06-26)
+
+
+### Bug Fixes
+
+* **pixels:** bump versions ([74adb0e](https://github.com/fuf-stack/pixels/commit/74adb0e7443486d445a59b0fcbd5bd3a72914b29))
+
+## [1.11.5](https://github.com/fuf-stack/pixels/compare/pixels-v1.11.4...pixels-v1.11.5) (2026-06-25)
+
+
+### Bug Fixes
+
+* **pixels:** mark Toaster as react-aria top layer so toasts work over modals ([4c76058](https://github.com/fuf-stack/pixels/commit/4c76058c9f0f7fe928f39a79b67e116520ab0fd3))
+
+## [1.11.4](https://github.com/fuf-stack/pixels/compare/pixels-v1.11.3...pixels-v1.11.4) (2026-06-06)
+
+
+### Bug Fixes
+
+* **pixels:** some Alert and Toast style fixes ([26f8115](https://github.com/fuf-stack/pixels/commit/26f81157d3a535442504a2ffd749fbb2b6a02e46))
+
+## [1.11.3](https://github.com/fuf-stack/pixels/compare/pixels-v1.11.2...pixels-v1.11.3) (2026-06-06)
+
+
+### Bug Fixes
+
+* **pixels:** fix Alert default style ([2028f43](https://github.com/fuf-stack/pixels/commit/2028f43b85ed4cdde979cecb9c7d3719a9b4d770))
+* **pixels:** fix toast snap ([d60bedb](https://github.com/fuf-stack/pixels/commit/d60bedb9aec6f2106de729a997604d254bb8430e))
+* **pixels:** improve Alert styles and stories ([d0aec48](https://github.com/fuf-stack/pixels/commit/d0aec4811477fd1852da3d7226dd88b324214b39))
+
+## [1.11.2](https://github.com/fuf-stack/pixels/compare/pixels-v1.11.1...pixels-v1.11.2) (2026-06-04)
+
+
+### Bug Fixes
+
+* **pixels:** resolve react-hooks lint issues in Drawer story and Json renderer ([d807dd6](https://github.com/fuf-stack/pixels/commit/d807dd6e21b8b05a6a75c0f2e85d0ac44f75654e))
+* reformat some code ([f40f4b0](https://github.com/fuf-stack/pixels/commit/f40f4b05a9eb03baf0b1dc972425e79a4cfe0db2))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-utils bumped to 1.3.2
+
+## [1.11.1](https://github.com/fuf-stack/pixels/compare/pixels-v1.11.0...pixels-v1.11.1) (2026-06-04)
+
+
+### Bug Fixes
+
+* add shared dep-bundled dts config and annotate buttonVariants for portable types ([ab3e5d6](https://github.com/fuf-stack/pixels/commit/ab3e5d66fbf84324dd20ecc4db0b097ed1a80e44))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.2.2
+    * @fuf-stack/pixel-utils bumped to 1.3.1
+
+## [1.11.0](https://github.com/fuf-stack/pixels/compare/pixels-v1.10.2...pixels-v1.11.0) (2026-06-03)
+
+
+### Features
+
+* **pixels:** add modal store and ModalHost ([f97ade3](https://github.com/fuf-stack/pixels/commit/f97ade3d53f01d31d2f7c0b33d34aac7a7253c57))
+* **pixels:** apply Toaster width to custom toasts ([9fd125d](https://github.com/fuf-stack/pixels/commit/9fd125d10355112da0c4eca38e57ecd853227ee5))
+
+
+### Bug Fixes
+
+* **pixels:** align Alert description colors ([eab3648](https://github.com/fuf-stack/pixels/commit/eab3648b207af68e188c3c2d4a882983bdaab78e))
+
+## [1.10.2](https://github.com/fuf-stack/pixels/compare/pixels-v1.10.1...pixels-v1.10.2) (2026-06-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v12.40.0 ([#1688](https://github.com/fuf-stack/pixels/issues/1688)) ([da9e77d](https://github.com/fuf-stack/pixels/commit/da9e77db6c630dd0484aaf344929bc7803cca5c6))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.2.1
+
+## [1.10.1](https://github.com/fuf-stack/pixels/compare/pixels-v1.10.0...pixels-v1.10.1) (2026-05-26)
+
+
+### Bug Fixes
+
+* **pixels:** document temporary CJS theme shim for Json ([3ae350d](https://github.com/fuf-stack/pixels/commit/3ae350dd1a0a5ab7857ffafd1a68420173c6e010))
+
+## [1.10.0](https://github.com/fuf-stack/pixels/compare/pixels-v1.9.0...pixels-v1.10.0) (2026-05-21)
+
+
+### Features
+
+* **pixels:** bundle package with tsdown ([97f8b67](https://github.com/fuf-stack/pixels/commit/97f8b67f6c92d5e91427b65a90c58101f4c3358e))
+* upgrade to typescript v6 ([ca06ae3](https://github.com/fuf-stack/pixels/commit/ca06ae3de100d5521c693ffbc669b88f964e568e))
+
+
+### Bug Fixes
+
+* **deps:** update [@heroui](https://github.com/heroui) monorepo ([f323f7b](https://github.com/fuf-stack/pixels/commit/f323f7b28e35084f6812c6cd93c77efb76faa912))
+* **deps:** update [@heroui](https://github.com/heroui) monorepo ([71b7728](https://github.com/fuf-stack/pixels/commit/71b772808415943b7fe85bafc49b29e29335be60))
+* **pixels,uniform:** update all snaps after new hero version ([7fd3ecb](https://github.com/fuf-stack/pixels/commit/7fd3ecb745ad17a636b62bcdfbcd6e9b000feb1d))
+* **pixels:** fix snaps after @uiw/react-json-view update ([3fe2b26](https://github.com/fuf-stack/pixels/commit/3fe2b26a57269cfb6ea9770c8f072670072a291a))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-utils bumped to 1.3.0
+
+## [1.9.0](https://github.com/fuf-stack/pixels/compare/pixels-v1.8.0...pixels-v1.9.0) (2026-04-13)
+
+
+### Features
+
+* **pixels:** replace color prop with unified variant prop ([a4fa20a](https://github.com/fuf-stack/pixels/commit/a4fa20a9a3f1ea1910a410bbc976894d839520f6))
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v12.29.2 ([#1512](https://github.com/fuf-stack/pixels/issues/1512)) ([22f3588](https://github.com/fuf-stack/pixels/commit/22f3588488d5710891032c163e9e12d8abf3a423))
+* **deps:** update dependency framer-motion to v12.33.0 ([#1533](https://github.com/fuf-stack/pixels/issues/1533)) ([c0f84ec](https://github.com/fuf-stack/pixels/commit/c0f84eced1dcd64f70348cd579a891cf1c6caa4a))
+* **deps:** update dependency framer-motion to v12.34.0 ([#1540](https://github.com/fuf-stack/pixels/issues/1540)) ([81a892f](https://github.com/fuf-stack/pixels/commit/81a892fa247adbd4ae6c97d376a5ba1811ed4851))
+* **deps:** update dependency framer-motion to v12.34.3 ([#1546](https://github.com/fuf-stack/pixels/issues/1546)) ([58c5994](https://github.com/fuf-stack/pixels/commit/58c5994beec034731fde8c4ecd58f8bd6c0eaa4a))
+* **deps:** update dependency framer-motion to v12.35.1 ([#1567](https://github.com/fuf-stack/pixels/issues/1567)) ([125ea00](https://github.com/fuf-stack/pixels/commit/125ea00d05a08be6cc8a839afcf092ceb71d45c7))
+* **deps:** update dependency framer-motion to v12.36.0 ([#1579](https://github.com/fuf-stack/pixels/issues/1579)) ([3e3b149](https://github.com/fuf-stack/pixels/commit/3e3b149eced76b3cd14d6ef90f5bec02798fdffb))
+* **deps:** update dependency framer-motion to v12.38.0 ([#1589](https://github.com/fuf-stack/pixels/issues/1589)) ([213501f](https://github.com/fuf-stack/pixels/commit/213501f4f9a757690496836db9fa808e9701dd29))
+* **deps:** update dependency react-icons to v5.6.0 ([#1559](https://github.com/fuf-stack/pixels/issues/1559)) ([f04d739](https://github.com/fuf-stack/pixels/commit/f04d739320b47aa7226be463f4d29df5e56b6445))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.2.0
+    * @fuf-stack/pixel-utils bumped to 1.2.0
+
+## [1.8.0](https://github.com/fuf-stack/pixels/compare/pixels-v1.7.4...pixels-v1.8.0) (2026-02-06)
+
+
+### Features
+
+* **pixels:** replace Toast implementation with sonner and simplify Alert variant ([a3b1c82](https://github.com/fuf-stack/pixels/commit/a3b1c82f22d40577a5902616e89bb88e9dfaa193))
+
+## [1.7.4](https://github.com/fuf-stack/pixels/compare/pixels-v1.7.3...pixels-v1.7.4) (2026-02-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v12.29.0 ([#1496](https://github.com/fuf-stack/pixels/issues/1496)) ([61a9d73](https://github.com/fuf-stack/pixels/commit/61a9d733275d6d32b5698249ecc316bfa13531ca))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.1.4
+
+## [1.7.3](https://github.com/fuf-stack/pixels/compare/pixels-v1.7.2...pixels-v1.7.3) (2026-01-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v12.27.5 ([#1485](https://github.com/fuf-stack/pixels/issues/1485)) ([81c0927](https://github.com/fuf-stack/pixels/commit/81c09278d57b6a2a868eb079f9005ce182fa3f79))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.1.3
+
+## [1.7.2](https://github.com/fuf-stack/pixels/compare/pixels-v1.7.1...pixels-v1.7.2) (2026-01-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v12.27.1 ([#1480](https://github.com/fuf-stack/pixels/issues/1480)) ([32c8af6](https://github.com/fuf-stack/pixels/commit/32c8af6456c5275573a6d20ec5f3c569a758c4ba))
+* **deps:** update dependency framer-motion to v12.27.3 ([#1483](https://github.com/fuf-stack/pixels/issues/1483)) ([e797afb](https://github.com/fuf-stack/pixels/commit/e797afb4a54784bd4c3a0f5c97992a3c382e6cf1))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.1.2
+
+## [1.7.1](https://github.com/fuf-stack/pixels/compare/pixels-v1.7.0...pixels-v1.7.1) (2026-01-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v12.23.26 ([#1410](https://github.com/fuf-stack/pixels/issues/1410)) ([9afec8a](https://github.com/fuf-stack/pixels/commit/9afec8a8e3f0f4035813fd360a8dad8edcfbc33e))
+* **deps:** update dependency framer-motion to v12.24.0 ([#1449](https://github.com/fuf-stack/pixels/issues/1449)) ([2d9779c](https://github.com/fuf-stack/pixels/commit/2d9779c2befc9e9d0954a0b72dd92bcd7eba5f30))
+* **deps:** update dependency framer-motion to v12.24.10 ([#1454](https://github.com/fuf-stack/pixels/issues/1454)) ([83af561](https://github.com/fuf-stack/pixels/commit/83af561c2820ed0ee090fee15caa35494540060e))
+* **deps:** update dependency framer-motion to v12.24.12 ([#1455](https://github.com/fuf-stack/pixels/issues/1455)) ([b48120f](https://github.com/fuf-stack/pixels/commit/b48120f6108026719904d8412557436ca55708b6))
+* **deps:** update dependency framer-motion to v12.24.7 ([#1451](https://github.com/fuf-stack/pixels/issues/1451)) ([c4ae4e1](https://github.com/fuf-stack/pixels/commit/c4ae4e1dee3c23ef905f5b73ce934fdd67e0faaf))
+* **deps:** update dependency framer-motion to v12.24.9 ([#1453](https://github.com/fuf-stack/pixels/issues/1453)) ([32b0fd3](https://github.com/fuf-stack/pixels/commit/32b0fd3a349d6941c8323a1093cb4a68c5ee4ebe))
+* **deps:** update dependency framer-motion to v12.25.0 ([#1456](https://github.com/fuf-stack/pixels/issues/1456)) ([ef6dccc](https://github.com/fuf-stack/pixels/commit/ef6dccc942c1c9c568e65d6eec20f1062542d2d5))
+* **deps:** update dependency framer-motion to v12.26.1 ([#1465](https://github.com/fuf-stack/pixels/issues/1465)) ([6e66952](https://github.com/fuf-stack/pixels/commit/6e669529016732cf0911d23331bbe50a83565025))
+* **deps:** update dependency framer-motion to v12.26.2 ([#1467](https://github.com/fuf-stack/pixels/issues/1467)) ([d611ed2](https://github.com/fuf-stack/pixels/commit/d611ed2a81b305fe0563c394122fa16b2ccfc531))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.1.1
+    * @fuf-stack/pixel-utils bumped to 1.1.1
+
 ## [1.7.0](https://github.com/fuf-stack/pixels/compare/pixels-v1.6.1...pixels-v1.7.0) (2025-12-16)
 
 

@@ -1,5 +1,62 @@
 # Changelog
 
+## [1.4.1](https://github.com/fuf-stack/pixels/compare/pixel-utils-v1.4.0...pixel-utils-v1.4.1) (2026-10-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency tailwind-merge to v3.7.0 ([#1904](https://github.com/fuf-stack/pixels/issues/1904)) ([769a266](https://github.com/fuf-stack/pixels/commit/769a2667fe53a81799249e8d8507994f4f900ecd))
+
+## [1.4.0](https://github.com/fuf-stack/pixels/compare/pixel-utils-v1.3.2...pixel-utils-v1.4.0) (2026-07-17)
+
+
+### Features
+
+* build esm only, no cjs anymore ([7856711](https://github.com/fuf-stack/pixels/commit/78567111820395bb9b0017c04820e0c8efea0e9f))
+
+## [1.3.2](https://github.com/fuf-stack/pixels/compare/pixel-utils-v1.3.1...pixel-utils-v1.3.2) (2026-06-04)
+
+
+### Bug Fixes
+
+* reformat some code ([f40f4b0](https://github.com/fuf-stack/pixels/commit/f40f4b05a9eb03baf0b1dc972425e79a4cfe0db2))
+
+## [1.3.1](https://github.com/fuf-stack/pixels/compare/pixel-utils-v1.3.0...pixel-utils-v1.3.1) (2026-06-04)
+
+
+### Bug Fixes
+
+* add shared dep-bundled dts config and annotate buttonVariants for portable types ([ab3e5d6](https://github.com/fuf-stack/pixels/commit/ab3e5d66fbf84324dd20ecc4db0b097ed1a80e44))
+
+## [1.3.0](https://github.com/fuf-stack/pixels/compare/pixel-utils-v1.2.0...pixel-utils-v1.3.0) (2026-05-21)
+
+
+### Features
+
+* upgrade to typescript v6 ([ca06ae3](https://github.com/fuf-stack/pixels/commit/ca06ae3de100d5521c693ffbc669b88f964e568e))
+
+
+### Bug Fixes
+
+* **deps:** update [@heroui](https://github.com/heroui) monorepo ([f323f7b](https://github.com/fuf-stack/pixels/commit/f323f7b28e35084f6812c6cd93c77efb76faa912))
+* **deps:** update [@heroui](https://github.com/heroui) monorepo ([71b7728](https://github.com/fuf-stack/pixels/commit/71b772808415943b7fe85bafc49b29e29335be60))
+* **pixel-utils:** fix version tv conflict in repo with overrides ([580ea8b](https://github.com/fuf-stack/pixels/commit/580ea8b2159a450c7b0759326cfedf6a0fb34db5))
+
+## [1.2.0](https://github.com/fuf-stack/pixels/compare/pixel-utils-v1.1.1...pixel-utils-v1.2.0) (2026-04-13)
+
+
+### Features
+
+* **pixel-utils:** add proseTwMerge and prose-aware cn for @tailwindcss/typography support ([f109297](https://github.com/fuf-stack/pixels/commit/f109297a0aa0049e8d03d22f9d2aa239e0691084))
+* **pixels:** replace color prop with unified variant prop ([a4fa20a](https://github.com/fuf-stack/pixels/commit/a4fa20a9a3f1ea1910a410bbc976894d839520f6))
+
+## [1.1.1](https://github.com/fuf-stack/pixels/compare/pixel-utils-v1.1.0...pixel-utils-v1.1.1) (2026-01-20)
+
+
+### Bug Fixes
+
+* **pixel-utils:** use tsup for bundling again ([1608d14](https://github.com/fuf-stack/pixels/commit/1608d145e73c75ccb336e84251fa89778942785d))
+
 ## [1.1.0](https://github.com/fuf-stack/pixels/compare/pixel-utils-v1.0.6...pixel-utils-v1.1.0) (2025-12-16)
 
 

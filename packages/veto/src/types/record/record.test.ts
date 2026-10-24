@@ -1,9 +1,12 @@
-import { expect, it } from 'vitest';
+import type { VRecordSchema } from './record';
 
-import v, { record, string } from 'src';
+import { expect, expectTypeOf, it } from 'vitest';
+
+import veto, { record, string } from 'src';
+import { z } from 'zod';
 
 const schema = {
-  recordField: record(string()),
+  recordField: record(string(), string()),
 };
 
 const validInput = {
@@ -13,8 +16,36 @@ const validInput = {
   },
 };
 
+it('exposes record schema typing', () => {
+  const typedRecord = record(string(), string());
+  const typedFactory: typeof record = record;
+  const typedSchema: VRecordSchema<
+    ReturnType<typeof string>,
+    ReturnType<typeof string>
+  > = typedRecord;
+
+  expectTypeOf(typedFactory).toEqualTypeOf<typeof record>();
+  expectTypeOf(typedSchema).toEqualTypeOf<
+    VRecordSchema<ReturnType<typeof string>, ReturnType<typeof string>>
+  >();
+  expectTypeOf(typedRecord.parse({ key: 'value' })).toEqualTypeOf<
+    Record<string, string>
+  >();
+  expect(typedRecord.safeParse({ key: 'value' }).success).toBe(true);
+});
+
+it('accepts key schemas beyond plain string', () => {
+  const keySchema = z.union([z.string(), z.number(), z.symbol()]);
+  const typedRecord = record(keySchema, string());
+
+  expectTypeOf(typedRecord.parse({ key: 'value' })).toEqualTypeOf<
+    Record<string | number | symbol, string>
+  >();
+  expect(typedRecord.safeParse({ key: 'value' }).success).toBe(true);
+});
+
 it('accepts valid record with string values', () => {
-  const result = v(schema).validate(validInput);
+  const result = veto(schema).validate(validInput);
   expect(result).toStrictEqual({
     success: true,
     data: validInput,
@@ -23,7 +54,7 @@ it('accepts valid record with string values', () => {
 });
 
 it('rejects non-record value', () => {
-  const result = v(schema).validate({
+  const result = veto(schema).validate({
     recordField: ['some string'],
   });
   expect(result).toStrictEqual({
@@ -35,7 +66,7 @@ it('rejects non-record value', () => {
           {
             code: 'invalid_type',
             expected: 'record',
-            message: 'Invalid input: expected record, received array',
+            message: 'Expected record, received array',
             received: 'array',
           },
         ],
@@ -45,7 +76,7 @@ it('rejects non-record value', () => {
 });
 
 it('rejects invalid value types in record', () => {
-  const result = v(schema).validate({
+  const result = veto(schema).validate({
     recordField: {
       key1: 'valid string',
       key2: 123, // number instead of string
@@ -60,7 +91,7 @@ it('rejects invalid value types in record', () => {
           {
             code: 'invalid_type',
             expected: 'string',
-            message: 'Invalid input: expected string, received number',
+            message: 'Expected string, received number',
             received: 'number',
           },
         ],
@@ -70,7 +101,7 @@ it('rejects invalid value types in record', () => {
 });
 
 it('accepts empty record', () => {
-  const result = v(schema).validate({
+  const result = veto(schema).validate({
     recordField: {},
   });
   expect(result).toStrictEqual({
@@ -91,7 +122,7 @@ it('accepts record with multiple valid entries', () => {
       d: 'value4',
     },
   };
-  const result = v(schema).validate(input);
+  const result = veto(schema).validate(input);
   expect(result).toStrictEqual({
     success: true,
     data: input,
@@ -100,7 +131,7 @@ it('accepts record with multiple valid entries', () => {
 });
 
 it('rejects record with mixed valid and invalid values', () => {
-  const result = v(schema).validate({
+  const result = veto(schema).validate({
     recordField: {
       valid1: 'string',
       invalid1: 123,
@@ -117,7 +148,7 @@ it('rejects record with mixed valid and invalid values', () => {
           {
             code: 'invalid_type',
             expected: 'string',
-            message: 'Invalid input: expected string, received number',
+            message: 'Expected string, received number',
             received: 'number',
           },
         ],
@@ -125,7 +156,7 @@ it('rejects record with mixed valid and invalid values', () => {
           {
             code: 'invalid_type',
             expected: 'string',
-            message: 'Invalid input: expected string, received boolean',
+            message: 'Expected string, received boolean',
             received: 'boolean',
           },
         ],

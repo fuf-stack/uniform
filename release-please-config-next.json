@@ -6,6 +6,7 @@
   "prerelease-type": "next",
   "versioning": "prerelease",
   "packages": {
+    "packages/atelier": {},
     "packages/megapixels": {},
     "packages/pixel-motion": {},
     "packages/pixel-utils": {},
@@ -14,5 +15,5 @@
     "packages/veto": {}
   },
   "plugins": ["node-workspace"],
-  "last-release-sha": "b888a9c8e27564e38a6b894c411388dd33883927"
+  "bootstrap-sha": "b888a9c8e27564e38a6b894c411388dd33883927"
 }

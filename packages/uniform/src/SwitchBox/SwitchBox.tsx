@@ -143,7 +143,7 @@ const SwitchBox = ({
   const classNames = variantsToClassNames(variants, className, 'box');
 
   return (
-    <div>
+    <>
       <Component
         {...getBaseProps()}
         className={classNames.box}
@@ -157,8 +157,6 @@ const SwitchBox = ({
             aria-label={typeof label === 'string' ? label : name}
             checked={!!field.value}
             name={name}
-            tabIndex={-1}
-            type="checkbox"
             onChange={(e) => {
               onChange(e.target.checked);
             }}
@@ -167,6 +165,8 @@ const SwitchBox = ({
               // forward focus to the visual switch to show focus ring
               visualSwitchRef.current?.focus();
             }}
+            tabIndex={-1}
+            type="checkbox"
           />
           {/* Visual switch input for focus ring */}
           <input
@@ -236,7 +236,7 @@ const SwitchBox = ({
           <div {...getErrorMessageProps()}>{errorMessage}</div>
         </div>
       ) : null}
-    </div>
+    </>
   );
 };
 

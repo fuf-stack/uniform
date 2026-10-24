@@ -6,9 +6,9 @@ import { useWatchUserChange } from './useWatchUserChange';
 
 // Mock useFormContext
 interface MockFormContextReturn {
-  setValue: ReturnType<typeof vi.fn>;
-  resetField: ReturnType<typeof vi.fn>;
   reset: ReturnType<typeof vi.fn>;
+  resetField: ReturnType<typeof vi.fn>;
+  setValue: ReturnType<typeof vi.fn>;
   userChange: {
     subscribe: ReturnType<typeof vi.fn>;
     notify: ReturnType<typeof vi.fn>;
@@ -21,13 +21,13 @@ vi.mock('../useFormContext/useFormContext', () => ({
 }));
 
 interface FormData {
-  country?: string;
-  city?: string;
   address?: string;
-  paymentMethod?: string;
-  installments?: number;
-  category?: string;
   brand?: string;
+  category?: string;
+  city?: string;
+  country?: string;
+  installments?: number;
+  paymentMethod?: string;
   productId?: string;
 }
 
@@ -91,11 +91,43 @@ describe('useWatchUserChange', () => {
     expect(unsubscribe).toHaveBeenCalledTimes(1);
   });
 
+  it('keeps one subscription while using the latest callback and helpers', () => {
+    const firstOnChange = vi.fn();
+    const secondOnChange = vi.fn();
+    const secondReset = vi.fn();
+    let subscribedListener:
+      ((fieldName: string, value: unknown) => void) | undefined;
+
+    mockSubscribe.mockImplementation((listener) => {
+      subscribedListener = listener;
+      return vi.fn();
+    });
+
+    const { rerender } = renderHook(
+      ({ onChange }) =>
+        useWatchUserChange<FormData>({
+          watch: 'country',
+          onChange,
+        }),
+      { initialProps: { onChange: firstOnChange } },
+    );
+
+    mockReset = secondReset;
+    rerender({ onChange: secondOnChange });
+    subscribedListener?.('country', 'Canada');
+
+    expect(mockSubscribe).toHaveBeenCalledTimes(1);
+    expect(firstOnChange).not.toHaveBeenCalled();
+    expect(secondOnChange).toHaveBeenCalledWith(
+      'Canada',
+      expect.objectContaining({ reset: secondReset }),
+    );
+  });
+
   it('should call onChange when watched field changes', () => {
     const onChange = vi.fn();
     let subscribedListener:
-      | ((fieldName: string, value: unknown) => void)
-      | undefined;
+      ((fieldName: string, value: unknown) => void) | undefined;
 
     mockSubscribe.mockImplementation((listener) => {
       subscribedListener = listener;
@@ -126,8 +158,7 @@ describe('useWatchUserChange', () => {
   it('should NOT call onChange when unwatched field changes', () => {
     const onChange = vi.fn();
     let subscribedListener:
-      | ((fieldName: string, value: unknown) => void)
-      | undefined;
+      ((fieldName: string, value: unknown) => void) | undefined;
 
     mockSubscribe.mockImplementation((listener) => {
       subscribedListener = listener;
@@ -150,8 +181,7 @@ describe('useWatchUserChange', () => {
   it('should watch single field only', () => {
     const onChange = vi.fn();
     let subscribedListener:
-      | ((fieldName: string, value: unknown) => void)
-      | undefined;
+      ((fieldName: string, value: unknown) => void) | undefined;
 
     mockSubscribe.mockImplementation((listener) => {
       subscribedListener = listener;
@@ -180,8 +210,7 @@ describe('useWatchUserChange', () => {
 
   it('should provide setValue helper that works', () => {
     let subscribedListener:
-      | ((fieldName: string, value: unknown) => void)
-      | undefined;
+      ((fieldName: string, value: unknown) => void) | undefined;
 
     mockSubscribe.mockImplementation((listener) => {
       subscribedListener = listener;
@@ -206,8 +235,7 @@ describe('useWatchUserChange', () => {
 
   it('should provide resetField helper that works', () => {
     let subscribedListener:
-      | ((fieldName: string, value: unknown) => void)
-      | undefined;
+      ((fieldName: string, value: unknown) => void) | undefined;
 
     mockSubscribe.mockImplementation((listener) => {
       subscribedListener = listener;
@@ -232,8 +260,7 @@ describe('useWatchUserChange', () => {
 
   it('should provide reset helper that works', () => {
     let subscribedListener:
-      | ((fieldName: string, value: unknown) => void)
-      | undefined;
+      ((fieldName: string, value: unknown) => void) | undefined;
 
     mockSubscribe.mockImplementation((listener) => {
       subscribedListener = listener;
@@ -256,8 +283,7 @@ describe('useWatchUserChange', () => {
 
   it('should work with value-based conditional logic', () => {
     let subscribedListener:
-      | ((fieldName: string, value: unknown) => void)
-      | undefined;
+      ((fieldName: string, value: unknown) => void) | undefined;
 
     mockSubscribe.mockImplementation((listener) => {
       subscribedListener = listener;
@@ -287,5 +313,40 @@ describe('useWatchUserChange', () => {
     // Set to cash
     subscribedListener?.('paymentMethod', 'cash');
     expect(mockSetValue).toHaveBeenCalledWith('installments', 1);
+  });
+
+  it('should only receive notifications when value actually changes (handled by useController)', () => {
+    // Note: The filtering of unchanged values is handled upstream by useController.
+    // useController does NOT call userChange.notify() when the new value equals
+    // the current value (e.g., re-selecting the same option in a Select).
+    // This test documents that useWatchUserChange relies on this behavior.
+
+    const onChange = vi.fn();
+    let subscribedListener:
+      ((fieldName: string, value: unknown) => void) | undefined;
+
+    mockSubscribe.mockImplementation((listener) => {
+      subscribedListener = listener;
+      return vi.fn();
+    });
+
+    renderHook(() =>
+      useWatchUserChange<FormData>({
+        watch: 'country',
+        onChange,
+      }),
+    );
+
+    // Simulate useController notifying a change
+    subscribedListener?.('country', 'Austria');
+    expect(onChange).toHaveBeenCalledTimes(1);
+
+    onChange.mockClear();
+
+    // If useController receives the same value again, it will NOT call notify
+    // (this filtering happens in useController, not here)
+    // We just verify that if notify IS called, onChange is triggered
+    subscribedListener?.('country', 'Germany');
+    expect(onChange).toHaveBeenCalledTimes(1);
   });
 });

@@ -32,10 +32,10 @@ export interface BreadcrumbItemProps {
   children: ReactNode;
   /** Disables the breadcrumb item */
   disabled?: boolean;
-  /** content displayed before the children */
-  startContent?: ReactNode;
   /** content displayed after the children */
   endContent?: ReactNode;
+  /** content displayed before the children */
+  startContent?: ReactNode;
 }
 
 type VariantProps = TVProps<typeof breadcrumbVariants>;
@@ -56,10 +56,10 @@ export interface BreadcrumbProps extends VariantProps {
     | 'danger';
   /** Disables the breadcrumb animation */
   disableAnimation?: boolean;
-  /** hides the separator between items */
-  hideSeparator?: boolean;
   /** disables all items */
   disabled?: boolean;
+  /** hides the separator between items */
+  hideSeparator?: boolean;
   /** Maximum number of items to show without "..." in between */
   maxItems?: number;
   /** Radius of the breadcrumb */
@@ -97,26 +97,26 @@ const Breadcrumb = ({
 
   return (
     <HeroBreadcrumb
+      classNames={{
+        base: classNames.nav,
+        ellipsis: classNames.separator,
+        list: classNames.list,
+      }}
       color={color}
       disableAnimation={disableAnimation}
       hideSeparator={hideSeparator}
       isDisabled={disabled}
+      itemClasses={{
+        base: classNames.itemBase,
+        item: classNames.item,
+        separator: classNames.separator,
+      }}
       maxItems={maxItems}
       radius={radius}
       separator={separator}
       size={size}
       underline={underline}
       variant={variant}
-      classNames={{
-        base: classNames.nav,
-        ellipsis: classNames.separator,
-        list: classNames.list,
-      }}
-      itemClasses={{
-        base: classNames.itemBase,
-        item: classNames.item,
-        separator: classNames.separator,
-      }}
     >
       {breadcrumbItems.map((item, index) => {
         return (

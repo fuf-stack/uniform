@@ -1,4 +1,11 @@
-import { describe, expect, it } from 'vitest';
+import type {
+  JsonAll,
+  JsonObject,
+  VJsonObjectSchema,
+  VJsonSchema,
+} from './json';
+
+import { describe, expect, expectTypeOf, it } from 'vitest';
 
 import v, {
   boolean,
@@ -9,6 +16,25 @@ import v, {
   string,
   stringToJSON,
 } from 'src';
+
+it('exposes json schema typing', () => {
+  const jsonSchema = json();
+  const jsonObjSchema = jsonObject();
+  const parsedJson = jsonSchema.parse({
+    nested: ['value', 1, null, { ok: true }],
+  });
+  const parsedObject = jsonObjSchema.parse({ foo: 'bar' });
+
+  expectTypeOf(json).returns.toEqualTypeOf<VJsonSchema>();
+  expectTypeOf(json()).toEqualTypeOf<VJsonSchema>();
+  expectTypeOf(jsonObject).returns.toEqualTypeOf<VJsonObjectSchema>();
+  expectTypeOf(jsonObject()).toEqualTypeOf<VJsonObjectSchema>();
+  expectTypeOf(parsedJson).toEqualTypeOf<JsonAll>();
+  expectTypeOf(parsedObject).toEqualTypeOf<JsonObject>();
+  expect(jsonSchema.safeParse({ deep: { value: [1, 2, 3] } }).success).toBe(
+    true,
+  );
+});
 
 // Test data
 const literalsData = [
@@ -150,16 +176,16 @@ describe('json validator', () => {
     });
   });
 
-  describe('nesting levels', () => {
-    it('respects maximum nesting level parameter', () => {
+  describe('deep nesting', () => {
+    it('keeps accepting deeply nested values', () => {
       const deeplyNested = {
         l1: { l2: { l3: { l4: { l5: 'too deep' } } } },
       };
-      const schema = { jsonField: json(3) }; // Only 3 levels allowed
+      const schema = { jsonField: json() };
       const result = v(schema).validate({ jsonField: deeplyNested });
-      expect(result).toHaveProperty('success', false);
-      expect(result).toHaveProperty('data', null);
-      expect(result.errors).toBeTruthy();
+      expect(result).toHaveProperty('success', true);
+      expect(result).toHaveProperty('data.jsonField', deeplyNested);
+      expect(result).toHaveProperty('errors', null);
     });
   });
 });
@@ -177,37 +203,19 @@ describe('jsonObject validator', () => {
       );
     });
 
-    // Note: null is handled separately as it results in "Field is required" error
-    const nonObjectsExcludingNull = [
-      ...literalsData.filter((v) => v !== null),
-      [],
-      [1, 2, 3],
-      new Date(),
-    ];
+    const nonObjects = [...literalsData, [], [1, 2, 3], new Date()];
 
-    nonObjectsExcludingNull.forEach((value) => {
+    nonObjects.forEach((value) => {
       it(`rejects non-object value: ${JSON.stringify(value)}`, () => {
         const schema = { jsonObjectField: jsonObject() };
         const result = v(schema).validate({ jsonObjectField: value });
         expect(result).toHaveProperty('success', false);
         expect(result).toHaveProperty('data', null);
-        // Zod v4 uses default error messages for record type validation
         expect(result).toHaveProperty(
-          'errors.jsonObjectField._errors[0].code',
-          'invalid_type',
+          'errors.jsonObjectField._errors[0].message',
+          'Invalid json object',
         );
       });
-    });
-
-    it('rejects null value with Field is required error', () => {
-      const schema = { jsonObjectField: jsonObject() };
-      const result = v(schema).validate({ jsonObjectField: null });
-      expect(result).toHaveProperty('success', false);
-      expect(result).toHaveProperty('data', null);
-      expect(result).toHaveProperty(
-        'errors.jsonObjectField._errors[0].message',
-        'Field is required',
-      );
     });
   });
 
@@ -242,16 +250,16 @@ describe('jsonObject validator', () => {
     });
   });
 
-  describe('nesting levels', () => {
-    it('respects maximum nesting level parameter', () => {
+  describe('deep nesting', () => {
+    it('keeps accepting deeply nested objects', () => {
       const deeplyNested = {
         l1: { l2: { l3: { l4: { l5: 'too deep' } } } },
       };
-      const schema = { jsonObjectField: jsonObject(3) }; // Only 3 levels allowed
+      const schema = { jsonObjectField: jsonObject() };
       const result = v(schema).validate({ jsonObjectField: deeplyNested });
-      expect(result).toHaveProperty('success', false);
-      expect(result).toHaveProperty('data', null);
-      expect(result.errors).toBeTruthy();
+      expect(result).toHaveProperty('success', true);
+      expect(result).toHaveProperty('data.jsonObjectField', deeplyNested);
+      expect(result).toHaveProperty('errors', null);
     });
   });
 });
@@ -279,6 +287,15 @@ describe('stringToJSON validator', () => {
     expect(schema.parse(JSON.stringify(nested))).toEqual(nested);
   });
 
+  it('passes through already-parsed JSON values', () => {
+    const nested = { one: ['two', { three: 4 }] };
+    expect(schema.parse(nested)).toEqual(nested);
+    expect(schema.parse([1, 'two', null])).toEqual([1, 'two', null]);
+    expect(schema.parse(42)).toBe(42);
+    expect(schema.parse(true)).toBe(true);
+    expect(schema.parse(null)).toBeNull();
+  });
+
   it('rejects invalid JSON', () => {
     /* invalid JSON */
     expect(() => schema.parse('{ keys: "must be quoted" }')).toThrow();
@@ -291,6 +308,7 @@ describe('stringToJSON validator', () => {
     /* piping */
     const jsonNumberSchema = stringToJSON().pipe(number());
     expect(jsonNumberSchema.parse('500')).toBe(500);
+    expect(jsonNumberSchema.parse(500)).toBe(500);
     expect(() => jsonNumberSchema.parse('"JSON, but not a number"')).toThrow();
   });
 

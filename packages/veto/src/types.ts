@@ -1,27 +1,49 @@
-import type { z } from 'zod';
+import type {
+  input,
+  output,
+  RefinementCtx,
+  ZodError,
+  ZodNullable,
+  ZodObject,
+  ZodOptional,
+  ZodRawShape,
+  ZodSafeParseSuccess,
+  ZodType,
+} from 'zod';
 
-// Re-export commonly used Zod types for Zod v4
-export type VetoRawShape = z.ZodRawShape;
+export type VetoRawShape = Record<string, VetoTypeAny>;
 
-export type VetoTypeAny = z.ZodTypeAny;
+export type VetoTypeAny = ZodType;
 
-export type VetoNullable<T extends VetoTypeAny> = z.ZodNullable<T>;
+export type VetoNullable<T extends VetoTypeAny> = ZodNullable<T>;
 
-export type VetoOptional<T extends VetoTypeAny> = z.ZodOptional<T>;
+export type VetoOptional<T extends VetoTypeAny> = ZodOptional<T>;
 
-// In Zod v4, ZodObject type parameters changed
-export type VetoObject<T extends z.ZodRawShape> = z.ZodObject<T>;
+export type VetoObject<T extends ZodRawShape> = ZodObject<T>;
 
-export declare type Input<T extends VetoTypeAny> = z.input<T>;
-export declare type Output<T extends VetoTypeAny> = z.output<T>;
+export type Input<T extends VetoTypeAny> = input<T>;
+export type Output<T extends VetoTypeAny> = output<T>;
 
-// In Zod v4, effects work differently - use the return type of superRefine
-export type VetoEffects<T extends VetoTypeAny> = ReturnType<T['superRefine']>;
-
-// Refinement context type for Zod v4
-export type VetoRefinementCtx = z.RefinementCtx;
+export type VetoRefinementCtx = RefinementCtx;
 
 /** veto schema types */
+
+/**
+ * Error map signature compatible with Zod v4.
+ *
+ * Zod v4 calls the global error map with a single `issue` argument; the
+ * second `ctx` argument from v3 is gone. The `issue` shape varies by
+ * `issue.code`, so we type it loosely here and let `errorMap.ts` narrow
+ * inside each switch branch.
+ *
+ * @see https://zod.dev/v4/error-customization
+ */
+export type VetoErrorMap = (issue: {
+  code?: string;
+  input?: unknown;
+  path?: PropertyKey[];
+  [key: string]: unknown;
+}) => string | { message: string } | undefined;
 
 export type VetoSchema = VetoRawShape | VetoTypeAny;
 
@@ -32,13 +54,14 @@ export interface VetoOptions {
 
 export type VetoInput = Record<string, unknown>;
 
-export interface VetoSuccess<SchemaType> {
-  success: true;
-  data: SchemaType;
+type SafeParseSuccess<SchemaType> = ZodSafeParseSuccess<SchemaType>;
+
+export type VetoSuccess<SchemaType> = SafeParseSuccess<SchemaType> & {
   errors: null;
-}
+};
 
 interface VetoFieldError {
+  [key: string]: unknown;
   code: string;
   message: string;
 }
@@ -48,7 +71,15 @@ export type VetoFormattedError = Record<string, VetoFieldError[]> & {
 };
 
 export interface VetoError {
-  success: false;
   data: null;
   errors: VetoFormattedError;
+  success: false;
 }
+
+/**
+ * Raw zod error before veto formatting.
+ *
+ * Typed as `ZodError<unknown>` because `formatError` only inspects
+ * `error.issues` and never touches the parsed value type.
+ */
+export type VetoUnformattedError = ZodError;

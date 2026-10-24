@@ -5,14 +5,14 @@ import { action } from 'storybook/actions';
 import { expect, userEvent, waitFor, within } from 'storybook/test';
 
 import { Card } from '@fuf-stack/pixels';
-import { SubmitButton } from '@fuf-stack/uniform';
 
-import { Form } from '../Form';
-import { Grid } from '../Grid';
+import Form from '../Form';
+import Grid from '../Grid';
 import { useFormContext } from '../hooks/useFormContext';
 import { useWatchUserChange } from '../hooks/useWatchUserChange';
-import { Input } from '../Input';
-import { Select } from '../Select';
+import Input from '../Input';
+import Select from '../Select';
+import SubmitButton from '../SubmitButton';
 
 const meta: Meta<typeof Form> = {
   title: 'uniform/_examples/WatchUserChange',
@@ -22,7 +22,7 @@ const meta: Meta<typeof Form> = {
       return (
         <Form
           {...(args ?? {})}
-          className="min-w-96"
+          className={{ form: 'min-w-96' }}
           onSubmit={action('onSubmit')}
         >
           <Story />
@@ -39,21 +39,21 @@ export default meta;
 type Story = StoryObj<typeof Form>;
 
 interface LocationFormData {
-  country?: string;
   city?: string;
+  country?: string;
   zipCode?: string;
 }
 
 interface AnimalFormData {
   animal?: string;
-  habitat?: string;
   favoriteSnack?: string;
+  habitat?: string;
 }
 
 interface UserFormData {
+  email?: string;
   firstName?: string;
   lastName?: string;
-  email?: string;
 }
 
 /**
@@ -266,8 +266,8 @@ export const WatchMultipleFields: Story = {
             placeholder="Enter last name..."
           />
           <Input
-            disabled
             className="md:col-span-2"
+            disabled
             label="Company Email (Auto-generated)"
             name="email"
             placeholder="Auto-generated..."

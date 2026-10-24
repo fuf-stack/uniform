@@ -1,5 +1,273 @@
 # Changelog
 
+## [1.11.0](https://github.com/fuf-stack/pixels/compare/veto-v1.10.0...veto-v1.11.0) (2026-10-14)
+
+
+### Features
+
+* expand verification and contribution tooling ([cf200f0](https://github.com/fuf-stack/pixels/commit/cf200f0f6985e010b34b81eed494356c27099d55))
+
+
+### Bug Fixes
+
+* **deps:** update dependency zod to v4.5.1 ([#1866](https://github.com/fuf-stack/pixels/issues/1866)) ([e6ccb91](https://github.com/fuf-stack/pixels/commit/e6ccb910160061b47e8c2030002986e1d2283677))
+* **deps:** update dependency zod to v4.5.2 ([#1867](https://github.com/fuf-stack/pixels/issues/1867)) ([b603704](https://github.com/fuf-stack/pixels/commit/b60370442a5383aa10ae3c92e6412a9bf7ab11cb))
+* **deps:** update dependency zod to v4.5.4 ([#1869](https://github.com/fuf-stack/pixels/issues/1869)) ([91cf261](https://github.com/fuf-stack/pixels/commit/91cf26114f74277764543dfb60535ea971dce41a))
+
+## [1.10.0](https://github.com/fuf-stack/pixels/compare/veto-v1.9.0...veto-v1.10.0) (2026-08-13)
+
+
+### Features
+
+* **veto:** allow stringToJSON to accept already-parsed JSON ([20ec660](https://github.com/fuf-stack/pixels/commit/20ec66015caa85f68e2923a630fb93a1320b5946))
+
+## [1.9.0](https://github.com/fuf-stack/pixels/compare/veto-v1.8.0...veto-v1.9.0) (2026-07-17)
+
+
+### Features
+
+* build esm only, no cjs anymore ([7856711](https://github.com/fuf-stack/pixels/commit/78567111820395bb9b0017c04820e0c8efea0e9f))
+
+## [1.8.0](https://github.com/fuf-stack/pixels/compare/veto-v1.7.4...veto-v1.8.0) (2026-07-11)
+
+
+### Features
+
+* **veto:** add deepPartial schema helper ([ed5f600](https://github.com/fuf-stack/pixels/commit/ed5f600e27713ff46b24fd904f41acf3b4e087ab))
+
+## [1.7.4](https://github.com/fuf-stack/pixels/compare/veto-v1.7.3...veto-v1.7.4) (2026-07-02)
+
+
+### Bug Fixes
+
+* **veto:** add better min max validation messages ([6f1101c](https://github.com/fuf-stack/pixels/commit/6f1101c7986f8538c01b409413f9bf077e5ac557))
+* **veto:** treat empty string input in numbers as required field ([c85b6d8](https://github.com/fuf-stack/pixels/commit/c85b6d87da7e24a8f325b447e70762f852180275))
+
+## [1.7.3](https://github.com/fuf-stack/pixels/compare/veto-v1.7.2...veto-v1.7.3) (2026-06-04)
+
+
+### Bug Fixes
+
+* reformat some code ([f40f4b0](https://github.com/fuf-stack/pixels/commit/f40f4b05a9eb03baf0b1dc972425e79a4cfe0db2))
+
+## [1.7.2](https://github.com/fuf-stack/pixels/compare/veto-v1.7.1...veto-v1.7.2) (2026-06-04)
+
+
+### Bug Fixes
+
+* add shared dep-bundled dts config and annotate buttonVariants for portable types ([ab3e5d6](https://github.com/fuf-stack/pixels/commit/ab3e5d66fbf84324dd20ecc4db0b097ed1a80e44))
+
+## [1.7.1](https://github.com/fuf-stack/pixels/compare/veto-v1.7.0...veto-v1.7.1) (2026-05-27)
+
+
+### Bug Fixes
+
+* **veto:** avoid "Unmergable intersection" in refineArray ([4fba571](https://github.com/fuf-stack/pixels/commit/4fba571625bb32d3edb75e5684c7d2ef26310125))
+* **veto:** avoid "Unmergable intersection" in refineObject ([ba1934b](https://github.com/fuf-stack/pixels/commit/ba1934b07353855d39af6e54057ec752311c5ba9))
+
+## [1.7.0](https://github.com/fuf-stack/pixels/compare/veto-v1.6.0...veto-v1.7.0) (2026-05-27)
+
+
+### Features
+
+* **veto:** add ipV4, ipV6, cidrV4, cidrV6 types ([d5146aa](https://github.com/fuf-stack/pixels/commit/d5146aa26fee21afeb68d067de72ca3c3e03eeba))
+* **veto:** support function form for or() error option ([279e851](https://github.com/fuf-stack/pixels/commit/279e8519daff9e254478b06818dc801c9a06017b))
+
+## [1.6.0](https://github.com/fuf-stack/pixels/compare/veto-v1.5.6...veto-v1.6.0) (2026-05-27)
+
+
+### Features
+
+* **veto:** add multi-schema or type with optional unified error message ([c7dcc96](https://github.com/fuf-stack/pixels/commit/c7dcc96359882a9243ef0469f7b669c44019113b))
+* **veto:** support 2+ schemas in and type ([1fb1298](https://github.com/fuf-stack/pixels/commit/1fb12981ab7af13c66fccaf4b2d4cdde8577b024))
+
+## [1.5.6](https://github.com/fuf-stack/pixels/compare/veto-v1.5.5...veto-v1.5.6) (2026-05-26)
+
+
+### Bug Fixes
+
+* **veto:** preserve strict unknown-key behavior in refineObject ([ddd1b7a](https://github.com/fuf-stack/pixels/commit/ddd1b7ad58daa843043d3587b67eea7e7121758c))
+
+## [1.5.5](https://github.com/fuf-stack/pixels/compare/veto-v1.5.4...veto-v1.5.5) (2026-05-26)
+
+
+### Bug Fixes
+
+* **veto:** preserve optional refineObject typing and harden object/discriminated union tests ([c07f08f](https://github.com/fuf-stack/pixels/commit/c07f08f5845dfcf9cc044e12d412a2098aed79a2))
+
+## [1.5.4](https://github.com/fuf-stack/pixels/compare/veto-v1.5.3...veto-v1.5.4) (2026-05-23)
+
+
+### Bug Fixes
+
+* **veto:** stabilize invalid_union normalization and discriminator error output ([e735fe8](https://github.com/fuf-stack/pixels/commit/e735fe8b15296c1c11d6b9733a462bad86116951))
+
+## [1.5.3](https://github.com/fuf-stack/pixels/compare/veto-v1.5.2...veto-v1.5.3) (2026-05-22)
+
+
+### Bug Fixes
+
+* **veto:** stabilize union and discriminated-union error normalization ([b4e9857](https://github.com/fuf-stack/pixels/commit/b4e9857e49e9acfb15a644f047aae3dab4b7f906))
+
+## [1.5.2](https://github.com/fuf-stack/pixels/compare/veto-v1.5.1...veto-v1.5.2) (2026-05-22)
+
+
+### Bug Fixes
+
+* **veto:** normalize missing discriminators message to Field is required ([98e4a6f](https://github.com/fuf-stack/pixels/commit/98e4a6f6753ab3ce841ae6487eab195a7a7526be))
+
+## [1.5.1](https://github.com/fuf-stack/pixels/compare/veto-v1.5.0...veto-v1.5.1) (2026-05-22)
+
+
+### Bug Fixes
+
+* **veto:** allign record with zod v4 ([a3549fe](https://github.com/fuf-stack/pixels/commit/a3549fe5cc78062818e2bd9988b80736f067d49f))
+
+## [1.5.0](https://github.com/fuf-stack/pixels/compare/veto-v1.4.1...veto-v1.5.0) (2026-05-22)
+
+
+### Features
+
+* **veto:** extract refineArray and add type-safe custom helper guards ([b73e4fd](https://github.com/fuf-stack/pixels/commit/b73e4fdb9a54b6b9f27043fd6ab207c37750f031))
+* **veto:** extract refineObject and add type-safe custom refinement helpers ([71530df](https://github.com/fuf-stack/pixels/commit/71530df7172e3045a2ade261af9dba6ac5bd7122))
+
+
+### Bug Fixes
+
+* **veto:** type unique mapFn input as partial element and skip invalid items ([a89d52b](https://github.com/fuf-stack/pixels/commit/a89d52bf2c5ee748b128d0df48b312c5a102fd80))
+
+## [1.4.1](https://github.com/fuf-stack/pixels/compare/veto-v1.4.0...veto-v1.4.1) (2026-05-22)
+
+
+### Bug Fixes
+
+* **veto:** bundle missing zod types ([d608f8b](https://github.com/fuf-stack/pixels/commit/d608f8be0612561deb5ca69682c5d192740d12f8))
+
+## [1.4.0](https://github.com/fuf-stack/pixels/compare/veto-v1.3.0...veto-v1.4.0) (2026-05-22)
+
+
+### Features
+
+* **veto:** bundle zod runtime and types into dist ([38712a6](https://github.com/fuf-stack/pixels/commit/38712a6217d9c51bf5b63b337cbaa4278174f887))
+
+
+### Bug Fixes
+
+* **veto:** do not bundle zod js ([e585920](https://github.com/fuf-stack/pixels/commit/e5859204edd08376cb94759062e9a13cca61be88))
+
+## [1.3.0](https://github.com/fuf-stack/pixels/compare/veto-v1.2.1...veto-v1.3.0) (2026-05-21)
+
+
+### Features
+
+* **veto:** declare zod as peerDependency instead of dependency ([9522a63](https://github.com/fuf-stack/pixels/commit/9522a63f46cc517560c0783b2198af2c3e926975))
+
+
+### Bug Fixes
+
+* **veto:** remove schemaFactory again ([9895068](https://github.com/fuf-stack/pixels/commit/989506847326227f97040eb4f8734813be4658a7))
+
+## [1.2.1](https://github.com/fuf-stack/pixels/compare/veto-v1.2.0...veto-v1.2.1) (2026-05-21)
+
+
+### Bug Fixes
+
+* **veto:** guard vInferFactory against non-factory inputs ([b0cea5b](https://github.com/fuf-stack/pixels/commit/b0cea5bb4c682015bcbaee44476ed4a4152e7b21))
+
+## [1.2.0](https://github.com/fuf-stack/pixels/compare/veto-v1.1.0...veto-v1.2.0) (2026-05-21)
+
+
+### Features
+
+* **veto:** make schemaFactory truly portable via output-type metadata ([4c2abf2](https://github.com/fuf-stack/pixels/commit/4c2abf20cd8072433813d0056b40c0cabdbaa2af))
+
+## [1.1.0](https://github.com/fuf-stack/pixels/compare/veto-v1.0.4...veto-v1.1.0) (2026-05-21)
+
+
+### Features
+
+* upgrade to typescript v6 ([ca06ae3](https://github.com/fuf-stack/pixels/commit/ca06ae3de100d5521c693ffbc669b88f964e568e))
+* **veto:** add portable schemaFactory inference support with args ([13c908c](https://github.com/fuf-stack/pixels/commit/13c908ce5edcd26602a044ff11e0584ddaa4116a))
+
+
+### Bug Fixes
+
+* **deps:** update dependency zod to v4.4.3 ([9d77b75](https://github.com/fuf-stack/pixels/commit/9d77b75d26db36d0a4dd7221ee7c86a648c66bda))
+* **deps:** update dependency zod to v4.4.3 ([9b650a9](https://github.com/fuf-stack/pixels/commit/9b650a97d192ee536488623f8d49cdbdd046a5d7))
+* **veto:** preserve optional refined schemas across Zod 4.4 intersections ([46c9846](https://github.com/fuf-stack/pixels/commit/46c9846cba5ec2553df90d1f932ffa98d389b7ef))
+
+## [1.0.4](https://github.com/fuf-stack/pixels/compare/veto-v1.0.3...veto-v1.0.4) (2026-04-30)
+
+
+### Bug Fixes
+
+* **veto:** add some docs ([301f2e8](https://github.com/fuf-stack/pixels/commit/301f2e84c0f5c663c1c4546b58c7deb0b08176e9))
+
+## [1.0.3](https://github.com/fuf-stack/pixels/compare/veto-v1.0.2...veto-v1.0.3) (2026-04-30)
+
+
+### Bug Fixes
+
+* **veto:** stabilize schema wrapper typings for discriminated unions and arrays ([0625643](https://github.com/fuf-stack/pixels/commit/0625643c6e3bb6d8028e728eb5150401736e2807))
+
+## [1.0.2](https://github.com/fuf-stack/pixels/compare/veto-v1.0.1...veto-v1.0.2) (2026-04-30)
+
+
+### Bug Fixes
+
+* **veto:** align json and record schema typing with zod v4 ([d19ef88](https://github.com/fuf-stack/pixels/commit/d19ef88ee2ecf30d5769b92fb0770718354ec294))
+* **veto:** expand type coverage for schema wrappers and refinements ([d04b123](https://github.com/fuf-stack/pixels/commit/d04b123f5cc12eb001745b03b7936848a98d24e8))
+
+## [1.0.1](https://github.com/fuf-stack/pixels/compare/veto-v1.0.0...veto-v1.0.1) (2026-04-29)
+
+
+### Bug Fixes
+
+* **veto:** add zod v4 string refinement type/runtime coverage ([b467a50](https://github.com/fuf-stack/pixels/commit/b467a501ab934e7e4b89dc66c83fd1744d00aa3b))
+
+## [1.0.0](https://github.com/fuf-stack/pixels/compare/veto-v0.13.2...veto-v1.0.0) (2026-04-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* **veto:** veto v1 upgrades zod from v3 to v4, drops zodex, and switches schema serialization to native JSON Schema. See docs/veto-v1-upgrade.md for the full migration guide and packages/veto/codemods/v1-upgrade for an automated upgrade.
+
+### Features
+
+* **veto:** release v1 with zod v4, tsdown build, and JSON Schema serialization ([ad4df4a](https://github.com/fuf-stack/pixels/commit/ad4df4a1df136dbb40c91a183e15a5de96b759da))
+
+
+### Bug Fixes
+
+* **veto,uniform:** restore v4 compatibility for requiredness and error formatting ([77f492f](https://github.com/fuf-stack/pixels/commit/77f492f2b4d7c3932509423b1b5342b15e68a887))
+* **veto:** keep nested requiredness independent from optional parents ([c5d7763](https://github.com/fuf-stack/pixels/commit/c5d7763176124e50a6f80ab8542e873d9db4fa32))
+* **veto:** preserve mixed refineObject errors and use reportInput in normalization ([27e6c80](https://github.com/fuf-stack/pixels/commit/27e6c8095f41f7eeaedc25704f03873623906e19))
+
+## [1.0.0] (unreleased)
+
+### ⚠ BREAKING CHANGES
+
+- **deps:** upgraded `zod` from `3.x` to `4.x`. Consumers must install Zod v4 in their project.
+- **deps:** dropped the `zodex` dependency. The `SzType` re-export from `@fuf-stack/veto` is gone — use the new `SerializedSchema` type instead.
+- **serializeSchema:** now returns JSON Schema (via `z.toJSONSchema`) instead of zodex's tagged tree. Custom `checkSchemaPath` callbacks must traverse JSON Schema fields (`properties`, `items`, `oneOf`/`anyOf`/`allOf`, `additionalProperties`).
+- **errors:** issue payloads now reflect Zod v4 internals. veto preserves the v0 contract for the most common cases (`code`, `message`, `received`, `expected`, `options`, `keys`, ...) via a global error map and an issue normalizer, but consumers asserting on exact field-by-field equality should re-validate their snapshots. Notably:
+  - `invalid_union_discriminator` is reported as `invalid_union` (Zod v4 collapsed the codes); veto still surfaces `message: 'Field is required'` and `options: [...]` when the discriminator is missing.
+  - `invalid_value` is normalized back to `invalid_enum_value` / `invalid_literal` for downstream compatibility.
+- **build:** package is now built with `tsdown` instead of `tsup`. The published artifacts (`dist/index.js`, `dist/index.mjs`, `dist/index.d.ts`) keep the same shape.
+
+### Features
+
+- **codemod:** added `pnpm --filter @fuf-stack/veto codemod:v1` to help consumer codebases migrate (rewrites `SzType` imports, warns on legacy zodex tag checks).
+- **docs:** added `docs/veto-v1-upgrade.md` with the upgrade guide.
+
+## [0.13.2](https://github.com/fuf-stack/pixels/compare/veto-v0.13.1...veto-v0.13.2) (2026-01-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependency zod to v3.25.76 ([#1058](https://github.com/fuf-stack/pixels/issues/1058)) ([99cd113](https://github.com/fuf-stack/pixels/commit/99cd1130dbc97b56991a8919a4067a04f8070c76))
+* **veto:** revert bundling of package to tsup ([e6f43ce](https://github.com/fuf-stack/pixels/commit/e6f43ce93a875851def71efbc52048c85f12bc3e))
+
 ## [0.13.1](https://github.com/fuf-stack/pixels/compare/veto-v0.13.0...veto-v0.13.1) (2025-12-16)
 
 

@@ -2,213 +2,268 @@ import type { VetoTypeAny } from './types';
 
 import { z } from 'zod';
 
-// JSON Schema type from Zod v4's toJSONSchema
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type JSONSchema = Record<string, any>;
+/**
+ * JSON Schema-shaped type returned by {@link serializeSchema}.
+ *
+ * This is intentionally a structural subset of JSON Schema covering the fields
+ * veto's own traversal logic and downstream `checkSchemaPath` consumers care
+ * about. Unknown JSON Schema keywords are still accessible via the index
+ * signature.
+ */
+export interface SerializedSchema {
+  [key: string]: unknown;
+  additionalProperties?: boolean | SerializedSchema;
+  allOf?: SerializedSchema[];
+  anyOf?: SerializedSchema[];
+  const?: unknown;
+  default?: unknown;
+  description?: string;
+  enum?: unknown[];
+  format?: string;
+  items?: SerializedSchema | SerializedSchema[];
+  oneOf?: SerializedSchema[];
+  properties?: Record<string, SerializedSchema>;
+  required?: string[];
+  type?: string | string[];
+}
 
 /**
- * Helper to check if a type includes a specific type name.
- * Handles both string type (e.g., "array") and array type (e.g., ["array", "null"])
+ * Schema shape provided to `checkSerializedSchemaPath` callbacks.
+ *
+ * It extends plain JSON Schema with traversal-derived compatibility metadata
+ * used by consumers like uniform's `checkFieldIsRequired`.
  */
-const typeIncludes = (
-  jsonSchema: JSONSchema,
-  typeName: string,
-): boolean => {
-  if (Array.isArray(jsonSchema.type)) {
-    return jsonSchema.type.includes(typeName);
-  }
-  return jsonSchema.type === typeName;
-};
+export interface SerializedSchemaPathType extends SerializedSchema {
+  /** This path may be null (direct `null` type or union including `null`). */
+  isNullable?: boolean;
+  /** This path may be absent from an object (`required` does not include it). */
+  isOptional?: boolean;
+}
 
-// Type predicates for checking schema types in JSON Schema format
-const isArrayType = (
-  type: JSONSchema,
-): type is JSONSchema & {
-  type: 'array' | ['array', ...string[]];
-  items: JSONSchema;
-} => {
-  return typeIncludes(type, 'array') && 'items' in type;
-};
-
-const isDiscriminatedUnionOrUnionType = (
-  type: JSONSchema,
-): type is JSONSchema & {
-  anyOf?: JSONSchema[];
-  oneOf?: JSONSchema[];
-} => {
-  // Zod v4 uses oneOf for discriminated unions, anyOf for regular unions
-  return (
-    ('anyOf' in type && Array.isArray(type.anyOf)) ||
-    ('oneOf' in type && Array.isArray(type.oneOf))
-  );
-};
-
-const isIntersectionType = (
-  type: JSONSchema,
-): type is JSONSchema & {
-  allOf: JSONSchema[];
-} => {
-  return 'allOf' in type && Array.isArray(type.allOf);
-};
-
-const isObjectType = (
-  type: JSONSchema,
-): type is JSONSchema & {
-  type: 'object' | ['object', ...string[]];
-  properties: Record<string, JSONSchema>;
-} => {
-  return typeIncludes(type, 'object') && 'properties' in type;
-};
-
-const isRecordType = (
-  type: JSONSchema,
-): type is JSONSchema & {
-  type: 'object' | ['object', ...string[]];
-  additionalProperties: JSONSchema;
-} => {
-  return (
-    typeIncludes(type, 'object') &&
-    'additionalProperties' in type &&
-    typeof type.additionalProperties === 'object'
-  );
+/**
+ * Returns true when a path segment represents an array index.
+ */
+const isIndexPathSegment = (segment: string | number): boolean => {
+  return Number.isInteger(segment) || /^\d+$/.test(String(segment));
 };
 
 /**
- * Checks if a JSON Schema type is nullable.
- * Handles both:
- * - type array format: { type: ["string", "null"] }
- * - anyOf format: { anyOf: [{ type: "string" }, { type: "null" }] }
+ * Serializes a Zod schema to JSON Schema, with resilient handling for
+ * transformed/preprocessed nodes used in veto helpers.
  */
-const checkIsNullable = (jsonSchema: JSONSchema): boolean => {
-  // Check type array format
-  if (Array.isArray(jsonSchema.type) && jsonSchema.type.includes('null')) {
-    return true;
-  }
-  // Check anyOf format (zod v4 uses this for nullable)
-  if (Array.isArray(jsonSchema.anyOf)) {
-    return jsonSchema.anyOf.some(
-      (option: JSONSchema) => option.type === 'null',
-    );
-  }
-  return false;
-};
-
-/**
- * Checks if a JSON Schema type is optional (represented as union with undefined-like schema).
- * In JSON Schema, optional is typically represented as anyOf with an empty schema {}
- */
-const checkIsOptionalType = (jsonSchema: JSONSchema): boolean => {
-  if (Array.isArray(jsonSchema.anyOf)) {
-    // Check for empty schema {} which represents undefined in JSON Schema
-    return jsonSchema.anyOf.some(
-      (option: JSONSchema) =>
-        Object.keys(option).length === 0 ||
-        option.not !== undefined, // { not: {} } also represents never/undefined
-    );
-  }
-  return false;
-};
-
-export const serializeSchema = (schema: VetoTypeAny): JSONSchema => {
-  return z.toJSONSchema(schema, { unrepresentable: 'any' });
-};
-
-/**
- * Annotates a schema with isOptional and isNullable properties.
- * isOptional can come from:
- * - Parent context (property not in required array)
- * - Schema structure (anyOf with empty schema for undefined)
- */
-const annotateSchema = (
-  schema: JSONSchema,
-  isOptionalFromContext: boolean,
-): JSONSchema => ({
-  ...schema,
-  isOptional: isOptionalFromContext || checkIsOptionalType(schema),
-  isNullable: checkIsNullable(schema),
-});
-
-/**
- * Traverses a schema path to find matching types
- * @param pathType - Current schema type being traversed
- * @param path - Path segments to traverse
- * @param isOptional - Whether the current path is optional (from parent context)
- * @returns Array of found schema types with isOptional/isNullable annotated
- */
-const traverseSchemaPath = (
-  pathType: JSONSchema,
-  path: (string | number)[],
-  isOptional = false,
-): (JSONSchema | null)[] => {
-  // Base case: end of path returns current type with annotations
-  if (!path.length) {
-    return [annotateSchema(pathType, isOptional)];
-  }
-
-  const [current, ...remainingPath] = path;
-
-  if (isArrayType(pathType)) {
-    const isIndex = Number.isInteger(current) || /^\d+$/.test(String(current));
-    // Array items inherit optionality from the array itself
-    return traverseSchemaPath(
-      pathType.items,
-      isIndex ? remainingPath : path,
-      isOptional,
-    );
-  }
-
-  if (isDiscriminatedUnionOrUnionType(pathType)) {
-    // Zod v4 uses oneOf for discriminated unions, anyOf for regular unions
-    const unionOptions = pathType.oneOf || pathType.anyOf;
-    return unionOptions!.flatMap((option: JSONSchema) => {
-      return traverseSchemaPath(option, path, isOptional);
+export const serializeSchema = (schema: VetoTypeAny): SerializedSchema => {
+  try {
+    // Cast to SerializedSchema: zod's toJSONSchema returns ZodStandardJSONSchemaPayload
+    // (BaseSchema + standard-schema metadata). Our SerializedSchema is a structural
+    // subset of JSON Schema, so the shape is compatible at runtime.
+    const json = z.toJSONSchema(schema, {
+      // Keep serialization resilient for transformed/preprocessed schemas used
+      // throughout veto helper refinements.
+      unrepresentable: 'any',
     });
+    return json as unknown as SerializedSchema;
+  } catch (error) {
+    console.warn('[veto] serializeSchema failed:', error);
+    return {};
   }
-
-  if (isIntersectionType(pathType)) {
-    return pathType.allOf.flatMap((schema: JSONSchema) => {
-      return traverseSchemaPath(schema, path, isOptional);
-    });
-  }
-
-  if (isObjectType(pathType)) {
-    const propertyKey = String(current);
-    if (pathType.properties[propertyKey]) {
-      // Check if property is optional by checking if it's NOT in the required array
-      const requiredFields = (pathType.required as string[]) || [];
-      const propertyIsOptional = !requiredFields.includes(propertyKey);
-
-      return traverseSchemaPath(
-        pathType.properties[propertyKey],
-        remainingPath,
-        propertyIsOptional,
-      );
-    }
-    // Check if it's also a record type (object with additionalProperties)
-    if (isRecordType(pathType)) {
-      // Record properties are always optional (any key can be missing)
-      return traverseSchemaPath(
-        pathType.additionalProperties,
-        remainingPath,
-        true,
-      );
-    }
-    // not found
-    return [null];
-  }
-
-  if (isRecordType(pathType)) {
-    // Record properties are always optional
-    return traverseSchemaPath(pathType.additionalProperties, remainingPath, true);
-  }
-
-  // Default case: invalid path for current type
-  return [null];
 };
 
 export type CheckSerializedSchemaPathCheckFunction = (
-  pathType: JSONSchema | null,
+  pathType: SerializedSchemaPathType | null,
 ) => boolean;
+
+/**
+ * Matched schema node plus optional/nullable flags recovered from Zod wrappers.
+ */
+interface ZodPathMatch {
+  isNullable: boolean;
+  isOptional: boolean;
+  schema: VetoTypeAny;
+}
+
+/**
+ * Metadata carried while traversing Zod schema internals.
+ */
+interface ZodTraversalMeta {
+  isNullable: boolean;
+  isOptional: boolean;
+}
+
+/**
+ * Reads Zod v3/v4 internal definition objects (`def`/`_def`) in a safe way.
+ */
+const getSchemaDef = (schema: unknown): Record<string, unknown> | null => {
+  if (!schema || typeof schema !== 'object') {
+    return null;
+  }
+  const maybeSchema = schema as {
+    _def?: Record<string, unknown>;
+    def?: Record<string, unknown>;
+  };
+  return maybeSchema.def ?? maybeSchema._def ?? null;
+};
+
+/**
+ * Unwraps common wrapper nodes (optional/nullable/nonoptional/pipe) and returns
+ * the effective inner schema with its optional/nullable flags.
+ */
+const unwrapSchemaFlags = (
+  schema: VetoTypeAny,
+): {
+  schema: VetoTypeAny;
+  isNullable: boolean;
+  isOptional: boolean;
+} => {
+  let current = schema;
+  let isOptional = false;
+  let isNullable = false;
+
+  let currentDef = getSchemaDef(current);
+  while (currentDef) {
+    const currentType = currentDef.type;
+    if (currentType === 'optional') {
+      isOptional = true;
+      current = currentDef.innerType as VetoTypeAny;
+    } else if (currentType === 'nullable') {
+      isNullable = true;
+      current = currentDef.innerType as VetoTypeAny;
+    } else if (currentType === 'nonoptional') {
+      isOptional = false;
+      current = currentDef.innerType as VetoTypeAny;
+    } else if (currentType === 'pipe') {
+      current = (currentDef.out ?? currentDef.in) as VetoTypeAny;
+    } else {
+      break;
+    }
+    currentDef = getSchemaDef(current);
+  }
+
+  return {
+    schema: current,
+    isOptional,
+    isNullable,
+  };
+};
+
+/**
+ * Returns object shape map from a Zod object schema definition.
+ */
+const getObjectShape = (
+  schema: VetoTypeAny,
+): Record<string, VetoTypeAny> | null => {
+  const def = getSchemaDef(schema);
+  if (def?.type !== 'object') {
+    return null;
+  }
+  const { shape } = def;
+  if (!shape || typeof shape !== 'object') {
+    return null;
+  }
+  return shape as Record<string, VetoTypeAny>;
+};
+
+/**
+ * Returns array element schema from a Zod array definition.
+ */
+const getArrayElementSchema = (schema: VetoTypeAny): VetoTypeAny | null => {
+  const def = getSchemaDef(schema);
+  if (def?.type !== 'array') {
+    return null;
+  }
+  const { element } = def;
+  return element ? (element as VetoTypeAny) : null;
+};
+
+/**
+ * Returns value schema from a Zod record definition.
+ */
+const getRecordValueSchemaFromZod = (
+  schema: VetoTypeAny,
+): VetoTypeAny | null => {
+  const def = getSchemaDef(schema);
+  if (def?.type !== 'record') {
+    return null;
+  }
+  const valueSchema = def.valueType ?? def.value;
+  return valueSchema ? (valueSchema as VetoTypeAny) : null;
+};
+
+/**
+ * Collects branch schemas for union/intersection-like Zod nodes.
+ */
+const getUnionBranchesFromZod = (schema: VetoTypeAny): VetoTypeAny[] => {
+  const def = getSchemaDef(schema);
+  if (!def) {
+    return [];
+  }
+  if (def.type === 'intersection') {
+    const branches = [def.left, def.right].filter(Boolean);
+    return branches as VetoTypeAny[];
+  }
+  if (def.type === 'union' && Array.isArray(def.options)) {
+    return def.options as VetoTypeAny[];
+  }
+  return [];
+};
+
+/**
+ * Traverses a path through Zod schema internals and returns all matching nodes.
+ */
+const traverseZodSchemaPath = (
+  schema: VetoTypeAny,
+  path: (string | number)[],
+): ZodPathMatch[] => {
+  const unwrapped = unwrapSchemaFlags(schema);
+  const currentSchema = unwrapped.schema;
+  const currentMeta: ZodTraversalMeta = {
+    // Do not auto-propagate parent requiredness to descendants.
+    // Requiredness checks should reflect the node at the current path.
+    isNullable: unwrapped.isNullable,
+    isOptional: unwrapped.isOptional,
+  };
+
+  if (!path.length) {
+    return [
+      {
+        schema: currentSchema,
+        isNullable: currentMeta.isNullable,
+        isOptional: currentMeta.isOptional,
+      },
+    ];
+  }
+
+  const [current, ...remainingPath] = path;
+  const currentKey = String(current);
+
+  const unionBranches = getUnionBranchesFromZod(currentSchema);
+  if (unionBranches.length) {
+    return unionBranches.flatMap((branch) => {
+      return traverseZodSchemaPath(branch, path);
+    });
+  }
+
+  const objectShape = getObjectShape(currentSchema);
+  const objectChildSchema = objectShape?.[currentKey];
+  if (objectChildSchema) {
+    return traverseZodSchemaPath(objectChildSchema, remainingPath);
+  }
+
+  const recordValueSchema = getRecordValueSchemaFromZod(currentSchema);
+  if (recordValueSchema) {
+    return traverseZodSchemaPath(recordValueSchema, remainingPath);
+  }
+
+  const arrayElementSchema = getArrayElementSchema(currentSchema);
+  if (arrayElementSchema) {
+    const isIndex = isIndexPathSegment(current);
+    return traverseZodSchemaPath(
+      arrayElementSchema,
+      isIndex ? remainingPath : path,
+    );
+  }
+
+  return [];
+};
 
 /**
  * Checks if a schema path satisfies a given condition by traversing the schema
@@ -227,19 +282,14 @@ export const checkSerializedSchemaPath = (
   if (!schema) {
     return false;
   }
-  const serialized = serializeSchema(schema);
-
-  // If no path is provided or path is empty, check the root schema
-  if (!path?.length) {
-    return checkFn(serialized);
-  }
-
-  // Filter out null/undefined values and get valid types
-  const validTypes = traverseSchemaPath(serialized, path).filter(
-    (type): type is NonNullable<typeof type> => {
-      return type != null;
-    },
-  );
+  const matches = traverseZodSchemaPath(schema, path ?? []);
+  const validTypes = matches.map((match): SerializedSchemaPathType => {
+    return {
+      ...serializeSchema(match.schema),
+      isNullable: match.isNullable,
+      isOptional: match.isOptional,
+    };
+  });
 
   // Check if all valid types satisfy the check function if we have
   // valid types, otherwise return false

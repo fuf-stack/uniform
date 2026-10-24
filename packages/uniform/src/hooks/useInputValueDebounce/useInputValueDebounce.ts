@@ -1,8 +1,12 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
+
+import { useFormContext } from '../useFormContext';
 
 export interface UseInputValueDebounceOptions<TValue = unknown> {
   /** Debounce delay in milliseconds (default: 300) */
   debounceDelay?: number;
+  /** Field name for triggering validation after debounced value commits */
+  name: string;
   /** The onBlur function to call after flushing debounced value */
   onBlur: () => void;
   /** The onChange function to call with debounced value */
@@ -13,11 +17,11 @@ export interface UseInputValueDebounceOptions<TValue = unknown> {
 }
 
 export interface UseInputValueDebounceReturn<TValue = unknown> {
+  /** Enhanced onBlur function that flushes current value immediately */
+  onBlur: () => void;
   /** Enhanced onChange function with debouncing */
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onChange: (...event: any[]) => void;
-  /** Enhanced onBlur function that flushes current value immediately */
-  onBlur: () => void;
   /** The field value that is displayed - updates immediately */
   value: TValue;
 }
@@ -50,6 +54,7 @@ export interface UseInputValueDebounceReturn<TValue = unknown> {
  * ```tsx
  * const { onChange, onBlur, value } = useInputValueDebounce({
  *   debounceDelay: 300,
+ *   name: 'fieldName',
  *   onBlur: field.onBlur,
  *   onChange: field.onChange,
  *   value: field.value,
@@ -58,19 +63,25 @@ export interface UseInputValueDebounceReturn<TValue = unknown> {
  */
 export const useInputValueDebounce = <TValue = unknown>({
   debounceDelay = 300,
+  name,
   onBlur,
   onChange,
   value,
 }: UseInputValueDebounceOptions<TValue>): UseInputValueDebounceReturn<TValue> => {
+  const { trigger } = useFormContext();
+
   // Track value for synchronous updates
   const [currentValue, setCurrentValue] = useState<TValue>(value);
+  const [lastExternalValue, setLastExternalValue] = useState<TValue>(value);
 
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Sync with external value changes
-  useEffect(() => {
+  // Keep the displayed value in sync during the same render when the form
+  // replaces it (for example after reset), without an extra effect render.
+  if (!Object.is(lastExternalValue, value)) {
+    setLastExternalValue(value);
     setCurrentValue(value);
-  }, [value]);
+  }
 
   // Enhanced onChange handler with debouncing
   const handleChange = useCallback(
@@ -99,6 +110,9 @@ export const useInputValueDebounce = <TValue = unknown>({
         } else {
           onChange(newValue);
         }
+        // Trigger validation after debounced value commits
+        // This ensures errors are updated immediately when field becomes valid
+        trigger(name);
       };
 
       // Execute immediately or after delay
@@ -108,7 +122,7 @@ export const useInputValueDebounce = <TValue = unknown>({
         timeoutRef.current = setTimeout(executeOnChange, debounceDelay);
       }
     },
-    [onChange, debounceDelay],
+    [onChange, debounceDelay, trigger, name],
   );
 
   // Enhanced blur handler

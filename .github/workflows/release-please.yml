@@ -1,11 +1,5 @@
 name: release-please
 
-permissions:
-  contents: write
-  pull-requests: write
-  repository-projects: read # needed for 'gh pr edit' https://github.com/cli/cli/issues/6274
-  id-token: write # Required for OIDC trusted publishing with npm
-
 on:
   push:
     branches:
@@ -21,10 +15,14 @@ concurrency:
 jobs:
   release-please:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      id-token: write # Required for OIDC trusted publishing with npm
     outputs:
       releases_created: ${{ steps.release.outputs.releases_created }}
     steps:
-      - uses: googleapis/release-please-action@v4
+      - uses: googleapis/release-please-action@45996ed1f6d02564a971a2fa1b5860e934307cf7 # v5
         id: release
         with:
           token: ${{ secrets.RELEASE_PLEASE_GITHUB_TOKEN }}
@@ -34,7 +32,7 @@ jobs:
           config-file: ${{ github.ref_name == 'next' && 'release-please-config-next.json' || 'release-please-config.json' }}
           manifest-file: ${{ github.ref_name == 'next' && '.release-please-manifest-next.json' || '.release-please-manifest.json' }}
 
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 0
         if: steps.release.outputs.releases_created == 'true'
@@ -43,20 +41,36 @@ jobs:
         uses: ./.github/actions/setup-project
         if: steps.release.outputs.releases_created == 'true'
 
+      - name: Verify publish artifacts
+        run: pnpm verify:packages
+        if: steps.release.outputs.releases_created == 'true'
+
       - name: Publish to npm
         run: |
-          # Ensure npm 11.5.1 or later for trusted publishing (OIDC)
-          npm install --ignore-scripts -g npm@latest
           # Use npm publish via Lerna for trusted publishing support
           # pnpm doesn't support npm's trusted publishing (OIDC) yet, so we use npm directly
-          # Lerna detects changed packages and publishes them using npm
+          # Lerna detects changed packages and publishes them using npm.
+          # During publish, Lerna rewrites workspace dependency specifiers in
+          # package manifests (workspace:* -> release versions). That makes the
+          # lockfile temporarily out of sync while prepack scripts run, so
+          # frozen-lockfile must be disabled for this step.
+          # We run the installed workspace binary directly to avoid runtime installs.
           # Use 'next' dist-tag for prerelease branch, default (latest) for main
           if [ "${{ github.ref_name }}" = "next" ]; then
-            npx lerna publish from-package --yes --no-verify-access --dist-tag next
+            ./node_modules/.bin/lerna publish from-package --yes --no-verify-access --dist-tag next
           else
-            npx lerna publish from-package --yes --no-verify-access
+            ./node_modules/.bin/lerna publish from-package --yes --no-verify-access
           fi
         if: steps.release.outputs.releases_created == 'true'
+        env:
+          # pnpm reads either form depending on invocation context.
+          PNPM_CONFIG_FROZEN_LOCKFILE: 'false'
+          NPM_CONFIG_FROZEN_LOCKFILE: 'false'
+          # We build once in workspace context above. Disable publish-time lifecycle
+          # scripts (`prepack`) to avoid package-local installs resolving newly bumped
+          # internal versions before they are published.
+          NPM_CONFIG_IGNORE_SCRIPTS: 'true'
+          NPM_CONFIG_PROVENANCE: 'true'
         # Note: If you have private npm dependencies, you may need NODE_AUTH_TOKEN
         # for installing dependencies only (not for publishing)
         # env:
@@ -67,6 +81,9 @@ jobs:
   # Only runs on main branch (not for prerelease branches)
   check-conflicting-prs:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      repository-projects: read # needed for 'gh pr edit' https://github.com/cli/cli/issues/6274
     needs: release-please
     if: needs.release-please.outputs.releases_created == 'true' && github.ref_name == 'main'
     outputs:
@@ -110,6 +127,9 @@ jobs:
   release-please-rebase:
     needs: check-conflicting-prs
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     if: needs.check-conflicting-prs.outputs.need_rebase == 'true'
     steps:
-      - uses: googleapis/release-please-action@v4
+      - uses: googleapis/release-please-action@45996ed1f6d02564a971a2fa1b5860e934307cf7 # v5

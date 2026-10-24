@@ -1,5 +1,860 @@
 # Changelog
 
+## [1.28.0](https://github.com/fuf-stack/pixels/compare/uniform-v1.27.0...uniform-v1.28.0) (2026-10-19)
+
+
+### Features
+
+* **uniform:** add password visibility and redact sensitive debug values ([f5d74db](https://github.com/fuf-stack/pixels/commit/f5d74dbfb739903db17b525710937b3e1975da14))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-utils bumped to 1.4.1
+    * @fuf-stack/pixels bumped to 1.14.1
+
+## [1.27.0](https://github.com/fuf-stack/pixels/compare/uniform-v1.26.1...uniform-v1.27.0) (2026-10-14)
+
+
+### Features
+
+* expand verification and contribution tooling ([cf200f0](https://github.com/fuf-stack/pixels/commit/cf200f0f6985e010b34b81eed494356c27099d55))
+* **uniform:** support Slider value transforms ([d24f79a](https://github.com/fuf-stack/pixels/commit/d24f79ab30eb0ab5e8663d7b5c17ec8639f5ce81))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @internationalized/date to v3.12.4 ([#1878](https://github.com/fuf-stack/pixels/issues/1878)) ([c9af25a](https://github.com/fuf-stack/pixels/commit/c9af25a46a4c6d6fed011dbcf208ef7a59d70ded))
+* **uniform:** improve slider focus handling and regression coverage ([431b229](https://github.com/fuf-stack/pixels/commit/431b22930a31cb16916c7c797cde58932490359e)), closes [#1510](https://github.com/fuf-stack/pixels/issues/1510)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.4.0
+    * @fuf-stack/pixels bumped to 1.14.0
+    * @fuf-stack/veto bumped to 1.11.0
+
+## [1.26.1](https://github.com/fuf-stack/pixels/compare/uniform-v1.26.0...uniform-v1.26.1) (2026-08-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @internationalized/date to v3.12.3 ([#1829](https://github.com/fuf-stack/pixels/issues/1829)) ([c0e50af](https://github.com/fuf-stack/pixels/commit/c0e50af30e1cd6bc21c5ccfb7a8ab397ecadd50c))
+* **deps:** update dependency framer-motion to v12.43.0 ([#1833](https://github.com/fuf-stack/pixels/issues/1833)) ([ab240cf](https://github.com/fuf-stack/pixels/commit/ab240cf6e906f7d7fb4d868372144cbfef92478f))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.3.2
+    * @fuf-stack/pixels bumped to 1.13.2
+    * @fuf-stack/veto bumped to 1.10.0
+
+## [1.26.0](https://github.com/fuf-stack/pixels/compare/uniform-v1.25.0...uniform-v1.26.0) (2026-07-29)
+
+
+### Features
+
+* **uniform,megapixels:** add className slots to Form and FormDebugViewer ([2fed04a](https://github.com/fuf-stack/pixels/commit/2fed04a1caf0e4a080071463b3f53e8d282f20a0))
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v12.42.2 ([#1785](https://github.com/fuf-stack/pixels/issues/1785)) ([24c1f81](https://github.com/fuf-stack/pixels/commit/24c1f814c54aa84e470c096bd89574c977242632))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.3.1
+    * @fuf-stack/pixels bumped to 1.13.1
+
+## [1.25.0](https://github.com/fuf-stack/pixels/compare/uniform-v1.24.12...uniform-v1.25.0) (2026-07-17)
+
+
+### Features
+
+* build esm only, no cjs anymore ([7856711](https://github.com/fuf-stack/pixels/commit/78567111820395bb9b0017c04820e0c8efea0e9f))
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-hook-form to v7.81.0 ([b59498a](https://github.com/fuf-stack/pixels/commit/b59498aab94cb9def7a0ea557800c0e48de37afd))
+* **deps:** update dependency react-icons to v5.7.0 ([#1769](https://github.com/fuf-stack/pixels/issues/1769)) ([22db442](https://github.com/fuf-stack/pixels/commit/22db442b51cb3de20cf9962a619c7872019a842d))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.3.0
+    * @fuf-stack/pixel-utils bumped to 1.4.0
+    * @fuf-stack/pixels bumped to 1.13.0
+    * @fuf-stack/veto bumped to 1.9.0
+
+## [1.24.12](https://github.com/fuf-stack/pixels/compare/uniform-v1.24.11...uniform-v1.24.12) (2026-07-16)
+
+
+### Bug Fixes
+
+* **uniform:** removed Json.css import from FormDebugViewer ([4516e2f](https://github.com/fuf-stack/pixels/commit/4516e2faa131b705ce662a85d0b091b70f77a5b3))
+
+## [1.24.11](https://github.com/fuf-stack/pixels/compare/uniform-v1.24.10...uniform-v1.24.11) (2026-07-16)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixels bumped to 1.12.1
+
+## [1.24.10](https://github.com/fuf-stack/pixels/compare/uniform-v1.24.9...uniform-v1.24.10) (2026-07-11)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/veto bumped to 1.8.0
+
+## [1.24.9](https://github.com/fuf-stack/pixels/compare/uniform-v1.24.8...uniform-v1.24.9) (2026-07-05)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixels bumped to 1.12.0
+
+## [1.24.8](https://github.com/fuf-stack/pixels/compare/uniform-v1.24.7...uniform-v1.24.8) (2026-07-02)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/veto bumped to 1.7.4
+
+## [1.24.7](https://github.com/fuf-stack/pixels/compare/uniform-v1.24.6...uniform-v1.24.7) (2026-06-30)
+
+
+### Bug Fixes
+
+* **uniform:** try to fix react-select cjs exports ([5475949](https://github.com/fuf-stack/pixels/commit/54759498448dceba965181ee33e0ec3e02d65fec))
+
+## [1.24.6](https://github.com/fuf-stack/pixels/compare/uniform-v1.24.5...uniform-v1.24.6) (2026-06-30)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-hook-form to v7.80.0 ([#1750](https://github.com/fuf-stack/pixels/issues/1750)) ([fd8dcf9](https://github.com/fuf-stack/pixels/commit/fd8dcf9fa2092a1fa57647cedd61222cd32337cd))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixels bumped to 1.11.8
+
+## [1.24.5](https://github.com/fuf-stack/pixels/compare/uniform-v1.24.4...uniform-v1.24.5) (2026-06-26)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixels bumped to 1.11.7
+
+## [1.24.4](https://github.com/fuf-stack/pixels/compare/uniform-v1.24.3...uniform-v1.24.4) (2026-06-26)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixels bumped to 1.11.6
+
+## [1.24.3](https://github.com/fuf-stack/pixels/compare/uniform-v1.24.2...uniform-v1.24.3) (2026-06-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-hook-form to v7.79.0 ([#1738](https://github.com/fuf-stack/pixels/issues/1738)) ([3716b84](https://github.com/fuf-stack/pixels/commit/3716b84387dc993d720f4de8190f2398d7d4971d))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixels bumped to 1.11.5
+
+## [1.24.2](https://github.com/fuf-stack/pixels/compare/uniform-v1.24.1...uniform-v1.24.2) (2026-06-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-hook-form to v7.78.0 ([#1731](https://github.com/fuf-stack/pixels/issues/1731)) ([6cdf41a](https://github.com/fuf-stack/pixels/commit/6cdf41a12c3786544a840e2fdd7f6e354c0f0ed0))
+
+## [1.24.1](https://github.com/fuf-stack/pixels/compare/uniform-v1.24.0...uniform-v1.24.1) (2026-06-07)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-hook-form to v7.77.0 ([#1716](https://github.com/fuf-stack/pixels/issues/1716)) ([14943f9](https://github.com/fuf-stack/pixels/commit/14943f9dd0032c4c68dffab25f24b27ad572ad9a))
+* **uniform:** pass refs in DatePicker and Time ([a91f86d](https://github.com/fuf-stack/pixels/commit/a91f86d6aba4ee7674c2c22c6aa2a4974ea5bab0))
+
+## [1.24.0](https://github.com/fuf-stack/pixels/compare/uniform-v1.23.2...uniform-v1.24.0) (2026-06-07)
+
+
+### Features
+
+* **uniform:** add custom option rendering for checkboxes and radios ([9a1398c](https://github.com/fuf-stack/pixels/commit/9a1398cf6e9ffb841d484404a537e1568cd7163f))
+
+
+### Bug Fixes
+
+* **uniform:** remove snaps ([3fd30d4](https://github.com/fuf-stack/pixels/commit/3fd30d4ff069dc85aa521faf3972f7b07ff5808e))
+
+## [1.23.2](https://github.com/fuf-stack/pixels/compare/uniform-v1.23.1...uniform-v1.23.2) (2026-06-06)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixels bumped to 1.11.4
+
+## [1.23.1](https://github.com/fuf-stack/pixels/compare/uniform-v1.23.0...uniform-v1.23.1) (2026-06-06)
+
+
+### Bug Fixes
+
+* **pixels:** fix Alert default style ([2028f43](https://github.com/fuf-stack/pixels/commit/2028f43b85ed4cdde979cecb9c7d3719a9b4d770))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixels bumped to 1.11.3
+
+## [1.23.0](https://github.com/fuf-stack/pixels/compare/uniform-v1.22.11...uniform-v1.23.0) (2026-06-05)
+
+
+### Features
+
+* **uniform:** add select transform story and stabilize multi-value sizing ([ac56742](https://github.com/fuf-stack/pixels/commit/ac56742b3fc902da48c7a00746083522053ddcd1))
+
+## [1.22.11](https://github.com/fuf-stack/pixels/compare/uniform-v1.22.10...uniform-v1.22.11) (2026-06-05)
+
+
+### Bug Fixes
+
+* **uniform:** keep multi-select chips compact ([e032901](https://github.com/fuf-stack/pixels/commit/e032901bd598ec3d05239695c1c44443b79d5e3e))
+
+## [1.22.10](https://github.com/fuf-stack/pixels/compare/uniform-v1.22.9...uniform-v1.22.10) (2026-06-04)
+
+
+### Bug Fixes
+
+* **uniform:** normalize field label cursor and wrapper spacing across form controls ([cf14111](https://github.com/fuf-stack/pixels/commit/cf14111be31e617bae91fb68c32c3d6f408fe6d9))
+
+## [1.22.9](https://github.com/fuf-stack/pixels/compare/uniform-v1.22.8...uniform-v1.22.9) (2026-06-04)
+
+
+### Bug Fixes
+
+* **uniform:** add isArrayValue error normalization in useUniformField fixes Select/Checkboxes issues ([786c13a](https://github.com/fuf-stack/pixels/commit/786c13ae4ab8b8855b460218907974e0fe522635))
+
+## [1.22.8](https://github.com/fuf-stack/pixels/compare/uniform-v1.22.7...uniform-v1.22.8) (2026-06-04)
+
+
+### Bug Fixes
+
+* **deps:** update react-spectrum monorepo ([#1705](https://github.com/fuf-stack/pixels/issues/1705)) ([164639c](https://github.com/fuf-stack/pixels/commit/164639ccfe4f4d7310f9b07f15b129f0664f67e0))
+* **uniform:** keep FormDebugViewer on state/subscription flow and avoid effect sync setState ([d7ad405](https://github.com/fuf-stack/pixels/commit/d7ad40551cab6cedd9f8a4873620859f17568413))
+
+## [1.22.7](https://github.com/fuf-stack/pixels/compare/uniform-v1.22.6...uniform-v1.22.7) (2026-06-04)
+
+
+### Bug Fixes
+
+* **uniform:** stabilize FormDebugViewer external-store snapshots and extend regression tests ([1a9d039](https://github.com/fuf-stack/pixels/commit/1a9d039c5b0e5b00092d1ee76b0b3d7a994232d6))
+
+## [1.22.6](https://github.com/fuf-stack/pixels/compare/uniform-v1.22.5...uniform-v1.22.6) (2026-06-04)
+
+
+### Bug Fixes
+
+* **uniform:** fix flaky dateHelper test ([a2fd711](https://github.com/fuf-stack/pixels/commit/a2fd71115470132507a2ae74c886765b35e97f3d))
+* **uniform:** migrate FormDebugViewer to useSyncExternalStore and add focused tests ([d9fe7c4](https://github.com/fuf-stack/pixels/commit/d9fe7c429de96f543f3096f063598b75e70dbbaa))
+* **uniform:** switch to subpath-only exports and default component imports + reformat ([ea35814](https://github.com/fuf-stack/pixels/commit/ea358146290f80f033924c2c1161d999b7adeacd))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-utils bumped to 1.3.2
+    * @fuf-stack/pixels bumped to 1.11.2
+    * @fuf-stack/veto bumped to 1.7.3
+
+## [1.22.5](https://github.com/fuf-stack/pixels/compare/uniform-v1.22.4...uniform-v1.22.5) (2026-06-04)
+
+
+### Bug Fixes
+
+* add shared dep-bundled dts config and annotate buttonVariants for portable types ([ab3e5d6](https://github.com/fuf-stack/pixels/commit/ab3e5d66fbf84324dd20ecc4db0b097ed1a80e44))
+* **uniform:** allign all exports ([bdee259](https://github.com/fuf-stack/pixels/commit/bdee2593ad9c7f91fcc467c94be917efe032cbee))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.2.2
+    * @fuf-stack/pixel-utils bumped to 1.3.1
+    * @fuf-stack/pixels bumped to 1.11.1
+    * @fuf-stack/veto bumped to 1.7.2
+
+## [1.22.4](https://github.com/fuf-stack/pixels/compare/uniform-v1.22.3...uniform-v1.22.4) (2026-06-03)
+
+
+### Bug Fixes
+
+* **uniform:** normalize reset placeholders for all field arrays ([1973478](https://github.com/fuf-stack/pixels/commit/1973478c27c3ec6249d15e7d5e3f1b10c0c7ce47))
+
+## [1.22.3](https://github.com/fuf-stack/pixels/compare/uniform-v1.22.2...uniform-v1.22.3) (2026-06-03)
+
+
+### Bug Fixes
+
+* **uniform:** normalize FieldArray reset artifacts via explicit form reset events ([58fc87b](https://github.com/fuf-stack/pixels/commit/58fc87b549bb9927840b94bfbdcb3c53524e1830))
+
+## [1.22.2](https://github.com/fuf-stack/pixels/compare/uniform-v1.22.1...uniform-v1.22.2) (2026-06-03)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixels bumped to 1.11.0
+
+## [1.22.1](https://github.com/fuf-stack/pixels/compare/uniform-v1.22.0...uniform-v1.22.1) (2026-06-02)
+
+
+### Bug Fixes
+
+* **deps:** update [@heroui](https://github.com/heroui) monorepo to v2.3.32 ([#1694](https://github.com/fuf-stack/pixels/issues/1694)) ([51651af](https://github.com/fuf-stack/pixels/commit/51651af0bef4087950c3cc1177e480a81d4ab58f))
+* **uniform:** add timezone-stable DatePicker/Time behavior and snapshots ([ab20b20](https://github.com/fuf-stack/pixels/commit/ab20b20f1d51a6c232a065c518452ee0d2faec2c))
+* **uniform:** stabilize examples snapshots for time/date placeholders ([4034f39](https://github.com/fuf-stack/pixels/commit/4034f3942f7d97a5a04aa05841a4eec773630f65))
+
+## [1.22.0](https://github.com/fuf-stack/pixels/compare/uniform-v1.21.0...uniform-v1.22.0) (2026-06-02)
+
+
+### Features
+
+* **uniform:** add DatePicker ([e80b5a6](https://github.com/fuf-stack/pixels/commit/e80b5a643e126f049e1f362b669ca308939efabb))
+* **uniform:** add Time ([a40c722](https://github.com/fuf-stack/pixels/commit/a40c722beea81046846f803fbebbfd998ff325db))
+
+## [1.21.0](https://github.com/fuf-stack/pixels/compare/uniform-v1.20.18...uniform-v1.21.0) (2026-06-02)
+
+
+### Features
+
+* **uniform:** add customizable empty options rendering for Select ([aae0d25](https://github.com/fuf-stack/pixels/commit/aae0d2553f39caa0603fd7cb4bec7da7dbe64813))
+
+## [1.20.18](https://github.com/fuf-stack/pixels/compare/uniform-v1.20.17...uniform-v1.20.18) (2026-06-01)
+
+
+### Bug Fixes
+
+* **uniform:** make resolver validation errors reactive ([02dd453](https://github.com/fuf-stack/pixels/commit/02dd4538d4e3f1d8f1391c1d5a8bcc1622720835))
+
+## [1.20.17](https://github.com/fuf-stack/pixels/compare/uniform-v1.20.16...uniform-v1.20.17) (2026-06-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v12.40.0 ([#1688](https://github.com/fuf-stack/pixels/issues/1688)) ([da9e77d](https://github.com/fuf-stack/pixels/commit/da9e77db6c630dd0484aaf344929bc7803cca5c6))
+* **uniform:** refresh validation errors after user changes ([3b3cd48](https://github.com/fuf-stack/pixels/commit/3b3cd487a226f5baefa39fcb62a67bc8b7ca0588))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.2.1
+    * @fuf-stack/pixels bumped to 1.10.2
+
+## [1.20.16](https://github.com/fuf-stack/pixels/compare/uniform-v1.20.15...uniform-v1.20.16) (2026-06-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-hook-form to v7.76.1 ([#1685](https://github.com/fuf-stack/pixels/issues/1685)) ([5f5b705](https://github.com/fuf-stack/pixels/commit/5f5b705887d9c44c9ef71455655455f9b845b6c0))
+* **uniform:** defer Select blur to prevent stale cross-field validation ([1c7c6b8](https://github.com/fuf-stack/pixels/commit/1c7c6b8a1574dfe2a5653a639b47c7190a09ca98))
+
+## [1.20.15](https://github.com/fuf-stack/pixels/compare/uniform-v1.20.14...uniform-v1.20.15) (2026-05-27)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/veto bumped to 1.7.1
+
+## [1.20.14](https://github.com/fuf-stack/pixels/compare/uniform-v1.20.13...uniform-v1.20.14) (2026-05-27)
+
+
+### Bug Fixes
+
+* **uniform:** prioritize client validation errors before base schema errors ([134ac12](https://github.com/fuf-stack/pixels/commit/134ac124e0ce23a8a05326102e28d00a53e4b386))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/veto bumped to 1.7.0
+
+## [1.20.13](https://github.com/fuf-stack/pixels/compare/uniform-v1.20.12...uniform-v1.20.13) (2026-05-27)
+
+
+### Bug Fixes
+
+* **uniform:** render required asterisk explicitly in label to avoid missing indicator ([f45c6bb](https://github.com/fuf-stack/pixels/commit/f45c6bb000ce84f91c48cceb136ae5a7a85fd3b1))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/veto bumped to 1.6.0
+
+## [1.20.12](https://github.com/fuf-stack/pixels/compare/uniform-v1.20.11...uniform-v1.20.12) (2026-05-26)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/veto bumped to 1.5.6
+
+## [1.20.11](https://github.com/fuf-stack/pixels/compare/uniform-v1.20.10...uniform-v1.20.11) (2026-05-26)
+
+
+### Bug Fixes
+
+* **uniform:** add disbled options to Select ([a11e28c](https://github.com/fuf-stack/pixels/commit/a11e28ceae2ecb7bad842da2738cc7b6298f2fec))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixels bumped to 1.10.1
+    * @fuf-stack/veto bumped to 1.5.5
+
+## [1.20.10](https://github.com/fuf-stack/pixels/compare/uniform-v1.20.9...uniform-v1.20.10) (2026-05-23)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-hook-form to v7.76.0 ([#1667](https://github.com/fuf-stack/pixels/issues/1667)) ([a107fc3](https://github.com/fuf-stack/pixels/commit/a107fc30fb757318ceeb301067e3c76658c3b624))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/veto bumped to 1.5.4
+
+## [1.20.9](https://github.com/fuf-stack/pixels/compare/uniform-v1.20.8...uniform-v1.20.9) (2026-05-22)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/veto bumped to 1.5.3
+
+## [1.20.8](https://github.com/fuf-stack/pixels/compare/uniform-v1.20.7...uniform-v1.20.8) (2026-05-22)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/veto bumped to 1.5.2
+
+## [1.20.7](https://github.com/fuf-stack/pixels/compare/uniform-v1.20.6...uniform-v1.20.7) (2026-05-22)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/veto bumped to 1.5.1
+
+## [1.20.6](https://github.com/fuf-stack/pixels/compare/uniform-v1.20.5...uniform-v1.20.6) (2026-05-22)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/veto bumped to 1.5.0
+
+## [1.20.5](https://github.com/fuf-stack/pixels/compare/uniform-v1.20.4...uniform-v1.20.5) (2026-05-22)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/veto bumped to 1.4.1
+
+## [1.20.4](https://github.com/fuf-stack/pixels/compare/uniform-v1.20.3...uniform-v1.20.4) (2026-05-22)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/veto bumped to 1.4.0
+
+## [1.20.3](https://github.com/fuf-stack/pixels/compare/uniform-v1.20.2...uniform-v1.20.3) (2026-05-21)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/veto bumped to 1.3.0
+
+## [1.20.2](https://github.com/fuf-stack/pixels/compare/uniform-v1.20.1...uniform-v1.20.2) (2026-05-21)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/veto bumped to 1.2.1
+
+## [1.20.1](https://github.com/fuf-stack/pixels/compare/uniform-v1.20.0...uniform-v1.20.1) (2026-05-21)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/veto bumped to 1.2.0
+
+## [1.20.0](https://github.com/fuf-stack/pixels/compare/uniform-v1.19.5...uniform-v1.20.0) (2026-05-21)
+
+
+### Features
+
+* upgrade to typescript v6 ([ca06ae3](https://github.com/fuf-stack/pixels/commit/ca06ae3de100d5521c693ffbc669b88f964e568e))
+
+
+### Bug Fixes
+
+* **deps:** update [@heroui](https://github.com/heroui) monorepo ([f323f7b](https://github.com/fuf-stack/pixels/commit/f323f7b28e35084f6812c6cd93c77efb76faa912))
+* **deps:** update [@heroui](https://github.com/heroui) monorepo ([71b7728](https://github.com/fuf-stack/pixels/commit/71b772808415943b7fe85bafc49b29e29335be60))
+* **deps:** update dependency react-hook-form to v7.74.0 ([#1628](https://github.com/fuf-stack/pixels/issues/1628)) ([64dae71](https://github.com/fuf-stack/pixels/commit/64dae711425f66c69115c0efb38fa333aef93756))
+* **deps:** update dependency react-hook-form to v7.75.0 ([#1637](https://github.com/fuf-stack/pixels/issues/1637)) ([abb012a](https://github.com/fuf-stack/pixels/commit/abb012afd8ccd199201429f99a0c3d65cc7cc73a))
+* **deps:** update dependency zod to v4.4.3 ([9d77b75](https://github.com/fuf-stack/pixels/commit/9d77b75d26db36d0a4dd7221ee7c86a648c66bda))
+* **pixel-utils:** fix version tv conflict in repo with overrides ([580ea8b](https://github.com/fuf-stack/pixels/commit/580ea8b2159a450c7b0759326cfedf6a0fb34db5))
+* **pixels,uniform:** update all snaps after new hero version ([7fd3ecb](https://github.com/fuf-stack/pixels/commit/7fd3ecb745ad17a636b62bcdfbcd6e9b000feb1d))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-utils bumped to 1.3.0
+    * @fuf-stack/pixels bumped to 1.10.0
+    * @fuf-stack/veto bumped to 1.1.0
+
+## [1.19.5](https://github.com/fuf-stack/pixels/compare/uniform-v1.19.4...uniform-v1.19.5) (2026-04-30)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/veto bumped to 1.0.4
+
+## [1.19.4](https://github.com/fuf-stack/pixels/compare/uniform-v1.19.3...uniform-v1.19.4) (2026-04-30)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-hook-form to v7.73.1 ([#1621](https://github.com/fuf-stack/pixels/issues/1621)) ([276e0fd](https://github.com/fuf-stack/pixels/commit/276e0fdaa7fc4a61603de11b5e2bafda961587b8))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/veto bumped to 1.0.3
+
+## [1.19.3](https://github.com/fuf-stack/pixels/compare/uniform-v1.19.2...uniform-v1.19.3) (2026-04-30)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/veto bumped to 1.0.2
+
+## [1.19.2](https://github.com/fuf-stack/pixels/compare/uniform-v1.19.1...uniform-v1.19.2) (2026-04-29)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/veto bumped to 1.0.1
+
+## [1.19.1](https://github.com/fuf-stack/pixels/compare/uniform-v1.19.0...uniform-v1.19.1) (2026-04-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @react-aria/visually-hidden to v3.9.0 ([#1612](https://github.com/fuf-stack/pixels/issues/1612)) ([21dd0b2](https://github.com/fuf-stack/pixels/commit/21dd0b29ebb5d6c780523bc15311f0b5b97b0b50))
+* **uniform:** work around jsdom 27 PointerEvent/MouseEvent crash ([fb79b77](https://github.com/fuf-stack/pixels/commit/fb79b77c0961fada07dc9eeb75ddd88fe58d8d5f))
+* **veto,uniform:** restore v4 compatibility for requiredness and error formatting ([77f492f](https://github.com/fuf-stack/pixels/commit/77f492f2b4d7c3932509423b1b5342b15e68a887))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/veto bumped to 1.0.0
+
+## [1.19.0](https://github.com/fuf-stack/pixels/compare/uniform-v1.18.3...uniform-v1.19.0) (2026-04-13)
+
+
+### Features
+
+* **pixels:** replace color prop with unified variant prop ([a4fa20a](https://github.com/fuf-stack/pixels/commit/a4fa20a9a3f1ea1910a410bbc976894d839520f6))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @react-aria/visually-hidden to v3.8.30 ([#1519](https://github.com/fuf-stack/pixels/issues/1519)) ([42b1770](https://github.com/fuf-stack/pixels/commit/42b177017d79b96b31211b8e8e22acf446ed65ec))
+* **deps:** update dependency @react-aria/visually-hidden to v3.8.31 ([#1561](https://github.com/fuf-stack/pixels/issues/1561)) ([4497f9a](https://github.com/fuf-stack/pixels/commit/4497f9af0bf60c4d208bfbe1b2e067ee1890b10b))
+* **deps:** update dependency framer-motion to v12.29.2 ([#1512](https://github.com/fuf-stack/pixels/issues/1512)) ([22f3588](https://github.com/fuf-stack/pixels/commit/22f3588488d5710891032c163e9e12d8abf3a423))
+* **deps:** update dependency framer-motion to v12.33.0 ([#1533](https://github.com/fuf-stack/pixels/issues/1533)) ([c0f84ec](https://github.com/fuf-stack/pixels/commit/c0f84eced1dcd64f70348cd579a891cf1c6caa4a))
+* **deps:** update dependency framer-motion to v12.34.0 ([#1540](https://github.com/fuf-stack/pixels/issues/1540)) ([81a892f](https://github.com/fuf-stack/pixels/commit/81a892fa247adbd4ae6c97d376a5ba1811ed4851))
+* **deps:** update dependency framer-motion to v12.34.3 ([#1546](https://github.com/fuf-stack/pixels/issues/1546)) ([58c5994](https://github.com/fuf-stack/pixels/commit/58c5994beec034731fde8c4ecd58f8bd6c0eaa4a))
+* **deps:** update dependency framer-motion to v12.35.1 ([#1567](https://github.com/fuf-stack/pixels/issues/1567)) ([125ea00](https://github.com/fuf-stack/pixels/commit/125ea00d05a08be6cc8a839afcf092ceb71d45c7))
+* **deps:** update dependency framer-motion to v12.36.0 ([#1579](https://github.com/fuf-stack/pixels/issues/1579)) ([3e3b149](https://github.com/fuf-stack/pixels/commit/3e3b149eced76b3cd14d6ef90f5bec02798fdffb))
+* **deps:** update dependency framer-motion to v12.38.0 ([#1589](https://github.com/fuf-stack/pixels/issues/1589)) ([213501f](https://github.com/fuf-stack/pixels/commit/213501f4f9a757690496836db9fa808e9701dd29))
+* **deps:** update dependency react-hook-form to v7.71.2 ([#1545](https://github.com/fuf-stack/pixels/issues/1545)) ([cecfa86](https://github.com/fuf-stack/pixels/commit/cecfa8696e632f175967f89e6ca9fa881b9dbd0f))
+* **deps:** update dependency react-hook-form to v7.72.0 ([#1588](https://github.com/fuf-stack/pixels/issues/1588)) ([a135130](https://github.com/fuf-stack/pixels/commit/a13513005365a6bdf2102d33a0143ef1b5fa4906))
+* **deps:** update dependency react-hook-form to v7.72.1 ([#1599](https://github.com/fuf-stack/pixels/issues/1599)) ([1d2879e](https://github.com/fuf-stack/pixels/commit/1d2879e2e89a7fafb8c6bfb8e7453414783a3f64))
+* **deps:** update dependency react-icons to v5.6.0 ([#1559](https://github.com/fuf-stack/pixels/issues/1559)) ([f04d739](https://github.com/fuf-stack/pixels/commit/f04d739320b47aa7226be463f4d29df5e56b6445))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.2.0
+    * @fuf-stack/pixel-utils bumped to 1.2.0
+    * @fuf-stack/pixels bumped to 1.9.0
+
+## [1.18.3](https://github.com/fuf-stack/pixels/compare/uniform-v1.18.2...uniform-v1.18.3) (2026-02-06)
+
+
+### Bug Fixes
+
+* **uniform:** use gap-6 in Grid as default gap ([cd01b4a](https://github.com/fuf-stack/pixels/commit/cd01b4a1e7f2486551534a1bb9ac71ec87692877))
+
+## [1.18.2](https://github.com/fuf-stack/pixels/compare/uniform-v1.18.1...uniform-v1.18.2) (2026-02-06)
+
+
+### Bug Fixes
+
+* **uniform:** remove useless outer div from SwitchBox ([39a14ec](https://github.com/fuf-stack/pixels/commit/39a14ec55e51a0050955b703afd41ed163f1974a))
+
+## [1.18.1](https://github.com/fuf-stack/pixels/compare/uniform-v1.18.0...uniform-v1.18.1) (2026-02-06)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixels bumped to 1.8.0
+
+## [1.18.0](https://github.com/fuf-stack/pixels/compare/uniform-v1.17.1...uniform-v1.18.0) (2026-02-04)
+
+
+### Features
+
+* **uniform:** add toSubmitFormat to remove empty objects from submission data ([7912d17](https://github.com/fuf-stack/pixels/commit/7912d17e6b105c240bac3ee1bda37d41a1f2b1d8))
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v12.29.0 ([#1496](https://github.com/fuf-stack/pixels/issues/1496)) ([61a9d73](https://github.com/fuf-stack/pixels/commit/61a9d733275d6d32b5698249ecc316bfa13531ca))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.1.4
+    * @fuf-stack/pixels bumped to 1.7.4
+
+## [1.17.1](https://github.com/fuf-stack/pixels/compare/uniform-v1.17.0...uniform-v1.17.1) (2026-01-29)
+
+
+### Bug Fixes
+
+* **uniform:** debounce FieldCard invalid state to prevent flicker ([4f82c1b](https://github.com/fuf-stack/pixels/commit/4f82c1bfb6c85e23d2010f354df0fd84dc385954))
+
+## [1.17.0](https://github.com/fuf-stack/pixels/compare/uniform-v1.16.1...uniform-v1.17.0) (2026-01-29)
+
+
+### Features
+
+* **uniform:** improve FieldCard error styling logic and restructure stories ([5fe7b03](https://github.com/fuf-stack/pixels/commit/5fe7b03dc6e888abd07012bfc246fb3a429816f3))
+
+
+### Bug Fixes
+
+* **uniform:** refine FieldCard invalid styling logic for object-level errors ([dd07ea5](https://github.com/fuf-stack/pixels/commit/dd07ea52bab1c072cfa00870cb0ced6c50559c4f))
+
+## [1.16.1](https://github.com/fuf-stack/pixels/compare/uniform-v1.16.0...uniform-v1.16.1) (2026-01-29)
+
+
+### Bug Fixes
+
+* **uniform:** fix object card all field render snap logic ([edd167a](https://github.com/fuf-stack/pixels/commit/edd167a670660c52cb9b0d0f90cdd6cff41576ab))
+* **uniform:** in FieldCard show object errors immediately and error styling only when touched ([5d2b927](https://github.com/fuf-stack/pixels/commit/5d2b927a41adeebd579132219df0e732b0fcc8f5))
+
+## [1.16.0](https://github.com/fuf-stack/pixels/compare/uniform-v1.15.0...uniform-v1.16.0) (2026-01-29)
+
+
+### Features
+
+* **uniform:** improve FieldCard required detection and error styling ([2cf46cd](https://github.com/fuf-stack/pixels/commit/2cf46cdf1969b7a9091d04d3e05ccadd738b02db))
+
+
+### Bug Fixes
+
+* **uniform:** always show FieldCard object-level validation errors ([442999d](https://github.com/fuf-stack/pixels/commit/442999d2d5c46ab0dae451164ead7cff2df074c0))
+
+## [1.15.0](https://github.com/fuf-stack/pixels/compare/uniform-v1.14.0...uniform-v1.15.0) (2026-01-28)
+
+
+### Features
+
+* **uniform:** add selectedOptionFallback prop to Select for async value handling ([2510bc0](https://github.com/fuf-stack/pixels/commit/2510bc0d122ee15211351be95500a447d522e65f))
+
+
+### Bug Fixes
+
+* **uniform:** skip onChange when value unchanged to prevent spurious triggers ([2662984](https://github.com/fuf-stack/pixels/commit/2662984cf999e78d83fee7c94f3d8235fbf9e1b4))
+
+## [1.14.0](https://github.com/fuf-stack/pixels/compare/uniform-v1.13.0...uniform-v1.14.0) (2026-01-27)
+
+
+### Features
+
+* **uniform:** add programmatic reset stories and fix Select reset behavior ([cc078c2](https://github.com/fuf-stack/pixels/commit/cc078c213e7b4e44178dcdf281fa9630c50912e2))
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v12.27.5 ([#1485](https://github.com/fuf-stack/pixels/issues/1485)) ([81c0927](https://github.com/fuf-stack/pixels/commit/81c09278d57b6a2a868eb079f9005ce182fa3f79))
+* **uniform:** notify useWatchUserChange with original values instead of marker strings ([e9ababe](https://github.com/fuf-stack/pixels/commit/e9ababe9112072b3201ce42caf0891d33b6f5ecb))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.1.3
+    * @fuf-stack/pixels bumped to 1.7.3
+
+## [1.13.0](https://github.com/fuf-stack/pixels/compare/uniform-v1.12.0...uniform-v1.13.0) (2026-01-27)
+
+
+### Features
+
+* **uniform:** add boolean value support to RadioTabs ([e87a0d3](https://github.com/fuf-stack/pixels/commit/e87a0d3e5f2e2a6fd3378b1184ff20aa93a92431))
+
+
+### Bug Fixes
+
+* **deps:** update dependency framer-motion to v12.27.1 ([#1480](https://github.com/fuf-stack/pixels/issues/1480)) ([32c8af6](https://github.com/fuf-stack/pixels/commit/32c8af6456c5275573a6d20ec5f3c569a758c4ba))
+* **deps:** update dependency framer-motion to v12.27.3 ([#1483](https://github.com/fuf-stack/pixels/issues/1483)) ([e797afb](https://github.com/fuf-stack/pixels/commit/e797afb4a54784bd4c3a0f5c97992a3c382e6cf1))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.1.2
+    * @fuf-stack/pixels bumped to 1.7.2
+
+## [1.12.0](https://github.com/fuf-stack/pixels/compare/uniform-v1.11.3...uniform-v1.12.0) (2026-01-26)
+
+
+### Features
+
+* **uniform:** add number value support for radio and select component ([f587b6a](https://github.com/fuf-stack/pixels/commit/f587b6a10f1d6a99a460bfc9bce11a591df49bb1))
+
+## [1.11.3](https://github.com/fuf-stack/pixels/compare/uniform-v1.11.2...uniform-v1.11.3) (2026-01-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-hook-form to v7.71.1 ([#1474](https://github.com/fuf-stack/pixels/issues/1474)) ([d6ab859](https://github.com/fuf-stack/pixels/commit/d6ab859330cf862fefc32fda6379e554c9e961b7))
+* **uniform:** improve validation error display timing for empty fields ([a8b819f](https://github.com/fuf-stack/pixels/commit/a8b819f2d62b635adbd44b9bca3be08bb7f8ae1f))
+
+## [1.11.2](https://github.com/fuf-stack/pixels/compare/uniform-v1.11.1...uniform-v1.11.2) (2026-01-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @react-aria/visually-hidden to v3.8.29 ([#1436](https://github.com/fuf-stack/pixels/issues/1436)) ([d9ea4c1](https://github.com/fuf-stack/pixels/commit/d9ea4c1d0a32c0bc0f37588bc05875453f102a6a))
+* **deps:** update dependency framer-motion to v12.23.26 ([#1410](https://github.com/fuf-stack/pixels/issues/1410)) ([9afec8a](https://github.com/fuf-stack/pixels/commit/9afec8a8e3f0f4035813fd360a8dad8edcfbc33e))
+* **deps:** update dependency framer-motion to v12.24.0 ([#1449](https://github.com/fuf-stack/pixels/issues/1449)) ([2d9779c](https://github.com/fuf-stack/pixels/commit/2d9779c2befc9e9d0954a0b72dd92bcd7eba5f30))
+* **deps:** update dependency framer-motion to v12.24.10 ([#1454](https://github.com/fuf-stack/pixels/issues/1454)) ([83af561](https://github.com/fuf-stack/pixels/commit/83af561c2820ed0ee090fee15caa35494540060e))
+* **deps:** update dependency framer-motion to v12.24.12 ([#1455](https://github.com/fuf-stack/pixels/issues/1455)) ([b48120f](https://github.com/fuf-stack/pixels/commit/b48120f6108026719904d8412557436ca55708b6))
+* **deps:** update dependency framer-motion to v12.24.7 ([#1451](https://github.com/fuf-stack/pixels/issues/1451)) ([c4ae4e1](https://github.com/fuf-stack/pixels/commit/c4ae4e1dee3c23ef905f5b73ce934fdd67e0faaf))
+* **deps:** update dependency framer-motion to v12.24.9 ([#1453](https://github.com/fuf-stack/pixels/issues/1453)) ([32b0fd3](https://github.com/fuf-stack/pixels/commit/32b0fd3a349d6941c8323a1093cb4a68c5ee4ebe))
+* **deps:** update dependency framer-motion to v12.25.0 ([#1456](https://github.com/fuf-stack/pixels/issues/1456)) ([ef6dccc](https://github.com/fuf-stack/pixels/commit/ef6dccc942c1c9c568e65d6eec20f1062542d2d5))
+* **deps:** update dependency framer-motion to v12.26.1 ([#1465](https://github.com/fuf-stack/pixels/issues/1465)) ([6e66952](https://github.com/fuf-stack/pixels/commit/6e669529016732cf0911d23331bbe50a83565025))
+* **deps:** update dependency framer-motion to v12.26.2 ([#1467](https://github.com/fuf-stack/pixels/issues/1467)) ([d611ed2](https://github.com/fuf-stack/pixels/commit/d611ed2a81b305fe0563c394122fa16b2ccfc531))
+* **deps:** update dependency react-hook-form to v7.69.0 ([#1440](https://github.com/fuf-stack/pixels/issues/1440)) ([31e73e9](https://github.com/fuf-stack/pixels/commit/31e73e998e15e8f3e8b628d9aad91f0226bbbbfa))
+* **deps:** update dependency react-hook-form to v7.70.0 ([#1448](https://github.com/fuf-stack/pixels/issues/1448)) ([ce97e62](https://github.com/fuf-stack/pixels/commit/ce97e625a79f0ec09013390285d0fba1ad0ec5f0))
+* **deps:** update dependency react-hook-form to v7.71.0 ([#1462](https://github.com/fuf-stack/pixels/issues/1462)) ([a63cf7c](https://github.com/fuf-stack/pixels/commit/a63cf7c3535f3cd746b04716c22b571b9e75c374))
+* **veto:** revert bundling of package to tsup ([e6f43ce](https://github.com/fuf-stack/pixels/commit/e6f43ce93a875851def71efbc52048c85f12bc3e))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @fuf-stack/pixel-motion bumped to 1.1.1
+    * @fuf-stack/pixel-utils bumped to 1.1.1
+    * @fuf-stack/pixels bumped to 1.7.1
+    * @fuf-stack/veto bumped to 0.13.2
+
 ## [1.11.1](https://github.com/fuf-stack/pixels/compare/uniform-v1.11.0...uniform-v1.11.1) (2025-12-16)
 
 

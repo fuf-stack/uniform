@@ -1,10 +1,15 @@
-import type { JSONSchema } from './serialize';
+import type { SerializedSchema, SerializedSchemaPathType } from './serialize';
 
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 
 import { z } from 'zod';
 
-import { checkSerializedSchemaPath } from './serialize';
+import { checkSerializedSchemaPath, serializeSchema } from './serialize';
+
+const isType =
+  (expectedType: string) =>
+  (type: SerializedSchema | null): boolean =>
+    type?.type === expectedType;
 
 describe('checkSerializedSchemaPath', () => {
   it('handles basic object schemas', () => {
@@ -13,7 +18,7 @@ describe('checkSerializedSchemaPath', () => {
       age: z.number(),
     });
 
-    const isStringType = (type: JSONSchema | null) => type?.type === 'string';
+    const isStringType = isType('string');
 
     expect(checkSerializedSchemaPath(schema, isStringType, ['name'])).toBe(
       true,
@@ -32,7 +37,7 @@ describe('checkSerializedSchemaPath', () => {
       }),
     });
 
-    const isStringType = (type: JSONSchema | null) => type?.type === 'string';
+    const isStringType = isType('string');
 
     expect(
       checkSerializedSchemaPath(schema, isStringType, [
@@ -52,8 +57,8 @@ describe('checkSerializedSchemaPath', () => {
       matrix: z.array(z.array(z.number())),
     });
 
-    const isStringType = (type: JSONSchema | null) => type?.type === 'string';
-    const isNumberType = (type: JSONSchema | null) => type?.type === 'number';
+    const isStringType = isType('string');
+    const isNumberType = isType('number');
 
     expect(checkSerializedSchemaPath(schema, isStringType, ['items', 0])).toBe(
       true,
@@ -69,7 +74,7 @@ describe('checkSerializedSchemaPath', () => {
       z.object({ type: z.literal('admin'), role: z.string() }),
     ]);
 
-    const isStringType = (type: JSONSchema | null) => type?.type === 'string';
+    const isStringType = isType('string');
 
     expect(checkSerializedSchemaPath(schema, isStringType, ['name'])).toBe(
       true,
@@ -81,9 +86,9 @@ describe('checkSerializedSchemaPath', () => {
 
   it('handles intersection schemas', () => {
     const baseSchema = z.object({ id: z.string() });
-    const extendedSchema = baseSchema.extend({ name: z.string() });
+    const extendedSchema = z.object({ ...baseSchema.shape, name: z.string() });
 
-    const isStringType = (type: JSONSchema | null) => type?.type === 'string';
+    const isStringType = isType('string');
 
     expect(
       checkSerializedSchemaPath(extendedSchema, isStringType, ['id']),
@@ -98,7 +103,7 @@ describe('checkSerializedSchemaPath', () => {
       metadata: z.record(z.string(), z.string()),
     });
 
-    const isStringType = (type: JSONSchema | null) => type?.type === 'string';
+    const isStringType = isType('string');
 
     expect(
       checkSerializedSchemaPath(schema, isStringType, ['metadata', 'anyKey']),
@@ -112,7 +117,7 @@ describe('checkSerializedSchemaPath', () => {
 
     // Helper to show the actual result for debugging
     const debugPath = (path: (string | number)[]) => {
-      const isStringType = (type: JSONSchema | null) => type?.type === 'string';
+      const isStringType = isType('string');
       return checkSerializedSchemaPath(schema, isStringType, path);
     };
 
@@ -133,7 +138,7 @@ describe('checkSerializedSchemaPath', () => {
       tags: z.array(z.string()),
     });
 
-    const isStringType = (type: JSONSchema | null) => type?.type === 'string';
+    const isStringType = isType('string');
 
     // Valid paths
     expect(
@@ -164,13 +169,53 @@ describe('checkSerializedSchemaPath', () => {
       name: z.string(),
     });
 
-    const isObjectType = (type: JSONSchema | null) => type?.type === 'object';
+    const isObjectType = isType('object');
 
     expect(checkSerializedSchemaPath(schema, isObjectType)).toBe(true);
   });
 
+  it('surfaces optional object fields via traversal metadata', () => {
+    const schema = z.object({
+      optionalName: z.string().optional(),
+      requiredName: z.string(),
+    });
+
+    const isOptional = (type: SerializedSchemaPathType | null) =>
+      Boolean(type?.isOptional);
+
+    expect(
+      checkSerializedSchemaPath(schema, isOptional, ['optionalName']),
+    ).toBe(true);
+    expect(
+      checkSerializedSchemaPath(schema, isOptional, ['requiredName']),
+    ).toBe(false);
+  });
+
+  it('does not treat nested required fields as optional via parent wrappers', () => {
+    const schema = z.object({
+      maybeUser: z
+        .object({
+          profile: z.object({
+            nickname: z.string(),
+          }),
+        })
+        .nullish(),
+    });
+
+    const isOptionalOrNullable = (type: SerializedSchemaPathType | null) =>
+      Boolean((type?.isOptional ?? false) || (type?.isNullable ?? false));
+
+    expect(
+      checkSerializedSchemaPath(schema, isOptionalOrNullable, [
+        'maybeUser',
+        'profile',
+        'nickname',
+      ]),
+    ).toBe(false);
+  });
+
   it('handles null schema input', () => {
-    const isAnyType = (_type: JSONSchema | null) => true;
+    const isAnyType = (_type: SerializedSchema | null) => true;
     // @ts-expect-error Testing null input
     expect(checkSerializedSchemaPath(null, isAnyType)).toBe(false);
   });
@@ -191,7 +236,7 @@ describe('checkSerializedSchemaPath', () => {
       ),
     });
 
-    const isStringType = (type: JSONSchema | null) => type?.type === 'string';
+    const isStringType = isType('string');
 
     expect(
       checkSerializedSchemaPath(schema, isStringType, [
@@ -203,5 +248,114 @@ describe('checkSerializedSchemaPath', () => {
         'value',
       ]),
     ).toBe(true);
+  });
+
+  it('handles intersection schemas created with z.intersection', () => {
+    const schema = z.intersection(
+      z.object({ left: z.string() }),
+      z.object({ right: z.string() }),
+    );
+
+    const isStringType = isType('string');
+
+    expect(checkSerializedSchemaPath(schema, isStringType, ['left'])).toBe(
+      true,
+    );
+    expect(checkSerializedSchemaPath(schema, isStringType, ['right'])).toBe(
+      true,
+    );
+  });
+
+  it('handles regular union schemas', () => {
+    const schema = z.union([
+      z.object({ username: z.string() }),
+      z.object({ email: z.string() }),
+    ]);
+    const isStringType = isType('string');
+
+    expect(checkSerializedSchemaPath(schema, isStringType, ['username'])).toBe(
+      true,
+    );
+    expect(checkSerializedSchemaPath(schema, isStringType, ['email'])).toBe(
+      true,
+    );
+  });
+
+  it('supports array element traversal without explicit numeric index', () => {
+    const schema = z.object({
+      users: z.array(
+        z.object({
+          profile: z.object({
+            name: z.string(),
+          }),
+        }),
+      ),
+    });
+    const isStringType = isType('string');
+
+    expect(
+      checkSerializedSchemaPath(schema, isStringType, [
+        'users',
+        'profile',
+        'name',
+      ]),
+    ).toBe(true);
+  });
+
+  it('unwraps pipe wrappers and still resolves transformed paths', () => {
+    const schema = z.object({
+      size: z.string().transform((value) => value.length),
+    });
+    const resolvesToAnySchemaNode = (type: SerializedSchemaPathType | null) =>
+      type !== null;
+
+    expect(
+      checkSerializedSchemaPath(schema, resolvesToAnySchemaNode, ['size']),
+    ).toBe(true);
+  });
+
+  it('handles nonoptional wrappers while traversing type paths', () => {
+    const schema = z.object({
+      name: z.string().optional().nonoptional(),
+    });
+    const isStringType = isType('string');
+
+    expect(checkSerializedSchemaPath(schema, isStringType, ['name'])).toBe(
+      true,
+    );
+  });
+
+  it('returns false for truthy non-zod schema-like inputs', () => {
+    const alwaysTrue = (_type: SerializedSchemaPathType | null) => true;
+
+    expect(
+      checkSerializedSchemaPath(
+        // Robustness: callers might pass serialized/plain objects by mistake.
+        {} as unknown as z.ZodTypeAny,
+        alwaysTrue,
+        ['name'],
+      ),
+    ).toBe(false);
+  });
+
+  it('returns false for malformed object definitions without shape objects', () => {
+    const alwaysTrue = (_type: SerializedSchemaPathType | null) => true;
+    const malformedObjectSchema = {
+      def: { type: 'object', shape: null },
+    } as unknown as z.ZodTypeAny;
+
+    expect(
+      checkSerializedSchemaPath(malformedObjectSchema, alwaysTrue, ['name']),
+    ).toBe(false);
+  });
+});
+
+describe('serializeSchema', () => {
+  it('falls back to empty schema when zod serialization throws', () => {
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    expect(serializeSchema(null as unknown as z.ZodTypeAny)).toEqual({});
+
+    warnSpy.mockRestore();
   });
 });

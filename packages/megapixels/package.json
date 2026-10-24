@@ -1,24 +1,19 @@
 {
   "name": "@fuf-stack/megapixels",
-  "version": "0.9.1",
+  "version": "0.17.1",
   "description": "fuf react advanced components library",
   "author": "Fröhlich ∧ Frei",
   "homepage": "https://github.com/fuf-stack/megapixels#readme",
   "license": "MIT",
   "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.cts",
+  "types": "./dist/index.d.mts",
   "sideEffects": false,
   "exports": {
-    ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js"
-    },
-    "./Filter": {
-      "require": "./dist/Filter/index.cjs",
-      "import": "./dist/Filter/index.js"
-    },
+    ".": "./dist/index.mjs",
+    "./DataTable": "./dist/DataTable/index.mjs",
+    "./Filter": "./dist/Filter/index.mjs",
+    "./Notification": "./dist/Notification/index.mjs",
+    "./VirtualList": "./dist/VirtualList/index.mjs",
     "./package.json": "./package.json"
   },
   "files": [
@@ -45,19 +40,22 @@
     "react-dom": ">=18"
   },
   "dependencies": {
+    "@base-ui/react": "1.8.0",
     "@fuf-stack/pixel-motion": "workspace:*",
     "@fuf-stack/pixel-utils": "workspace:*",
     "@fuf-stack/pixels": "workspace:*",
     "@fuf-stack/uniform": "workspace:*",
     "@fuf-stack/veto": "workspace:*",
+    "@tanstack/react-table": "8.21.3",
+    "@tanstack/react-virtual": "3.14.14",
     "debug": "4.4.3",
-    "react-icons": "5.5.0"
+    "react-icons": "5.7.0"
   },
   "devDependencies": {
-    "@types/debug": "4.1.12",
-    "@types/react": "19.2.7",
-    "@types/react-dom": "19.2.3",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "@types/debug": "4.1.13",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
   }
 }

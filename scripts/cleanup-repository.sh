@@ -11,6 +11,8 @@ echo "$(date) - Removing build artifacts in packages..."
 rm -rf ./coverage
 rm -rf ./dist
 rm -rf ./packages/*/dist
+rm -rf ./packages/veto/src/__generated__
+rm -rf ./packages/veto/test/dts-smoke/out
 
 echo "$(date) - Removing node_modules..."
 rm -rf ./node_modules

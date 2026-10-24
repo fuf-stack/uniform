@@ -5,10 +5,10 @@ import { FaFlask, FaPhone, FaRocket } from 'react-icons/fa';
 import { action } from 'storybook/actions';
 import { expect, userEvent, waitFor, within } from 'storybook/test';
 
-import { SubmitButton } from '@fuf-stack/uniform';
 import { string, veto } from '@fuf-stack/veto';
 
-import { Form } from '../Form';
+import Form from '../Form';
+import SubmitButton from '../SubmitButton';
 import RadioBoxes from './RadioBoxes';
 
 const meta: Meta<typeof RadioBoxes> = {
@@ -18,7 +18,7 @@ const meta: Meta<typeof RadioBoxes> = {
     (Story, { parameters }) => {
       return (
         <Form
-          className="min-w-60"
+          className={{ form: 'min-w-60' }}
           onSubmit={action('onSubmit')}
           {...(parameters?.formProps ?? {})}
         >
@@ -53,6 +53,29 @@ export const Default: Story = {
         description: 'Because sometimes you need bubbles in your life.',
         label: 'Sparkling Water',
         value: 'sparkling',
+      },
+    ],
+  },
+};
+
+export const NumberValues: Story = {
+  args: {
+    name: 'radioBoxesField',
+    options: [
+      {
+        description: 'Entry-level tier with basic features.',
+        label: 'Bronze',
+        value: 1,
+      },
+      {
+        description: 'Mid-tier with additional perks.',
+        label: 'Silver',
+        value: 2,
+      },
+      {
+        description: 'Premium tier with all features unlocked.',
+        label: 'Gold',
+        value: 3,
       },
     ],
   },

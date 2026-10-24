@@ -9,15 +9,17 @@ exports[`Story Snapshots > AllSizes 1`] = `
       class="grow min-w-60"
       data-form-is-valid="true"
       data-testid=""
+      novalidate=""
     >
       <div
         class="flex flex-col gap-8"
       >
         <div
-          class="group"
+          class="group flex w-full flex-col gap-y-1.5"
           data-invalid="false"
           data-required="false"
           data-testid="smallslider"
+          tabindex="-1"
         >
           <div
             style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -44,11 +46,11 @@ exports[`Story Snapshots > AllSizes 1`] = `
             role="group"
           >
             <div
-              class="w-full flex justify-between items-center"
+              class="w-full flex justify-between items-center mb-1"
               data-slot="labelWrapper"
             >
               <label
-                class="text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+                class="cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
                 data-slot="label"
                 id="react-aria-«replaced-aria-id»"
               >
@@ -74,7 +76,7 @@ exports[`Story Snapshots > AllSizes 1`] = `
                 data-slot="track"
                 data-thumb-hidden="false"
                 data-vertical="false"
-                style="position: relative;"
+                style="position: relative; touch-action: none;"
               >
                 <div
                   class="h-full absolute bg-primary"
@@ -83,12 +85,12 @@ exports[`Story Snapshots > AllSizes 1`] = `
                 />
                 <div
                   aria-label="Slider thumb 1"
-                  class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-5 h-5 after:w-4 after:h-4 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small"
+                  class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-5 h-5 after:w-4 after:h-4 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small group-data-[invalid=true]:data-[focused=true]:outline-2 group-data-[invalid=true]:data-[focused=true]:outline-focus group-data-[invalid=true]:data-[focused=true]:outline-offset-2"
                   data-react-aria-pressable="true"
                   data-slot="thumb"
                   index="0"
                   orientation="horizontal"
-                  style="position: absolute; left: 0%; transform: translate(-50%, -50%);"
+                  style="position: absolute; left: 0%; transform: translate(-50%, -50%); touch-action: none;"
                 >
                   <div
                     style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -115,10 +117,11 @@ exports[`Story Snapshots > AllSizes 1`] = `
           </div>
         </div>
         <div
-          class="group"
+          class="group flex w-full flex-col gap-y-1.5"
           data-invalid="false"
           data-required="false"
           data-testid="mediumslider"
+          tabindex="-1"
         >
           <div
             style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -145,11 +148,11 @@ exports[`Story Snapshots > AllSizes 1`] = `
             role="group"
           >
             <div
-              class="w-full flex justify-between items-center"
+              class="w-full flex justify-between items-center mb-1"
               data-slot="labelWrapper"
             >
               <label
-                class="text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+                class="cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
                 data-slot="label"
                 id="react-aria-«replaced-aria-id»"
               >
@@ -175,7 +178,7 @@ exports[`Story Snapshots > AllSizes 1`] = `
                 data-slot="track"
                 data-thumb-hidden="false"
                 data-vertical="false"
-                style="position: relative;"
+                style="position: relative; touch-action: none;"
               >
                 <div
                   class="h-full absolute bg-primary"
@@ -184,12 +187,12 @@ exports[`Story Snapshots > AllSizes 1`] = `
                 />
                 <div
                   aria-label="Slider thumb 1"
-                  class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small"
+                  class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small group-data-[invalid=true]:data-[focused=true]:outline-2 group-data-[invalid=true]:data-[focused=true]:outline-focus group-data-[invalid=true]:data-[focused=true]:outline-offset-2"
                   data-react-aria-pressable="true"
                   data-slot="thumb"
                   index="0"
                   orientation="horizontal"
-                  style="position: absolute; left: 0%; transform: translate(-50%, -50%);"
+                  style="position: absolute; left: 0%; transform: translate(-50%, -50%); touch-action: none;"
                 >
                   <div
                     style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -216,10 +219,11 @@ exports[`Story Snapshots > AllSizes 1`] = `
           </div>
         </div>
         <div
-          class="group"
+          class="group flex w-full flex-col gap-y-1.5"
           data-invalid="false"
           data-required="false"
           data-testid="largeslider"
+          tabindex="-1"
         >
           <div
             style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -246,11 +250,11 @@ exports[`Story Snapshots > AllSizes 1`] = `
             role="group"
           >
             <div
-              class="w-full flex justify-between items-center"
+              class="w-full flex justify-between items-center mb-1"
               data-slot="labelWrapper"
             >
               <label
-                class="text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+                class="cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
                 data-slot="label"
                 id="react-aria-«replaced-aria-id»"
               >
@@ -276,7 +280,7 @@ exports[`Story Snapshots > AllSizes 1`] = `
                 data-slot="track"
                 data-thumb-hidden="false"
                 data-vertical="false"
-                style="position: relative;"
+                style="position: relative; touch-action: none;"
               >
                 <div
                   class="h-full absolute bg-primary"
@@ -285,12 +289,12 @@ exports[`Story Snapshots > AllSizes 1`] = `
                 />
                 <div
                   aria-label="Slider thumb 1"
-                  class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-7 w-7 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80"
+                  class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-7 w-7 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 group-data-[invalid=true]:data-[focused=true]:outline-2 group-data-[invalid=true]:data-[focused=true]:outline-focus group-data-[invalid=true]:data-[focused=true]:outline-offset-2"
                   data-react-aria-pressable="true"
                   data-slot="thumb"
                   index="0"
                   orientation="horizontal"
-                  style="position: absolute; left: 0%; transform: translate(-50%, -50%);"
+                  style="position: absolute; left: 0%; transform: translate(-50%, -50%); touch-action: none;"
                 >
                   <div
                     style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -345,12 +349,14 @@ exports[`Story Snapshots > CustomRange 1`] = `
       class="grow min-w-60"
       data-form-is-valid="true"
       data-testid=""
+      novalidate=""
     >
       <div
-        class="group"
+        class="group flex w-full flex-col gap-y-1.5"
         data-invalid="false"
         data-required="false"
         data-testid="sliderfield"
+        tabindex="-1"
       >
         <div
           style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -377,11 +383,11 @@ exports[`Story Snapshots > CustomRange 1`] = `
           role="group"
         >
           <div
-            class="w-full flex justify-between items-center"
+            class="w-full flex justify-between items-center mb-1"
             data-slot="labelWrapper"
           >
             <label
-              class="text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+              class="cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
               data-slot="label"
               id="react-aria-«replaced-aria-id»"
             >
@@ -407,7 +413,7 @@ exports[`Story Snapshots > CustomRange 1`] = `
               data-slot="track"
               data-thumb-hidden="false"
               data-vertical="false"
-              style="position: relative;"
+              style="position: relative; touch-action: none;"
             >
               <div
                 class="h-full absolute bg-primary"
@@ -416,12 +422,12 @@ exports[`Story Snapshots > CustomRange 1`] = `
               />
               <div
                 aria-label="Slider thumb 1"
-                class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small"
+                class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small group-data-[invalid=true]:data-[focused=true]:outline-2 group-data-[invalid=true]:data-[focused=true]:outline-focus group-data-[invalid=true]:data-[focused=true]:outline-offset-2"
                 data-react-aria-pressable="true"
                 data-slot="thumb"
                 index="0"
                 orientation="horizontal"
-                style="position: absolute; left: 60%; transform: translate(-50%, -50%);"
+                style="position: absolute; left: 60%; transform: translate(-50%, -50%); touch-action: none;"
               >
                 <div
                   style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -475,12 +481,14 @@ exports[`Story Snapshots > Default 1`] = `
       class="grow min-w-60"
       data-form-is-valid="true"
       data-testid=""
+      novalidate=""
     >
       <div
-        class="group"
+        class="group flex w-full flex-col gap-y-1.5"
         data-invalid="false"
         data-required="false"
         data-testid="sliderfield"
+        tabindex="-1"
       >
         <div
           style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -516,7 +524,7 @@ exports[`Story Snapshots > Default 1`] = `
               data-slot="track"
               data-thumb-hidden="false"
               data-vertical="false"
-              style="position: relative;"
+              style="position: relative; touch-action: none;"
             >
               <div
                 class="h-full absolute bg-primary"
@@ -525,12 +533,12 @@ exports[`Story Snapshots > Default 1`] = `
               />
               <div
                 aria-label="Slider thumb 1"
-                class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small"
+                class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small group-data-[invalid=true]:data-[focused=true]:outline-2 group-data-[invalid=true]:data-[focused=true]:outline-focus group-data-[invalid=true]:data-[focused=true]:outline-offset-2"
                 data-react-aria-pressable="true"
                 data-slot="thumb"
                 index="0"
                 orientation="horizontal"
-                style="position: absolute; left: 0%; transform: translate(-50%, -50%);"
+                style="position: absolute; left: 0%; transform: translate(-50%, -50%); touch-action: none;"
               >
                 <div
                   style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -584,9 +592,10 @@ exports[`Story Snapshots > Disabled 1`] = `
       class="grow min-w-60"
       data-form-is-valid="true"
       data-testid=""
+      novalidate=""
     >
       <div
-        class="group"
+        class="group flex w-full flex-col gap-y-1.5"
         data-invalid="false"
         data-required="false"
         data-testid="sliderfield"
@@ -617,11 +626,11 @@ exports[`Story Snapshots > Disabled 1`] = `
           role="group"
         >
           <div
-            class="w-full flex justify-between items-center"
+            class="w-full flex justify-between items-center mb-1"
             data-slot="labelWrapper"
           >
             <label
-              class="text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+              class="cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
               data-slot="label"
               id="react-aria-«replaced-aria-id»"
             >
@@ -647,7 +656,7 @@ exports[`Story Snapshots > Disabled 1`] = `
               data-slot="track"
               data-thumb-hidden="false"
               data-vertical="false"
-              style="position: relative;"
+              style="position: relative; touch-action: none;"
             >
               <div
                 class="h-full absolute bg-primary"
@@ -656,12 +665,12 @@ exports[`Story Snapshots > Disabled 1`] = `
               />
               <div
                 aria-label="Slider thumb 1"
-                class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-default ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small"
+                class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-default ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small group-data-[invalid=true]:data-[focused=true]:outline-2 group-data-[invalid=true]:data-[focused=true]:outline-focus group-data-[invalid=true]:data-[focused=true]:outline-offset-2"
                 data-react-aria-pressable="true"
                 data-slot="thumb"
                 index="0"
                 orientation="horizontal"
-                style="position: absolute; left: 60%; transform: translate(-50%, -50%);"
+                style="position: absolute; left: 60%; transform: translate(-50%, -50%); touch-action: none;"
               >
                 <div
                   style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -707,110 +716,187 @@ exports[`Story Snapshots > Disabled 1`] = `
 </div>
 `;
 
-exports[`Story Snapshots > EdgeCaseRequiredTouchedViaTab 1`] = `
+exports[`Story Snapshots > EdgeCaseDisabledFocusByTestId 1`] = `
 <div>
   <div
-    class="flex w-full flex-row justify-between gap-6"
+    class="flex flex-col gap-6"
   >
-    <form
-      class="grow min-w-60"
-      data-form-is-valid="false"
-      data-testid=""
+    <aside
+      aria-label="What this checks"
+      class="w-80 max-w-full rounded-lg border border-default-200 bg-default-100 p-3 text-sm text-foreground"
     >
-      <div
-        class="group"
-        data-invalid="true"
-        data-required="true"
-        data-testid="sliderfield"
+      <p
+        class="mb-1 font-semibold"
+      >
+        What this checks
+      </p>
+      <p>
+        Trying to focus a disabled slider leaves focus on the other field. The disabled slider does not become a keyboard stop.
+      </p>
+    </aside>
+    <div
+      class="flex w-full flex-row justify-between gap-6"
+    >
+      <form
+        class="grow min-w-60"
+        data-form-is-valid="true"
+        data-testid=""
+        novalidate=""
       >
         <div
-          style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-        >
-          <input
-            aria-label="Required Slider (Tab Test)"
-            max="100"
-            min="0"
-            name="sliderField"
-            step="1"
-            tabindex="-1"
-            type="range"
-            value="0"
-          />
-        </div>
-        <div
-          aria-label="Required Slider (Tab Test)"
-          aria-labelledby="react-aria-«replaced-aria-id» react-aria-«replaced-aria-id»"
-          class="flex flex-col w-full gap-1"
-          data-hover="false"
-          data-orientation="horizontal"
-          data-slot="base"
-          id="react-aria-«replaced-aria-id»"
-          role="group"
+          class="flex w-80 flex-col gap-8"
         >
           <div
-            class="w-full flex justify-between items-center"
-            data-slot="labelWrapper"
-          >
-            <label
-              class="text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
-              data-slot="label"
-              id="react-aria-«replaced-aria-id»"
-            >
-              Required Slider (Tab Test)
-            </label>
-            <output
-              aria-live="off"
-              class="text-small"
-              data-slot="value"
-              for="react-aria-«replaced-aria-id»-0"
-            >
-              0
-            </output>
-          </div>
-          <div
-            class="relative flex gap-2 items-center"
-            data-slot="track-wrapper"
+            class="group flex w-full flex-col gap-y-1.5"
+            data-invalid="false"
+            data-required="false"
+            data-testid="volume_control"
           >
             <div
-              class="flex w-full relative rounded-full bg-default-300/50 border-x-transparent h-3 my-[calc((theme(spacing.6)-theme(spacing.3))/2)] border-x-[calc(theme(spacing.6)/2)] data-[fill-start=true]:border-s-danger data-[fill-end=true]:border-e-danger"
-              data-fill-end="false"
-              data-fill-start="false"
-              data-slot="track"
-              data-thumb-hidden="false"
-              data-vertical="false"
-              style="position: relative;"
+              style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+            >
+              <input
+                aria-label="Volume"
+                disabled=""
+                max="100"
+                min="0"
+                name="sliderField"
+                step="1"
+                tabindex="-1"
+                type="range"
+                value="20"
+              />
+            </div>
+            <div
+              aria-label="Volume"
+              aria-labelledby="react-aria-«replaced-aria-id» react-aria-«replaced-aria-id»"
+              class="flex flex-col w-full gap-1 opacity-disabled"
+              data-hover="false"
+              data-orientation="horizontal"
+              data-slot="base"
+              id="react-aria-«replaced-aria-id»"
+              role="group"
             >
               <div
-                class="h-full absolute bg-danger"
-                data-slot="filler"
-                style="left: 0%; width: 0%;"
-              />
+                class="w-full flex justify-between items-center mb-1"
+                data-slot="labelWrapper"
+              >
+                <label
+                  class="cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+                  data-slot="label"
+                  id="react-aria-«replaced-aria-id»"
+                >
+                  Volume
+                </label>
+                <output
+                  aria-live="off"
+                  class="text-small"
+                  data-slot="value"
+                  for="react-aria-«replaced-aria-id»-0"
+                >
+                  20
+                </output>
+              </div>
               <div
-                aria-label="Slider thumb 1"
-                class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-danger top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small"
-                data-react-aria-pressable="true"
-                data-slot="thumb"
-                index="0"
-                orientation="horizontal"
-                style="position: absolute; left: 0%; transform: translate(-50%, -50%);"
+                class="relative flex gap-2 items-center"
+                data-slot="track-wrapper"
               >
                 <div
-                  style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                  class="flex w-full relative rounded-full bg-default-300/50 border-x-transparent h-3 my-[calc((theme(spacing.6)-theme(spacing.3))/2)] border-x-[calc(theme(spacing.6)/2)] data-[fill-start=true]:border-s-primary data-[fill-end=true]:border-e-primary"
+                  data-fill-end="false"
+                  data-fill-start="true"
+                  data-slot="track"
+                  data-thumb-hidden="false"
+                  data-vertical="false"
+                  style="position: relative; touch-action: none;"
+                >
+                  <div
+                    class="h-full absolute bg-primary"
+                    data-slot="filler"
+                    style="left: 0%; width: 20%;"
+                  />
+                  <div
+                    aria-label="Slider thumb 1"
+                    class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-default ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small group-data-[invalid=true]:data-[focused=true]:outline-2 group-data-[invalid=true]:data-[focused=true]:outline-focus group-data-[invalid=true]:data-[focused=true]:outline-offset-2"
+                    data-react-aria-pressable="true"
+                    data-slot="thumb"
+                    index="0"
+                    orientation="horizontal"
+                    style="position: absolute; left: 20%; transform: translate(-50%, -50%); touch-action: none;"
+                  >
+                    <div
+                      style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                    >
+                      <input
+                        aria-describedby=""
+                        aria-details=""
+                        aria-labelledby="react-aria-«replaced-aria-id»"
+                        aria-orientation="horizontal"
+                        aria-valuetext="20"
+                        disabled=""
+                        id="react-aria-«replaced-aria-id»-0"
+                        max="100"
+                        min="0"
+                        name="sliderField_slider"
+                        step="1"
+                        tabindex="0"
+                        type="range"
+                        value="20"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(var(--heroui-font-size-small)_+_10px)]"
+            data-filled="true"
+            data-filled-within="true"
+            data-focus="true"
+            data-focus-within="true"
+            data-has-elements="true"
+            data-has-helper="true"
+            data-has-label="true"
+            data-slot="base"
+          >
+            <div
+              class="h-full flex flex-col"
+              data-slot="main-wrapper"
+            >
+              <div
+                class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-xs px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 group-data-[focus=true]:data-[hover=true]:border-default-foreground h-10 min-h-10 rounded-small !duration-150 transition-colors motion-reduce:transition-none bg-content1 group-data-[focus=true]:border-focus"
+                data-focus="true"
+                data-slot="input-wrapper"
+                style="cursor: text;"
+              >
+                <label
+                  class="absolute pointer-events-none origin-top-left shrink-0 rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity,translate,scale] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_var(--heroui-font-size-small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
+                  data-slot="label"
+                  for="otherfield"
+                  id="react-aria-«replaced-aria-id»"
+                >
+                  Another field
+                </label>
+                <div
+                  class="inline-flex w-full items-center h-full box-border"
+                  data-slot="inner-wrapper"
                 >
                   <input
-                    aria-describedby=""
-                    aria-details=""
-                    aria-labelledby="react-aria-«replaced-aria-id»"
-                    aria-orientation="horizontal"
-                    aria-valuetext="0"
-                    id="react-aria-«replaced-aria-id»-0"
-                    max="100"
-                    min="0"
-                    name="sliderField_slider"
-                    step="1"
+                    aria-label="Another field"
+                    aria-labelledby="otherfield react-aria-«replaced-aria-id»"
+                    autocomplete="off"
+                    class="w-full font-normal bg-transparent !outline-solid placeholder:text-foreground-500 focus-visible:outline-solid outline-transparent data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 data-[type=color]:rounded-none file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text dark:autofill:[-webkit-text-fill-color:hsl(var(--heroui-foreground))] [&::-ms-reveal]:hidden text-small"
+                    data-filled-within="true"
+                    data-slot="input"
+                    data-testid="otherfield"
+                    id="otherfield"
+                    name="otherField"
+                    placeholder=" "
                     tabindex="0"
-                    type="range"
-                    value="0"
+                    title=""
+                    type="text"
+                    value=""
                   />
                 </div>
               </div>
@@ -818,48 +904,754 @@ exports[`Story Snapshots > EdgeCaseRequiredTouchedViaTab 1`] = `
           </div>
         </div>
         <div
-          class="group-data-[has-helper=true]:flex relative flex-col gap-1.5 p-0 ml-0 block"
-          data-slot="helper-wrapper"
+          class="mt-4 flex justify-end"
+        >
+          <button
+            aria-label="Submit form"
+            class="group tap-highlight-transparent data-[hover=true]:opacity-hover z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white"
+            data-react-aria-pressable="true"
+            data-testid="form_submit_button"
+            tabindex="0"
+            type="submit"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Story Snapshots > EdgeCaseDragThenSubmit 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-6"
+  >
+    <aside
+      aria-label="What this checks"
+      class="w-80 max-w-full rounded-lg border border-default-200 bg-default-100 p-3 text-sm text-foreground"
+    >
+      <p
+        class="mb-1 font-semibold"
+      >
+        What this checks
+      </p>
+      <p>
+        After dragging and releasing the thumb, moving to another field and clicking Submit must preserve the selected value. Step dots are hidden.
+      </p>
+    </aside>
+    <div
+      class="flex w-full flex-row justify-between gap-6"
+    >
+      <form
+        class="grow min-w-60"
+        data-form-is-valid="true"
+        data-testid=""
+        novalidate=""
+      >
+        <div
+          class="flex w-80 flex-col gap-8"
         >
           <div
-            class="text-tiny text-danger"
-            data-slot="error-message"
-            id="react-aria-«replaced-aria-id»"
+            class="group flex w-full flex-col gap-y-1.5"
+            data-invalid="false"
+            data-required="false"
+            data-testid="sliderfield"
+            tabindex="-1"
           >
-            <ul
-              aria-label="Validation errors of field sliderfield"
-              data-testid="sliderfield_error"
+            <div
+              style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
-              <li
-                style="overflow: hidden;"
+              <input
+                aria-label="Volume"
+                max="100"
+                min="0"
+                name="sliderField"
+                step="1"
+                tabindex="-1"
+                type="range"
+                value="20"
+              />
+            </div>
+            <div
+              aria-label="Volume"
+              aria-labelledby="react-aria-«replaced-aria-id» react-aria-«replaced-aria-id»"
+              class="flex flex-col w-full gap-1"
+              data-hover="false"
+              data-orientation="horizontal"
+              data-slot="base"
+              id="react-aria-«replaced-aria-id»"
+              role="group"
+            >
+              <div
+                class="w-full flex justify-between items-center mb-1"
+                data-slot="labelWrapper"
+              >
+                <label
+                  class="cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+                  data-slot="label"
+                  id="react-aria-«replaced-aria-id»"
+                >
+                  Volume
+                </label>
+                <output
+                  aria-live="off"
+                  class="text-small"
+                  data-slot="value"
+                  for="react-aria-«replaced-aria-id»-0"
+                >
+                  20
+                </output>
+              </div>
+              <div
+                class="relative flex gap-2 items-center"
+                data-slot="track-wrapper"
               >
                 <div
-                  class="px-1 pt-1"
+                  class="flex w-full relative rounded-full bg-default-300/50 border-x-transparent h-3 my-[calc((theme(spacing.6)-theme(spacing.3))/2)] border-x-[calc(theme(spacing.6)/2)] data-[fill-start=true]:border-s-primary data-[fill-end=true]:border-e-primary"
+                  data-fill-end="false"
+                  data-fill-start="true"
+                  data-slot="track"
+                  data-thumb-hidden="false"
+                  data-vertical="false"
+                  style="position: relative; touch-action: none;"
                 >
-                  Field is required
+                  <div
+                    class="h-full absolute bg-primary"
+                    data-slot="filler"
+                    style="left: 0%; width: 20%;"
+                  />
+                  <div
+                    aria-label="Slider thumb 1"
+                    class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small group-data-[invalid=true]:data-[focused=true]:outline-2 group-data-[invalid=true]:data-[focused=true]:outline-focus group-data-[invalid=true]:data-[focused=true]:outline-offset-2"
+                    data-react-aria-pressable="true"
+                    data-slot="thumb"
+                    index="0"
+                    orientation="horizontal"
+                    style="position: absolute; left: 20%; transform: translate(-50%, -50%); touch-action: none;"
+                  >
+                    <div
+                      style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                    >
+                      <input
+                        aria-describedby=""
+                        aria-details=""
+                        aria-labelledby="react-aria-«replaced-aria-id»"
+                        aria-orientation="horizontal"
+                        aria-valuetext="20"
+                        id="react-aria-«replaced-aria-id»-0"
+                        max="100"
+                        min="0"
+                        name="sliderField_slider"
+                        step="1"
+                        tabindex="0"
+                        type="range"
+                        value="20"
+                      />
+                    </div>
+                  </div>
                 </div>
-              </li>
-            </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(var(--heroui-font-size-small)_+_10px)]"
+            data-filled="true"
+            data-filled-within="true"
+            data-has-elements="true"
+            data-has-helper="true"
+            data-has-label="true"
+            data-slot="base"
+          >
+            <div
+              class="h-full flex flex-col"
+              data-slot="main-wrapper"
+            >
+              <div
+                class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-xs px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 group-data-[focus=true]:data-[hover=true]:border-default-foreground h-10 min-h-10 rounded-small !duration-150 transition-colors motion-reduce:transition-none bg-content1 group-data-[focus=true]:border-focus"
+                data-slot="input-wrapper"
+                style="cursor: text;"
+              >
+                <label
+                  class="absolute pointer-events-none origin-top-left shrink-0 rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity,translate,scale] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_var(--heroui-font-size-small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
+                  data-slot="label"
+                  for="otherfield"
+                  id="react-aria-«replaced-aria-id»"
+                >
+                  Another field
+                </label>
+                <div
+                  class="inline-flex w-full items-center h-full box-border"
+                  data-slot="inner-wrapper"
+                >
+                  <input
+                    aria-label="Another field"
+                    aria-labelledby="otherfield react-aria-«replaced-aria-id»"
+                    autocomplete="off"
+                    class="w-full font-normal bg-transparent !outline-solid placeholder:text-foreground-500 focus-visible:outline-solid outline-transparent data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 data-[type=color]:rounded-none file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text dark:autofill:[-webkit-text-fill-color:hsl(var(--heroui-foreground))] [&::-ms-reveal]:hidden text-small"
+                    data-slot="input"
+                    data-testid="otherfield"
+                    id="otherfield"
+                    name="otherField"
+                    placeholder=" "
+                    tabindex="0"
+                    title=""
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        class="mt-4 flex justify-end"
-      >
-        <button
-          aria-label="Submit form"
-          class="group tap-highlight-transparent data-[hover=true]:opacity-hover z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white"
-          data-focus="true"
-          data-focus-visible="true"
-          data-react-aria-pressable="true"
-          data-testid="form_submit_button"
-          tabindex="0"
-          type="submit"
+        <div
+          class="mt-4 flex justify-end"
         >
-          Submit
-        </button>
-      </div>
-    </form>
+          <button
+            aria-label="Submit form"
+            class="group tap-highlight-transparent data-[hover=true]:opacity-hover z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white"
+            data-react-aria-pressable="true"
+            data-testid="form_submit_button"
+            tabindex="0"
+            type="submit"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Story Snapshots > EdgeCaseFocusByTestId 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-6"
+  >
+    <aside
+      aria-label="What this checks"
+      class="w-80 max-w-full rounded-lg border border-default-200 bg-default-100 p-3 text-sm text-foreground"
+    >
+      <p
+        class="mb-1 font-semibold"
+      >
+        What this checks
+      </p>
+      <p>
+        Focusing the field by its test ID reaches the slider thumb. Arrow keys adjust the value, and Tab moves to the next field without an extra stop.
+      </p>
+    </aside>
+    <div
+      class="flex w-full flex-row justify-between gap-6"
+    >
+      <form
+        class="grow min-w-60"
+        data-form-is-valid="true"
+        data-testid=""
+        novalidate=""
+      >
+        <div
+          class="flex w-80 flex-col gap-8"
+        >
+          <div
+            class="group flex w-full flex-col gap-y-1.5"
+            data-invalid="false"
+            data-required="false"
+            data-testid="volume_control"
+            tabindex="-1"
+          >
+            <div
+              style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+            >
+              <input
+                aria-label="Volume"
+                max="100"
+                min="0"
+                name="sliderField"
+                step="1"
+                tabindex="-1"
+                type="range"
+                value="21"
+              />
+            </div>
+            <div
+              aria-label="Volume"
+              aria-labelledby="react-aria-«replaced-aria-id» react-aria-«replaced-aria-id»"
+              class="flex flex-col w-full gap-1"
+              data-hover="false"
+              data-orientation="horizontal"
+              data-slot="base"
+              id="react-aria-«replaced-aria-id»"
+              role="group"
+            >
+              <div
+                class="w-full flex justify-between items-center mb-1"
+                data-slot="labelWrapper"
+              >
+                <label
+                  class="cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+                  data-slot="label"
+                  id="react-aria-«replaced-aria-id»"
+                >
+                  Volume
+                </label>
+                <output
+                  aria-live="off"
+                  class="text-small"
+                  data-slot="value"
+                  for="react-aria-«replaced-aria-id»-0"
+                >
+                  21
+                </output>
+              </div>
+              <div
+                class="relative flex gap-2 items-center"
+                data-slot="track-wrapper"
+              >
+                <div
+                  class="flex w-full relative rounded-full bg-default-300/50 border-x-transparent h-3 my-[calc((theme(spacing.6)-theme(spacing.3))/2)] border-x-[calc(theme(spacing.6)/2)] data-[fill-start=true]:border-s-primary data-[fill-end=true]:border-e-primary"
+                  data-fill-end="false"
+                  data-fill-start="true"
+                  data-slot="track"
+                  data-thumb-hidden="false"
+                  data-vertical="false"
+                  style="position: relative; touch-action: none;"
+                >
+                  <div
+                    class="h-full absolute bg-primary"
+                    data-slot="filler"
+                    style="left: 0%; width: 21%;"
+                  />
+                  <div
+                    aria-label="Slider thumb 1"
+                    class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small group-data-[invalid=true]:data-[focused=true]:outline-2 group-data-[invalid=true]:data-[focused=true]:outline-focus group-data-[invalid=true]:data-[focused=true]:outline-offset-2"
+                    data-react-aria-pressable="true"
+                    data-slot="thumb"
+                    index="0"
+                    orientation="horizontal"
+                    style="position: absolute; left: 21%; transform: translate(-50%, -50%); touch-action: none;"
+                  >
+                    <div
+                      style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                    >
+                      <input
+                        aria-describedby=""
+                        aria-details=""
+                        aria-labelledby="react-aria-«replaced-aria-id»"
+                        aria-orientation="horizontal"
+                        aria-valuetext="21"
+                        id="react-aria-«replaced-aria-id»-0"
+                        max="100"
+                        min="0"
+                        name="sliderField_slider"
+                        step="1"
+                        tabindex="0"
+                        type="range"
+                        value="21"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(var(--heroui-font-size-small)_+_10px)]"
+            data-filled="true"
+            data-filled-within="true"
+            data-has-elements="true"
+            data-has-helper="true"
+            data-has-label="true"
+            data-slot="base"
+          >
+            <div
+              class="h-full flex flex-col"
+              data-slot="main-wrapper"
+            >
+              <div
+                class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-xs px-3 gap-3 border-medium border-default-200 data-[hover=true]:border-default-400 group-data-[focus=true]:data-[hover=true]:border-default-foreground h-10 min-h-10 rounded-small !duration-150 transition-colors motion-reduce:transition-none bg-content1 group-data-[focus=true]:border-focus"
+                data-slot="input-wrapper"
+                style="cursor: text;"
+              >
+                <label
+                  class="absolute pointer-events-none origin-top-left shrink-0 rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity,translate,scale] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto text-small group-data-[filled-within=true]:-translate-y-[calc(100%_+_var(--heroui-font-size-small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden"
+                  data-slot="label"
+                  for="otherfield"
+                  id="react-aria-«replaced-aria-id»"
+                >
+                  Another field
+                </label>
+                <div
+                  class="inline-flex w-full items-center h-full box-border"
+                  data-slot="inner-wrapper"
+                >
+                  <input
+                    aria-label="Another field"
+                    aria-labelledby="otherfield react-aria-«replaced-aria-id»"
+                    autocomplete="off"
+                    class="w-full font-normal bg-transparent !outline-solid placeholder:text-foreground-500 focus-visible:outline-solid outline-transparent data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 data-[type=color]:rounded-none file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text dark:autofill:[-webkit-text-fill-color:hsl(var(--heroui-foreground))] [&::-ms-reveal]:hidden text-small"
+                    data-slot="input"
+                    data-testid="otherfield"
+                    id="otherfield"
+                    name="otherField"
+                    placeholder=" "
+                    tabindex="0"
+                    title=""
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-4 flex justify-end"
+        >
+          <button
+            aria-label="Submit form"
+            class="group tap-highlight-transparent data-[hover=true]:opacity-hover z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white"
+            data-focus="true"
+            data-hover="true"
+            data-react-aria-pressable="true"
+            data-testid="form_submit_button"
+            tabindex="0"
+            type="submit"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Story Snapshots > EdgeCaseRequiredSubmitFocus 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-6"
+  >
+    <aside
+      aria-label="What this checks"
+      class="w-80 max-w-full rounded-lg border border-default-200 bg-default-100 p-3 text-sm text-foreground"
+    >
+      <p
+        class="mb-1 font-semibold"
+      >
+        What this checks
+      </p>
+      <p>
+        Submitting an empty required slider focuses its thumb and shows a focus outline. Arrow keys then adjust the value so it can be submitted.
+      </p>
+    </aside>
+    <div
+      class="flex w-full flex-row justify-between gap-6"
+    >
+      <form
+        class="grow min-w-60"
+        data-form-is-valid="true"
+        data-testid=""
+        novalidate=""
+      >
+        <div
+          class="group flex w-full flex-col gap-y-1.5"
+          data-invalid="false"
+          data-required="true"
+          data-testid="sliderfield"
+          tabindex="-1"
+        >
+          <div
+            style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+          >
+            <input
+              aria-label="Required Slider"
+              max="100"
+              min="0"
+              name="sliderField"
+              step="1"
+              tabindex="-1"
+              type="range"
+              value="1"
+            />
+          </div>
+          <div
+            aria-label="Required Slider"
+            aria-labelledby="react-aria-«replaced-aria-id» react-aria-«replaced-aria-id»"
+            class="flex flex-col w-full gap-1"
+            data-hover="false"
+            data-orientation="horizontal"
+            data-slot="base"
+            id="react-aria-«replaced-aria-id»"
+            role="group"
+          >
+            <div
+              class="w-full flex justify-between items-center mb-1"
+              data-slot="labelWrapper"
+            >
+              <label
+                class="cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+                data-slot="label"
+                id="react-aria-«replaced-aria-id»"
+              >
+                Required Slider
+              </label>
+              <output
+                aria-live="off"
+                class="text-small"
+                data-slot="value"
+                for="react-aria-«replaced-aria-id»-0"
+              >
+                1
+              </output>
+            </div>
+            <div
+              class="relative flex gap-2 items-center"
+              data-slot="track-wrapper"
+            >
+              <div
+                class="flex w-full relative rounded-full bg-default-300/50 border-x-transparent h-3 my-[calc((theme(spacing.6)-theme(spacing.3))/2)] border-x-[calc(theme(spacing.6)/2)] data-[fill-start=true]:border-s-primary data-[fill-end=true]:border-e-primary"
+                data-fill-end="false"
+                data-fill-start="true"
+                data-slot="track"
+                data-thumb-hidden="false"
+                data-vertical="false"
+                style="position: relative; touch-action: none;"
+              >
+                <div
+                  class="h-full absolute bg-primary"
+                  data-slot="filler"
+                  style="left: 0%; width: 1%;"
+                />
+                <div
+                  aria-label="Slider thumb 1"
+                  class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small group-data-[invalid=true]:data-[focused=true]:outline-2 group-data-[invalid=true]:data-[focused=true]:outline-focus group-data-[invalid=true]:data-[focused=true]:outline-offset-2"
+                  data-react-aria-pressable="true"
+                  data-slot="thumb"
+                  index="0"
+                  orientation="horizontal"
+                  style="position: absolute; left: 1%; transform: translate(-50%, -50%); touch-action: none;"
+                >
+                  <div
+                    style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                  >
+                    <input
+                      aria-describedby=""
+                      aria-details=""
+                      aria-labelledby="react-aria-«replaced-aria-id»"
+                      aria-orientation="horizontal"
+                      aria-valuetext="1"
+                      id="react-aria-«replaced-aria-id»-0"
+                      max="100"
+                      min="0"
+                      name="sliderField_slider"
+                      step="1"
+                      tabindex="0"
+                      type="range"
+                      value="1"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-4 flex justify-end"
+        >
+          <button
+            aria-label="Submit form"
+            class="group tap-highlight-transparent data-[hover=true]:opacity-hover z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white"
+            data-focus="true"
+            data-hover="true"
+            data-react-aria-pressable="true"
+            data-testid="form_submit_button"
+            tabindex="0"
+            type="submit"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Story Snapshots > EdgeCaseRequiredTouchedViaTab 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-6"
+  >
+    <aside
+      aria-label="What this checks"
+      class="w-80 max-w-full rounded-lg border border-default-200 bg-default-100 p-3 text-sm text-foreground"
+    >
+      <p
+        class="mb-1 font-semibold"
+      >
+        What this checks
+      </p>
+      <p>
+        An empty required slider shows its validation error after you Tab into it and then Tab away without changing its value.
+      </p>
+    </aside>
+    <div
+      class="flex w-full flex-row justify-between gap-6"
+    >
+      <form
+        class="grow min-w-60"
+        data-form-is-valid="false"
+        data-testid=""
+        novalidate=""
+      >
+        <div
+          class="group flex w-full flex-col gap-y-1.5"
+          data-invalid="true"
+          data-required="true"
+          data-testid="sliderfield"
+          tabindex="-1"
+        >
+          <div
+            style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+          >
+            <input
+              aria-label="Required Slider (Tab Test)"
+              max="100"
+              min="0"
+              name="sliderField"
+              step="1"
+              tabindex="-1"
+              type="range"
+              value="0"
+            />
+          </div>
+          <div
+            aria-label="Required Slider (Tab Test)"
+            aria-labelledby="react-aria-«replaced-aria-id» react-aria-«replaced-aria-id»"
+            class="flex flex-col w-full gap-1"
+            data-hover="false"
+            data-orientation="horizontal"
+            data-slot="base"
+            id="react-aria-«replaced-aria-id»"
+            role="group"
+          >
+            <div
+              class="w-full flex justify-between items-center mb-1"
+              data-slot="labelWrapper"
+            >
+              <label
+                class="cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+                data-slot="label"
+                id="react-aria-«replaced-aria-id»"
+              >
+                Required Slider (Tab Test)
+              </label>
+              <output
+                aria-live="off"
+                class="text-small"
+                data-slot="value"
+                for="react-aria-«replaced-aria-id»-0"
+              >
+                0
+              </output>
+            </div>
+            <div
+              class="relative flex gap-2 items-center"
+              data-slot="track-wrapper"
+            >
+              <div
+                class="flex w-full relative rounded-full bg-default-300/50 border-x-transparent h-3 my-[calc((theme(spacing.6)-theme(spacing.3))/2)] border-x-[calc(theme(spacing.6)/2)] data-[fill-start=true]:border-s-danger data-[fill-end=true]:border-e-danger"
+                data-fill-end="false"
+                data-fill-start="false"
+                data-slot="track"
+                data-thumb-hidden="false"
+                data-vertical="false"
+                style="position: relative; touch-action: none;"
+              >
+                <div
+                  class="h-full absolute bg-danger"
+                  data-slot="filler"
+                  style="left: 0%; width: 0%;"
+                />
+                <div
+                  aria-label="Slider thumb 1"
+                  class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-danger top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small group-data-[invalid=true]:data-[focused=true]:outline-2 group-data-[invalid=true]:data-[focused=true]:outline-focus group-data-[invalid=true]:data-[focused=true]:outline-offset-2"
+                  data-react-aria-pressable="true"
+                  data-slot="thumb"
+                  index="0"
+                  orientation="horizontal"
+                  style="position: absolute; left: 0%; transform: translate(-50%, -50%); touch-action: none;"
+                >
+                  <div
+                    style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                  >
+                    <input
+                      aria-describedby=""
+                      aria-details=""
+                      aria-labelledby="react-aria-«replaced-aria-id»"
+                      aria-orientation="horizontal"
+                      aria-valuetext="0"
+                      id="react-aria-«replaced-aria-id»-0"
+                      max="100"
+                      min="0"
+                      name="sliderField_slider"
+                      step="1"
+                      tabindex="0"
+                      type="range"
+                      value="0"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="group-data-[has-helper=true]:flex relative flex-col gap-1.5 p-0 ml-0 block"
+            data-slot="helper-wrapper"
+          >
+            <div
+              class="text-tiny text-danger"
+              data-slot="error-message"
+              id="react-aria-«replaced-aria-id»"
+            >
+              <ul
+                aria-label="Validation errors of field sliderfield"
+                data-testid="sliderfield_error"
+              >
+                <li
+                  style="overflow: hidden;"
+                >
+                  <div
+                    class="px-1 pt-1"
+                  >
+                    Field is required
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-4 flex justify-end"
+        >
+          <button
+            aria-label="Submit form"
+            class="group tap-highlight-transparent data-[hover=true]:opacity-hover z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white"
+            data-focus="true"
+            data-focus-visible="true"
+            data-react-aria-pressable="true"
+            data-testid="form_submit_button"
+            tabindex="0"
+            type="submit"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
 `;
@@ -873,12 +1665,14 @@ exports[`Story Snapshots > Invalid 1`] = `
       class="grow min-w-60"
       data-form-is-valid="false"
       data-testid=""
+      novalidate=""
     >
       <div
-        class="group"
+        class="group flex w-full flex-col gap-y-1.5"
         data-invalid="true"
         data-required="true"
         data-testid="sliderfield"
+        tabindex="-1"
       >
         <div
           style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -905,11 +1699,11 @@ exports[`Story Snapshots > Invalid 1`] = `
           role="group"
         >
           <div
-            class="w-full flex justify-between items-center"
+            class="w-full flex justify-between items-center mb-1"
             data-slot="labelWrapper"
           >
             <label
-              class="text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+              class="cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
               data-slot="label"
               id="react-aria-«replaced-aria-id»"
             >
@@ -935,7 +1729,7 @@ exports[`Story Snapshots > Invalid 1`] = `
               data-slot="track"
               data-thumb-hidden="false"
               data-vertical="false"
-              style="position: relative;"
+              style="position: relative; touch-action: none;"
             >
               <div
                 class="h-full absolute bg-danger"
@@ -944,7 +1738,7 @@ exports[`Story Snapshots > Invalid 1`] = `
               />
               <div
                 aria-label="Slider thumb 1"
-                class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-danger top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small"
+                class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-danger top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small group-data-[invalid=true]:data-[focused=true]:outline-2 group-data-[invalid=true]:data-[focused=true]:outline-focus group-data-[invalid=true]:data-[focused=true]:outline-offset-2"
                 data-focus-visible="true"
                 data-focused="true"
                 data-hover="true"
@@ -952,7 +1746,7 @@ exports[`Story Snapshots > Invalid 1`] = `
                 data-slot="thumb"
                 index="0"
                 orientation="horizontal"
-                style="position: absolute; left: 31%; transform: translate(-50%, -50%);"
+                style="position: absolute; left: 31%; transform: translate(-50%, -50%); touch-action: none;"
               >
                 <div
                   style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -1031,12 +1825,14 @@ exports[`Story Snapshots > Required 1`] = `
       class="grow min-w-60"
       data-form-is-valid="false"
       data-testid=""
+      novalidate=""
     >
       <div
-        class="group"
+        class="group flex w-full flex-col gap-y-1.5"
         data-invalid="false"
         data-required="true"
         data-testid="sliderfield"
+        tabindex="-1"
       >
         <div
           style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -1063,11 +1859,11 @@ exports[`Story Snapshots > Required 1`] = `
           role="group"
         >
           <div
-            class="w-full flex justify-between items-center"
+            class="w-full flex justify-between items-center mb-1"
             data-slot="labelWrapper"
           >
             <label
-              class="text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+              class="cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
               data-slot="label"
               id="react-aria-«replaced-aria-id»"
             >
@@ -1093,7 +1889,7 @@ exports[`Story Snapshots > Required 1`] = `
               data-slot="track"
               data-thumb-hidden="false"
               data-vertical="false"
-              style="position: relative;"
+              style="position: relative; touch-action: none;"
             >
               <div
                 class="h-full absolute bg-primary"
@@ -1102,12 +1898,12 @@ exports[`Story Snapshots > Required 1`] = `
               />
               <div
                 aria-label="Slider thumb 1"
-                class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small"
+                class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small group-data-[invalid=true]:data-[focused=true]:outline-2 group-data-[invalid=true]:data-[focused=true]:outline-focus group-data-[invalid=true]:data-[focused=true]:outline-offset-2"
                 data-react-aria-pressable="true"
                 data-slot="thumb"
                 index="0"
                 orientation="horizontal"
-                style="position: absolute; left: 0%; transform: translate(-50%, -50%);"
+                style="position: absolute; left: 0%; transform: translate(-50%, -50%); touch-action: none;"
               >
                 <div
                   style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -1161,12 +1957,14 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
       class="grow min-w-60"
       data-form-is-valid="true"
       data-testid=""
+      novalidate=""
     >
       <div
-        class="group"
+        class="group flex w-full flex-col gap-y-1.5"
         data-invalid="false"
         data-required="false"
         data-testid="sliderfield"
+        tabindex="-1"
       >
         <div
           style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -1193,11 +1991,11 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
           role="group"
         >
           <div
-            class="w-full flex justify-between items-center"
+            class="w-full flex justify-between items-center mb-1"
             data-slot="labelWrapper"
           >
             <label
-              class="text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+              class="cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
               data-slot="label"
               id="react-aria-«replaced-aria-id»"
             >
@@ -1223,7 +2021,7 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
               data-slot="track"
               data-thumb-hidden="false"
               data-vertical="false"
-              style="position: relative;"
+              style="position: relative; touch-action: none;"
             >
               <div
                 class="h-full absolute bg-primary"
@@ -1232,12 +2030,12 @@ exports[`Story Snapshots > WithInitialValue 1`] = `
               />
               <div
                 aria-label="Slider thumb 1"
-                class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small"
+                class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small group-data-[invalid=true]:data-[focused=true]:outline-2 group-data-[invalid=true]:data-[focused=true]:outline-focus group-data-[invalid=true]:data-[focused=true]:outline-offset-2"
                 data-react-aria-pressable="true"
                 data-slot="thumb"
                 index="0"
                 orientation="horizontal"
-                style="position: absolute; left: 75%; transform: translate(-50%, -50%);"
+                style="position: absolute; left: 75%; transform: translate(-50%, -50%); touch-action: none;"
               >
                 <div
                   style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -1291,12 +2089,14 @@ exports[`Story Snapshots > WithLabel 1`] = `
       class="grow min-w-60"
       data-form-is-valid="true"
       data-testid=""
+      novalidate=""
     >
       <div
-        class="group"
+        class="group flex w-full flex-col gap-y-1.5"
         data-invalid="false"
         data-required="false"
         data-testid="sliderfield"
+        tabindex="-1"
       >
         <div
           style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -1323,11 +2123,11 @@ exports[`Story Snapshots > WithLabel 1`] = `
           role="group"
         >
           <div
-            class="w-full flex justify-between items-center"
+            class="w-full flex justify-between items-center mb-1"
             data-slot="labelWrapper"
           >
             <label
-              class="text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+              class="cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
               data-slot="label"
               id="react-aria-«replaced-aria-id»"
             >
@@ -1353,7 +2153,7 @@ exports[`Story Snapshots > WithLabel 1`] = `
               data-slot="track"
               data-thumb-hidden="false"
               data-vertical="false"
-              style="position: relative;"
+              style="position: relative; touch-action: none;"
             >
               <div
                 class="h-full absolute bg-primary"
@@ -1362,12 +2162,12 @@ exports[`Story Snapshots > WithLabel 1`] = `
               />
               <div
                 aria-label="Slider thumb 1"
-                class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small"
+                class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small group-data-[invalid=true]:data-[focused=true]:outline-2 group-data-[invalid=true]:data-[focused=true]:outline-focus group-data-[invalid=true]:data-[focused=true]:outline-offset-2"
                 data-react-aria-pressable="true"
                 data-slot="thumb"
                 index="0"
                 orientation="horizontal"
-                style="position: absolute; left: 0%; transform: translate(-50%, -50%);"
+                style="position: absolute; left: 0%; transform: translate(-50%, -50%); touch-action: none;"
               >
                 <div
                   style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -1421,12 +2221,14 @@ exports[`Story Snapshots > WithStartAndEndContent 1`] = `
       class="grow min-w-60"
       data-form-is-valid="true"
       data-testid=""
+      novalidate=""
     >
       <div
-        class="group"
+        class="group flex w-full flex-col gap-y-1.5"
         data-invalid="false"
         data-required="false"
         data-testid="sliderfield"
+        tabindex="-1"
       >
         <div
           style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -1453,11 +2255,11 @@ exports[`Story Snapshots > WithStartAndEndContent 1`] = `
           role="group"
         >
           <div
-            class="w-full flex justify-between items-center"
+            class="w-full flex justify-between items-center mb-1"
             data-slot="labelWrapper"
           >
             <label
-              class="text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+              class="cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
               data-slot="label"
               id="react-aria-«replaced-aria-id»"
             >
@@ -1501,7 +2303,7 @@ exports[`Story Snapshots > WithStartAndEndContent 1`] = `
               data-slot="track"
               data-thumb-hidden="false"
               data-vertical="false"
-              style="position: relative;"
+              style="position: relative; touch-action: none;"
             >
               <div
                 class="h-full absolute bg-primary"
@@ -1510,12 +2312,12 @@ exports[`Story Snapshots > WithStartAndEndContent 1`] = `
               />
               <div
                 aria-label="Slider thumb 1"
-                class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small"
+                class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small group-data-[invalid=true]:data-[focused=true]:outline-2 group-data-[invalid=true]:data-[focused=true]:outline-focus group-data-[invalid=true]:data-[focused=true]:outline-offset-2"
                 data-react-aria-pressable="true"
                 data-slot="thumb"
                 index="0"
                 orientation="horizontal"
-                style="position: absolute; left: 50%; transform: translate(-50%, -50%);"
+                style="position: absolute; left: 50%; transform: translate(-50%, -50%); touch-action: none;"
               >
                 <div
                   style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -1587,12 +2389,14 @@ exports[`Story Snapshots > WithStep 1`] = `
       class="grow min-w-60"
       data-form-is-valid="true"
       data-testid=""
+      novalidate=""
     >
       <div
-        class="group"
+        class="group flex w-full flex-col gap-y-1.5"
         data-invalid="false"
         data-required="false"
         data-testid="sliderfield"
+        tabindex="-1"
       >
         <div
           style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -1619,11 +2423,11 @@ exports[`Story Snapshots > WithStep 1`] = `
           role="group"
         >
           <div
-            class="w-full flex justify-between items-center"
+            class="w-full flex justify-between items-center mb-1"
             data-slot="labelWrapper"
           >
             <label
-              class="text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+              class="cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
               data-slot="label"
               id="react-aria-«replaced-aria-id»"
             >
@@ -1649,7 +2453,7 @@ exports[`Story Snapshots > WithStep 1`] = `
               data-slot="track"
               data-thumb-hidden="false"
               data-vertical="false"
-              style="position: relative;"
+              style="position: relative; touch-action: none;"
             >
               <div
                 class="h-full absolute bg-primary"
@@ -1658,12 +2462,12 @@ exports[`Story Snapshots > WithStep 1`] = `
               />
               <div
                 aria-label="Slider thumb 1"
-                class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small"
+                class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small group-data-[invalid=true]:data-[focused=true]:outline-2 group-data-[invalid=true]:data-[focused=true]:outline-focus group-data-[invalid=true]:data-[focused=true]:outline-offset-2"
                 data-react-aria-pressable="true"
                 data-slot="thumb"
                 index="0"
                 orientation="horizontal"
-                style="position: absolute; left: 50%; transform: translate(-50%, -50%);"
+                style="position: absolute; left: 50%; transform: translate(-50%, -50%); touch-action: none;"
               >
                 <div
                   style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -1717,12 +2521,14 @@ exports[`Story Snapshots > WithSteps 1`] = `
       class="grow min-w-60"
       data-form-is-valid="true"
       data-testid=""
+      novalidate=""
     >
       <div
-        class="group"
+        class="group flex w-full flex-col gap-y-1.5"
         data-invalid="false"
         data-required="false"
         data-testid="sliderfield"
+        tabindex="-1"
       >
         <div
           style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -1749,11 +2555,11 @@ exports[`Story Snapshots > WithSteps 1`] = `
           role="group"
         >
           <div
-            class="w-full flex justify-between items-center"
+            class="w-full flex justify-between items-center mb-1"
             data-slot="labelWrapper"
           >
             <label
-              class="text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+              class="cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
               data-slot="label"
               id="react-aria-«replaced-aria-id»"
             >
@@ -1779,7 +2585,7 @@ exports[`Story Snapshots > WithSteps 1`] = `
               data-slot="track"
               data-thumb-hidden="false"
               data-vertical="false"
-              style="position: relative;"
+              style="position: relative; touch-action: none;"
             >
               <div
                 class="h-full absolute bg-primary"
@@ -1866,12 +2672,12 @@ exports[`Story Snapshots > WithSteps 1`] = `
               />
               <div
                 aria-label="Slider thumb 1"
-                class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small"
+                class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small group-data-[invalid=true]:data-[focused=true]:outline-2 group-data-[invalid=true]:data-[focused=true]:outline-focus group-data-[invalid=true]:data-[focused=true]:outline-offset-2"
                 data-react-aria-pressable="true"
                 data-slot="thumb"
                 index="0"
                 orientation="horizontal"
-                style="position: absolute; left: 50%; transform: translate(-50%, -50%);"
+                style="position: absolute; left: 50%; transform: translate(-50%, -50%); touch-action: none;"
               >
                 <div
                   style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -1903,6 +2709,140 @@ exports[`Story Snapshots > WithSteps 1`] = `
         <button
           aria-label="Submit form"
           class="group tap-highlight-transparent data-[hover=true]:opacity-hover z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white"
+          data-react-aria-pressable="true"
+          data-testid="form_submit_button"
+          tabindex="0"
+          type="submit"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`Story Snapshots > WithValueTransform 1`] = `
+<div>
+  <div
+    class="flex w-full flex-row justify-between gap-6"
+  >
+    <form
+      class="grow min-w-60"
+      data-form-is-valid="true"
+      data-testid=""
+      novalidate=""
+    >
+      <div
+        class="group flex w-full flex-col gap-y-1.5"
+        data-invalid="false"
+        data-required="true"
+        data-testid="sliderfield"
+        tabindex="-1"
+      >
+        <div
+          style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+        >
+          <input
+            aria-label="Volume (%)"
+            max="100"
+            min="0"
+            name="sliderField"
+            step="10"
+            tabindex="-1"
+            type="range"
+            value="60"
+          />
+        </div>
+        <div
+          aria-label="Volume (%)"
+          aria-labelledby="react-aria-«replaced-aria-id» react-aria-«replaced-aria-id»"
+          class="flex flex-col w-full gap-1"
+          data-hover="false"
+          data-orientation="horizontal"
+          data-slot="base"
+          id="react-aria-«replaced-aria-id»"
+          role="group"
+        >
+          <div
+            class="w-full flex justify-between items-center mb-1"
+            data-slot="labelWrapper"
+          >
+            <label
+              class="cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:!text-danger group-data-[required=true]:after:ml-0.5 group-data-[required=true]:after:text-danger group-data-[required=true]:after:content-["*"]"
+              data-slot="label"
+              id="react-aria-«replaced-aria-id»"
+            >
+              Volume (%)
+            </label>
+            <output
+              aria-live="off"
+              class="text-small"
+              data-slot="value"
+              for="react-aria-«replaced-aria-id»-0"
+            >
+              60
+            </output>
+          </div>
+          <div
+            class="relative flex gap-2 items-center"
+            data-slot="track-wrapper"
+          >
+            <div
+              class="flex w-full relative rounded-full bg-default-300/50 border-x-transparent h-3 my-[calc((theme(spacing.6)-theme(spacing.3))/2)] border-x-[calc(theme(spacing.6)/2)] data-[fill-start=true]:border-s-primary data-[fill-end=true]:border-e-primary"
+              data-fill-end="false"
+              data-fill-start="true"
+              data-slot="track"
+              data-thumb-hidden="false"
+              data-vertical="false"
+              style="position: relative; touch-action: none;"
+            >
+              <div
+                class="h-full absolute bg-primary"
+                data-slot="filler"
+                style="left: 0%; width: 60%;"
+              />
+              <div
+                aria-label="Slider thumb 1"
+                class="flex justify-center items-center before:absolute before:w-11 before:h-11 before:rounded-full after:shadow-small after:bg-background data-[focused=true]:z-10 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 w-6 h-6 after:w-5 after:h-5 rounded-full after:rounded-full bg-primary top-1/2 cursor-grab data-[dragging=true]:cursor-grabbing ring-transparent border-0 after:transition-all motion-reduce:after:transition-none data-[dragging=true]:after:scale-80 shadow-small group-data-[invalid=true]:data-[focused=true]:outline-2 group-data-[invalid=true]:data-[focused=true]:outline-focus group-data-[invalid=true]:data-[focused=true]:outline-offset-2"
+                data-react-aria-pressable="true"
+                data-slot="thumb"
+                index="0"
+                orientation="horizontal"
+                style="position: absolute; left: 60%; transform: translate(-50%, -50%); touch-action: none;"
+              >
+                <div
+                  style="border: 0px; clip: rect(0px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                >
+                  <input
+                    aria-describedby=""
+                    aria-details=""
+                    aria-labelledby="react-aria-«replaced-aria-id»"
+                    aria-orientation="horizontal"
+                    aria-valuetext="60"
+                    id="react-aria-«replaced-aria-id»-0"
+                    max="100"
+                    min="0"
+                    name="sliderField_slider"
+                    step="10"
+                    tabindex="0"
+                    type="range"
+                    value="60"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mt-4 flex justify-end"
+      >
+        <button
+          aria-label="Submit form"
+          class="group tap-highlight-transparent data-[hover=true]:opacity-hover z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white"
+          data-focus="true"
+          data-hover="true"
           data-react-aria-pressable="true"
           data-testid="form_submit_button"
           tabindex="0"

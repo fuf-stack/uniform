@@ -1,4 +1,4 @@
-import type { VetoEffects, VetoOptional, VetoRefinementCtx } from 'src/types';
+import type { VetoOptional, VetoRefinementCtx } from 'src/types';
 import type { ZodString } from 'zod';
 
 import { z } from 'zod';
@@ -8,6 +8,17 @@ export interface VStringOptions {
   min: number;
 }
 
+/**
+ * Creates a trimmed string schema with a default minimum length of `1`.
+ *
+ * @example
+ * const schema = string();
+ * schema.parse('  hello  '); // => "hello"
+ *
+ * @example
+ * const allowEmpty = string({ min: 0 });
+ * allowEmpty.parse('');
+ */
 export const string = (options?: VStringOptions): VStringSchema => {
   return (
     z
@@ -22,11 +33,6 @@ export const string = (options?: VStringOptions): VStringSchema => {
 
 export type VString = typeof string;
 export type VStringSchema = ZodString;
-
-/** when used with refine or superRefine */
-export type VStringRefined<Options = undefined> = (
-  options?: Options,
-) => VetoEffects<VStringSchema>;
 
 interface BlacklistOptions {
   /** Custom error message function */
@@ -63,10 +69,10 @@ const blacklist = (options: BlacklistOptions) => {
 };
 
 interface NoConsecutiveCharactersOptions {
-  /** Custom error message function */
-  message?: (val: string) => string;
   /** Characters that cannot appear consecutively */
   characters: string[];
+  /** Custom error message function */
+  message?: (val: string) => string;
 }
 
 /** Refinement to prevent certain consecutive characters */
@@ -119,11 +125,15 @@ export interface VStringRefinements {
  * });
  * ```
  */
-export const refineString = <
-  T extends VStringSchema | VetoOptional<VStringSchema>,
->(
-  schema: T,
-) => {
+export function refineString(
+  schema: VStringSchema,
+): (refinements: VStringRefinements) => VStringSchema;
+export function refineString(
+  schema: VetoOptional<VStringSchema>,
+): (refinements: VStringRefinements) => VetoOptional<VStringSchema>;
+export function refineString(
+  schema: VStringSchema | VetoOptional<VStringSchema>,
+) {
   return (refinements: VStringRefinements) => {
     return schema.superRefine((val, ctx) => {
       // Skip refinements if value is undefined (because it is optional)
@@ -147,4 +157,4 @@ export const refineString = <
       }
     });
   };
-};
+}

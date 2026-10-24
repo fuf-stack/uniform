@@ -1,128 +1,43 @@
 {
   "name": "@fuf-stack/uniform",
-  "version": "1.11.1",
+  "version": "1.28.0",
   "description": "fuf react form library",
   "author": "Fröhlich ∧ Frei",
   "homepage": "https://github.com/fuf-stack/pixels#readme",
   "license": "MIT",
   "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.cts",
   "sideEffects": false,
   "exports": {
-    ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js"
-    },
-    "./Checkboxes": {
-      "require": "./dist/Checkboxes/index.cjs",
-      "import": "./dist/Checkboxes/index.js"
-    },
-    "./FieldArray": {
-      "require": "./dist/FieldArray/index.cjs",
-      "import": "./dist/FieldArray/index.js"
-    },
-    "./FieldCard": {
-      "require": "./dist/FieldCard/index.cjs",
-      "import": "./dist/FieldCard/index.js"
-    },
-    "./Form": {
-      "require": "./dist/Form/index.cjs",
-      "import": "./dist/Form/index.js"
-    },
-    "./Grid": {
-      "require": "./dist/Grid/index.cjs",
-      "import": "./dist/Grid/index.js"
-    },
-    "./helpers": {
-      "require": "./dist/helpers/index.cjs",
-      "import": "./dist/helpers/index.js"
-    },
-    "./hooks/useClientValidation": {
-      "require": "./dist/hooks/useClientValidation/index.cjs",
-      "import": "./dist/hooks/useClientValidation/index.js"
-    },
-    "./hooks/useController": {
-      "require": "./dist/hooks/useController/index.cjs",
-      "import": "./dist/hooks/useController/index.js"
-    },
-    "./hooks/useFormContext": {
-      "require": "./dist/hooks/useFormContext/index.cjs",
-      "import": "./dist/hooks/useFormContext/index.js"
-    },
-    "./hooks/useInput": {
-      "require": "./dist/hooks/useInput/index.cjs",
-      "import": "./dist/hooks/useInput/index.js"
-    },
-    "./hooks/useInputValueDebounce": {
-      "require": "./dist/hooks/useInputValueDebounce/index.cjs",
-      "import": "./dist/hooks/useInputValueDebounce/index.js"
-    },
-    "./hooks/useInputValueTransform": {
-      "require": "./dist/hooks/useInputValueTransform/index.cjs",
-      "import": "./dist/hooks/useInputValueTransform/index.js"
-    },
-    "./hooks/useUniformField": {
-      "require": "./dist/hooks/useUniformField/index.cjs",
-      "import": "./dist/hooks/useUniformField/index.js"
-    },
-    "./hooks/useUniformFieldArray": {
-      "require": "./dist/hooks/useUniformFieldArray/index.cjs",
-      "import": "./dist/hooks/useUniformFieldArray/index.js"
-    },
-    "./hooks/useWatchUserChange": {
-      "require": "./dist/hooks/useWatchUserChange/index.cjs",
-      "import": "./dist/hooks/useWatchUserChange/index.js"
-    },
-    "./Input": {
-      "require": "./dist/Input/index.cjs",
-      "import": "./dist/Input/index.js"
-    },
-    "./partials/FieldCopyTestIdButton": {
-      "require": "./dist/partials/FieldCopyTestIdButton/index.cjs",
-      "import": "./dist/partials/FieldCopyTestIdButton/index.js"
-    },
-    "./partials/FieldValidationError": {
-      "require": "./dist/partials/FieldValidationError/index.cjs",
-      "import": "./dist/partials/FieldValidationError/index.js"
-    },
-    "./RadioBoxes": {
-      "require": "./dist/RadioBoxes/index.cjs",
-      "import": "./dist/RadioBoxes/index.js"
-    },
-    "./Radios": {
-      "require": "./dist/Radios/index.cjs",
-      "import": "./dist/Radios/index.js"
-    },
-    "./RadioTabs": {
-      "require": "./dist/RadioTabs/index.cjs",
-      "import": "./dist/RadioTabs/index.js"
-    },
-    "./Select": {
-      "require": "./dist/Select/index.cjs",
-      "import": "./dist/Select/index.js"
-    },
-    "./Slider": {
-      "require": "./dist/Slider/index.cjs",
-      "import": "./dist/Slider/index.js"
-    },
-    "./SubmitButton": {
-      "require": "./dist/SubmitButton/index.cjs",
-      "import": "./dist/SubmitButton/index.js"
-    },
-    "./Switch": {
-      "require": "./dist/Switch/index.cjs",
-      "import": "./dist/Switch/index.js"
-    },
-    "./SwitchBox": {
-      "require": "./dist/SwitchBox/index.cjs",
-      "import": "./dist/SwitchBox/index.js"
-    },
-    "./TextArea": {
-      "require": "./dist/TextArea/index.cjs",
-      "import": "./dist/TextArea/index.js"
-    },
+    "./Checkboxes": "./dist/Checkboxes/index.mjs",
+    "./DatePicker": "./dist/DatePicker/index.mjs",
+    "./FieldArray": "./dist/FieldArray/index.mjs",
+    "./FieldCard": "./dist/FieldCard/index.mjs",
+    "./Form": "./dist/Form/index.mjs",
+    "./Grid": "./dist/Grid/index.mjs",
+    "./helpers": "./dist/helpers/index.mjs",
+    "./hooks/useClientValidation": "./dist/hooks/useClientValidation/index.mjs",
+    "./hooks/useController": "./dist/hooks/useController/index.mjs",
+    "./hooks/useFormContext": "./dist/hooks/useFormContext/index.mjs",
+    "./hooks/useInput": "./dist/hooks/useInput/index.mjs",
+    "./hooks/useInputValueDebounce": "./dist/hooks/useInputValueDebounce/index.mjs",
+    "./hooks/useInputValueTransform": "./dist/hooks/useInputValueTransform/index.mjs",
+    "./hooks/useUniformField": "./dist/hooks/useUniformField/index.mjs",
+    "./hooks/useUniformFieldArray": "./dist/hooks/useUniformFieldArray/index.mjs",
+    "./hooks/useWatchFormReset": "./dist/hooks/useWatchFormReset/index.mjs",
+    "./hooks/useWatchUserChange": "./dist/hooks/useWatchUserChange/index.mjs",
+    "./Input": "./dist/Input/index.mjs",
+    "./partials/FieldCopyTestIdButton": "./dist/partials/FieldCopyTestIdButton/index.mjs",
+    "./partials/FieldValidationError": "./dist/partials/FieldValidationError/index.mjs",
+    "./RadioBoxes": "./dist/RadioBoxes/index.mjs",
+    "./Radios": "./dist/Radios/index.mjs",
+    "./RadioTabs": "./dist/RadioTabs/index.mjs",
+    "./Select": "./dist/Select/index.mjs",
+    "./Slider": "./dist/Slider/index.mjs",
+    "./SubmitButton": "./dist/SubmitButton/index.mjs",
+    "./Switch": "./dist/Switch/index.mjs",
+    "./SwitchBox": "./dist/SwitchBox/index.mjs",
+    "./TextArea": "./dist/TextArea/index.mjs",
+    "./Time": "./dist/Time/index.mjs",
     "./package.json": "./package.json"
   },
   "files": [
@@ -149,6 +64,7 @@
     "react-dom": ">=18"
   },
   "dependencies": {
+    "@internationalized/date": "3.12.4",
     "@dnd-kit/core": "6.3.1",
     "@dnd-kit/modifiers": "9.0.0",
     "@dnd-kit/sortable": "10.0.0",
@@ -157,28 +73,30 @@
     "@fuf-stack/pixel-utils": "workspace:*",
     "@fuf-stack/pixels": "workspace:*",
     "@fuf-stack/veto": "workspace:*",
-    "@heroui/button": "2.2.24",
-    "@heroui/checkbox": "2.3.24",
-    "@heroui/input": "2.4.25",
-    "@heroui/number-input": "2.0.18",
-    "@heroui/radio": "2.3.24",
-    "@heroui/select": "2.4.25",
-    "@heroui/switch": "2.2.22",
-    "@heroui/slider": "2.4.24",
-    "@heroui/system": "2.4.20",
-    "@heroui/theme": "2.4.20",
-    "@react-aria/visually-hidden": "3.8.28",
+    "@heroui/button": "2.2.32",
+    "@heroui/checkbox": "2.3.32",
+    "@heroui/date-input": "2.3.32",
+    "@heroui/date-picker": "2.3.33",
+    "@heroui/input": "2.4.33",
+    "@heroui/number-input": "2.0.23",
+    "@heroui/radio": "2.3.32",
+    "@heroui/select": "2.4.33",
+    "@heroui/switch": "2.2.27",
+    "@heroui/slider": "2.4.29",
+    "@heroui/system": "2.4.28",
+    "@heroui/theme": "2.4.26",
+    "@react-aria/visually-hidden": "3.9.1",
     "debug": "4.4.3",
-    "framer-motion": "12.23.26",
-    "react-icons": "5.5.0",
-    "react-hook-form": "7.68.0",
+    "framer-motion": "12.43.0",
+    "react-icons": "5.7.0",
+    "react-hook-form": "7.81.0",
     "react-select": "5.10.2"
   },
   "devDependencies": {
-    "@types/debug": "4.1.12",
-    "@types/react": "19.2.7",
-    "@types/react-dom": "19.2.3",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "@types/debug": "4.1.13",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
   }
 }

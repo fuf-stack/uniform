@@ -63,8 +63,8 @@ export interface TableColumnProps {
 }
 
 export interface TableRowProps {
-  key: string | number;
   [key: string | number]: ReactNode;
+  key: string | number;
 }
 
 export interface TableProps extends VariantProps {

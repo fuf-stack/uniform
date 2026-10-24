@@ -7,12 +7,20 @@ import { RadioGroup as HeroRadioGroup } from '@heroui/radio';
 
 import { slugify, tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
 
+import { createOptionValueConverter } from '../helpers';
 import { useUniformField } from '../hooks/useUniformField';
 import { RadioBox } from './RadioBox';
 
 export const radioBoxesVariants = tv({
   slots: {
-    base: 'group gap-0', // Needs group for group-data condition
+    base: [
+      // Needs group for group-data condition.
+      'group',
+      // Match shared field wrapper layout.
+      'flex w-full flex-col',
+      // Keep spacing between label/radio boxes consistent.
+      'gap-y-1.5',
+    ],
     boxBase: '',
     boxControl: '',
     boxDescription: '',
@@ -21,7 +29,7 @@ export const radioBoxesVariants = tv({
     // see HeroUI styles for group-data condition,
     // e.g.: https://github.com/heroui-inc/heroui/blob/main/packages/core/theme/src/components/select.ts
     label:
-      'mb-2 inline-flex text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:text-danger',
+      'mb-2 inline-flex cursor-default text-sm text-foreground subpixel-antialiased group-data-[invalid=true]:text-danger',
     wrapper: '',
   },
 });
@@ -29,19 +37,19 @@ export const radioBoxesVariants = tv({
 type VariantProps = TVProps<typeof radioBoxesVariants>;
 type ClassName = TVClassName<typeof radioBoxesVariants>;
 
-export interface RadioBoxesOption {
+export interface RadioBoxOption {
   /** Description of the value. Works with variant radioBox. */
   description?: ReactNode;
   /** disables the option */
   disabled?: boolean;
-  /** option label */
-  label?: ReactNode;
   /** option icon */
   icon?: ReactNode;
+  /** option label */
+  label?: ReactNode;
   /** HTML data-testid attribute of the option */
   testId?: string;
   /** option value */
-  value: string;
+  value: string | number;
 }
 
 export interface RadioBoxesProps extends VariantProps {
@@ -58,7 +66,7 @@ export interface RadioBoxesProps extends VariantProps {
   /** Name the RadioButtons are registered at in HTML forms (react-hook-form). */
   name: string;
   /** Radio button configuration. */
-  options: RadioBoxesOption[];
+  options: RadioBoxOption[];
   /** Id to grab element in internal tests. */
   testId?: string;
 }
@@ -75,20 +83,20 @@ const RadioBoxes = ({
 }: RadioBoxesProps) => {
   const {
     ariaLabel,
-    defaultValue,
     errorMessage,
     invalid,
     disabled,
     label,
-    onBlur,
-    onChange,
-    ref,
+    field: { onBlur, onChange, ref, value },
     required,
     testId,
   } = useUniformField({
     name,
     ...uniformFieldProps,
   });
+
+  // Create converter to preserve number types for option values
+  const { convertToOriginalType } = createOptionValueConverter(options);
 
   // classNames from slots
   const variants = radioBoxesVariants();
@@ -111,7 +119,6 @@ const RadioBoxes = ({
       data-invalid={invalid}
       data-required={required}
       data-testid={testId}
-      defaultValue={defaultValue as string | undefined}
       errorMessage={errorMessage}
       isDisabled={disabled}
       isInvalid={invalid}
@@ -119,8 +126,11 @@ const RadioBoxes = ({
       label={label ? <legend>{label}</legend> : null}
       name={name}
       onBlur={onBlur}
-      onValueChange={onChange}
+      onValueChange={(newValue) => {
+        onChange(convertToOriginalType(newValue));
+      }}
       orientation={inline ? 'horizontal' : 'vertical'}
+      value={value != null ? String(value) : ''}
     >
       {options.map((option) => {
         if ('value' in option) {
@@ -130,14 +140,14 @@ const RadioBoxes = ({
           );
           return (
             <RadioBox
-              key={option.value}
+              key={String(option.value)}
               classNames={boxClassNames}
               data-testid={optionTestId}
               description={option.description}
               icon={option.icon}
               isDisabled={!!disabled || option.disabled}
               isInvalid={invalid}
-              value={option.value}
+              value={String(option.value)}
             >
               {option.label ?? option.value}
             </RadioBox>

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
 import { motion } from '@fuf-stack/pixel-motion';
-import Button from '@fuf-stack/pixels/Button';
+import { Button } from '@fuf-stack/pixels/Button';
 import { useFormContext } from '@fuf-stack/uniform/hooks/useFormContext';
 import Input from '@fuf-stack/uniform/Input';
 import SubmitButton from '@fuf-stack/uniform/SubmitButton';
@@ -51,12 +51,12 @@ const SearchInput = ({ classNames = {}, config }: SearchInputProps) => {
           ariaLabel="Show search input"
           className={classNames.searchShowButton}
           icon={<FaSearch />}
-          size="sm"
-          testId="show_search_input_button"
-          variant="bordered"
           onClick={() => {
             setIsVisible(true);
           }}
+          size="sm"
+          testId="show_search_input_button"
+          variant="bordered"
         />
       )}
       {isVisible ? (
@@ -78,29 +78,29 @@ const SearchInput = ({ classNames = {}, config }: SearchInputProps) => {
           }}
         >
           <Input
-            clearable
-            debounceDelay={0}
-            name="search"
-            placeholder={placeholder}
-            size="sm"
             className={{
               input: classNames.searchInput,
               inputWrapper: classNames.searchInputWrapper,
             }}
+            clearable
+            debounceDelay={0}
+            placeholder={placeholder}
+            size="sm"
+            name="search"
             // submit on clear
             onClear={() => {
               triggerSubmit();
             }}
           />
           <SubmitButton
-            ariaLabel="Submit search"
-            // eslint-disable-next-line react/no-children-prop
-            children={null}
             className={classNames.searchSubmitButton}
             color="primary"
             icon={<FaSearch />}
             size="sm"
             testId="submit_search_button"
+            ariaLabel="Submit search"
+            // eslint-disable-next-line react/no-children-prop
+            children={null}
           />
         </motion.div>
       ) : null}

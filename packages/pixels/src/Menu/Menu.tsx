@@ -16,6 +16,7 @@ import {
   DropdownTrigger as HeroDropdownTrigger,
 } from '@heroui/dropdown';
 
+import { useReducedMotion } from '@fuf-stack/pixel-motion';
 import { cn, slugify, tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
 
 import VerticalDotsIcon from './VerticalDotsIcon';
@@ -24,34 +25,38 @@ import VerticalDotsIcon from './VerticalDotsIcon';
  * Menu component based on [HeroUI Dropdown](https://www.heroui.com//docs/components/dropdown)
  */
 export interface MenuItem {
-  /** unique identifier */
-  key: string;
   /** CSS class name */
   className?: string;
+  /** Slot name for styling/debugging hooks */
+  dataSlot?: string;
   /** additional description shown under the label */
   description?: string;
   /** disables the menu item */
   disabled?: boolean;
   /** menu item icon  */
   icon?: ReactNode;
+  /** unique identifier */
+  key: string;
   /** menu item name */
   label: ReactNode;
   /** click event handler */
   onClick?: HeroDropdownItemProps['onPress'];
   /** e2e test identifier */
   testId?: string;
+  /** plain-text value used for type-to-select when the label is not plain text */
+  textValue?: string;
 }
 
 /**
  * Menu section type
  */
 export interface MenuSection {
+  /** section items (array of MenuItem) */
+  items: MenuItem[];
   /** unique identifier */
   key: string;
   /** section label */
   label: ReactNode;
-  /** section items (array of MenuItem) */
-  items: MenuItem[];
 }
 
 // menu styling variants
@@ -72,14 +77,18 @@ export interface MenuProps extends VariantProps {
   children?: ReactNode;
   /** CSS class name */
   className?: ClassName;
-  /** menu item structure */
-  items: (MenuSection | MenuItem)[];
+  /** disables the open/close popover animation (also auto-disabled when the user prefers reduced motion) */
+  disableAnimation?: boolean;
   /** disable menu trigger */
   isDisabled?: boolean;
-  /** placement of the menu */
-  placement?: HeroDropdownProps['placement'];
+  /** menu item structure */
+  items: (MenuSection | MenuItem)[];
   /** called if item is selected */
   onAction?: (key: Key) => void;
+  /** placement of the menu */
+  placement?: HeroDropdownProps['placement'];
+  /** container the popover portal is rendered into (defaults to document.body) */
+  portalContainer?: HeroDropdownProps['portalContainer'];
   /** HTML data-testid attribute used in e2e tests */
   testId?: string;
   /** When defined a Button will be rendered as trigger (with provided props) instead of unstyled html button */
@@ -93,7 +102,7 @@ export interface MenuProps extends VariantProps {
     | 'disabled'
     | 'size'
     | 'variant'
-  > & { 'data-testid'?: string };
+  > & { 'data-testid'?: string; dataSlot?: string };
 }
 
 // type guard for MenuSection
@@ -125,10 +134,12 @@ const renderMenuItem = (item: MenuItem, itemClassName?: string) => {
     <HeroDropdownItem
       key={item.key}
       className={cn(itemClassName, item.className)}
+      data-slot={item.dataSlot}
       data-testid={slugify(item.testId ?? item.key)}
       description={item.description}
       onPress={item.onClick}
       startContent={item.icon}
+      textValue={item.textValue}
     >
       {item.label}
     </HeroDropdownItem>
@@ -142,16 +153,22 @@ const Menu = ({
   ariaLabel = undefined,
   children = null,
   className: _className = undefined,
+  disableAnimation = false,
   isDisabled = false,
   items,
   onAction = undefined,
   placement = undefined,
+  portalContainer = undefined,
   testId = undefined,
   triggerButtonProps = undefined,
 }: MenuProps) => {
   // className from slots
   const variants = menuVariants();
   const className = variantsToClassNames(variants, _className, 'trigger');
+
+  // disable popover animation when requested or when the user prefers reduced motion
+  const prefersReducedMotion = useReducedMotion();
+  const shouldDisableAnimation = disableAnimation || !!prefersReducedMotion;
 
   // determine trigger button variant
   let triggerButton = (
@@ -163,8 +180,8 @@ const Menu = ({
     //  default to ellipsis icon when no children are provided
     triggerButton = (
       <Button
-        isIconOnly
         className={cn('min-w-0 outline outline-divider', className.trigger)}
+        isIconOnly
         radius="full"
         size="sm"
         variant="light"
@@ -185,8 +202,10 @@ const Menu = ({
   return (
     <HeroDropdown
       aria-label={ariaLabel}
+      disableAnimation={shouldDisableAnimation}
       isDisabled={isDisabled}
       placement={placement}
+      portalContainer={portalContainer}
     >
       <HeroDropdownTrigger data-testid={testId}>
         {/* NOTE: type and aria properties are injected by HeroDropdownTrigger */}

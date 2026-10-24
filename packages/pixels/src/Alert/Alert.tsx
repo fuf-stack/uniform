@@ -9,109 +9,78 @@ import { tv, variantsToClassNames } from '@fuf-stack/pixel-utils';
 
 export const alertVariants = tv({
   slots: {
-    base: '',
-    title: '',
-    description: '',
-    mainWrapper: '',
+    base: 'min-w-72 gap-3',
     closeButton: '',
+    description: '',
+    endContent: '',
+    icon: '',
     iconWrapper: '',
-    alertIcon: '',
+    mainWrapper: 'ms-0 items-stretch gap-1.5',
+    title: '',
   },
   variants: {
+    // if HeroUI Alert title and description are set the icon is placed on top (looks better)
+    hasTitleAndChildren: {
+      true: {
+        iconWrapper: 'self-start',
+      },
+    },
     // see:  https://github.com/heroui-inc/heroui/blob/canary/packages/core/theme/src/components/alert.ts
-    color: {
+    variant: {
+      danger: {
+        base: 'bg-danger-50 dark:bg-danger-50',
+        closeButton: 'data-[hover=true]:bg-danger/20',
+        description: 'text-foreground',
+      },
+      default: {
+        base: 'bg-background',
+        closeButton: 'data-[hover=true]:bg-default/40',
+        description: 'text-foreground',
+      },
       info: {
+        base: 'border-small border-info-200 bg-info-50 text-info-600 dark:border-info-100 dark:bg-info-50',
+        closeButton: 'data-[hover=true]:bg-info/20 text-info-500',
+        description: 'text-foreground',
+        icon: 'fill-current',
+        iconWrapper: 'border-info-100 bg-info-50 dark:bg-info-100',
         mainWrapper: 'text-inherit',
         title: 'text-inherit',
-        description: 'text-inherit',
       },
-      ...heroAlertVariants.variants.color,
-    },
-    variant: {
-      ...heroAlertVariants.variants.variant,
-    },
-    sizeLimit: {
-      height: {
-        base: 'max-h-[150px] overflow-y-auto overflow-x-hidden',
+      success: {
+        base: 'bg-success-50 dark:bg-success-50',
+        closeButton: 'data-[hover=true]:bg-success/20',
+        description: 'text-foreground',
       },
-      width: {
-        base: 'max-w-[480px] overflow-x-auto overflow-y-hidden',
-      },
-      both: {
-        base: 'max-h-[150px] max-w-[480px] overflow-y-auto overflow-x-hidden',
+      warning: {
+        base: 'bg-warning-50 dark:bg-warning-50',
+        closeButton: 'data-[hover=true]:bg-warning/20',
+        description: 'text-foreground',
       },
     },
   },
-  compoundVariants: [
-    ...heroAlertVariants.compoundVariants,
-    {
-      color: 'info',
-      variant: 'solid',
-      className: {
-        base: 'bg-info text-info-foreground',
-        alertIcon: 'text-info-foreground',
-        closeButton: 'text-inherit',
-      },
-    },
-    {
-      color: 'info',
-      variant: 'flat',
-      className: {
-        alertIcon: 'fill-current',
-        base: 'dark:bg-info-50/50 bg-info-50 text-info-600',
-        closeButton: 'text-info-500 data-[hover]:bg-info-200',
-        iconWrapper: 'border-info-100 bg-info-50 dark:bg-info-100',
-      },
-    },
-    {
-      color: 'info',
-      variant: 'faded',
-      className: {
-        alertIcon: 'fill-current',
-        base: 'dark:bg-info-50/50 border-small border-info-200 bg-info-50 text-info-600 dark:border-info-100',
-        closeButton: 'text-info-500 data-[hover]:bg-info-200',
-        iconWrapper: 'border-info-100 bg-info-50 dark:bg-info-100',
-      },
-    },
-    {
-      color: 'info',
-      variant: 'bordered',
-      className: {
-        alertIcon: 'fill-current',
-        base: 'border-small border-info text-info',
-        closeButton: 'text-info-500 data-[hover]:bg-info-200',
-        iconWrapper: 'bg-info-100 dark:bg-info-50',
-      },
-    },
-  ],
 });
 
 export type VariantProps = TVProps<typeof alertVariants>;
 type ClassName = TVClassName<typeof alertVariants>;
 
-export interface AlertProps extends VariantProps {
+// hasTitleAndChildren is omitted because its used for automatic icon position
+export interface AlertProps extends Omit<VariantProps, 'hasTitleAndChildren'> {
   /** Content displayed inside the Alert if no description is given! */
   children?: ReactNode;
   /** CSS class name */
   className?: ClassName;
-  /** Color scheme of the Alert */
-  color?: VariantProps['color'];
+  /** Whether the Alert can be closed */
+  closable?: boolean;
   /** Content displayed at the end of the Alert */
   endContent?: ReactNode;
   /** Icon displayed at the start of the Alert */
   icon?: ReactNode;
-  /** Whether the Alert can be closed */
-  isClosable?: boolean;
   /** Callback fired when the close button is clicked */
   onClose?: () => void;
-  /** Whether to show the icon at the start */
-  showIcon?: boolean;
-  /** limit height to 150px or width to 480px or both */
-  sizeLimit?: VariantProps['sizeLimit'];
   /** HTML data-testid attribute used in e2e tests */
   testId?: string;
   /** Title displayed in the Alert above the content */
-  title?: ReactNode;
+  title?: string;
   /** Style variant of the Alert */
   variant?: VariantProps['variant'];
 }
@@ -122,29 +91,26 @@ export interface AlertProps extends VariantProps {
 const Alert = ({
   children = undefined,
   className = undefined,
-  color = 'primary',
   endContent = undefined,
   icon = undefined,
-  isClosable = false,
+  closable = false,
   onClose = undefined,
-  sizeLimit = undefined,
-  showIcon = true,
   testId = undefined,
   title = undefined,
-  variant = 'solid',
+  variant = 'info',
 }: AlertProps) => {
-  const variants = alertVariants({
-    color,
-    variant,
-    sizeLimit,
-  });
-  const classNames = variantsToClassNames(variants, className, 'base');
+  const hasTitleAndChildren = !!children && !!title;
 
-  // pass color prop for heroui colors
+  // classNames from slots
+  const variants = alertVariants({ hasTitleAndChildren, variant });
+  const { endContent: endContentClassName, ...classNames } =
+    variantsToClassNames(variants, className, 'base');
+
+  // map variant to HeroUI color prop (only for variants that exist in HeroUI)
   const heroColor = Object.keys(heroAlertVariants.variants.color).includes(
-    color,
+    variant,
   )
-    ? (color as HeroAlertProps['color'])
+    ? (variant as HeroAlertProps['color'])
     : undefined;
 
   return (
@@ -152,14 +118,19 @@ const Alert = ({
       classNames={classNames}
       color={heroColor}
       data-testid={testId}
-      description={title ? children : undefined}
-      endContent={endContent}
-      hideIcon={!showIcon}
+      description={children}
+      endContent={
+        endContent ? (
+          <div className={endContentClassName}>{endContent}</div>
+        ) : undefined
+      }
+      hideIcon={variant === 'default'}
       icon={icon}
-      isClosable={isClosable}
+      // map closable to isClosable, because of we do not want "is" as prefix
+      isClosable={closable}
       onClose={onClose}
-      title={(title ?? children) as string}
-      variant={variant}
+      title={title}
+      variant="faded"
     />
   );
 };

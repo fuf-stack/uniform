@@ -8,10 +8,10 @@ export interface InputValueTransform<TDisplay = unknown> {
 }
 
 export interface UseInputValueTransformOptions<TDisplay = unknown> {
-  /** Input type for special number handling */
-  type?: 'text' | 'number' | 'password';
   /** Value transformation functions */
   transform?: InputValueTransform<TDisplay>;
+  /** Input type for special number handling */
+  type?: 'text' | 'number' | 'password';
 }
 
 export interface UseInputValueTransformReturn<TDisplay = unknown> {
@@ -92,10 +92,11 @@ export interface UseInputValueTransformReturn<TDisplay = unknown> {
  *
  *   const { onChange, onBlur, value } = useInputValueDebounce({
  *     ...transform,
- *     initialValue: field.value,
  *     debounceDelay: 300,
+ *     name: 'fieldName',
  *     onBlur: field.onBlur,
  *     onChange: field.onChange,
+ *     value: field.value,
  *   });
  *
  *   return <input value={value} onChange={onChange} onBlur={onBlur} />;
