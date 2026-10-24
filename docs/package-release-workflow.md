@@ -80,8 +80,8 @@ The next config must set `"versioning": "prerelease"` as well as
 
 ### Bootstrap or update next
 
-Run `bash scripts/bootstrap-next-branch.sh` from a clean repository root with
-Git and jq installed. It fetches origin, creates or resumes next (including a
+Run `node scripts/bootstrap-next-branch.mjs` from a clean repository root with
+Git and Node.js installed. It fetches origin, creates or resumes next (including a
 remote-only branch), and merges origin/main. Resolve any merge conflicts before
 rerunning it. It does not require checking out main, so main can remain open in
 another worktree.
@@ -90,8 +90,10 @@ After merging next into main and completing the stable release, start a fresh
 cycle explicitly:
 
 ```bash
-bash scripts/bootstrap-next-branch.sh --start-new-cycle
+node scripts/bootstrap-next-branch.mjs --start-new-cycle
 ```
+
+The Makefile shortcut is `make bootstrap-next ARGS=--start-new-cycle`.
 
 This mode merges current origin/main, resets `bootstrap-sha` to that main commit,
 and initializes every package at the next major stable version with `-next.0`.

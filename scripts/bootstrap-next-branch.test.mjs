@@ -6,7 +6,7 @@ import { join } from 'node:path';
 import { test } from 'node:test';
 
 const script = readFileSync(
-  new URL('./bootstrap-next-branch.sh', import.meta.url),
+  new URL('./bootstrap-next-branch.mjs', import.meta.url),
 );
 const config = JSON.parse(
   readFileSync(new URL('../release-please-config-next.json', import.meta.url)),
@@ -40,7 +40,7 @@ test('bootstrap preserves active state and starts new cycles from main', () => {
     writeFileSync(join(repo, file), JSON.stringify(value, null, 2) + '\n');
   const read = (file) => JSON.parse(readFileSync(join(repo, file)));
   const bootstrap = (...args) =>
-    execFileSync('bash', ['bootstrap.sh', ...args], {
+    execFileSync(process.execPath, ['bootstrap.mjs', ...args], {
       cwd: repo,
       env,
       stdio: ['ignore', 'pipe', 'pipe'],
@@ -57,7 +57,7 @@ test('bootstrap preserves active state and starts new cycles from main', () => {
     git('config', 'user.name', 'Release test');
     git('config', 'user.email', 'release@example.invalid');
     git('remote', 'add', 'origin', origin);
-    writeFileSync(join(repo, 'bootstrap.sh'), script);
+    writeFileSync(join(repo, 'bootstrap.mjs'), script);
     write('.release-please-manifest.json', {
       'packages/a': '1.4.1',
       'packages/b': '0.4.1',
@@ -81,7 +81,7 @@ test('bootstrap preserves active state and starts new cycles from main', () => {
     bootstrap();
     assert.equal(git('rev-parse', 'HEAD'), first, 'reruns must be idempotent');
 
-    // Repository formatters may use different JSON whitespace from jq.
+    // Repository formatters may use different JSON whitespace from the script.
     writeFileSync(
       join(repo, configFile),
       JSON.stringify(read(configFile)) + '\n',
@@ -182,7 +182,7 @@ test('bootstrap preserves active state and starts new cycles from main', () => {
 
     // Reject invalid options before fetching or switching branches.
     for (const args of [['--unknown'], ['--start-new-cycle', '--unknown']]) {
-      const invalid = spawnSync('bash', ['bootstrap.sh', ...args], {
+      const invalid = spawnSync(process.execPath, ['bootstrap.mjs', ...args], {
         cwd: repo,
         env,
         encoding: 'utf8',
@@ -208,7 +208,7 @@ test('bootstrap preserves active state and starts new cycles from main', () => {
 
     const before = git('rev-parse', 'HEAD');
     writeFileSync(join(repo, 'unrelated.txt'), 'keep me');
-    const dirty = spawnSync('bash', ['bootstrap.sh'], {
+    const dirty = spawnSync(process.execPath, ['bootstrap.mjs'], {
       cwd: repo,
       env,
       encoding: 'utf8',
@@ -218,8 +218,8 @@ test('bootstrap preserves active state and starts new cycles from main', () => {
     assert.equal(git('rev-parse', 'HEAD'), before);
     assert.equal(git('status', '--porcelain'), '?? unrelated.txt');
     const dirtyNewCycle = spawnSync(
-      'bash',
-      ['bootstrap.sh', '--start-new-cycle'],
+      process.execPath,
+      ['bootstrap.mjs', '--start-new-cycle'],
       { cwd: repo, env, encoding: 'utf8' },
     );
     assert.equal(dirtyNewCycle.status, 1);
