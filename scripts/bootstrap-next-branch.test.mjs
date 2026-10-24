@@ -19,7 +19,7 @@ test('next uses prerelease versioning and a one-time bootstrap cutoff', () => {
   assert.equal(config['last-release-sha'], undefined);
 });
 
-test('bootstrap creates, resumes, and advances next without resetting active counters', () => {
+test('bootstrap preserves active state and starts new cycles from main', () => {
   const root = mkdtempSync(join(tmpdir(), 'pixels-bootstrap-'));
   const repo = join(root, 'repo');
   const origin = join(root, 'origin.git');
@@ -39,8 +39,8 @@ test('bootstrap creates, resumes, and advances next without resetting active cou
   const write = (file, value) =>
     writeFileSync(join(repo, file), JSON.stringify(value, null, 2) + '\n');
   const read = (file) => JSON.parse(readFileSync(join(repo, file)));
-  const bootstrap = () =>
-    execFileSync('bash', ['bootstrap.sh'], {
+  const bootstrap = (...args) =>
+    execFileSync('bash', ['bootstrap.sh', ...args], {
       cwd: repo,
       env,
       stdio: ['ignore', 'pipe', 'pipe'],
@@ -130,6 +130,82 @@ test('bootstrap creates, resumes, and advances next without resetting active cou
     });
     assert.equal(read(configFile)['bootstrap-sha'], cutoff);
 
+    // Complete the cycle by merging next into main and recording stable releases.
+    // Include a package ahead of stable to prove the explicit flag resets it too.
+    write(manifest, {
+      'packages/a': '3.0.0-next.7',
+      'packages/b': '1.0.0-next.3',
+      'packages/c': '2.0.0-next.4',
+    });
+    commit();
+    git('checkout', 'main');
+    git('merge', 'next', '--no-edit');
+    write('.release-please-manifest.json', {
+      'packages/a': '2.0.0',
+      'packages/b': '1.0.0',
+      'packages/c': '2.0.0',
+    });
+    writeFileSync(join(repo, 'released.txt'), 'Already released feature');
+    commit();
+    const newCutoff = git('rev-parse', 'HEAD');
+    git('push', 'origin', 'main');
+    bootstrap('--start-new-cycle');
+    assert.equal(read(configFile)['bootstrap-sha'], newCutoff);
+    assert.equal(read(configFile)['last-release-sha'], undefined);
+    assert.deepEqual(read(manifest), {
+      'packages/a': '3.0.0-next.0',
+      'packages/b': '2.0.0-next.0',
+      'packages/c': '3.0.0-next.0',
+    });
+    assert.equal(
+      git('log', `${newCutoff}..HEAD`, '--format=%s'),
+      'chore: start next prerelease cycle',
+    );
+    assert.equal(
+      git('rev-list', `${newCutoff}..HEAD`, '--', 'released.txt'),
+      '',
+      'released feature is before the new cutoff',
+    );
+    assert.notEqual(
+      git('rev-list', `${cutoff}..HEAD`, '--', 'released.txt'),
+      '',
+      'old cutoff would replay the released feature',
+    );
+    const newCycleHead = git('rev-parse', 'HEAD');
+    bootstrap();
+    bootstrap('--start-new-cycle');
+    assert.equal(
+      git('rev-parse', 'HEAD'),
+      newCycleHead,
+      'unchanged main needs no new bootstrap commit',
+    );
+
+    // Reject invalid options before fetching or switching branches.
+    for (const args of [['--unknown'], ['--start-new-cycle', '--unknown']]) {
+      const invalid = spawnSync('bash', ['bootstrap.sh', ...args], {
+        cwd: repo,
+        env,
+        encoding: 'utf8',
+      });
+      assert.equal(invalid.status, 1);
+      assert.match(invalid.stderr, /Usage:/);
+      assert.equal(git('rev-parse', 'HEAD'), newCycleHead);
+      assert.equal(git('status', '--porcelain'), '');
+    }
+
+    const activeVersions = {
+      'packages/a': '3.0.0-next.4',
+      'packages/b': '2.0.0-next.2',
+      'packages/c': '3.0.0-next.1',
+    };
+    write(manifest, activeVersions);
+    commit();
+    const activeHead = git('rev-parse', 'HEAD');
+    bootstrap();
+    assert.deepEqual(read(manifest), activeVersions);
+    assert.equal(read(configFile)['bootstrap-sha'], newCutoff);
+    assert.equal(git('rev-parse', 'HEAD'), activeHead);
+
     const before = git('rev-parse', 'HEAD');
     writeFileSync(join(repo, 'unrelated.txt'), 'keep me');
     const dirty = spawnSync('bash', ['bootstrap.sh'], {
@@ -141,6 +217,14 @@ test('bootstrap creates, resumes, and advances next without resetting active cou
     assert.match(dirty.stderr, /Commit or stash/);
     assert.equal(git('rev-parse', 'HEAD'), before);
     assert.equal(git('status', '--porcelain'), '?? unrelated.txt');
+    const dirtyNewCycle = spawnSync(
+      'bash',
+      ['bootstrap.sh', '--start-new-cycle'],
+      { cwd: repo, env, encoding: 'utf8' },
+    );
+    assert.equal(dirtyNewCycle.status, 1);
+    assert.match(dirtyNewCycle.stderr, /Commit or stash/);
+    assert.equal(git('rev-parse', 'HEAD'), before);
   } finally {
     rmSync(root, { recursive: true, force: true });
   }

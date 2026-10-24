@@ -1,7 +1,21 @@
 #!/bin/bash
 set -euo pipefail
 
-# Run from the repository root. Existing prerelease counters are preserved.
+# Run from the repository root. Only --start-new-cycle resets active state.
+START_NEW_CYCLE=false
+if [[ $# -gt 1 ]]; then
+  echo "Usage: $0 [--start-new-cycle]" >&2
+  exit 1
+fi
+case "${1:-}" in
+  "") ;;
+  --start-new-cycle) START_NEW_CYCLE=true ;;
+  *)
+    echo "Usage: $0 [--start-new-cycle]" >&2
+    exit 1
+    ;;
+esac
+
 BRANCH_NAME="next"
 MANIFEST_FILE=".release-please-manifest.json"
 NEXT_MANIFEST_FILE=".release-please-manifest-next.json"
@@ -28,17 +42,17 @@ else
   git checkout -b "$BRANCH_NAME" origin/main
 fi
 
-# Seed only missing or outdated versions. Never reset an active prerelease.
-# A stable release catching up to a prerelease starts the next major cycle.
+# Ordinary runs seed only missing or outdated versions. An explicit new cycle
+# seeds every package from stable, including packages still ahead of stable.
 TEMP_MANIFEST=$(mktemp)
 TEMP_CONFIG=$(mktemp)
 trap 'rm -f "$TEMP_MANIFEST" "$TEMP_CONFIG"' EXIT
-jq --slurpfile next "$NEXT_MANIFEST_FILE" '
+jq --argjson startNewCycle "$START_NEW_CYCLE" --slurpfile next "$NEXT_MANIFEST_FILE" '
   def core: split("-")[0] | split(".") | map(tonumber);
   to_entries | map(
     .key as $path | .value as $stable |
     ($next[0][$path] // "0.0.0") as $current |
-    .value = (if ($current | contains("-next.")) and
+    .value = (if ($startNewCycle | not) and ($current | contains("-next.")) and
                   (($current | core) > ($stable | core))
               then $current
               else (($stable | core | .[0] + 1 | tostring) + ".0.0-next.0")
@@ -47,12 +61,14 @@ jq --slurpfile next "$NEXT_MANIFEST_FILE" '
 ' "$MANIFEST_FILE" > "$TEMP_MANIFEST"
 
 # bootstrap-sha is ignored after the first release. last-release-sha is not.
-# Preserve the original cutoff when migrating an existing next branch.
-jq --arg sha "$BOOTSTRAP_SHA" '
+# Ordinary runs preserve the cutoff; a new cycle starts at current main.
+jq --arg sha "$BOOTSTRAP_SHA" --argjson startNewCycle "$START_NEW_CYCLE" '
   .versioning = "prerelease" |
   .prerelease = true |
   ."prerelease-type" = "next" |
-  ."bootstrap-sha" = (."bootstrap-sha" // ."last-release-sha" // $sha) |
+  ."bootstrap-sha" = (if $startNewCycle then $sha
+                     else (."bootstrap-sha" // ."last-release-sha" // $sha)
+                     end) |
   del(."last-release-sha")
 ' "$NEXT_CONFIG_FILE" > "$TEMP_CONFIG"
 # Ignore formatting differences so a rerun does not create a release commit.
@@ -65,7 +81,11 @@ fi
 
 git add "$NEXT_MANIFEST_FILE" "$NEXT_CONFIG_FILE"
 if ! git diff --cached --quiet; then
-  git commit -m "chore: bootstrap next branch for prereleases"
+  if [[ "$START_NEW_CYCLE" == true ]]; then
+    git commit -m "chore: start next prerelease cycle"
+  else
+    git commit -m "chore: bootstrap next branch for prereleases"
+  fi
 fi
 
 echo "Review the next branch, then push with: git push -u origin next"

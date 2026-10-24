@@ -86,6 +86,20 @@ remote-only branch), and merges origin/main. Resolve any merge conflicts before
 rerunning it. It does not require checking out main, so main can remain open in
 another worktree.
 
+After merging next into main and completing the stable release, start a fresh
+cycle explicitly:
+
+```bash
+bash scripts/bootstrap-next-branch.sh --start-new-cycle
+```
+
+This mode merges current origin/main, resets `bootstrap-sha` to that main commit,
+and initializes every package at the next major stable version with `-next.0`.
+For example, stable `2.0.0` starts at `3.0.0-next.0`. It discards existing
+prerelease counters, including packages whose prerelease base is still ahead of
+stable. Use it only when starting a new cycle. Ordinary runs preserve the active
+cutoff and counters; rerunning either mode with unchanged state creates no commit.
+
 The script seeds missing packages at the next major version with `-next.0`.
 It preserves an existing `-next` version and its counter while its base version
 is ahead of stable. When stable catches up, it starts the next major cycle for
@@ -105,7 +119,8 @@ overrides release discovery and can repeatedly include already released commits.
 Review the resulting commits and push with `git push -u origin next`.
 Bootstrapping does not push or publish. Run `pnpm test:release` to exercise the
 bootstrap against temporary Git repositories, including repeat runs, remote
-branch recovery, stable version advancement, and legacy cutoff migration.
+branch recovery, stable version advancement, legacy cutoff migration, and new
+cycles that exclude already released history.
 
 ## Permissions
 
