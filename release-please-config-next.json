@@ -15,5 +15,5 @@
     "packages/veto": {}
   },
   "plugins": ["node-workspace"],
-  "bootstrap-sha": "b888a9c8e27564e38a6b894c411388dd33883927"
+  "bootstrap-sha": "bfc747434d363bd64d3dab39fa29bd10dc81bfe3"
 }
